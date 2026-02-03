@@ -243,3 +243,11 @@ mscExam/
 - Some questions have mathematical notation (use MathJax)
 - Grading formula from original: `incorrect ? 0 : 4 * correct / total`
 - Support for `repeatIncorrect` mode (show wrong questions again)
+
+---
+
+## Latest User Request (2026-02-03)
+
+> I want you to go to this path and create project there. I want you to create there md file for project assumptions so you can recall them. First this project should create drill like (Browser-based multiple choice test learning assistant.) that you will develop for me basing on the files I provided in the mscExam folder. Also you should scrape the https://sylabusy.agh.edu.pl/pl/1/2/21/1/4/16/140#nav-tab-info for the full information of the knowledge that has been shared in 1-7 semester. Create tests basing on the topics. The main feature that I would like to have would be that in case of wrong answer or clicking for knowledge you would implement AI answer (that will be cached to db, or just json db id for now) so I could also learn about the topic while doing the test.
+
+**Additional request:** Deploy the website to WAN network so user can join it and check development progress.

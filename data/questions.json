@@ -1,7 +1,9 @@
 {
   "metadata": {
-    "generatedAt": "2026-02-03T21:59:55.628Z",
+    "generatedAt": "2026-02-03T23:06:59.129Z",
     "sourceFile": "drill copy.txt",
+    "totalAvailable": 233,
+    "missingIds": "20-33 (not in source file)",
     "stats": {
       "total": 219,
       "byTopic": {
@@ -14,8 +16,7 @@
         "java": 6,
         "c_cpp": 10,
         "numerical_methods": 30,
-        "other": 1,
-        "networks": 31,
+        "networks": 32,
         "operating_systems": 13,
         "oop_design": 5,
         "formal_languages": 14,
@@ -28,7 +29,7 @@
         "1": 34,
         "2": 17,
         "3": 63,
-        "4": 44,
+        "4": 45,
         "5": 27,
         "6": 21,
         "7": 12
@@ -65,6 +66,7 @@
       ],
       "topic": "algorithms",
       "semester": 1,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": false
     },
     {
@@ -109,6 +111,7 @@
       ],
       "topic": "algorithms",
       "semester": 1,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": true
     },
     {
@@ -133,6 +136,7 @@
       ],
       "topic": "algorithms",
       "semester": 1,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": false
     },
     {
@@ -152,6 +156,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -176,6 +181,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -205,6 +211,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -229,6 +236,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -263,6 +271,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -297,6 +306,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -314,11 +324,6 @@
           "correct": false
         },
         {
-          "key": "c",
-          "text": "musi zawierać rozkazy z różnymi trybami adresowania",
-          "correct": false
-        },
-        {
           "key": "d",
           "text": "projektowana jest w zależności od potrzeb związanych z zastosowaniem procesora",
           "correct": true
@@ -326,6 +331,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": false
     },
     {
@@ -355,6 +361,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -374,6 +381,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": false
     },
     {
@@ -398,6 +406,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": false
     },
     {
@@ -427,6 +436,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": false
     },
     {
@@ -451,6 +461,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": false
     },
     {
@@ -475,6 +486,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -499,6 +511,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -528,6 +541,7 @@
       ],
       "topic": "digital_systems",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -548,15 +562,11 @@
           "key": "c",
           "text": "aby przygotować odbiorcę na przyjęcie sygnału zawierającego informacje, są wysyłane sygnały startu oraz sygnały stopu, rozpoczynające i kończące przesyłanie porcji informacji",
           "correct": true
-        },
-        {
-          "key": "c",
-          "text": "żadne z pozostałych",
-          "correct": false
         }
       ],
       "topic": "transmission",
       "semester": 1,
+      "courseName": "Podstawy techniki cyfrowej / Basics of Digital Technique",
       "multipleCorrect": true
     },
     {
@@ -581,6 +591,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": false
     },
     {
@@ -620,6 +631,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -649,6 +661,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": false
     },
     {
@@ -698,6 +711,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -757,6 +771,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -811,6 +826,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -850,6 +866,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -879,6 +896,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": false
     },
     {
@@ -908,6 +926,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": false
     },
     {
@@ -937,6 +956,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": false
     },
     {
@@ -966,6 +986,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": false
     },
     {
@@ -1005,6 +1026,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -1034,6 +1056,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -1068,6 +1091,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -1097,6 +1121,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": false
     },
     {
@@ -1126,6 +1151,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -1150,6 +1176,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -1194,6 +1221,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -1223,6 +1251,7 @@
       ],
       "topic": "databases",
       "semester": 3,
+      "courseName": "Bazy danych / Databases",
       "multipleCorrect": true
     },
     {
@@ -1262,6 +1291,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1291,6 +1321,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1320,6 +1351,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1349,6 +1381,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1378,6 +1411,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1407,6 +1441,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1436,6 +1471,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1465,6 +1501,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1489,6 +1526,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1518,6 +1556,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1547,6 +1586,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1576,6 +1616,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1625,6 +1666,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1654,6 +1696,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1683,6 +1726,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1722,6 +1766,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1751,6 +1796,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1780,6 +1826,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -1809,6 +1856,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1843,6 +1891,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1872,6 +1921,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1901,6 +1951,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1930,6 +1981,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1959,6 +2011,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -1988,6 +2041,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": true
     },
     {
@@ -2017,6 +2071,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -2046,6 +2101,7 @@
       ],
       "topic": "software_engineering",
       "semester": 5,
+      "courseName": "Inżynieria oprogramowania / Software Engineering",
       "multipleCorrect": false
     },
     {
@@ -2070,6 +2126,7 @@
       ],
       "topic": "functional_programming",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": false
     },
     {
@@ -2099,6 +2156,7 @@
       ],
       "topic": "functional_programming",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": true
     },
     {
@@ -2128,6 +2186,7 @@
       ],
       "topic": "functional_programming",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": false
     },
     {
@@ -2177,6 +2236,7 @@
       ],
       "topic": "functional_programming",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": true
     },
     {
@@ -2201,6 +2261,7 @@
       ],
       "topic": "functional_programming",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": true
     },
     {
@@ -2235,6 +2296,7 @@
       ],
       "topic": "functional_programming",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": true
     },
     {
@@ -2254,6 +2316,7 @@
       ],
       "topic": "java",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2283,6 +2346,7 @@
       ],
       "topic": "java",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2307,6 +2371,7 @@
       ],
       "topic": "java",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2336,6 +2401,7 @@
       ],
       "topic": "java",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2355,6 +2421,7 @@
       ],
       "topic": "java",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2384,6 +2451,7 @@
       ],
       "topic": "java",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2408,6 +2476,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2437,6 +2506,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2466,6 +2536,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2485,6 +2556,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2504,6 +2576,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2528,6 +2601,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2552,6 +2626,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2576,6 +2651,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2595,6 +2671,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -2634,6 +2711,7 @@
       ],
       "topic": "c_cpp",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -2663,6 +2741,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -2687,6 +2766,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -2716,6 +2796,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -2735,6 +2816,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -2759,6 +2841,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -2783,6 +2866,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -2812,6 +2896,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -2831,6 +2916,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -2875,6 +2961,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -2904,6 +2991,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -2933,6 +3021,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -2957,6 +3046,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -2986,6 +3076,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3005,6 +3096,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3034,6 +3126,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -3053,6 +3146,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3092,6 +3186,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -3121,6 +3216,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3150,6 +3246,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -3174,6 +3271,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -3203,6 +3301,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3232,6 +3331,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3276,6 +3376,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -3305,6 +3406,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3359,6 +3461,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -3393,6 +3496,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": true
     },
     {
@@ -3432,6 +3536,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3461,6 +3566,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3490,6 +3596,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3519,6 +3626,7 @@
       ],
       "topic": "numerical_methods",
       "semester": 3,
+      "courseName": "Metody numeryczne / Numerical Methods",
       "multipleCorrect": false
     },
     {
@@ -3556,8 +3664,9 @@
           "correct": false
         }
       ],
-      "topic": "other",
-      "semester": null,
+      "topic": "networks",
+      "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3587,6 +3696,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3616,6 +3726,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3645,6 +3756,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3674,6 +3786,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3703,6 +3816,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3762,6 +3876,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3791,6 +3906,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3820,6 +3936,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -3849,6 +3966,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -3878,6 +3996,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -3922,6 +4041,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3951,6 +4071,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -3985,6 +4106,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4014,6 +4136,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -4043,6 +4166,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -4067,6 +4191,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4086,6 +4211,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4115,6 +4241,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4144,6 +4271,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4173,6 +4301,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4207,6 +4336,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4226,6 +4356,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4260,6 +4391,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4289,6 +4421,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4308,6 +4441,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4332,6 +4466,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4356,6 +4491,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4385,6 +4521,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4414,6 +4551,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4443,6 +4581,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": true
     },
     {
@@ -4472,6 +4611,7 @@
       ],
       "topic": "networks",
       "semester": 4,
+      "courseName": "Sieci komputerowe / Computer Networks",
       "multipleCorrect": false
     },
     {
@@ -4501,6 +4641,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": false
     },
     {
@@ -4530,6 +4671,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": false
     },
     {
@@ -4559,6 +4701,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": false
     },
     {
@@ -4578,6 +4721,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": false
     },
     {
@@ -4607,6 +4751,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": false
     },
     {
@@ -4631,6 +4776,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": false
     },
     {
@@ -4660,6 +4806,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": true
     },
     {
@@ -4689,6 +4836,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": false
     },
     {
@@ -4723,6 +4871,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": true
     },
     {
@@ -4752,6 +4901,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": true
     },
     {
@@ -4796,6 +4946,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": true
     },
     {
@@ -4825,6 +4976,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": true
     },
     {
@@ -4879,6 +5031,7 @@
       ],
       "topic": "operating_systems",
       "semester": 4,
+      "courseName": "Systemy operacyjne / Operating Systems",
       "multipleCorrect": true
     },
     {
@@ -4908,6 +5061,7 @@
       ],
       "topic": "oop_design",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -4937,6 +5091,7 @@
       ],
       "topic": "oop_design",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -4981,6 +5136,7 @@
       ],
       "topic": "oop_design",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -5010,6 +5166,7 @@
       ],
       "topic": "oop_design",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -5039,6 +5196,7 @@
       ],
       "topic": "oop_design",
       "semester": 6,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -5083,6 +5241,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5122,6 +5281,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": false
     },
     {
@@ -5161,6 +5321,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5195,6 +5356,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5224,6 +5386,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": false
     },
     {
@@ -5253,6 +5416,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": false
     },
     {
@@ -5282,6 +5446,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": false
     },
     {
@@ -5316,6 +5481,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": false
     },
     {
@@ -5365,6 +5531,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5409,6 +5576,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5438,6 +5606,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5467,6 +5636,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": false
     },
     {
@@ -5496,6 +5666,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5525,6 +5696,7 @@
       ],
       "topic": "formal_languages",
       "semester": 3,
+      "courseName": "Lingwistyka formalna i automaty / Formal Linguistics & Automata",
       "multipleCorrect": true
     },
     {
@@ -5554,6 +5726,7 @@
       ],
       "topic": "concurrent_programming",
       "semester": 7,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -5583,6 +5756,7 @@
       ],
       "topic": "concurrent_programming",
       "semester": 7,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": false
     },
     {
@@ -5612,6 +5786,7 @@
       ],
       "topic": "concurrent_programming",
       "semester": 7,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -5641,6 +5816,7 @@
       ],
       "topic": "concurrent_programming",
       "semester": 7,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -5680,6 +5856,7 @@
       ],
       "topic": "concurrent_programming",
       "semester": 7,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -5709,6 +5886,7 @@
       ],
       "topic": "concurrent_programming",
       "semester": 7,
+      "courseName": "Programowanie zaawansowane / Advanced Programming",
       "multipleCorrect": true
     },
     {
@@ -5738,6 +5916,7 @@
       ],
       "topic": "unix_admin",
       "semester": 7,
+      "courseName": "Wstęp do systemów uniksowych / Introduction to UNIX",
       "multipleCorrect": true
     },
     {
@@ -5767,6 +5946,7 @@
       ],
       "topic": "unix_admin",
       "semester": 7,
+      "courseName": "Wstęp do systemów uniksowych / Introduction to UNIX",
       "multipleCorrect": true
     },
     {
@@ -5796,6 +5976,7 @@
       ],
       "topic": "unix_admin",
       "semester": 7,
+      "courseName": "Wstęp do systemów uniksowych / Introduction to UNIX",
       "multipleCorrect": true
     },
     {
@@ -5840,6 +6021,7 @@
       ],
       "topic": "unix_admin",
       "semester": 7,
+      "courseName": "Wstęp do systemów uniksowych / Introduction to UNIX",
       "multipleCorrect": true
     },
     {
@@ -5889,6 +6071,7 @@
       ],
       "topic": "unix_admin",
       "semester": 7,
+      "courseName": "Wstęp do systemów uniksowych / Introduction to UNIX",
       "multipleCorrect": true
     },
     {
@@ -5918,6 +6101,7 @@
       ],
       "topic": "unix_admin",
       "semester": 7,
+      "courseName": "Wstęp do systemów uniksowych / Introduction to UNIX",
       "multipleCorrect": true
     },
     {
@@ -5942,6 +6126,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -5971,6 +6156,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -5990,6 +6176,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6019,6 +6206,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6048,6 +6236,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6077,6 +6266,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6106,6 +6296,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6145,6 +6336,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": true
     },
     {
@@ -6174,6 +6366,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": true
     },
     {
@@ -6193,6 +6386,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6222,6 +6416,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6256,6 +6451,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": true
     },
     {
@@ -6290,6 +6486,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": true
     },
     {
@@ -6319,6 +6516,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6353,6 +6551,7 @@
       ],
       "topic": "number_representation",
       "semester": 1,
+      "courseName": "Wstęp do informatyki / Introduction to Computer Science",
       "multipleCorrect": false
     },
     {
@@ -6387,6 +6586,7 @@
       ],
       "topic": "programming_basics",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": true
     },
     {
@@ -6406,6 +6606,7 @@
       ],
       "topic": "programming_basics",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": false
     },
     {
@@ -6425,6 +6626,7 @@
       ],
       "topic": "programming_basics",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": false
     },
     {
@@ -6444,6 +6646,7 @@
       ],
       "topic": "programming_basics",
       "semester": 2,
+      "courseName": "Podstawy programowania / Foundations of Programming",
       "multipleCorrect": false
     },
     {
@@ -6483,6 +6686,7 @@
       ],
       "topic": "algorithms",
       "semester": 2,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": true
     },
     {
@@ -6517,6 +6721,7 @@
       ],
       "topic": "algorithms",
       "semester": 2,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": false
     },
     {
@@ -6556,6 +6761,7 @@
       ],
       "topic": "algorithms",
       "semester": 2,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": true
     },
     {
@@ -6585,6 +6791,7 @@
       ],
       "topic": "algorithms",
       "semester": 2,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": false
     },
     {
@@ -6614,6 +6821,7 @@
       ],
       "topic": "algorithms",
       "semester": 2,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": false
     },
     {
@@ -6643,6 +6851,7 @@
       ],
       "topic": "algorithms",
       "semester": 2,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": true
     },
     {
@@ -6672,6 +6881,7 @@
       ],
       "topic": "algorithms",
       "semester": 2,
+      "courseName": "Algorytmy i struktury danych / Algorithms & Data Structures",
       "multipleCorrect": false
     }
   ]
