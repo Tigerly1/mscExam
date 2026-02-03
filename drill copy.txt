@@ -1,0 +1,1407 @@
+[#1] Zadanie o rozmiarze n, realizowane pewnym algorytmem o złożoności f(n), zostało sprowadzone do dwóch podzadań o rozmiarze n/2 każde oraz do n działań o stałym czasie wykonania, zapewniających rozbicie i scalenie zadania. Złożoność f(n) wynosi:
+a)f(n) = O(log(n))
+>>b)f(n) = O(n*log(n))
+c)f(n) = O(n + log(n))
+d)f(n) = O(n)
+
+[#2] Dana jest procedura: Proc(n){ if(warunek(x)) then { A(x); Proc(f(n)); B(x) } else C(x) }. Przyjmijmy konwencję, że np. zapis AAABCC oznacza trzykrotne wykonanie instrukcji A, po czym następuje wykonanie instrukcji B, a następnie dwukrotne wykonanie instrukcji C. Następujące sekwencje instrukcji mogą być wynikiem wywołania powyższej procedury:
+>>a)AACBB
+b)ACBB
+c)AACCBB
+d)ACCB
+>>e)C
+f)AAACCCBBB
+g)AABBC
+
+[#3] Dla problemu komiwojażera algorytm pozwalający wyznaczyć rozwiązanie optymalne:
+a)istnieje i ma złożoność wielomianową
+>>b)istnieje i ma złożoność wykładniczą
+c)nie istnieje
+
+[#4] Korzystając z układu FPGA można wykonać:
+>>a)na przykład dowolny układ kombinacyjny, ograniczony jedynie wielkością struktury FPGA
+>>b)na przykład dowolny układ sekwencyjny, ograniczony jedynie wielkością struktury FPGA
+
+[#5] Układ kombinacyjny to:
+>>a)układ logiczny nie pamiętający stanów poprzednich
+b)w jego skład mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK
+>>c)układ cyfrowy, w którym stan wyjść zależy wyłącznie od stanu wejść
+
+[#6] Układ sekwencyjny to:
+a)układ logiczny nie pamiętający stanów poprzednich
+>>b)może składać się z samych bramek logicznych
+c)może się składać z samych bramek logicznych bez sprzężeń zwrotnych
+>>d)w skład jego mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK
+
+[#7] Pamięć RAM:
+>>a)posiada wejścia adresowe, wejścia sterujące oraz wejście/wyjście danych
+>>b)można wykonać z bramek NAND
+c)można wykonać z bramek NAND bez sprzężeń zwrotnych
+
+[#8] Pamięć RAM dwuportowa:
+a)możemy wykonać z bramek NAND bez sprzężeń zwrotnych
+>>b)to pamięć RAM z dwoma interfejsami, pozwalającymi niezależnie uzyskać dostęp do tych samych komórek pamięci
+c)w układach FPGA taki rodzaj pamięci nie występuje
+>>d)to specjalne pamięci RAM, które umożliwiają dwóm niezależnym procesom (kontrolerom pamięci) dostęp do wspólnych danych
+e)można ją wykorzystać wyłącznie w procesorach wielordzeniowych
+
+[#9] Procesor:
+a)możemy wykonać przy użyciu FPGA, ale tylko jednordzeniowy
+b)żadne z pozostałych
+>>c)to sekwencyjne urządzenie cyfrowe, które pobiera dane z pamięci operacyjnej, interpretuje je i wykonuje jako rozkazy
+d)tryby adresowania procesora wykonywanego przy użyciu FPGA muszą być zgodne z trybami przewidzianymi przez producenta układu
+>>e)możemy wykonać przy użyciu FPGA
+
+[#10] Lista rozkazów procesora:
+a)w skład listy rozkazów zawsze wchodzi mnożenie
+c)w procesorze wykonywanym przy użyciu FPGA musi być zgodna z listą rozkazów przewidzianą przez producenta układu FPGA
+c)musi zawierać rozkazy z różnymi trybami adresowania
+>>d)projektowana jest w zależności od potrzeb związanych z zastosowaniem procesora
+
+[#11] Karta graficzna:
+a)może być układem kombinacyjnym
+b)przy użyciu FPGA nie można zbudować karty graficznej ze sprzętowym wspomaganiem OpenGL
+>>c)prostą wersję można zapisać w dwudziestu kilku liniach VHDL
+>>d)OpenGL to specyfikacja otwartego i uniwersalnego API do tworzenia grafiki; jest to zestaw podstawowych funkcji umożliwiających tworzenie grafiki
+
+[#12] Licznik rozkazów:
+a)jest to licznik z wejściem równoległym wykorzystywanym wyłącznie przy skokach bezwarunkowych
+>>b)służy do pamiętania adresu mającego się wykonać rozkazu lub adresu aktualnie pobieranego argumentu z pamięci programu
+
+[#13] Rozkaz skoku bezwarunkowego procesora:
+>>a)powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku
+b)powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku
+c)nie wpływa na stan licznika rozkazów procesora
+
+[#14] Rozkaz skoku warunkowego procesora:
+a)nie wpływa na stan licznika rozkazów procesora
+b)powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku
+>>c)powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku
+d)żadne z pozostałych
+
+[#15] Rozkaz procesora wykonujący dodanie dwóch liczb:
+a)powoduje dodanie dwóch liczb, wynik zapisuje do licznika rozkazów
+>>b)wykorzystuje ALU
+c)żadne z pozostałych
+
+[#16] W procesorze wykorzystującym przetwarzanie potokowe:
+>>a)wykonanie pojedynczej instrukcji rozkłada się na ciąg prostszych etapów
+>>b)rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu
+c)rozpoczęcie wykonania rozkazu może nastąpić dopiero po zakończeniu wykonania poprzedniego rozkazu
+
+[#17] W procesorze wykorzystującym superskalarność: 
+a)rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu
+>>b)ten sam etap dwóch kolejnych rozkazów może być wykonywany w tej samej chwili
+>>c)możliwe jest jednoczesne wykonanie więcej niż jednej instrukcji
+
+[#18] Rejestr rozkazów:
+a)przechowuje adres rozkazu wczytany z pamięci programu
+>>b)jego zawartość wykorzystywana jest przez jednostkę sterującą
+>>c)w trakcie wykonywania rozkazu zawartość rejestru rozkazów musi zmienić się bezpośrednio przed pobraniem argumentu rozkazu z pamięci programu
+>>d)przechowuje kod rozkazu wczytany z pamięci programu
+
+[#19] Transmisja asynchroniczna:
+a)układy nadawczy i odbiorczy synchronizowane są wspólną dodatkową linią z sygnałem synchronicznym
+>>b)podczas transmisji asynchronicznej występują kolejno po sobie wycinki czasu zawierające i nie zawierające informacji
+>>c)aby przygotować odbiorcę na przyjęcie sygnału zawierającego informacje, są wysyłane sygnały startu oraz sygnały stopu, rozpoczynające i kończące przesyłanie porcji informacji
+c)żadne z pozostałych
+
+[#34] Wskaż, w których przypadkach klauzule instrukcji SELECT są ułożone we właściwej kolejności:
+>>a) from, where, group by, having, order by
+b) from, group by, having, where, order by
+c) from, group by, where, having, order by
+
+[#35] Wskaż wszystkie prawdziwe stwierdzenia dotyczące postaci normalnej Boyce'a-Codda:
+>>a)dowolną relację R o schemacie H można sprowadzić do BCNF stosując dekompozycję bezstratną, ale niekoniecznie zachowującą zależności funkcyjne
+>>b)dowolna relacja dwuatrybutowa jest w BCNF
+>>c)jeżeli schemat relacji znajduje się w postaci normalnej Boyce'a-Codda, to nie ma w nim redundancji
+>>d)BCNF oznacza, że lewa strona każdej nietrywialnej zależności funkcyjnej zawiera klucz
+e)atrybut z prawej strony zależności może być podstawowy
+f)schematy relacji zawsze należy doprowadzać do postaci BCNF
+
+[#36] Dana jest relacja R o schemacie H = {A, B, C, D, E} oraz zbiór zależności funkcyjnych F = {{B, C} -> {D, E}, {C, D} -> {B, E}, {D} -> {C}, {E} -> {B}}. W jakiej maksymalnie postaci normalnej jest relacja R? Zakładamy, że jest w 1NF.
+a)1NF
+b)2NF
+>>c)3NF
+d)4NF
+
+[#37] Wskaż wszystkie prawdziwe stwierdzenia dotyczące trzeciej postaci normalnej:
+>>a)jeżeli wszystkie atrybuty ze schematu relacji są atrybutami kluczowymi, to relacja jest w 3NF
+>>b)dowolną relację można sprowadzić do 3NF stosując dekompozycję bezstratną i zachowującą zależności funkcyjne
+>>c)3NF oznacza, że każdy atrybut niekluczowy (informacyjny) zależy wyłącznie od klucza; innymi słowy, atrybuty informacyjne są wzajemnie niezależne
+>>d)BCNF jest nieco bardziej restrykcyjną wersją 3NF - w BCNF wszystkie atrybuty (również kluczowe) muszą spełniać warunek zależności wyłącznie od klucza; ten dodatkowy wymóg ma znaczenie, gdy relacja zawiera wiele kluczy
+>>e)jeżeli relacja jest w BCNF, to jest również w 3NF
+>>f)jeżeli relacja jest w 3NF, to możliwe jest występowanie pewnych redundancji
+g)relacja jest w 3NF, jeżeli jest w 2NF i nie zawiera zależności funkcyjnych
+h)jeżeli relacja jest w 3NF, to jest również w BCNF
+
+[#38] Wskaż wszystkie prawdziwe stwierdzenia dotyczące kluczy obcych w relacyjnym modelu danych:
+a)wartości klucza obcego są unikatowe
+>>b)klucze obce są sposobem łączenia danych przechowywanych w różnych tabelach
+>>c)klucz obcy jest kolumną lub grupą kolumn tabeli, która czerpie swoje wartości z tej samej dziedziny, co klucz główny powiązanej z nią tabeli
+>>d)klucz obcy musi odnosić się do istniejącej krotki lub przyjmować wartość NULL, aby jawnie stwierdzić, że nie ma związku z reprezentowanymi obiektami w bazie danych albo że ten związek jest nieznany
+>>e)klucz obcy nie musi być unikatowy w obrębie tabeli
+>>f)klucz obcy może pochodzić z tej samej tabeli, gdy chcemy stworzyć związek rekurencyjny
+>>g)klucz obcy i klucz do którego się on odwołuje muszą mieć tyle samo atrybutów
+h)muszą się nazywać tak samo jak klucz tabeli głównej
+i)muszą zawierać nazwę tabeli głównej w swojej nazwie
+>>j)powinny wskazywać na klucz główny w tabeli głównej
+
+[#39] Wskaż, które ograniczenia można definiować na poziomie kolumny (w instrukcji create table):
+>>a)wartość domyślna atrybutu
+b)krótsze ścieżki na płycie głownej
+c)większy bufor
+>>d)unikalne wartości atrybutu
+>>e)proste klucze główne
+>>f)NULL / NOT NULL
+g)wyrażenia regularne
+h)funkcje walidujące
+i)wyzwalacze typu "zdarzenie, warunek, akcja"
+
+[#40] Wskaż wszystkie prawdziwe stwierdzenia dotyczące wartości NULL:
+>>a)w modelu relacyjnym wartość NULL jest traktowana jako trzecia, różna od false i true, wartość logiczna
+b)dwie wartości NULL są traktowane jako równe
+>>c)wartości NULL są różne od spacji, zera czy też pustego łańcucha znaków
+>>d)jeżeli wystąpi w wartości atrybutu NULL, to suma po tym atrybucie też jest NULL
+e)klucz obcy musi zawierać przynajmniej jedną wartość NULL
+f)wartość NULL oznacza zero
+
+[#41] Które wyrażenie SQL zwraca wszystkie wiersze tabeli "Osoby" posortowane malejąco według atrybutu "Imie"?
+a)SELECT * FROM Osoby SORT BY 'Imie' DESC
+>>b)SELECT * FROM Osoby ORDER BY Imie DESC
+c)SELECT * FROM Osoby SORT 'Imie' DESC
+d)SELECT * FROM Osoby ORDER Imie DESC
+
+[#42] Jak możesz zmienić wartość "Kowalski" na "Nowak" w atrybucie "Nazwisko" w tabeli "Osoby"?
+a)MODIFY Osoby SET Nazwisko='Nowak' WHERE Nazwisko='Kowalski'
+b)MODIFY Osoby SET Nazwisko='Kowalski' INTO Nazwisko='Nowak'
+c)UPDATE Osoby SET Nazwisko='Kowalski' INTO Nazwisko='Nowak'
+>>d)UPDATE Osoby SET Nazwisko='Nowak' WHERE Nazwisko='Kowalski'
+
+[#43] Jak można przy pomocy SQL uzyskać informację o liczbie wierszy w tabeli "Osoby"?
+>>a)SELECT COUNT(*) FROM Osoby
+b)SELECT COUNT() FROM Osoby
+c)SELECT COLUMNS() FROM Osoby
+d)SELECT COLUMNS(*) FROM Osoby
+
+[#44] Jako można przy pomocy SQL wybrać wszystkie wiersze z tabeli "Osoby", w których wartość atrybutu "Imie" zaczyna się od "a"?
+a)SELECT * FROM Osoby WHERE Imie LIKE '%a'
+b)SELECT * FROM Osoby WHERE Imie='%a%'
+>>c)SELECT * FROM Osoby WHERE Imie LIKE 'a%'
+d)SELECT * FROM Osoby WHERE Imie='a'
+
+[#45] Którą z poniższych cech musi posiadać klucz właściwy?
+>>a)jego wartość jednoznacznie wyznacza wiersz w danej tabeli
+b)jest automatycznie generowany przez System Zarządzania Bazą Danych
+c)nie może być generowany przez SZBD
+d)jego wartość składa się tylko z jednego atrybutu
+>>e)nie może być pomniejszony o żaden atrybut
+>>f)żaden podzbiór jego atrybutów nie może być kluczem
+
+[#46] Algebra relacji jest podstawą dla:
+>>a)realizacji przez relacyjny SZBD operacji języka manipulacji danymi
+b)budowy diagramów ERD
+c)budowy diagramów DFD
+>>d)algorytmicznych języków relacyjnych baz danych
+
+[#47] Które z poniższych cech posiadają widoki (view)?
+>>a)mogą realizować politykę ograniczania dostępu do danych
+>>b)ułatwiają konstrukcję zapytań SQL do bazy danych
+c)zabezpieczają dane przed ich utratą w trakcie realizacji złożonych transakcji
+d)powodują problemy z konstrukcją zapytań SQL do bazy danych
+e)dostarczają prostego mechanizmu uaktualniania danych
+
+[#48] Z jakim problemem trzeba się uporać przy odwzorowaniu w schemacie relacyjnej bazy danych relacji typu n:m (wiele do wiele)?
+a)zdefiniować podwójne indeksowanie plików odpowiadających każdej z tabel
+>>b)trzeba zaprojektować dodatkową tabelę
+c)dobrać odpowiedni klucz obcy w drugiej z tabel
+d)trzeba użyć dodatkowo widoku (view)
+
+[#49] Które z poniższych stwierdzeń są prawdziwe, jeśli dotyczą systemów baz danych realizowanych w architekturze klient-serwer?
+a)mocno obciążają sieć w stosunku do systemów scentralizowanych
+>>b)pozwalają klientom pracować w różnych systemach operacyjnych
+>>c)uniezależniają sposób realizacji aplikacji od serwera
+d)wymagają co najmniej dwóch komputerów
+
+[#50] Systemy OLTP i OLAP różnią się przede wszystkim:
+>>a)czasem reakcji na zapytanie
+>>b)stopniem szczegółowości przechowywanych danych
+>>c)zakresem realizowanych funkcji użytkowych
+
+[#51] Rolą hurtowni danych jest:
+>>a)przygotowanie danych do szybkiej analizy
+b)kontrola poprawności danych realizowana podczas wykonywania transakcji
+c)minimalizacja plików fizycznych przez ujednolicenie sposobu przechowywania danych
+>>d)przechowywanie danych w sposób scentralizowany
+>>e)wydajne odpowiadanie na zapytania o charakterze analitycznym
+f)zwiększenie bezpieczeństwa
+g)obsługa dużej ilości równoległych transakcji modyfikujących dane
+
+[#52] Modele danych w postaci gwiazdy i płatka śniegu:
+>>a)ich implementacja przyspiesza analizę danych
+>>b)pozwalają oddać sens złożonej struktury danych
+c)zapewniają brak redundancji danych
+d)pomagają utrzymać spójność danych
+
+[#53] Celem testowania oprogramowania jest:
+>>a)zbadanie zgodności z wymaganiami
+>>b)wykrycie błędów w oprogramowaniu
+>>c)zbadanie zgodności z oczekiwaniami użytkownika
+d)sprawdzenie poprawności komentarzy w kodzie
+>>e)ocena jakości oprogramowania
+f)zdefiniowanie jakości kodu
+
+[#54] Jakie są główne aktywności w modelu spiralnym?
+>>a)Planowanie, Analiza Ryzyka, Konstrukcja, Walidacja
+b)Szybki Projekt, Budowa Prototypu, Ocena Prototypu, Redefinicja Prototypu
+c)Analiza Wymagań, Projektowanie, Kodowanie, Testowanie
+d)Definiowanie, Prototypowanie, Testowanie, Dostarczenie Produktu
+
+[#55] Jakiego widoku nie znajdziesz w modelu architektonicznym Kruchtena?
+a)przypadków użycia
+b)konstrukcji
+c)logicznego
+>>d)przepływu danych
+
+[#56] Jaką rolę na diagramach klas UML pełni kompozycja?
+a)jest związkiem typu gen-spec między instancjami klasy
+>>b)jest związkiem typu część-całość między obiektami
+c)wspomaga graficzne rozlokowanie symboli klas na diagramie
+d)oznacza ukrywanie złożoności obiektów przed użytkownikiem
+
+[#57] Jednym z celów inżynierii oprogramowania jest tworzenie oprogramowania, które jest:
+>>a)wolne od błędów
+>>b)dostarczane zgodnie z harmonogramem
+>>c)niezawodne i efektywne
+d)niezgodne z wymaganiami
+
+[#58] Przykładem ryzyka występującego podczas wytwarzania oprogramowania jest:
+>>a)odejście kluczowych osób z zespołu projektowego, zanim produkt zostanie wdrożony
+b)konkurenci mogą sprzedawać taniej system o podobnej funkcjonalności
+>>c)problemy ze zdefiniowaniem specyfikacji produktu
+d)wykonywanie kolejnych faz zgodnie z ustalonym harmonogramem
+
+[#59] Tworzenie modelu obiektowego z istniejącej relacyjnej bazy danych jest określane jako:
+a)forward engineering
+b)backward engineering
+>>c)reverse engineering
+d)inverse engineering
+
+[#60] Stosowanie techniki prototypowania jest zalecane dla:
+a)aplikacji budowanej w oparciu o frameworki
+b)gdy liczy się czas dostarczenia
+>>c)zespołów programistów, którym brakuje znajomości dziedziny
+>>d)gdy istnieje trudność uzyskania pełnej informacji o wymaganiach systemu
+
+[#61] Które z poniższych stwierdzeń nie jest celem budowy modeli analitycznych:
+>>a)opracowanie rozwiązań problemów
+b)ustalenie wszystkich czynników / warunków w dziedzinie przedmiotowej / w otoczeniu projektu, które mogą wpłynąć na decyzje projektowe
+c)stworzenie logicznego modelu systemu, opisującego sposób realizacji wymagań, ale bez szczegółów implementacyjnych
+
+[#62] Wstępna próba zdefiniowania elementów systemu oraz ich wzajemnych relacji, organizowanie tych elementów w dobrze określone warstwy z wyraźnie nakreślonymi zależnościami nazywa się analizą:
+a)przypadków użycia
+>>b)architektoniczną
+c)strukturalną
+d)systemową
+
+[#63] Którego z poniższych narzędzi nie używa się podczas analizy systemowej?
+a)Data Flow Diagram
+>>b)Decision Tree
+c)Object Modelling Technique
+d)HOOD
+
+[#64] Które z podanych rodzajów wymagań nie są określane podczas przygotowywania definicji wymagań systemowych?
+a)abstrakcyjne wymagania funkcjonalne
+>>b)szczegółowe wymagania funkcjonalne
+c)cechy lub zachowania, których system nie powinien przejawiać
+d)właściwości systemu
+
+[#65] Które z wymienionych czynności występują dla wszystkich procesów wytwarzania oprogramowania?
+a)budowa i ulepszanie prototypów
+b)retrospektywa celem polepszenia procesu
+>>c)pozyskiwanie wymagań
+d)ciągła integracja
+e)testowanie wydajności
+>>f)walidacja oprogramowania
+>>g)specyfikowanie oprogramowania
+h)zarządzanie konfiguracjami
+
+[#66] Zapis wymagania powinien bezwzględnie zawierać:
+a)informację o kolejności wprowadzenia danego wymagania w stosunku do innych wymagań
+>>b)informację o uzależnieniu danego wymagania od innych wymagań lub powiązaniu z nimi
+>>c)informację o pochodzeniu danego wymagania i jego uzasadnienie
+>>d)informację o uzależnieniu projektu od wymagania, tj. powiązaniu danego wymagania ze składnikami systemu, które je implementują
+
+[#67] Prototypowanie z porzuceniem jest wariantem ewolucyjnego tworzenia oprogramowania, w którym:
+>>a)tworzony jest fragment systemu zwany prototypem, odpowiadający ograniczonej części wymagań, celem eksperymentalnego rozeznania wymagań klienta i ustalenia lub walidacji ich specyfikacji oraz zbadania możliwości ich spełnienia
+b)ze względu na dwukrotną realizację systemu - jako prototypu i systemu finalnego - wydłużony jest znacznie czas realizacji i powiększony koszt przedsięwzięcia, przez co ta metoda stosowana jest głównie wtedy, gdy przez oddanie prototypu zamiast finalnej wersji systemu można oddalić groźbę katastrofalnego opóźnienia i całkowitego załamania projektu
+c)nie powstaje prawie żadna dokumentacja projektowa i stąd używana niekiedy nazwa "metoda studencka"
+>>d)nie przywiązuje wagi do jakości oprogramowania wytworzonego prototypu ani nawet jego zdolności do funkcjonowania, o ile nie przeszkadza to w wykorzystaniu go do realizacji jego głównego celu
+
+[#68] Do modeli iteracyjnych tworzenia oprogramowania zaliczamy:
+>>a)metodę przyrostową
+b)model kaskadowy
+>>c)model spiralny tworzenia oprogramowania
+d)ewolucyjny tworzenie oprogramowania
+e)metodykę Kanban
+>>f)programowanie ekstremalne
+
+[#69] Inspekcja (przegląd) wymagań jest:
+>>a)metodą walidacji wymagań
+>>b)nazywana formalną bądź nieformalną, zależnie od tego, czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania, czy tylko prowadzi luźną rozmowę z przestawicielami klienta
+>>c)procesem "ręcznym" polegającym na grupowym czytaniu dokumentacji wymagań
+d)niepodobna do inspekcji programów (kodu)
+
+[#70] Systemy odziedziczone:
+>>a)to systemy starsze niż kilka-kilkanaście lat, których działanie pozostaje krytycznym czynnikiem z punktu widzenia funkcjonowania instytucji, ale technologia nie odpowiada aktualnym potrzebom
+b)mają oprogramowanie i sprzęt niezmieniony od czasów ich zainstalowania, ale ich przeróbka i unowocześnienie nie jest możliwe z braku kompatybilnego sprzętu, odpowiednich kompilatorów języków programowania, bibliotek i odpowiednik specjalistów
+c)można tylko całkowicie wycofać i/lub zastąpić nowymi systemami
+>>d)obejmują oprogramowanie, sprzęt na którym może ono działać, dane użytkowe przez nie udostępniane i gromadzone, procedury biznesowe, prowadzone z użyciem oprogramowania
+
+[#71] Jakie aspekty powinien uwzględniać pełny model systemu w podejściu strukturalnym do analizy i projektowania?
+a)aspekt funkcjonalny, aspekt danych i ich powiązań
+b)aspekt funkcjonalny i aspekt dynamiki systemu
+c)aspekt danych i ich powiązań, aspekt dynamiki systemu
+>>d)aspekt funkcjonalny, aspekt danych i ich powiązań, oraz dynamiki systemu
+
+[#72] Aspekt funkcjonalny systemu informatycznego modelowany jest w podejściu strukturalnym przy pomocy:
+>>a)Data Flow Diagrams
+b)Entity Relationship Diagrams
+c)State Transition Diagrams
+d)Structure Charts
+e)Behaviour Diagrams
+
+[#73] Które z wymienionych podziałów wymagań niefunkcjonalnych są wyczerpujące i rozłączne?
+a)produktowe, organizacyjne, prawne
+b)produktowe, prawne, parametryczne
+c)produktowe, zewnętrzne, strategiczne
+>>d)produktowe, organizacyjne, zewnętrzne
+
+[#74] Wymień elementy modelu środowiskowego w strukturalnym podejściu do analizy i projektowania systemów informatycznych:
+a)ERD, DFD, STD
+b)diagram kontekstowy, słownik danych, specyfikacja funkcji
+c)opis celu systemu, wymagania funkcjonalne, wymagania niefunkcjonalne
+>>d)opis celu systemu, lista zdarzeń, diagram kontekstowy
+
+[#75] Jaki zestaw diagramów jest używany w metodyce strukturalnej analizy i projektowania systemów informatycznych do pokazania wszystkich aspektów modelowanego systemu?
+a)DFD, ERD i STC
+b)DFD i ERD
+>>c)DFD, ERD i STD (lub ELH)
+d)DFD i STD
+
+[#76] Które obiekty graficzne są używane do tworzenia diagramu kontekstowego w metodyce strukturalnej analizy i projektowania systemów informatycznych:
+a)proces, przepływ danych (data flow), magazyn danych (data store)
+b)proces, obiekt zewnętrzny (external entity), magazyn danych (data store)
+c)przepływ danych (data flow), obiekt zewnętrzny (external entity), magazyn danych
+>>d)proces, przepływ danych (data flow), obiekt zewnętrzny (external entity)
+
+[#77] Wybierz nazwy wszystkich obiektów graficznych używanych do konstruowania DFD (Data Flow Diagram) - diagramów przepływu danych w metodyce strukturalnej:
+>>a)proces (process)
+>>b)obiekt zewnętrzny (external entity)
+>>c)magazyn danych (data store)
+>>d)przepływ danych (data flow)
+
+[#78] Wskaż ten element dokumentacji projektowej, który zawiera zapis w postaci pseudokodu (metodyka strukturalna analizy i projektowania systemów informatycznych):
+a)opis wymagań niefunkcjonalnych
+b)opis wymagań funkcjonalnych
+>>c)specyfikacja funkcji
+d)opis celu przedsięwzięcia projektowego
+
+[#79] Który element DFD w metodyce strukturalnej stanowi podstawę konstruowania ERD (Entity Relationship Diagram) - diagramu związków encji:
+a)przepływ danych (data flow)
+b)diagram kontekstowy (context diagram)
+c)obiekt zewnętrzny (external entity)
+>>d)magazyn danych (data store)
+
+[#80] Jaki typ danych w Haskellu będzie miało następujące wyrażenie:
+r x = x:r x
+a)r :: [a]
+b)r :: Integer a => a -> [a]
+>>c)r :: a -> [a]
+
+[#81] Jak wygląda poprawna wartość w Haskellu dla typu:
+data Tree a = L a | N (Tree a) a (Tree a)
+a)Tree 5 Nil Nil
+b)N (L 4) 5 (L '4')
+>>c)N (L 4) 5 (L 4)
+>>d)N (L '4') '5' (L '4')
+
+[#82] Haskell jest językiem opartym o paradygmat:
+>>a)funkcyjny
+b)strukturalny
+c)imperatywny
+d)obiektowy
+
+[#83] Zaznacz prawdziwe zdania odnoszące się do programowania funkcyjnego:
+>>a)w programowaniu funkcyjnym koncepcja funkcji jest taka, jak w algebrze
+>>b)programowanie funkcyjne opiera się na rachunku lambda
+>>c)dobrym nawykiem w programowaniu funkcyjnym jest, aby zmienne były niemutowalne
+d)w programowaniu funkcyjnym możemy korzystać jedynie z wbudowanych typów danych
+>>e)funkcyjny styl programowania można uprawiać w ograniczonym zakresie w językach imperatywnych jak C albo JavaScript
+f)funkcyjnymi językami programowania są: Erlang, Haskell, C#, Perl
+>>g)można używać funkcyjnego stylu programowania w języku JavaScript
+>>h)niektóre języki imperatywne zostały wyposażone w konstrukcje z języków funkcyjnych
+
+[#84] Funkcje wyższego rzędu w programowaniu funkcyjnym to:
+>>a)funkcje zwracające inne funkcje jako rezultat obliczeń
+>>b)funkcje, które przyjmują inne funkcje jako parametry
+c)potoczne określenie funkcji trudnych w implementacji
+
+[#85] Jaki mechanizm w językach funkcyjnych pozwala na wykonanie operacji na zbiorze danych?
+a)iteracja
+>>b)rekurencja
+>>c)funkcje specyficzne dla języka
+d)warunkowy skok do etykiety
+e)pętla
+
+[#86] Aby sprawdzić, czy dwa obiekty typu String w języku Java mają taką samą zawartość, można:
+>>a)użyć metody equals()
+b)==
+
+[#87] Który z poniższych fragmentów kodu w języku Java sprawdza, czy obiekt wskazywany przez referencję xyz należy do klasy XYZ?
+>>a)if (xyz instanceof XYZ)
+b)if (xyz.dynamicCastTo(XYZ.class) != null)
+>>c)XYZ.class.isInstance(xyz)
+>>d)XYZ.class.isAssignableFrom(xyz.getClass())
+
+[#88] Tablica w języku Java jest zadeklarowana jako:
+int tab[] = new int[]{3, 2, 1, 0};
+Który z fragmentów kodu poprawnie wypisze jej elementy?
+a)for (int i: tab) System.out.println(tab[i] + " ");
+>>b)for (int i = 0; i < tab.length; i++) System.out.println(tab[i] + " ");
+>>c)for (int i: tab) System.out.println(i + " ");
+
+[#89] Które zdanie opisujące własności klas w języku Java jest prawdziwe?
+a)aby zaznaczyć, że klasa dziedziczy po kilku klasach, należy podać ich listę po słowie kluczowym extends, np. class D extends A, B, C {}
+b)dla każdej klasy w języku Java możliwe jest zdefiniowanie klasy potomnej
+>>c)klasa może implementować wiele interfejsów
+>>d)w języku Java zawsze bezpośrednio możemy dziedziczyć po jednej klasie
+
+[#90] W jaki sposób usuwane są obiekty w języku Java?
+a)usuwa się je przez przekazanie referencji do usuwanego obiektu do metody System.gc()
+>>b)nie są programowo usuwane, to środowisko wykonawcze podejmuje decyzje czy i kiedy je usunąć
+
+[#91] Które z poniższych stwierdzeń odnoszące się do klas wewnętrznych i zagnieżdżonych w języku Java są prawdziwe?
+a)w metodach klasy zagnieżdżonej (zadeklarowanej z modyfikatorem static) jest dostępna referencja Outer.this, gdzie Outer jest nazwą klasy zewnętrznej
+>>b)obiekt klasy wewnętrznej ma swój stan niezależny od innych obiektów powiązanych z obiektem klasy zewnętrznej
+c)klasy wewnętrzne muszą dziedziczyć po otaczających je klasach zewnętrznych
+d)klasa wewnętrzna (zadeklarowana bez modyfikatora static) nie ma dostępu do prywatnych zmiennych klasy zewnętrznej
+
+[#92] W językach imperatywnych (również obiektowych) przy wyborze reprezentacji dla danych rzeczywistych (zmiennoprzecinkowych) pojawiają się problemy:
+>>a)wystąpienia nadmiaru
+>>b)wystąpienia niedomiaru
+>>c)dokładności
+
+[#93] Wskazania (pointers) w C, C++ używane są do reprezentowania (wskazywania):
+>>a)obszarów pamięci operacyjnej
+>>b)zmiennych złożonych
+>>c)zmiennych skalarnych
+>>d)funkcji i metod
+
+[#94] W jaki sposób można obliczyć długość tekstu przekazanego jako argument w poniższej funkcji w języku C?
+void foo(const char* txt) { ... }
+a)sizeof(txt)
+>>b)strlen(txt)
+c)txt.length()
+>>d)zliczając, ile znaków występuje w tekście od znaku na który wskazuje wskaźnik do znaku końca łańcucha znaków ('\0')
+
+[#95] Co możesz powiedzieć o poniższej deklaracji w języku C?
+int t[10] = {1, 2, [4]=1};
+>>a)zgodnie ze standardem C99 spowoduje ona utworzenie tablicy zawierającej 10 elementów, z których 7 ma wartość 0
+b)da ona taki sam efekt, jak deklaracja: int t[] = {1, 2, 0, 0, 1}
+
+[#96] W jaki sposób obliczyć długość tablicy w funkcji foo() w języku C?
+void foo(double f[]) { // dlugosc tablicy t? }
+>>a)nie da się obliczyć
+b)po wykonaniu poniższej instrukcji długość tablicy będzie umieszczona w zmiennej len: int len; for(len=0; t[len]; len++)
+
+[#97] Która z implementacji funkcji zawierającej tablicę w języku C jest poprawna?
+a)int[] getTable() { int tab[10]; return tab; }
+>>b)int * getTable(int n) { return (int*) malloc(n * sizeof(int)); }
+>>c)int * getTable(int n) { return (int*) calloc(n, sizeof(n)); }
+
+[#98] Przeanalizuj poniższą deklarację w języku C:
+int (*x)(int, int);
+a)zmienna x jest dwuwymiarową tablicą wskaźników typu int* o zmiennym rozmiarze
+b)deklaracja jest niezgodna ze składnią języka
+>>c)zmienna x jest wskaźnikiem na funkcję przyjmującą dwa argumenty typu int, zwracającą wartość typu int
+
+[#99] Które stwierdzenia dotyczące operatorów w języku C/C++ są poprawne:
+>>a)operatory addytywne mają mniejszy priorytet niż multiplikatywne
+b)wyrażenie z == ++z jest zawsze fałszywe dla zmiennej z typu int
+c)żadne z pozostałych
+
+[#100] Dzięki konwencji wywołania funkcji w języku C/C++ znanej jako __cdecl możliwa jest implementacja funkcji o zmiennej liczbie argumentów, jak printf(). Które stwierdzenia charakteryzujące funkcje typu __cdecl są prawdziwe?
+>>a)w wygenerowanym kodzie wywołania funkcji argumenty umieszczane są na stosie od końca, dzięki temu na szczycie stosu jest jej pierwszy argument i analizując jego zawartość można określić spodziewaną liczbę argumentów wywołania
+b)w języku C kompilator może utworzyć kod wywołania funkcji typu __cdecl nie mając żadnych informacji o typach jej parametrów
+
+[#101] W jaki sposób przekazywany jest parametr będący tablicą do funkcji w języku C, np.:
+int main(int argc, char* argv[]) { ... }
+a)cała zawartość tablicy kopiowana jest na stos i funkcja działa na kopii tablicy
+>>b)na stos przekazywany jest adres pierwszego elementu tablicy
+>>c)tablice są zawsze przekazywane do funkcji jako wskaźnik
+d)tablice są zawsze przekazywane do funkcji przez referencję
+e)funkcja działa na kopii tablicy, dla której pamięć przydzielona jest na stercie; do funkcji trafia adres kopii tablicy
+f)na stosie umieszczany jest pierwszy element tablicy
+
+[#102] Algorytmy optymalizacji statycznej:
+>>a)metoda simpleksu Neldera-Meada jest metodą bezgradientową
+>>b)metoda Newtona wymaga obliczania w każdym kroku gradientu i hesjanu
+c)metody z funkcją kary (penalty methods) stosuje się w przypadkach optymalizacji bez ograniczeń
+d)metoda najszybszego spadku wymaga obliczania hesjanu
+
+[#103] Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n, ^^x_{i-1} < x_i^^, i = 1, 2, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \sum_{j=0}^m a_{j, m}x^j^^. Zaznacz prawdziwe implikacje.
+>>a)m = n => ^^E_m = 0^^
+b)m > n => ^^E_m < 0^^
+>>c)^^E_m > 0^^ => n > m
+
+[#104] Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \sum_{j=0}^m a_{j,m}x^j^^. Rozważamy 3 sposoby obliczania błędu aproksymacji ^^E_m^^:
+1. ^^E_m = \min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \sum_{i=0}^n |y_i-W_m(x_i)|^^
+2. ^^E_m = \min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \sum_{i=0}^n (y_i-W_m(x_i))^2^^
+3. ^^E_m = \min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \max_{i=0, 1, ..., n} |y_i-W_m(x_i)|^^
+Obliczanie współczynników ^^a_i^^ można sprowadzić do zagadnienia liniowego:
+>>a)w przypadku 1
+>>b)w przypadku 2
+c)w przypadku 3
+d)w żadnym z tych przypadków
+
+[#105] Dla tych samych danych eksperymentalnych podanych poniżej wyznaczono 3 funkcje aproksymujące.
+i | 0 1 2
+x | 2 4 6 
+y | 1 2 1
+W każdym przypadku k = 1, 2, 3 funkcja aproksymująca miała taką samą postać ^^f_k(x) = a_k * x + b_k^^, ale użyto innego kryterium jakości aproksymacji:
+1. Dla k = 1: ^^min_{a_1, b_1} \sum_{i=0}^2 |y_i-f_1(x_i)|^^
+2. Dla k = 2: ^^min_{a_2, b_2} \sum_{i=0}^2 (y_i-f_2(x_i))^2^^
+3. Dla k = 3: ^^min_{a_3, b_3} max_{i=0,1,2} |y_i-f_3(x_i)|^^
+Zaznacz prawidłowe odpowiedzi.
+a)a_1 = a_2 = a_3, b_1 = b_2 = b_3
+>>b)a_1 = a_2 = a_3, b_1 != b_2 != b_3
+
+[#106] Rozważmy funkcję kwadratową n zmiennych:
+^^f(x) = x^TAx + b^Tx + c^^
+A jest macierzą (n x n), b wektorem (n x 1) o stałych współczynnikach, c jest skalarem. Załóżmy, że macierz A jest dodatnio określona. Funkcja ^f ma minimum w punkcie ^^x_{min}^^.
+Rozważmy tylko 3 metody szukania minimum tej funkcji: simpleksu Neldera-Meada, najszybszego spadku (steepest descent) oraz Newtona. Startujemy z dowolnego punktu ^^x_0^^, różnym od ^^x_{min}^^.
+>>a)metoda Newtona gwarantuje znalezienie minimum funkcji f w pierwszym kroku
+b)metoda najszybszego spadku gwarantuje znalezienie minimum funkcji f w pierwszym kroku
+c)metoda simpleksu Neldera-Meada gwarantuje znalezienie minimum funkcji f w pierwszym kroku
+
+[#107] Czy obliczanie parametrów (współczynników) funkcji aproksymującej można sprowadzić do rozwiązywania układu równań?
+a)tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest funkcją liniową względem zmiennej niezależnej
+>>b)tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)
+d)nie można
+
+[#108] Do aproksymacji zbioru punktów ^^P = \{ (x_i, y_i) | i = 0, 1, ..., n \}^^ używamy funkcji ^^f^{(k)}(x;a_{k,j}|j=0,1,...,m)^^. ^^a_{k, j}^^ to parametry funkcji. Stosując 3 różne kryteria jakości aproksymacji (miary błędu aproksymacji) podane poniżej otrzymujemy trzy różne funkcje aproksymujące ^^f_k(x)^^, k = 1, 2, 3 dla tej samej wartości m, a różniące się między sobą wartościami parametrów ^^a_{k, j}^^.
+1. k = 1: ^^min \sum_{i=0}^n |y_i-f^{(1)}(x_i)|^^
+2. k = 2: ^^min \sum_{i=0}^n (f_i-f^{(2)}(x_i))^2^^
+3. k = 3: ^^min^^ ^^max_{i=0,1,...,n} |y_i-f^{(3)}(x_i)|^^
+Niech ^^\Delta^{(k)}_{max}^^ oznacza odległość (w sensie metryki maksimum) k-tej funkcji aproksymującej ^^f_k^^ od najbardziej oddalonego punktu ze zbioru P, tzn. ^^\Delta^{(k)}_{max} = \max_{i=0,...,n}|y_i-f^{(k)}(x_i)|^^. Zaznacz prawdziwe relacje:
+>>a)^^\Delta_{\max}^{(1)} \geq \Delta_{\max}^{(2)}^^
+b)^^\Delta_{\max}^{(1)} \leq \Delta_{\max}^{(2)}^^
+>>c)^^\Delta_{\max}^{(3)} \leq \Delta_{\max}^{(2)}^^
+>>d)^^\Delta_{\max}^{(3)} \leq \Delta_{\max}^{(1)}^^
+
+[#109] Warunkiem koniecznym i wystarczającym zbieżności metod iteracyjnych prostych (takich jak metoda Jacobiego czy metoda Gaussa-Seidla) rozwiązywania układów równań liniowych jest:
+>>a)promień spektralny macierzy iterowanej w danej metodzie jest zawsze mniejszy od 1
+b)promień spektralny macierzy iterowanej w danej metodzie jest zawsze większy od 1
+
+[#110] Do metod nazywanych metodami dokładnymi rozwiązywania układów równań liniowych zalicza się:
+a)metoda Jacobiego
+>>b)metoda rozkładu LU
+>>c)metoda Gaussa
+>>d)metoda Jordana
+>>e)eliminacja Gaussa z wyborem elementu głównego
+>>f)metoda Cramera
+g)metoda SOR (Successive Over-Relaxation)
+
+[#111] Które z poniżej wymienionych zagadnień numerycznych wykorzystują właściwości przybliżania funkcji wielomianem interpolującym:
+a)metoda siecznych, metoda stycznych szukania miejsc zerowych funkcji
+>>b)obliczanie całki oznaczonej funkcji za pomocą kwadratur Newtona-Cotesa
+>>c)równania różniczkowe zwyczajne
+d)rozwiązywanie układów równań metodami iteracyjnymi
+
+[#112] Wielomiany sklejane (ang. spline) trzeciego stopnia muszą spełniać następujące warunki w punktach sklejeń:
+>>a)przechodzenie funkcji interpolującej przez węzły interpolacji
+>>b)ciągłość pochodnej funkcji interpolującej
+>>c)ciągłość funkcji interpolującej
+>>d)ciągłość drugiej pochodnej funkcji interpolującej
+
+[#113] Wskaż zdania prawdziwe dotyczące zagadnienia interpolacji wielomianowej z wykorzystaniem jednomianów (tzw. bazy naturalnej):
+a)jest to zadanie dobrze uwarunkowane
+b)ma zdecydowanie lepsze właściwości numeryczne niż metoda Lagrange'a
+>>c)jest to zadanie źle uwarunkowane
+
+[#114] Błędy związane z ograniczeniem nieskończonego ciągu wymaganych obliczeń do skończonej liczby działań nazywamy:
+a)błędami zaokrągleń (ang. rounding errors)
+b)błędami niedomiaru (ang. underflow errors)
+>>c)błędami obcięcia (ang. truncation errors)
+d)błędami nadmiaru (ang. overflow errors)
+
+[#115] Jeśli niewielkie względne zaburzenia danych wejściowych powodują niewielkie względne zmiany wyników, to wówczas:
+a)współczynnik uwarunkowania osiąga wysoką wartość
+>>b)współczynnik uwarunkowania osiąga niską wartość
+
+[#116] Warunkami wystarczającymi, gwarantującymi zbieżność poszukiwania miejsc zerowych funkcji f(x) metodą bisekcji są:
+>>a)funkcja f(x) jest ciągła w przedziale domkniętym [a, b]
+b)pierwsza i druga pochodna f(x) istnieją i są ciągłe w przedziale domkniętym [a, b]
+c)pierwsza i druga pochodna mają stały znak w całym przedziale
+>>d)na końcach przedziału [a, b] wartości funkcji f(x) przyjmują przeciwne znaki, czyli zachodzi f(a) * f(b) < 0
+
+[#117] Stosując algorytm stycznych poszukiwania jednokrotnego miejsca zerowego funkcji f(x) w przedziale domkniętym [a, b] w dostatecznej bliskości pierwiastka uzyskujemy zbieżność:
+>>a)kwadratową
+b)wykładniczą
+
+[#118] Do całkowania numerycznego używa się m. in. kwadratur Newtona-Cotesa. Do prostych kwadratur Newtona-Cotesa należą:
+a)metoda Eulera
+b)metoda Romberga
+>>c)metoda trapezów
+>>d)metoda Simpsona
+>>e)reguła 3/8
+>>f)metoda Boole'a
+
+[#119] Efekt Rungego jest charakterystyczny dla następujących metod interpolacji:
+a)interpolacji funkcjami sklejanymi 1 stopnia dla węzłów równoodległych
+b)interpolacji funkcjami sklejanymi 3 stopnia dla węzłów równoodległych
+>>c)interpolacji metodą Lagrange'a (wielomianowej) dla węzłów równoodległych
+d)interpolacji metodą Lagrange'a dla węzłów będących zerami wielomianów Czebyszewa
+
+[#120] Które zdania dotyczące metody eliminacji Gaussa rozwiązywania układów równań są prawdziwe:
+a)jest to metoda iteracyjna
+>>b)jest to metoda dokładna
+>>c)przekształca macierz do postaci macierzy schodkowej
+d)nie wymaga przekształcenia układu równań do postaci z macierzą trójkątną górną
+
+[#121] Aby wyeliminować lub znacząco ograniczyć efekt Rungego przy zadaniu interpolacji można:
+>>a)zastosować interpolację funkcjami sklejanymi zamiast metody Lagrange'a
+>>b)zastosować interpolację z węzłami gęściej upakowanymi na końcach przedziału
+>>c)zastosować do interpolacji miejsca zerowa wielomianów Czebyszewa
+
+[#122] Dokładność reprezentacji zmiennoprzecinkowej jest określona przez:
+>>a)liczbę bitów mantysy
+b)liczbę bitów mantysy i wykładnika
+c)zakres wykładnika
+d)liczbę bitów mantysy i zakres wykładnika
+
+[#123] Efekt Rungego w interpolacji wielomianowej to:
+a)wynik wyboru złej funkcji interpolującej
+b)wynik braku jednoznaczności rozwiązania zadania interpolacji
+c)konsekwencja arytmetyki zmiennoprzecinkowej
+>>d)wynik błędu metody
+
+[#124] Funkcje sklejane stopnia m na przedziale [a, b]:
+>>a)są ciągłe wraz z (m-1) pochodnymi na [a, b]
+b)są ciągłe wraz z (m+1) pochodnymi na [a, b]
+c)są używane tylko do interpolacji przedziałowej
+d)nie są przydatne do interpolowania funkcji periodycznych
+e)są jednoznacznie określone przez podanie warunków brzegowych
+f)nadają się tylko do interpolowania przedziałowego funkcji z nieciągłymi osobliwościami
+>>g)są przydatne nie tylko do interpolacji, ale też do aproksymacji
+
+[#125] Wybierz poprawną odpowiedź:
+>>a)interpolacja z węzłami będącymi zerami wielomianu Czebyszewa odpowiedniego stopnia eliminuje efekt Rungego
+b)przybliżenia Pade to technika aproksymacji średniokwadratowej
+c)funkcje sklejane nie mogą być wykorzystane do aproksymacji średniokwadratowej ze względu na postać minimalizowanej normy
+d)aproksymacja średniokwadratowa polega na minimalizacji normy Czebyszewa
+
+[#126] Metoda Newtona-Raphsona rozwiązywania równań nieliniowych:
+a)wykorzystuje niejawnie przyspieszenie Aitkena
+>>b)jest przykładem metody iteracyjnej o stałym punkcie
+c)jest przykładem metody interpolacyjnej
+d)ma rząd zbieżności równy 1
+>>e)ma rząd zbieżności równy 2
+>>f)jest szybciej zbieżna niż metoda siecznych
+>>g)jest szybciej zbieżna niż metoda bisekcji
+h)nie może być uogólniona dla układów równań nieliniowych
+>>i)wymaga znajomości pochodnej funkcji
+
+[#127] Metoda eliminacji Gaussa rozwiązywania układów równań liniowych:
+>>a)wymaga wyszukiwania elementu wiodącego i polega na przekształceniu macierzy do postaci trójkątnej górnej
+b)polega na doprowadzeniu macierzy do postaci diagonalnej
+>>c)ma złożoność ^^O(n^3)^^, gdzie ^^n^^ - liczba równań
+d)jest przykładem metody iteracyjnej niestacjonarnej
+e)ma złożoność ^^O(n^2)^^, gdzie ^^n^^ - liczba równań
+
+[#128] Metody dekompozycji LU:
+>>a)mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa
+b)należą do rodziny metod iteracyjnych niestacjonarnych
+c)nie wymagają wyszukiwania elementu wiodącego
+d)są przydatne tylko do rozwiązywania układów równań z macierzą symetryczną dodatnio określoną
+e)mają lepszą złożoność obliczeniową niż metoda Gaussa, gdyż nie wymagają wyszukiwania elementu wiodącego
+f)są metodami iteracyjnymi stacjonarnymi
+
+[#129] Wybierz poprawne zdania opisujące metody minimalizacji:
+>>a)wzór Davidona-Fletchera-Powella jest podstawą metody zmiennej metryki
+b)metoda sprzężonych kierunków jest przykładem ogólnej metody poszukiwania minimum globalnego
+c)metoda największego spadku jest przykładem metody poszukiwania minimum globalnego
+d)metoda simpleksów należy do metod gradientowych
+
+[#130] Szybka transformata Fouriera:
+a)jest możliwa tylko wtedy, gdy liczba punktów jest całkowitą potęgą 2
+b)ma złożoność obliczeniową ^^O(n)^^, gdzie ^^n^^ - liczba węzłów
+c)jest realizacją wzoru całkowego Fouriera na architekturach równoległych
+>>d)polega na zamianie pojedynczej transformaty Fouriera na sumę transformat Fouriera
+
+[#131] Podejście wariacyjne do rozwiązywania równań różniczkowych:
+a)nie nadaje się do obliczeń numerycznych
+>>b)polega na tym, że szukamy funkcji minimalizującej odpowiedni funkcjonał
+c)polega na wprowadzeniu specjalnej siatki całkowania
+d)polega na uzmiennieniu położeń części punktów siatki
+
+[#132] Wymagania stawiane schematom rozwiązywania numerycznego zagadnienia początkowego to:
+a)jawne uwzględnienie warunków brzegowych
+b)wprowadzenie siatki przestrzennej zgodnej z siatką czasową
+>>c)zgodność aproksymacji różnicowej, dokładność, stabilność, efektywność czasowa i pamięciowa
+d)algorytm powinien mieć względnie małe wskaźniki uwarunkowania
+>>e)współczynnik propagacji błędu < 1, zgodność aproksymacji różnicowej
+f)wskaźniki uwarunkowania powinny mieć takie same wartości w każdej iteracji algorytmu
+
+[#133] Zaletami prowadzenia transmisji w trybie pełnego dupleksu w standardzie Ethernet są:
+>>a)całkowita likwidacja kolizji w segmencie sieci
+>>b)możliwość dwukrotnego zwiększenia sumarycznej przepustowości sieci
+>>c)brak ograniczenia długości medium transmisyjnego w segmencie warstwy fizycznej wynikającego z wymogów protokołu CSMA/CD
+d)możliwości wykorzystania urządzeń hub
+
+[#134] Model odniesienia OSI/ISO:
+a)jest modelem czterowarstwowym
+b)definiuje standardy w ramach każdej warstwy (np. protokół IP w warstwie sieciowej)
+>>c)określa zadania poszczególnych warstw
+>>d)pozwala na niezależny rozwój sprzętu i oprogramowania w ramach poszczególnych warstw
+
+[#135] Osiągnięcie przepustowości 1 Gb/s na kablu UTP kategorii 5e (tym samym, który jest używany w transmisji 100 Mb/s) w standardzie Ethernet jest:
+>>a)możliwe dzięki wykorzystaniu do transmisji wszystkich czterech par
+>>b)możliwe dzięki wykorzystaniu bardziej złożonego kodowania
+c)nie jest możliwe - wymaga kabla o lepszych parametrach
+d)nie jest możliwe - taką przepustowość można osiągnąć tylko używając światłowodu
+
+[#136] Kodowanie sygnałów w transmisji w sieciach komputerowych:
+>>a)wpływa na uzyskiwaną przepustowość
+>>b)jest zależne od wykorzystywanego medium
+c)jest przedmiotem zainteresowania warstwy sieciowej modelu OSI/ISO
+>>d)może pozwalać na osiągnięcie samosynchronizacji nadajnika i odbiornika
+
+[#137] Istnienie ograniczenia maksymalnej odległości między komunikującymi się hostami wynika z:
+>>a)w ramach jednego segmentu sieci: wymogów protokołu warstwy łącza danych
+>>b)w ramach jednego segmentu sieci: parametrów medium fizycznego
+c)w ramach jednego segmentu sieci: wymogów protokołu warstwy sieciowej
+d)w ramach kilku segmentów sieci rozdzielonych przełącznicami: wymogów protokołu warstwy sieciowej
+
+[#138] Wirtualne sieci lokalne:
+>>a)można definiować w oparciu o adresy fizyczne
+>>b)mogą być rozpięte na wielu urządzeniach warstwy drugiej modelu OSI/ISO
+c)stanowią mechanizm alternatywny dla budowy drzewa rozpinającego
+d)stanowią podstawowy mechanizm zapobiegania przeciążeniom mostka
+>>e)wyznaczają domenę rozgłoszeniową
+>>f)poprawiają bezpieczeństwo sieci
+>>g)można definiować w oparciu o adresy logiczne
+h)można definiować w oparciu o porty routera
+i)służą do dynamicznego uzyskiwania adresu IP
+j)mogą być używane zamiast protokołu ARP
+
+[#139] Algorytm budowy drzewa rozpinającego:
+>>a)jest stosowany w przypadku mostków uczących się
+>>b)służy zapobieżeniu występowania zapętleń transmisji ramek
+c)jest jednym ze sposobów elekcji głównego routera w sieci
+d)służy zrównoważeniu obciążenia pomiędzy łączami o takich samych przepustowościach
+
+[#140] Które warstwy modelu OSI/ISO są różne dla sieci WAN i LAN?
+>>a)fizyczna i łącza danych
+b)fizyczna i sieci
+c)łącza danych i sieci
+d)fizyczna, łącza danych i sieci
+
+[#141] Dopisz, do czego jest wykorzystywany protokół ARP:
+a)uzyskiwania adresu IP
+b)uzyskiwania adresu MAC urządzenia spoza naszej sieci lokalnej
+>>c)określenie odwzorowania między adresami warstwy 3 i 2 modelu OSI/ISO
+d)wyznaczania ścieżki pakietu
+
+[#142] Jeżeli dwie stacje znajdujące się w innych sieciach IP połączone są ze sobą dokładnie jednym routerem i chcą komunikować się ze sobą, to:
+a)obydwie stacje muszą posiadać jednakową maskę
+b)musi być uruchomiony mechanizm Proxy ARP na routerze
+c)na routerze konieczne jest dodanie pozycji routingu statycznego
+>>d)wymagane jest ustawienie na każdej stacji adresu IP
+
+[#143] Protokół IP w wersji 4 posiada następujące cechy:
+>>a)pozwala na fragmentację pakietów w węzłach pośrednich i u nadawcy
+b)zawiera mechanizmy potwierdzania doręczenia pakietów
+>>c)umożliwia kontrolę nagłówka pakietu za pomocą sumy kontrolnej
+d)jest protokołem połączeniowym
+>>e)umożliwia komunikację priorytetową
+f)jest zawodny, ale każda utrata pakietu jest sygnalizowana
+g)posiada płaską adresację
+
+[#144] W jakich przypadkach jest stosowany protokół ICMP?
+a)transmisji danych wysokopriorytetowych
+>>b)uzyskiwania informacji o konfiguracji sieci
+>>c)sygnalizacji sytuacji awaryjnych
+d)wyszukiwania odbiorców ruchu multicastowego
+
+[#145] Jaki mechanizm uniemożliwia nieskończone krążenie ramek IP w sieci w przypadku wystąpienia pętli?
+a)mechanizm split-horizon
+b)mechanizm trigger-update
+>>c)pole TTL
+d)NAT
+e)STP
+
+[#146] Parametr "niezawodność łącza" wchodzi w skład metryki protokołu routingu:
+>>a)EIGRP
+b)RIPv2
+>>c)IGRP
+d)OSPF
+
+[#147] Protokół UDP:
+a)wprowadza mechanizmy fragmentacji dla danych użytkownika przekraczających maksymalny rozmiar datagramu UDP
+b)pozwala na grupowanie danych otrzymanych do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych
+>>c)stosuje porty jako adresy warstwy transportowej
+>>d)nie zabezpiecza przed duplikacją i zmianą kolejności datagramów
+
+[#148] Adres typu broadcast (rozgłoszenia) IP w wersji 4, w której znajduje się host 110.104.1.10 i którą określa maska 255.0.0.0, to:
+a)110.104.1.10
+>>b)110.255.255.255
+c)110.104.1.255
+
+[#149] Pole o nazwie Time To Live w datagramie IP, które zabezpiecza przed zapętleniem routowania datagramu pomiędzy kolejnymi routerami w sieci, zawiera:
+>>a)liczbę routerów, przez jakie datagram IP może zostać przekazany danej
+b)czas w sekundach, w którym datagram IP można jeszcze przekazywać dalej
+
+[#150] Protokół UDP definiuje identyfikatory przesyłanych do hosta-odbiorcy datagramów zwane numerami portów, o długości:
+a)8 bitów
+b)32 bity
+c)4 bity
+>>d)16 bitów
+
+[#151] Wartości adresu IPv6 oraz maski, określające wszystkie hosty w internecie, to:
+>>a)::/0
+b)0.0.0.0/0
+c)::/2000
+d)ff02::1
+
+[#152] Istnienie zasady “Longest prefix match” w rutowaniu IP spowoduje, że adres docelowy 200.200.200.1 datagramu IP przy istnieniu w tablicy rutowania jednocześnie reguł o wzorcach i maskach (podano w notacji CIDR): 200.200.200.0/18, 200.200.200.0/20, 200.200.200.0/22, 200.200.200.0/24 zostanie dopasowany do:
+a)200.200.200.0/20
+b)200.200.200.0/18
+c)200.200.200.0/22
+>>d)200.200.200.0/24
+
+[#153] Maksymalna długość pakietu IP wersja 4, licząc w bajtach, to:
+a)nie istnieje taki limit
+b)1500
+>>c)65535
+d)576
+e)1025
+
+[#154] Router iBGP (internal Border Gateway Protocol), którego wprowadzenie do systemu rutowania iBGP umożliwia znaczne zredukowanie ilości otwartych sesji BGP między innymi routerami (rezygnację z tzw. full-mesh) nosi nazwę:
+a)BGP Mirror
+>>b)Route Reflector Client (RRC)
+
+[#155] Liczba klas CoS (Class of Service), definiowanych przez podstawowy mechanizm implementacji QoS (Quality of Service) w Ethernet (czyli standard IEEE 802.1p), to:
+>>a)8
+b)255
+c)16
+d)65536
+e)7
+
+[#156] Wariant protokołu STP (Spanning Tree Protocol, IEEE 802.1d) pozwalający w technologii Ethernet na logiczne pogrupowanie sieci VLAN i budowanie mniejszej liczby drzew rozpinających (po 1 drzewie dla każdej grupy) to:
+a)PVSTP (Per VLAN Spanning Tree Protocol)
+>>b)MSTP (Multiple Spanning Tree Protocol)
+c)RSTP (Rapid Spanning Tree Protocol)
+d)SPB (Shortest Path Bridging)
+
+[#157] Nazwa procesu przekazywania wiedzy o trasach pomiędzy różnymi protokołami rutowania dynamicznego IP w routerach IP, to:
+>>a)redystrybucja
+b)IP Route Spoofing
+
+[#158] Co określa standard IEEE 802.1Q?
+>>a)wirtualne sieci LAN (VLAN) budowane w środowisku transportującym ramki 
+b)technologię tunelowania sieci VLAN o nazwie Q-in-Q
+c)private VLAN nadbudowaną nad Ethernet
+
+[#159] Protokół umożliwiający konwersję adresu IP zdalnej stacji na jej adres MAC w Ethernet, to:
+a)SLIP (Serial Line Internet Protocol)
+>>b)ARP (Address Resolution Protocol)
+c)MLD (Multicast Listener Discovery)
+
+[#160] Dwie podwarstwy definiowane w ramach warstwy drugiej modelu ISO-OSI to odpowiednio:
+a)FDDI i CDDI
+b)LAN i WAN
+c)LP (Link Pulse) i PHY (Physical)
+>>d) LLC (Logical Link Control) i MAC (Media Access Control)
+
+[#161] Rodzaj obszaru (area) w domenie OSPF (Open Shortest Path First) nie otrzymującego żadnych informacji o zewnętrznych (external) trasach rutowania OSPF, to:
+a)backbone
+b)internal
+>>c)stub area
+d)NSSA
+
+[#162] Parametr o nazwie “Wielkość okna” (Window size), którego wartość przekazywana jest w datagramach potwierdzenia TCP (Transmission Control Protocol Acknowledgment) w kierunku od odbiorcy do nadawcy ma na celu:
+a)określenie długości następnego datagramu, oraz wszystkich kolejnych
+>>b)określić ilość danych, jaką nadawca może w danej chwili wysłać (służy do sterowania przepływem)
+c)określenie ilości danych w datagramie, w którym się znajduje - i w przypadku potwierdzeń TCP nie ma żadnego znaczenia
+>>d)informowanie o wielkości datagramu, jaką może przyjąć host w aktualnym stanie
+
+[#163] Dwa rodzaje obszarów (area) w protokole routingu dynamicznego IS-IS (Intermediate System to Intermediate System), to:
+>>a)intra-area i inter-area
+b)stub i backbone
+c)LAN i WAN
+d)Autonomous System i Internal System
+
+[#164] Dla uniknięcia błędów uwarunkowanych czasowo, maksymalna liczba procesów, które mogą znajdować się wewnątrz sekcji krytycznej, wynosi:
+a)8
+>>b)1
+c)0
+d)16
+
+[#165] Inicjalna wartość semafora uogólnionego implementującego sekcję krytyczną wynosi:
+a)0
+>>b)1
+c)-1
+d)dowolna liczba dodatnia
+
+[#166] Proces transferowania danych, które mają być docelowo wyprowadzone na urządzenie peryferyjne, do przestrzeni pamięci pomocniczej i transferowanie ich na to urządzenie w dogodniejszym czasie nosi nazwę:
+>>a)spooling
+b)virtualization
+c)caching
+d)throttling
+
+[#167] Centralny Procesor, po otrzymaniu informacji o przerwaniu z urządzenia wejścia/wyjścia:
+a)zatrzymuje się na określony okres czasu
+>>b)przekazuje sterowanie do systemu obsługi przerwań po zakończeniu wykonywania bieżącej instrukcji
+
+[#168] Który z problemów rozwiązuje zaproponowany przez Dijkstrę algorytm bankiera:
+a)wzajemnego wykluczania (mutual exclusion)
+b)wzajemnego zakleszczenia (deadlock exclusion)
+>>c)unikania zakleszczenia (deadlock avoidance)
+d)unikania wykluczania (exclusion avoidance)
+
+[#169] System operacyjny jest:
+a)zbiorem składników sprzętowych (hardware routines)
+b)zbiorem driverów obsługujących urządzenia wejścia-wyjścia (input-output devices)
+>>c)zbiorem składników programowych (software routines)
+
+[#170] Szyfrowanie kluczem publicznym w szyfrowaniu asymetrycznym:
+a)pozwala jedynie właściwemu odbiorcy odkodować komunikat
+>>b)tylko posiadacz klucza prywatnego może odkodować komunikat
+c)wystarczy użyć tego samego klucza do deszyfrowania wiadomości
+>>d)wiadomość zaszyfrowana za pomocą klucza publicznego może być odszyfrowana tylko za pomocą klucza prywatnego
+
+[#171] Buforowanie plików realizowane jest w celu:
+a)zwiększenia wydajności dostępu do pamięci pomocniczej
+b)wspomagania obsługi przerwań
+c)zwiększenia wydajności procesora
+>>d)wyrównania różnic prędkości przesyłania danych między różnymi urządzeniami
+
+[#172] Zaznacz prawdziwe stwierdzenia na temat stronicowania:
+>>a)stronicowanie rozwiązuje problem zewnętrznej fragmentacji pamięci
+>>b)tablica stron jest stosowana do translacji adresu logicznego na adres fizyczny
+c)podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na strony, a pamięć logiczna na ramki, oraz że rozmiary stron i ramek są jednakowe
+d)stronicowanie rozwiązuje problem wewnętrznej fragmentacji pamięci
+>>e)podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na ramki, a pamięć logiczna na strony, oraz że rozmiary stron i ramek są jednakowe
+
+[#173] Zaznacz prawdziwe stwierdzenia na temat segmentacji:
+>>a)segmentacja ułatwia nadanie częściom procesu odpowiednich atrybutów ochrony: dopuszczalny odczyt, dopuszczalny zapis, dopuszczalne wykonanie
+b)zastosowanie segmentacji wyklucza zastosowanie stronicowania
+>>c)mogą istnieć następujące przykładowe rodzaje segmentów: kodu, danych, stosu
+d)elementy tablicy segmentów zawierają adresy/numery ramek, w których znajdują się segmenty oraz rozmiary poszczególnych segmentów
+
+[#174] Zaznacz prawdziwe stwierdzenia na temat algorytmów wywłaszczania stron:
+a)zaletą algorytmu zastępowania stron FIFO jest to, że nie zachodzi w nim efekt zwany anomalią Belady'ego
+>>b)w algorytmie zastępowania stron LRU zastępowana jest strona, która najdłużej nie była używana
+>>c)w algorytmie zastępowania stron zwanym algorytmem drugiej szansy algorytm wykorzystuje bit odniesienia, który określa, czy w pewnym przedziale czasu nastąpiło odwołanie do strony
+>>d)zasadą działania algorytmu optymalnego zastępowania stron jest to, że zastąpiona zostaje strona, która najdłużej nie będzie używana
+e)w algorytmie zastępowania stron LRU zachodzi efekt zwany anomalią Belady'ego
+>>f)optymalny algorytm wywłaszczania stron zapewnia minimalną ilość wywłaszczeń stron przy ustalonej liczbie ramek
+g)algorytm FIFO wywłaszcza stronę, do której czas dostępu był najdawniejszy
+
+[#175] Zaznacz prawdziwe stwierdzenia dotyczące pamięci wirtualnej:
+>>a)stronicowanie na żądanie jest jednym ze sposobów realizacji pamięci wirtualnej
+>>b)procedura leniwej wymiany (ang. lazy swapper) polega na tym, że nie wykonuje się wymiany stron w pamięci, jeśli nie zachodzi taka potrzeba
+>>c)pamięć wirtualna umożliwia wykonywanie procesów, które nie są w całości przechowywane w pamięci operacyjnej
+d)przydział ramek oparty na globalnym algorytmie zastępowania może ograniczyć szamotanie (w porównaniu do algorytmu lokalnego zastępowania), gdyż szamoczący się proces nie doprowadza do szamotania innych procesów
+
+[#176] Zaznacz prawdziwe zdania na temat semaforów:
+>>a)zaletą aktywnego czekania w trybie użytkownika jest brak konieczności kosztownego przejścia do trybu uprzywilejowanego (systemowego)
+>>b)semafor może być użyty do synchronizacji dostępu do sekcji krytycznej
+>>c)aktywne czekanie oznacza ciągłe testowanie wartości wyrażenia do momentu, gdy przyjmie ono wartość, dla której czekanie może być zakończone
+d)semafor nie nadaje się do zdeterminowania kolejności wykonywanych operacji w grupie współbieżnych procesów
+e)semafor może być użyty do synchronizacji dostępu do sekcji krytycznej, poprzez sygnalizowanie (V) przed wejściem i czekanie (P) po zakończeniu
+>>f)mogą wykonywać operacje czekaj (P) i sygnalizuj (V)
+g)aktywne czekanie polega na uśpieniu procesu i aktywnym oczekiwaniu na sygnał wybudzający
+>>h)można stworzyć semafor zliczający z 2 semaforów binarnych i zmiennej zliczającej wykorzystującej te semafory
+i)przed wejściem do sekcji krytycznej wykonywana jest operacja sygnalizuj (V)
+
+[#177] Generalizacja:
+a) organizuje obiekty w hierarchię uogólniania/uszczegóławiania
+b) organizuje klasy w hierarchię całości/części
+>>c) znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia interfejsów
+d) znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia implementacji
+
+[#178] Kompozycja:
+a) jest to struktura agregacji, w której klasy części mogą być powiązane tylko z jedną klasą całości
+b) ogranicza powiązanie klasy części do jednej klasy całości
+>>c) ogranicza powiązanie obiektu części do jednego obiektu całości
+>>d) jest silnym powiązaniem z czasem życia części ograniczonym do czasu życia całości
+
+[#179] Relacja zależności wskazuje, że:
+a)klasa dostarcza implementacji usług interfejsu
+b)istnieje szczególne powiązanie między klasami
+>>c)obiekt klasy może być argumentem wywołania usługi innej klasy
+>>d)implementacja klasy może się zmienić, gdy zmieni się implementacja innej klasy
+e)zmiana specyfikacji jednej usługi może mieć wpływ na poprawność działania innej
+f)zmiana stanu obiektu zależy od stanu innego obiektu
+g)przypadek użycia zależy od innego przypadku użycia
+
+[#180] Relacja realizacji wskazuje, że
+a) obiekt klasy może być argumentem wywołania usługi innej klasy
+>>b) klasa dostarcza implementacji usług interfejsu 
+c) klasa realizuje usługi delegowane z innej klasy
+d) klasa wykorzystuje usługi interfejsu
+
+[#181] Wielokrotne użycie wspierane jest w modelu obiektowym przez:
+a) kwalifikowane powiązania
+>>b) kompozycje z delegacją roli
+>>c) istnienie klas obiektów
+>>d) dziedziczenie implementacji
+
+[#182] Wybierz, które z poniższych stwierdzeń są prawdziwe:
+>>a)autorem klasyfikacji (hierarchii) języków formalnych jest Noam Chomsky
+b)zbiór wszystkich palindromów nad danym alfabetem jest językiem regularnym
+>>c)istnieją języki, które nie należą do hierarchii Chomsky'ego, więc nie są generowane przez żadną gramatykę ani akceptowane przez żaden automat
+>>d)językiem formalnym nazywamy dowolny podzbiór zbioru wszystkich możliwych słów zbudowanych z symboli należących do skończonego alfabetu
+e)język oznaczany jako ^^\{\epsilon\}^^ jest językiem pustym
+>>f)najszerszą klasą języków w hierarchii Chomsky'ego jest klasa języków rekurencyjnie przeliczalnych generowanych przez gramatyki bez ograniczeń
+>>g)jeżeli L jest językiem bezkontekstowym, to istnieje automat ze stosem akceptujący ten język i jest on mu równoważny
+
+[#183] Niech N będzie niedeterministycznym automatem skończonym posiadającym ^^n^^ stanów, oraz niech M będzie minimalnym deterministycznym automatem skończonym rozpoznającym ten sam język, posiadającym ^^m^^ stanów. Wtedy:
+a)^^m \leq n^^
+>>b)^^m \leq 2^n^^
+c)^^n \leq m^^
+d)M posiada dokładnie jeden stan akceptujący
+e)każdy deterministyczny automat skończony rozpoznający ten sam język musi posiadać co najmniej ^^2^n^^ stanów
+f)każdy automat deterministyczny akceptujący ten sam język co N musi mieć co najwyżej ^^2^n^^ stanów
+
+[#184] Wybierz, które z poniższych stwierdzeń są prawdziwe:
+a)jeśli język ^^L^^ spełnia tezę lematu o pompowaniu dla języków regularnych, to język ^^L^^ jest regularny
+>>b)jeśli język ^^L^^ jest skończony, to ^^L*^^ musi być regularny
+>>c)każdy język, który nie jest regularny, jest nieskończony
+d)pomimo, że języki regularne w trywialny sposób są bezkontekstowe, to istnieją języki regularne nie spełniające lematu o pompowaniu dla języków bezkontekstowych
+e)żeby sprawdzić, czy dany automat akceptuje język nieskończony, można iterując po wszystkich słowach złożonych z alfabetu sprawdzić, czy liczba słów przez niego akceptowanych jest nieskończona
+>>f)zupełny deterministyczny automat skończony, który nie akceptuje żadnego słowa, nie ma osiągalnych stanów akceptujących
+
+[#185] Dla języków i gramatyk formalnych, odnośnie postaci normalnej Chomsky'ego oraz postaci normalnej Greibach można sformułować następujące stwierdzenia (duże litery alfabetu łacińskiego to symbole nieterminalne, a litery małe to symbole terminalne):
+>>a)gramatyka w postaci Chomsky'ego zawiera produkcje postaci ^^A \rightarrow BC^^, ^^A \rightarrow a^^, a gramatyka w postaci Greibach zawiera produkcje postaci ^^A \rightarrow aX^^ (gdzie ^^X^^ to ciąg symboli nieterminalnych, może być pusty), oraz każdą gramatykę bezkontekstową w postaci normalnej Chomsky'ego można przekształcić do postaci normalnej Greibach
+>>b)dla dowolnej gramatyki bezkontekstowej ^^G^^ istnieje taka gramatyka bezkontekstowa ^^G'^^ będąca w postaci normalnej Chomsky'ego, że ^^L(G') = L(G) - \{\epsilon\}^^
+c)dla każdego języka bezkontekstowego istnieje gramatyka w postaci normalnej Chomsky'ego
+d)każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Chomsky'ego
+e)każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Greibach
+
+[#186] Odnośnie lematu o pompowaniu dla języków regularnych prawdziwe są następujące stwierdzenia:
+a)lemat służy pokazaniu, że określone języki są regularne
+b)schemat postępowania jest następujący: skoro język posiada pewne własności regularności, to jest regularny
+>>c)lemat służy do dowodzenia, że dany język nie jest językiem regularnym
+d)lemat służy do dowodzenia, że dany język jest językiem regularnym
+
+[#187] Jeżeli ^^r^^ oraz ^^s^^ są wyrażeniami regularnymi dla języków odpowiednio ^^R^^ oraz ^^S^^, to ^^(r + s)^^, ^^rs^^ oraz ^^r*^^ są wyrażeniami regularnymi reprezentującymi odpowiednio zbiory:
+a)^^R \cup S^^, ^^R \times S^^, ^^R^{+}^^
+b)^^R \cup S^^, ^^R \times S^^, ^^R*^^
+>>c)^^R \cup S^^, ^^RS^^, ^^R*^^
+d)^^R \cup S^^, ^^RS^^, ^^R^{+}^^
+
+[#188] Mamy języki ^^L1 = \{ a^{2^n}, n > 0 \}^^ oraz ^^L2 = \{ a^{2n}, n > 0 \}^^. Które z tych języków są regularne?
+a)^^L1^^ - nie, ^^L2^^ - nie
+b)^^L1^^ - tak, ^^L2^^ - nie
+>>c)^^L1^^ - nie, ^^L2^^ - tak
+d)^^L1^^ - tak, ^^L2^^ - tak
+
+[#189] Eliminując niejednoznaczność gramatyki poprzez konwersję do innej gramatyki musimy zachować bez zmian:
+a)drzewo wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego
+b)wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego
+>>c)zbiór słów generowanych przez oryginalną gramatykę
+d)drzewo wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego
+e)wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego
+
+[#190] Która z następujących metod parsingu może przetworzyć najszerszą klasę gramatyk:
+a)parser SLR
+b)zstępujący parser rekurencyjny bez nawracania
+c)kanoniczny parser LR
+>>d)parser Earleya
+e)parser LL(1)
+>>f)parser CYK
+g)parser LALR(1)
+h)parser oparty na priorytecie operatorów
+
+[#191] Wybierz stwierdzenia, które są prawdziwe:
+a)LR wymaga usunięcia lewostronnej rekurencji
+b)LL wymaga na początku faktoryzacji lewostronnej
+>>c)gramatyki parsowane przez LR są nadzbiorem właściwym gramatyk parsowanych przez LL
+d)LR parsuje od prawej do lewej, LL od lewej do prawej
+e)dla każdej gramatyki jednoznacznej można skonstruować parser LR(1)
+>>f)żadna gramatyka niejednoznaczna nie może być gramatyką LR(1)
+g)tworzenie parsera jest sensowną procedurą tylko dla jednoznacznej gramatyki bezkontekstowej (nie ma sensu konstruowanie parsera dla gramatyki niejednoznacznej)
+
+[#192] Typowy skaner języka formalnego ma za zadanie
+>>a)wyodrębnić symbole leksykalne
+b)zliczyć słowa kluczowe i sprawdzić ich kolokacje
+c)zliczyć lewe i prawe nawiasy sprawdzając wstępnie ich sparowanie
+>>d)wczytać kod źródłowy programu do postaci tokenów
+
+[#193] W odniesieniu do pracy parserów klasy LR(k) i funkcji action prawdziwe są stwierdzenia:
+a)funkcja action przyjmuje wartości ze zbioru {shift, reduce, goto, accept, error}
+b)na stosie trzymane są prefiksy i sufiksy form zdaniowych, co do których jest nadzieja na ich wykorzystanie
+>>c)funkcja action przyjmuje wartości ze zbioru {shift, reduce, accept, error}
+d)na stosie trzymane są prefiksy wszystkich form zdaniowych
+
+[#194] Budowa tablic sterujących dla analizatorów klasy LR może stwarzać pewne trudności, szczególnie w zakresie automatyzacji, co ma pośredni wpływ na istnienie wielu odmian tych parserów. Które z poniższych prostych stwierdzeń są poprawne:
+a)pierwsza litera w nazwie SLR oznacza Shift
+>>b)pierwsza litera w nazwie SLR oznacza Simple
+>>c)pierwsze litery w nazwie LALR oznaczają LookAhead
+d)pierwsza litera w nazwie GLR oznacza Grammar
+
+[#195] Porównując gramatyki LL oraz LR można powiedzieć, że:
+a)gramatyki LL opisują szerszą klasę niż LR
+>>b)gramatyki LR opisują szerszą klasę niż LL
+>>c)każda gramatyka LL jest również gramatyką LR
+d)każda gramatyka LR jest również gramatyką LL
+
+[#196] Sekcja krytyczna procesu jest to:
+>>a)część procesu, w której wykorzystywany jest zasób dzielony
+b)część procesu, w której wykonywana jest komunikacja z użytkownikiem
+c)część procesu, w której wykonywana jest nieskończona pętla
+d)część procesu, w której deklarowane są lokalne zmienne
+
+[#197] Wzajemnym wykluczaniem nazywamy problem współzawodnictwa procesów o zasób, który:
+a)musi zostać zainicjalizowany przez jeden z procesów
+b)jest zmienną przechowywaną w rejestrach procesora
+>>c)jednocześnie może być wykorzystywany tylko przez jeden z nich
+d)może być wykorzystywany tylko przez z góry określony czas
+
+[#198] Komunikację nazywamy asynchroniczną jeżeli:
+a)nadawca żąda, by odbiorca był gotów do odebrania komunikatu
+>>b)nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania
+c)przy komunikacji mamy do czynienia z synchronizacją procesów
+>>d)nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu
+
+[#199] Zjawisko blokady w programie współbieżnym jest:
+a)zatrzymaniem pracy jednego ze współbieżnych procesów
+>>b)stanem, w którym każdy proces oczekuje na działanie innego procesu
+>>c)przejawem braku bezpieczeństwa programu współbieżnego
+d)stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy
+
+[#200] Zjawisko zagłodzenia w programie współbieżnym jest:
+a)stanem, w którym każdy proces oczekuje na działanie innego procesu
+b)przejawem braku bezpieczeństwa programu współbieżnego
+>>c)stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony, mimo że występuje ono dowolną liczbę razy
+d)nienaturalnym przerwaniem pracy jednego ze współbieżnych procesów
+>>e)sytuacją, kiedy nie ma gwarancji, że określone zdarzenie wykona się w skończonym czasie
+f)pojawieniem się cyklu w relacji Lamporta "happen-before"
+
+[#201] Komunikację nazywamy synchroniczną jeżeli:
+>>a)nadawca żąda, by odbiorca był gotów do odebrania komunikatu
+b)nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu
+>>c)przy komunikacji mamy do czynienia z synchronizacją procesów
+d)nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania
+
+[#202] Prawo dostępu do pliku 453 pozwala:
+>>a)właścicielowi czytać plik
+b)wszystkim czytać plik
+>>c)właścicielowi na odczyt, grupie na odczyt i uruchomienie, pozostałym na zapis i uruchomienie
+d)grupie na odczyt i zapis, pozostałym tylko na odczyt
+
+[#203] Przy konfiguracji obsługi sieci w Unixie:
+>>a)plik /etc/hosts przechowuje listę znanych hostów i interfejsów sieciowych
+b)plik /etc/hosts zawiera tylko adresy IP lokalnych interfejsów
+>>c)plik /etc/networks zawiera adresy IP znanych sieci IP
+d)plik /etc/networks przechowuje listę lokalnych interfejsów
+
+[#204] W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące użytkownika i jego sesji:
+>>a)praca programu logującego (login) jest sterowana m. in. zawartością plików /etc/nologin lub /etc/motd
+>>b)o możliwościach użytkownika w systemie decyduje przynależność do odpowiednich grup użytkowników
+>>c)w zależności od konfiguracji systemu mogą być odnotowywane podłączenia do systemu poprzez zmianę kontekstu użytkownika (komenda su)
+>>d)grupy użytkowników wprowadzono, aby ułatwić zarządzanie użytkownikami oraz podnieść bezpieczeństwo systemu
+
+[#205] W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące procesu logowania się i uprawnień użytkowników:
+>>a)o postaci hasła decyduje administrator systemu zapisując ograniczenia w różnych wersjach systemu w różnych plikach konfiguracyjnych
+b)wszystkie grupy użytkowników dają im jednakowe uprawnienia
+c)cała informacja dotycząca konfiguracji użytkownika w systemie jest zapisana jedynie w pliku /etc/passwd co zapewnia spójność informacji
+d)do systemu użytkownik może podłączać się jedynie z konsoli systemu oraz zdalnie poprzez sieć
+>>e)nazwa użytkownika w systemie UNIX musi być unikalna zaś numer identyfikacyjny może się powtarzać
+f)technika shadow umożliwia podglądnięcie postaci zaszyfrowanej hasła każdego użytkownika w systemie przez dowolnego użytkownika
+>>g)system PAM umożliwia m.in. odnotowywanie nieudanych prób podłączania się do systemu
+
+[#206] Zaznacz prawdziwe stwierdzenia na temat procesów:
+>>a)proces jest wykonaniem programu i składa się ze zbiorowości bajtów, w których wyróżnia się instrukcje maszynowe (tzw. tekst), dane i stos
+>>b)w kategoriach praktycznych proces w systemie UNIX jest jednostką utworzoną za pomocą funkcji systemowej fork (z wyjątkiem procesu o numerze 0)
+c)każdy uruchomiony w systemie UNIX proces otrzymuje od procesu potomnego dostęp do jego (procesu macierzystego) zmiennych środowiskowych
+d)liczba możliwych do uruchomienia w systemie UNIX procesów jest ograniczona jedynie rozmiarem pamięci o dostępie swobodnym danego systemu komputerowego
+e)wartość parametru NICE dla nowo utworzonego procesu jest wyliczana na podstawie średniego obciążenia systemu
+>>f)każdy uruchomiony w systemie UNIX proces otrzymuje od systemu trzy otwarte pliki o numerach 0, 1 i 2
+>>g)rekord w tablicy procesów znajdującej się w jądrze systemu operacyjnego zawiera podstawowe informacje o procesie, w tym jego właścicieli, listę segmentów oraz wskaźniki do U-obszaru
+h)zmiana kontekstu z trybu użytkownika na tryb jądra następuje między innymi wówczas, gdy system przydziela procesor kolejnemu procesowi z kolejki gotowych do wykonania procesów
+
+[#207] Interpretery poleceń systemu UNIX:
+>>a)w niektórych interpreterach poleceń można uniemożliwić odłączanie się od systemu poprzez wykorzystanie sekwencji Ctrl-D dzięki ustawieniu wartości odpowiedniej zmiennej środowiskowej
+b)wszystkie polecenia shella zwracają 0 (zero), kiedy wykonanie ich zakończy się niepowodzeniem lub wartość różną od 0 (zazwyczaj 1) w przypadku przeciwnym
+>>c)każdy interpreter wykorzystuje trzy podstawowe typy zmiennych: specjalne, środowiska oraz programowe
+d)błędne wykonanie komendy w linii komend można rozpoznać m. in. po zapisach do urządzenia /dev/null
+
+[#208] Wartość 5/16 ma postać w systemie binarnym:
+>>a)0.0101
+b)0.1011
+c)0.1010
+
+[#209] Wartość 1/10 ma postać w systemie binarnym:
+a)0.1010
+>>b)0.0(0011)
+c)0.(1010)
+d)0.0(1010)
+
+[#210] Język formalny jest:
+a)sposobem zapisu algorytmów opartym na blokach operacyjnych
+>>b)sposobem zapisu algorytmów opartym na pseudokodzie
+
+[#211] Syntaktyka języka programowania opisuje:
+a)znaczenie instrukcji w języku
+b)formalnie poprawne programy
+>>c)budowę instrukcji w języku
+d)działanie poprawnego programu
+
+[#212] Semantyka języka programowania opisuje:
+>>a)znaczenie instrukcji w języku
+b)formalnie poprawne programy
+c)budowę instrukcji w języku
+d)działanie poprawnego programu
+
+[#213] Nawiasy <> w notacji EBNF oznaczają:
+a)opcjonalne wystąpienie elementu
+b)symbol terminalny
+>>c)symbol nieterminalny
+d)wielokrotne występowanie elementu
+
+[#214] Kodem ASCII możemy zakodować:
+a)dowolny znak z zakresu 0-128
+b)dowolny znak z zakresu 0-255
+c)dowolny znak z zakresu 32-255
+>>d)dowolny znak z zakresu 0-127
+
+[#215] Kodowanie znaków metodą UTF-8 cechuje:
+>>a)pozwala zakodować dowolne znaki Unicode
+>>b)zmienna długość kodu
+>>c)pozwala zakodować dowolne znaki ASCII za pomocą 1 bajta
+d)pozwala zakodować dowolne znaki ASCII za pomocą 8 bajtów
+>>e)pozwala zakodować dowolne znaki Unicode za pomocą nie więcej niż 6 bajtów
+f)kod znaku ASCII może być częścią dłuższego kodu
+
+[#216] Cechami kodu uzupełnień do dwóch są:
+a)podwójna reprezentacja 0
+>>b)pojedyncza reprezentacja 0
+c)symetryczny zakres liczb
+>>d)asymetryczny zakres liczb
+
+[#217] Dana jest następująca reprezentacja liczb zmiennopozycyjnych: mantysa zajmuje 22 bity, w tym bit znaku, cecha zajmuje 10 bitów, w tym bit znaku. Cecha i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy (mantysa jest ułamkiem [1/2...1)). Jaka jest największa możliwa liczba w tym systemie?
+a)10^10
+>>b)(1-2^(-21)) * 2^(2^9-1)
+
+[#218] Jaka jest minimalna liczba bitów, aby reprezentować liczby zmiennopozycyjne z zakresu -106...106 z dokładnością do 2 miejsc znaczących?
+a)8 bitów
+>>b)12 bitów
+c)4 bity
+d)14 bitów
+
+[#219] W standardzie IEEE 754 liczby zmiennopozycyjne podwójnej precyzji:
+a)mantysa zawiera 52 bity łącznie z bitem znaku
+>>b)mantysa zawiera 53 bity łącznie z bitem znaku
+>>c)wykładnik zawiera 11 bitów
+d)wykładnik zawiera 12 bitów
+>>e)gwarantują 7-8 dziesiętnych miejsc znaczących
+
+[#220] Do czego służy stos systemowy?
+a)do przechowywania wszystkich zmiennych w programie
+b)do przechowywania zmiennych alokowanych procedurą ^^new(p)^^
+>>c)do przechowywania zmiennych lokalnych procedur i funkcji
+>>d)do przechowywania adresów powrotu z funkcji
+e)do przechowywania zmiennych alokowanych dynamicznie
+
+[#221] Liczby stałopozycyjne w komputerze są reprezentowane w kodzie uzupełnień do 2. Dla jakich wartości funkcja abs(x) będzie obliczona prawidłowo?
+a)tylko dla liczb ujemnych
+b)tylko dla liczb nieujemnych
+c)dla wszystkich liczb typu integer
+>>d)wszystkich poza najmniejszą liczbą w reprezentacji
+
+[#222] Zmienna typu wskaźnik zajmuje 4 bajty. Ile pamięci można zaadresować takim wskaźnikiem?
+a)64 kilobajty
+>>b)4 gigabajty
+c)2 megabajty
+d)6 gigabajtów
+e)8 kilobajtów
+
+[#223] Jaki paradygmat programowania jest realizowany w języku C?
+a)aplikatywny
+>>b)imperatywny
+c)deklaratywny
+>>d)strukturalny
+e)żaden z wymienionych
+
+[#224] Jeżeli w programie następuje odwołanie poza obszar tablicy:
+a)zawsze sygnalizowany jest błąd wykonania
+>>b)nie jest sygnalizowany błąd, jeżeli pamięć jest zaalokowana
+
+[#225] Translacja analizuje symbole:
+>>a)od lewej do prawej strony
+b)od prawej do lewej strony
+
+[#226] Jaki wynik da następujące wyrażenie napisane w ONP: 2 3 4 5 + * +?
+a)25
+>>b)29
+
+[#227] Co oznacza, że algorytm sortowania tablicy posiada złożoność ^^O(n^2)^^?
+a)wykonywana liczba porównań wynosi ^^n^2^^
+>>b)wykonywana liczba porównań jest rzędu ^^n^2^^
+c)wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^
+>>d)dwukrotne zwiększenie rozmiaru tablicy spowoduje czterokrotne zwiększenie czasu sortowania
+e)wykonywana liczba porównań i wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^
+f)wykonywana liczba porównań lub wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^
+
+[#228] Jakie byłyby konsekwencje znalezienia wielomianowego deterministycznego algorytmu dla problemu NP-zupełnego?
+>>a)stanowiłoby to dowód, że P = NP
+b)oznaczałoby to, że P =/= NP
+c)nie miałoby to żadnych konsekwencji dla teorii złożoności obliczeniowej
+d)żadna z pozostałych odpowiedzi
+e)każdy problem algorytmiczny można byłoby rozwiązać w czasie wielomianowym
+
+[#229] Jakie problemy zaliczamy do klasy problemów NP-zupełnych?
+a)z definicji należą jednocześnie do NP i co-NP
+b)należą do klasy NP, ale nie należą do P
+c)żadna z pozostałych odpowiedzi
+>>d)wszystkie problemy z klasy NP redukują się do nich i same należą do klasy NP
+>>e)takie, które są w NP i redukuje się do nich problem SAT
+f)takie, które są w NP i redukują się do problemu SAT
+
+[#230] Co można powiedzieć o podproblemach problemu ^^\pi^^, wiedząc, że ^^\pi \notin P^^?
+a)żaden jego podproblem nie należy do P
+b)każdy jego podproblem należy do klasy P
+c)pojęcie podproblemu nie jest zdefiniowane
+>>d)istnieje taki jego podproblem, który należy do P
+
+[#231] Która z poniższych złożoności czasowych jest wykładnicza:
+a)^^O(n^100)^^
+b)^^O(n^{1/n!})^^
+>>c)^^O((\log{10})^n)^^
+d)^^O(n!)^^
+
+[#232] Co nazywamy mostem grafu?
+a)minimalną liczbę krawędzi grafu, których usunięcie zmienia graf w niespójny lub trywialny
+>>b)krawędź grafu spójnego, której usunięcie z grafu rozspójnia go
+>>c)krawędź, której usunięcie zwiększa liczbę spójnych składowych grafu
+d)maksymalną liczbę krawędzi grafu, których usunięcie zmienia graf w niespójny
+
+[#233] W teorii złożoności obliczeniowej wszystkie problemy decyzyjne, które w wielomianowym czasie rozwiązuje niedeterministyczna maszyna Turinga, tworzą pewną klasę problemów. Jak brzmi jej nazwa?
+>>a)klasa NP
+b)klasa P
+c)klasa coNP
+d)klasa RE
+
+<options> {
+    "format": "2.1",
+    "markdown": false,
+    "mathjax": true,
+    "grading": "custom: incorrect ? 0 : 4 * correct / total",
+    "repeatIncorrect": true,
+    "explain": "always"
+}

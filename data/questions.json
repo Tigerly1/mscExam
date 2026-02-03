@@ -1,0 +1,6678 @@
+{
+  "metadata": {
+    "generatedAt": "2026-02-03T21:59:55.628Z",
+    "sourceFile": "drill copy.txt",
+    "stats": {
+      "total": 219,
+      "byTopic": {
+        "algorithms": 10,
+        "digital_systems": 15,
+        "transmission": 1,
+        "databases": 19,
+        "software_engineering": 27,
+        "functional_programming": 6,
+        "java": 6,
+        "c_cpp": 10,
+        "numerical_methods": 30,
+        "other": 1,
+        "networks": 31,
+        "operating_systems": 13,
+        "oop_design": 5,
+        "formal_languages": 14,
+        "concurrent_programming": 6,
+        "unix_admin": 6,
+        "number_representation": 15,
+        "programming_basics": 4
+      },
+      "bySemester": {
+        "1": 34,
+        "2": 17,
+        "3": 63,
+        "4": 44,
+        "5": 27,
+        "6": 21,
+        "7": 12
+      },
+      "multipleChoice": 109,
+      "singleChoice": 110
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "Zadanie o rozmiarze n, realizowane pewnym algorytmem o złożoności f(n), zostało sprowadzone do dwóch podzadań o rozmiarze n/2 każde oraz do n działań o stałym czasie wykonania, zapewniających rozbicie i scalenie zadania. Złożoność f(n) wynosi:",
+      "options": [
+        {
+          "key": "a",
+          "text": "f(n) = O(log(n))",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "f(n) = O(n*log(n))",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "f(n) = O(n + log(n))",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "f(n) = O(n)",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 2,
+      "question": "Dana jest procedura: Proc(n){ if(warunek(x)) then { A(x); Proc(f(n)); B(x) } else C(x) }. Przyjmijmy konwencję, że np. zapis AAABCC oznacza trzykrotne wykonanie instrukcji A, po czym następuje wykonanie instrukcji B, a następnie dwukrotne wykonanie instrukcji C. Następujące sekwencje instrukcji mogą być wynikiem wywołania powyższej procedury:",
+      "options": [
+        {
+          "key": "a",
+          "text": "AACBB",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "ACBB",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "AACCBB",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "ACCB",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "C",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "AAACCCBBB",
+          "correct": false
+        },
+        {
+          "key": "g",
+          "text": "AABBC",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 3,
+      "question": "Dla problemu komiwojażera algorytm pozwalający wyznaczyć rozwiązanie optymalne:",
+      "options": [
+        {
+          "key": "a",
+          "text": "istnieje i ma złożoność wielomianową",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "istnieje i ma złożoność wykładniczą",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "nie istnieje",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 4,
+      "question": "Korzystając z układu FPGA można wykonać:",
+      "options": [
+        {
+          "key": "a",
+          "text": "na przykład dowolny układ kombinacyjny, ograniczony jedynie wielkością struktury FPGA",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "na przykład dowolny układ sekwencyjny, ograniczony jedynie wielkością struktury FPGA",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 5,
+      "question": "Układ kombinacyjny to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "układ logiczny nie pamiętający stanów poprzednich",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "w jego skład mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "układ cyfrowy, w którym stan wyjść zależy wyłącznie od stanu wejść",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 6,
+      "question": "Układ sekwencyjny to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "układ logiczny nie pamiętający stanów poprzednich",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "może składać się z samych bramek logicznych",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "może się składać z samych bramek logicznych bez sprzężeń zwrotnych",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "w skład jego mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 7,
+      "question": "Pamięć RAM:",
+      "options": [
+        {
+          "key": "a",
+          "text": "posiada wejścia adresowe, wejścia sterujące oraz wejście/wyjście danych",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "można wykonać z bramek NAND",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "można wykonać z bramek NAND bez sprzężeń zwrotnych",
+          "correct": false
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 8,
+      "question": "Pamięć RAM dwuportowa:",
+      "options": [
+        {
+          "key": "a",
+          "text": "możemy wykonać z bramek NAND bez sprzężeń zwrotnych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "to pamięć RAM z dwoma interfejsami, pozwalającymi niezależnie uzyskać dostęp do tych samych komórek pamięci",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "w układach FPGA taki rodzaj pamięci nie występuje",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "to specjalne pamięci RAM, które umożliwiają dwóm niezależnym procesom (kontrolerom pamięci) dostęp do wspólnych danych",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "można ją wykorzystać wyłącznie w procesorach wielordzeniowych",
+          "correct": false
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 9,
+      "question": "Procesor:",
+      "options": [
+        {
+          "key": "a",
+          "text": "możemy wykonać przy użyciu FPGA, ale tylko jednordzeniowy",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "żadne z pozostałych",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "to sekwencyjne urządzenie cyfrowe, które pobiera dane z pamięci operacyjnej, interpretuje je i wykonuje jako rozkazy",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "tryby adresowania procesora wykonywanego przy użyciu FPGA muszą być zgodne z trybami przewidzianymi przez producenta układu",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "możemy wykonać przy użyciu FPGA",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 10,
+      "question": "Lista rozkazów procesora:",
+      "options": [
+        {
+          "key": "a",
+          "text": "w skład listy rozkazów zawsze wchodzi mnożenie",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "w procesorze wykonywanym przy użyciu FPGA musi być zgodna z listą rozkazów przewidzianą przez producenta układu FPGA",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "musi zawierać rozkazy z różnymi trybami adresowania",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "projektowana jest w zależności od potrzeb związanych z zastosowaniem procesora",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 11,
+      "question": "Karta graficzna:",
+      "options": [
+        {
+          "key": "a",
+          "text": "może być układem kombinacyjnym",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "przy użyciu FPGA nie można zbudować karty graficznej ze sprzętowym wspomaganiem OpenGL",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "prostą wersję można zapisać w dwudziestu kilku liniach VHDL",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "OpenGL to specyfikacja otwartego i uniwersalnego API do tworzenia grafiki; jest to zestaw podstawowych funkcji umożliwiających tworzenie grafiki",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 12,
+      "question": "Licznik rozkazów:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest to licznik z wejściem równoległym wykorzystywanym wyłącznie przy skokach bezwarunkowych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "służy do pamiętania adresu mającego się wykonać rozkazu lub adresu aktualnie pobieranego argumentu z pamięci programu",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 13,
+      "question": "Rozkaz skoku bezwarunkowego procesora:",
+      "options": [
+        {
+          "key": "a",
+          "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "nie wpływa na stan licznika rozkazów procesora",
+          "correct": false
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 14,
+      "question": "Rozkaz skoku warunkowego procesora:",
+      "options": [
+        {
+          "key": "a",
+          "text": "nie wpływa na stan licznika rozkazów procesora",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "żadne z pozostałych",
+          "correct": false
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 15,
+      "question": "Rozkaz procesora wykonujący dodanie dwóch liczb:",
+      "options": [
+        {
+          "key": "a",
+          "text": "powoduje dodanie dwóch liczb, wynik zapisuje do licznika rozkazów",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "wykorzystuje ALU",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "żadne z pozostałych",
+          "correct": false
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 16,
+      "question": "W procesorze wykorzystującym przetwarzanie potokowe:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wykonanie pojedynczej instrukcji rozkłada się na ciąg prostszych etapów",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "rozpoczęcie wykonania rozkazu może nastąpić dopiero po zakończeniu wykonania poprzedniego rozkazu",
+          "correct": false
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 17,
+      "question": "W procesorze wykorzystującym superskalarność:",
+      "options": [
+        {
+          "key": "a",
+          "text": "rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "ten sam etap dwóch kolejnych rozkazów może być wykonywany w tej samej chwili",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "możliwe jest jednoczesne wykonanie więcej niż jednej instrukcji",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 18,
+      "question": "Rejestr rozkazów:",
+      "options": [
+        {
+          "key": "a",
+          "text": "przechowuje adres rozkazu wczytany z pamięci programu",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "jego zawartość wykorzystywana jest przez jednostkę sterującą",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "w trakcie wykonywania rozkazu zawartość rejestru rozkazów musi zmienić się bezpośrednio przed pobraniem argumentu rozkazu z pamięci programu",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "przechowuje kod rozkazu wczytany z pamięci programu",
+          "correct": true
+        }
+      ],
+      "topic": "digital_systems",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 19,
+      "question": "Transmisja asynchroniczna:",
+      "options": [
+        {
+          "key": "a",
+          "text": "układy nadawczy i odbiorczy synchronizowane są wspólną dodatkową linią z sygnałem synchronicznym",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "podczas transmisji asynchronicznej występują kolejno po sobie wycinki czasu zawierające i nie zawierające informacji",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "aby przygotować odbiorcę na przyjęcie sygnału zawierającego informacje, są wysyłane sygnały startu oraz sygnały stopu, rozpoczynające i kończące przesyłanie porcji informacji",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "żadne z pozostałych",
+          "correct": false
+        }
+      ],
+      "topic": "transmission",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 34,
+      "question": "Wskaż, w których przypadkach klauzule instrukcji SELECT są ułożone we właściwej kolejności:",
+      "options": [
+        {
+          "key": "a",
+          "text": "from, where, group by, having, order by",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "from, group by, having, where, order by",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "from, group by, where, having, order by",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 35,
+      "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące postaci normalnej Boyce'a-Codda:",
+      "options": [
+        {
+          "key": "a",
+          "text": "dowolną relację R o schemacie H można sprowadzić do BCNF stosując dekompozycję bezstratną, ale niekoniecznie zachowującą zależności funkcyjne",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "dowolna relacja dwuatrybutowa jest w BCNF",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "jeżeli schemat relacji znajduje się w postaci normalnej Boyce'a-Codda, to nie ma w nim redundancji",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "BCNF oznacza, że lewa strona każdej nietrywialnej zależności funkcyjnej zawiera klucz",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "atrybut z prawej strony zależności może być podstawowy",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "schematy relacji zawsze należy doprowadzać do postaci BCNF",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 36,
+      "question": "Dana jest relacja R o schemacie H = {A, B, C, D, E} oraz zbiór zależności funkcyjnych F = {{B, C} -> {D, E}, {C, D} -> {B, E}, {D} -> {C}, {E} -> {B}}. W jakiej maksymalnie postaci normalnej jest relacja R? Zakładamy, że jest w 1NF.",
+      "options": [
+        {
+          "key": "a",
+          "text": "1NF",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "2NF",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "3NF",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "4NF",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 37,
+      "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące trzeciej postaci normalnej:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jeżeli wszystkie atrybuty ze schematu relacji są atrybutami kluczowymi, to relacja jest w 3NF",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "dowolną relację można sprowadzić do 3NF stosując dekompozycję bezstratną i zachowującą zależności funkcyjne",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "3NF oznacza, że każdy atrybut niekluczowy (informacyjny) zależy wyłącznie od klucza; innymi słowy, atrybuty informacyjne są wzajemnie niezależne",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "BCNF jest nieco bardziej restrykcyjną wersją 3NF - w BCNF wszystkie atrybuty (również kluczowe) muszą spełniać warunek zależności wyłącznie od klucza; ten dodatkowy wymóg ma znaczenie, gdy relacja zawiera wiele kluczy",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "jeżeli relacja jest w BCNF, to jest również w 3NF",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "jeżeli relacja jest w 3NF, to możliwe jest występowanie pewnych redundancji",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "relacja jest w 3NF, jeżeli jest w 2NF i nie zawiera zależności funkcyjnych",
+          "correct": false
+        },
+        {
+          "key": "h",
+          "text": "jeżeli relacja jest w 3NF, to jest również w BCNF",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 38,
+      "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące kluczy obcych w relacyjnym modelu danych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wartości klucza obcego są unikatowe",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "klucze obce są sposobem łączenia danych przechowywanych w różnych tabelach",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "klucz obcy jest kolumną lub grupą kolumn tabeli, która czerpie swoje wartości z tej samej dziedziny, co klucz główny powiązanej z nią tabeli",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "klucz obcy musi odnosić się do istniejącej krotki lub przyjmować wartość NULL, aby jawnie stwierdzić, że nie ma związku z reprezentowanymi obiektami w bazie danych albo że ten związek jest nieznany",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "klucz obcy nie musi być unikatowy w obrębie tabeli",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "klucz obcy może pochodzić z tej samej tabeli, gdy chcemy stworzyć związek rekurencyjny",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "klucz obcy i klucz do którego się on odwołuje muszą mieć tyle samo atrybutów",
+          "correct": true
+        },
+        {
+          "key": "h",
+          "text": "muszą się nazywać tak samo jak klucz tabeli głównej",
+          "correct": false
+        },
+        {
+          "key": "i",
+          "text": "muszą zawierać nazwę tabeli głównej w swojej nazwie",
+          "correct": false
+        },
+        {
+          "key": "j",
+          "text": "powinny wskazywać na klucz główny w tabeli głównej",
+          "correct": true
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 39,
+      "question": "Wskaż, które ograniczenia można definiować na poziomie kolumny (w instrukcji create table):",
+      "options": [
+        {
+          "key": "a",
+          "text": "wartość domyślna atrybutu",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "krótsze ścieżki na płycie głownej",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "większy bufor",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "unikalne wartości atrybutu",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "proste klucze główne",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "NULL / NOT NULL",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "wyrażenia regularne",
+          "correct": false
+        },
+        {
+          "key": "h",
+          "text": "funkcje walidujące",
+          "correct": false
+        },
+        {
+          "key": "i",
+          "text": "wyzwalacze typu \"zdarzenie, warunek, akcja\"",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 40,
+      "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące wartości NULL:",
+      "options": [
+        {
+          "key": "a",
+          "text": "w modelu relacyjnym wartość NULL jest traktowana jako trzecia, różna od false i true, wartość logiczna",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "dwie wartości NULL są traktowane jako równe",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "wartości NULL są różne od spacji, zera czy też pustego łańcucha znaków",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "jeżeli wystąpi w wartości atrybutu NULL, to suma po tym atrybucie też jest NULL",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "klucz obcy musi zawierać przynajmniej jedną wartość NULL",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "wartość NULL oznacza zero",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 41,
+      "question": "Które wyrażenie SQL zwraca wszystkie wiersze tabeli \"Osoby\" posortowane malejąco według atrybutu \"Imie\"?",
+      "options": [
+        {
+          "key": "a",
+          "text": "SELECT * FROM Osoby SORT BY 'Imie' DESC",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "SELECT * FROM Osoby ORDER BY Imie DESC",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "SELECT * FROM Osoby SORT 'Imie' DESC",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "SELECT * FROM Osoby ORDER Imie DESC",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 42,
+      "question": "Jak możesz zmienić wartość \"Kowalski\" na \"Nowak\" w atrybucie \"Nazwisko\" w tabeli \"Osoby\"?",
+      "options": [
+        {
+          "key": "a",
+          "text": "MODIFY Osoby SET Nazwisko='Nowak' WHERE Nazwisko='Kowalski'",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "MODIFY Osoby SET Nazwisko='Kowalski' INTO Nazwisko='Nowak'",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "UPDATE Osoby SET Nazwisko='Kowalski' INTO Nazwisko='Nowak'",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "UPDATE Osoby SET Nazwisko='Nowak' WHERE Nazwisko='Kowalski'",
+          "correct": true
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 43,
+      "question": "Jak można przy pomocy SQL uzyskać informację o liczbie wierszy w tabeli \"Osoby\"?",
+      "options": [
+        {
+          "key": "a",
+          "text": "SELECT COUNT(*) FROM Osoby",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "SELECT COUNT() FROM Osoby",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "SELECT COLUMNS() FROM Osoby",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "SELECT COLUMNS(*) FROM Osoby",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 44,
+      "question": "Jako można przy pomocy SQL wybrać wszystkie wiersze z tabeli \"Osoby\", w których wartość atrybutu \"Imie\" zaczyna się od \"a\"?",
+      "options": [
+        {
+          "key": "a",
+          "text": "SELECT * FROM Osoby WHERE Imie LIKE '%a'",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "SELECT * FROM Osoby WHERE Imie='%a%'",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "SELECT * FROM Osoby WHERE Imie LIKE 'a%'",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "SELECT * FROM Osoby WHERE Imie='a'",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 45,
+      "question": "Którą z poniższych cech musi posiadać klucz właściwy?",
+      "options": [
+        {
+          "key": "a",
+          "text": "jego wartość jednoznacznie wyznacza wiersz w danej tabeli",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "jest automatycznie generowany przez System Zarządzania Bazą Danych",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "nie może być generowany przez SZBD",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "jego wartość składa się tylko z jednego atrybutu",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "nie może być pomniejszony o żaden atrybut",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "żaden podzbiór jego atrybutów nie może być kluczem",
+          "correct": true
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 46,
+      "question": "Algebra relacji jest podstawą dla:",
+      "options": [
+        {
+          "key": "a",
+          "text": "realizacji przez relacyjny SZBD operacji języka manipulacji danymi",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "budowy diagramów ERD",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "budowy diagramów DFD",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "algorytmicznych języków relacyjnych baz danych",
+          "correct": true
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 47,
+      "question": "Które z poniższych cech posiadają widoki (view)?",
+      "options": [
+        {
+          "key": "a",
+          "text": "mogą realizować politykę ograniczania dostępu do danych",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "ułatwiają konstrukcję zapytań SQL do bazy danych",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "zabezpieczają dane przed ich utratą w trakcie realizacji złożonych transakcji",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "powodują problemy z konstrukcją zapytań SQL do bazy danych",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "dostarczają prostego mechanizmu uaktualniania danych",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 48,
+      "question": "Z jakim problemem trzeba się uporać przy odwzorowaniu w schemacie relacyjnej bazy danych relacji typu n:m (wiele do wiele)?",
+      "options": [
+        {
+          "key": "a",
+          "text": "zdefiniować podwójne indeksowanie plików odpowiadających każdej z tabel",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "trzeba zaprojektować dodatkową tabelę",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "dobrać odpowiedni klucz obcy w drugiej z tabel",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "trzeba użyć dodatkowo widoku (view)",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 49,
+      "question": "Które z poniższych stwierdzeń są prawdziwe, jeśli dotyczą systemów baz danych realizowanych w architekturze klient-serwer?",
+      "options": [
+        {
+          "key": "a",
+          "text": "mocno obciążają sieć w stosunku do systemów scentralizowanych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "pozwalają klientom pracować w różnych systemach operacyjnych",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "uniezależniają sposób realizacji aplikacji od serwera",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "wymagają co najmniej dwóch komputerów",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 50,
+      "question": "Systemy OLTP i OLAP różnią się przede wszystkim:",
+      "options": [
+        {
+          "key": "a",
+          "text": "czasem reakcji na zapytanie",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "stopniem szczegółowości przechowywanych danych",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "zakresem realizowanych funkcji użytkowych",
+          "correct": true
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 51,
+      "question": "Rolą hurtowni danych jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "przygotowanie danych do szybkiej analizy",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "kontrola poprawności danych realizowana podczas wykonywania transakcji",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "minimalizacja plików fizycznych przez ujednolicenie sposobu przechowywania danych",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "przechowywanie danych w sposób scentralizowany",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "wydajne odpowiadanie na zapytania o charakterze analitycznym",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "zwiększenie bezpieczeństwa",
+          "correct": false
+        },
+        {
+          "key": "g",
+          "text": "obsługa dużej ilości równoległych transakcji modyfikujących dane",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 52,
+      "question": "Modele danych w postaci gwiazdy i płatka śniegu:",
+      "options": [
+        {
+          "key": "a",
+          "text": "ich implementacja przyspiesza analizę danych",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "pozwalają oddać sens złożonej struktury danych",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "zapewniają brak redundancji danych",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "pomagają utrzymać spójność danych",
+          "correct": false
+        }
+      ],
+      "topic": "databases",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 53,
+      "question": "Celem testowania oprogramowania jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zbadanie zgodności z wymaganiami",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "wykrycie błędów w oprogramowaniu",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "zbadanie zgodności z oczekiwaniami użytkownika",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "sprawdzenie poprawności komentarzy w kodzie",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "ocena jakości oprogramowania",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "zdefiniowanie jakości kodu",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 54,
+      "question": "Jakie są główne aktywności w modelu spiralnym?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Planowanie, Analiza Ryzyka, Konstrukcja, Walidacja",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "Szybki Projekt, Budowa Prototypu, Ocena Prototypu, Redefinicja Prototypu",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "Analiza Wymagań, Projektowanie, Kodowanie, Testowanie",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "Definiowanie, Prototypowanie, Testowanie, Dostarczenie Produktu",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 55,
+      "question": "Jakiego widoku nie znajdziesz w modelu architektonicznym Kruchtena?",
+      "options": [
+        {
+          "key": "a",
+          "text": "przypadków użycia",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "konstrukcji",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "logicznego",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "przepływu danych",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 56,
+      "question": "Jaką rolę na diagramach klas UML pełni kompozycja?",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest związkiem typu gen-spec między instancjami klasy",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "jest związkiem typu część-całość między obiektami",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "wspomaga graficzne rozlokowanie symboli klas na diagramie",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "oznacza ukrywanie złożoności obiektów przed użytkownikiem",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 57,
+      "question": "Jednym z celów inżynierii oprogramowania jest tworzenie oprogramowania, które jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wolne od błędów",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "dostarczane zgodnie z harmonogramem",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "niezawodne i efektywne",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "niezgodne z wymaganiami",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 58,
+      "question": "Przykładem ryzyka występującego podczas wytwarzania oprogramowania jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "odejście kluczowych osób z zespołu projektowego, zanim produkt zostanie wdrożony",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "konkurenci mogą sprzedawać taniej system o podobnej funkcjonalności",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "problemy ze zdefiniowaniem specyfikacji produktu",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "wykonywanie kolejnych faz zgodnie z ustalonym harmonogramem",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 59,
+      "question": "Tworzenie modelu obiektowego z istniejącej relacyjnej bazy danych jest określane jako:",
+      "options": [
+        {
+          "key": "a",
+          "text": "forward engineering",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "backward engineering",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "reverse engineering",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "inverse engineering",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 60,
+      "question": "Stosowanie techniki prototypowania jest zalecane dla:",
+      "options": [
+        {
+          "key": "a",
+          "text": "aplikacji budowanej w oparciu o frameworki",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "gdy liczy się czas dostarczenia",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zespołów programistów, którym brakuje znajomości dziedziny",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "gdy istnieje trudność uzyskania pełnej informacji o wymaganiach systemu",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 61,
+      "question": "Które z poniższych stwierdzeń nie jest celem budowy modeli analitycznych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "opracowanie rozwiązań problemów",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "ustalenie wszystkich czynników / warunków w dziedzinie przedmiotowej / w otoczeniu projektu, które mogą wpłynąć na decyzje projektowe",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "stworzenie logicznego modelu systemu, opisującego sposób realizacji wymagań, ale bez szczegółów implementacyjnych",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 62,
+      "question": "Wstępna próba zdefiniowania elementów systemu oraz ich wzajemnych relacji, organizowanie tych elementów w dobrze określone warstwy z wyraźnie nakreślonymi zależnościami nazywa się analizą:",
+      "options": [
+        {
+          "key": "a",
+          "text": "przypadków użycia",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "architektoniczną",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "strukturalną",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "systemową",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 63,
+      "question": "Którego z poniższych narzędzi nie używa się podczas analizy systemowej?",
+      "options": [
+        {
+          "key": "a",
+          "text": "Data Flow Diagram",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "Decision Tree",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "Object Modelling Technique",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "HOOD",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 64,
+      "question": "Które z podanych rodzajów wymagań nie są określane podczas przygotowywania definicji wymagań systemowych?",
+      "options": [
+        {
+          "key": "a",
+          "text": "abstrakcyjne wymagania funkcjonalne",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "szczegółowe wymagania funkcjonalne",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "cechy lub zachowania, których system nie powinien przejawiać",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "właściwości systemu",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 65,
+      "question": "Które z wymienionych czynności występują dla wszystkich procesów wytwarzania oprogramowania?",
+      "options": [
+        {
+          "key": "a",
+          "text": "budowa i ulepszanie prototypów",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "retrospektywa celem polepszenia procesu",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "pozyskiwanie wymagań",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "ciągła integracja",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "testowanie wydajności",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "walidacja oprogramowania",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "specyfikowanie oprogramowania",
+          "correct": true
+        },
+        {
+          "key": "h",
+          "text": "zarządzanie konfiguracjami",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 66,
+      "question": "Zapis wymagania powinien bezwzględnie zawierać:",
+      "options": [
+        {
+          "key": "a",
+          "text": "informację o kolejności wprowadzenia danego wymagania w stosunku do innych wymagań",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "informację o uzależnieniu danego wymagania od innych wymagań lub powiązaniu z nimi",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "informację o pochodzeniu danego wymagania i jego uzasadnienie",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "informację o uzależnieniu projektu od wymagania, tj. powiązaniu danego wymagania ze składnikami systemu, które je implementują",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 67,
+      "question": "Prototypowanie z porzuceniem jest wariantem ewolucyjnego tworzenia oprogramowania, w którym:",
+      "options": [
+        {
+          "key": "a",
+          "text": "tworzony jest fragment systemu zwany prototypem, odpowiadający ograniczonej części wymagań, celem eksperymentalnego rozeznania wymagań klienta i ustalenia lub walidacji ich specyfikacji oraz zbadania możliwości ich spełnienia",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "ze względu na dwukrotną realizację systemu - jako prototypu i systemu finalnego - wydłużony jest znacznie czas realizacji i powiększony koszt przedsięwzięcia, przez co ta metoda stosowana jest głównie wtedy, gdy przez oddanie prototypu zamiast finalnej wersji systemu można oddalić groźbę katastrofalnego opóźnienia i całkowitego załamania projektu",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "nie powstaje prawie żadna dokumentacja projektowa i stąd używana niekiedy nazwa \"metoda studencka\"",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "nie przywiązuje wagi do jakości oprogramowania wytworzonego prototypu ani nawet jego zdolności do funkcjonowania, o ile nie przeszkadza to w wykorzystaniu go do realizacji jego głównego celu",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 68,
+      "question": "Do modeli iteracyjnych tworzenia oprogramowania zaliczamy:",
+      "options": [
+        {
+          "key": "a",
+          "text": "metodę przyrostową",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "model kaskadowy",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "model spiralny tworzenia oprogramowania",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "ewolucyjny tworzenie oprogramowania",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "metodykę Kanban",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "programowanie ekstremalne",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 69,
+      "question": "Inspekcja (przegląd) wymagań jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "metodą walidacji wymagań",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "nazywana formalną bądź nieformalną, zależnie od tego, czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania, czy tylko prowadzi luźną rozmowę z przestawicielami klienta",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "procesem \"ręcznym\" polegającym na grupowym czytaniu dokumentacji wymagań",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "niepodobna do inspekcji programów (kodu)",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 70,
+      "question": "Systemy odziedziczone:",
+      "options": [
+        {
+          "key": "a",
+          "text": "to systemy starsze niż kilka-kilkanaście lat, których działanie pozostaje krytycznym czynnikiem z punktu widzenia funkcjonowania instytucji, ale technologia nie odpowiada aktualnym potrzebom",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "mają oprogramowanie i sprzęt niezmieniony od czasów ich zainstalowania, ale ich przeróbka i unowocześnienie nie jest możliwe z braku kompatybilnego sprzętu, odpowiednich kompilatorów języków programowania, bibliotek i odpowiednik specjalistów",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "można tylko całkowicie wycofać i/lub zastąpić nowymi systemami",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "obejmują oprogramowanie, sprzęt na którym może ono działać, dane użytkowe przez nie udostępniane i gromadzone, procedury biznesowe, prowadzone z użyciem oprogramowania",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 71,
+      "question": "Jakie aspekty powinien uwzględniać pełny model systemu w podejściu strukturalnym do analizy i projektowania?",
+      "options": [
+        {
+          "key": "a",
+          "text": "aspekt funkcjonalny, aspekt danych i ich powiązań",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "aspekt funkcjonalny i aspekt dynamiki systemu",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "aspekt danych i ich powiązań, aspekt dynamiki systemu",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "aspekt funkcjonalny, aspekt danych i ich powiązań, oraz dynamiki systemu",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 72,
+      "question": "Aspekt funkcjonalny systemu informatycznego modelowany jest w podejściu strukturalnym przy pomocy:",
+      "options": [
+        {
+          "key": "a",
+          "text": "Data Flow Diagrams",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "Entity Relationship Diagrams",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "State Transition Diagrams",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "Structure Charts",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "Behaviour Diagrams",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 73,
+      "question": "Które z wymienionych podziałów wymagań niefunkcjonalnych są wyczerpujące i rozłączne?",
+      "options": [
+        {
+          "key": "a",
+          "text": "produktowe, organizacyjne, prawne",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "produktowe, prawne, parametryczne",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "produktowe, zewnętrzne, strategiczne",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "produktowe, organizacyjne, zewnętrzne",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 74,
+      "question": "Wymień elementy modelu środowiskowego w strukturalnym podejściu do analizy i projektowania systemów informatycznych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "ERD, DFD, STD",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "diagram kontekstowy, słownik danych, specyfikacja funkcji",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "opis celu systemu, wymagania funkcjonalne, wymagania niefunkcjonalne",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "opis celu systemu, lista zdarzeń, diagram kontekstowy",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 75,
+      "question": "Jaki zestaw diagramów jest używany w metodyce strukturalnej analizy i projektowania systemów informatycznych do pokazania wszystkich aspektów modelowanego systemu?",
+      "options": [
+        {
+          "key": "a",
+          "text": "DFD, ERD i STC",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "DFD i ERD",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "DFD, ERD i STD (lub ELH)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "DFD i STD",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 76,
+      "question": "Które obiekty graficzne są używane do tworzenia diagramu kontekstowego w metodyce strukturalnej analizy i projektowania systemów informatycznych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "proces, przepływ danych (data flow), magazyn danych (data store)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "proces, obiekt zewnętrzny (external entity), magazyn danych (data store)",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "przepływ danych (data flow), obiekt zewnętrzny (external entity), magazyn danych",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "proces, przepływ danych (data flow), obiekt zewnętrzny (external entity)",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 77,
+      "question": "Wybierz nazwy wszystkich obiektów graficznych używanych do konstruowania DFD (Data Flow Diagram) - diagramów przepływu danych w metodyce strukturalnej:",
+      "options": [
+        {
+          "key": "a",
+          "text": "proces (process)",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "obiekt zewnętrzny (external entity)",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "magazyn danych (data store)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "przepływ danych (data flow)",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": true
+    },
+    {
+      "id": 78,
+      "question": "Wskaż ten element dokumentacji projektowej, który zawiera zapis w postaci pseudokodu (metodyka strukturalna analizy i projektowania systemów informatycznych):",
+      "options": [
+        {
+          "key": "a",
+          "text": "opis wymagań niefunkcjonalnych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "opis wymagań funkcjonalnych",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "specyfikacja funkcji",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "opis celu przedsięwzięcia projektowego",
+          "correct": false
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 79,
+      "question": "Który element DFD w metodyce strukturalnej stanowi podstawę konstruowania ERD (Entity Relationship Diagram) - diagramu związków encji:",
+      "options": [
+        {
+          "key": "a",
+          "text": "przepływ danych (data flow)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "diagram kontekstowy (context diagram)",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "obiekt zewnętrzny (external entity)",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "magazyn danych (data store)",
+          "correct": true
+        }
+      ],
+      "topic": "software_engineering",
+      "semester": 5,
+      "multipleCorrect": false
+    },
+    {
+      "id": 80,
+      "question": "Jaki typ danych w Haskellu będzie miało następujące wyrażenie: r x = x:r x",
+      "options": [
+        {
+          "key": "a",
+          "text": "r :: [a]",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "r :: Integer a => a -> [a]",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "r :: a -> [a]",
+          "correct": true
+        }
+      ],
+      "topic": "functional_programming",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 81,
+      "question": "Jak wygląda poprawna wartość w Haskellu dla typu: data Tree a = L a | N (Tree a) a (Tree a)",
+      "options": [
+        {
+          "key": "a",
+          "text": "Tree 5 Nil Nil",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "N (L 4) 5 (L '4')",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "N (L 4) 5 (L 4)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "N (L '4') '5' (L '4')",
+          "correct": true
+        }
+      ],
+      "topic": "functional_programming",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 82,
+      "question": "Haskell jest językiem opartym o paradygmat:",
+      "options": [
+        {
+          "key": "a",
+          "text": "funkcyjny",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "strukturalny",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "imperatywny",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "obiektowy",
+          "correct": false
+        }
+      ],
+      "topic": "functional_programming",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 83,
+      "question": "Zaznacz prawdziwe zdania odnoszące się do programowania funkcyjnego:",
+      "options": [
+        {
+          "key": "a",
+          "text": "w programowaniu funkcyjnym koncepcja funkcji jest taka, jak w algebrze",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "programowanie funkcyjne opiera się na rachunku lambda",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "dobrym nawykiem w programowaniu funkcyjnym jest, aby zmienne były niemutowalne",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "w programowaniu funkcyjnym możemy korzystać jedynie z wbudowanych typów danych",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "funkcyjny styl programowania można uprawiać w ograniczonym zakresie w językach imperatywnych jak C albo JavaScript",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "funkcyjnymi językami programowania są: Erlang, Haskell, C#, Perl",
+          "correct": false
+        },
+        {
+          "key": "g",
+          "text": "można używać funkcyjnego stylu programowania w języku JavaScript",
+          "correct": true
+        },
+        {
+          "key": "h",
+          "text": "niektóre języki imperatywne zostały wyposażone w konstrukcje z języków funkcyjnych",
+          "correct": true
+        }
+      ],
+      "topic": "functional_programming",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 84,
+      "question": "Funkcje wyższego rzędu w programowaniu funkcyjnym to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "funkcje zwracające inne funkcje jako rezultat obliczeń",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "funkcje, które przyjmują inne funkcje jako parametry",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "potoczne określenie funkcji trudnych w implementacji",
+          "correct": false
+        }
+      ],
+      "topic": "functional_programming",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 85,
+      "question": "Jaki mechanizm w językach funkcyjnych pozwala na wykonanie operacji na zbiorze danych?",
+      "options": [
+        {
+          "key": "a",
+          "text": "iteracja",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "rekurencja",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "funkcje specyficzne dla języka",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "warunkowy skok do etykiety",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "pętla",
+          "correct": false
+        }
+      ],
+      "topic": "functional_programming",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 86,
+      "question": "Aby sprawdzić, czy dwa obiekty typu String w języku Java mają taką samą zawartość, można:",
+      "options": [
+        {
+          "key": "a",
+          "text": "użyć metody equals()",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "==",
+          "correct": false
+        }
+      ],
+      "topic": "java",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 87,
+      "question": "Który z poniższych fragmentów kodu w języku Java sprawdza, czy obiekt wskazywany przez referencję xyz należy do klasy XYZ?",
+      "options": [
+        {
+          "key": "a",
+          "text": "if (xyz instanceof XYZ)",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "if (xyz.dynamicCastTo(XYZ.class) != null)",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "XYZ.class.isInstance(xyz)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "XYZ.class.isAssignableFrom(xyz.getClass())",
+          "correct": true
+        }
+      ],
+      "topic": "java",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 88,
+      "question": "Tablica w języku Java jest zadeklarowana jako: int tab[] = new int[]{3, 2, 1, 0}; Który z fragmentów kodu poprawnie wypisze jej elementy?",
+      "options": [
+        {
+          "key": "a",
+          "text": "for (int i: tab) System.out.println(tab[i] + \" \");",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "for (int i = 0; i < tab.length; i++) System.out.println(tab[i] + \" \");",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "for (int i: tab) System.out.println(i + \" \");",
+          "correct": true
+        }
+      ],
+      "topic": "java",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 89,
+      "question": "Które zdanie opisujące własności klas w języku Java jest prawdziwe?",
+      "options": [
+        {
+          "key": "a",
+          "text": "aby zaznaczyć, że klasa dziedziczy po kilku klasach, należy podać ich listę po słowie kluczowym extends, np. class D extends A, B, C {}",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "dla każdej klasy w języku Java możliwe jest zdefiniowanie klasy potomnej",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "klasa może implementować wiele interfejsów",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "w języku Java zawsze bezpośrednio możemy dziedziczyć po jednej klasie",
+          "correct": true
+        }
+      ],
+      "topic": "java",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 90,
+      "question": "W jaki sposób usuwane są obiekty w języku Java?",
+      "options": [
+        {
+          "key": "a",
+          "text": "usuwa się je przez przekazanie referencji do usuwanego obiektu do metody System.gc()",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "nie są programowo usuwane, to środowisko wykonawcze podejmuje decyzje czy i kiedy je usunąć",
+          "correct": true
+        }
+      ],
+      "topic": "java",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 91,
+      "question": "Które z poniższych stwierdzeń odnoszące się do klas wewnętrznych i zagnieżdżonych w języku Java są prawdziwe?",
+      "options": [
+        {
+          "key": "a",
+          "text": "w metodach klasy zagnieżdżonej (zadeklarowanej z modyfikatorem static) jest dostępna referencja Outer.this, gdzie Outer jest nazwą klasy zewnętrznej",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "obiekt klasy wewnętrznej ma swój stan niezależny od innych obiektów powiązanych z obiektem klasy zewnętrznej",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "klasy wewnętrzne muszą dziedziczyć po otaczających je klasach zewnętrznych",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "klasa wewnętrzna (zadeklarowana bez modyfikatora static) nie ma dostępu do prywatnych zmiennych klasy zewnętrznej",
+          "correct": false
+        }
+      ],
+      "topic": "java",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 92,
+      "question": "W językach imperatywnych (również obiektowych) przy wyborze reprezentacji dla danych rzeczywistych (zmiennoprzecinkowych) pojawiają się problemy:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wystąpienia nadmiaru",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "wystąpienia niedomiaru",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "dokładności",
+          "correct": true
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 93,
+      "question": "Wskazania (pointers) w C, C++ używane są do reprezentowania (wskazywania):",
+      "options": [
+        {
+          "key": "a",
+          "text": "obszarów pamięci operacyjnej",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "zmiennych złożonych",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "zmiennych skalarnych",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "funkcji i metod",
+          "correct": true
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 94,
+      "question": "W jaki sposób można obliczyć długość tekstu przekazanego jako argument w poniższej funkcji w języku C? void foo(const char* txt) { ... }",
+      "options": [
+        {
+          "key": "a",
+          "text": "sizeof(txt)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "strlen(txt)",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "txt.length()",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "zliczając, ile znaków występuje w tekście od znaku na który wskazuje wskaźnik do znaku końca łańcucha znaków ('\\0')",
+          "correct": true
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 95,
+      "question": "Co możesz powiedzieć o poniższej deklaracji w języku C? int t[10] = {1, 2, [4]=1};",
+      "options": [
+        {
+          "key": "a",
+          "text": "zgodnie ze standardem C99 spowoduje ona utworzenie tablicy zawierającej 10 elementów, z których 7 ma wartość 0",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "da ona taki sam efekt, jak deklaracja: int t[] = {1, 2, 0, 0, 1}",
+          "correct": false
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 96,
+      "question": "W jaki sposób obliczyć długość tablicy w funkcji foo() w języku C? void foo(double f[]) { // dlugosc tablicy t? }",
+      "options": [
+        {
+          "key": "a",
+          "text": "nie da się obliczyć",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "po wykonaniu poniższej instrukcji długość tablicy będzie umieszczona w zmiennej len: int len; for(len=0; t[len]; len++)",
+          "correct": false
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 97,
+      "question": "Która z implementacji funkcji zawierającej tablicę w języku C jest poprawna?",
+      "options": [
+        {
+          "key": "a",
+          "text": "int[] getTable() { int tab[10]; return tab; }",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "int * getTable(int n) { return (int*) malloc(n * sizeof(int)); }",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "int * getTable(int n) { return (int*) calloc(n, sizeof(n)); }",
+          "correct": true
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 98,
+      "question": "Przeanalizuj poniższą deklarację w języku C: int (*x)(int, int);",
+      "options": [
+        {
+          "key": "a",
+          "text": "zmienna x jest dwuwymiarową tablicą wskaźników typu int* o zmiennym rozmiarze",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "deklaracja jest niezgodna ze składnią języka",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zmienna x jest wskaźnikiem na funkcję przyjmującą dwa argumenty typu int, zwracającą wartość typu int",
+          "correct": true
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 99,
+      "question": "Które stwierdzenia dotyczące operatorów w języku C/C++ są poprawne:",
+      "options": [
+        {
+          "key": "a",
+          "text": "operatory addytywne mają mniejszy priorytet niż multiplikatywne",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "wyrażenie z == ++z jest zawsze fałszywe dla zmiennej z typu int",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "żadne z pozostałych",
+          "correct": false
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 100,
+      "question": "Dzięki konwencji wywołania funkcji w języku C/C++ znanej jako __cdecl możliwa jest implementacja funkcji o zmiennej liczbie argumentów, jak printf(). Które stwierdzenia charakteryzujące funkcje typu __cdecl są prawdziwe?",
+      "options": [
+        {
+          "key": "a",
+          "text": "w wygenerowanym kodzie wywołania funkcji argumenty umieszczane są na stosie od końca, dzięki temu na szczycie stosu jest jej pierwszy argument i analizując jego zawartość można określić spodziewaną liczbę argumentów wywołania",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "w języku C kompilator może utworzyć kod wywołania funkcji typu __cdecl nie mając żadnych informacji o typach jej parametrów",
+          "correct": false
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 101,
+      "question": "W jaki sposób przekazywany jest parametr będący tablicą do funkcji w języku C, np.: int main(int argc, char* argv[]) { ... }",
+      "options": [
+        {
+          "key": "a",
+          "text": "cała zawartość tablicy kopiowana jest na stos i funkcja działa na kopii tablicy",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "na stos przekazywany jest adres pierwszego elementu tablicy",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "tablice są zawsze przekazywane do funkcji jako wskaźnik",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "tablice są zawsze przekazywane do funkcji przez referencję",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "funkcja działa na kopii tablicy, dla której pamięć przydzielona jest na stercie; do funkcji trafia adres kopii tablicy",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "na stosie umieszczany jest pierwszy element tablicy",
+          "correct": false
+        }
+      ],
+      "topic": "c_cpp",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 102,
+      "question": "Algorytmy optymalizacji statycznej:",
+      "options": [
+        {
+          "key": "a",
+          "text": "metoda simpleksu Neldera-Meada jest metodą bezgradientową",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "metoda Newtona wymaga obliczania w każdym kroku gradientu i hesjanu",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "metody z funkcją kary (penalty methods) stosuje się w przypadkach optymalizacji bez ograniczeń",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "metoda najszybszego spadku wymaga obliczania hesjanu",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 103,
+      "question": "Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n, ^^x_{i-1} < x_i^^, i = 1, 2, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \\sum_{j=0}^m a_{j, m}x^j^^. Zaznacz prawdziwe implikacje.",
+      "options": [
+        {
+          "key": "a",
+          "text": "m = n => ^^E_m = 0^^",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "m > n => ^^E_m < 0^^",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "^^E_m > 0^^ => n > m",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 104,
+      "question": "Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \\sum_{j=0}^m a_{j,m}x^j^^. Rozważamy 3 sposoby obliczania błędu aproksymacji ^^E_m^^: 1. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\sum_{i=0}^n |y_i-W_m(x_i)|^^ 2. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\sum_{i=0}^n (y_i-W_m(x_i))^2^^ 3. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\max_{i=0, 1, ..., n} |y_i-W_m(x_i)|^^ Obliczanie współczynników ^^a_i^^ można sprowadzić do zagadnienia liniowego:",
+      "options": [
+        {
+          "key": "a",
+          "text": "w przypadku 1",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "w przypadku 2",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "w przypadku 3",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "w żadnym z tych przypadków",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 105,
+      "question": "Dla tych samych danych eksperymentalnych podanych poniżej wyznaczono 3 funkcje aproksymujące. i | 0 1 2 x | 2 4 6 y | 1 2 1 W każdym przypadku k = 1, 2, 3 funkcja aproksymująca miała taką samą postać ^^f_k(x) = a_k * x + b_k^^, ale użyto innego kryterium jakości aproksymacji: 1. Dla k = 1: ^^min_{a_1, b_1} \\sum_{i=0}^2 |y_i-f_1(x_i)|^^ 2. Dla k = 2: ^^min_{a_2, b_2} \\sum_{i=0}^2 (y_i-f_2(x_i))^2^^ 3. Dla k = 3: ^^min_{a_3, b_3} max_{i=0,1,2} |y_i-f_3(x_i)|^^ Zaznacz prawidłowe odpowiedzi.",
+      "options": [
+        {
+          "key": "a",
+          "text": "a_1 = a_2 = a_3, b_1 = b_2 = b_3",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "a_1 = a_2 = a_3, b_1 != b_2 != b_3",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 106,
+      "question": "Rozważmy funkcję kwadratową n zmiennych: ^^f(x) = x^TAx + b^Tx + c^^ A jest macierzą (n x n), b wektorem (n x 1) o stałych współczynnikach, c jest skalarem. Załóżmy, że macierz A jest dodatnio określona. Funkcja ^f ma minimum w punkcie ^^x_{min}^^. Rozważmy tylko 3 metody szukania minimum tej funkcji: simpleksu Neldera-Meada, najszybszego spadku (steepest descent) oraz Newtona. Startujemy z dowolnego punktu ^^x_0^^, różnym od ^^x_{min}^^.",
+      "options": [
+        {
+          "key": "a",
+          "text": "metoda Newtona gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "metoda najszybszego spadku gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "metoda simpleksu Neldera-Meada gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 107,
+      "question": "Czy obliczanie parametrów (współczynników) funkcji aproksymującej można sprowadzić do rozwiązywania układu równań?",
+      "options": [
+        {
+          "key": "a",
+          "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest funkcją liniową względem zmiennej niezależnej",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "nie można",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 108,
+      "question": "Do aproksymacji zbioru punktów ^^P = \\{ (x_i, y_i) | i = 0, 1, ..., n \\}^^ używamy funkcji ^^f^{(k)}(x;a_{k,j}|j=0,1,...,m)^^. ^^a_{k, j}^^ to parametry funkcji. Stosując 3 różne kryteria jakości aproksymacji (miary błędu aproksymacji) podane poniżej otrzymujemy trzy różne funkcje aproksymujące ^^f_k(x)^^, k = 1, 2, 3 dla tej samej wartości m, a różniące się między sobą wartościami parametrów ^^a_{k, j}^^. 1. k = 1: ^^min \\sum_{i=0}^n |y_i-f^{(1)}(x_i)|^^ 2. k = 2: ^^min \\sum_{i=0}^n (f_i-f^{(2)}(x_i))^2^^ 3. k = 3: ^^min^^ ^^max_{i=0,1,...,n} |y_i-f^{(3)}(x_i)|^^ Niech ^^\\Delta^{(k)}_{max}^^ oznacza odległość (w sensie metryki maksimum) k-tej funkcji aproksymującej ^^f_k^^ od najbardziej oddalonego punktu ze zbioru P, tzn. ^^\\Delta^{(k)}_{max} = \\max_{i=0,...,n}|y_i-f^{(k)}(x_i)|^^. Zaznacz prawdziwe relacje:",
+      "options": [
+        {
+          "key": "a",
+          "text": "^^\\Delta_{\\max}^{(1)} \\geq \\Delta_{\\max}^{(2)}^^",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "^^\\Delta_{\\max}^{(1)} \\leq \\Delta_{\\max}^{(2)}^^",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "^^\\Delta_{\\max}^{(3)} \\leq \\Delta_{\\max}^{(2)}^^",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "^^\\Delta_{\\max}^{(3)} \\leq \\Delta_{\\max}^{(1)}^^",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 109,
+      "question": "Warunkiem koniecznym i wystarczającym zbieżności metod iteracyjnych prostych (takich jak metoda Jacobiego czy metoda Gaussa-Seidla) rozwiązywania układów równań liniowych jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "promień spektralny macierzy iterowanej w danej metodzie jest zawsze mniejszy od 1",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "promień spektralny macierzy iterowanej w danej metodzie jest zawsze większy od 1",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 110,
+      "question": "Do metod nazywanych metodami dokładnymi rozwiązywania układów równań liniowych zalicza się:",
+      "options": [
+        {
+          "key": "a",
+          "text": "metoda Jacobiego",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "metoda rozkładu LU",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "metoda Gaussa",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "metoda Jordana",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "eliminacja Gaussa z wyborem elementu głównego",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "metoda Cramera",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "metoda SOR (Successive Over-Relaxation)",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 111,
+      "question": "Które z poniżej wymienionych zagadnień numerycznych wykorzystują właściwości przybliżania funkcji wielomianem interpolującym:",
+      "options": [
+        {
+          "key": "a",
+          "text": "metoda siecznych, metoda stycznych szukania miejsc zerowych funkcji",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "obliczanie całki oznaczonej funkcji za pomocą kwadratur Newtona-Cotesa",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "równania różniczkowe zwyczajne",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "rozwiązywanie układów równań metodami iteracyjnymi",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 112,
+      "question": "Wielomiany sklejane (ang. spline) trzeciego stopnia muszą spełniać następujące warunki w punktach sklejeń:",
+      "options": [
+        {
+          "key": "a",
+          "text": "przechodzenie funkcji interpolującej przez węzły interpolacji",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "ciągłość pochodnej funkcji interpolującej",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "ciągłość funkcji interpolującej",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "ciągłość drugiej pochodnej funkcji interpolującej",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 113,
+      "question": "Wskaż zdania prawdziwe dotyczące zagadnienia interpolacji wielomianowej z wykorzystaniem jednomianów (tzw. bazy naturalnej):",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest to zadanie dobrze uwarunkowane",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "ma zdecydowanie lepsze właściwości numeryczne niż metoda Lagrange'a",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "jest to zadanie źle uwarunkowane",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 114,
+      "question": "Błędy związane z ograniczeniem nieskończonego ciągu wymaganych obliczeń do skończonej liczby działań nazywamy:",
+      "options": [
+        {
+          "key": "a",
+          "text": "błędami zaokrągleń (ang. rounding errors)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "błędami niedomiaru (ang. underflow errors)",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "błędami obcięcia (ang. truncation errors)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "błędami nadmiaru (ang. overflow errors)",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 115,
+      "question": "Jeśli niewielkie względne zaburzenia danych wejściowych powodują niewielkie względne zmiany wyników, to wówczas:",
+      "options": [
+        {
+          "key": "a",
+          "text": "współczynnik uwarunkowania osiąga wysoką wartość",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "współczynnik uwarunkowania osiąga niską wartość",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 116,
+      "question": "Warunkami wystarczającymi, gwarantującymi zbieżność poszukiwania miejsc zerowych funkcji f(x) metodą bisekcji są:",
+      "options": [
+        {
+          "key": "a",
+          "text": "funkcja f(x) jest ciągła w przedziale domkniętym [a, b]",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "pierwsza i druga pochodna f(x) istnieją i są ciągłe w przedziale domkniętym [a, b]",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "pierwsza i druga pochodna mają stały znak w całym przedziale",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "na końcach przedziału [a, b] wartości funkcji f(x) przyjmują przeciwne znaki, czyli zachodzi f(a) * f(b) < 0",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 117,
+      "question": "Stosując algorytm stycznych poszukiwania jednokrotnego miejsca zerowego funkcji f(x) w przedziale domkniętym [a, b] w dostatecznej bliskości pierwiastka uzyskujemy zbieżność:",
+      "options": [
+        {
+          "key": "a",
+          "text": "kwadratową",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "wykładniczą",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 118,
+      "question": "Do całkowania numerycznego używa się m. in. kwadratur Newtona-Cotesa. Do prostych kwadratur Newtona-Cotesa należą:",
+      "options": [
+        {
+          "key": "a",
+          "text": "metoda Eulera",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "metoda Romberga",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "metoda trapezów",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "metoda Simpsona",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "reguła 3/8",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "metoda Boole'a",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 119,
+      "question": "Efekt Rungego jest charakterystyczny dla następujących metod interpolacji:",
+      "options": [
+        {
+          "key": "a",
+          "text": "interpolacji funkcjami sklejanymi 1 stopnia dla węzłów równoodległych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "interpolacji funkcjami sklejanymi 3 stopnia dla węzłów równoodległych",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "interpolacji metodą Lagrange'a (wielomianowej) dla węzłów równoodległych",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "interpolacji metodą Lagrange'a dla węzłów będących zerami wielomianów Czebyszewa",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 120,
+      "question": "Które zdania dotyczące metody eliminacji Gaussa rozwiązywania układów równań są prawdziwe:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest to metoda iteracyjna",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "jest to metoda dokładna",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "przekształca macierz do postaci macierzy schodkowej",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "nie wymaga przekształcenia układu równań do postaci z macierzą trójkątną górną",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 121,
+      "question": "Aby wyeliminować lub znacząco ograniczyć efekt Rungego przy zadaniu interpolacji można:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zastosować interpolację funkcjami sklejanymi zamiast metody Lagrange'a",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "zastosować interpolację z węzłami gęściej upakowanymi na końcach przedziału",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "zastosować do interpolacji miejsca zerowa wielomianów Czebyszewa",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 122,
+      "question": "Dokładność reprezentacji zmiennoprzecinkowej jest określona przez:",
+      "options": [
+        {
+          "key": "a",
+          "text": "liczbę bitów mantysy",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "liczbę bitów mantysy i wykładnika",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zakres wykładnika",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "liczbę bitów mantysy i zakres wykładnika",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 123,
+      "question": "Efekt Rungego w interpolacji wielomianowej to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wynik wyboru złej funkcji interpolującej",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "wynik braku jednoznaczności rozwiązania zadania interpolacji",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "konsekwencja arytmetyki zmiennoprzecinkowej",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "wynik błędu metody",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 124,
+      "question": "Funkcje sklejane stopnia m na przedziale [a, b]:",
+      "options": [
+        {
+          "key": "a",
+          "text": "są ciągłe wraz z (m-1) pochodnymi na [a, b]",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "są ciągłe wraz z (m+1) pochodnymi na [a, b]",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "są używane tylko do interpolacji przedziałowej",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "nie są przydatne do interpolowania funkcji periodycznych",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "są jednoznacznie określone przez podanie warunków brzegowych",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "nadają się tylko do interpolowania przedziałowego funkcji z nieciągłymi osobliwościami",
+          "correct": false
+        },
+        {
+          "key": "g",
+          "text": "są przydatne nie tylko do interpolacji, ale też do aproksymacji",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 125,
+      "question": "Wybierz poprawną odpowiedź:",
+      "options": [
+        {
+          "key": "a",
+          "text": "interpolacja z węzłami będącymi zerami wielomianu Czebyszewa odpowiedniego stopnia eliminuje efekt Rungego",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "przybliżenia Pade to technika aproksymacji średniokwadratowej",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "funkcje sklejane nie mogą być wykorzystane do aproksymacji średniokwadratowej ze względu na postać minimalizowanej normy",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "aproksymacja średniokwadratowa polega na minimalizacji normy Czebyszewa",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 126,
+      "question": "Metoda Newtona-Raphsona rozwiązywania równań nieliniowych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wykorzystuje niejawnie przyspieszenie Aitkena",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "jest przykładem metody iteracyjnej o stałym punkcie",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "jest przykładem metody interpolacyjnej",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "ma rząd zbieżności równy 1",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "ma rząd zbieżności równy 2",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "jest szybciej zbieżna niż metoda siecznych",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "jest szybciej zbieżna niż metoda bisekcji",
+          "correct": true
+        },
+        {
+          "key": "h",
+          "text": "nie może być uogólniona dla układów równań nieliniowych",
+          "correct": false
+        },
+        {
+          "key": "i",
+          "text": "wymaga znajomości pochodnej funkcji",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 127,
+      "question": "Metoda eliminacji Gaussa rozwiązywania układów równań liniowych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wymaga wyszukiwania elementu wiodącego i polega na przekształceniu macierzy do postaci trójkątnej górnej",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "polega na doprowadzeniu macierzy do postaci diagonalnej",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "ma złożoność ^^O(n^3)^^, gdzie ^^n^^ - liczba równań",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "jest przykładem metody iteracyjnej niestacjonarnej",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "ma złożoność ^^O(n^2)^^, gdzie ^^n^^ - liczba równań",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 128,
+      "question": "Metody dekompozycji LU:",
+      "options": [
+        {
+          "key": "a",
+          "text": "mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "należą do rodziny metod iteracyjnych niestacjonarnych",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "nie wymagają wyszukiwania elementu wiodącego",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "są przydatne tylko do rozwiązywania układów równań z macierzą symetryczną dodatnio określoną",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "mają lepszą złożoność obliczeniową niż metoda Gaussa, gdyż nie wymagają wyszukiwania elementu wiodącego",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "są metodami iteracyjnymi stacjonarnymi",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 129,
+      "question": "Wybierz poprawne zdania opisujące metody minimalizacji:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wzór Davidona-Fletchera-Powella jest podstawą metody zmiennej metryki",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "metoda sprzężonych kierunków jest przykładem ogólnej metody poszukiwania minimum globalnego",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "metoda największego spadku jest przykładem metody poszukiwania minimum globalnego",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "metoda simpleksów należy do metod gradientowych",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 130,
+      "question": "Szybka transformata Fouriera:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest możliwa tylko wtedy, gdy liczba punktów jest całkowitą potęgą 2",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "ma złożoność obliczeniową ^^O(n)^^, gdzie ^^n^^ - liczba węzłów",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "jest realizacją wzoru całkowego Fouriera na architekturach równoległych",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "polega na zamianie pojedynczej transformaty Fouriera na sumę transformat Fouriera",
+          "correct": true
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 131,
+      "question": "Podejście wariacyjne do rozwiązywania równań różniczkowych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "nie nadaje się do obliczeń numerycznych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "polega na tym, że szukamy funkcji minimalizującej odpowiedni funkcjonał",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "polega na wprowadzeniu specjalnej siatki całkowania",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "polega na uzmiennieniu położeń części punktów siatki",
+          "correct": false
+        }
+      ],
+      "topic": "numerical_methods",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 132,
+      "question": "Wymagania stawiane schematom rozwiązywania numerycznego zagadnienia początkowego to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jawne uwzględnienie warunków brzegowych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "wprowadzenie siatki przestrzennej zgodnej z siatką czasową",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zgodność aproksymacji różnicowej, dokładność, stabilność, efektywność czasowa i pamięciowa",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "algorytm powinien mieć względnie małe wskaźniki uwarunkowania",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "współczynnik propagacji błędu < 1, zgodność aproksymacji różnicowej",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "wskaźniki uwarunkowania powinny mieć takie same wartości w każdej iteracji algorytmu",
+          "correct": false
+        }
+      ],
+      "topic": "other",
+      "semester": null,
+      "multipleCorrect": true
+    },
+    {
+      "id": 133,
+      "question": "Zaletami prowadzenia transmisji w trybie pełnego dupleksu w standardzie Ethernet są:",
+      "options": [
+        {
+          "key": "a",
+          "text": "całkowita likwidacja kolizji w segmencie sieci",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "możliwość dwukrotnego zwiększenia sumarycznej przepustowości sieci",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "brak ograniczenia długości medium transmisyjnego w segmencie warstwy fizycznej wynikającego z wymogów protokołu CSMA/CD",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "możliwości wykorzystania urządzeń hub",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 134,
+      "question": "Model odniesienia OSI/ISO:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest modelem czterowarstwowym",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "definiuje standardy w ramach każdej warstwy (np. protokół IP w warstwie sieciowej)",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "określa zadania poszczególnych warstw",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "pozwala na niezależny rozwój sprzętu i oprogramowania w ramach poszczególnych warstw",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 135,
+      "question": "Osiągnięcie przepustowości 1 Gb/s na kablu UTP kategorii 5e (tym samym, który jest używany w transmisji 100 Mb/s) w standardzie Ethernet jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "możliwe dzięki wykorzystaniu do transmisji wszystkich czterech par",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "możliwe dzięki wykorzystaniu bardziej złożonego kodowania",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "nie jest możliwe - wymaga kabla o lepszych parametrach",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "nie jest możliwe - taką przepustowość można osiągnąć tylko używając światłowodu",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 136,
+      "question": "Kodowanie sygnałów w transmisji w sieciach komputerowych:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wpływa na uzyskiwaną przepustowość",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "jest zależne od wykorzystywanego medium",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "jest przedmiotem zainteresowania warstwy sieciowej modelu OSI/ISO",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "może pozwalać na osiągnięcie samosynchronizacji nadajnika i odbiornika",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 137,
+      "question": "Istnienie ograniczenia maksymalnej odległości między komunikującymi się hostami wynika z:",
+      "options": [
+        {
+          "key": "a",
+          "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy łącza danych",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "w ramach jednego segmentu sieci: parametrów medium fizycznego",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy sieciowej",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "w ramach kilku segmentów sieci rozdzielonych przełącznicami: wymogów protokołu warstwy sieciowej",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 138,
+      "question": "Wirtualne sieci lokalne:",
+      "options": [
+        {
+          "key": "a",
+          "text": "można definiować w oparciu o adresy fizyczne",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "mogą być rozpięte na wielu urządzeniach warstwy drugiej modelu OSI/ISO",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "stanowią mechanizm alternatywny dla budowy drzewa rozpinającego",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "stanowią podstawowy mechanizm zapobiegania przeciążeniom mostka",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "wyznaczają domenę rozgłoszeniową",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "poprawiają bezpieczeństwo sieci",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "można definiować w oparciu o adresy logiczne",
+          "correct": true
+        },
+        {
+          "key": "h",
+          "text": "można definiować w oparciu o porty routera",
+          "correct": false
+        },
+        {
+          "key": "i",
+          "text": "służą do dynamicznego uzyskiwania adresu IP",
+          "correct": false
+        },
+        {
+          "key": "j",
+          "text": "mogą być używane zamiast protokołu ARP",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 139,
+      "question": "Algorytm budowy drzewa rozpinającego:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest stosowany w przypadku mostków uczących się",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "służy zapobieżeniu występowania zapętleń transmisji ramek",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "jest jednym ze sposobów elekcji głównego routera w sieci",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "służy zrównoważeniu obciążenia pomiędzy łączami o takich samych przepustowościach",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 140,
+      "question": "Które warstwy modelu OSI/ISO są różne dla sieci WAN i LAN?",
+      "options": [
+        {
+          "key": "a",
+          "text": "fizyczna i łącza danych",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "fizyczna i sieci",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "łącza danych i sieci",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "fizyczna, łącza danych i sieci",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 141,
+      "question": "Dopisz, do czego jest wykorzystywany protokół ARP:",
+      "options": [
+        {
+          "key": "a",
+          "text": "uzyskiwania adresu IP",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "uzyskiwania adresu MAC urządzenia spoza naszej sieci lokalnej",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "określenie odwzorowania między adresami warstwy 3 i 2 modelu OSI/ISO",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "wyznaczania ścieżki pakietu",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 142,
+      "question": "Jeżeli dwie stacje znajdujące się w innych sieciach IP połączone są ze sobą dokładnie jednym routerem i chcą komunikować się ze sobą, to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "obydwie stacje muszą posiadać jednakową maskę",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "musi być uruchomiony mechanizm Proxy ARP na routerze",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "na routerze konieczne jest dodanie pozycji routingu statycznego",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "wymagane jest ustawienie na każdej stacji adresu IP",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 143,
+      "question": "Protokół IP w wersji 4 posiada następujące cechy:",
+      "options": [
+        {
+          "key": "a",
+          "text": "pozwala na fragmentację pakietów w węzłach pośrednich i u nadawcy",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "zawiera mechanizmy potwierdzania doręczenia pakietów",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "umożliwia kontrolę nagłówka pakietu za pomocą sumy kontrolnej",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "jest protokołem połączeniowym",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "umożliwia komunikację priorytetową",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "jest zawodny, ale każda utrata pakietu jest sygnalizowana",
+          "correct": false
+        },
+        {
+          "key": "g",
+          "text": "posiada płaską adresację",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 144,
+      "question": "W jakich przypadkach jest stosowany protokół ICMP?",
+      "options": [
+        {
+          "key": "a",
+          "text": "transmisji danych wysokopriorytetowych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "uzyskiwania informacji o konfiguracji sieci",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "sygnalizacji sytuacji awaryjnych",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "wyszukiwania odbiorców ruchu multicastowego",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 145,
+      "question": "Jaki mechanizm uniemożliwia nieskończone krążenie ramek IP w sieci w przypadku wystąpienia pętli?",
+      "options": [
+        {
+          "key": "a",
+          "text": "mechanizm split-horizon",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "mechanizm trigger-update",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "pole TTL",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "NAT",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "STP",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 146,
+      "question": "Parametr \"niezawodność łącza\" wchodzi w skład metryki protokołu routingu:",
+      "options": [
+        {
+          "key": "a",
+          "text": "EIGRP",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "RIPv2",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "IGRP",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "OSPF",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 147,
+      "question": "Protokół UDP:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wprowadza mechanizmy fragmentacji dla danych użytkownika przekraczających maksymalny rozmiar datagramu UDP",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "pozwala na grupowanie danych otrzymanych do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "stosuje porty jako adresy warstwy transportowej",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "nie zabezpiecza przed duplikacją i zmianą kolejności datagramów",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 148,
+      "question": "Adres typu broadcast (rozgłoszenia) IP w wersji 4, w której znajduje się host 110.104.1.10 i którą określa maska 255.0.0.0, to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "110.104.1.10",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "110.255.255.255",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "110.104.1.255",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 149,
+      "question": "Pole o nazwie Time To Live w datagramie IP, które zabezpiecza przed zapętleniem routowania datagramu pomiędzy kolejnymi routerami w sieci, zawiera:",
+      "options": [
+        {
+          "key": "a",
+          "text": "liczbę routerów, przez jakie datagram IP może zostać przekazany danej",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "czas w sekundach, w którym datagram IP można jeszcze przekazywać dalej",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 150,
+      "question": "Protokół UDP definiuje identyfikatory przesyłanych do hosta-odbiorcy datagramów zwane numerami portów, o długości:",
+      "options": [
+        {
+          "key": "a",
+          "text": "8 bitów",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "32 bity",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "4 bity",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "16 bitów",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 151,
+      "question": "Wartości adresu IPv6 oraz maski, określające wszystkie hosty w internecie, to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "::/0",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "0.0.0.0/0",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "::/2000",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "ff02::1",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 152,
+      "question": "Istnienie zasady “Longest prefix match” w rutowaniu IP spowoduje, że adres docelowy 200.200.200.1 datagramu IP przy istnieniu w tablicy rutowania jednocześnie reguł o wzorcach i maskach (podano w notacji CIDR): 200.200.200.0/18, 200.200.200.0/20, 200.200.200.0/22, 200.200.200.0/24 zostanie dopasowany do:",
+      "options": [
+        {
+          "key": "a",
+          "text": "200.200.200.0/20",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "200.200.200.0/18",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "200.200.200.0/22",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "200.200.200.0/24",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 153,
+      "question": "Maksymalna długość pakietu IP wersja 4, licząc w bajtach, to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "nie istnieje taki limit",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "1500",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "65535",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "576",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "1025",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 154,
+      "question": "Router iBGP (internal Border Gateway Protocol), którego wprowadzenie do systemu rutowania iBGP umożliwia znaczne zredukowanie ilości otwartych sesji BGP między innymi routerami (rezygnację z tzw. full-mesh) nosi nazwę:",
+      "options": [
+        {
+          "key": "a",
+          "text": "BGP Mirror",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "Route Reflector Client (RRC)",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 155,
+      "question": "Liczba klas CoS (Class of Service), definiowanych przez podstawowy mechanizm implementacji QoS (Quality of Service) w Ethernet (czyli standard IEEE 802.1p), to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "8",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "255",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "16",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "65536",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "7",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 156,
+      "question": "Wariant protokołu STP (Spanning Tree Protocol, IEEE 802.1d) pozwalający w technologii Ethernet na logiczne pogrupowanie sieci VLAN i budowanie mniejszej liczby drzew rozpinających (po 1 drzewie dla każdej grupy) to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "PVSTP (Per VLAN Spanning Tree Protocol)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "MSTP (Multiple Spanning Tree Protocol)",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "RSTP (Rapid Spanning Tree Protocol)",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "SPB (Shortest Path Bridging)",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 157,
+      "question": "Nazwa procesu przekazywania wiedzy o trasach pomiędzy różnymi protokołami rutowania dynamicznego IP w routerach IP, to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "redystrybucja",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "IP Route Spoofing",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 158,
+      "question": "Co określa standard IEEE 802.1Q?",
+      "options": [
+        {
+          "key": "a",
+          "text": "wirtualne sieci LAN (VLAN) budowane w środowisku transportującym ramki",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "technologię tunelowania sieci VLAN o nazwie Q-in-Q",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "private VLAN nadbudowaną nad Ethernet",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 159,
+      "question": "Protokół umożliwiający konwersję adresu IP zdalnej stacji na jej adres MAC w Ethernet, to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "SLIP (Serial Line Internet Protocol)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "ARP (Address Resolution Protocol)",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "MLD (Multicast Listener Discovery)",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 160,
+      "question": "Dwie podwarstwy definiowane w ramach warstwy drugiej modelu ISO-OSI to odpowiednio:",
+      "options": [
+        {
+          "key": "a",
+          "text": "FDDI i CDDI",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "LAN i WAN",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "LP (Link Pulse) i PHY (Physical)",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "LLC (Logical Link Control) i MAC (Media Access Control)",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 161,
+      "question": "Rodzaj obszaru (area) w domenie OSPF (Open Shortest Path First) nie otrzymującego żadnych informacji o zewnętrznych (external) trasach rutowania OSPF, to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "backbone",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "internal",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "stub area",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "NSSA",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 162,
+      "question": "Parametr o nazwie “Wielkość okna” (Window size), którego wartość przekazywana jest w datagramach potwierdzenia TCP (Transmission Control Protocol Acknowledgment) w kierunku od odbiorcy do nadawcy ma na celu:",
+      "options": [
+        {
+          "key": "a",
+          "text": "określenie długości następnego datagramu, oraz wszystkich kolejnych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "określić ilość danych, jaką nadawca może w danej chwili wysłać (służy do sterowania przepływem)",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "określenie ilości danych w datagramie, w którym się znajduje - i w przypadku potwierdzeń TCP nie ma żadnego znaczenia",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "informowanie o wielkości datagramu, jaką może przyjąć host w aktualnym stanie",
+          "correct": true
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 163,
+      "question": "Dwa rodzaje obszarów (area) w protokole routingu dynamicznego IS-IS (Intermediate System to Intermediate System), to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "intra-area i inter-area",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "stub i backbone",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "LAN i WAN",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "Autonomous System i Internal System",
+          "correct": false
+        }
+      ],
+      "topic": "networks",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 164,
+      "question": "Dla uniknięcia błędów uwarunkowanych czasowo, maksymalna liczba procesów, które mogą znajdować się wewnątrz sekcji krytycznej, wynosi:",
+      "options": [
+        {
+          "key": "a",
+          "text": "8",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "1",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "0",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "16",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 165,
+      "question": "Inicjalna wartość semafora uogólnionego implementującego sekcję krytyczną wynosi:",
+      "options": [
+        {
+          "key": "a",
+          "text": "0",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "1",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "-1",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "dowolna liczba dodatnia",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 166,
+      "question": "Proces transferowania danych, które mają być docelowo wyprowadzone na urządzenie peryferyjne, do przestrzeni pamięci pomocniczej i transferowanie ich na to urządzenie w dogodniejszym czasie nosi nazwę:",
+      "options": [
+        {
+          "key": "a",
+          "text": "spooling",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "virtualization",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "caching",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "throttling",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 167,
+      "question": "Centralny Procesor, po otrzymaniu informacji o przerwaniu z urządzenia wejścia/wyjścia:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zatrzymuje się na określony okres czasu",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "przekazuje sterowanie do systemu obsługi przerwań po zakończeniu wykonywania bieżącej instrukcji",
+          "correct": true
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 168,
+      "question": "Który z problemów rozwiązuje zaproponowany przez Dijkstrę algorytm bankiera:",
+      "options": [
+        {
+          "key": "a",
+          "text": "wzajemnego wykluczania (mutual exclusion)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "wzajemnego zakleszczenia (deadlock exclusion)",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "unikania zakleszczenia (deadlock avoidance)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "unikania wykluczania (exclusion avoidance)",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 169,
+      "question": "System operacyjny jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zbiorem składników sprzętowych (hardware routines)",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "zbiorem driverów obsługujących urządzenia wejścia-wyjścia (input-output devices)",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zbiorem składników programowych (software routines)",
+          "correct": true
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 170,
+      "question": "Szyfrowanie kluczem publicznym w szyfrowaniu asymetrycznym:",
+      "options": [
+        {
+          "key": "a",
+          "text": "pozwala jedynie właściwemu odbiorcy odkodować komunikat",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "tylko posiadacz klucza prywatnego może odkodować komunikat",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "wystarczy użyć tego samego klucza do deszyfrowania wiadomości",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "wiadomość zaszyfrowana za pomocą klucza publicznego może być odszyfrowana tylko za pomocą klucza prywatnego",
+          "correct": true
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 171,
+      "question": "Buforowanie plików realizowane jest w celu:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zwiększenia wydajności dostępu do pamięci pomocniczej",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "wspomagania obsługi przerwań",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zwiększenia wydajności procesora",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "wyrównania różnic prędkości przesyłania danych między różnymi urządzeniami",
+          "correct": true
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": false
+    },
+    {
+      "id": 172,
+      "question": "Zaznacz prawdziwe stwierdzenia na temat stronicowania:",
+      "options": [
+        {
+          "key": "a",
+          "text": "stronicowanie rozwiązuje problem zewnętrznej fragmentacji pamięci",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "tablica stron jest stosowana do translacji adresu logicznego na adres fizyczny",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na strony, a pamięć logiczna na ramki, oraz że rozmiary stron i ramek są jednakowe",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "stronicowanie rozwiązuje problem wewnętrznej fragmentacji pamięci",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na ramki, a pamięć logiczna na strony, oraz że rozmiary stron i ramek są jednakowe",
+          "correct": true
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 173,
+      "question": "Zaznacz prawdziwe stwierdzenia na temat segmentacji:",
+      "options": [
+        {
+          "key": "a",
+          "text": "segmentacja ułatwia nadanie częściom procesu odpowiednich atrybutów ochrony: dopuszczalny odczyt, dopuszczalny zapis, dopuszczalne wykonanie",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "zastosowanie segmentacji wyklucza zastosowanie stronicowania",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "mogą istnieć następujące przykładowe rodzaje segmentów: kodu, danych, stosu",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "elementy tablicy segmentów zawierają adresy/numery ramek, w których znajdują się segmenty oraz rozmiary poszczególnych segmentów",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 174,
+      "question": "Zaznacz prawdziwe stwierdzenia na temat algorytmów wywłaszczania stron:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zaletą algorytmu zastępowania stron FIFO jest to, że nie zachodzi w nim efekt zwany anomalią Belady'ego",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "w algorytmie zastępowania stron LRU zastępowana jest strona, która najdłużej nie była używana",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "w algorytmie zastępowania stron zwanym algorytmem drugiej szansy algorytm wykorzystuje bit odniesienia, który określa, czy w pewnym przedziale czasu nastąpiło odwołanie do strony",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "zasadą działania algorytmu optymalnego zastępowania stron jest to, że zastąpiona zostaje strona, która najdłużej nie będzie używana",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "w algorytmie zastępowania stron LRU zachodzi efekt zwany anomalią Belady'ego",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "optymalny algorytm wywłaszczania stron zapewnia minimalną ilość wywłaszczeń stron przy ustalonej liczbie ramek",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "algorytm FIFO wywłaszcza stronę, do której czas dostępu był najdawniejszy",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 175,
+      "question": "Zaznacz prawdziwe stwierdzenia dotyczące pamięci wirtualnej:",
+      "options": [
+        {
+          "key": "a",
+          "text": "stronicowanie na żądanie jest jednym ze sposobów realizacji pamięci wirtualnej",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "procedura leniwej wymiany (ang. lazy swapper) polega na tym, że nie wykonuje się wymiany stron w pamięci, jeśli nie zachodzi taka potrzeba",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "pamięć wirtualna umożliwia wykonywanie procesów, które nie są w całości przechowywane w pamięci operacyjnej",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "przydział ramek oparty na globalnym algorytmie zastępowania może ograniczyć szamotanie (w porównaniu do algorytmu lokalnego zastępowania), gdyż szamoczący się proces nie doprowadza do szamotania innych procesów",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 176,
+      "question": "Zaznacz prawdziwe zdania na temat semaforów:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zaletą aktywnego czekania w trybie użytkownika jest brak konieczności kosztownego przejścia do trybu uprzywilejowanego (systemowego)",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "semafor może być użyty do synchronizacji dostępu do sekcji krytycznej",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "aktywne czekanie oznacza ciągłe testowanie wartości wyrażenia do momentu, gdy przyjmie ono wartość, dla której czekanie może być zakończone",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "semafor nie nadaje się do zdeterminowania kolejności wykonywanych operacji w grupie współbieżnych procesów",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "semafor może być użyty do synchronizacji dostępu do sekcji krytycznej, poprzez sygnalizowanie (V) przed wejściem i czekanie (P) po zakończeniu",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "mogą wykonywać operacje czekaj (P) i sygnalizuj (V)",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "aktywne czekanie polega na uśpieniu procesu i aktywnym oczekiwaniu na sygnał wybudzający",
+          "correct": false
+        },
+        {
+          "key": "h",
+          "text": "można stworzyć semafor zliczający z 2 semaforów binarnych i zmiennej zliczającej wykorzystującej te semafory",
+          "correct": true
+        },
+        {
+          "key": "i",
+          "text": "przed wejściem do sekcji krytycznej wykonywana jest operacja sygnalizuj (V)",
+          "correct": false
+        }
+      ],
+      "topic": "operating_systems",
+      "semester": 4,
+      "multipleCorrect": true
+    },
+    {
+      "id": 177,
+      "question": "Generalizacja:",
+      "options": [
+        {
+          "key": "a",
+          "text": "organizuje obiekty w hierarchię uogólniania/uszczegóławiania",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "organizuje klasy w hierarchię całości/części",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia interfejsów",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia implementacji",
+          "correct": false
+        }
+      ],
+      "topic": "oop_design",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 178,
+      "question": "Kompozycja:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jest to struktura agregacji, w której klasy części mogą być powiązane tylko z jedną klasą całości",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "ogranicza powiązanie klasy części do jednej klasy całości",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "ogranicza powiązanie obiektu części do jednego obiektu całości",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "jest silnym powiązaniem z czasem życia części ograniczonym do czasu życia całości",
+          "correct": true
+        }
+      ],
+      "topic": "oop_design",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 179,
+      "question": "Relacja zależności wskazuje, że:",
+      "options": [
+        {
+          "key": "a",
+          "text": "klasa dostarcza implementacji usług interfejsu",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "istnieje szczególne powiązanie między klasami",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "implementacja klasy może się zmienić, gdy zmieni się implementacja innej klasy",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "zmiana specyfikacji jednej usługi może mieć wpływ na poprawność działania innej",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "zmiana stanu obiektu zależy od stanu innego obiektu",
+          "correct": false
+        },
+        {
+          "key": "g",
+          "text": "przypadek użycia zależy od innego przypadku użycia",
+          "correct": false
+        }
+      ],
+      "topic": "oop_design",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 180,
+      "question": "Relacja realizacji wskazuje, że",
+      "options": [
+        {
+          "key": "a",
+          "text": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "klasa dostarcza implementacji usług interfejsu",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "klasa realizuje usługi delegowane z innej klasy",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "klasa wykorzystuje usługi interfejsu",
+          "correct": false
+        }
+      ],
+      "topic": "oop_design",
+      "semester": 6,
+      "multipleCorrect": false
+    },
+    {
+      "id": 181,
+      "question": "Wielokrotne użycie wspierane jest w modelu obiektowym przez:",
+      "options": [
+        {
+          "key": "a",
+          "text": "kwalifikowane powiązania",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "kompozycje z delegacją roli",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "istnienie klas obiektów",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "dziedziczenie implementacji",
+          "correct": true
+        }
+      ],
+      "topic": "oop_design",
+      "semester": 6,
+      "multipleCorrect": true
+    },
+    {
+      "id": 182,
+      "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+      "options": [
+        {
+          "key": "a",
+          "text": "autorem klasyfikacji (hierarchii) języków formalnych jest Noam Chomsky",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "zbiór wszystkich palindromów nad danym alfabetem jest językiem regularnym",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "istnieją języki, które nie należą do hierarchii Chomsky'ego, więc nie są generowane przez żadną gramatykę ani akceptowane przez żaden automat",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "językiem formalnym nazywamy dowolny podzbiór zbioru wszystkich możliwych słów zbudowanych z symboli należących do skończonego alfabetu",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "język oznaczany jako ^^\\{\\epsilon\\}^^ jest językiem pustym",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "najszerszą klasą języków w hierarchii Chomsky'ego jest klasa języków rekurencyjnie przeliczalnych generowanych przez gramatyki bez ograniczeń",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "jeżeli L jest językiem bezkontekstowym, to istnieje automat ze stosem akceptujący ten język i jest on mu równoważny",
+          "correct": true
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 183,
+      "question": "Niech N będzie niedeterministycznym automatem skończonym posiadającym ^^n^^ stanów, oraz niech M będzie minimalnym deterministycznym automatem skończonym rozpoznającym ten sam język, posiadającym ^^m^^ stanów. Wtedy:",
+      "options": [
+        {
+          "key": "a",
+          "text": "^^m \\leq n^^",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "^^m \\leq 2^n^^",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "^^n \\leq m^^",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "M posiada dokładnie jeden stan akceptujący",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "każdy deterministyczny automat skończony rozpoznający ten sam język musi posiadać co najmniej ^^2^n^^ stanów",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "każdy automat deterministyczny akceptujący ten sam język co N musi mieć co najwyżej ^^2^n^^ stanów",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 184,
+      "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+      "options": [
+        {
+          "key": "a",
+          "text": "jeśli język ^^L^^ spełnia tezę lematu o pompowaniu dla języków regularnych, to język ^^L^^ jest regularny",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "jeśli język ^^L^^ jest skończony, to ^^L*^^ musi być regularny",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "każdy język, który nie jest regularny, jest nieskończony",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "pomimo, że języki regularne w trywialny sposób są bezkontekstowe, to istnieją języki regularne nie spełniające lematu o pompowaniu dla języków bezkontekstowych",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "żeby sprawdzić, czy dany automat akceptuje język nieskończony, można iterując po wszystkich słowach złożonych z alfabetu sprawdzić, czy liczba słów przez niego akceptowanych jest nieskończona",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "zupełny deterministyczny automat skończony, który nie akceptuje żadnego słowa, nie ma osiągalnych stanów akceptujących",
+          "correct": true
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 185,
+      "question": "Dla języków i gramatyk formalnych, odnośnie postaci normalnej Chomsky'ego oraz postaci normalnej Greibach można sformułować następujące stwierdzenia (duże litery alfabetu łacińskiego to symbole nieterminalne, a litery małe to symbole terminalne):",
+      "options": [
+        {
+          "key": "a",
+          "text": "gramatyka w postaci Chomsky'ego zawiera produkcje postaci ^^A \\rightarrow BC^^, ^^A \\rightarrow a^^, a gramatyka w postaci Greibach zawiera produkcje postaci ^^A \\rightarrow aX^^ (gdzie ^^X^^ to ciąg symboli nieterminalnych, może być pusty), oraz każdą gramatykę bezkontekstową w postaci normalnej Chomsky'ego można przekształcić do postaci normalnej Greibach",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "dla dowolnej gramatyki bezkontekstowej ^^G^^ istnieje taka gramatyka bezkontekstowa ^^G'^^ będąca w postaci normalnej Chomsky'ego, że ^^L(G') = L(G) - \\{\\epsilon\\}^^",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "dla każdego języka bezkontekstowego istnieje gramatyka w postaci normalnej Chomsky'ego",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Chomsky'ego",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Greibach",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 186,
+      "question": "Odnośnie lematu o pompowaniu dla języków regularnych prawdziwe są następujące stwierdzenia:",
+      "options": [
+        {
+          "key": "a",
+          "text": "lemat służy pokazaniu, że określone języki są regularne",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "schemat postępowania jest następujący: skoro język posiada pewne własności regularności, to jest regularny",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "lemat służy do dowodzenia, że dany język nie jest językiem regularnym",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "lemat służy do dowodzenia, że dany język jest językiem regularnym",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 187,
+      "question": "Jeżeli ^^r^^ oraz ^^s^^ są wyrażeniami regularnymi dla języków odpowiednio ^^R^^ oraz ^^S^^, to ^^(r + s)^^, ^^rs^^ oraz ^^r*^^ są wyrażeniami regularnymi reprezentującymi odpowiednio zbiory:",
+      "options": [
+        {
+          "key": "a",
+          "text": "^^R \\cup S^^, ^^R \\times S^^, ^^R^{+}^^",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "^^R \\cup S^^, ^^R \\times S^^, ^^R*^^",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "^^R \\cup S^^, ^^RS^^, ^^R*^^",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "^^R \\cup S^^, ^^RS^^, ^^R^{+}^^",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 188,
+      "question": "Mamy języki ^^L1 = \\{ a^{2^n}, n > 0 \\}^^ oraz ^^L2 = \\{ a^{2n}, n > 0 \\}^^. Które z tych języków są regularne?",
+      "options": [
+        {
+          "key": "a",
+          "text": "^^L1^^ - nie, ^^L2^^ - nie",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "^^L1^^ - tak, ^^L2^^ - nie",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "^^L1^^ - nie, ^^L2^^ - tak",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "^^L1^^ - tak, ^^L2^^ - tak",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 189,
+      "question": "Eliminując niejednoznaczność gramatyki poprzez konwersję do innej gramatyki musimy zachować bez zmian:",
+      "options": [
+        {
+          "key": "a",
+          "text": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zbiór słów generowanych przez oryginalną gramatykę",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 190,
+      "question": "Która z następujących metod parsingu może przetworzyć najszerszą klasę gramatyk:",
+      "options": [
+        {
+          "key": "a",
+          "text": "parser SLR",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "zstępujący parser rekurencyjny bez nawracania",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "kanoniczny parser LR",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "parser Earleya",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "parser LL(1)",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "parser CYK",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "parser LALR(1)",
+          "correct": false
+        },
+        {
+          "key": "h",
+          "text": "parser oparty na priorytecie operatorów",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 191,
+      "question": "Wybierz stwierdzenia, które są prawdziwe:",
+      "options": [
+        {
+          "key": "a",
+          "text": "LR wymaga usunięcia lewostronnej rekurencji",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "LL wymaga na początku faktoryzacji lewostronnej",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "gramatyki parsowane przez LR są nadzbiorem właściwym gramatyk parsowanych przez LL",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "LR parsuje od prawej do lewej, LL od lewej do prawej",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "dla każdej gramatyki jednoznacznej można skonstruować parser LR(1)",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "żadna gramatyka niejednoznaczna nie może być gramatyką LR(1)",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "tworzenie parsera jest sensowną procedurą tylko dla jednoznacznej gramatyki bezkontekstowej (nie ma sensu konstruowanie parsera dla gramatyki niejednoznacznej)",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 192,
+      "question": "Typowy skaner języka formalnego ma za zadanie",
+      "options": [
+        {
+          "key": "a",
+          "text": "wyodrębnić symbole leksykalne",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "zliczyć słowa kluczowe i sprawdzić ich kolokacje",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "zliczyć lewe i prawe nawiasy sprawdzając wstępnie ich sparowanie",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "wczytać kod źródłowy programu do postaci tokenów",
+          "correct": true
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 193,
+      "question": "W odniesieniu do pracy parserów klasy LR(k) i funkcji action prawdziwe są stwierdzenia:",
+      "options": [
+        {
+          "key": "a",
+          "text": "funkcja action przyjmuje wartości ze zbioru {shift, reduce, goto, accept, error}",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "na stosie trzymane są prefiksy i sufiksy form zdaniowych, co do których jest nadzieja na ich wykorzystanie",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "funkcja action przyjmuje wartości ze zbioru {shift, reduce, accept, error}",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "na stosie trzymane są prefiksy wszystkich form zdaniowych",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": false
+    },
+    {
+      "id": 194,
+      "question": "Budowa tablic sterujących dla analizatorów klasy LR może stwarzać pewne trudności, szczególnie w zakresie automatyzacji, co ma pośredni wpływ na istnienie wielu odmian tych parserów. Które z poniższych prostych stwierdzeń są poprawne:",
+      "options": [
+        {
+          "key": "a",
+          "text": "pierwsza litera w nazwie SLR oznacza Shift",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "pierwsza litera w nazwie SLR oznacza Simple",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "pierwsze litery w nazwie LALR oznaczają LookAhead",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "pierwsza litera w nazwie GLR oznacza Grammar",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 195,
+      "question": "Porównując gramatyki LL oraz LR można powiedzieć, że:",
+      "options": [
+        {
+          "key": "a",
+          "text": "gramatyki LL opisują szerszą klasę niż LR",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "gramatyki LR opisują szerszą klasę niż LL",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "każda gramatyka LL jest również gramatyką LR",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "każda gramatyka LR jest również gramatyką LL",
+          "correct": false
+        }
+      ],
+      "topic": "formal_languages",
+      "semester": 3,
+      "multipleCorrect": true
+    },
+    {
+      "id": 196,
+      "question": "Sekcja krytyczna procesu jest to:",
+      "options": [
+        {
+          "key": "a",
+          "text": "część procesu, w której wykorzystywany jest zasób dzielony",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "część procesu, w której wykonywana jest komunikacja z użytkownikiem",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "część procesu, w której wykonywana jest nieskończona pętla",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "część procesu, w której deklarowane są lokalne zmienne",
+          "correct": false
+        }
+      ],
+      "topic": "concurrent_programming",
+      "semester": 7,
+      "multipleCorrect": false
+    },
+    {
+      "id": 197,
+      "question": "Wzajemnym wykluczaniem nazywamy problem współzawodnictwa procesów o zasób, który:",
+      "options": [
+        {
+          "key": "a",
+          "text": "musi zostać zainicjalizowany przez jeden z procesów",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "jest zmienną przechowywaną w rejestrach procesora",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "jednocześnie może być wykorzystywany tylko przez jeden z nich",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "może być wykorzystywany tylko przez z góry określony czas",
+          "correct": false
+        }
+      ],
+      "topic": "concurrent_programming",
+      "semester": 7,
+      "multipleCorrect": false
+    },
+    {
+      "id": 198,
+      "question": "Komunikację nazywamy asynchroniczną jeżeli:",
+      "options": [
+        {
+          "key": "a",
+          "text": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+          "correct": true
+        }
+      ],
+      "topic": "concurrent_programming",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 199,
+      "question": "Zjawisko blokady w programie współbieżnym jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zatrzymaniem pracy jednego ze współbieżnych procesów",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "przejawem braku bezpieczeństwa programu współbieżnego",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy",
+          "correct": false
+        }
+      ],
+      "topic": "concurrent_programming",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 200,
+      "question": "Zjawisko zagłodzenia w programie współbieżnym jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "przejawem braku bezpieczeństwa programu współbieżnego",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony, mimo że występuje ono dowolną liczbę razy",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "nienaturalnym przerwaniem pracy jednego ze współbieżnych procesów",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "sytuacją, kiedy nie ma gwarancji, że określone zdarzenie wykona się w skończonym czasie",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "pojawieniem się cyklu w relacji Lamporta \"happen-before\"",
+          "correct": false
+        }
+      ],
+      "topic": "concurrent_programming",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 201,
+      "question": "Komunikację nazywamy synchroniczną jeżeli:",
+      "options": [
+        {
+          "key": "a",
+          "text": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+          "correct": false
+        }
+      ],
+      "topic": "concurrent_programming",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 202,
+      "question": "Prawo dostępu do pliku 453 pozwala:",
+      "options": [
+        {
+          "key": "a",
+          "text": "właścicielowi czytać plik",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "wszystkim czytać plik",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "właścicielowi na odczyt, grupie na odczyt i uruchomienie, pozostałym na zapis i uruchomienie",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "grupie na odczyt i zapis, pozostałym tylko na odczyt",
+          "correct": false
+        }
+      ],
+      "topic": "unix_admin",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 203,
+      "question": "Przy konfiguracji obsługi sieci w Unixie:",
+      "options": [
+        {
+          "key": "a",
+          "text": "plik /etc/hosts przechowuje listę znanych hostów i interfejsów sieciowych",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "plik /etc/hosts zawiera tylko adresy IP lokalnych interfejsów",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "plik /etc/networks zawiera adresy IP znanych sieci IP",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "plik /etc/networks przechowuje listę lokalnych interfejsów",
+          "correct": false
+        }
+      ],
+      "topic": "unix_admin",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 204,
+      "question": "W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące użytkownika i jego sesji:",
+      "options": [
+        {
+          "key": "a",
+          "text": "praca programu logującego (login) jest sterowana m. in. zawartością plików /etc/nologin lub /etc/motd",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "o możliwościach użytkownika w systemie decyduje przynależność do odpowiednich grup użytkowników",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "w zależności od konfiguracji systemu mogą być odnotowywane podłączenia do systemu poprzez zmianę kontekstu użytkownika (komenda su)",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "grupy użytkowników wprowadzono, aby ułatwić zarządzanie użytkownikami oraz podnieść bezpieczeństwo systemu",
+          "correct": true
+        }
+      ],
+      "topic": "unix_admin",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 205,
+      "question": "W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące procesu logowania się i uprawnień użytkowników:",
+      "options": [
+        {
+          "key": "a",
+          "text": "o postaci hasła decyduje administrator systemu zapisując ograniczenia w różnych wersjach systemu w różnych plikach konfiguracyjnych",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "wszystkie grupy użytkowników dają im jednakowe uprawnienia",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "cała informacja dotycząca konfiguracji użytkownika w systemie jest zapisana jedynie w pliku /etc/passwd co zapewnia spójność informacji",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "do systemu użytkownik może podłączać się jedynie z konsoli systemu oraz zdalnie poprzez sieć",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "nazwa użytkownika w systemie UNIX musi być unikalna zaś numer identyfikacyjny może się powtarzać",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "technika shadow umożliwia podglądnięcie postaci zaszyfrowanej hasła każdego użytkownika w systemie przez dowolnego użytkownika",
+          "correct": false
+        },
+        {
+          "key": "g",
+          "text": "system PAM umożliwia m.in. odnotowywanie nieudanych prób podłączania się do systemu",
+          "correct": true
+        }
+      ],
+      "topic": "unix_admin",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 206,
+      "question": "Zaznacz prawdziwe stwierdzenia na temat procesów:",
+      "options": [
+        {
+          "key": "a",
+          "text": "proces jest wykonaniem programu i składa się ze zbiorowości bajtów, w których wyróżnia się instrukcje maszynowe (tzw. tekst), dane i stos",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "w kategoriach praktycznych proces w systemie UNIX jest jednostką utworzoną za pomocą funkcji systemowej fork (z wyjątkiem procesu o numerze 0)",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "każdy uruchomiony w systemie UNIX proces otrzymuje od procesu potomnego dostęp do jego (procesu macierzystego) zmiennych środowiskowych",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "liczba możliwych do uruchomienia w systemie UNIX procesów jest ograniczona jedynie rozmiarem pamięci o dostępie swobodnym danego systemu komputerowego",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "wartość parametru NICE dla nowo utworzonego procesu jest wyliczana na podstawie średniego obciążenia systemu",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "każdy uruchomiony w systemie UNIX proces otrzymuje od systemu trzy otwarte pliki o numerach 0, 1 i 2",
+          "correct": true
+        },
+        {
+          "key": "g",
+          "text": "rekord w tablicy procesów znajdującej się w jądrze systemu operacyjnego zawiera podstawowe informacje o procesie, w tym jego właścicieli, listę segmentów oraz wskaźniki do U-obszaru",
+          "correct": true
+        },
+        {
+          "key": "h",
+          "text": "zmiana kontekstu z trybu użytkownika na tryb jądra następuje między innymi wówczas, gdy system przydziela procesor kolejnemu procesowi z kolejki gotowych do wykonania procesów",
+          "correct": false
+        }
+      ],
+      "topic": "unix_admin",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 207,
+      "question": "Interpretery poleceń systemu UNIX:",
+      "options": [
+        {
+          "key": "a",
+          "text": "w niektórych interpreterach poleceń można uniemożliwić odłączanie się od systemu poprzez wykorzystanie sekwencji Ctrl-D dzięki ustawieniu wartości odpowiedniej zmiennej środowiskowej",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "wszystkie polecenia shella zwracają 0 (zero), kiedy wykonanie ich zakończy się niepowodzeniem lub wartość różną od 0 (zazwyczaj 1) w przypadku przeciwnym",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "każdy interpreter wykorzystuje trzy podstawowe typy zmiennych: specjalne, środowiska oraz programowe",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "błędne wykonanie komendy w linii komend można rozpoznać m. in. po zapisach do urządzenia /dev/null",
+          "correct": false
+        }
+      ],
+      "topic": "unix_admin",
+      "semester": 7,
+      "multipleCorrect": true
+    },
+    {
+      "id": 208,
+      "question": "Wartość 5/16 ma postać w systemie binarnym:",
+      "options": [
+        {
+          "key": "a",
+          "text": "0.0101",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "0.1011",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "0.1010",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 209,
+      "question": "Wartość 1/10 ma postać w systemie binarnym:",
+      "options": [
+        {
+          "key": "a",
+          "text": "0.1010",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "0.0(0011)",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "0.(1010)",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "0.0(1010)",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 210,
+      "question": "Język formalny jest:",
+      "options": [
+        {
+          "key": "a",
+          "text": "sposobem zapisu algorytmów opartym na blokach operacyjnych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "sposobem zapisu algorytmów opartym na pseudokodzie",
+          "correct": true
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 211,
+      "question": "Syntaktyka języka programowania opisuje:",
+      "options": [
+        {
+          "key": "a",
+          "text": "znaczenie instrukcji w języku",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "formalnie poprawne programy",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "budowę instrukcji w języku",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "działanie poprawnego programu",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 212,
+      "question": "Semantyka języka programowania opisuje:",
+      "options": [
+        {
+          "key": "a",
+          "text": "znaczenie instrukcji w języku",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "formalnie poprawne programy",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "budowę instrukcji w języku",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "działanie poprawnego programu",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 213,
+      "question": "Nawiasy <> w notacji EBNF oznaczają:",
+      "options": [
+        {
+          "key": "a",
+          "text": "opcjonalne wystąpienie elementu",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "symbol terminalny",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "symbol nieterminalny",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "wielokrotne występowanie elementu",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 214,
+      "question": "Kodem ASCII możemy zakodować:",
+      "options": [
+        {
+          "key": "a",
+          "text": "dowolny znak z zakresu 0-128",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "dowolny znak z zakresu 0-255",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "dowolny znak z zakresu 32-255",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "dowolny znak z zakresu 0-127",
+          "correct": true
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 215,
+      "question": "Kodowanie znaków metodą UTF-8 cechuje:",
+      "options": [
+        {
+          "key": "a",
+          "text": "pozwala zakodować dowolne znaki Unicode",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "zmienna długość kodu",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "pozwala zakodować dowolne znaki ASCII za pomocą 1 bajta",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "pozwala zakodować dowolne znaki ASCII za pomocą 8 bajtów",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "pozwala zakodować dowolne znaki Unicode za pomocą nie więcej niż 6 bajtów",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "kod znaku ASCII może być częścią dłuższego kodu",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 216,
+      "question": "Cechami kodu uzupełnień do dwóch są:",
+      "options": [
+        {
+          "key": "a",
+          "text": "podwójna reprezentacja 0",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "pojedyncza reprezentacja 0",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "symetryczny zakres liczb",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "asymetryczny zakres liczb",
+          "correct": true
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 217,
+      "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: mantysa zajmuje 22 bity, w tym bit znaku, cecha zajmuje 10 bitów, w tym bit znaku. Cecha i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy (mantysa jest ułamkiem [1/2...1)). Jaka jest największa możliwa liczba w tym systemie?",
+      "options": [
+        {
+          "key": "a",
+          "text": "10^10",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "(1-2^(-21)) * 2^(2^9-1)",
+          "correct": true
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 218,
+      "question": "Jaka jest minimalna liczba bitów, aby reprezentować liczby zmiennopozycyjne z zakresu -106...106 z dokładnością do 2 miejsc znaczących?",
+      "options": [
+        {
+          "key": "a",
+          "text": "8 bitów",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "12 bitów",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "4 bity",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "14 bitów",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 219,
+      "question": "W standardzie IEEE 754 liczby zmiennopozycyjne podwójnej precyzji:",
+      "options": [
+        {
+          "key": "a",
+          "text": "mantysa zawiera 52 bity łącznie z bitem znaku",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "mantysa zawiera 53 bity łącznie z bitem znaku",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "wykładnik zawiera 11 bitów",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "wykładnik zawiera 12 bitów",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "gwarantują 7-8 dziesiętnych miejsc znaczących",
+          "correct": true
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 220,
+      "question": "Do czego służy stos systemowy?",
+      "options": [
+        {
+          "key": "a",
+          "text": "do przechowywania wszystkich zmiennych w programie",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "do przechowywania zmiennych alokowanych procedurą ^^new(p)^^",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "do przechowywania zmiennych lokalnych procedur i funkcji",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "do przechowywania adresów powrotu z funkcji",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "do przechowywania zmiennych alokowanych dynamicznie",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": true
+    },
+    {
+      "id": 221,
+      "question": "Liczby stałopozycyjne w komputerze są reprezentowane w kodzie uzupełnień do 2. Dla jakich wartości funkcja abs(x) będzie obliczona prawidłowo?",
+      "options": [
+        {
+          "key": "a",
+          "text": "tylko dla liczb ujemnych",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "tylko dla liczb nieujemnych",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "dla wszystkich liczb typu integer",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "wszystkich poza najmniejszą liczbą w reprezentacji",
+          "correct": true
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 222,
+      "question": "Zmienna typu wskaźnik zajmuje 4 bajty. Ile pamięci można zaadresować takim wskaźnikiem?",
+      "options": [
+        {
+          "key": "a",
+          "text": "64 kilobajty",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "4 gigabajty",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "2 megabajty",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "6 gigabajtów",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "8 kilobajtów",
+          "correct": false
+        }
+      ],
+      "topic": "number_representation",
+      "semester": 1,
+      "multipleCorrect": false
+    },
+    {
+      "id": 223,
+      "question": "Jaki paradygmat programowania jest realizowany w języku C?",
+      "options": [
+        {
+          "key": "a",
+          "text": "aplikatywny",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "imperatywny",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "deklaratywny",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "strukturalny",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "żaden z wymienionych",
+          "correct": false
+        }
+      ],
+      "topic": "programming_basics",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 224,
+      "question": "Jeżeli w programie następuje odwołanie poza obszar tablicy:",
+      "options": [
+        {
+          "key": "a",
+          "text": "zawsze sygnalizowany jest błąd wykonania",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "nie jest sygnalizowany błąd, jeżeli pamięć jest zaalokowana",
+          "correct": true
+        }
+      ],
+      "topic": "programming_basics",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 225,
+      "question": "Translacja analizuje symbole:",
+      "options": [
+        {
+          "key": "a",
+          "text": "od lewej do prawej strony",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "od prawej do lewej strony",
+          "correct": false
+        }
+      ],
+      "topic": "programming_basics",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 226,
+      "question": "Jaki wynik da następujące wyrażenie napisane w ONP: 2 3 4 5 + * +?",
+      "options": [
+        {
+          "key": "a",
+          "text": "25",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "29",
+          "correct": true
+        }
+      ],
+      "topic": "programming_basics",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 227,
+      "question": "Co oznacza, że algorytm sortowania tablicy posiada złożoność ^^O(n^2)^^?",
+      "options": [
+        {
+          "key": "a",
+          "text": "wykonywana liczba porównań wynosi ^^n^2^^",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "wykonywana liczba porównań jest rzędu ^^n^2^^",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "dwukrotne zwiększenie rozmiaru tablicy spowoduje czterokrotne zwiększenie czasu sortowania",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "wykonywana liczba porównań i wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^",
+          "correct": false
+        },
+        {
+          "key": "f",
+          "text": "wykonywana liczba porównań lub wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 228,
+      "question": "Jakie byłyby konsekwencje znalezienia wielomianowego deterministycznego algorytmu dla problemu NP-zupełnego?",
+      "options": [
+        {
+          "key": "a",
+          "text": "stanowiłoby to dowód, że P = NP",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "oznaczałoby to, że P =/= NP",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "nie miałoby to żadnych konsekwencji dla teorii złożoności obliczeniowej",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "żadna z pozostałych odpowiedzi",
+          "correct": false
+        },
+        {
+          "key": "e",
+          "text": "każdy problem algorytmiczny można byłoby rozwiązać w czasie wielomianowym",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 229,
+      "question": "Jakie problemy zaliczamy do klasy problemów NP-zupełnych?",
+      "options": [
+        {
+          "key": "a",
+          "text": "z definicji należą jednocześnie do NP i co-NP",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "należą do klasy NP, ale nie należą do P",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "żadna z pozostałych odpowiedzi",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "wszystkie problemy z klasy NP redukują się do nich i same należą do klasy NP",
+          "correct": true
+        },
+        {
+          "key": "e",
+          "text": "takie, które są w NP i redukuje się do nich problem SAT",
+          "correct": true
+        },
+        {
+          "key": "f",
+          "text": "takie, które są w NP i redukują się do problemu SAT",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 230,
+      "question": "Co można powiedzieć o podproblemach problemu ^^\\pi^^, wiedząc, że ^^\\pi \\notin P^^?",
+      "options": [
+        {
+          "key": "a",
+          "text": "żaden jego podproblem nie należy do P",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "każdy jego podproblem należy do klasy P",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "pojęcie podproblemu nie jest zdefiniowane",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "istnieje taki jego podproblem, który należy do P",
+          "correct": true
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 231,
+      "question": "Która z poniższych złożoności czasowych jest wykładnicza:",
+      "options": [
+        {
+          "key": "a",
+          "text": "^^O(n^100)^^",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "^^O(n^{1/n!})^^",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "^^O((\\log{10})^n)^^",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "^^O(n!)^^",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 2,
+      "multipleCorrect": false
+    },
+    {
+      "id": 232,
+      "question": "Co nazywamy mostem grafu?",
+      "options": [
+        {
+          "key": "a",
+          "text": "minimalną liczbę krawędzi grafu, których usunięcie zmienia graf w niespójny lub trywialny",
+          "correct": false
+        },
+        {
+          "key": "b",
+          "text": "krawędź grafu spójnego, której usunięcie z grafu rozspójnia go",
+          "correct": true
+        },
+        {
+          "key": "c",
+          "text": "krawędź, której usunięcie zwiększa liczbę spójnych składowych grafu",
+          "correct": true
+        },
+        {
+          "key": "d",
+          "text": "maksymalną liczbę krawędzi grafu, których usunięcie zmienia graf w niespójny",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 2,
+      "multipleCorrect": true
+    },
+    {
+      "id": 233,
+      "question": "W teorii złożoności obliczeniowej wszystkie problemy decyzyjne, które w wielomianowym czasie rozwiązuje niedeterministyczna maszyna Turinga, tworzą pewną klasę problemów. Jak brzmi jej nazwa?",
+      "options": [
+        {
+          "key": "a",
+          "text": "klasa NP",
+          "correct": true
+        },
+        {
+          "key": "b",
+          "text": "klasa P",
+          "correct": false
+        },
+        {
+          "key": "c",
+          "text": "klasa coNP",
+          "correct": false
+        },
+        {
+          "key": "d",
+          "text": "klasa RE",
+          "correct": false
+        }
+      ],
+      "topic": "algorithms",
+      "semester": 2,
+      "multipleCorrect": false
+    }
+  ]
+}
