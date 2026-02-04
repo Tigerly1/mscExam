@@ -302,12 +302,12 @@ class ExamDrill {
                 <ul class="options-list" id="optionsList">
                     ${question.options.map((opt, idx) => `
                         <li class="option-item">
-                            <label class="option-label" data-key="${opt.key}" onclick="app.selectOption('${opt.key}')">
-                                <input type="${inputType}" class="option-input" name="answer" value="${opt.key}">
+                            <div class="option-label" data-key="${opt.key}" onclick="app.selectOption('${opt.key}')">
+                                <span class="option-check">${question.multipleCorrect ? '&#9744;' : '&#9675;'}</span>
                                 <span class="option-key">${opt.key})</span>
                                 <span class="option-text">${this.formatText(opt.text)}</span>
                                 <span class="kbd">${idx + 1}</span>
-                            </label>
+                            </div>
                         </li>
                     `).join('')}
                 </ul>
@@ -338,7 +338,7 @@ class ExamDrill {
 
     formatText(text) {
         if (!text) return '';
-        text = text.replace(/\^\^([^^]+)\^\^/g, '\\($1\\)');
+        // MathJax handles ^^...^^ natively via config - no manual replacement needed
         return text;
     }
 
@@ -347,25 +347,26 @@ class ExamDrill {
 
         const question = this.sessionQuestions[this.currentQuestionIndex];
         const label = document.querySelector(`.option-label[data-key="${key}"]`);
-        const input = label.querySelector('input');
 
         if (question.multipleCorrect) {
             if (this.selectedAnswers.has(key)) {
                 this.selectedAnswers.delete(key);
                 label.classList.remove('selected');
-                input.checked = false;
+                label.querySelector('.option-check').innerHTML = '&#9744;';
             } else {
                 this.selectedAnswers.add(key);
                 label.classList.add('selected');
-                input.checked = true;
+                label.querySelector('.option-check').innerHTML = '&#9745;';
             }
         } else {
-            document.querySelectorAll('.option-label').forEach(l => l.classList.remove('selected'));
-            document.querySelectorAll('.option-input').forEach(i => i.checked = false);
+            document.querySelectorAll('.option-label').forEach(l => {
+                l.classList.remove('selected');
+                l.querySelector('.option-check').innerHTML = '&#9675;';
+            });
             this.selectedAnswers.clear();
             this.selectedAnswers.add(key);
             label.classList.add('selected');
-            input.checked = true;
+            label.querySelector('.option-check').innerHTML = '&#9679;';
         }
     }
 

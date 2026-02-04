@@ -463,12 +463,26 @@ body {
     background: var(--warning-light);
 }
 
-.option-input {
-    margin-top: 2px;
-    width: 18px;
-    height: 18px;
-    accent-color: var(--primary);
+.option-check {
+    font-size: 20px;
+    line-height: 1;
     flex-shrink: 0;
+    color: var(--text-muted);
+    user-select: none;
+    width: 22px;
+    text-align: center;
+}
+
+.option-label.selected .option-check {
+    color: var(--primary);
+}
+
+.option-label.correct .option-check {
+    color: var(--success);
+}
+
+.option-label.incorrect .option-check {
+    color: var(--danger);
 }
 
 .option-key {
