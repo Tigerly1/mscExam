@@ -81,24 +81,31 @@ class ExamDrill {
 
     getTopicDisplayName(topic) {
         const names = {
-            algorithms: 'Algorithms & Complexity',
-            digital_systems: 'Digital Systems & FPGA',
-            transmission: 'Transmission',
-            databases: 'Databases & SQL',
-            software_engineering: 'Software Engineering',
-            functional_programming: 'Functional Programming',
+            algorithms: 'Algorytmy i struktury danych',
+            digital_systems: 'Technika cyfrowa / FPGA',
+            transmission: 'Transmisja danych',
+            databases: 'Bazy danych / SQL',
+            software_engineering: 'Inżynieria oprogramowania',
+            functional_programming: 'Programowanie funkcyjne',
             java: 'Java',
             c_cpp: 'C/C++',
-            numerical_methods: 'Numerical Methods',
-            networks: 'Computer Networks',
-            operating_systems: 'Operating Systems',
-            oop_design: 'OOP Design',
-            formal_languages: 'Formal Languages',
-            concurrent_programming: 'Concurrent Programming',
-            unix_admin: 'Unix Administration',
-            number_representation: 'Number Representation',
-            programming_basics: 'Programming Basics',
-            other: 'Other'
+            numerical_methods: 'Metody numeryczne',
+            networks: 'Sieci komputerowe',
+            operating_systems: 'Systemy operacyjne',
+            oop_design: 'Programowanie obiektowe',
+            formal_languages: 'Lingwistyka formalna / Automaty',
+            concurrent_programming: 'Programowanie współbieżne',
+            unix_admin: 'Systemy uniksowe',
+            number_representation: 'Reprezentacja liczb',
+            programming_basics: 'Podstawy programowania',
+            logic: 'Logika',
+            math: 'Matematyka dyskretna / Prawdopodobieństwo',
+            compilation: 'Teoria kompilacji',
+            computer_graphics: 'Grafika komputerowa',
+            image_processing: 'Przetwarzanie obrazów',
+            web_programming: 'Programowanie webowe',
+            machine_learning: 'Uczenie maszynowe / AI',
+            other: 'Inne'
         };
         return names[topic] || topic;
     }

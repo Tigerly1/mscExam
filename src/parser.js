@@ -1,84 +1,132 @@
-// Question Parser - Converts drill copy.txt to JSON format
+// Question Parser - Converts drill .txt files to JSON format
+// Supports both original (drill copy.txt) and new (nowe_pytania_isi.txt) question banks
 
 const fs = require('fs');
 const path = require('path');
 
-// Topic mapping based on question ranges
-const topicMapping = {
+// ── ORIGINAL questions (drill copy.txt) ID mappings ──
+
+const origTopicMap = {
     algorithms: [1, 2, 3, 227, 228, 229, 230, 231, 232, 233],
     digital_systems: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
     transmission: [19],
-    databases: Array.from({length: 19}, (_, i) => 34 + i), // 34-52
-    software_engineering: Array.from({length: 27}, (_, i) => 53 + i), // 53-79
+    databases: range(34, 52),
+    software_engineering: range(53, 79),
     functional_programming: [80, 81, 82, 83, 84, 85],
     java: [86, 87, 88, 89, 90, 91],
-    c_cpp: Array.from({length: 10}, (_, i) => 92 + i), // 92-101
-    numerical_methods: Array.from({length: 30}, (_, i) => 102 + i), // 102-131
-    networks: [132, ...Array.from({length: 31}, (_, i) => 133 + i)], // 132-163
-    operating_systems: Array.from({length: 13}, (_, i) => 164 + i), // 164-176
+    c_cpp: range(92, 101),
+    numerical_methods: range(102, 131),
+    networks: range(132, 163),
+    operating_systems: range(164, 176),
     oop_design: [177, 178, 179, 180, 181],
-    formal_languages: Array.from({length: 14}, (_, i) => 182 + i), // 182-195
+    formal_languages: range(182, 195),
     concurrent_programming: [196, 197, 198, 199, 200, 201],
     unix_admin: [202, 203, 204, 205, 206, 207],
-    number_representation: Array.from({length: 15}, (_, i) => 208 + i), // 208-222
+    number_representation: range(208, 222),
     programming_basics: [223, 224, 225, 226]
 };
 
-// Semester mapping based on AGH ISI curriculum
-const semesterMapping = {
-    1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222],
+const origSemesterMap = {
+    1: [...range(1, 19), ...range(208, 222)],
     2: [223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 80, 81, 82, 83, 84, 85],
-    3: [34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131],
-    4: [132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176],
-    5: [53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79],
-    6: [86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 177, 178, 179, 180, 181],
-    7: [196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207]
+    3: [...range(34, 52), ...range(182, 195), ...range(102, 131)],
+    4: [...range(132, 176)],
+    5: range(53, 79),
+    6: [...range(86, 101), ...range(177, 181)],
+    7: range(196, 207)
 };
 
-// Course names for topic context
-const topicCourseMapping = {
-    algorithms: 'Algorytmy i struktury danych / Algorithms & Data Structures',
-    digital_systems: 'Podstawy techniki cyfrowej / Basics of Digital Technique',
-    transmission: 'Podstawy techniki cyfrowej / Basics of Digital Technique',
-    databases: 'Bazy danych / Databases',
-    software_engineering: 'Inżynieria oprogramowania / Software Engineering',
-    functional_programming: 'Podstawy programowania / Foundations of Programming',
-    java: 'Programowanie zaawansowane / Advanced Programming',
-    c_cpp: 'Programowanie zaawansowane / Advanced Programming',
-    numerical_methods: 'Metody numeryczne / Numerical Methods',
-    networks: 'Sieci komputerowe / Computer Networks',
-    operating_systems: 'Systemy operacyjne / Operating Systems',
-    oop_design: 'Programowanie zaawansowane / Advanced Programming',
-    formal_languages: 'Lingwistyka formalna i automaty / Formal Linguistics & Automata',
-    concurrent_programming: 'Programowanie zaawansowane / Advanced Programming',
-    unix_admin: 'Wstęp do systemów uniksowych / Introduction to UNIX',
-    number_representation: 'Wstęp do informatyki / Introduction to Computer Science',
-    programming_basics: 'Podstawy programowania / Foundations of Programming'
+// ── NEW questions (nowe_pytania_isi.txt) ID mappings ──
+// New questions get IDs 1001+ (original file ID + 1000 offset)
+
+const newTopicMap = {
+    algorithms:            [...range(1001, 1012), ...range(1282, 1293)],
+    logic:                 range(1013, 1024),
+    math:                  [...range(1025, 1036), ...range(1051, 1074)],
+    numerical_methods:     range(1037, 1050),
+    formal_languages:      [...range(1075, 1089), ...range(1114, 1125)],
+    digital_systems:       range(1090, 1101),
+    databases:             range(1102, 1113),
+    computer_graphics:     range(1126, 1137),
+    operating_systems:     range(1138, 1149),
+    compilation:           range(1150, 1163),
+    programming_basics:    range(1164, 1166),
+    number_representation: range(1167, 1169),
+    image_processing:      [1170],
+    unix_admin:            range(1171, 1183),
+    software_engineering:  range(1184, 1205),
+    c_cpp:                 range(1206, 1230),
+    web_programming:       [...range(1231, 1241), ...range(1257, 1266)],
+    java:                  range(1242, 1256),
+    networks:              range(1267, 1281),
+    machine_learning:      [...range(1294, 1356)]
 };
 
-function getTopic(questionId) {
-    for (const [topic, ids] of Object.entries(topicMapping)) {
-        if (ids.includes(questionId)) {
-            return topic;
-        }
+const newSemesterMap = {
+    1: [...range(1001, 1012), ...range(1013, 1024), ...range(1025, 1036), ...range(1164, 1169)],
+    2: [...range(1051, 1074), ...range(1090, 1101), ...range(1206, 1217)],
+    3: [...range(1037, 1050), ...range(1075, 1089), ...range(1102, 1125), ...range(1138, 1149), ...range(1171, 1183), ...range(1218, 1230)],
+    4: [...range(1150, 1163), ...range(1184, 1205), ...range(1242, 1256), ...range(1267, 1281), ...range(1282, 1293)],
+    5: [...range(1126, 1137), ...range(1231, 1266)],
+    6: [1170],
+    7: [...range(1294, 1356)]
+};
+
+// ── Course name mapping ──
+
+const topicCourseMap = {
+    algorithms: 'Algorytmy i struktury danych',
+    digital_systems: 'Podstawy techniki cyfrowej',
+    transmission: 'Podstawy techniki cyfrowej',
+    databases: 'Bazy danych',
+    software_engineering: 'Inżynieria oprogramowania',
+    functional_programming: 'Podstawy programowania',
+    java: 'Programowanie zaawansowane (Java)',
+    c_cpp: 'Programowanie zaawansowane (C/C++)',
+    numerical_methods: 'Metody numeryczne',
+    networks: 'Sieci komputerowe',
+    operating_systems: 'Systemy operacyjne',
+    oop_design: 'Programowanie obiektowe',
+    formal_languages: 'Lingwistyka formalna i automaty',
+    concurrent_programming: 'Programowanie współbieżne',
+    unix_admin: 'Systemy uniksowe',
+    number_representation: 'Wstęp do informatyki',
+    programming_basics: 'Podstawy programowania',
+    logic: 'Logika',
+    math: 'Matematyka (dyskretna, prawdopodobieństwo, grafy)',
+    compilation: 'Teoria kompilacji i kompilatory',
+    computer_graphics: 'Grafika komputerowa',
+    image_processing: 'Przetwarzanie obrazów cyfrowych',
+    web_programming: 'Programowanie aplikacji webowych',
+    machine_learning: 'Uczenie maszynowe / Sztuczna inteligencja',
+    other: ''
+};
+
+// ── Helper ──
+
+function range(start, end) {
+    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+}
+
+function getTopicForId(id) {
+    const maps = id >= 1000 ? newTopicMap : origTopicMap;
+    for (const [topic, ids] of Object.entries(maps)) {
+        if (ids.includes(id)) return topic;
     }
     return 'other';
 }
 
-function getSemester(questionId) {
-    for (const [semester, ids] of Object.entries(semesterMapping)) {
-        if (ids.includes(questionId)) {
-            return parseInt(semester);
-        }
+function getSemesterForId(id) {
+    const maps = id >= 1000 ? newSemesterMap : origSemesterMap;
+    for (const [sem, ids] of Object.entries(maps)) {
+        if (ids.includes(id)) return parseInt(sem);
     }
     return null;
 }
 
-function getCourseName(topic) {
-    return topicCourseMapping[topic] || '';
-}
+// ── Parser ──
 
-function parseQuestions(content) {
+function parseQuestions(content, idOffset = 0) {
     const questions = [];
     content = content.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
     const lines = content.split('\n');
@@ -90,24 +138,22 @@ function parseQuestions(content) {
 
     for (let i = 0; i < lines.length; i++) {
         let line = lines[i].trim();
-
         if (!line) continue;
-
-        // Check for options marker at end of file
         if (line.startsWith('<options>')) break;
 
-        // Check for new question start
-        const questionMatch = line.match(/^\[#(\d+)\]\s*(.*)$/);
+        // Question start: [#N] or [#N] (#N)
+        const questionMatch = line.match(/^\[#(\d+)\]\s*(?:\(#\d+\)\s*)?(.*)$/);
         if (questionMatch) {
             if (currentQuestion !== null && questionText.trim()) {
-                const topic = getTopic(currentQuestion);
+                const finalId = currentQuestion + idOffset;
+                const topic = getTopicForId(finalId);
                 questions.push({
-                    id: currentQuestion,
+                    id: finalId,
                     question: questionText.trim(),
-                    options: options,
-                    topic: topic,
-                    semester: getSemester(currentQuestion),
-                    courseName: getCourseName(topic),
+                    options,
+                    topic,
+                    semester: getSemesterForId(finalId),
+                    courseName: topicCourseMap[topic] || '',
                     multipleCorrect: options.filter(o => o.correct).length > 1
                 });
             }
@@ -119,7 +165,7 @@ function parseQuestions(content) {
             continue;
         }
 
-        // Check for option line - handle duplicate keys by skipping non-correct duplicates
+        // Option line
         const optionMatch = line.match(/^(>>)?([a-z])\)(.*)$/);
         if (optionMatch && currentQuestion !== null) {
             const isCorrect = optionMatch[1] === '>>';
@@ -127,13 +173,9 @@ function parseQuestions(content) {
             const text = optionMatch[3].trim();
 
             if (seenKeys.has(key)) {
-                // Duplicate key - skip the non-correct duplicate
                 if (isCorrect) {
-                    // Replace existing with correct version
                     const idx = options.findIndex(o => o.key === key);
-                    if (idx !== -1) {
-                        options[idx] = { key, text, correct: true };
-                    }
+                    if (idx !== -1) options[idx] = { key, text, correct: true };
                 }
                 continue;
             }
@@ -143,7 +185,7 @@ function parseQuestions(content) {
             continue;
         }
 
-        // Append to question text
+        // Multi-line question text
         if (currentQuestion !== null && line && !line.match(/^(>>)?[a-z]\)/)) {
             questionText += ' ' + line;
         }
@@ -151,14 +193,15 @@ function parseQuestions(content) {
 
     // Last question
     if (currentQuestion !== null && questionText.trim()) {
-        const topic = getTopic(currentQuestion);
+        const finalId = currentQuestion + idOffset;
+        const topic = getTopicForId(finalId);
         questions.push({
-            id: currentQuestion,
+            id: finalId,
             question: questionText.trim(),
-            options: options,
-            topic: topic,
-            semester: getSemester(currentQuestion),
-            courseName: getCourseName(topic),
+            options,
+            topic,
+            semester: getSemesterForId(finalId),
+            courseName: topicCourseMap[topic] || '',
             multipleCorrect: options.filter(o => o.correct).length > 1
         });
     }
@@ -166,25 +209,45 @@ function parseQuestions(content) {
     return questions;
 }
 
+// ── Main ──
+
 function main() {
-    const inputPath = path.join(__dirname, '..', 'drill copy.txt');
+    const origPath = path.join(__dirname, '..', 'drill copy.txt');
+    const newPath = path.join(__dirname, '..', 'nowe_pytania_isi.txt');
     const outputPath = path.join(__dirname, '..', 'data', 'questions.json');
 
-    console.log('Reading questions from:', inputPath);
-    const content = fs.readFileSync(inputPath, 'utf-8');
+    let allQuestions = [];
 
-    const questions = parseQuestions(content);
-    console.log(`Parsed ${questions.length} questions`);
+    // Parse original file (IDs stay as-is: 1-233)
+    if (fs.existsSync(origPath)) {
+        console.log('Parsing:', origPath);
+        const origContent = fs.readFileSync(origPath, 'utf-8');
+        const origQuestions = parseQuestions(origContent, 0);
+        console.log(`  -> ${origQuestions.length} questions (IDs 1-233)`);
+        allQuestions.push(...origQuestions);
+    }
 
+    // Parse new file (IDs offset by 1000: 1001-1356)
+    if (fs.existsSync(newPath)) {
+        console.log('Parsing:', newPath);
+        const newContent = fs.readFileSync(newPath, 'utf-8');
+        const newQuestions = parseQuestions(newContent, 1000);
+        console.log(`  -> ${newQuestions.length} questions (IDs 1001-1356)`);
+        allQuestions.push(...newQuestions);
+    }
+
+    console.log(`\nTotal: ${allQuestions.length} questions`);
+
+    // Stats
     const stats = {
-        total: questions.length,
+        total: allQuestions.length,
         byTopic: {},
         bySemester: {},
-        multipleChoice: questions.filter(q => q.multipleCorrect).length,
-        singleChoice: questions.filter(q => !q.multipleCorrect).length
+        multipleChoice: allQuestions.filter(q => q.multipleCorrect).length,
+        singleChoice: allQuestions.filter(q => !q.multipleCorrect).length
     };
 
-    questions.forEach(q => {
+    allQuestions.forEach(q => {
         stats.byTopic[q.topic] = (stats.byTopic[q.topic] || 0) + 1;
         if (q.semester) {
             stats.bySemester[q.semester] = (stats.bySemester[q.semester] || 0) + 1;
@@ -194,21 +257,20 @@ function main() {
     const output = {
         metadata: {
             generatedAt: new Date().toISOString(),
-            sourceFile: 'drill copy.txt',
-            totalAvailable: 233,
-            missingIds: '20-33 (not in source file)',
-            stats: stats
+            sources: ['drill copy.txt (IDs 1-233)', 'nowe_pytania_isi.txt (IDs 1001-1356)'],
+            stats
         },
-        questions: questions
+        questions: allQuestions
     };
 
     fs.writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf-8');
-    console.log('Questions saved to:', outputPath);
-    console.log('Statistics:', JSON.stringify(stats, null, 2));
+    console.log('\nSaved to:', outputPath);
+    console.log('Topics:', JSON.stringify(stats.byTopic, null, 2));
+    console.log('Semesters:', JSON.stringify(stats.bySemester, null, 2));
 }
 
 if (require.main === module) {
     main();
 }
 
-module.exports = { parseQuestions, getTopic, getSemester };
+module.exports = { parseQuestions, getTopicForId, getSemesterForId };

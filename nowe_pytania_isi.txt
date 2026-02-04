@@ -1,0 +1,3536 @@
+[#1] (#1) Które z poniższych twierdzeń jest prawdziwe dotyczące złożoności Quicksort?
+a) Pesymistyczna złożoność obliczeniowa dla sortowania Quicksort to O(n log n)
+>>b) Pesymistyczna złożoność obliczeniowa dla sortowania Quicksort to O(n^2)
+c) Średnia złożoność obliczeniowa dla sortowania Quicksort to O(n^2)
+d) Najlepsza złożoność obliczeniowa dla sortowania Quicksort to O(n!)
+e) Quicksort jest algorytmem stabilnym
+f) Quicksort zawsze wymaga O(n) dodatkowej pamięci
+
+
+[#2] (#2) Wskaż zdania prawdziwe dotyczące algorytmu Dijkstry:
+a) Algorytm Dijkstry znajdowania najkrótszych ścieżek jest algorytmem heurystycznym o złożoności O(n2 log n).
+>>b) Algorytm Dijkstry znajduje najkrótsze ścieżki z jednego źródła w grafie o nieujemnych wagach krawędzi.
+c) Algorytm Dijkstry poprawnie obsługuje grafy z ujemnymi wagami krawędzi.
+>>d) Złożoność algorytmu Dijkstry przy użyciu kopca binarnego wynosi O(E log V).
+e) Algorytm Dijkstry służy do wyznaczania minimalnego drzewa rozpinającego.
+f) Algorytm Dijkstry jest algorytmem typu "dziel i zwyciężaj".
+
+
+[#3] (#3) Które z poniższych stwierdzeń jest prawdziwe dotyczące algorytmu DFS?
+a) Algorytm DFS służy do wyznaczania minimalnego drzewa rozpinającego dla grafu skierowanego.
+>>b) Algorytm DFS (Depth-First Search) może być wykorzystany do wykrywania cykli w grafie.
+c) Algorytm DFS zawsze znajduje najkrótszą ścieżkę w grafie nieskierowanym bez wag.
+d) Algorytm DFS wykorzystuje kolejkę FIFO jako podstawową strukturę danych.
+e) Złożoność czasowa DFS wynosi O(V^2) dla reprezentacji listowej.
+f) DFS nie pozwala na wyznaczenie czasu wejścia i wyjścia z węzła.
+
+
+[#4] (#4) Które z poniższych twierdzeń jest prawdziwe dotyczące tablic mieszających?
+>>a) Adresowanie otwarte to jedna ze strategii rozwiązywania kolizji w tablicach haszujących (tablicach mieszających).
+b) Adresowanie otwarte polega na tworzeniu listy wiązanej dla każdego indeksu tablicy.
+c) Funkcja mieszająca musi zawsze zwracać unikalną wartość dla każdego klucza (brak kolizji).
+d) Tablica mieszająca gwarantuje czas dostępu O(1) w najgorszym przypadku niezależnie od liczby kolizji.
+e) W adresowaniu otwartym współczynnik wypełnienia może być dowolnie duży.
+f) Metoda łańcuchowa jest rodzajem adresowania otwartego.
+
+
+[#5] (#5) Które stwierdzenia dotyczące notacji asymptotycznych i sortowania są prawdziwe:
+>>a) Sekwencyjny algorytm sortowania przez porównania elementów w tablicy nie może działać z mniejszą złożonością niż Ω(n log n).
+b) Sortowanie przez wstawianie ma pesymistyczną złożoność O(n log n).
+c) Notacja O(f(n)) oznacza dolne ograniczenie asymptotyczne.
+d) Każdy algorytm sortowania ma złożoność pamięciową O(1).
+>>e) Jeśli f(n) = O(g(n)), to g(n) jest asymptotycznym ograniczeniem górnym dla f(n).
+f) Algorytm o złożoności O(n^2) jest zawsze szybszy niż O(n log n) dla dużych n.
+
+
+[#6] (#6) Zadanie o rozmiarze n realizowane algorytmem o złożoności f(n) zostało sprowadzone do dwóch pod-zadań o wielkości 1/n oraz wykonania n
+operacji o stałym koszcie wykonania. Złożoność f(n) wynosi
+>>a) O(n log n)
+b) O(n)
+c) O(n^2)
+d) O(log n)
+e) O(1)
+f) O(n!)
+
+
+[#7] (#7) Do drzewa BST wstawiono losowy zestaw n wzajemnie różnych liczb. Która z odpowiedzi jest prawdziwa?
+>>a) Pesymistyczna złożoność operacji usuwania elementu w drzewie każdorazowo zależy od głębokości danego drzewa.
+b) Średnia wysokość takiego drzewa wynosi O(n).
+c) Operacja wyszukiwania w takim drzewie zawsze zajmuje O(log n) czasu w najgorszym przypadku.
+d) Drzewo BST po wstawieniu losowych elementów zawsze staje się drzewem AVL.
+e) In-order przechodzenie przez BST nie daje posortowanej sekwencji.
+f) BST zawsze gwarantuje logarytmiczny czas operacji.
+
+
+[#8] (#8) Uruchomiono operację budowania kopca dla tablicy dziesięciu elementów: 1,2,3,4,5,6,7,8,9,0. Czy prawdziwe są w odniesieniu do powstałego drzewa następujące stwierdzenia:
+a) Ze względu na wykorzystanie operacji rotacji przy wstawianiu elementów głębokość kopca będzie wynosić O(log n).
+>>b) Operacja budowania kopca (build-heap) dla n elementów ma złożoność czasową O(n).
+c) Kopiec binarny jest zawsze drzewem pełnym (wszystkie liście na tym samym poziomie).
+d) W kopcu typu max element o najmniejszej wartości zawsze znajduje się w korzeniu.
+e) Kopiec binarny nie może być reprezentowany w tablicy.
+f) Budowanie kopca metodą kolejnych wstawiań ma złożoność O(n).
+
+
+[#9] (#9) Które stwierdzenia z poniższych są prawdziwe dotyczące algorytmów sortowania?
+a) Sortowanie przez zliczanie (ang. Counting Sort) ma lepszą złożoność obliczeniową niż sortowanie szybkie (ang. QuickSort) dla dowolnych danych wejściowych.
+>>b) Sortowanie przez zliczanie ma złożoność O(n + k), gdzie k to zakres wartości, co może być lepsze od O(n log n) dla małych k.
+c) QuickSort jest algorytmem stabilnym.
+d) MergeSort nie wymaga dodatkowej pamięci (działa w miejscu).
+>>e) Sortowanie przez zliczanie jest algorytmem stabilnym.
+f) Heapsort jest algorytmem stabilnym.
+
+
+[#10] (#10) Wskaż odpowiedzi prawdziwe dotyczące list przeskakiwania:
+>>a) Lista przeskakiwania (skip list) może być rozważana jako probabilistyczna alternatywa drzewa AVL.
+>>b) Operacje wyszukiwania, wstawiania i usuwania w liście przeskakiwania mają średnią złożoność O(log n).
+c) Lista przeskakiwania wymaga, aby dane były przechowywane w sposób nieposortowany.
+d) Każdy element w liście przeskakiwania ma zawsze taką samą liczbę wskaźników do przodu.
+e) Lista przeskakiwania gwarantuje pesymistyczny czas wyszukiwania O(log n).
+f) Skip list nie wymaga dodatkowej pamięci na wskaźniki.
+
+
+[#11] (#11) Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w
+kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 4. Podobnie, w kolejnym rzędzie utworzono
+węzły od 8 do 15.
+a) 15, 1, 2, 3 ,4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15
+>>b) 15, 7, 3, 1, 2, 4, 8, 9, 5, 10, 11, 6, 12, 13, 14
+c) 1, 2, 4, 8, 9, 5, 10, 11, 3, 6, 12, 13, 7, 14, 15
+d) 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+e) 15, 7, 14, 3, 6, 12, 13, 1, 2, 4, 8, 9, 5, 10, 11
+f) 1, 3, 7, 15, 14, 6, 13, 12, 2, 5, 11, 10, 4, 9, 8
+
+
+[#12] (#12) Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w
+kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 4. Podobnie, w kolejnym rzędzie utworzono
+węzły od 8 do 15. Określ prawdziwość następujacych stwierdzeń:
+a) 15, 7, 3, 1, 14 , 6 ,1, 30, 13, 4, 5, 8, 9, 10, 11
+>>b) Kolejność In-order dla pełnego drzewa binarnego wypełnionego poziomami od 1 do 15 to: 8, 4, 9, 2, 10, 5, 11, 1, 12, 6, 13, 3, 14, 7, 15
+c) Węzeł 1 jest ostatnim węzłem w przejściu In-order.
+d) Węzeł 15 jest korzeniem tego drzewa.
+e) Przejście In-order dla tego drzewa daje liczby w kolejności rosnącej.
+f) Węzeł 8 jest korzeniem lewego poddrzewa.
+
+
+[#13] (#13) Rachunek predykatów:
+a) nie zawiera żadnych aksjomatów dla kwantyfikatorów.
+>>b) zawiera reguły wnioskowania i aksjomaty dotyczące kwantyfikatorów ogólnego i egzystencjalnego.
+c) jest tożsamy z klasycznym rachunkiem zdań.
+d) nie pozwala na używanie symboli relacyjnych.
+>>e) rozszerza rachunek zdań o kwantyfikatory i symbole relacyjne/funkcyjne.
+f) jest rozstrzygalny w sensie ogólnym.
+
+
+[#14] (#14) Prawo transpozycji (p -> q) <=> (~q -> ~p):
+>>a) Pozwala przyjąć, że prawdziwość zdania: "Jeśli Kopernik nie urodził się w Krakowie, to Kepler nie urodził się w Toruniu" pociąga prawdziwość zdania: "jeśli Kepler urodził się w Toruniu, to Kopernik urodził się w Krakowie".
+b) Orzeka, że z fałszywości implikacji wynika prawdziwość jej następnika.
+c) Jest podstawą dowodów wprost w matematyce.
+d) Mówi, że koniunkcja jest przemienna.
+e) Głosi, że z p -> q wynika ~p -> ~q.
+f) Dotyczy wyłącznie kwantyfikatorów ogólnych.
+
+
+[#15] (#15) Teorią w sensie logicznym w ustalonym języku L nazywamy:
+a) zbiór wszystkich konsekwencji logicznych zbioru zdań mających swój dowód w tej teorii.
+>>b) zbiór zdań zamknięty ze względu na operację konsekwencji.
+c) dowolny zbiór formuł otwartych.
+d) zbiór wszystkich tautologii danego języka.
+e) zbiór aksjomatów, które nie są ze sobą spójne.
+f) dowolny zbiór słów nad alfabetem L.
+
+
+[#16] (#16) Model dla teorii rachunku predykatów:
+a) Musi zawierać symbole funkcyjne, interpretujące w modelu zmienne języka tej teorii.
+>>b) Składa się z niepustej dziedziny oraz interpretacji symboli predykatywnych, funkcyjnych i stałych.
+c) Jest zawsze skończony.
+d) Nie zależy od języka teorii.
+e) Jest zbiorem wszystkich zdań prawdziwych w danej teorii.
+f) Może mieć pustą dziedzinę (uniwersum).
+
+
+[#17] (#17) Twierdzenie o pełności dla klasycznego rachunku zdań orzeka, że:
+a) Każde zdanie klasycznego rachunku zdań jest formułą (w jego języku), lecz nie każda formuła jest zdaniem.
+>>b) Każda tautologia jest dowodliwa w systemie aksjomatycznym.
+c) System logiczny jest niespójny.
+d) Każdy model jest skończony.
+e) Każdy zbiór zdań sprzecznych posiada model.
+f) Rachunek zdań jest niezupełny.
+
+
+[#18] (#18) W języku rachunku predykatów wyróżnić możemy:
+a) wyłącznie termy, bez żadnych typów formuł.
+>>b) termy, formuły atomowe oraz formuły złożone (z użyciem spójników i kwantyfikatorów).
+c) tylko stałe i zmienne, bez predykatów.
+d) wyłącznie kwantyfikatory.
+e) tylko zdania, bez formuł otwartych.
+f) wyłącznie symbole relacyjne.
+
+
+[#19] (#19) Zdanie "Jeśli Słowacki wielkim poetą był, to jeśli przez Kraków przepływa Nil, to Słowacki wielkim poetą był" (schemat p -> (q -> p)) jest:
+a) nie da się ocenić bez znajomości jego modelu
+>>b) tautologią klasycznego rachunku zdań.
+c) zdaniem zawsze fałszywym (kontrtautologią).
+d) zdaniem spełnialnym, ale nie będącym tautologią.
+e) zdaniem przygodnym.
+f) zdaniem fałszywym w modelu standardowym.
+
+
+[#20] (#20) Tautologia rachunku predykatów to:
+>>a) formuła prawdziwa w każdym modelu (przy każdej interpretacji).
+b) formuła prawdziwa w przynajmniej jednym modelu.
+c) formuła, która nie zawiera kwantyfikatorów.
+d) zdanie, które jest prawdziwe w modelu standardowym liczb naturalnych.
+e) formuła, która posiada dowód w arytmetyce Peano.
+f) zdanie, które jest fałszywe w przynajmniej jednym modelu.
+
+
+[#21] (#21) Logika pierwszego rzędu to:
+a) logika bez żadnych kwantyfikatorów
+>>b) logika dopuszczająca kwantyfikowanie wyłącznie po zmiennych obiektowych (indywiduach).
+c) logika dopuszczająca kwantyfikowanie po zbiorach i relacjach.
+d) system logiczny, w którym nie istnieją zmienne.
+e) logika, w której nie można definiować relacji.
+f) logika, w której każdy model jest skończony.
+
+
+[#22] (#22) Kwantyfikatory "istnieje takie x, że" oraz "dla każdego x, takiego, że":
+>>a) mają swoje semantyczne interpretacje w modelach dla języka, w którym występują.
+b) są spójnikami logicznymi o argumentach zdaniowych.
+c) nie mogą występować w jednej formule jednocześnie.
+d) odnoszą się wyłącznie do zbiorów skończonych.
+e) są definiowane wyłącznie przez reguły syntaktyczne.
+f) nie podlegają negacji.
+
+
+[#23] (#23) Funkcja interpretacji semantycznej, określonej dla języka rachunku predykatów:
+>>a) interpretuje predykaty jako relacje w dziedzinie modelu.
+b) przypisuje każdemu zdaniu wartość "prawda" niezależnie od modelu.
+c) interpretuje zmienne wolne jako kwantyfikatory ogólne.
+d) służy wyłącznie do upraszczania formuł.
+>>e) interpretuje symbole funkcyjne jako funkcje w dziedzinie modelu.
+f) przypisuje każdemu termowi wartość logiczną.
+
+
+[#24] (#24) Twierdzenie o dedukcji:
+>>a) pozwala przenieść przesłanki do treści implikacji we wniosku (jeśli ze zbioru G i zdania A wynika B, to z G wynika A -> B).
+b) pozwala przenieść przesłanki do zbioru wniosków.
+c) mówi, że każda teoria jest rozstrzygalna.
+d) dotyczy wyłącznie rachunku predykatów z identycznością.
+e) orzeka o pełności systemu logicznego.
+f) mówi, że z A wynika B wtedy i tylko wtedy, gdy A jest fałszywe.
+
+
+[#25] (#25) Każda permutacja zbioru skończonego:
+a) może być w sposób jednoznaczny rozłożona na niekoniecznie rozłączne transpozycje.
+>>b) może być rozłożona na iloczyn rozłącznych cykli w sposób jednoznaczny (z dokładnością do kolejności czynników).
+c) jest zawsze transpozycją.
+d) nie może być przedstawiona jako złożenie cykli.
+e) ma zawsze parzystą liczbę inwersji.
+f) jest cyklem o długości n.
+
+
+[#26] (#26) W grafie właściwym nieskierowanym:
+a) najniższy stopień węzła może być mniejszy od spójności krawędziowej.
+>>b) spójność krawędziowa jest zawsze mniejsza lub równa minimalnemu stopniowi wierzchołka (lambda(G) <= delta(G)).
+c) liczba wierzchołków o stopniu nieparzystym musi być nieparzysta.
+d) suma stopni wierzchołków jest równa liczbie krawędzi.
+e) spójność wierzchołkowa jest zawsze większa od krawędziowej.
+f) graf jest drzewem, jeśli ma n krawędzi.
+
+
+[#27] (#27) Grupa symetrii danej figury geometrycznej to grupa tych przekształceń płaszczyzny, względem których danafigura jest niezmiennicza.
+Działaniem grupowym jest składanie przekształceń.
+a) Grupa symetrii siedmiokąta foremnego jest siedmioelementowa.
+>>b) Jest grupą dihedralną D7 i posiada 14 elementów (7 obrotów i 7 symetrii osiowych).
+c) Jest grupą cykliczną Z7.
+d) Nie zawiera żadnych symetrii osiowych.
+e) Jest grupą abelową.
+f) Zawiera dokładnie 49 elementów.
+
+
+[#28] (#28) Grupą nie jest:
+a) (C[0,1], +) - zbiór wszystkich funkcji ciągłych o dziedzinie w [0,1] z dodawaniem funkcji po wartościach jako działanie grupowym.
+>>b) (N, +) - zbiór liczb naturalnych z dodawaniem.
+c) (Z, +) - zbiór liczb całkowitych z dodawaniem.
+d) (R*, *) - zbiór liczb rzeczywistych bez zera z mnożeniem.
+e) (Q, +) - zbiór liczb wymiernych z dodawaniem.
+f) (Z_n, +_n) - zbiór reszt z dzielenia przez n z dodawaniem modulo n.
+
+
+[#29] (#29) Niech X będzie zbiorem częściowo uporządkowanym.
+a) Jeśli X jest skończony, to element maksymalny jest równocześnie elementem największym.
+>>b) Jeśli X ma element największy, to jest on jedynym elementem maksymalnym.
+c) Każdy zbiór częściowo uporządkowany ma element najmniejszy.
+d) Relacja częściowego porządku jest zwrotna, symetryczna i przechodnia.
+e) Każdy podzbiór X ma kres górny.
+f) Element minimalny jest zawsze elementem najmniejszym.
+
+
+[#30] (#30) Kostką Qn nazywamy graf, którego wierzchołki są zaetykietowane wszystkimi możliwymi zerojedynkowymi
+ciągami n−elementowymi a krawędzie łączą te wierzchołki, których etykiety różnią się dokładnie na jednym
+miejscu.
+>>a) Kostka Q3 ma 8 wierzchołków i 12 krawędzi.
+b) Kostka Qn ma n wierzchołków.
+c) Kostka Qn jest grafem pełnym.
+d) Każdy wierzchołek w Qn ma stopień 2^n.
+e) Kostka Qn jest grafem planarnym dla każdego n.
+f) Kostka Qn nie jest grafem dwudzielnym.
+
+
+[#31] (#31) Liczba chromatyczna grafu to minimalna liczba kolorów, jakimi można pokolorować wierzchołki grafu tak,
+aby żadne dwa wierzchołki połączone krawędzią nie były tego samego koloru.
+>>a) 2
+b) 3
+c) 4
+d) 8
+e) 1
+f) 5
+
+
+[#32] (#32) Każdy zbiór częściowo uporządkowany:
+a) ma element maksymalny.
+>>b) może nie posiadać elementów maksymalnych ani minimalnych (np. zbiór liczb całkowitych z relacją <=).
+c) jest zawsze liniowo uporządkowany.
+d) musi być skończony.
+e) ma dokładnie jeden element najmniejszy.
+f) jest gęsty.
+
+
+[#33] (#33) Wskaż zdania prawdziwe dotyczące porządków:
+a) Zbiór liczb całkowitych z relacją arytmetyczną ”mniejsze lub równe” jest dobrze uporządkowany.
+>>b) Zbiór liczb naturalnych z relacją ”mniejsze lub równe” jest dobrze uporządkowany.
+c) Każdy porządek liniowy jest dobrym porządkiem.
+d) Relacja inkluzji podzbiorów jest zawsze porządkiem liniowym.
+e) Relacja podzielności na liczbach naturalnych jest porządkiem liniowym.
+f) Zbiór liczb rzeczywistych z relacją <= jest dobrze uporządkowany.
+
+
+[#34] (#34) Jeśli X jest zbiorem n−elementowym i Y jest zbiorem m-elementowym, n > 0, m > 0, to
+>>a) liczność rodziny wszystkich podzbiorów zbioru X (zbioru potęgowego) jest równa 2^n.
+b) liczba wszystkich permutacji zbioru X wynosi n^2.
+c) liczba k-elementowych podzbiorów zbioru X wynosi n! / k!.
+d) liczba relacji zwrotnych na zbiorze X wynosi 2^n.
+e) liczba wszystkich relacji na zbiorze X wynosi n^n.
+f) liczba wszystkich funkcji ze zbioru X w X wynosi n!.
+
+
+[#35] (#35) Niech Pn oznacza zbiór permutacji n-elementowych. W P3:
+>>a) istnieją dokładnie 2 permutacje cykliczne o długości 3.
+b) istnieje 6 permutacji cyklicznych.
+c) każda permutacja jest cyklem.
+d) nie istnieje permutacja identycznościowa.
+e) liczba wszystkich permutacji wynosi 9.
+f) każda permutacja jest parzysta.
+
+
+[#36] (#36) Niech X będzie zbiorem n-elementowym (n > 2) i R będzie relacją równoważności na X.
+a) Liczba klas równoważności musi być podzielnikiem liczby n.
+>>b) Klasy równoważności tworzą partycję (podział) zbioru X.
+c) Każda klasa równoważności musi mieć tyle samo elementów.
+d) Relacja równoważności nie musi być przechodnia.
+e) Liczba relacji równoważności na X jest równa 2^n.
+f) Suma wszystkich klas równoważności jest zbiorem pustym.
+
+
+[#37] (#37) Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754).
+Dodatnie liczby rzeczywiste z zakresu od 𝑉 𝐴𝐿𝑀𝐼𝑁 = 2.2 ⋅ 10−308 do 𝑉 𝐴𝐿𝑀𝐴𝑋 = 1.8 ⋅ 10308 są zapisywane w formacie podwójnej precyzji z
+względnym błędem zaokrąglenia nie większym od 𝜀 = 2−52 ≈ 2.2 ⋅ 10−16 .
+
+Które zdania są prawdziwe?
+a) Wszystkie liczby wymierne, poza całkowitymi, są reprezentowane z niezerowym błędem zaokrąglenia.
+>>b) Liczby wymierne, których rozwinięcie w bazie 2 jest nieskończone (np. 0.1), są reprezentowane z błędem zaokrąglenia.
+c) Błąd względny reprezentacji jest stały dla wszystkich liczb.
+d) Liczba 0.1 jest reprezentowana dokładnie.
+e) Mantysa ma długość 64 bitów.
+f) Wykładnik jest zapisywany w kodzie uzupełnień do dwóch (U2).
+
+
+[#38] (#38) Niech 𝑎, 𝑏, 𝑐 będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową 𝜀.
+Liczba 𝑐 jest wynikiem operacji arytmetycznej ∘ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym.
+Niech 𝛿𝑐 oznacza błąd względny wyniku operacji 𝑐 = 𝑎 ∘ 𝑏. (dokładniej: jego wartość bezwzględną).
+W których przypadkach błąd wyniku 𝛿𝑐 może być wielokrotnie (kilka rzędów) większy od błędów argumentów 𝑎 i 𝑏 , czyli 𝛿𝑐 ≫ 2𝜀
+a) w przypadku dzielenia liczby różnej od zera przez liczbę różną od zera.
+>>b) w przypadku odejmowania dwóch liczb o bardzo zbliżonych wartościach.
+c) w przypadku mnożenia dwóch bardzo dużych liczb.
+d) w przypadku dodawania liczby bardzo małej do bardzo dużej.
+e) w przypadku wyznaczania pierwiastka kwadratowego.
+f) w przypadku podnoszenia do kwadratu.
+
+
+[#39] (#39) Obliczanie pierwiastków ciągłej funkcji 𝑓 jednej zmiennej rzeczywistej 𝑥 metodami iteracyjnymi.
+Wartości funkcji dla pierwszych dwóch wartości wyrazów ciągu iteracyjnego 𝑥0 i 𝑥1 spełniają nierówność 𝑓(𝑥0 )𝑓(𝑥1 ) < 0.
+Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę
+a) siecznych
+>>b) bisekcji (połowienia przedziału).
+c) Newtona (stycznych).
+d) iteracji prostych.
+e) odwrotnej interpolacji kwadratowej.
+f) żadna z powyższych.
+
+
+[#40] (#40) Należy rozwiązać układ równań liniowych 𝐴𝑥 = 𝑏 z dowolną rzeczywistą, nieosobliwą macierzą 𝐴 𝑛×𝑛, 𝑛 ≫ 1.
+Złożoność obliczeniowa algorytmu obliczenia rozwiązania jest mniejsza (w stosunku do metody eliminacyjnej Gaussa), jeżeli macierz 𝐴 jest
+zadana w postaci:
+Zaznacz zdania prawdziwe.
+>>a) macierz A jest już rozłożona na iloczyn A = LU.
+b) macierz A jest pełna i niesymetryczna.
+c) macierz A ma wymiar 10x10.
+d) stosujemy metodę Cramera dla dużych n.
+e) macierz A jest macierzą osobliwą.
+f) macierz A jest macierzą Hilberta.
+
+
+[#41] (#41) Rozkład według wartości szczególnych (SVD):
+a) jest możliwy tylko dla macierzy kwadratowej.
+>>b) jest możliwy dla dowolnej macierzy prostokątnej m x n.
+c) wymaga, aby macierz była dodatnio określona.
+d) nie pozwala na wyznaczenie rzędu macierzy.
+e) macierze U i V w rozkładzie są macierzami trójkątnymi.
+f) wartości osobliwe są zawsze ujemne.
+
+
+[#42] (#42) Które zdania są prawdziwe dotyczące eliminacji Gaussa?
+>>a) Wybór elementu głównego (pivoting) jest stosowany w celu poprawy stabilności numerycznej algorytmu.
+>>b) Wybór elementu głównego jest realizowany n - 1 razy w algorytmie eliminacyjnym Gaussa.
+c) Eliminacja Gaussa bez wyboru elementu głównego jest zawsze stabilna.
+d) Złożoność czasowa eliminacji Gaussa wynosi O(n^2).
+e) Eliminacja Gaussa służy do wyznaczania wartości własnych.
+f) Macierz po eliminacji Gaussa jest macierzą diagonalną.
+
+
+[#43] (#43) Które zdanie jest prawdziwe dotyczące wyznaczania wartości własnych?
+a) Aby wyznaczyć n wartości własnych dowolnej macierzy kwadratowej A n×n nie stosuje się metod iteracyjnych.
+>>b) Dla macierzy o stopniu n > 4 nie istnieją ogólne algorytmy skończone (algebraiczne) wyznaczające wartości własne (wynika to z twierdzenia Abla).
+c) Wartości własne macierzy trójkątnej nie leżą na jej przekątnej.
+d) Każda macierz kwadratowa ma wyłącznie rzeczywiste wartości własne.
+e) Metoda potęgowa znajduje wszystkie wartości własne jednocześnie.
+f) Wartości własne macierzy A i A^T są zawsze różne.
+
+
+[#44] (#44) Które zdania są prawdziwe dotyczące rozkładu SVD (A = UΣV^T)?
+>>a) Rozkład SVD jest wykorzystywany w kompresji obrazów poprzez ucinanie najmniejszych wartości osobliwych.
+b) Macierz Σ jest macierzą ortogonalną.
+c) Macierze U i V są macierzami diagonalnymi.
+d) Wartości osobliwe na przekątnej Σ mogą być ujemne.
+>>e) Macierze U i V są macierzami ortogonalnymi.
+f) SVD nie pozwala na obliczenie macierzy pseudoodwrotnej.
+
+
+[#45] (#45) Szukanie minimum funkcji wielu zmiennych.
+Przyjmijmy, że funkcja, której minimum należy znaleźć, jest ,,funkcją kwadratową'', a dokładniej - ma postać formy kwadratowej
+𝐹 (𝑥) = 𝑥𝑇 𝐴𝑥 + 𝑏𝑇 𝑥 + 𝑐 , 𝑥 ∈ ℝ 𝑛 i macierz A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła,.
+𝑘 - liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja 𝐹 ma minimum.
+Które zdania są prawdziwe?
+a) Dla bezgradientowej metody Neldera-Meada: k < n.
+>>b) Metoda sprzężonych gradientów znajduje minimum takiej funkcji w co najwyżej n iteracjach (w arytmetyce dokładnej).
+c) Metoda najszybszego spadku zawsze zbiega w jednej iteracji.
+d) Metoda Newtona wymaga obliczania tylko pierwszej pochodnej.
+e) Minimum funkcji kwadratowej nie istnieje, jeśli A jest dodatnio określona.
+f) Metoda Newtona dla funkcji kwadratowej zbiega w n iteracjach.
+
+
+[#46] (#46) Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares)
+Dane:
+20 pomiarów położenia 𝑠 𝑖 pojazdu w ruchu prostoliniowym w chwilach 𝑡𝑖 , 𝑖 = 1, 2, … , 20.
+Funkcja aproksymująca zależności położenia od czasu:
+𝑠(𝑡) = 𝑎0 + 𝑎1 𝑡 + 𝑎2 𝑡2 .
+Które zdania są prawdziwe?
+a) Podany przykład nie jest odpowiedni dla liniowego zadania najmniejszych kwadratów, bo funkcja aproksymująca jest funkcją kwadratową.
+>>b) Jest to liniowe zadanie najmniejszych kwadratów, ponieważ funkcja jest liniowa względem parametrów a0, a1, a2.
+c) Wymaga rozwiązania układu równań nieliniowych.
+d) Można ją stosować tylko dla 2 pomiarów.
+e) Parametry a0, a1, a2 muszą być liczbami całkowitymi.
+f) Błąd aproksymacji w każdym punkcie musi wynosić zero.
+
+
+[#47] (#47) Metoda ilorazów różnicowych.
+Zależność błędu przybliżania wartości pochodnej funkcji analitycznej 𝑓 w punkcie 𝑥, 𝑥 ∈ 𝑅 metodą ilorazów różnicowych według formuły
+dwupunktowej od kroku ℎ można zapisać wzorem
+
+                          − 𝑓 ′ (𝑥)∣∣ .
+            𝑓(𝑥+ℎ)−𝑓(𝑥)
+𝜀(ℎ) = ∣∣ ℎ
+>>a) W algorytmie obliczania przybliżenia wartości pochodnej metodą ilorazów z urojonym krokiem ih nie występuje odejmowanie bliskich wartości, co eliminuje błąd kasowania.
+b) Metoda ilorazów różnicowych jest zawsze dokładniejsza od różniczkowania automatycznego.
+c) Krok h powinien być jak największy, aby zminimalizować błąd metody.
+d) Metoda ta wymaga znajomości drugiej pochodnej.
+>>e) Różniczkowanie z urojonym krokiem wymaga użycia liczb zespolonych.
+f) Metoda ilorazów różnicowych wstecz jest zawsze rzędu O(h^2).
+
+
+[#48] (#48) Różniczkowanie automatyczne:
+a) Metodę różniczkowania automatycznego można stosować tylko dla funkcji jednej zmiennej.
+>>b) Pozwala na obliczanie wartości pochodnych z dokładnością maszynową, wykorzystując regułę łańcuchową.
+c) Polega na symbolicznym wyznaczaniu wzoru pochodnej.
+d) Jest znacznie wolniejsze od metod ilorazów różnicowych dla funkcji wielu zmiennych.
+e) Wymaga numerycznego całkowania funkcji.
+f) Nie pozwala na obliczanie gradientów.
+
+
+[#49] (#49) Zaznacz zdanie prawdziwe dotyczące rozkładu QR:
+a) Rozkład danej macierzy A na iloczyn QR jest jednoznaczny.
+>>b) Rozkład QR jest jednoznaczny, jeśli macierz A jest pełnego rzędu kolumnowego, a elementy na przekątnej macierzy R są dodatnie.
+c) Metoda Grama-Schmidta jest najbardziej stabilną numerycznie metodą wyznaczania rozkładu QR.
+d) Macierz Q w rozkładzie QR jest macierzą trójkątną.
+e) Rozkład QR nie może być stosowany do rozwiązywania zadań najmniejszych kwadratów.
+f) Macierz R jest macierzą ortogonalną.
+
+
+[#50] (#50) Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną 𝑚 = 𝑎0 + 𝑎1 ℎ . Warunki
+zgodności danych z funkcją aproksymującą zapiszemy jako
+>>a) Prowadzi do rozwiązania układu nadwyznaczonego (100 równań z 2 niewiadomymi) w sensie najmniejszych kwadratów.
+b) Wymaga odwrócenia macierzy 100x100.
+c) Zawsze daje rozwiązanie przechodzące przez wszystkie punkty pomiarowe.
+d) Nie można jej stosować, gdy pomiary są obarczone błędem.
+e) Funkcja błędu jest funkcją liniową.
+>>f) Rozwiązanie zawsze istnieje i jest jednoznaczne, jeśli macierz układu ma pełny rząd.
+
+
+[#51] (#51) Które z poniższych zdań jest jednym z aksjomatów prawdopodobieństwa Kołmogorowa dla przestrzeni probabilistycznej (Ω, , 𝑃) :
+>>a) P(A) >= 0 dla każdego zdarzenia A.
+b) P(A) <= 0.5 dla każdego zdarzenia A.
+c) P(Omega) = 0.
+d) P(A u B) = P(A) + P(B) dla dowolnych zdarzeń A, B.
+>>e) P(Omega) = 1.
+f) P(A) + P(A') = 1 (to jest wniosek, ale często mylony z aksjomatem).
+
+
+[#52] (#52) W statystyce populacją nazywamy:
+a) zbiór wszystkich możliwych cech pewnego wybranego parametru.
+>>b) zbiór wszystkich elementów, o których chcemy wyciągnąć wnioski.
+c) podzbiór elementów wybrany do badania.
+d) średnią wartość z próby.
+e) zbiór wszystkich wyników pomiarów w próbie.
+f) wyłącznie grupę ludzi w danym regionie.
+
+
+[#53] (#53) W statystyce estymatorem nazywamy:
+>>a) dowolną statystykę (funkcję z próby) służącą do oszacowania nieznanego parametru populacji.
+b) błąd pomiarowy.
+c) wartość parametru w całej populacji.
+d) liczbę elementów w próbie.
+e) hipotezę zerową.
+f) poziom istotności testu.
+
+
+[#54] (#54) W statystyce błędem pierwszego rodzaju nazywamy:
+a) przyjęcie hipotezy alternatywnej przy niskiej wielkości efektu.
+>>b) odrzucenie hipotezy zerowej, mimo że jest ona prawdziwa.
+c) nieodrzucenie hipotezy zerowej, mimo że jest ona fałszywa.
+d) błąd wynikający z małej liczebności próby.
+e) błąd gruby pomiaru.
+f) błąd zaokrąglenia w obliczeniach statystycznych.
+
+
+[#55] (#55) Liczbę wszystkich różnych k-elementowych ciągów (wariacji z powtórzeniami) utworzonych ze zbioru n-elementowego liczymy wzorem:
+>>a) n^k
+b) n! / (n-k)!
+c) symbol Newtona (n nad k)
+d) k^n
+e) n! / k!
+f) 2^n
+
+
+[#56] (#56) W rachunku prawdopodobieństwa wzór na prawdopodobieństwo całkowite:
+a) jak znaleźć wartość graniczną prawdopodobieństwa sumy przeliczalnej rodziny wstępującej zbiorów.
+>>b) pozwala obliczyć prawdopodobieństwo zdarzenia poprzez sumowanie prawdopodobieństw warunkowych względem zupełnego układu zdarzeń.
+c) dotyczy wyłącznie zdarzeń niezależnych.
+d) służy do obliczania prawdopodobieństwa a posteriori (wzór Bayesa).
+e) wymaga, aby zdarzenia warunkujące miały prawdopodobieństwo 1.
+f) mówi, że P(A|B) = P(B|A).
+
+
+[#57] (#57) W rachunku prawdopodobieństwa zdarzenia niezależne od każdego innego zdarzenia:
+a) istnieją, ale mogą być tylko zbiorem pustym, albo całą przestrzenią.
+>>b) to zdarzenia o prawdopodobieństwie 0 lub 1.
+c) nie istnieją w żadnej przestrzeni probabilistycznej.
+d) to wszystkie zdarzenia w przestrzeni dyskretnej.
+e) to zdarzenia, których suma wynosi 1.
+f) to zdarzenia rozłączne.
+
+
+[#58] (#58) Sigma-ciałem zbiorów borelowskich na R nazywamy:
+>>a) najmniejsze sigma-ciało na R które zawiera wszystkie zbiory otwarte (lub przedziały postaci (-inf, a]).
+b) zbiór wszystkich podzbiorów R.
+c) zbiór wszystkich liczb wymiernych.
+d) zbiór przedziałów domkniętych.
+e) zbiór wszystkich funkcji ciągłych.
+f) zbiór wszystkich punktów na prostej.
+
+
+[#59] (#59) Zmienną losową X : Omega -> R nazywamy funkcję, dla której:
+>>a) przeciwobraz dowolnego przedziału (-inf, a] dla a w R jest zdarzeniem (należy do sigma-ciała).
+b) obraz każdego zdarzenia jest liczbą dodatnią.
+c) dziedzina jest zbiorem liczb rzeczywistych.
+d) wartości są zawsze całkowite.
+e) funkcja jest zawsze rosnąca.
+f) funkcja jest bijekcją.
+
+
+[#60] (#60) Które z podanych własności są własnościami każdej dystrybuanty FX zmiennej losowej X:
+a) FX jest ściśle rosnąca.
+>>b) FX jest niemalejąca i prawostronnie ciągła.
+c) FX(x) dąży do 1 gdy x dąży do minus nieskończoności.
+d) FX jest zawsze funkcją ciągłą.
+>>e) Granica FX(x) przy x dążącym do plus nieskończoności wynosi 1.
+f) FX(x) może przyjmować wartości ujemne.
+
+
+[#61] (#61) Wariancja zmiennej losowej służy do:
+a) wyznaczania skośności dystrybucji zmiennej losowej.
+>>b) określenia stopnia rozproszenia wartości zmiennej losowej wokół jej wartości oczekiwanej.
+c) obliczania najbardziej prawdopodobnej wartości.
+d) wyznaczania mediany.
+e) określenia kierunku zależności między dwiema zmiennymi.
+f) obliczania wartości średniej.
+
+
+[#62] (#62) Jeżeli dwie zmienne losowe X i Y są niezależne, to:
+a) rozkład ich sumy jest sumą ich rozkładów.
+>>b) wariancja ich sumy jest sumą ich wariancji (Var(X+Y) = Var(X) + Var(Y)).
+c) ich korelacja wynosi 1.
+d) ich wartości oczekiwane muszą być równe 0.
+>>e) ich kowariancja wynosi 0.
+f) P(X|Y) = P(Y).
+
+
+[#63] (#63) Dany jest graf G utworzony z n-wierzchołkowej kliki (n>5), poprzez usunięcie 3 krawędzi. Wskaż zdania prawdziwe:
+a) G jest eulerowski dla n nieparzystych.
+>>b) Jeśli usunięte krawędzie tworzą cykl C3, to stopnie wszystkich wierzchołków pozostają parzyste (dla n nieparzystego), więc graf jest eulerowski.
+c) Graf po usunięciu krawędzi zawsze przestaje być spójny.
+d) Liczba krawędzi w takim grafie wynosi n(n-1)/2.
+e) Graf G jest zawsze planarny.
+f) G nie posiada cyklu Hamiltona.
+
+
+[#64] (#64) Czy graf cyklu C5 jest grafem dwudzielnym?
+a) Nie, ponieważ nie jest eulerowski.
+>>b) Nie, ponieważ zawiera cykl o nieparzystej długości.
+c) Tak, ponieważ każdy graf płaski jest dwudzielny.
+d) Tak, ponieważ ma 5 wierzchołków.
+e) Tak, bo można go pokolorować 2 kolorami.
+f) Nie, bo jego liczba chromatyczna wynosi 3.
+
+
+[#65] (#65) Dany jest graf G o sześciu wierzchołkach i stopniach: 2, 2, 3, 4, 4, 5. Czy G może być grafem planarnym?
+a) Nie.
+>>b) Tak. Przykład konstrukcji: wierzchołek stopnia 5 łączymy ze wszystkimi pozostałymi, a między pozostałymi 5 wierzchołkami dodajemy krawędzie tak, by stopnie wyniosły 4,4,3,2,2 (np. resztowe stopnie 3,3,2,1,1).
+c) Nie, ponieważ zawiera wierzchołek o stopniu 5.
+d) Tak, każdy graf o 6 wierzchołkach jest planarny.
+e) Nie, bo zawiera podgraf izomorficzny z K3,3.
+f) Tak, bo suma stopni jest parzysta.
+
+
+[#66] (#66) Dany jest wielościan wypukły o 11 wierzchołkach, w którym 7 ścian to trójkąty, a 4 to czworokąty. Korzystając ze wzoru Eulera (V-E+F=2), określ rodzaj ostatniej (12-stej) ściany:
+a) czworokątem.
+>>b) trójkątem.
+c) pięciokątem.
+d) sześciokątem.
+e) siedmiokątem.
+f) nie da się określić.
+
+
+[#67] (#67) Graf G został zbudowany z grafów Hamiltona, G1=(V1,E1) i G2=(V2,E2), w następujący sposób. Z V1 wybrano podzbiór W1 (W1 różne od V1)
+wierzchołków, stanowiących kolejne węzły cyklu Hamiltona w G1, oraz z V2 podzbiór W2 (W2 różne od V2) wierzchołków, stanowiących kolejne
+węzły cyklu Hamiltona w G2, a następnie połączono węzły W1 i W2 dodatkowymi krawędziami, tak że każdy węzeł W1 jest sąsiedni z każdym
+węzłem W2. Wskaż zdania prawdziwe:
+a) G jest grafem Hamiltona dla |W1| + |W2| > 3.
+>>b) G jest grafem Hamiltona, jeśli istnieją krawędzie łączące cykle Hamiltona w G1 i G2 pozwalające na utworzenie jednego wspólnego cyklu.
+c) G nigdy nie jest grafem Hamiltona.
+d) G jest grafem pełnym.
+e) G jest zawsze dwudzielny.
+f) G nie posiada mostów.
+
+
+[#68] (#68) Indeks chromatyczny (minimalna liczba kolorów krawędzi) drzewa o maksymalnym stopniu wierzchołka Delta wynosi:
+a) |V|
+>>b) Delta (maksymalny stopień wierzchołka).
+c) Delta + 1
+d) 2
+e) Delta - 1
+f) 3
+
+
+[#69] (#69) Dany jest dowolny graf spójny G=(V,E), w którym każda krawędź jest mostem. Które zdania są prawdziwe:
+>>a) G jest drzewem.
+b) G zawiera przynajmniej jeden cykl.
+c) G jest grafem pełnym.
+d) G ma więcej krawędzi niż wierzchołków.
+>>e) Liczba krawędzi E = V - 1.
+f) Graf G jest dwuspójny.
+
+
+[#70] (#70) Podać najmniejszą liczbę krawędzi, jaką należy usunąć z grafu dwudzielnego pełnego K3,3, aby uzyskać graf regularny stopnia 2:
+>>a) 3
+>>b) 3 (usuwamy krawędzie tworzące doskonałe skojarzenie).
+c) 1
+d) 6
+e) 0
+f) 9
+
+
+[#71] (#71) Dana jest klika K8. Liczba podgrafów izomorficznych z K5 (czyli liczba 5-elementowych podzbiorów wierzchołków) wynosi:
+>>a) 56 (8 po 5).
+b) 120
+c) 40
+d) 8! / 5!
+e) 28
+f) 64
+
+
+[#72] (#72) Dana jest klika K8 o wierzchołkach v1, v2,..., v8. Liczba dróg prostych w tym grafie, prowadzących z v1 do v2 i posiadających co najwyżej 3
+krawędzie, wynosi:
+>>a) 37 (długość 1: 1, długość 2: 6, długość 3: 30).
+b) 43
+c) 8
+d) 64
+e) 120
+f) 56
+
+
+[#73] (#73) Liczba dróg prostych o długości dokładnie 1, 2 lub 3 krawędzi w klice K8 wynosi:
+a) C(8,3) + C(8,2) + C(8,1)
+>>b) 1 + 6 + 30 = 37 (między parą wierzchołków).
+c) 8! / (8-k)!
+d) n^k
+e) 8*7/2
+f) 37 * (8*7/2) (dla wszystkich par).
+
+
+[#74] (#74) Dany jest graf o 21 krawędziach, 7 wierzchołkach stopnia 1, 3 stopnia 2, 7 stopnia 3 i pozostałych stopnia 4. Ile jest wierzchołków stopnia 4?
+a) Nie da się zbudować takiego grafu.
+>>b) 2 (suma stopni 7*1 + 3*2 + 7*3 + 4*x = 34 + 4x = 42 => 4x=8 => x=2).
+c) 5
+d) 0
+e) 3
+f) 4
+
+
+[#75] (#75) Język L_ne = {<M>: L(M) != pusty} koduje problem:
+>>a) Czy dla danej maszyny Turinga M, język przez nią akceptowany jest niepusty?
+b) Czy maszyna Turinga M zatrzymuje się dla słowa pustego?
+c) Czy język L(M) jest skończony?
+d) Czy maszyna M jest uniwersalna?
+e) Czy M akceptuje wszystkie słowa?
+f) Czy M jest maszyną deterministyczną?
+
+
+[#76] (#76) Język L_nr = {<M> : L(M) nie jest rekurencyjny}:
+a) Jest akceptowany przez uniwersalną MT.
+>>b) Nie jest rekurencyjnie przeliczalny (ani jego dopełnienie).
+c) Jest językiem regularnym.
+d) Jest rozstrzygalny.
+e) Jest językiem bezkontekstowym.
+f) Jest rekurencyjnie przeliczalny.
+
+
+[#77] (#77) Język L_eq = {<M> <N>: L(M) = L(N)}:
+>>a) Nie jest rozpoznawany przez żadną maszynę Turinga (nie jest rekurencyjnie przeliczalny).
+b) Jest rozstrzygalny dla dowolnych maszyn Turinga.
+c) Jest językiem bezkontekstowym.
+d) Jest akceptowany przez automat ze stosem.
+e) Jest rekurencyjny.
+f) Jest językiem regularnym.
+
+
+[#78] (#78) Problem decyzyjny „Czy dane maszyny Turinga M i N akceptują ten sam język?” jest:
+a) Rozstrzygalny.
+>>b) Nierozstrzygalny.
+c) Częściowo rozstrzygalny.
+d) Rozstrzygalny tylko dla automatów skończonych.
+e) Rozstrzygalny w czasie wielomianowym.
+f) P-zupełny.
+
+
+[#79] (#79) Twierdzenie Rice'a orzeka, że każda nietrywialna własność semantyczna języków akceptowanych przez maszyny Turinga jest:
+>>a) Nierozstrzygalna (język L = {<M>: L(M) ma własność S} nie jest rekurencyjny).
+b) Rekurencyjnie przeliczalna.
+c) Regularna.
+d) Rozstrzygalna w czasie wielomianowym.
+e) Prawdziwa dla wszystkich maszyn Turinga.
+f) Zależna od liczby stanów maszyny.
+
+
+[#80] (#80) Niech S będzie pewną własnością zbiorów rekurencyjnie przeliczalnych. Jeśli S nie jest monotoniczna to:
+a) S jest nieprzeliczalna lub pusta.
+>>b) Język L = {<M>: L(M) należy do S} nie jest rekurencyjnie przeliczalny.
+c) S jest zawsze rozstrzygalna.
+d) S zawiera wszystkie języki regularne.
+e) S jest rekurencyjna.
+f) S jest skończona.
+
+
+[#81] (#81) Funkcję Ackermana:
+a) da się przedstawić w reprezentacji Maszyny Turinga.
+>>b) jest funkcją rekurencyjną, ale nie jest prymitywnie rekurencyjna.
+c) nie jest obliczalna.
+d) ma złożoność wielomianową.
+>>e) rośnie szybciej niż jakakolwiek funkcja prymitywnie rekurencyjna.
+f) jest funkcją liniową.
+
+
+[#82] (#82) Dany jest język L_e = {w : w = <M> => L(M) = pusty}. Koduje on problem:
+>>a) Czy język akceptowany przez maszynę Turinga M jest pusty?
+b) Czy dla słowa w niebędącego kodem MT, jest ono akceptowane przez pewną MT?
+c) Czy maszyna M akceptuje wszystkie słowa?
+d) Czy M jest maszyną deterministyczną?
+e) Czy M zatrzymuje się na słowie w?
+f) Czy L(M) jest skończony?
+
+
+[#83] (#83) Język L_e = {<M> : L(M) = pusty}:
+a) Jest prymitywnie rekurencyjny.
+>>b) Nie jest rekurencyjnie przeliczalny.
+c) Jest rozstrzygalny.
+d) Jest językiem kontekstowym.
+>>e) Jego dopełnienie L_ne jest rekurencyjnie przeliczalne.
+f) Jest językiem regularnym.
+
+
+[#84] (#84) Język L_ne = {<M>: L(M) != pusty}:
+>>a) Jest rekurencyjnie przeliczalny (ale nie rekurencyjny).
+b) Jest rozstrzygalny.
+c) Nie jest akceptowany przez żadną maszynę Turinga.
+d) Jest językiem skończonym.
+e) Jest językiem regularnym.
+f) Jest rekurencyjny.
+
+
+[#85] (#85) Problem decyzyjny, czy język akceptowany przez daną maszynę Turinga jest pusty, jest:
+a) Częściowo rozstrzygalny.
+>>b) Nierozstrzygalny i nie jest nawet częściowo rozstrzygalny.
+c) Rozstrzygalny.
+d) Wielomianowy.
+e) Rozstrzygalny dla automatów ze stosem.
+f) P-zupełny.
+
+
+[#86] (#86) Problem decyzyjny, czy język akceptowany przez daną maszynę Turinga jest niepusty, jest:
+a) Nie jest nawet problemem częściowo rozstrzygalnym.
+>>b) Częściowo rozstrzygalny (można symulować M na wszystkich słowach równolegle).
+c) Rozstrzygalny.
+d) Rekurencyjny.
+e) Regularny.
+f) Rozstrzygalny w czasie wykładniczym.
+
+
+[#87] (#87) Język L_r = {<M>: L(M) jest rekurencyjny} koduje problem:
+>>a) Czy język akceptowany przez maszynę Turinga M jest rozstrzygalny?
+b) Czy dla danej maszyny Turinga M, L(M) jest rekurencyjnie przeliczalny?
+c) Czy M zatrzymuje się dla każdego wejścia?
+d) Czy M ma skończoną liczbę stanów?
+e) Czy L(M) jest językiem regularnym?
+f) Czy M jest uniwersalna?
+
+
+[#88] (#88) Język L_nr = {<M>: L(M) nie jest rekurencyjny} koduje problem:
+>>a) Czy język akceptowany przez maszynę Turinga M jest nierozstrzygalny?
+b) Czy dana maszyna Turinga M, posiada własność stopu?
+c) Czy M jest maszyną uniwersalną?
+d) Czy L(M) jest językiem regularnym?
+e) Czy M jest deterministyczna?
+f) Czy M ma nieskończoną taśmę?
+
+
+[#89] (#89) Język L_r = {<M>: L(M) jest rekurencyjny}:
+>>a) Nie jest rekurencyjny (wynika z twierdzenia Rice'a).
+b) Jest rekurencyjnie przeliczalny.
+c) Jest rozstrzygalny.
+d) Jest regularny.
+e) Jest bezkontekstowy.
+>>f) Nie jest rekurencyjnie przeliczalny.
+
+
+[#90] (#90) Jednostka arytmetyczno-logiczna ALU:
+a) musi być układem sekwencyjnym.
+>>b) jest podstawowym blokiem procesora wykonującym operacje obliczeniowe i logiczne.
+c) nie może zawierać sumatorów.
+d) służy wyłącznie do przechowywania danych.
+>>e) wykonuje operacje takie jak dodawanie, odejmowanie, AND, OR.
+f) zarządza przerwaniami sprzętowymi.
+
+
+[#91] (#91) Układ sekwencyjny:
+a) jest to układ logiczny nie pamiętający stanów poprzednich.
+>>b) to układ, w którym stan wyjść zależy od aktualnych wejść oraz od stanu poprzedniego (posiada pamięć).
+c) to inaczej układ kombinacyjny.
+d) nie wymaga sygnału zegarowego.
+>>e) przykładami są przerzutniki, liczniki, rejestry.
+f) nie posiada sprzężenia zwrotnego.
+
+
+[#92] (#92) Pamięć RAM dwuportowa:
+>>a) pozwala na jednoczesny dostęp do dwóch różnych komórek pamięci (np. odczyt i zapis).
+b) nie może być zaimplementowana w układach FPGA.
+c) jest zawsze wolniejsza od pamięci jednoportowej.
+d) służy wyłącznie do przechowywania instrukcji procesora.
+e) wymaga dwóch oddzielnych układów scalonych.
+f) nie posiada linii adresowych.
+
+
+[#93] (#93) Procesor w układzie FPGA:
+>>a) może mieć architekturę dostosowaną do specyficznych potrzeb użytkownika (tzw. soft-core).
+b) musi być zgodny z architekturą x86.
+c) nie może posiadać własnej listy rozkazów.
+d) jest zawsze szybszy od procesorów dedykowanych (ASIC).
+e) nie może być taktowany zegarem.
+f) nie posiada rejestrów.
+
+
+[#94] (#94) Lista rozkazów procesora (ISA):
+a) w skład listy rozkazów zawsze wchodzi mnożenie.
+>>b) definiuje zestaw instrukcji rozumianych przez procesor oraz ich formaty.
+c) jest identyczna dla wszystkich procesorów.
+d) nie zawiera instrukcji skoków.
+>>e) określa dostępne tryby adresowania.
+f) zależy od systemu operacyjnego.
+
+
+[#95] (#95) Karta graficzna i FPGA:
+>>a) Układy FPGA mogą być wykorzystane do budowy akceleratorów graficznych i przetwarzania obrazu.
+b) przy użyciu FPGA nie można zbudować karty graficznej ze sprzętowym wspomaganiem OpenGL.
+c) FPGA nie nadaje się do obliczeń równoległych.
+d) karty graficzne nie używają pamięci RAM.
+e) FPGA są używane wyłącznie w telekomunikacji.
+f) GPU i FPGA to te same układy.
+
+
+[#96] (#96) Licznik rozkazów (Program Counter):
+>>a) przechowuje adres następnej instrukcji do pobrania z pamięci.
+b) służy do zliczania liczby wykonanych operacji arytmetycznych.
+c) jest częścią jednostki ALU.
+d) przechowuje kody błędów procesora.
+e) jest rejestrem 8-bitowym w procesorach 64-bitowych.
+f) nie może być zmieniony przez instrukcję skoku.
+
+
+[#97] (#97) Rozkaz skoku warunkowego:
+>>a) zmienia kolejność wykonywania instrukcji w zależności od stanu znaczników (flag) procesora.
+b) zawsze wykonuje skok do adresu zero.
+c) nie zależy od wyników poprzednich operacji.
+d) jest instrukcją typu ALU.
+e) nie jest dostępny w architekturze RISC.
+f) zawsze czyści pamięć cache.
+
+
+[#98] (#98) Rozkaz dodawania w procesorze:
+>>a) pobiera argumenty (np. z rejestrów), wykonuje sumowanie w ALU i zapisuje wynik.
+b) nie może używać adresowania bezpośredniego.
+c) jest dostępny tylko w procesorach 64-bitowych.
+d) zawsze ustawia flagę przerwania.
+>>e) może ustawić flagi takie jak Zero (Z), Carry (C), Overflow (V).
+f) nie zmienia stanu rejestrów.
+
+
+[#99] (#99) Przetwarzanie potokowe (pipelining):
+>>a) pozwala na jednoczesne wykonywanie różnych etapów wielu instrukcji.
+b) skraca czas wykonania pojedynczej instrukcji (latency).
+c) eliminuje potrzebę stosowania pamięci cache.
+d) jest stosowane tylko w procesorach jednoukładowych.
+>>e) zwiększa przepustowość (throughput) procesora.
+f) uniemożliwia wykonywanie skoków.
+
+
+[#100] (#100) Sumator jednobitowy pełny (Full Adder):
+>>a) posiada trzy wejścia (dwa bity składników i przeniesienie) oraz dwa wyjścia (suma i przeniesienie).
+b) nie uwzględnia przeniesienia z poprzedniej pozycji.
+c) jest układem sekwencyjnym.
+d) służy do mnożenia liczb.
+e) składa się wyłącznie z bramek NOT.
+>>f) jest podstawą budowy sumatorów wielobitowych.
+
+
+[#101] (#101) Rejestr rozkazów (Instruction Register):
+>>a) przechowuje aktualnie dekodowaną i wykonywaną instrukcję.
+b) jest dostępny bezpośrednio dla programisty.
+c) służy do przechowywania wyników operacji zmiennoprzecinkowych.
+d) jest tożsamy z licznikiem rozkazów.
+e) przechowuje adresy pamięci RAM.
+f) jest częścią jednostki sterującej procesora.
+
+
+[#102] (#102) Wskaż, które z poniższych stwierdzeń opisują poprawnie własności relacyjnych baz danych:
+a) Wartością atrybutu może być wyrażenie obliczalne.
+>>b) Każda relacja musi posiadać klucz główny, który jednoznacznie identyfikuje krotki.
+c) Kolejność wierszy w tabeli ma znaczenie semantyczne.
+d) Atrybuty w relacji mogą być wielowartościowe (np. tablice).
+>>e) Relacja jest zbiorem krotek (brak duplikatów).
+f) Relacyjna baza danych nie obsługuje więzów integralności.
+
+
+[#103] (#103) Wskaż, które z poniższych stwierdzeń dotyczących kluczy obcych w relacyjnych bazach danych są prawdziwe.
+a) Nazwa atrybutu klucza obcego musi być taka sama jak nazwa atrybutu klucza w tabeli nadrzędnej.
+>>b) Klucz obcy służy do wymuszania więzów integralności referencyjnej między tabelami.
+c) Klucz obcy nie może zawierać wartości NULL.
+d) W jednej tabeli może istnieć tylko jeden klucz obcy.
+>>e) Klucz obcy może odwoływać się do klucza głównego lub unikalnego w innej tabeli.
+f) Usunięcie rekordu nadrzędnego zawsze powoduje usunięcie rekordu z kluczem obcym.
+
+
+[#104] (#104) Dana jest zmienna relacyjna o schemacie H={A,B,C,D} i zbiorze zależności funkcyjnych F={{A,B} -> C, {A,C} -> D}. Jedynym kluczem
+tej zmiennej relacyjnej jest para atrybutów {A,B}. W jakiej maksymalnie postaci normalnej jest ta zmienna relacyjna? (Zakładamy, że jest w 1NF.)
+a) BCNF
+b) 2NF
+>>c) 3NF
+d) 1NF
+e) 4NF
+f) 5NF
+
+
+[#105] (#105) Dana jest zmienna relacyjna o schemacie H={A,B,C,D} i zbiorze zależności funkcyjnych F={A -> B, C -> D}. Jedynym kluczem tej
+zmiennej relacyjnej jest para atrybutów {A,C}. Jak należy zdekomponować zmienną relacyjną, aby uzyskać zbiór zmiennych relacyjnych w 3NF?
+>>a) Dekompozycja na {A,B} oraz {C,D} oraz {A,C}.
+b) {A,B}, {C,D}
+c) {A,B,C}, {D}
+d) {A,B,D}, {C}
+e) Nie wymaga dekompozycji.
+f) {A,B,C,D}
+
+
+[#106] (#106) Wskaż prawdziwe stwierdzenia dotyczące kluczy w modelu relacyjnym:
+a) Zbiór wszystkich atrybutów wchodzących w skład nagłówka zmiennej relacyjnej jest kluczem.
+>>b) Klucz nadmiarowy (superklucz) to zbiór atrybutów zawierający klucz kandydujący.
+c) Każda tabela może mieć wiele kluczy głównych.
+d) Klucz kandydujący może być pusty.
+>>e) Klucz kandydujący to minimalny superklucz.
+f) Klucz główny to jeden z wybranych kluczy kandydujących.
+
+
+[#107] (#107) Wskaż, które z poniższych stwierdzeń dotyczących normalizacji są prawdziwe w relacyjnym modelu danych.
+>>a) Dowolną zmienną relacyjną można sprowadzić do 3NF stosując dekompozycję bezstratną i zachowującą zależności funkcyjne.
+b) Postać BCNF zawsze zachowuje wszystkie zależności funkcyjne.
+c) 2NF eliminuje zależności przechodnie.
+d) Normalizacja zawsze zwiększa wydajność odczytu danych.
+>>e) 1NF wymaga, aby wszystkie wartości atrybutów były atomowe.
+f) 3NF eliminuje zależności wielowartościowe.
+
+
+[#108] (#108) Wskaż prawdziwe stwierdzenia dotyczące powiązań w relacyjnych bazach danych:
+>>a) Relacja wiele-do-wielu wymaga wprowadzenia tabeli pośredniczącej (asocjacyjnej).
+b) Powiązania klucz-klucz obcy mogą być tylko typu jeden do jednego lub jeden do wielu.
+c) Klucz obcy musi zawsze wskazywać na klucz główny, nigdy na klucz unikalny.
+d) Między dwiema tabelami może istnieć tylko jedno powiązanie.
+>>e) Relacja jeden-do-jednego może być zaimplementowana w jednej tabeli lub dwóch połączonych kluczami głównymi.
+f) Relacje w SQL są zawsze symetryczne.
+
+
+[#109] (#109) Wskaż prawdziwe stwierdzenia dotyczące podzapytań w PostgreSQL:
+a) Wewnątrz instrukcji INSERT można stosować wyłącznie podzapytania skalarne.
+>>b) Podzapytania mogą być stosowane w klauzulach SELECT, FROM, WHERE oraz HAVING.
+c) Podzapytanie w klauzuli FROM nie musi mieć nadanego aliasu.
+d) Podzapytania skorelowane są zawsze szybsze od zwykłych podzapytań.
+>>e) Podzapytanie skalarne zwraca dokładnie jedną wartość (jeden wiersz i jedną kolumnę).
+f) Podzapytania nie mogą być zagnieżdżone.
+
+
+[#110] (#110) Wskaż, które z poniższych stwierdzeń dotyczących typów złączeń w relacyjnych bazach danych są prawdziwe.
+>>a) LEFT JOIN zwraca wszystkie wiersze z lewej tabeli i dopasowane wiersze z prawej tabeli (lub NULL).
+b) Złączenie wewnętrzne (INNER JOIN) zawiera wszystkie rekordy z lewej tabeli, nawet jeśli nie ma dopasowania.
+c) FULL JOIN zwraca tylko rekordy, które mają dopasowanie w obu tabelach.
+d) CROSS JOIN wymaga podania warunku ON.
+>>e) RIGHT JOIN jest symetryczny do LEFT JOIN (zwraca wszystko z prawej tabeli).
+f) NATURAL JOIN łączy tabele po wszystkich kolumnach o tych samych nazwach.
+
+
+[#111] (#111) Wskaż, które z własności przetwarzania transakcyjnego oznacza skrót ACID.
+>>a) Atomiczność, Spójność (Consistency), Izolacja, Trwałość (Durability).
+b) Agregacja, Całkowitość, Identyfikacja, Dostępność.
+c) Asynchroniczność, Ciągłość, Interakcja, Decentralizacja.
+d) Automatyzacja, Certyfikacja, Integracja, Dokumentacja.
+e) Akceptacja, Cyliczność, Indeksacja, Definicja.
+f) Autoryzacja, Ciągłość, Izolacja, Dostępność.
+
+
+[#112] (#112) Wskaż prawdziwe stwierdzenia dotyczące funkcji agregujących w PostgreSQL:
+>>a) Funkcje agregujące (np. SUM, AVG) nie mogą być używane bezpośrednio w klauzuli WHERE.
+b) Klauzula HAVING służy do filtrowania wyników przed agregacją.
+c) Funkcja COUNT() pomija wartości NULL.
+d) Funkcje agregujące można stosować tylko w zapytaniach z GROUP BY.
+>>e) Funkcja COUNT(*) zlicza wszystkie wiersze, w tym te z wartościami NULL.
+f) Funkcja MAX() działa tylko na typach numerycznych.
+
+
+[#113] (#113) Wskaż, które z poniższych stwierdzeń dotyczących związku relacyjnych baz danych z matematyczną teorią relacji są prawdziwe.
+>>a) Relacja w sensie matematycznym to podzbiór iloczynu kartezjańskiego zbiorów (dziedzin).
+b) Tabele relacyjnych baz danych w których istnieją klucze są relacjami.
+c) Każda tabela w SQL jest matematyczną relacją (nawet jeśli dopuszcza duplikaty).
+d) Model relacyjny nie opiera się na teorii zbiorów.
+>>e) Atrybuty relacji odpowiadają kolumnom tabeli, a krotki odpowiadają wierszom.
+f) Relacja matematyczna dopuszcza nieskończoną liczbę krotek w bazie danych.
+
+
+[#114] (#114) Gramatyka formalna jest wieloznaczna, jeżeli:
+>>a) istnieje przynajmniej jedno słowo w języku tej gramatyki, które posiada więcej niż jedno drzewo wyprowadzenia (syntaktyczne).
+b) posiada symbole nieterminalne o wielu produkcjach.
+c) generuje język nieskończony.
+d) nie można jej sprowadzić do postaci normalnej Chomsky'ego.
+>>e) posiada słowo, dla którego istnieje więcej niż jedno wyprowadzenie lewostronne.
+f) generuje słowa o różnej długości.
+
+
+[#115] (#115) W kontekście języków formalnych, (oznaczenie: ^ to symbol potęgowania, którego argumenty mogą być w nawiasach klamrowych.,
+następujące stwierdzenia są prawdziwe:
+>>a) Język L = {a^n b^n : n > 0} nie jest regularny, ale jest bezkontekstowy.
+b) L1 = {f^{2^{n}}: n > 0} jest regularny.
+c) Każdy język bezkontekstowy jest regularny.
+d) Języki regularne nie są zamknięte ze względu na dopełnienie.
+>>e) Klasa języków regularnych jest właściwym podzbiorem klasy języków bezkontekstowych.
+f) Każdy język akceptowany przez automat skończony jest bezkontekstowy.
+
+
+[#116] (#116) Mamy gramatykę (duże litery to symbole nieterminalne, małe to symbole terminalne, S to symbol startowy) zawierającą produkcje: S -> AB,
+A -> Aa | bB, B -> a | Sb oraz formę zdaniową: baaABb. Które stwierdzenie jest prawdziwe
+a) nie jest wyprowadzana.
+>>b) jest formą zdaniową, jeśli można ją uzyskać w dowolnej liczbie kroków z symbolu startowego S.
+c) zawiera wyłącznie symbole terminalne.
+d) jest słowem języka.
+e) jest symbolem startowym.
+f) nie może zawierać nieterminali.
+
+
+[#117] (#117) W odniesieniu do wyrażeń regularnych i generowanych łańcuchów, które stwierdzenia są prawdziwe
+Wyrażenie regularne: (x+y)*y(a+ab)*
+>>a) Generuje słowa kończące się sekwencją 'y' po której następuje 'a' lub 'ab'.
+b) Zawiera dokładnie 7 łańcuchów o długości mniejszej niż 4.
+c) Nie generuje słowa 'y'.
+d) Generuje słowo 'xa'.
+>>e) Generuje słowo 'yya'.
+>>f) Generuje słowo 'xyab'.
+
+
+[#118] (#118) Lemat o pompowaniu dla języków regularnych:
+>>a) Służy do dowodzenia, że dany język nie jest regularny.
+b) Długość pompowania dla łańcucha o długości x jest równa x+1.
+c) Każdy język spełniający warunki lematu o pompowaniu jest regularny.
+d) Dotyczy wyłącznie języków skończonych.
+e) Mówi, że każde słowo języka regularnego można dowolnie skracać.
+f) Pozwala na konstrukcję automatu minimalnego.
+
+
+[#119] (#119) Rozważmy gramatykę
+                    S ---> PQ | SQ | PS
+                    P ---> x
+                    Q--> yKtóre stwierdzenia są prawdziwe:
+>>a) W gramatyce w postaci normalnej Chomsky'ego liczba kroków wyprowadzenia słowa o długości n wynosi dokładnie 2n-1.
+b) Liczba użytych produkcji musi być równa n.
+c) Nie da się wyprowadzić słów o długości większej niż 2.
+d) Gramatyka ta jest regularna.
+e) Wymaga n^2 kroków.
+f) Liczba kroków jest zawsze parzysta.
+
+
+[#120] (#120) W odniesieniu do języków regularnych:
+>>a) Języki regularne są zamknięte ze względu na sumę, iloczyn i dopełnienie.
+b) Jeśli L1 jest regularny a L1-L2 jest regularny, to L2 musi być regularny.
+c) Każdy język podzbiór języka regularnego jest regularny.
+d) Automaty niedeterministyczne akceptują szerszą klasę języków niż deterministyczne.
+>>e) Każdy język regularny jest akceptowany przez pewien deterministyczny automat skończony.
+f) Języki regularne nie są zamknięte ze względu na gwiazdkę Kleene'ego.
+
+
+[#121] (#121) Mamy gramatykę z następującymi produkcjami:
+S -> XY
+
+X -> aX|a
+
+Y -> aYb|\epsilon
+>>a) Generuje język {a^m b^n : m > n >= 0}.
+b) Generuje język {a^n b^n : n >= 0}.
+c) Jest gramatyką regularną.
+d) Nie generuje słowa 'a'.
+e) Generuje słowo 'ab'.
+f) Generuje język {a^n b^m : n > m}.
+
+
+[#122] (#122) Które z poniższych zdań odnośnie gramatyk formalnych są prawdziwe:
+>>a) Z każdej gramatyki bezkontekstowej można usunąć epsilon-produkcje (chyba że język zawiera słowo puste).
+b) Gramatyki bezkontekstowe są zamknięte ze względu na przekrój (intersekcję).
+c) Każdy język regularny jest generowany przez gramatykę typu 0.
+d) Gramatyki kontekstowe nie mogą mieć produkcji skracających.
+>>e) Każdy język regularny jest bezkontekstowy.
+f) Gramatyki typu 3 generują języki kontekstowe.
+
+
+[#123] (#123) Odnośnie twierdzenia Myhill-Nerode'a następujące zdania są prawdziwe:
+>>a) Podaje warunek konieczny i dostateczny na to, by język był regularny.
+b) Służy do minimalizacji automatów deterministycznych.
+c) Twierdzenie ma znaczenie w kontekście konwersji NAS na DAS.
+d) Dotyczy wyłącznie języków bezkontekstowych.
+>>e) Relacja Myhill-Nerode'a ma skończony indeks wtedy i tylko wtedy, gdy język jest regularny.
+f) Pozwala na rozstrzygnięcie problemu stopu.
+
+
+[#124] (#124) W kontekście języków formalnych następujące stwierdzenia są prawdziwe
+>>a) Są akceptowane przez liniowo ograniczone automaty Turinga (LBA).
+b) Język kontekstowy jest akceptowany przez NAS (automat skończony).
+c) Są podzbiorem języków regularnych.
+d) Ich gramatyki mogą zawierać produkcję A -> BC.
+>>e) Gramatyki kontekstowe (typ 1) mają produkcje postaci alpha A beta -> alpha gamma beta, gdzie gamma != epsilon.
+f) Każdy język kontekstowy jest bezkontekstowy.
+
+
+[#125] (#125) W odniesieniu do języków formalnych następujące zdania są prawdziwe:
+>>a) Akceptuje klasę języków bezkontekstowych.
+b) Może akceptować napis wejściowy poprzez stan końcowy lub pusty stos.
+c) Jest równoważny automatowi skończonemu z dwoma stosami.
+d) Zawsze musi być deterministyczny.
+>>e) Niedeterministyczne automaty ze stosem są silniejsze od deterministycznych (akceptują szerszą klasę języków).
+f) Nie może mieć więcej niż jeden stan.
+
+
+[#126] (#126) Jeżeli kolor punktu zapisany jest na 16 bitach (High Color), to może on przyjąć:
+>>a) 65536 różnych barw.
+b) 16,7 miliona barw.
+c) 256 barw.
+d) 1024 barwy.
+e) 32768 barw.
+f) 2^24 barw.
+
+
+[#127] (#127) W modelu oświetlenia Phonga, odbicie zwierciadlane (specular):
+>>a) Zależy od kąta między wektorem kierunku obserwacji a wektorem kierunku odbicia światła.
+b) Jest niezależne od kąta pomiędzy wektorem normalnym powierzchni a wektorem w kierunku źródła światła.
+c) Nie zależy od właściwości materiału.
+d) Jest identyczne dla każdego punktu powierzchni.
+e) Odpowiada za kolor cienia obiektu.
+f) Jest modelowane za pomocą funkcji sinus.
+
+
+[#128] (#128) W Ray-tracingu rekurencyjnym promienie wtórne to:
+>>a) Promienie odbite, załamane (transmitowane) oraz promienie cienia.
+b) wektory normalne do wszystkich powierzchni.
+c) promienie biegnące bezpośrednio z oka do rzutni.
+d) promienie generowane przez źródła światła rozproszonego.
+e) promienie pierwotne.
+f) tylko promienie załamane.
+
+
+[#129] (#129) Metoda bilansu energetycznego (Radiosity):
+>>a) Bazuje na zasadzie zachowania energii i modeluje wymianę światła między powierzchniami rozpraszającymi.
+b) dobrze symuluje odbicia zwierciadlane.
+>>c) jest metodą niezależną od widoku (view-independent).
+d) nie wymaga podziału powierzchni na patche.
+e) jest szybsza od ray-tracingu dla scen z wieloma lustrami.
+f) oblicza oświetlenie tylko dla punktów widocznych z kamery.
+
+
+[#130] (#130) Modele kolorów subtraktywne to:
+>>a) CMYK.
+b) RGB.
+c) HSV.
+d) YUV.
+e) HSL.
+f) Lab.
+
+
+[#131] (#131) Przeplot obrazu (Interlacing):
+>>a) Polega na wyświetlaniu najpierw linii parzystych, a następnie nieparzystych (lub odwrotnie).
+b) algorytm renderingu bazujący na skalowaniu obrazu.
+c) technika antyaliasingu przestrzennego.
+d) metoda kompresji bezstratnej.
+e) służy do zwiększenia rozdzielczości pionowej.
+f) jest stosowany w nowoczesnych monitorach LCD.
+
+
+[#132] (#132) Skrót RLE (Run-Length Encoding) oznacza:
+>>a) Metodę bezstratnej kompresji danych polegającą na zliczaniu powtórzeń tych samych wartości.
+b) wspieraną sprzętowo bibliotekę do grafiki 3D.
+c) algorytm rasteryzacji linii.
+d) format zapisu tekstur 3D.
+e) metodę kompresji stratnej dźwięku.
+f) protokół przesyłania obrazu w sieci.
+
+
+[#133] (#133) Podstawowe transformacje geometryczne w grafice 3D to:
+>>a) Translacja (przesunięcie), Rotacja (obrót) i Skalowanie.
+b) przenikanie, zasłanianie, teksturowanie.
+c) cieniowanie, oświetlanie, rzutowanie.
+d) teselacja, kliping, rasteryzacja.
+e) transformacja barwna.
+f) filtracja splotowa.
+
+
+[#134] (#134) W grafice 3D, Ray-Tracing:
+>>a) Pozwala na łatwe uzyskanie efektów takich jak cienie, odbicia zwierciadlane i załamania światła.
+b) technika renderingu bazująca na koncepcji modelu oświetlenia lokalnego.
+c) jest zawsze szybszy od rasteryzacji.
+d) nie obsługuje przezroczystości.
+e) polega na rzutowaniu wierzchołków na ekran.
+f) nie wymaga obliczania przecięć promienia z obiektami.
+
+
+[#135] (#135) Bufor Z (Z-buffer):
+>>a) Służy do rozstrzygania widoczności powierzchni poprzez przechowywanie głębokości pikseli.
+b) metoda nakładania tekstury na obiekt.
+c) służy do przechowywania składowej alfa koloru.
+d) jest wykorzystywany tylko w ray-tracingu.
+e) przechowuje współrzędne XY piksela.
+f) zwiększa zużycie pamięci karty graficznej.
+
+
+[#136] (#136) W grafice komputerowej 3D teselacja:
+>>a) Polega na podziale skomplikowanych prymitywów geometrycznych na prostsze.
+b) służy do wygładzania krawędzi (antyaliasing).
+c) jest procesem zamiany obrazu wektorowego na rastrowy.
+d) polega na usuwaniu niewidocznych krawędzi.
+e) jest wykonywana wyłącznie na procesorze (CPU).
+f) służy do kompresji siatek wielokątów.
+
+
+[#137] (#137) Cieniowanie Phonga (Phong Shading):
+>>a) Polega na interpolacji wektorów normalnych wewnątrz wielokąta i obliczaniu modelu oświetlenia dla każdego piksela.
+b) technika cieniowania polegająca na obliczeniu jasności dla jednego z wierzchołków fasety.
+c) jest identyczne z cieniowaniem Gourauda.
+d) nie pozwala na uzyskanie odblasków zwierciadlanych.
+e) jest mniej kosztowne obliczeniowo niż cieniowanie Gourauda.
+f) daje gorsze efekty wizualne niż cieniowanie płaskie (flat).
+
+
+[#138] (#138) Algorytm bankiera (Dijkstra) służy do:
+>>a) unikania zakleszczenia (deadlock avoidance) poprzez sprawdzanie stanu bezpiecznego.
+b) wykrywania cykli w grafie zasobów.
+c) szeregowania procesów w systemie czasu rzeczywistego.
+d) zarządzania pamięcią wirtualną.
+e) znajdowania najkrótszej ścieżki w sieci komputerowej.
+f) optymalizacji zużycia energii przez procesor.
+
+
+[#139] (#139) Buforowanie plików (File Buffering):
+>>a) Zwiększa wydajność poprzez redukcję liczby fizycznych operacji wejścia/wyjścia na dysku.
+b) służy wyłącznie do zabezpieczenia danych przed usunięciem.
+c) uniemożliwia jednoczesny dostęp wielu procesów do pliku.
+d) jest realizowane tylko w systemach 64-bitowych.
+e) polega na szyfrowaniu zawartości pliku.
+f) jest zawsze zarządzane przez użytkownika, a nie system operacyjny.
+
+
+[#140] (#140) Centralny Procesor, po otrzymaniu informacji o przerwaniu z urządzenia wejścia/wyjścia:
+>>a) Procesor kończy bieżącą instrukcję, zapisuje stan i przekazuje sterowanie do ISR.
+b) procesor natychmiast przerywa wykonywanie bieżącej instrukcji w jej połowie.
+c) przerwania są ignorowane w trybie użytkownika.
+d) tylko system operacyjny może generować przerwania.
+>>e) przerwania mogą być maskowalne lub niemaskowalne (NMI).
+f) po obsłudze przerwania procesor zawsze restartuje system.
+
+
+[#141] (#141) Inicjalna wartość semafora binarnego implementującego sekcję krytyczną (mutex) wynosi:
+>>a) 1
+b) 0
+c) -1
+d) n (liczba procesów)
+e) nieskończoność
+f) 2
+
+
+[#142] (#142) Algorytm szeregowania z wywłaszczaniem (preemptive scheduling):
+>>a) Pozwala na przerwanie bieżącego procesu i przekazanie procesora innemu procesowi.
+b) szeregowanie bez wywłaszczenia.
+c) nie pozwala na zmianę procesu przed jego zakończeniem.
+d) jest stosowany tylko w systemach wsadowych.
+>>e) przykładem jest algorytm Round Robin (karuzelowy).
+f) minimalizuje liczbę przełączeń kontekstu.
+
+
+[#143] (#143) Aby system operacyjny mógł wykonywać wielozadaniowość (multitasking):
+>>a) Wymaga wsparcia sprzętowego (np. przerwania zegarowe, ochrona pamięci).
+b) musi posiadać przynajmniej 2 procesory fizyczne.
+c) nie może używać pamięci wirtualnej.
+d) wymaga, aby wszystkie programy były napisane w tym samym języku.
+>>e) musi implementować mechanizm przełączania kontekstu (context switching).
+f) nie może obsługiwać sieci.
+
+
+[#144] (#144) Jeżeli wirtualny adres w programie jest 16 bitowy i rozmiar strony jest 0,5 K to możemy maksymalnie zaadresować następującą liczbę stron:
+>>a) 128.
+b) 64.
+c) 256.
+d) 1024.
+e) 512.
+f) 32.
+
+
+[#145] (#145) Pamięć asocjacyjna (TLB - Translation Lookaside Buffer):
+>>a) Przechowuje ostatnio używane mapowania adresów wirtualnych na fizyczne.
+b) jest konieczna dla efektywnej realizacji stronicowania.
+c) służy do przechowywania danych na dysku.
+d) jest wolniejsza od pamięci RAM.
+>>e) jest rodzajem pamięci cache dla tablicy stron.
+f) przechowuje kody instrukcji procesora.
+
+
+[#146] (#146) Maksymalna liczba procesów wewnątrz sekcji krytycznej (dla zapewnienia wzajemnego wykluczania):
+>>a) 1
+b) 2
+c) Dowolna liczba.
+d) 0
+e) n-1
+f) n
+
+
+[#147] (#147) Problem producent-konsument może być rozwiązany przy pomocy:
+>>a) Semafory, monitory, kolejki komunikatów.
+b) tylko Monitorów.
+c) wyłącznie zmiennych globalnych.
+d) tylko w systemach jednoprocesorowych.
+e) algorytmu Dijkstry znajdowania najkrótszej ścieżki.
+f) instrukcji skoku bezwarunkowego.
+
+
+[#148] (#148) Stan uprzywilejowany (Kernel Mode):
+>>a) Pozwala na wykonywanie wszystkich instrukcji procesora, w tym instrukcji sterujących sprzętem.
+b) umożliwia wykonywanie instrukcji systemu operacyjnego.
+c) jest dostępny dla każdej aplikacji użytkownika.
+d) służy do przyspieszania obliczeń matematycznych.
+>>e) przejście do tego stanu następuje m.in. podczas wywołania systemowego (system call).
+f) wyklucza dostęp do pamięci RAM.
+
+
+[#149] (#149) Komunikacja synchroniczna między procesami:
+>>a) Powoduje zawieszenie procesu wysyłającego do momentu odebrania komunikatu przez odbiorcę.
+b) umożliwia procesom synchronizację ich aktywności.
+c) nie wymaga potwierdzenia odbioru.
+d) jest zawsze szybsza od komunikacji asynchronicznej.
+>>e) jest realizowana np. przez mechanizm rendezvous.
+f) nie może być stosowana w systemach rozproszonych.
+
+
+[#150] (#150) Parser LR:
+>>a) Jest parserem typu bottom-up (od dołu do góry).
+b) odczytuje symbole wejściowe od lewej strony do prawej.
+c) nie obsługuje gramatyk z lewostronną rekurencją.
+d) jest wolniejszy od parsera LL.
+>>e) buduje wyprowadzenie prawostronne w odwrotnej kolejności.
+f) jest stosowany tylko dla języków regularnych.
+
+
+[#151] (#151) Rozstrzygalność przynależności gramatyki bezkontekstowej do klasy LL(k):
+>>a) Jest rozstrzygalna dla dowolnego ustalonego k.
+b) jest rozstrzygalne tylko jeśli gramatyka zawiera lewostronną rekurencję.
+c) jest nierozstrzygalna dla k > 1.
+d) zależy od liczby symboli terminalnych.
+e) jest nierozstrzygalna dla gramatyk wieloznacznych.
+f) wymaga sprowadzenia do postaci normalnej Chomsky'ego.
+
+
+[#152] (#152) Porównanie gramatyk LL i LR:
+>>a) Klasa gramatyk LL(k) jest właściwym podzbiorem klasy gramatyk LR(k).
+b) gramatyki LL oraz LR opisują częściowo rozłączne klasy gramatyk.
+c) Każda gramatyka LR jest gramatyką LL.
+d) Gramatyki LL są potężniejsze od LR.
+>>e) Gramatyki LR radzą sobie z lewostronną rekurencją, której LL nie obsługuje bezpośrednio.
+f) Gramatyki LL(1) są równoważne gramatykom LR(1).
+
+
+[#153] (#153) Złożoność analizatorów LL(k) oraz LR(k) dla słowa o długości n wynosi:
+>>a) Czasowa O(n) i pamięciowa O(n).
+b) czasową Theta(n) i pamięciową Theta(n).
+c) Czasowa O(n^2).
+d) Czasowa O(2^n).
+e) Pamięciowa O(1).
+f) Czasowa O(log n).
+
+
+[#154] (#154) Dla gramatyki bezkontekstowej z produkcjami:
+E→E+E
+E→E*E
+E → id
+następujące wyprowadzenia są prawostronne:
+>>a) E => E+E => E+EE => E+Eid => E+idid => id+idid.
+b) E => E+E => id+E => id+EE => id+idE => id+idid.
+c) E => id.
+d) E => EE => idid.
+e) Jest niemożliwe dla tej gramatyki.
+f) Zawsze kończy się symbolem E.
+
+
+[#155] (#155) Które stwierdzenie jest prawdziwe dotyczące gramatyk LR?
+>>a) Nie każda gramatyka bezkontekstowa jest klasy LR(k) (np. gramatyki wieloznaczne nie są LR).
+b) Każda gramatyka bezkontekstowa jest klasy LR(k) dla pewnego k > 0.
+c) Gramatyki LR(0) mogą opisywać wszystkie języki bezkontekstowe.
+d) Analiza LR wymaga gramatyki w postaci normalnej Greibach.
+>>e) Gramatyki LR(1) są wystarczające do opisu większości języków programowania.
+f) Gramatyki LR nie mogą być generowane automatycznie.
+
+
+[#156] (#156) Dla gramatyki bezkontekstowej z produkcjami:
+E' → E
+E→E+T | T
+T→T*F|F
+F → (E) | id
+domknięcie (closure) zbioru sytuacji I= {E' →•E} zawiera sytuacje:
+>>a) E' -> .E, E -> .E+T, E -> .T, T -> .TF, T -> .F, F -> .(E), F -> .id.
+b) E' -> E.
+c) E -> E.+T.
+d) F -> id.
+e) Tylko E' -> .E.
+f) Wszystkie produkcje z kropką na końcu.
+
+
+[#157] (#157) Dana jest gramatyka (wzbogacona) z produkcjami:
+E' → E
+E→E+T | T
+T→T*F|F
+F → (E) | id
+Które z podanych symboli należą do zbioru FOLLOW(F):
+>>a) +, *, ), $ (koniec napisu).
+b) id.
+c) E, T.
+d) (, id.
+e) Tylko $.
+f) Wszystkie nieterminale.
+
+
+[#158] (#158) Gramatyka operatorowa:
+>>a) To gramatyka bezkontekstowa, w której żadna produkcja nie ma po prawej stronie dwóch sąsiednich nieterminali ani epsilona.
+b) Gramatyka operatorowa jest gramatyką bezkontekstową.
+c) Służy wyłącznie do opisu języków regularnych.
+d) Nie może zawierać symboli terminalnych.
+>>e) Pozwala na łatwą implementację parserów wyrażeń matematycznych.
+f) Jest zawsze wieloznaczna.
+
+
+[#159] (#159) Analiza leksykalna (skaner) obejmuje:
+>>a) Grupowanie znaków wejściowych w leksemy i generowanie odpowiadających im tokenów.
+b) usunięcie tokenów a znalezienie leksemów.
+c) budowanie drzewa składniowego.
+d) sprawdzanie zgodności typów.
+>>e) usuwanie komentarzy i białych znaków z kodu źródłowego.
+f) generowanie kodu pośredniego.
+
+
+[#160] (#160) Analizatory LL oraz LR:
+>>a) Oba są analizatorami kierunkowymi (przetwarzają wejście od lewej do prawej).
+b) LL nie jest analizatorem kierunkowym.
+c) LR przetwarza wejście od prawej do lewej.
+d) Żaden z nich nie używa stosu.
+>>e) Wykorzystują wiedzę o symbolach już przetworzonych oraz podglądają symbole w przód (lookahead).
+f) Są stosowane tylko w kompilatorach języka C.
+
+
+[#161] (#161) Parametr k w analizatorach LL(k) oznacza:
+>>a) Liczbę symboli podglądanych (lookahead) w przód na wejściu.
+b) parametr k oznacza liczbę błędów, po których analizator przerywa działanie.
+c) liczbę kroków wyprowadzenia.
+d) maksymalną głębokość stosu.
+e) liczbę nieterminali w gramatyce.
+f) liczbę stanów automatu.
+
+
+[#162] (#162) Która z poniższych opcji najlepiej opisuje klasyfikację Chomsky'ego dotyczącą gramatyk formalnych?
+>>a) Cztery poziomy gramatyk: typ 0, typ 1, typ 2, typ 3.
+b) Klasyfikacja Chomsky'ego obejmuje pięć poziomów gramatyk.
+c) Tylko języki programowania.
+d) Wyłącznie gramatyki skończone.
+>>e) Typ 2 to gramatyki bezkontekstowe, a typ 3 to gramatyki regularne.
+f) Typ 0 to gramatyki liniowe.
+
+
+[#163] (#163) Które z poniższych stwierdzeń najlepiej opisuje rolę metajęzyka w kontekście antynomii semantycznych?
+>>a) Metajęzyk służy do opisu i analizy innego języka (przedmiotowego).
+b) Metajęzyk jest językiem, który jest bardziej złożony niż język przedmiotowy.
+c) Metajęzyk nie może zawierać nazw.
+d) Metajęzyk jest zawsze językiem naturalnym.
+>>e) Rozróżnienie języka przedmiotowego od metajęzyka pozwala na definiowanie prawdy bez popadania w paradoksy.
+f) Metajęzyk służy wyłącznie do tłumaczenia tekstów.
+
+
+[#164] (#164) Które z poniższych stwierdzeń najlepiej opisuje różnicę między wybranymi paradygmatami języków programowania?
+>>a) Paradygmat imperatywny opisuje "jak", deklaratywny opisuje "co".
+b) Paradygmat imperatywny jest stosowany wyłącznie w językach niskiego poziomu.
+c) Języki funkcyjne są zawsze imperatywne.
+d) Programowanie obiektowe wyklucza paradygmat deklaratywny.
+>>e) Programowanie obiektowe skupia się na łączeniu danych i zachowań w obiekty.
+f) Paradygmat logiczny jest podzbiorem paradygmatu imperatywnego.
+
+
+[#165] (#165) W kontekście paradygmatów języków programowania, które z poniższych stwierdzeń najlepiej charakteryzują ich własności
+>>a) Paradygmat funkcyjny opiera się na ewaluacji funkcji matematycznych, logiczny na wnioskowaniu.
+b) Paradygmat funkcyjny skupia się na niezmiennych danych i funkcjach jako podstawowych jednostkach obliczeń.
+c) W paradygmacie logicznym nie istnieją zmienne.
+d) Oba paradygmaty są odmianami programowania proceduralnego.
+>>e) Oba paradygmaty należą do szerszej grupy paradygmatów deklaratywnych.
+f) Język Prolog jest przykładem języka funkcyjnego.
+
+
+[#166] (#166) Które z poniższych stwierdzeń najlepiej opisują różnicę między pewnymi pewnymi typami algorytmów:
+>>a) Algorytm deterministyczny dla tych samych danych zawsze przechodzi przez tę samą ścieżkę obliczeń.
+b) Algorytm deterministyczny zawsze daje różne wyniki dla tych samych danych wejściowych.
+c) Algorytm niedeterministyczny nie może być zaimplementowany na komputerze.
+d) Złożoność P dotyczy algorytmów niedeterministycznych.
+>>e) Algorytm niedeterministyczny może być postrzegany jako posiadający zdolność "zgadywania" poprawnej ścieżki.
+f) Każdy algorytm niedeterministyczny ma złożoność wykładniczą.
+
+
+[#167] (#167) Które stwierdzenia dotyczące entropii Shannona są prawdziwe:
+>>a) Określa średnią ilość informacji przypadającą na jeden symbol źródła.
+b) Wartość entropii zawsze jest dodatnia (lub zero).
+c) Jest maksymalna, gdy wszystkie symbole mają różne prawdopodobieństwa.
+d) Nie zależy od prawdopodobieństwa wystąpienia symboli.
+>>e) Entropia jest maksymalna dla rozkładu jednostajnego (wszystkie symbole równie prawdopodobne).
+f) Jednostką entropii jest zawsze bajt.
+
+
+[#168] (#168) Które z podanych stwierdzeń w odniesieniu do kodu Hamminga są prawdziwe:
+>>a) Pozwala na wykrywanie i korekcję błędów pojedynczego bitu (SEC) oraz wykrywanie błędów dwóch bitów (DED).
+b) Kod Hamminga pozwala korygować błędy polegające na przekłamaniu dwóch bitów.
+c) Jest kodem o zmiennej długości słowa.
+d) Nie używa bitów parzystości.
+>>e) Odległość Hamminga dla kodu korygującego pojedyncze błędy musi wynosić co najmniej 3.
+f) Kod Hamminga jest kodem stratnym.
+
+
+[#169] (#169) Kodowanie Shannona-Fano i Huffmana:
+>>a) Tworzą kody prefiksowe.
+b) Kodowanie Shannona-Fano tworzy kod postfiksowy.
+c) Są metodami kompresji stratnej.
+d) Huffmana daje zawsze gorsze wyniki niż Shannona-Fano.
+>>e) Kodowanie Huffmana jest optymalnym kodowaniem prefiksowym dla danych prawdopodobieństw symboli.
+f) Oba kody wymagają przesyłania słownika razem z danymi.
+
+
+[#170] (#170) Które stwierdzenia dotyczące kompresji JPEG są prawdziwe:
+>>a) Wykorzystuje stratną kompresję opartą na dyskretnej transformacie kosinusowej (DCT).
+b) Typowo w procesie kompresji wykorzystuje transformatę Fouriera.
+c) Jest optymalna do kompresji tekstu i grafiki o ostrych krawędziach.
+d) Nie pozwala na regulację stopnia kompresji.
+>>e) Wykorzystuje kwantyzację w celu usunięcia informacji mniej istotnych dla ludzkiego oka.
+f) Jest formatem wyłącznie bezstratnym.
+
+
+[#171] (#171) Pracując w powłoce bash pod kontrolą systemu operacyjnego Linux lub UNIX uruchomienie polecenia: rm / && echo ok
+>>a) Zazwyczaj zakończy się błędem, a "ok" nie zostanie wypisane.
+b) spowoduje wypisanie na standardowym wyjściu komunikatu o niemożności usunięcia katalogu /
+c) usunie wszystkie pliki w systemie.
+d) wypisze "ok" niezależnie od wyniku rm.
+>>e) Operator && wykonuje drugie polecenie tylko wtedy, gdy pierwsze zakończyło się sukcesem (kod wyjścia 0).
+f) Polecenie rm / bez opcji -r usunie katalog główny.
+
+
+[#172] (#172) Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie wzorca nazwy pliku data.{txt,sql,iq} będzie pasować do pliku o
+nazwie:
+>>a) data.txt, data.sql lub data.iq.
+b) data.
+c) dowolnego pliku zaczynającego się od data.
+d) tylko pliku o nazwie data.{txt,sql,iq}.
+e) plików o nazwach data.txtsql i data.txtiq.
+f) wzorzec ten nie jest obsługiwany przez bash.
+
+
+[#173] (#173) Uprawnienia w systemie Linux/UNIX:
+>>a) System opiera się na uprawnieniach dla właściciela, grupy i innych (rwx).
+b) każdy użytkownik ma dostęp do wszystkich plików zarządzanych przez system operacyjny.
+c) tylko administrator (root) może czytać pliki.
+d) uprawnienia nie dotyczą katalogów.
+>>e) Uprawnienie 'x' dla katalogu pozwala na wejście do niego (cd).
+f) Uprawnienia są zapisywane w treści pliku.
+
+
+[#174] (#174) Posługując się nazwami plików, pracując w powłoce bash systemu operacyjnego Linux lub UNIX, ? (pytajnik) oznacza:
+>>a) dokładnie jeden dowolny znak.
+b) dowolny ciąg znaków (w tym pusty).
+c) zero lub jeden znak.
+d) znak zapytania.
+e) dowolną cyfrę.
+f) dowolną literę.
+
+
+[#175] (#175) System Linux/UNIX:
+>>a) Jest systemem wielozadaniowym i wieloużytkownikowym.
+b) obsługuje wielu użytkowników.
+c) nie posiada systemu plików.
+d) jest systemem czasu rzeczywistego z natury.
+>>e) Jądro (kernel) zarządza zasobami sprzętowymi i udostępnia je aplikacjom.
+f) Jest systemem wyłącznie tekstowym.
+
+
+[#176] (#176) Zmienna $? w powłoce bash dla systemu operacyjnego Linux lub UNIX przechowuje wartość:
+>>a) kod wyjścia (exit status) ostatnio wykonanego polecenia.
+b) nie ma takiej zmiennej.
+c) identyfikator procesu powłoki.
+d) ostatni argument poprzedniego polecenia.
+e) liczbę argumentów przekazanych do skryptu.
+f) nazwę bieżącego użytkownika.
+
+
+[#177] (#177) Uruchomienie, w powłoce bash systemu operacyjnego Linux lub UNIX, polecenia: ls | less powoduje:
+>>a) przekazanie standardowego wyjścia ls na standardowe wejście less.
+b) przekazanie standardowego wyjścia less na standardowe wejście ls.
+c) równoległe wykonanie obu poleceń bez powiązania.
+d) zapisanie wyniku ls do pliku o nazwie less.
+>>e) Umożliwia wygodne przeglądanie długiej listy plików generowanej przez ls.
+f) Wyświetla tylko błędy polecenia ls.
+
+
+[#178] (#178) Korzystając z systemu operacyjnego Linux lub UNIX, ustawienie praw dostępu 700 na pliku oznacza:
+>>a) Pełne prawa (rwx) dla właściciela i brak jakichkolwiek praw dla grupy i innych.
+b) brak praw dla innych.
+c) prawo tylko do odczytu dla wszystkich.
+d) prawo do wykonywania dla grupy.
+e) prawo do zapisu dla wszystkich.
+f) plik jest ukryty.
+
+
+[#179] (#179) Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie skrótu klawiszowego Control-c powoduje:
+>>a) Wysyła sygnał SIGINT do bieżącego procesu na pierwszym planie.
+b) nic.
+c) kopiuje zaznaczony tekst.
+d) wylogowuje użytkownika.
+>>e) Powoduje zazwyczaj natychmiastowe przerwanie działania programu.
+f) Zamyka wszystkie okna terminala.
+
+
+[#180] (#180) Pracując w powłoce bash systemu operacyjnego Linux lub UNIX, użycie skrótu klawiszowego Control-z powoduje:
+>>a) Wysyła sygnał SIGTSTP, wstrzymując działanie procesu i przenosząc go w tło.
+b) wstrzymanie działania aktualnie obsługiwanego procesu.
+c) zamyka terminal.
+d) cofa ostatnią operację w edytorze.
+>>e) Proces wstrzymany można przywrócić poleceniem 'fg' lub 'bg'.
+f) Usuwa bieżącą linię poleceń.
+
+
+[#181] (#181) Posługując się nazwami plików, pracując w powłoce bash systemu operacyjnego Linux lub UNIX, * (gwiazdka) oznacza:
+>>a) dowolny ciąg znaków (również pusty).
+b) pojedynczy znak.
+c) tylko litery.
+d) tylko cyfry.
+e) dowolny znak poza kropką na początku nazwy.
+f) tylko rozszerzenia plików.
+
+
+[#182] (#182) Pliki, których nazwa zaczyna się od kropki (np. .bashrc):
+>>a) Są traktowane jako pliki ukryte.
+b) nie mogą być używane.
+c) są plikami systemowymi tylko do odczytu.
+d) muszą mieć rozszerzenie .dot.
+>>e) Można je wyświetlić za pomocą polecenia 'ls -a'.
+f) Są automatycznie usuwane przy wylogowaniu.
+
+
+[#183] (#183) Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie wzorca nazwy pliku [123]data będzie pasować do:
+>>a) 1data, 2data lub 3data.
+b) data.
+c) 123data.
+d) dowolnego pliku kończącego się na data.
+e) plików o nazwach [1]data, [2]data, [3]data.
+f) tylko pliku o nazwie [123]data.
+
+
+[#184] (#184) Relacja rozszerzenia (<<extend>>) w diagramach przypadków użycia UML:
+>>a) Wskazuje opcjonalne zachowanie, które może zostać dołączone do przypadku użycia.
+b) Używana jest do pokazania, że przypadek użycia jest podzbiorem innego przypadku użycia.
+c) Jest obowiązkowa dla każdego przypadku użycia.
+d) Służy do modelowania dziedziczenia między aktorami.
+>>e) Strzałka relacji <<extend>> jest skierowana od przypadku użycia rozszerzającego do bazowego.
+f) Zawsze wykonuje się razem z przypadkiem bazowym.
+
+
+[#185] (#185) Relacja „zawiera” (<<include>>) w diagramach przypadków użycia UML:
+>>a) Wskazuje, że jeden przypadek użycia obowiązkowo wykorzystuje funkcjonalność innego.
+b) Określa, że jeden przypadek użycia jest w całości zależny od funkcjonalności innego przypadku użycia.
+c) Jest używana do modelowania opcjonalnych funkcji.
+d) Łączy aktora z przypadkiem użycia.
+>>e) Pozwala na wydzielenie wspólnej funkcjonalności do oddzielnego przypadku użycia.
+f) Strzałka jest skierowana od przypadku dołączanego do bazowego.
+
+
+[#186] (#186) Jakie są kluczowe cechy podejścia strukturalnego Yourdona do analizy systemów?
+>>a) Opiera się na dekompozycji funkcjonalnej systemu i wykorzystuje diagramy przepływu danych (DFD).
+b) Modelowanie zachowań systemu z użyciem złożonych diagramów stanów dla każdej funkcji.
+c) Jest tożsame z podejściem obiektowym.
+d) Nie uwzględnia modelowania danych.
+>>e) Wykorzystuje słownik danych oraz specyfikacje procesów.
+f) Jest nowoczesną alternatywą dla Agile.
+
+
+[#187] (#187) Model spiralny cyklu życia oprogramowania:
+>>a) Jest modelem iteracyjnym, w którym kluczowym elementem jest analiza ryzyka.
+b) Główny nacisk kładziony jest na szybkie wytwarzanie oprogramowania bez fazy testowania.
+c) Wyklucza możliwość powrotu do poprzednich faz.
+d) Jest przeznaczony tylko dla bardzo małych projektów.
+>>e) Każdy obrót spirali obejmuje planowanie, analizę ryzyka, inżynierię i ocenę.
+f) Jest modelem liniowym (kaskadowym).
+
+
+[#188] (#188) Cele metodyki Scrum:
+>>a) Dostarczanie wartości biznesowej w krótkich iteracjach (Sprintach).
+b) Zwiększenie przewidywalności i jakości dostaw poprzez regularne iteracje i stałe przeglądy.
+c) Wyeliminowanie potrzeby dokumentacji technicznej.
+d) Sztywne planowanie całego projektu na samym początku.
+>>e) Wspieranie samoorganizacji zespołu i ciągłego doskonalenia procesu.
+f) Zastąpienie programistów przez Scrum Masterów.
+
+
+[#189] (#189) Poziomy dojrzałości w modelu CMM (Capability Maturity Model):
+>>a) Początkowy, Powtarzalny, Zdefiniowany, Zarządzany, Optymalizujący.
+b) Analiza, Projektowanie, Wdrożenie, Ocena.
+c) Niski, Średni, Wysoki, Ekspercki.
+d) Planowanie, Realizacja, Testowanie, Utrzymanie.
+e) Poziom 0, Poziom 1, Poziom 2, Poziom 3, Poziom 4.
+f) Brak, Podstawowy, Zaawansowany, Profesjonalny.
+
+
+[#190] (#190) Zdolność do pielęgnacji (Maintainability) oprogramowania:
+>>a) Łatwość, z jaką można modyfikować oprogramowanie w celu naprawy błędów lub dostosowania.
+b) zawartość pełnej dokumentacji technicznej kodu.
+c) odporność systemu na ataki hakerskie.
+d) szybkość działania aplikacji na starym sprzęcie.
+>>e) Obejmuje takie aspekty jak czytelność kodu, modularność i testowalność.
+f) Gwarantuje, że oprogramowanie nigdy nie będzie wymagało zmian.
+
+
+[#191] (#191) Niezawodność (Reliability) oprogramowania:
+>>a) Zdolność systemu do poprawnego działania w określonych warunkach przez określony czas.
+b) w miarę możliwości najkrótszy okres bezczynności po awarii.
+c) zgodność z wymaganiami estetycznymi użytkownika.
+d) brak konieczności aktualizacji systemu.
+>>e) Jest mierzona m.in. przez MTBF (Mean Time Between Failures).
+f) Oznacza, że system jest w 100% wolny od błędów.
+
+
+[#192] (#192) Proces inżynierii wymagań:
+>>a) Obejmuje pozyskiwanie, analizę, specyfikację, weryfikację i zarządzanie wymaganiami.
+b) wynajdowania, dokumentowania, wdrażania.
+c) dotyczy tylko wymagań niefunkcjonalnych.
+d) kończy się przed rozpoczęciem projektowania.
+>>e) Ma na celu zrozumienie i udokumentowanie potrzeb interesariuszy.
+f) Jest wykonywany wyłącznie przez programistów.
+
+
+[#193] (#193) Wymagania niefunkcjonalne (systemowe):
+>>a) Określają jakościowe aspekty systemu, takie jak wydajność, bezpieczeństwo, dostępność.
+b) opisują właściwości i ograniczenia systemu np. niezawodność, czas odpowiedzi.
+c) opisują konkretne funkcje, które system musi realizować.
+d) są mniej ważne od wymagań funkcjonalnych.
+>>e) Często nazywane są "atrybutami jakościowymi" systemu.
+f) Nie mogą być testowane.
+
+
+[#194] (#194) Testy jednostkowe (Unit Tests):
+>>a) Sprawdzają poprawność działania najmniejszych testowalnych części kodu.
+b) zawsze wykonywane są w pełnej izolacji od innych komponentów systemu.
+c) są wykonywane przez użytkownika końcowego.
+d) służą do testowania wydajności całego systemu.
+>>e) Automatyzacja testów jednostkowych ułatwia refaktoryzację kodu.
+f) Powinny być pisane dopiero po zakończeniu całego projektu.
+
+
+[#195] (#195) Aby ograniczyć zakres zmian w systemie (zasada niskiego sprzężenia):
+>>a) Należy stosować hermetyzację, interfejsy oraz modularność.
+b) podejście komponentowe.
+c) należy pisać cały kod w jednym pliku.
+d) należy unikać stosowania wzorców projektowych.
+>>e) Komponenty powinny zależeć od abstrakcji, a nie od konkretnych implementacji.
+f) Należy stosować jak najwięcej zmiennych globalnych.
+
+
+[#196] (#196) Podejście modelowe (Model-Driven Development):
+>>a) Modele są głównym artefaktem procesu, z których może być generowany kod źródłowy.
+b) jednym z zadań analizy jest budowa modeli, opisujących działanie systemu.
+c) modele UML są jedynym sposobem modelowania.
+d) nie jest prawdą że modele mogą służyć do dokumentacji.
+>>e) Pozwala na podniesienie poziomu abstrakcji w procesie tworzenia oprogramowania.
+f) Wyklucza udział programistów w procesie.
+
+
+[#197] (#197) Przykład aktywności DevOps:
+>>a) Ciągła integracja i ciągłe wdrażanie (CI/CD) oraz automatyzacja infrastruktury.
+b) automatyczne monitorowanie parametrów uruchomionej aplikacji.
+c) oddzielenie zespołu programistów od zespołu administratorów.
+d) ręczne testowanie aplikacji przed każdym wydaniem.
+>>e) Współpraca między zespołami rozwoju (Dev) i operacji (Ops) w całym cyklu życia.
+f) Pisanie dokumentacji w formacie PDF.
+
+
+[#198] (#198) Diagramy sekwencji UML:
+>>a) Przedstawiają interakcje między obiektami w układzie chronologicznym.
+b) linia życia reprezentuje życie obiektu w czasie trwania interakcji.
+c) służą do modelowania statycznej struktury klas.
+d) nie pokazują komunikatów asynchronicznych.
+>>e) Skupiają się na kolejności przesyłanych komunikatów.
+f) Są odmianą diagramów wdrożenia.
+
+
+[#199] (#199) Diagramy stanów UML:
+>>a) Modelują zachowanie obiektu poprzez opis stanów i zdarzeń.
+b) stan historii automatycznie aktualizuje stan obiektu.
+c) są używane wyłącznie do modelowania baz danych.
+d) nie pozwalają na definiowanie stanów zagnieżdżonych.
+>>e) Są szczególnie przydatne do modelowania systemów sterowania i protokołów.
+f) Pokazują strukturę folderów w projekcie.
+
+
+[#200] (#200) Diagramy aktywności UML:
+>>a) Służą do modelowania przepływów sterowania i danych w procesach biznesowych lub algorytmach.
+b) użycie "tokenu" w różnych ścieżkach przepływu reprezentuje przypadek użycia.
+c) są identyczne z diagramami klas.
+d) nie obsługują współbieżności (fork/join).
+>>e) Pozwalają na wizualizację równoległych ścieżek wykonania.
+f) Służą do projektowania baz danych NoSQL.
+
+
+[#201] (#201) Diagramy wdrożenia (Deployment Diagrams) UML:
+>>a) Przedstawiają fizyczną architekturę systemu, w tym węzły sprzętowe i artefakty.
+b) Pokazują interfejsy użytkownika i ich interakcje.
+c) służą do projektowania algorytmów sortowania.
+d) modelują relacje między tabelami w bazie danych.
+>>e) Węzły mogą reprezentować serwery, stacje robocze lub urządzenia wbudowane.
+f) Służą do modelowania logiki biznesowej.
+
+
+[#202] (#202) Komunikaty na diagramach sekwencji:
+>>a) Reprezentują wywołania metod lub przesyłanie sygnałów między obiektami.
+b) Komunikatów na diagramach reprezentują komunikaty poziome i pionowe.
+c) zawsze muszą być synchroniczne.
+d) są rysowane jako linie pionowe.
+>>e) Komunikat zwrotny (reply) jest zazwyczaj rysowany linią przerywaną.
+f) Nie mogą posiadać argumentów.
+
+
+[#203] (#203) Zagnieżdżone stany w diagramach stanów UML:
+>>a) Pozwalają na hierarchiczną strukturę stanów, gdzie stan złożony zawiera w sobie podstany.
+b) Zagnieżdżone stany umożliwiają definiowanie jednorazowych działań.
+c) służą do modelowania pętli w programie.
+d) są zabronione w standardzie UML 2.0.
+>>e) Pozwalają na współdzielenie przejść przez wszystkie podstany.
+f) Służą do modelowania dziedziczenia klas.
+
+
+[#204] (#204) W odniesieniu i kontekście języka UML (Unified Modeling Language) można powiedzieć, że
+>>a) To proces generowania kodu źródłowego na podstawie modeli (diagramów).
+b) Forward engineering to technika używana do optymalizacji kodu źródłowego.
+c) polega na tworzeniu dokumentacji z kodu.
+d) dotyczy tylko testowania oprogramowania.
+e) Jest procesem ręcznego przepisywania diagramów na język naturalny.
+f) Służy do usuwania błędów z bazy danych.
+
+
+[#205] (#205) W odniesieniu i kontekście języka UMLUML (Unified Modeling Language) można powiedzieć, że
+>>a) To proces tworzenia modeli (diagramów) na podstawie analizy istniejącego kodu źródłowego.
+b) Backward engineering polega na analizie istniejącego systemu i tworzeniu diagramów UML.
+c) służy do automatycznego naprawiania błędów w kodzie.
+d) jest niemożliwy dla języków obiektowych.
+e) Pozwala na zrozumienie architektury starego systemu (legacy code).
+f) Służy do szyfrowania kodu źródłowego.
+
+
+[#206] (#206) Po wykonaniu fragmentu kodu napisanego w języku C:
+int a,b=1;
+a=b++ + b;
+>>a) Wynik jest niezdefiniowany (undefined behavior).
+b) operator + nie ma w standardzie C określonej kolejności obliczenia operandów.
+c) a zawsze wyniesie 3.
+d) a zawsze wyniesie 2.
+e) Wynik zależy od wersji kompilatora i poziomu optymalizacji.
+f) Kod ten nie skompiluje się w standardzie C11.
+
+
+[#207] (#207) Typ double w języku C:
+>>a) Służy do przechowywania liczb zmiennoprzecinkowych podwójnej precyzji.
+b) w zmiennej tego typu możemy zapisać między innymi dowolną liczbę, którą można zapisać w typie char.
+c) ma mniejszy zakres niż typ float.
+d) nie może przechowywać wartości ujemnych.
+>>e) Typowo zajmuje 8 bajtów w pamięci.
+f) Jest typem całkowitym o dużej precyzji.
+
+
+[#208] (#208) Przyjmijmy, że zmienne wskaźnikowe t oraz s są typu char, dodatkowo s wskazuje na niepusty łańcuch tekstowy, a t na adres pamięci
+rozpoczynający obszar przydzielony naszemu procesowi. Po wykonaniu fragmentu kodu napisanego w języku C:
+while(*t++=*s++);
+>>a) Kopiuje łańcuch znaków z s do t, włącznie ze znakiem końcowym '\0'.
+b) wskaźniki s oraz t zwiększą swoją wartość o tyle bajtów ile znaków znajduje się w łańcuchu.
+c) pętla będzie trwać w nieskończoność.
+d) kopiuje tylko pierwszy znak.
+>>e) Jest to idiomatyczny sposób kopiowania stringów w C.
+f) Wymaga, aby t było większe od s.
+
+
+[#209] (#209) Po wykonaniu fragmentu kodu oznaczającego deklarację w języku C:
+int tab[10], *ws=tab;
+>>a) ws wskazuje na pierwszy element tablicy (tab[0]).
+b) nazwa tablicy tab jest wskaźnikiem na pierwszy element tablicy.
+c) ws przechowuje kopię całej tablicy.
+d) tab i ws to dwa różne typy, których nie można przypisać.
+>>e) Wyrażenie *(ws + 1) jest równoważne tab[1].
+f) Rozmiar tablicy tab można zmienić za pomocą realloc.
+
+
+[#210] (#210) Fragmentu kodu w języku C:
+double (*fun1)(double, double);
+>>a) fun1 jest wskaźnikiem do funkcji przyjmującej dwa parametry typu double i zwracającej double.
+b) ogólnie nazwa funkcji jest jednocześnie wskaźnikiem do funkcji.
+c) jest to wywołanie funkcji o nazwie fun1.
+d) deklaruje tablicę wskaźników.
+e) fun1 jest funkcją zwracającą wskaźnik do double.
+f) Deklaracja ta jest błędna bez słowa kluczowego typedef.
+
+
+[#211] (#211) Fragmentu kodu w języku C:
+int fib(int n){
+ if(n<3) return n;
+    return fib(n-1) + fib(n-2);
+}
+>>a) Jest nieefektywna (złożoność wykładnicza) i przy każdym wywołaniu tworzy nową ramkę stosu.
+b) przy każdym rekurencyjnym wywołaniu funkcji tworzona jest kopia argumentu n.
+c) zawsze zwraca wynik w czasie O(n).
+d) nie może być zaimplementowana w C.
+>>e) Może prowadzić do przepełnienia stosu (stack overflow) dla dużych n.
+f) Jest przykładem programowania dynamicznego.
+
+
+[#212] (#212) Algorytm minimax:
+>>a) Służy do wyboru optymalnego ruchu w grach dwuosobowych o sumie zerowej.
+b) nawet w tak prostej grze jak kółko i krzyżyk nie da się przejrzeć całego drzewa ruchów.
+c) jest algorytmem losowym.
+d) nie wymaga funkcji oceny stanu gry.
+>>e) Może być zoptymalizowany za pomocą odcięć alfa-beta (alpha-beta pruning).
+f) Jest stosowany wyłącznie w grach karcianych.
+
+
+[#213] (#213) Wyszukiwanie w posortowanej tablicy n elementów:
+>>a) Można zastosować wyszukiwanie binarne o złożoności O(log n).
+b) w celu wyszukania elementu o zadanej wartości musimy wykonać dokładnie n kroków.
+c) zawsze wymaga O(n^2) operacji.
+d) nie jest możliwe bez dodatkowego indeksu.
+e) Wyszukiwanie liniowe jest zawsze szybsze dla n < 1000.
+f) Wymaga, aby tablica była posortowana malejąco.
+
+
+[#214] (#214) Wyszukiwanie w posortowanej liście jednokierunkowej n elementów:
+>>a) Wymaga przejścia sekwencyjnego, co daje złożoność pesymistyczną O(n).
+b) wyszukanie elementu o zadanej wartości ma logarytmiczną złożoność czasową.
+c) jest szybsze niż w tablicy.
+d) pozwala na dostęp swobodny do elementów.
+e) Można zastosować wyszukiwanie binarne w czasie O(log n).
+f) Wymaga stałej ilości pamięci dodatkowej.
+
+
+[#215] (#215) Gdy mamy strukturę dynamiczną danych typu lista jednokierunkowa, to:
+>>a) Pozwala na wstawienie elementu w dowolnym miejscu, jeśli mamy wskaźnik do elementu poprzedzającego.
+b) nie można wstawić nowego elementu w dowolnym miejscu w liście.
+c) nie posiada wskaźnika na następny element.
+d) jest strukturą o stałym rozmiarze.
+>>e) Każdy węzeł przechowuje dane oraz wskaźnik na kolejny element.
+f) Pozwala na szybkie (O(1)) pobranie poprzedniego elementu.
+
+
+[#216] (#216) Struktura typu drzewo:
+>>a) Aby odwiedzić wszystkie n węzłów, należy zastosować algorytm przejścia o złożoności O(n).
+b) w celu wypisania wszystkich elementów drzewa musimy przejść przez wszystkie elementy drzewa.
+c) każdy węzeł może mieć tylko jednego potomka.
+d) nie może być pusta.
+>>e) Drzewo binarne to drzewo, w którym każdy węzeł ma co najwyżej dwóch potomków.
+f) Drzewo jest grafem spójnym zawierającym cykle.
+
+
+[#217] (#217) Gdy mamy strukturę dynamiczną typu drzewo wyszukiwań binarnych (BST), gdzie jest to drzewo spełniające własność, że dla każdego węzła
+zawierającego wartość x mającego lewego potomka zawierającego wartość l oraz prawego zawierającego wartość p, zachodzi: l<=x oraz x<=p, to:
+>>a) Średnia złożoność wyszukiwania wynosi O(log n), ale pesymistyczna to O(n).
+b) w dowolnym drzewie tego typu znalezienie węzła ma logarytmiczną złożoność czasową.
+c) zawsze jest zrównoważone.
+d) nie pozwala na przechowywanie duplikatów.
+>>e) Dla każdego węzła, wartości w lewym poddrzewie są mniejsze, a w prawym większe od wartości węzła.
+f) BST jest zawsze drzewem pełnym.
+
+
+[#218] (#218) Przeanalizuj fragmenty kodu w języku C++, w którym pojawiają się zmienne, wskaźniki i referencje.
+Które z nich mają poprawną składnię?
+>>a) int x; int &r = x; (referencja musi być zainicjalizowana i nie może być null).
+b) int x; int&r=null; r=x;
+c) int &r; r = 10;
+d) int &r = null;
+e) Referencja może zostać przełączona na inny obiekt w trakcie działania programu.
+f) Referencja zajmuje tyle samo pamięci co wskaźnik.
+
+
+[#219] (#219) Które stwierdzenia odnoszące się ograniczeń narzucanych przez składnię języka C++ w odniesieniu do konstruktorów i destruktorów są
+prawdziwe?
+>>a) Klasa może mieć wiele konstruktorów, ale tylko jeden destruktor.
+b) W klasie można zdefiniować dowolną liczbę konstruktorów i co najwyżej jeden destruktor.
+c) Destruktor może zwracać wartość int.
+d) Konstruktor musi być zawsze publiczny.
+>>e) Destruktor jest wywoływany automatycznie, gdy obiekt wychodzi poza zakres.
+f) Konstruktor kopiujący nie może być prywatny.
+
+
+[#220] (#220) Które stwierdzenia odnoszące się do metod klas w języku C++ są prawdziwe?
+>>a) Metody statyczne nie posiadają wskaźnika this.
+b) Wskaźnik this nie jest dostępny w metodach statycznych.
+c) Metody wirtualne nie mogą być prywatne.
+d) Każda metoda musi być wirtualna.
+>>e) Metody stałe (const) nie mogą modyfikować pól klasy (poza polami mutable).
+f) Metody statyczne mogą wywoływać metody niestatyczne bez obiektu.
+
+
+[#221] (#221) Zadeklarowano dwie klasy języka C++
+class A{
+    int value;
+public:
+       A(int _v):value(_v){}
+       int getValue(){return value;}
+       const char*getName(){return "AAA";}
+};
+
+oraz
+
+class B:public A {
+public:
+// konstruktor
+
+       const char*getName(){return "B";}
+};
+
+Utworzono obiekt klasy B za pomocą następującej instrukcji:
+A*pa=new B();
+
+Która implementacja konstruktora klasy B jest poprawna?
+>>a) Konstruktor klasy pochodnej musi wywołać konstruktor klasy bazowej w liście inicjalizacyjnej.
+b) B::B(){super(0);}
+c) B::B(){A(0);}
+d) B::B(){this->A(0);}
+>>e) Jeśli klasa bazowa nie ma konstruktora domyślnego, jawne wywołanie jest wymagane.
+f) Klasa B automatycznie dziedziczy wszystkie pola prywatne klasy A jako publiczne.
+
+
+[#222] (#222) Zadeklarowano cztery klasy języka C++
+class A{
+public:
+    A(){std::cout<<"A";}
+};
+
+class B{
+public:
+     B(){std::cout<<"B";}
+};
+
+class C{
+    A a;
+public:
+     C(){std::cout<<"C";}
+};
+
+class D : public C{
+public:
+    B b;
+     D(){std::cout<<"D";}
+};
+
+Jaka jest kolejność wywołania konstruktorów przy tworzeniu obiektu klasy D?
+>>a) Najpierw baza (C), potem pola (B), potem ciało konstruktora (D). Wewnątrz C: pole (A), potem ciało (C). Zatem: A, C, B, D.
+b) Konstruktor B zostanie wywołany przed konstruktorem klasy C.
+c) B, A, C, D.
+d) D, B, C, A.
+e) Kolejność zależy od kolejności deklaracji w pliku nagłówkowym.
+f) Wszystkie konstruktory are wywoływane równolegle.
+
+
+[#223] (#223) Zadeklarowano trzy klasy języka C++.
+class A {
+public:
+     virtual ~A(){f();}
+     virtual void f(){std::cout<<"A";}
+};
+
+class B:public A {
+public:
+     ~B(){f();}
+};
+
+class C:public B {
+public:
+     ~C(){f();}
+     void f(){std::cout<<"C";}
+};
+
+Zaimplementowano następującą funkcję main()
+int main(){
+     A* ptr = new C();
+     delete ptr;
+     return 0;
+}
+
+Przy usuwaniu obiektu wołany jest jego destruktor. Które stwierdzenia dotyczące uruchamianych destruktorów są prawdziwe?
+>>a) Jeśli klasa bazowa ma wirtualny destruktor, destruktory wywołają się od najbardziej pochodnej do bazy.
+b) Wpierw zostanie uruchomiony destruktor A, potem B, potem C.
+c) Wywoła się tylko destruktor klasy A.
+d) Destruktory wywołują się w kolejności alfabetycznej.
+>>e) Brak wirtualnego destruktora w klasie bazowej przy usuwaniu przez wskaźnik na bazę prowadzi do UB.
+f) Destruktor wirtualny jest wymagany tylko w klasach abstrakcyjnych.
+
+
+[#224] (#224) Które stwierdzenia odnoszące się do przeciążania operatorów w języku C++ są prawdziwe:
+>>a) Niektóre operatory (np. <<, >>) są zazwyczaj przeciążane jako funkcje zaprzyjaźnione (friend).
+b) Wszystkie operatory muszą być zaimplementowane jako metody klasy.
+c) Nie można przeciążać operatora +.
+d) Operatory logiczne nie podlegają przeciążaniu.
+>>e) Operatory takie jak =, [], (), -> muszą być zaimplementowane jako metody klasy.
+f) Można tworzyć nowe operatory, np. **.
+
+
+[#225] (#225) Wybierz poprawne stwierdzenia odnoszące się do obiektów funkcyjnych w języku C++
+>>a) To obiekty klas, które mają przeciążony operator nawiasów operator().
+b) Obiekty funkcyjne to obiekty klasy, która implementuje operator wywołania funkcji.
+c) Są to wskaźniki do funkcji statycznych.
+d) Można je tworzyć tylko za pomocą słowa kluczowego function.
+>>e) Funktory mogą przechowywać stan między wywołaniami.
+f) Są wolniejsze od zwykłych wskaźników do funkcji.
+
+
+[#226] (#226) Które stwierdzenia odnoszące się do mechanizmu wyjątków w języku C++ są prawdziwe?
+>>a) Podczas "odwijania stosu" niszczone są obiekty lokalne poprzez wywołanie ich destruktorów.
+b) Podczas obsługi wyjątków zwalniana jest pamięć stosu oraz wołane są destruktory obiektów.
+c) Wyjątki nie mogą być rzucane w konstruktorach.
+d) Każdy wyjątek musi dziedziczyć po klasie std::exception.
+>>e) Rzucenie wyjątku w destruktorze podczas odwijania stosu powoduje wywołanie std::terminate.
+f) Blok catch(...) łapie tylko wyjątki typu int.
+
+
+[#227] (#227) Wybierz poprawne stwierdzenia odnoszące się do kontenerów języka C++
+>>a) std::list to lista dwukierunkowa, zapewnia stały czas O(1) wstawiania na obu końcach.
+b) Szablon std::list umożliwia dodawanie elementów na początku i końcu listy.
+c) std::vector zapewnia stały czas wstawiania w dowolnym miejscu.
+d) std::map przechowuje elementy w sposób nieposortowany.
+>>e) std::vector zapewnia stały czas dostępu O(1) do dowolnego elementu.
+f) std::deque nie pozwala na wstawianie na początku.
+
+
+[#228] (#228) Załóżmy, że A jest klasą języka C++. Jakie warunki muszą być spełnione, aby móc przechowywać obiekty tej klasy w kontenerze std::set lub
+używać ich jako klucze w std::map?
+>>a) Wymagają, aby klucze posiadały zdefiniowaną relację ścisłego słabego porządku.
+b) muszą być zdefiniowane operatory boolowskie < , == oraz >.
+c) klucze muszą być typu całkowitego.
+d) obiekty muszą dziedziczyć po klasie Comparable.
+>>e) Są zazwyczaj implementowane jako drzewa czerwono-czarne.
+f) Zapewniają średni czas wyszukiwania O(1).
+
+
+[#229] (#229) Które stwierdzenia odnoszące się do iteratorów w C++ są prawdziwe
+>>a) std::vector i std::deque posiadają iteratory swobodnego dostępu, a std::list tylko dwukierunkowe.
+b) Iterator kontenera std::list umożliwia dostęp swobodny.
+c) Iteratory nie mogą być porównywane.
+d) Każdy iterator można przesunąć o n pozycji w czasie O(1).
+>>e) Iteratory kontenerów asocjacyjnych (np. std::set) nie są iteratorami swobodnego dostępu.
+f) Iterator end() wskazuje na ostatni element kontenera.
+
+
+[#230] (#230) Które stwierdzenia odnoszące się do wyrażeń lambda w języku C++ są prawdziwe
+>>a) Każde wyrażenie lambda ma unikalny, nienazwany typ generowany przez kompilator.
+b) Wynikiem kompilacji identycznych wyrażeń lambda jest jeden współdzielony obiekt funkcyjny.
+c) Lambdy nie mogą przechwytywać zmiennych przez referencję.
+d) Lambdy są dostępne od standardu C++98.
+>>e) Składnia [=] oznacza przechwycenie wszystkich zmiennych lokalnych przez kopię.
+f) Lambdy nie mogą być używane jako argumenty funkcji STL.
+
+
+[#231] (#231) Znaczniki semantyczne w HTML5:
+>>a) <article>, <section>, <nav>, <header>, <footer>.
+b) div
+c) span
+d) table
+e) <main>, <aside>, <figure>.
+f) <font>, <center>, <bold>.
+
+
+[#232] (#232) Jakich znaczników HTML5 użyjesz do wyświetlenia zawartości pliku video?
+>>a) <video>
+b) file
+c) media
+d) object
+e) <embed>
+f) <source> (używany wewnątrz <video>).
+
+
+[#233] (#233) Który element może być użyty w HTML5 do specyfikacji linku nawigacyjnego?
+>>a) <nav> (kontener dla linków) oraz <a> (sam link).
+b) navigation
+c) link
+d) anchor
+e) <menu>
+f) <href>
+
+
+[#234] (#234) Atrybut for w znaczniku <label>:
+>>a) Służy do powiązania etykiety z konkretnym elementem formularza (poprzez jego id).
+b) aby etykieta była aktywna.
+c) określa czas wyświetlania etykiety.
+d) służy do stylowania w CSS.
+e) pozwala na kliknięcie w etykietę w celu aktywacji pola.
+f) jest wymagany dla każdego znacznika <p>.
+
+
+[#235] (#235) Aplikacje Single Page Application (SPA):
+>>a) Cała logika i renderowanie widoków odbywa się głównie po stronie klienta.
+b) zarządzanie stanem aplikacji realizowane jest po stronie frontendu.
+c) wymagają przeładowania całej strony przy każdej nawigacji.
+d) nie mogą korzystać z API.
+>>e) Przykładowe frameworki to React, Angular, Vue.
+f) Są zawsze indeksowane przez wyszukiwarki lepiej niż strony statyczne.
+
+
+[#236] (#236) Jakich operacji HTTP możesz użyć do aktualizacji części danych istniejącego już użytkownika?
+>>a) PATCH (częściowa aktualizacja), PUT (pełna zamiana).
+b) PATCH
+c) POST
+d) UPDATE
+e) DELETE
+f) OPTIONS
+
+
+[#237] (#237) Który z poniższych adresów API ( według konwencji REST API) powinien być użyty do zwrócenia informacji o wszystkich samochodach
+użytkownika posiadającego id równe 4?
+>>a) /users/4/cars
+b) /users?id=4/cars/all
+c) /get_all_cars_for_user_4
+d) /cars/user/4
+e) /users/4/actions/get-cars
+f) /api/v1/users/4/cars
+
+
+[#238] (#238) Poprawny format JSON:
+>>a) { "user": "Jan Kowalski", "age": 100 }
+b) { "user" : Jan Kowalski, "age": 100 }
+c) { user: "Jan Kowalski", age: 100 }
+d) [ "user": "Jan Kowalski" ]
+e) { 'user': 'Jan Kowalski' }
+f) { "user": "Jan", "data": [1, 2, 3] }
+
+
+[#239] (#239) Responsywność (Responsive Web Design):
+>>a) Technika projektowania stron tak, aby ich wygląd dostosowywał się do rozmiaru ekranu.
+b) zapewnia dostosowanie wyglądu aplikacji w kontekście potrzeb użytkownika.
+c) oznacza szybkie reagowanie serwera na zapytania.
+d) dotyczy tylko aplikacji mobilnych.
+>>e) Wykorzystuje elastyczne siatki (grid), elastyczne obrazy oraz Media Queries.
+f) Wymaga tworzenia oddzielnej strony pod adresem m.domena.pl.
+
+
+[#240] (#240) Nowoczesne frameworki JavaScript (JavaScript frameworks) takie jak Angular, React czy Vue
+>>a) Wykorzystują komponentowe podejście do budowy interfejsu.
+b) wykorzystują wiązania dwukierunkowe do synchronizacji.
+c) służą wyłącznie do stylowania stron.
+d) nie pozwalają na używanie zewnętrznych bibliotek.
+>>e) Pozwalają na deklaratywne definiowanie interfejsu użytkownika.
+f) Wymaga znajomości języka Java.
+
+
+[#241] (#241) Node.js:
+>>a) Jest środowiskiem uruchomieniowym JavaScript opartym na silniku V8.
+b) implementuje tylko operacje asynchroniczne.
+c) jest frameworkiem CSS.
+d) służy do tworzenia wyłącznie aplikacji desktopowych.
+>>e) Wykorzystuje model Event Loop do obsługi wielu połączeń jednocześnie.
+f) Jest językiem programowania kompilowanym do kodu maszynowego.
+
+
+[#242] (#242) Zapisano następujący kod źródłowy w języku Java:
+Class C {
+public static void main(String[] args) {
+int[]a1[]=new int[3][3]; //3
+int a2[4]={3,4,5,6}; //4
+
+int a2[5]; //5
+}}
+Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?
+>>a) int[] a = new int[5]; (poprawna deklaracja).
+b) Błąd kompilacji w liniach 3,4,5.
+c) Wszystkie linie są poprawne.
+d) Tablice w Javie mają dynamiczny rozmiar.
+>>e) Rozmiar tablicy jest ustalany w momencie tworzenia (new) i nie może być zmieniony.
+f) tablica.length() zwraca liczbę elementów.
+
+
+[#243] (#243) Zapisano następujący kod źródłowy w języku Java:
+public class A extends Thread {
+
+public int i;
+public void run() { i = 1; }
+public static void main(String[] args) throws Exception {
+A a = new A();
+>>a) Aby uruchomić wątek, należy wywołać metodę start(), która wywoła run().
+b) start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i);
+c) Nie wypisze nic.
+d) Wypisze "11".
+>>e) Można implementować interfejs Runnable lub dziedziczyć po klasie Thread.
+f) Metoda run() uruchamia nowy wątek w systemie operacyjnym.
+
+
+[#244] (#244) Zapisano następujący kod źródłowy w języku Java:
+class C{
+public static void main(String[] args) {
+ try {
+     try {
+       try {}
+       catch(RuntimeException e){}
+     }
+     catch(Exception e) {}
+ }
+ catch(NullPointerException e) {}
+ finally {
+   System.out.println("finally");
+}
+}}
+Jaki jest rezultat kompilacji i wykonania programu?
+>>a) Blok finally wykonuje się zawsze, niezależnie od tego, czy wystąpił wyjątek.
+b) Runtime Exception
+c) Wypisze "finally".
+d) Błąd kompilacji.
+>>e) Blok finally jest często używany do zwalniania zasobów.
+f) Blok catch musi zawsze występować po bloku finally.
+
+
+[#245] (#245) Zapisano następujący kod źródłowy w języku Java:
+public class C {
+        public static void main ( String a[]) {
+            Thread t = Thread.currentThread ( ) ;
+                t.setPriority(-1);
+                System.out.println("Done!");
+        }
+}
+
+Jaki będzie rezultat kompilacji i wykonania programu?
+>>a) Priorytet musi mieścić się w zakresie od Thread.MIN_PRIORITY (1) do Thread.MAX_PRIORITY (10).
+b) Runtime Exception
+c) Done!
+d) Błąd kompilacji.
+e) Wartość priorytetu 0 jest dozwolona.
+f) Wyższy priorytet gwarantuje, że wątek zakończy się szybciej.
+
+
+[#246] (#246) Zapisano następujący kod źródłowy w języku Java:
+interface I{
+void f1(); // 1
+
+public void f2(); // 2
+protected void f3(); // 3
+private void f4(); // 4
+
+}
+Które linie generują błędy kompilacji? (w komentarzach podany numery linii)
+>>a) W klasycznych interfejsach metody są domyślnie public abstract.
+b) Błąd kompilacji w liniach 1,2,3,4.
+c) Tylko linia 3 i 4 generują błędy.
+d) Interfejsy nie mogą mieć metod.
+>>e) Od Javy 8 interfejsy mogą posiadać metody domyślne (default) i statyczne.
+f) Metody w interfejsach mogą być final.
+
+
+[#247] (#247) Zapisano następujący kod źródłowy w języku Java:
+class C {
+static int s;
+public static void main(String a[]){
+
+    C obj=new C();
+    obj.m1();
+    System.out.println(s);
+}
+
+void m1() {
+    int x=1;
+    m2(x);
+
+    System.out.println(x+"");
+}
+void m2(int x){
+    x=x*2;
+
+    s=x;
+}
+}
+
+Jaki jest rezultat kompilacji i wykonania programu?
+>>a) Java zawsze przekazuje argumenty przez wartość.
+b) Wypisze: "2,0"
+c) Wypisze: "1 2".
+d) Wypisze: "2 2".
+>>e) Dla obiektów przekazywana jest wartość referencji (kopia wskaźnika).
+f) Słowo kluczowe 'ref' pozwala na przekazywanie przez referencję.
+
+
+[#248] (#248) Zapisano następujący kod źródłowy w języku Java:
+class C {
+
+public static void main(String[] args) {
+int i1=1;
+switch(i1){
+
+case 1:
+System.out.println("one ");
+case 2:
+System.out.println("two ");
+
+case 3:
+System.out.println("three ");
+}}}
+
+Jaki jest rezultat kompilacji i wykonania programu?
+>>a) Po dopasowaniu case, wykonają się wszystkie kolejne instrukcje (fall-through).
+b) Wypisze: "one "
+c) Wypisze: "one two three "
+d) Wypisze: "one " i zakończy.
+e) Switch obsługuje tylko typy całkowite (int, long).
+f) Od Javy 7 switch obsługuje typ String.
+
+
+[#249] (#249) Zapisano następujący kod źródłowy w języku Java:
+class C1 {
+
+static interface I {
+static class C2 {}
+}
+
+public static void main(String a[]) {
+C1.I.C2 ob1=new C1.I.C2();
+System.out.println("obj created");
+}
+
+}
+Jaki jest rezultat kompilacji i wykonania programu?
+>>a) Interfejsy mogą zawierać klasy statyczne.
+b) Błąd kompilacji
+c) Wypisze: "obj created"
+d) Interfejsy nie mogą mieć metod main.
+e) Klasy wewnętrzne nie mogą być statyczne.
+f) Klasa wewnętrzna ma dostęp do prywatnych pól klasy zewnętrznej.
+
+
+[#250] (#250) Zapisano następujący kod źródłowy w języku Java:
+class C1 {
+static class C2 {
+
+static int i1;
+}
+public static void main(String a[]) {
+System.out.println(C1.C2.i1);
+
+}
+}
+Jaki jest rezultat kompilacji i wykonania programu?
+>>a) Pola statyczne są inicjalizowane wartościami domyślnymi (0 dla int).
+b) Wypisze: "0"
+c) Błąd kompilacji.
+d) Runtime Exception.
+e) Klasa statyczna wymaga obiektu klasy zewnętrznej do utworzenia instancji.
+f) Klasa statyczna wewnętrzna może dziedziczyć po klasie zewnętrznej.
+
+
+[#251] (#251) Ile obiektów (instancji klasy StringBuffer) zostanie utworzonych w wyniku wykonania poniższego kodu w języku Java:
+StringBuffer s1 = new StringBuffer("abc");
+StringBuffer s2 = s1;
+StringBuffer s3 = new StringBuffer("abc");
+>>a) 2 (s1 tworzy nowy obiekt, s3 tworzy drugi nowy obiekt).
+b) 1
+c) 3
+d) 0
+e) 4
+f) StringBuffer nie jest klasą w Javie.
+
+
+[#252] (#252) Która z poniższych metod jest statyczną metodą w klasie Thread dostępnej w standardowym API dla języka Java?
+>>a) sleep, yield, currentThread, interrupted.
+b) join
+c) start
+d) run
+e) wait
+f) notify
+
+
+[#253] (#253) Zapisano poniższy kod źródłowy w języku Java:
+class c1 {
+    public void m1() {
+     System.out.println("m1 w klasie C1");
+    }
+}
+
+class c2 {
+ public c1 m1() {
+     return new c1(){
+       public void m1() {
+         System.out.println("m1 w klasie anonimowej");
+     }
+}
+
+}
+public static void main(String a[]) {
+ c1 ob1 =new c2().m1();
+ ob1.m1();
+}}
+
+Jaki będzie wynik kompilacji i wykonania tego kodu jako programu?
+>>a) Klasa anonimowa nadpisuje metodę, więc zostanie wywołana wersja z klasy anonimowej.
+b) Program wypisze łańcuch: "m1 w klasie anonimowej"
+c) Program wypisze: "m1 w klasie C1"
+d) Błąd kompilacji.
+e) Klasy anonimowe nie mogą implementować interfejsów.
+f) Klasa anonimowa może mieć własny konstruktor.
+
+
+[#254] (#254) Zapisano poniższy kod źródłowy w języku Java:class C{
+int i;
+
+public static void main (String[] args) {
+int i; //1
+private int a = 1; //2
+
+protected int b = 1; //3
+public int c = 1; //4
+System.out.println(a+b+c); //5
+}}
+
+Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczony numery lini)?
+>>a) Zmienne lokalne nie mogą mieć modyfikatorów public, private, protected.
+b) Wykonanie kodu spowoduje wyprowadzenie wyniku: "3"
+c) Błąd kompilacji w liniach 2, 3, 4.
+d) Wypisze "1".
+e) Zmienne lokalne mogą być oznaczone jako final.
+f) Zmienne lokalne są widoczne w całej klasie.
+
+
+[#255] (#255) Zapisano poniższy kod źródłowy w języku Java:
+public class Command {
+
+public static void main (String[] a1) {
+System.out.print(a1[1] + a1[2] + a1[3]);
+}}
+Jaki jest wynik próby kompilacji i wykonania powyższego programu przy pomocy poniższego polecenia?
+polecenie: java Command A B C
+>>a) Indeksowanie zaczyna się od 0.
+b) Runtime Exception
+c) ABC
+d) Błąd kompilacji.
+e) args[0] zawsze przechowuje nazwę uruchomionego programu.
+f) Tablica args może być pusta (length == 0).
+
+
+[#256] (#256) Zapisano poniższy kod źródłowy w języku Java:
+class C{
+static String m(int i) {return "int";}
+static String m(float i) {return "float";}
+public static void main (String[] args) {
+long a1 = 1; double b1 = 2;
+System.out.print(m(a1)+","+ m(b1));
+}}
+Jaki będzie rezultat kompilacji i wykonania programu?
+>>a) long może być niejawnie konwertowany na float, ale double nie pasuje do float bez rzutowania.
+b) Kompilacja tego kodu zakończy się błędem.
+c) Wypisze: "int,float".
+d) Wypisze: "float,float".
+e) Java nie obsługuje przeciążania metod.
+f) Typ byte jest automatycznie promowany do char.
+
+
+[#257] (#257) Wzorzec architektury Model-View-Controller (MVC) w technologii ASP .NET Core MVC obejmuje:
+>>a) Modele (dane), Widoki (interfejs), Kontrolery (logika).
+b) Warstwę modeli - warstwa definiująca strukturę danych.
+c) Kontrolery służą do stylowania stron.
+d) Widoki odpowiadają za dostęp do bazy danych.
+>>e) Kontroler wybiera odpowiedni widok i przekazuje mu dane z modelu.
+f) MVC jest wzorcem wyłącznie dla aplikacji desktopowych.
+
+
+[#258] (#258) Aby przechowywać stan aplikacji webowej (dane ulotne, których nie chcemy utrwalać w bazie danych) w ASP.NET CORE MVC można
+użyć:
+>>a) Session, Cookies, TempData, QueryString.
+b) Stanu sesji (HttpContext.Session)
+c) Tylko w bazie danych SQL Server.
+d) W plikach tekstowych na serwerze.
+>>e) View State nie jest używany w ASP.NET Core.
+f) Protokół HTTP jest stanowy z natury.
+
+
+[#259] (#259) Przekazywanie przez referencję w C#:
+>>a) Słowa kluczowe ref oraz out pozwalają na przekazywanie typów wartościowych przez referencję.
+b) Przekazać do metody zmienną przez referencję przy pomocy słowa kluczowego ref.
+c) C# nie obsługuje referencji.
+d) Wszystkie obiekty są zawsze przekazywane przez kopię.
+>>e) 'out' wymaga, aby zmienna została zainicjalizowana wewnątrz metody.
+f) 'ref' nie wymaga inicjalizacji zmiennej przed przekazaniem.
+
+
+[#260] (#260) Czy w języku C# można tworzyć klasy zagnieżdżone (deklarować klasę wewnątrz deklaracji innej klasy)?
+>>a) Klasy zagnieżdżone mogą mieć dowolny modyfikator dostępu.
+b) Można deklarować, ale tylko klasy prywatne.
+c) C# nie pozwala na klasy zagnieżdżone.
+d) Klasy zagnieżdżone muszą być statyczne.
+e) Klasa zagnieżdżona ma dostęp do prywatnych pól klasy nadrzędnej.
+f) Klasa nadrzędna ma dostęp do prywatnych pól klasy zagnieżdżonej.
+
+
+[#261] (#261) Które z poniższych konwersji typów (rzutowań typów) w języku C# są dozwolone?
+>>a) Każda klasa dziedziczy po System.Object, więc upcasting jest zawsze bezpieczny.
+b) Rzutowanie referencji do obiektu dowolnej klasy na referencję do klasy "Object"
+c) Można rzutować string na int bezpośrednio.
+d) Rzutowanie w dół (downcasting) nigdy nie wymaga operatora rzutowania.
+>>e) Operator 'as' zwraca null, jeśli rzutowanie się nie powiedzie.
+f) Operator 'is' służy do konwersji typów.
+
+
+[#262] (#262) LINQ (Language Integrated Query):
+>>a) Składnia zintegrowana z językiem pozwalająca na operacje na kolekcjach.
+b) Language INtegrated Query - zestaw konstrukcji programistycznych.
+c) Biblioteka do obsługi grafiki 3D.
+d) Protokół komunikacji sieciowej.
+>>e) Pozwala na zapytania do różnych źródeł danych.
+f) Wymaga użycia słowa kluczowego 'foreach' do każdego zapytania.
+
+
+[#263] (#263) Deklaracja Polecenia najwyższego poziomu (Top-level statements) w języku C# podlega pewnym zasadom. Wśród nich są:
+>>a) Pozwalają na pisanie kodu bezpośrednio w pliku bez jawnej definicji klasy i Main.
+b) dyrektywa "using" musi znajdいる na początku pliku.
+c) Można mieć wiele plików z Top-level statements w jednym projekcie.
+d) Nie można w nich definiować metod.
+>>e) W projekcie może istnieć tylko jeden plik z Top-level statements.
+f) Są dostępne od wersji C# 1.0.
+
+
+[#264] (#264) Synchronizacja wątków w C#:
+>>a) lock, Monitor, Mutex, Semaphore, AutoResetEvent.
+b) semaforów ("Semaphore")
+c) tylko za pomocą instrukcji if.
+d) nie jest możliwa w .NET Core.
+>>e) Instrukcja lock jest cukrem składniowym dla Monitor.Enter i Monitor.Exit.
+f) Mutex działa tylko w obrębie jednego procesu.
+
+
+[#265] (#265) Do definiowania wyrażeń lambda (lambda expression) w C# używa się operatora:
+>>a) => (tzw. goes to).
+b) ->
+c) ::
+d) lambda
+e) :=
+f) .
+
+
+[#266] (#266) Zarejestrowanie zdarzenia (metody, która będzie wywołana w celu obsługi zdarzenia) w języku C# odbywa się za pomocą operatora:
+>>a) Używa się operatora += do dodania delegata.
+b) +=
+c) =
+d) subscribe
+e) add
+f) register
+
+
+[#267] (#267) Pula adresów IPv4 przewidziana dla grup IP Multicast (Klasa D adresów IPv4), to:
+>>a) Zakres od 224.0.0.0 do 239.255.255.255.
+b) 239.0.0.0 – 255.255.255.255
+c) 192.168.0.0 – 192.168.255.255
+d) 10.0.0.0 – 10.255.255.255
+e) 127.0.0.0 – 127.255.255.255
+f) 172.16.0.0 – 172.31.255.255
+
+
+[#268] (#268) Przykłady polskich nazw warstw w stosowanym w sieciach komputerowych modelu ISO OSI RM (ISO Open Systems Interconnection
+Reference Model), to:
+>>a) Fizyczna, Łącza danych, Sieciowa, Transportowa, Sesji, Prezentacji, Aplikacji.
+b) Warstwa sesji
+c) Warstwa sprzętowa
+d) Warstwa internetowa
+>>e) Warstwa 3 to warstwa sieciowa (np. protokół IP).
+f) Model ISO/OSI ma 4 warstwy.
+
+
+[#269] (#269) Protokół automatycznie eliminujący możliwość zapętlenia transmisji ramki typu broadcast w sieci Ethernet (powstania tzw. broadcast storm),
+to:
+>>a) Blokuje redundantne ścieżki w sieci Ethernet, tworząc strukturę drzewa bez pętli.
+b) STP (Spanning Tree Protocol)
+c) DHCP
+d) BGP
+e) Służy do automatycznej konfiguracji adresów IP.
+f) Działa w warstwie 3 modelu OSI.
+
+
+[#270] (#270) Sieć 210.210.210.192/26:
+>>a) Zakres adresów użytkowych: 210.210.210.193 - 210.210.210.254.
+b) 210.210.210.210
+c) 210.210.210.190
+d) 210.210.210.255
+>>e) Adres rozgłoszeniowy to 210.210.210.255.
+f) Maska podsieci to 255.255.255.0.
+
+
+[#271] (#271) Jakiej techniki przesyłania ruchu sieciowego poprzez ruter IP użyjesz, gdy w sieciach IP organizacji, w której pracujesz, zabrakło adresów
+IPv4 dla urządzeń, a dodatkowo urządzenia te nie powinny być bezpośrednio dostępne i adresowalne z Internetu?
+>>a) NAT (Network Address Translation).
+b) RPF (Reverse Path Forwarding)
+c) DNS
+d) ICMP
+e) ARP
+f) OSPF
+
+
+[#272] (#272) Tak zwana sól (ang. salt), czyli dane losowe dodawane do hasła podczas obliczania funkcji skrótu przechowywanej w systemach
+informatycznych, ma na celu:
+>>a) Unikalny ciąg znaków dodawany do hasła przed haszowaniem.
+b) utrudnienie sortowania haseł przez użytkowników.
+c) skrócenie czasu obliczania funkcji skrótu.
+d) umożliwienie odzyskania hasła w postaci jawnej.
+>>e) Chroni przed atakami z użyciem Rainbow Tables.
+f) Jest przechowywana w bezpiecznym module sprzętowym (HSM).
+
+
+[#273] (#273) Standard definiujący schemat dla certyfikatów służących do budowania struktury hierarchicznej infrastruktury klucza publicznego, stosowany
+na przykład w zabezpieczonych technologiach webowych, to:
+>>a) X.509
+b) H.323
+c) PKI-Standard
+d) SSL-Cert
+e) AES-256
+f) RSA-4096
+
+
+[#274] (#274) Protokół UDP:
+>>a) Jest bezpołączeniowy, nie gwarantuje dostarczenia pakietów.
+b) definiuje 16-to bitową adresację gniazd.
+c) zapewnia retransmisję zgubionych danych.
+d) wymaga nawiązania połączenia.
+>>e) Ma mniejszy narzut nagłówka niż TCP.
+f) Jest stosowany w protokole HTTP/1.1.
+
+
+[#275] (#275) Zapisana liczbowo wartość maski podsieci IPv4 dla adresu sieci: 5.5.5.0/30, to
+>>a) 255.255.255.252
+b) 255.255.255.0
+c) 255.255.255.248
+d) 255.255.255.192
+e) 255.255.255.254
+f) 255.255.255.128
+
+
+[#276] (#276) Czy protokół TCP, stosowany w komunikacji w sieciach komputerowych, wymusza swoimi uwarunkowaniami technicznymi limit długości
+transmisji danych, przypadających na jedno połączenie?
+>>a) TCP traktuje dane jako strumień bajtów bez narzuconego limitu całkowitej długości.
+b) tak, jest to zawsze 4GB.
+c) zależy od wersji systemu operacyjnego.
+d) wynosi 64 KB na segment.
+e) Wynosi 2^64 bajtów.
+f) Jest ograniczony rozmiarem okna (window size).
+
+
+[#277] (#277) Długość unikatowego adresu MAC (Media Access Control), stosowanego w interfejsach NIC (Network Interface Card) warstwy 2 ISO OSI
+(na przykład w Ethernet), to:
+>>a) 48 bitów (6 bajtów).
+b) 32 bity
+c) 64 bity
+d) 128 bitów
+e) 24 bity
+f) 16 bitów
+
+
+[#278] (#278) Światłowód, w którym wiązka światła o danej (takiej samej) długości fali może przemieszczać się tylko jedną drogą i nie można przesłać
+kilku wiązek o takiej samej długości fali przez ten światłowód jednocześnie, oznaczamy określeniem:
+>>a) Posiada bardzo cienki rdzeń, co pozwala na przesyłanie tylko jednego modu światła.
+b) jednomodowy
+c) wielomodowy
+d) gradientowy
+>>e) Pozwala na transmisję na znacznie większe odległości niż wielomodowy.
+f) Jest tańszy w instalacji niż skrętka miedziana.
+
+
+[#279] (#279) Przykłady wykorzystywanych obecnie szeregowych magistral cyfrowych, to:
+>>a) SPI, I2C, UART, USB, CAN.
+b) SPI, I2C
+c) PCI Express
+d) ATA
+e) SCSI
+f) ISA
+
+
+[#280] (#280) Przykłady specyfikacji protokołów komunikacyjnych dla sieci bezprzewodowych lub systemów komunikacji bezprzewodowej to:
+>>a) Wi-Fi (802.11), Bluetooth, ZigBee, LoRaWAN, 5G.
+b) LoRaWAN
+c) Ethernet
+d) RS-232
+e) Token Ring
+f) Frame Relay
+
+
+[#281] (#281) Adres IPv6 w sieci 5::0/64:
+>>a) 5::1, 5::abcd, itp.
+b) 1::1
+c) 5:0:0:0:0:0:0:1
+d) ::5
+e) 5::g123
+f) 5::1:2:3:4:5
+
+
+[#282] (#282) Algorytm węgierski:
+>>a) Służy do rozwiązywania zagadnienia przydziału w czasie wielomianowym O(n^3).
+b) Ma niewielomianową złożoność obliczeniową.
+c) Dotyczy tylko grafów niespójnych.
+d) Służy do znajdowania najkrótszej ścieżki.
+e) Jest algorytmem zachłannym.
+f) Wymaga macierzy o wagach ujemnych.
+
+
+[#283] (#283) Liczbę rozwiązań optymalnych w programowaniu liniowym:
+>>a) Może wynosić zero, jedno lub nieskończenie wiele.
+b) Zero.
+c) Zawsze dokładnie jedno.
+d) Zawsze skończona liczba.
+e) Zawsze co najmniej dwa.
+f) Zależy od liczby procesorów.
+
+
+[#284] (#284) Metoda podziału i ograniczeń (ang. branch and bound) opiera się na porównywaniu dwóch wartości:
+      dolnego ograniczenia funkcji celu (ang. lower bound)
+      górnego ograniczenia funkcji celu (ang. upper bound)
+
+Czym są te wartości?
+>>a) LB to najlepszy możliwy wynik w poddrzewie, UB to wartość najlepszego dotychczas znalezionego rozwiązania.
+b) Górne ograniczenie liczy się dla konkretnego węzła w drzewie przeszukiwania.
+c) LB i UB są zawsze równe.
+d) Służy tylko do problemów bez ograniczeń.
+>>e) Pozwala na przeszukiwanie tylko obiecujących gałęzi drzewa rozwiązań.
+f) Jest stosowana wyłącznie w sortowaniu.
+
+
+[#285] (#285) Metoda ścieżki krytycznej (CPM):
+>>a) Pozwala wyznaczyć najdłuższy ciąg zadań zależnych.
+b) Do określenia, które zadania mają szczególny wpływ na czas realizacji.
+c) Służy do optymalizacji kosztów transportu.
+d) Wyznacza zadania o największym zapasie czasu.
+>>e) Zadania na ścieżce krytycznej mają zerowy zapas czasu (slack).
+f) Jest metodą probabilistyczną (jak PERT).
+
+
+[#286] (#286) Metoda wielkich M (ang. big-M method) pozwala na znalezienie pierwszego rozwiązania dla algorytmu symplex. Zaznacz prawdziwe zdania
+o tej metodzie:
+>>a) Polega na wprowadzeniu sztucznych zmiennych z bardzo dużym kosztem M.
+b) Wymaga dodania dodatkowych ograniczeń na istniejące zmienne.
+c) Służy do rozwiązywania problemów nieliniowych.
+d) Eliminuje potrzebę stosowania zmiennych swobodnych.
+e) M jest zawsze równe 1,000,000.
+f) Jest stosowana tylko w problemach transportowych.
+
+
+[#287] (#287) Metody rozwiązywania zagadnienia przydziału:
+>>a) Algorytm węgierski, algorytmy przepływowe, programowanie całkowitoliczbowe.
+b) Dowolny algorytm rozwiązujący problemy programowania całkowitoliczbowego.
+c) Tylko metoda bisekcji.
+d) Algorytm Dijkstry.
+e) Metoda najmniejszych kwadratów.
+f) Algorytm Newtona.
+
+
+[#288] (#288) Postać kanoniczna (równościowa) zadania programowania liniowego:
+>>a) Wszystkie ograniczenia są równościami, a wszystkie zmienne są nieujemne.
+b) Funkcja celu musi być maksymalizowana.
+c) Liczba zmiennych musi być równa liczbie ograniczeń.
+d) Macierz ograniczeń musi być kwadratowa.
+e) Nie dopuszcza zmiennych swobodnych.
+f) Jest jedyną postacią akceptowaną przez metodę graficzną.
+
+
+[#289] (#289) Dualność w programowaniu liniowym:
+>>a) Każdemu problemowi pierwotnemu odpowiada problem dualny.
+b) Wartość w optimum programu dualnego jest taka sama jak w pierwotnym.
+c) Problem dualny ma zawsze więcej zmiennych niż pierwotny.
+d) Jeśli problem pierwotny jest nieograniczony, to dualny ma rozwiązanie optymalne.
+>>e) Liczba zmiennych w problemie dualnym jest równa liczbie ograniczeń w problemie pierwotnym.
+f) Dualność nie zachodzi dla problemów minimalizacji.
+
+
+[#290] (#290) Relaksacja liniowa w metodzie podziału i ograniczeń:
+>>a) Polega na odrzuceniu wymogu całkowitoliczbowości zmiennych.
+b) Drzewo przeszukiwania w tym algorytmie jest drzewem binarnym.
+c) Zawsze daje rozwiązanie całkowitoliczbowe.
+d) Jest stosowana tylko w problemach transportowych.
+>>e) Rozwiązanie relaksacji daje ograniczenie dla problemu oryginalnego.
+f) Relaksacja liniowa jest problemem NP-trudnym.
+
+
+[#291] (#291) Relaksacja problemu w badaniach operacyjnych:
+>>a) To uproszczenie problemu, którego rozwiązanie daje oszacowanie wyniku problemu oryginalnego.
+b) Relaksacja ma na celu stworzenie nowego problemu, który jest prostszą wersją.
+c) Relaksacja zawsze prowadzi do tego samego rozwiązania co problem oryginalny.
+d) Polega na losowym wyborze zmiennych.
+e) Zawsze zwiększa liczbę ograniczeń.
+f) Jest stosowana tylko w programowaniu nieliniowym.
+
+
+[#292] (#292) Algorytm dwufazowy sympleks:
+>>a) Faza I znajduje rozwiązanie bazowe dopuszczalne, Faza II znajduje rozwiązanie optymalne.
+b) Pracuje dwufazowo, czyli rozwiązuje dwa modele.
+c) Jest stosowany tylko dla funkcji kwadratowych.
+d) Nie wymaga macierzy jednostkowej w bazie.
+e) Faza I zawsze kończy się sukcesem.
+f) Faza II jest opcjonalna.
+
+
+[#293] (#293) Zaznacz prawdziwe (udowodnione) zdania o złożoności obliczeniowej decyzyjnej wersji problemu plecakowego:
+>>a) Jest problemem NP-zupełnym.
+>>b) Należy do klasy NP.
+c) Jest rozstrzygalny w czasie logarytmicznym.
+d) Należy do klasy P.
+e) Jest problemem nierozstrzygalnym.
+f) Może być rozwiązany w czasie wielomianowym za pomocą programowania dynamicznego.
+
+
+[#294] (#294) Kodowanie 1 z n (One-Hot Encoding):
+>>a) Reprezentacja zmiennych kategorycznych jako wektorów binarnych.
+b) rodzaj zbioru danych, w którym tylko jedna kolumna ma istotne znaczenie.
+c) metoda kompresji obrazów.
+d) algorytm sortowania danych tekstowych.
+e) Służy do zamiany liczb zmiennoprzecinkowych na całkowite.
+>>f) Jest stosowane w sieciach neuronowych do reprezentacji klas.
+
+
+[#295] (#295) Które z poniższych poleceń są poprawne, zakładając że df jest obiektem DataFrame biblioteki Pandas?
+>>a) Pozwala na stosowanie różnych funkcji agregujących do wybranych kolumn DataFrame.
+>>b) df.agg({'one': 'mean', 'four': 'sum'})
+c) Służy do usuwania duplikatów.
+d) Nie przyjmuje słowników jako argumentów.
+e) Jest tożsama z metodą apply().
+f) Działa tylko na obiektach typu Series.
+
+
+[#296] (#296) Które z poniższych stwierdzeń są prawdziwe w odniesieniu do biblioteki Pandas?
+>>a) Realizuje operacje złączenia dwóch obiektów DataFrame na podstawie wspólnych kolumn.
+b) Polecenie merge pozwala złączyć dwa obiekty DataFrame poprzez porównanie wartości.
+c) Zawsze modyfikuje oryginalne obiekty w miejscu.
+d) Służy do pionowego łączenia tabel.
+>>e) Obsługuje typy złączeń: inner, left, right, outer.
+f) Wymaga, aby obie tabele miały identyczne indeksy.
+
+
+[#297] (#297) Zakładając że s jest obiektem Series biblioteki Pandas, polecenie s.map(x) spowoduje:
+>>a) Służy do mapowania wartości w Series na inne wartości.
+b) jeżeli x jest ciągiem znaków, odfiltrowanie tylko tych wartości.
+c) Zmienia nazwy kolumn w DataFrame.
+d) Oblicza średnią kroczącą.
+e) Mapuje wartości tylko typu tekstowego.
+f) Jest wolniejsza od pętli for w Pythonie.
+
+
+[#298] (#298) Sferyczne układy odniesienia (ang. spatial reference systems, coordinate reference systems), takie jak np. WGS-84:
+>>a) Modelują Ziemię jako elipsoidę lub sferę, używając szerokości i długości geograficznej.
+b) korzystają ze współrzędnych podanych w stopniach.
+c) Pozwalają na łatwe obliczanie powierzchni w metrach kwadratowych bez rzutowania.
+d) Są układami płaskimi.
+e) Są używane w systemie GPS.
+f) Nie uwzględniają spłaszczenia Ziemi na biegunach.
+
+
+[#299] (#299) Płaskie (izometryczne, rzutowane) układy odniesienia (ang. spatial reference systems, coordinate reference systems), takie jak np. PUWG
+2000:
+>>a) Powstają poprzez rzutowanie powierzchni elipsoidy na płaszczyznę.
+b) pozwalają na obliczenie odległości przy pomocy samego twierdzenia Pitagorasa.
+c) Nie wprowadzają żadnych zniekształceń odległości.
+d) Są używane wyłącznie w nawigacji morskiej.
+>>e) Używają współrzędnych kartezjańskich (X, Y) wyrażonych w metrach.
+f) Są identyczne na całym świecie.
+
+
+[#300] (#300) Optymalizacja czasu przetwarzania danych:
+>>a) Należy zoptymalizować algorytmy, użyć indeksowania, zrównoleglić obliczenia.
+b) zwiększyć pamięć wirtualną.
+c) zawsze kupić szybszy procesor.
+d) zmniejszyć liczbę kolorów w interfejsie.
+e) Wykorzystać wektoryzację operacji (np. w NumPy).
+f) Przenieść wszystkie dane do plików tekstowych.
+
+
+[#301] (#301) Jeżeli dane, przy ich analizie, nie mieszczą się w dostępnej pamięci RAM należy do ich przetwarzania:
+>>a) Należy stosować przetwarzanie strumieniowe (chunking), bazy danych lub systemy Out-of-Core.
+b) użyć bazy danych.
+c) zrezygnować z analizy części danych.
+d) wyłączyć system operacyjny.
+e) Zwiększyć rozmiar pliku wymiany (swap) do 1 TB.
+f) Użyć biblioteki Dask lub Apache Spark.
+
+
+[#302] (#302) Zakładając, że df jest obiektem typu DataFrame biblioteki Pandas, polecenie df.apply(moja_funkcja)spowoduje:
+>>a) Wywołuje funkcję moja_funkcja dla każdej kolumny lub każdego wiersza.
+b) uruchomienie raz funkcji moja_funkcja.
+c) Służy do filtrowania danych.
+d) Działa tylko na liczbach całkowitych.
+e) Zawsze zwraca obiekt typu Series.
+f) Jest najbardziej wydajnym sposobem przetwarzania danych w Pandas.
+
+
+[#303] (#303) Zakładając, że df jest obiektem typu DataFrame biblioteki Pandas, polecenie df.apply(moja_funkcja, axis=1)spowoduje:
+>>a) Wywołuje funkcję moja_funkcja dla każdego wiersza (row-wise).
+b) wywoływanie funkcji moja_funkcja za każdym razem gdy obiekt df zostanie zmodyfikowany.
+c) Wywołuje funkcję tylko dla pierwszej kolumny.
+d) Służy do transpozycji macierzy.
+e) Jest szybsze niż axis=0.
+f) Pozwala na dostęp do wielu kolumn jednocześnie wewnątrz funkcji.
+
+
+[#304] (#304) Które z poniższych sposobów przechowywania danych pozwalają na jawne określenie, czy dana wartość jest liczbą całkowitą, liczbą
+zmiennoprzecinkową czy tekstem?
+>>a) Formaty takie jak Parquet, Avro czy bazy danych SQL przechowują informacje o typach.
+b) plik JSON
+c) plik CSV
+d) plik tekstowy .txt
+e) Pliki binarne zawsze wymagają jawnego schematu.
+>>f) HDF5 obsługuje jawne typowanie.
+
+
+[#305] (#305) Obiekt GeoDataFrame w GeoPandas:
+>>a) Rozszerza DataFrame o kolumnę 'geometry', która przechowuje obiekty przestrzenne.
+b) zawiera dane geometryczne, a nie dane tekstowe ani numeryczne.
+>>c) Może zawierać zarówno dane atrybutowe, jak i przestrzenne.
+d) Nie obsługuje operacji złączeń.
+>>e) Wymaga zainstalowanej biblioteki Shapely.
+f) Każdy wiersz musi mieć geometrię tego samego typu.
+
+
+[#306] (#306) Jakie są standardowe metody używane do oceny modeli w nadzorowanym uczeniu maszynowym?
+>>a) Accuracy, Precision, Recall, F1-score, Macierz pomyłek, AUC-ROC.
+>>b) Macierz pomyłek.
+c) Średnia arytmetyczna wag neuronów.
+d) Liczba warstw w sieci.
+e) Czas trenowania modelu.
+f) Rozmiar pliku z modelem.
+
+
+[#307] (#307) Metoda Leave-One-Out (LOOCV):
+>>a) To wariant walidacji krzyżowej, gdzie testujemy model na jednym przykładzie, a trenujemy na n-1.
+b) To metoda doboru parametrów tylko w sieciach neuronowych.
+c) Służy do usuwania duplikatów ze zbioru.
+d) Jest bardzo szybka dla dużych zbiorów danych.
+>>e) Minimalizuje obciążenie (bias) estymatora błędu.
+>>f) Wymaga n-krotnego trenowania modelu.
+
+
+[#308] (#308) Funkcja aktywacji w sieciach neuronowych:
+>>a) Wprowadza nieliniowość do modelu.
+>>b) Funkcja, zgodnie z którą obliczane są wyjścia neuronów.
+c) Służy do inicjalizacji wag.
+d) Jest używana tylko w warstwie wejściowej.
+>>e) ReLU (Rectified Linear Unit) jest popularną funkcją aktywacji.
+f) Funkcja liniowa jest najczęściej stosowana w warstwach ukrytych.
+
+
+[#309] (#309) Niezbilansowany zbiór danych (Imbalanced Data):
+>>a) Sytuacja, w której jedna klasa jest znacznie liczniejsza od innych.
+>>b) Do walidacji powinniśmy zastosować metrykę F1.
+c) Należy zawsze usunąć nadmiarowe dane z klasy liczniejszej.
+d) Nie ma wpływu na proces uczenia.
+>>e) Można stosować techniki takie jak SMOTE (oversampling) lub undersampling.
+f) Accuracy jest najlepszą metryką w tym przypadku.
+
+
+[#310] (#310) Etykietowanie danych (Labeling):
+>>a) Proces przypisywania poprawnych odpowiedzi do danych wejściowych.
+b) Zawsze wykonywany jest automatycznie.
+>>c) Może być wykonywany ręcznie przez ekspertów.
+d) Dotyczy tylko danych numerycznych.
+e) Jest kluczowym etapem w uczeniu nienadzorowanym.
+>>f) Błędne etykiety (noise) obniżają jakość modelu.
+
+
+[#311] (#311) Epoka (Epoch) w uczeniu maszynowym:
+>>a) Jedno pełne przejście algorytmu przez cały zbiór treningowy.
+b) jednego cyklu, w którym pokazujemy sieci neuronowej wszystkie dane ze zbioru testowego.
+c) Czas potrzebny na wytrenowanie jednego neuronu.
+d) Liczba warstw w sieci głębokiej.
+e) Jest tożsama z jedną iteracją (batch).
+>>f) Zbyt duża liczba epok może prowadzić do overfittingu.
+
+
+[#312] (#312) Które z poniższych metod nie są zazwyczaj stosowane do oceny modeli w nadzorowanym uczeniu maszynowym?
+a) Obszar pod krzywą ROC (AUC-ROC).
+>>b) Współczynnik korelacji Pearsona.
+c) Accuracy.
+d) F1-score.
+e) Log Loss (Cross-Entropy).
+f) Średni błąd bezwzględny (MAE) dla regresji.
+
+
+[#313] (#313) Co można powiedzieć o modelu uczenia maszynowego w kontekście zjawiska nadmiernego dopasowania (przeuczenie, overfitting)?
+>>a) Model ma bardzo niską stratę na zbiorze treningowym, ale wysoką na testowym.
+>>b) Model uczenia maszynowego jest zbyt dobrze dopasowany do danych treningowych.
+c) Model jest zbyt prosty, aby opisać dane.
+d) Wynika z braku danych treningowych.
+>>e) Model "uczy się na pamięć" szumu w danych treningowych.
+f) Jest pożądane w systemach produkcyjnych.
+
+
+[#314] (#314) Czym może być spowodowane nadmiernie dopasowanie (przeuczenie, overfitting)?
+>>a) Zbyt duża liczba parametrów modelu w stosunku do małej liczby przykładów.
+>>b) Zbyt skomplikowany model w stosunku do ilości i charakteru dostępnych danych.
+>>c) Zbyt duża liczba epok trenowania.
+d) Zastosowanie regularyzacji.
+>>e) Brak zbioru walidacyjnego.
+f) Zbyt silne Dropout w sieciach neuronowych.
+
+
+[#315] (#315) Czym może być spowodowane niedouczenie (underfitting) modelu uczenia maszynowego?
+>>a) Model jest zbyt prosty, aby uchwycić zależności w danych.
+>>b) Zbyt krótkim czasem trenowania lub zbyt małą liczbą epok.
+c) Zbyt dużą liczbą cech (wymiarów).
+d) Użyciem zbyt skomplikowanej sieci neuronowej.
+>>e) Model ma wysoki błąd zarówno na zbiorze treningowym, jak i testowym.
+f) Można go naprawić poprzez dodanie regularyzacji L2.
+
+
+[#316] (#316) Jakie działania można podjąć, aby uniknąć nadmiernego dopasowania (przeuczenia, overfitting)?
+>>a) Regularyzacja (L1/L2), Dropout, Early Stopping, zwiększenie ilości danych.
+b) Zastosować większą liczbę cech.
+c) Zwiększyć liczbę warstw sieci.
+d) Usunąć zbiór walidacyjny.
+>>e) Zastosować Cross-Validation.
+f) Zmniejszyć siłę regularyzacji.
+
+
+[#317] (#317) Jakie działania można podjąć, aby uniknąć niedouczenia (underfitting)?
+>>a) Zwiększenie złożoności modelu, dodanie nowych cech, wydłużenie czasu trenowania.
+b) Użyć prostszych modeli.
+c) Zwiększyć siłę regularyzacji.
+d) Zmniejszyć liczbę neuronów w warstwach ukrytych.
+e) Usunąć szum z danych treningowych.
+>>f) Zastosować inżynierię cech (feature engineering).
+
+
+[#318] (#318) Jakie są przykłady zadań uczenia maszynowego stosowanych w uczeniu nadzorowanym?
+>>a) Klasyfikacja i Regresja.
+>>b) klasyfikacji
+c) Klasteryzacja (grupowanie).
+d) Redukcja wymiarowości.
+e) Wykrywanie anomalii (bez etykiet).
+>>f) Przewidywanie wartości ciągłych (regresja).
+
+
+[#319] (#319) Jakie są przykłady zadań uczenia maszynowego stosowanych w uczeniu nienadzorowanym?
+>>a) Klasteryzacja, Redukcja wymiarowości, Wykrywanie anomalii, Reguły asocjacyjne.
+>>b) redukcji wymiarowości
+c) Regresja logistyczna.
+d) Przewidywanie szeregów czasowych.
+>>e) Grupowanie podobnych klientów bez znajomości ich etykiet.
+f) Rozpoznawanie twarzy na zdjęciach (z etykietami).
+
+
+[#320] (#320) Jedną z podstawowych architektur systemów agentowych jest architektura BDI. W kontekście systemów agentowych skrót BDI jest
+wyjaśniany jako:
+>>a) Beliefs (Przekonania), Desires (Pragnienia), Intentions (Intencje).
+b) Belief-Desire-Intention
+c) Binary-Data-Interface
+d) Behavior-Driven-Integration
+e) Jest modelem architektury agentów inteligentnych.
+f) Służy do budowy baz danych.
+
+
+[#321] (#321) Odwracalność automatów komórkowych:
+>>a) Automat jest odwracalny, jeśli każda konfiguracja ma dokładnie jednego poprzednika.
+b) Dla automatów odwracalnych odwzorowanie realizowane przez funkcję przejścia nie może być bijekcją.
+c) Wszystkie automaty komórkowe są odwracalne.
+d) Odwracalność zależy od liczby stanów komórki.
+e) Gra w życie (Game of Life) jest automatem odwracalnym.
+f) Automaty odwracalne zachowują informację.
+
+
+[#322] (#322) Twórcy automatów komórkowych:
+>>a) John von Neumann oraz Stanisław Ulam.
+b) Jakob Laub oraz Philipp Lenard
+c) Alan Turing i Alonzo Church.
+d) Claude Shannon i Norbert Wiener.
+e) Stephen Wolfram.
+f) John Conway (twórca Gry w Życie).
+
+
+[#323] (#323) Sąsiedztwa w automatach komórkowych:
+>>a) Sąsiedztwo von Neumanna (4 sąsiadów) oraz sąsiedztwo Moore'a (8 sąsiadów).
+b) Dla siatki kwadratowej sąsiedztwo składające się z czterech komórek stykających się krawędziami nazywa się sąsiedztwem von Neumanna.
+c) Sąsiedztwo Moore'a obejmuje tylko komórki stykające się rogami.
+d) Sąsiedztwo jest zawsze definiowane dla całej siatki jednocześnie.
+e) Istnieją sąsiedztwa o większym promieniu (np. r=2).
+f) Sąsiedztwo von Neumanna obejmuje komórkę centralną.
+
+
+[#324] (#324) Emergencja w systemach złożonych:
+>>a) Zjawisko powstawania nowych, złożonych właściwości na poziomie makroskopowym.
+b) Otrzymywaniu całościowego obrazu makroskopowego systemu na podstawie działania mikroskopowych reguł.
+c) Polega na centralnym sterowaniu każdym elementem systemu.
+d) Jest synonimem chaosu deterministycznego.
+e) Przykładem jest formowanie się kluczy ptaków lub mrowisk.
+f) Wymaga skomplikowanych reguł dla każdego agenta.
+
+
+[#325] (#325) Najprostszy agent, który prowadzi prostą adaptację swojego działania w zależności od zmian środowiska (bez efektów pamięci i uczenia się)
+określany jest jako:
+>>a) Podejmuje decyzje wyłącznie na podstawie aktualnego stanu środowiska.
+b) Agent reaktywny
+c) Posiada rozbudowaną pamięć długotrwałą.
+d) Planuje swoje działania z dużym wyprzedzeniem.
+e) Nie posiada wewnętrznego modelu świata.
+f) Jest przykładem agenta BDI.
+
+
+[#326] (#326) Najważniejszymi własnościami systemów złożonych (ang. complex systems) w domenie skali i czasu są:
+>>a) Emergencja, samoorganizacja, nieliniowość, sprzężenia zwrotne.
+b) Emergencja
+c) Przewidywalność długoterminowa.
+d) Centralne zarządzanie.
+e) Adaptacyjność.
+f) Wrażliwość na warunki początkowe (efekt motyla).
+
+
+[#327] (#327) Wskaż które zdania są prawdziwe w odniesieniu do homogenicznego i synchronicznego Automatu Komórkowego (CA)?
+>>a) Homogeniczny - te same reguły; Synchroniczny - jednoczesna aktualizacja.
+>>b) Gra Life zaproponowana przez matematyka Johna Conwaya jest przykładem homogenicznego i synchronicznego automatu komórkowego.
+c) W grze Life reguły zmieniają się w każdej iteracji.
+d) Gra Life wymaga interwencji użytkownika w każdym kroku.
+>>e) Wszystkie komórki w automacie synchronicznym zmieniają stan w tym samym momencie zegarowym.
+f) Homogeniczność oznacza, że siatka musi być nieskończona.
+
+
+[#328] (#328) Własności homogenicznego automatu komórkowego:
+>>a) Identyczna reguła przejścia, identyczny zbiór stanów i identyczny kształt sąsiedztwa dla każdej komórki.
+b) Reguła przejścia identyczna dla całej siatki.
+c) Każda komórka ma inną liczbę sąsiadów.
+d) Siatka musi być zawsze skończona.
+e) Zapewnia niezmienniczość reguł względem przesunięcia (translativity).
+f) Stany komórek muszą być liczbami binarnymi.
+
+
+[#329] (#329) Niehomogeniczny Automat Komórkowy:
+>>a) Może posiadać różne reguły przejścia lub różne zbiory stanów dla poszczególnych komórek.
+b) Niehomogeniczny automat komórkowy wyłącznie charakteryzuje się różnymi zbiorami stanów.
+c) Jest zawsze odwracalny.
+d) Nie może być symulowany na komputerze.
+e) Pozwala na modelowanie środowisk o zróżnicowanych właściwościach fizycznych.
+f) Wymaga asynchronicznej aktualizacji.
+
+
+[#330] (#330) Symulacja zdarzeń dyskretnych (DES):
+>>a) Modeluje system jako sekwencyjną listę zdarzeń w czasie.
+b) DES stanowią alternatywną metodę modelowania wobec systemów Agent Based Modeling (ABM).
+c) Czas in DES płynie w sposób ciągły.
+d) Służy wyłącznie do modelowania procesów chemicznych.
+e) Zdarzenia są umieszczane w kolejce priorytetowej (event list).
+f) Stan systemu zmienia się płynnie między zdarzeniami.
+
+
+[#331] (#331) Periodyczne warunki brzegowe dla Automatu Komórkowego oznaczają następujące własności dla obiektu poruszającego się po siatce:
+>>a) Przeciwległe krawędzie siatki są ze sobą połączone.
+b) Poruszający się obiekt definitywnie znika z siatki po osiągnięciu granicznych komórek.
+c) Powodują odbicie się obiektu od ściany.
+d) Są stosowane tylko w automatach 1D.
+e) Siatka 2D z takimi warunkami ma topologię torusa.
+f) Eliminują efekty brzegowe w symulacjach.
+
+
+[#332] (#332) Algorytmy poszukujące ekstremum funkcji:
+>>a) Gradient Descent, Adam, Algorytmy Genetyczne, Simulated Annealing.
+>>b) Stochastic Gradient Descent
+c) K-Means
+d) PCA
+>>e) PSO (Particle Swarm Optimization).
+f) BFS (Breadth-First Search).
+
+
+[#333] (#333) Algorytmy redukcji wymiarowości:
+>>a) PCA (Principal Component Analysis), t-SNE, UMAP, Autoenkodery.
+b) K-Nearest Neighbors
+c) Linear Regression
+d) Decision Trees
+e) LDA (Linear Discriminant Analysis).
+f) SVD (Singular Value Decomposition).
+
+
+[#334] (#334) Metryki skuteczności modelu predykcyjnego:
+>>a) MSE (Mean Squared Error), MAE, R-squared (dla regresji); Accuracy, F1 (dla klasyfikacji).
+b) Wariancja
+c) Odchylenie standardowe wag.
+d) Liczba iteracji.
+e) Log-Loss.
+f) Współczynnik Giniego.
+
+
+[#335] (#335) Uczenie częściowo nadzorowane (Semi-supervised Learning):
+>>a) Wykorzystuje małą ilość danych etykietowanych i dużą ilość danych nieetykietowanych.
+b) Nie potrzebuje etykiet.
+c) Jest tożsame z uczeniem ze wzmocnieniem.
+d) Wymaga etykiet dla wszystkich przykładów.
+e) Jest przydatne, gdy etykietowanie danych jest drogie lub czasochłonne.
+f) Wykorzystuje techniki takie jak self-training lub co-training.
+
+
+[#336] (#336) Funkcje aktywacji w sieciach neuronowych:
+>>a) Sigmoid, ReLU, Tanh, Softmax.
+b) Sigmoid
+c) Linear (tylko w regresji).
+d) Logarytmiczna.
+e) ELU (Exponential Linear Unit).
+f) Heaviside (funkcja skokowa).
+
+
+[#337] (#337) Instancja odstająca (Outlier):
+>>a) Przykład w zbiorze danych, który znacząco odbiega od pozostałych obserwacji.
+b) Inną nazwą instancji etykietowanej.
+c) Element zawsze usuwany przed trenowaniem.
+d) Środek ciężkości klastra.
+e) Może negatywnie wpływać na modele takie jak regresja liniowa.
+f) Jest zawsze wynikiem błędu pomiarowego.
+
+
+[#338] (#338) Algorytm K-Means:
+>>a) Jest algorytmem uczenia nienadzorowanego służącym do klasteryzacji.
+b) Jest metodą uczenia nadzorowanego.
+c) Wymaga etykiet klas dla każdego punktu.
+d) Zawsze znajduje globalne optimum.
+>>e) Dąży do minimalizacji wariancji wewnątrz klastrów.
+>>f) Jest czuły na początkową inicjalizację środków klastrów.
+
+
+[#339] (#339) Dla cech X, Y uzyskano wartość współczynnika korelacji liniowej -0.95. Co on oznacza?
+>>a) Oznacza bardzo silną ujemną korelację liniową.
+b) Wzrostowi wartości cechy X towarzyszy wzrost wartości cechy Y.
+c) Oznacza brak związku między cechami.
+d) Wskazuje na związek nieliniowy.
+e) Punkty na wykresie rozrzutu układają się blisko linii prostej o ujemnym nachyleniu.
+f) Oznacza, że X powoduje Y (związek przyczynowo-skutkowy).
+
+
+[#340] (#340) Mając uzupełnioną macierz błędów (confusion matrix), które metryki do oceny jakości modelu można obliczyć?
+>>a) Accuracy, Precision (Precyzja), Recall (Czułość), F1-score, Specificity.
+b) precyzję
+c) Średni błąd kwadratowy.
+d) Współczynnik determinacji R2.
+>>e) Matthews Correlation Coefficient (MCC).
+f) Entropia krzyżowa.
+
+
+[#341] (#341) Algorytmy uczenia nadzorowanego:
+>>a) Regresja liniowa, SVM, Drzewa decyzyjne, k-NN, Sieci neuronowe.
+>>b) K-NearestNeighbors
+c) K-Means
+d) PCA
+>>e) Naive Bayes.
+>>f) Random Forest.
+
+
+[#342] (#342) Algorytmy uczenia nienadzorowanego:
+>>a) K-Means, DBSCAN, PCA, Apriori, Autoenkodery.
+b) Regresja Liniowa
+c) Random Forest
+d) Naive Bayes
+>>e) GMM (Gaussian Mixture Models).
+>>f) t-SNE.
+
+
+[#343] (#343) Wskaż poprawne właściwości odnoszące się do analizy składowych głównych (PCA).
+>>a) Metoda statystyczna służąca do redukcji wymiarowości.
+>>b) Jest metodą nienadzorowaną.
+c) Służy do klasyfikacji obrazów.
+d) Wymaga danych w postaci tekstowej.
+>>e) Maksymalizuje wariancję rzutowanych danych.
+f) Składowe główne są skorelowane.
+
+
+[#344] (#344) Jakie zastrzeżenia przewidział Turing przeciwko sensowności zaproponowanego przez siebie testu?
+>>a) Turing rozważał m.in. argument z braku świadomości, argument z niepełnosprawności maszyny.
+>>b) Maszyna cyfrowa jest w stanie zrobić tylko to, co nakazuje jej program.
+c) Test Turinga jest niemożliwy do przeprowadzenia.
+d) Maszyny nigdy nie będą umiały grać w szachy.
+e) Chiński Pokój Searla jest znanym argumentem przeciwko testowi Turinga.
+f) Turing przewidywał, że maszyny nigdy nie przejdą testu.
+
+
+[#345] (#345) Parametr k w algorytmie kNN (k-Nearest Neighbors):
+>>a) Oznacza liczbę najbliższych sąsiadów branych pod uwagę przy klasyfikacji.
+b) k oznacza liczbę rozpoznawanych klas.
+c) k to liczba warstw w sieci.
+d) k to wymiarowość danych.
+e) Małe k może prowadzić do overfittingu.
+f) k musi być zawsze liczbą parzystą.
+
+
+[#346] (#346) W ramach klasyfikacji binarnej uzyskano następujące wyniki: TP = 90; TN = 30; FP = 10; FN = 70. Ile wynosi wartość predykcyjna
+dodatnia?
+>>a) PPV = TP / (TP + FP).
+b) 0,5
+c) 0,9
+d) 0,7
+e) Dla TP=90 i FP=10 wynosi 0.9.
+f) Jest tożsama z czułością (Recall).
+
+
+[#347] (#347) Przewidywanie jednego ulubionego koloru danej osoby (z 5 możliwych: {żółty, różowy, niebieski, zielony, czerwony}) to:
+>>a) Jest to zadanie klasyfikacji.
+b) Klasteryzacja
+c) Regresja
+d) Redukcja wymiarowości
+e) Zadanie uczenia nadzorowanego.
+f) Zadanie optymalizacji globalnej.
+
+
+[#348] (#348) Macierz pomyłek (Confusion Matrix):
+>>a) Jej rozmiar to N x N, gdzie N to liczba klas.
+b) Macierz pomyłek zawsze ma rozmiar 2x2.
+c) Pokazuje tylko błędy modelu.
+d) Nie pozwala na obliczenie czułości.
+>>e) Przekątna macierzy zawiera liczby poprawnych predykcji.
+f) Służy do oceny modeli regresji.
+
+
+[#349] (#349) Jakie parametry należy ustawić w algorytmie DBSCAN do grupowania danych?
+>>a) Epsilon (promień sąsiedztwa) oraz MinPts (minimalna liczba punktów).
+b) Liczba iteracji.
+c) Liczba klastrów k.
+d) Współczynnik uczenia.
+e) DBSCAN nie wymaga podania liczby klastrów z góry.
+f) DBSCAN radzi sobie z klastrami o różnych gęstościach.
+
+
+[#350] (#350) Które z poniższych cech najlepiej opisują algorytm k-średnich (k-means)?
+>>a) Grupuje dane poprzez minimalizację sumy kwadratów odległości od środków klastrów.
+>>b) Wymaga określenia liczby klastrów na początku.
+c) Jest odporny na wartości odstające.
+d) Działa dobrze dla klastrów o dowolnych kształtach.
+>>e) Jest algorytmem iteracyjnym.
+f) Gwarantuje znalezienie globalnego minimum funkcji celu.
+
+
+[#351] (#351) Jakie diagramy, ze względu na swoje właściwości wizualne, są najbardziej efektywne do prezentacji wyników grupowania przez algorytm k-
+średnich (k-means)?
+>>a) Najlepiej widoczna na wykresie punktowym (scatter plot).
+>>b) Wykres punktowy.
+c) Wykres kołowy.
+d) Histogram.
+>>e) Wykres łokcia (Elbow method) służy do wyboru optymalnego k.
+f) Dendrogram.
+
+
+[#352] (#352) Które z poniższych opcji opisują cechy lub zastosowania algorytmu grupowania aglomeracyjnego?
+>>a) Tworzy hierarchię klastrów (dendrogram).
+b) Redukcja wymiarowości danych.
+c) Wymaga podania liczby klastrów przed startem.
+d) Jest zawsze szybsze od k-means.
+>>e) Może stosować różne kryteria łączenia (linkage).
+f) Jest metodą uczenia nadzorowanego.
+
+
+[#353] (#353) Które z poniższych stwierdzeń trafnie opisują metodę analizy głównych składowych (PCA)?
+>>a) Nowe cechy (składowe) są liniowymi kombinacjami cech oryginalnych.
+>>b) PCA tworzy składowe, które są wzajemnie ortogonalne.
+c) Zawsze zachowuje 100% wariancji danych.
+d) Służy do usuwania brakujących danych.
+>>e) Składowe główne są uporządkowane według ilości wyjaśnianej wariancji.
+>>f) PCA jest bardzo wrażliwe na skalowanie danych.
+
+
+[#354] (#354) Które z poniższych zastosowań są odpowiednie dla algorytmu Apriori?
+>>a) Służy do odkrywania częstych zbiorów elementów i reguł asocjacyjnych.
+>>b) Analiza koszykowa w handlu detalicznym.
+c) Klasyfikacja spamu.
+d) Rozpoznawanie twarzy.
+>>e) Wykorzystuje miary takie jak wsparcie (support), ufność (confidence) i przyrost (lift).
+>>f) Jest stosowany w systemach rekomendacyjnych.
+
+
+[#355] (#355) Które z poniższych metod, algorytmów lub technik są stosowane w uczeniu nienadzorowanym?
+>>a) K-Means, Hierarchical Clustering, PCA, Autoenkodery, SOM.
+>>b) Autoenkodery, sieć Kohonena
+c) Regresja liniowa, k-NN
+d) Random Forest, XGBoost
+>>e) Analiza składowych niezależnych (ICA).
+>>f) SVD.
+
+
+[#356] (#356) Elementy uczenia ze wzmocnieniem (Reinforcement Learning):
+>>a) Agent, Środowisko (Environment), Stan (State), Akcja (Action), Nagroda (Reward), Polityka (Policy).
+>>b) Polityka
+c) Etykieta klasy.
+d) Zbiór treningowy.
+>>e) Funkcja wartości (Value Function).
+>>f) Eksploracja vs Eksploatacja.
