@@ -465,7 +465,7 @@ class ExamDrill {
         const apiKey = localStorage.getItem('aiApiKey');
         if (!apiKey) {
             content.innerHTML = this.renderBasicExplanation(question);
-            content.innerHTML += `<div class="explanation-source">Add your Anthropic API key in Settings for AI-powered explanations</div>`;
+            content.innerHTML += `<div class="explanation-source">Add your OpenRouter API key in Settings for AI-powered explanations</div>`;
             if (window.MathJax) MathJax.typesetPromise();
             return;
         }
@@ -478,18 +478,18 @@ class ExamDrill {
             </div>`;
 
         try {
-            const explanation = await this.callAnthropicAPI(question, apiKey);
+            const explanation = await this.callAI(question, apiKey);
 
             // Cache it
             this.explanationCache[cacheKey] = {
                 explanation: explanation,
                 generatedAt: new Date().toISOString(),
-                model: 'claude-3-haiku'
+                model: 'claude-3-haiku (OpenRouter)'
             };
             this.saveLocalCache();
 
             content.innerHTML = this.renderExplanation(explanation);
-            content.innerHTML += `<div class="explanation-source">Source: AI (Claude) | Just generated & cached</div>`;
+            content.innerHTML += `<div class="explanation-source">Source: AI (OpenRouter) | Just generated & cached</div>`;
             if (window.MathJax) MathJax.typesetPromise();
         } catch (error) {
             console.error('AI API error:', error);
@@ -499,9 +499,8 @@ class ExamDrill {
         }
     }
 
-    async callAnthropicAPI(question, apiKey) {
+    async callAI(question, apiKey) {
         const correctOpts = question.options.filter(o => o.correct);
-        const incorrectOpts = question.options.filter(o => !o.correct);
 
         const prompt = `You are a computer science tutor helping a student prepare for their MSc exam at AGH University (ISI - Computer Science & Intelligent Systems program).
 
@@ -520,16 +519,16 @@ Provide a clear, educational explanation in this format:
 
 Use technical terms appropriately. If relevant, include formulas or code examples. Keep it concise but thorough. Respond in English.`;
 
-        const response = await fetch('https://api.anthropic.com/v1/messages', {
+        const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': apiKey,
-                'anthropic-version': '2023-06-01',
-                'anthropic-dangerous-direct-browser-access': 'true'
+                'Authorization': `Bearer ${apiKey}`,
+                'HTTP-Referer': window.location.href,
+                'X-Title': 'MSc Exam Drill'
             },
             body: JSON.stringify({
-                model: 'claude-3-haiku-20240307',
+                model: 'anthropic/claude-3-haiku',
                 max_tokens: 1024,
                 messages: [{ role: 'user', content: prompt }]
             })
@@ -541,7 +540,7 @@ Use technical terms appropriately. If relevant, include formulas or code example
         }
 
         const data = await response.json();
-        return data.content[0].text;
+        return data.choices[0].message.content;
     }
 
     renderBasicExplanation(question) {
@@ -852,12 +851,12 @@ Use technical terms appropriately. If relevant, include formulas or code example
                 <div class="settings-section">
                     <h4>AI Explanations</h4>
                     <p style="color:var(--text-muted); font-size:14px; margin-bottom:12px;">
-                        Add your Anthropic API key to get AI-powered explanations for each question.
+                        Add your OpenRouter API key to get AI-powered explanations for each question.
                         Explanations are cached so each question is only generated once.
                     </p>
                     <div class="filter-group">
-                        <label>Anthropic API Key</label>
-                        <input type="password" id="apiKeyInput" placeholder="sk-ant-..."
+                        <label>OpenRouter API Key</label>
+                        <input type="password" id="apiKeyInput" placeholder="sk-or-v1-..."
                                value="${apiKey || ''}"
                                style="font-family: monospace;">
                     </div>
