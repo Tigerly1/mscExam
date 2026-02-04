@@ -316,18 +316,19 @@ class ExamDrill {
 
                 <div class="question-actions">
                     <button class="btn btn-primary" id="submitBtn" onclick="app.submitAnswer()">
-                        Submit <span class="kbd">Enter</span>
+                        Odpowiedz <span class="kbd">Enter</span>
                     </button>
-                    <button class="btn btn-outline" id="explainBtn" onclick="app.showExplanation()">
-                        Explain <span class="kbd">E</span>
+                    <button class="btn btn-explain" id="explainBtn" onclick="app.showExplanation()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        Wyjaśnij <span class="kbd">E</span>
                     </button>
                     <button class="btn btn-secondary" onclick="app.renderHome()">
-                        Exit
+                        Wyjdź
                     </button>
                 </div>
 
                 <div class="explanation-panel" id="explanationPanel">
-                    <h4>Explanation</h4>
+                    <h4>Wyjaśnienie</h4>
                     <div class="explanation-content" id="explanationContent"></div>
                 </div>
             </div>`;
@@ -376,7 +377,7 @@ class ExamDrill {
             return;
         }
         if (this.selectedAnswers.size === 0) {
-            this.showToast('Select an answer first', 'info');
+            this.showToast('Wybierz odpowiedź', 'info');
             return;
         }
 
@@ -413,12 +414,12 @@ class ExamDrill {
         const resultDiv = document.getElementById('answerResult');
         resultDiv.innerHTML = `
             <div class="answer-result ${isCorrect ? 'result-correct' : 'result-incorrect'}">
-                ${isCorrect ? 'Correct!' : `Incorrect - correct: ${[...correctKeys].join(', ')}`}
+                ${isCorrect ? 'Poprawnie!' : `Błędna odpowiedź — poprawne: ${[...correctKeys].join(', ')}`}
             </div>`;
 
         // Update button
         const submitBtn = document.getElementById('submitBtn');
-        submitBtn.innerHTML = 'Next <span class="kbd">Enter</span>';
+        submitBtn.innerHTML = 'Następne <span class="kbd">Enter</span>';
 
         // Update score display
         document.querySelector('.progress-text span:last-child').textContent =
@@ -446,19 +447,42 @@ class ExamDrill {
     async showExplanation() {
         const panel = document.getElementById('explanationPanel');
         const content = document.getElementById('explanationContent');
+        const explainBtn = document.getElementById('explainBtn');
         if (!panel || !content) return;
+
+        // If already visible, just scroll to it
+        if (panel.classList.contains('visible')) {
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            return;
+        }
+
         panel.classList.add('visible');
+
+        // Disable button while loading
+        if (explainBtn) {
+            explainBtn.disabled = true;
+            explainBtn.innerHTML = '<div class="spinner" style="width:16px;height:16px;"></div> Ładowanie...';
+        }
 
         const question = this.sessionQuestions[this.currentQuestionIndex];
         const cacheKey = `q_${question.id}`;
+
+        const finishLoading = () => {
+            if (explainBtn) {
+                explainBtn.disabled = false;
+                explainBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Wyjaśniono';
+                explainBtn.classList.add('btn-explained');
+            }
+            if (window.MathJax) MathJax.typesetPromise();
+            setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+        };
 
         // Check cache (server + local)
         if (this.explanationCache[cacheKey]) {
             const cached = this.explanationCache[cacheKey];
             content.innerHTML = this.renderExplanation(cached.explanation);
-            const source = cached.model ? `AI: ${cached.model}` : 'Cached';
-            content.innerHTML += `<div class="explanation-source">Source: ${source} | Cached: ${cached.generatedAt || 'yes'}</div>`;
-            if (window.MathJax) MathJax.typesetPromise();
+            content.innerHTML += `<div class="explanation-source">${cached.model || 'Cache'} | ${cached.generatedAt ? new Date(cached.generatedAt).toLocaleDateString('pl-PL') : 'zapisane'}</div>`;
+            finishLoading();
             return;
         }
 
@@ -466,59 +490,65 @@ class ExamDrill {
         const apiKey = localStorage.getItem('aiApiKey');
         if (!apiKey) {
             content.innerHTML = this.renderBasicExplanation(question);
-            content.innerHTML += `<div class="explanation-source">Add your OpenRouter API key in Settings for AI-powered explanations</div>`;
-            if (window.MathJax) MathJax.typesetPromise();
+            content.innerHTML += `<div class="explanation-source">Dodaj klucz API OpenRouter w Ustawieniach, aby uzyskać wyjaśnienia AI</div>`;
+            finishLoading();
             return;
         }
 
-        // Generate with AI
+        // Show loading
         content.innerHTML = `
             <div class="explanation-loading">
                 <div class="spinner"></div>
-                <span>Generating AI explanation...</span>
+                <span>Generowanie wyjaśnienia AI...</span>
             </div>`;
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
         try {
             const explanation = await this.callAI(question, apiKey);
 
-            // Cache it
             this.explanationCache[cacheKey] = {
                 explanation: explanation,
                 generatedAt: new Date().toISOString(),
-                model: 'claude-3-haiku (OpenRouter)'
+                model: 'Claude 3 Haiku (OpenRouter)'
             };
             this.saveLocalCache();
 
             content.innerHTML = this.renderExplanation(explanation);
-            content.innerHTML += `<div class="explanation-source">Source: AI (OpenRouter) | Just generated & cached</div>`;
-            if (window.MathJax) MathJax.typesetPromise();
+            content.innerHTML += `<div class="explanation-source">AI (OpenRouter) | właśnie wygenerowane i zapisane w cache</div>`;
+            finishLoading();
         } catch (error) {
             console.error('AI API error:', error);
             content.innerHTML = this.renderBasicExplanation(question);
-            content.innerHTML += `<div class="explanation-source" style="color:var(--danger);">AI generation failed: ${error.message}</div>`;
-            if (window.MathJax) MathJax.typesetPromise();
+            content.innerHTML += `<div class="explanation-source" style="color:var(--danger);">Błąd AI: ${error.message}</div>`;
+            finishLoading();
         }
     }
 
     async callAI(question, apiKey) {
         const correctOpts = question.options.filter(o => o.correct);
 
-        const prompt = `You are a computer science tutor helping a student prepare for their MSc exam at AGH University (ISI - Computer Science & Intelligent Systems program).
+        const prompt = `Jesteś wykładowcą informatyki pomagającym studentowi przygotować się do egzaminu magisterskiego na AGH (kierunek ISI - Informatyka i Systemy Inteligentne).
 
-Question #${question.id} (Topic: ${this.getTopicDisplayName(question.topic)}, Semester: ${question.semester || 'N/A'}):
+Pytanie #${question.id} (Temat: ${this.getTopicDisplayName(question.topic)}, Semestr: ${question.semester || 'N/A'}):
 ${question.question}
 
-Options:
+Opcje:
 ${question.options.map(o => `${o.correct ? '>> ' : '   '}${o.key}) ${o.text}`).join('\n')}
 
-Correct answer(s): ${correctOpts.map(o => o.key).join(', ')}
+Poprawna odpowiedź/odpowiedzi: ${correctOpts.map(o => o.key).join(', ')}
 
-Provide a clear, educational explanation in this format:
-1. **Why the correct answer(s) are right** - explain the underlying concept
-2. **Why each wrong option is incorrect** - briefly explain what makes it wrong
-3. **Key concept to remember** - a concise takeaway for exam prep
+Odpowiedz PO POLSKU. Podaj jasne, edukacyjne wyjaśnienie w tym formacie:
 
-Use technical terms appropriately. If relevant, include formulas or code examples. Keep it concise but thorough. Respond in English.`;
+## Dlaczego poprawna odpowiedź jest prawidłowa
+Wyjaśnij pojęcie stojące za poprawną odpowiedzią. Podaj kontekst teoretyczny.
+
+## Dlaczego pozostałe opcje są błędne
+Krótko wyjaśnij co jest nie tak z każdą niepoprawną opcją.
+
+## Kluczowa zasada do zapamiętania
+Zwięzłe podsumowanie - co student powinien zapamiętać na egzamin.
+
+Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w notacji LaTeX otoczone ^^...^^) lub przykłady kodu. Bądź zwięzły ale dokładny.`;
 
         const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
             method: 'POST',
@@ -549,17 +579,17 @@ Use technical terms appropriately. If relevant, include formulas or code example
         const incorrect = question.options.filter(o => !o.correct);
 
         let html = '<div>';
-        html += `<p><strong>Correct answer(s):</strong></p><ul>`;
+        html += `<p><strong>Poprawna odpowiedź:</strong></p><ul>`;
         correct.forEach(o => {
             html += `<li><strong>${o.key})</strong> ${this.formatText(o.text)}</li>`;
         });
         html += '</ul>';
 
         if (incorrect.length > 0) {
-            html += `<p><strong>Incorrect options:</strong> ${incorrect.map(o => o.key).join(', ')}</p>`;
+            html += `<p><strong>Błędne opcje:</strong> ${incorrect.map(o => o.key).join(', ')}</p>`;
         }
 
-        html += `<p><strong>Topic:</strong> ${this.getTopicDisplayName(question.topic)}`;
+        html += `<p><strong>Temat:</strong> ${this.getTopicDisplayName(question.topic)}`;
         if (question.courseName) {
             html += ` (${question.courseName})`;
         }

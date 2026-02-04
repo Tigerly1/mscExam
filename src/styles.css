@@ -198,6 +198,31 @@ body {
     color: white;
 }
 
+.btn-explain {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+.btn-explain:hover:not(:disabled) {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+.btn-explain:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+.btn-explained {
+    background: linear-gradient(135deg, #059669, #10b981);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+.btn-explained:hover:not(:disabled) {
+    background: linear-gradient(135deg, #047857, #059669);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
 .btn-small { padding: 6px 14px; font-size: 13px; }
 .btn-large { padding: 14px 28px; font-size: 17px; }
 
