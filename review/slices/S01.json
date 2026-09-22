@@ -1,0 +1,1430 @@
+[
+ {
+  "id": 1,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Zadanie o rozmiarze n, realizowane pewnym algorytmem o złożoności f(n), zostało sprowadzone do dwóch podzadań o rozmiarze n/2 każde oraz do n działań o stałym czasie wykonania, zapewniających rozbicie i scalenie zadania. Złożoność f(n) wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "f(n) = O(log(n))",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "f(n) = O(n*log(n))",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "f(n) = O(n + log(n))",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "f(n) = O(n)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Dana jest procedura: Proc(n){ if(warunek(x)) then { A(x); Proc(f(n)); B(x) } else C(x) }. Przyjmijmy konwencję, że np. zapis AAABCC oznacza trzykrotne wykonanie instrukcji A, po czym następuje wykonanie instrukcji B, a następnie dwukrotne wykonanie instrukcji C. Następujące sekwencje instrukcji mogą być wynikiem wywołania powyższej procedury:",
+  "options": [
+   {
+    "key": "a",
+    "text": "AACBB",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "ACBB",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "AACCBB",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ACCB",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "C",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "AAACCCBBB",
+    "correct": false
+   },
+   {
+    "key": "g",
+    "text": "AABBC",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Dla problemu komiwojażera algorytm pozwalający wyznaczyć rozwiązanie optymalne:",
+  "options": [
+   {
+    "key": "a",
+    "text": "istnieje i ma złożoność wielomianową",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "istnieje i ma złożoność wykładniczą",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "nie istnieje",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 227,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Co oznacza, że algorytm sortowania tablicy posiada złożoność ^^O(n^2)^^?",
+  "options": [
+   {
+    "key": "a",
+    "text": "wykonywana liczba porównań wynosi ^^n^2^^",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wykonywana liczba porównań jest rzędu ^^n^2^^",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "dwukrotne zwiększenie rozmiaru tablicy spowoduje czterokrotne zwiększenie czasu sortowania",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "wykonywana liczba porównań i wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "wykonywana liczba porównań lub wykonywana liczba przestawień elementów tablicy w algorytmie wynosi ^^n^2^^",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 228,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Jakie byłyby konsekwencje znalezienia wielomianowego deterministycznego algorytmu dla problemu NP-zupełnego?",
+  "options": [
+   {
+    "key": "a",
+    "text": "stanowiłoby to dowód, że P = NP",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "oznaczałoby to, że P =/= NP",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie miałoby to żadnych konsekwencji dla teorii złożoności obliczeniowej",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "żadna z pozostałych odpowiedzi",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "każdy problem algorytmiczny można byłoby rozwiązać w czasie wielomianowym",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 229,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Jakie problemy zaliczamy do klasy problemów NP-zupełnych?",
+  "options": [
+   {
+    "key": "a",
+    "text": "z definicji należą jednocześnie do NP i co-NP",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "należą do klasy NP, ale nie należą do P",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "żadna z pozostałych odpowiedzi",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wszystkie problemy z klasy NP redukują się do nich i same należą do klasy NP",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "takie, które są w NP i redukuje się do nich problem SAT",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "takie, które są w NP i redukują się do problemu SAT",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 230,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Co można powiedzieć o podproblemach problemu ^^\\pi^^, wiedząc, że ^^\\pi \\notin P^^?",
+  "options": [
+   {
+    "key": "a",
+    "text": "żaden jego podproblem nie należy do P",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "każdy jego podproblem należy do klasy P",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "pojęcie podproblemu nie jest zdefiniowane",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "istnieje taki jego podproblem, który należy do P",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 231,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Która z poniższych złożoności czasowych jest wykładnicza:",
+  "options": [
+   {
+    "key": "a",
+    "text": "^^O(n^100)^^",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "^^O(n^{1/n!})^^",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "^^O((\\log{10})^n)^^",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "^^O(n!)^^",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 232,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Co nazywamy mostem grafu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "minimalną liczbę krawędzi grafu, których usunięcie zmienia graf w niespójny lub trywialny",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "krawędź grafu spójnego, której usunięcie z grafu rozspójnia go",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "krawędź, której usunięcie zwiększa liczbę spójnych składowych grafu",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "maksymalną liczbę krawędzi grafu, których usunięcie zmienia graf w niespójny",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 233,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "W teorii złożoności obliczeniowej wszystkie problemy decyzyjne, które w wielomianowym czasie rozwiązuje niedeterministyczna maszyna Turinga, tworzą pewną klasę problemów. Jak brzmi jej nazwa?",
+  "options": [
+   {
+    "key": "a",
+    "text": "klasa NP",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "klasa P",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "klasa coNP",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "klasa RE",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1001,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Które z poniższych twierdzeń jest prawdziwe dotyczące złożoności Quicksort?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pesymistyczna złożoność obliczeniowa dla sortowania Quicksort to O(n log n)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Pesymistyczna złożoność obliczeniowa dla sortowania Quicksort to O(n^2)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Średnia złożoność obliczeniowa dla sortowania Quicksort to O(n^2)",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Najlepsza złożoność obliczeniowa dla sortowania Quicksort to O(n!)",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Quicksort jest algorytmem stabilnym",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Quicksort zawsze wymaga O(n) dodatkowej pamięci",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1002,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Wskaż zdania prawdziwe dotyczące algorytmu Dijkstry:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Algorytm Dijkstry znajdowania najkrótszych ścieżek jest algorytmem heurystycznym o złożoności O(n2 log n).",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Algorytm Dijkstry znajduje najkrótsze ścieżki z jednego źródła w grafie o nieujemnych wagach krawędzi.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Algorytm Dijkstry poprawnie obsługuje grafy z ujemnymi wagami krawędzi.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Złożoność algorytmu Dijkstry przy użyciu kopca binarnego wynosi O(E log V).",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "Algorytm Dijkstry służy do wyznaczania minimalnego drzewa rozpinającego.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Algorytm Dijkstry jest algorytmem typu \"dziel i zwyciężaj\".",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1003,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Które z poniższych stwierdzeń jest prawdziwe dotyczące algorytmu DFS?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Algorytm DFS służy do wyznaczania minimalnego drzewa rozpinającego dla grafu skierowanego.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Algorytm DFS (Depth-First Search) może być wykorzystany do wykrywania cykli w grafie.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Algorytm DFS zawsze znajduje najkrótszą ścieżkę w grafie nieskierowanym bez wag.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Algorytm DFS wykorzystuje kolejkę FIFO jako podstawową strukturę danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Złożoność czasowa DFS wynosi O(V^2) dla reprezentacji listowej.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "DFS nie pozwala na wyznaczenie czasu wejścia i wyjścia z węzła.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1004,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Które z poniższych twierdzeń jest prawdziwe dotyczące tablic mieszających?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Adresowanie otwarte to jedna ze strategii rozwiązywania kolizji w tablicach haszujących (tablicach mieszających).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Adresowanie otwarte polega na tworzeniu listy wiązanej dla każdego indeksu tablicy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Funkcja mieszająca musi zawsze zwracać unikalną wartość dla każdego klucza (brak kolizji).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Tablica mieszająca gwarantuje czas dostępu O(1) w najgorszym przypadku niezależnie od liczby kolizji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "W adresowaniu otwartym współczynnik wypełnienia może być dowolnie duży.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Metoda łańcuchowa jest rodzajem adresowania otwartego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1005,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Które stwierdzenia dotyczące notacji asymptotycznych i sortowania są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Sekwencyjny algorytm sortowania przez porównania elementów w tablicy nie może działać z mniejszą złożonością niż Ω(n log n).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Sortowanie przez wstawianie ma pesymistyczną złożoność O(n log n).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Notacja O(f(n)) oznacza dolne ograniczenie asymptotyczne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każdy algorytm sortowania ma złożoność pamięciową O(1).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jeśli f(n) = O(g(n)), to g(n) jest asymptotycznym ograniczeniem górnym dla f(n).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Algorytm o złożoności O(n^2) jest zawsze szybszy niż O(n log n) dla dużych n.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1006,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Zadanie o rozmiarze n realizowane algorytmem o złożoności f(n) zostało sprowadzone do dwóch pod-zadań o wielkości 1/n oraz wykonania n operacji o stałym koszcie wykonania. Złożoność f(n) wynosi",
+  "options": [
+   {
+    "key": "a",
+    "text": "O(n log n)",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "O(n)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "O(n^2)",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "O(log n)",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "O(1)",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "O(n!)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1007,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Do drzewa BST wstawiono losowy zestaw n wzajemnie różnych liczb. Która z odpowiedzi jest prawdziwa?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pesymistyczna złożoność operacji usuwania elementu w drzewie każdorazowo zależy od głębokości danego drzewa.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Średnia wysokość takiego drzewa wynosi O(n).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Operacja wyszukiwania w takim drzewie zawsze zajmuje O(log n) czasu w najgorszym przypadku.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Drzewo BST po wstawieniu losowych elementów zawsze staje się drzewem AVL.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "In-order przechodzenie przez BST nie daje posortowanej sekwencji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "BST zawsze gwarantuje logarytmiczny czas operacji.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1008,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Uruchomiono operację budowania kopca dla tablicy dziesięciu elementów: 1,2,3,4,5,6,7,8,9,0. Czy prawdziwe są w odniesieniu do powstałego drzewa następujące stwierdzenia:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Ze względu na wykorzystanie operacji rotacji przy wstawianiu elementów głębokość kopca będzie wynosić O(log n).",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Operacja budowania kopca (build-heap) dla n elementów ma złożoność czasową O(n).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Kopiec binarny jest zawsze drzewem pełnym (wszystkie liście na tym samym poziomie).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "W kopcu typu max element o najmniejszej wartości zawsze znajduje się w korzeniu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Kopiec binarny nie może być reprezentowany w tablicy.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Budowanie kopca metodą kolejnych wstawiań ma złożoność O(n).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1009,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Które stwierdzenia z poniższych są prawdziwe dotyczące algorytmów sortowania?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Sortowanie przez zliczanie (ang. Counting Sort) ma lepszą złożoność obliczeniową niż sortowanie szybkie (ang. QuickSort) dla dowolnych danych wejściowych.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Sortowanie przez zliczanie ma złożoność O(n + k), gdzie k to zakres wartości, co może być lepsze od O(n log n) dla małych k.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "QuickSort jest algorytmem stabilnym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "MergeSort nie wymaga dodatkowej pamięci (działa w miejscu).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Sortowanie przez zliczanie jest algorytmem stabilnym.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Heapsort jest algorytmem stabilnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1010,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Wskaż odpowiedzi prawdziwe dotyczące list przeskakiwania:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Lista przeskakiwania (skip list) może być rozważana jako probabilistyczna alternatywa drzewa AVL.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Operacje wyszukiwania, wstawiania i usuwania w liście przeskakiwania mają średnią złożoność O(log n).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Lista przeskakiwania wymaga, aby dane były przechowywane w sposób nieposortowany.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każdy element w liście przeskakiwania ma zawsze taką samą liczbę wskaźników do przodu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Lista przeskakiwania gwarantuje pesymistyczny czas wyszukiwania O(log n).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Skip list nie wymaga dodatkowej pamięci na wskaźniki.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1011,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 4. Podobnie, w kolejnym rzędzie utworzono węzły od 8 do 15.",
+  "options": [
+   {
+    "key": "a",
+    "text": "15, 1, 2, 3 ,4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "15, 7, 3, 1, 2, 4, 8, 9, 5, 10, 11, 6, 12, 13, 14",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "1, 2, 4, 8, 9, 5, 10, 11, 3, 6, 12, 13, 7, 14, 15",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "15, 7, 14, 3, 6, 12, 13, 1, 2, 4, 8, 9, 5, 10, 11",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "1, 3, 7, 15, 14, 6, 13, 12, 2, 5, 11, 10, 4, 9, 8",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1012,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 4. Podobnie, w kolejnym rzędzie utworzono węzły od 8 do 15. Określ prawdziwość następujacych stwierdzeń:",
+  "options": [
+   {
+    "key": "a",
+    "text": "15, 7, 3, 1, 14 , 6 ,1, 30, 13, 4, 5, 8, 9, 10, 11",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Kolejność In-order dla pełnego drzewa binarnego wypełnionego poziomami od 1 do 15 to: 8, 4, 9, 2, 10, 5, 11, 1, 12, 6, 13, 3, 14, 7, 15",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Węzeł 1 jest ostatnim węzłem w przejściu In-order.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Węzeł 15 jest korzeniem tego drzewa.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Przejście In-order dla tego drzewa daje liczby w kolejności rosnącej.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Węzeł 8 jest korzeniem lewego poddrzewa.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1282,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Algorytm węgierski:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służy do rozwiązywania zagadnienia przydziału w czasie wielomianowym O(n^3).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Ma niewielomianową złożoność obliczeniową.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Dotyczy tylko grafów niespójnych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Służy do znajdowania najkrótszej ścieżki.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest algorytmem zachłannym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wymaga macierzy o wagach ujemnych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1283,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Liczbę rozwiązań optymalnych w programowaniu liniowym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Może wynosić zero, jedno lub nieskończenie wiele.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Zero.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Zawsze dokładnie jedno.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Zawsze skończona liczba.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Zawsze co najmniej dwa.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Zależy od liczby procesorów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1284,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Metoda podziału i ograniczeń (ang. branch and bound) opiera się na porównywaniu dwóch wartości: dolnego ograniczenia funkcji celu (ang. lower bound) górnego ograniczenia funkcji celu (ang. upper bound) Czym są te wartości?",
+  "options": [
+   {
+    "key": "a",
+    "text": "LB to najlepszy możliwy wynik w poddrzewie, UB to wartość najlepszego dotychczas znalezionego rozwiązania.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Górne ograniczenie liczy się dla konkretnego węzła w drzewie przeszukiwania.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "LB i UB są zawsze równe.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Służy tylko do problemów bez ograniczeń.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na przeszukiwanie tylko obiecujących gałęzi drzewa rozwiązań.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest stosowana wyłącznie w sortowaniu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1285,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Metoda ścieżki krytycznej (CPM):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwala wyznaczyć najdłuższy ciąg zadań zależnych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Do określenia, które zadania mają szczególny wpływ na czas realizacji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Służy do optymalizacji kosztów transportu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wyznacza zadania o największym zapasie czasu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Zadania na ścieżce krytycznej mają zerowy zapas czasu (slack).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest metodą probabilistyczną (jak PERT).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1286,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Metoda wielkich M (ang. big-M method) pozwala na znalezienie pierwszego rozwiązania dla algorytmu symplex. Zaznacz prawdziwe zdania o tej metodzie:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Polega na wprowadzeniu sztucznych zmiennych z bardzo dużym kosztem M.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wymaga dodania dodatkowych ograniczeń na istniejące zmienne.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Służy do rozwiązywania problemów nieliniowych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Eliminuje potrzebę stosowania zmiennych swobodnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "M jest zawsze równe 1,000,000.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest stosowana tylko w problemach transportowych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1287,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Metody rozwiązywania zagadnienia przydziału:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Algorytm węgierski, algorytmy przepływowe, programowanie całkowitoliczbowe.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Dowolny algorytm rozwiązujący problemy programowania całkowitoliczbowego.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Tylko metoda bisekcji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Algorytm Dijkstry.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Metoda najmniejszych kwadratów.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Algorytm Newtona.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1288,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Postać kanoniczna (równościowa) zadania programowania liniowego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wszystkie ograniczenia są równościami, a wszystkie zmienne są nieujemne.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Funkcja celu musi być maksymalizowana.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Liczba zmiennych musi być równa liczbie ograniczeń.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Macierz ograniczeń musi być kwadratowa.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Nie dopuszcza zmiennych swobodnych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest jedyną postacią akceptowaną przez metodę graficzną.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1289,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Dualność w programowaniu liniowym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Każdemu problemowi pierwotnemu odpowiada problem dualny.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wartość w optimum programu dualnego jest taka sama jak w pierwotnym.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Problem dualny ma zawsze więcej zmiennych niż pierwotny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jeśli problem pierwotny jest nieograniczony, to dualny ma rozwiązanie optymalne.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Liczba zmiennych w problemie dualnym jest równa liczbie ograniczeń w problemie pierwotnym.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Dualność nie zachodzi dla problemów minimalizacji.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1290,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Relaksacja liniowa w metodzie podziału i ograniczeń:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Polega na odrzuceniu wymogu całkowitoliczbowości zmiennych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Drzewo przeszukiwania w tym algorytmie jest drzewem binarnym.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Zawsze daje rozwiązanie całkowitoliczbowe.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest stosowana tylko w problemach transportowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Rozwiązanie relaksacji daje ograniczenie dla problemu oryginalnego.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Relaksacja liniowa jest problemem NP-trudnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1291,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Relaksacja problemu w badaniach operacyjnych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "To uproszczenie problemu, którego rozwiązanie daje oszacowanie wyniku problemu oryginalnego.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Relaksacja ma na celu stworzenie nowego problemu, który jest prostszą wersją.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Relaksacja zawsze prowadzi do tego samego rozwiązania co problem oryginalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Polega na losowym wyborze zmiennych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Zawsze zwiększa liczbę ograniczeń.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest stosowana tylko w programowaniu nieliniowym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1292,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Algorytm dwufazowy sympleks:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Faza I znajduje rozwiązanie bazowe dopuszczalne, Faza II znajduje rozwiązanie optymalne.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Pracuje dwufazowo, czyli rozwiązuje dwa modele.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest stosowany tylko dla funkcji kwadratowych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie wymaga macierzy jednostkowej w bazie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Faza I zawsze kończy się sukcesem.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Faza II jest opcjonalna.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1293,
+  "topic": "algorithms",
+  "courseName": "Algorytmy i struktury danych",
+  "question": "Zaznacz prawdziwe (udowodnione) zdania o złożoności obliczeniowej decyzyjnej wersji problemu plecakowego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest problemem NP-zupełnym.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Należy do klasy NP.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Jest rozstrzygalny w czasie logarytmicznym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Należy do klasy P.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest problemem nierozstrzygalnym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Może być rozwiązany w czasie wielomianowym za pomocą programowania dynamicznego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 223,
+  "topic": "programming_basics",
+  "courseName": "Podstawy programowania",
+  "question": "Jaki paradygmat programowania jest realizowany w języku C?",
+  "options": [
+   {
+    "key": "a",
+    "text": "aplikatywny",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "imperatywny",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "deklaratywny",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "strukturalny",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "żaden z wymienionych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 224,
+  "topic": "programming_basics",
+  "courseName": "Podstawy programowania",
+  "question": "Jeżeli w programie następuje odwołanie poza obszar tablicy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zawsze sygnalizowany jest błąd wykonania",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "nie jest sygnalizowany błąd, jeżeli pamięć jest zaalokowana",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 225,
+  "topic": "programming_basics",
+  "courseName": "Podstawy programowania",
+  "question": "Translacja analizuje symbole:",
+  "options": [
+   {
+    "key": "a",
+    "text": "od lewej do prawej strony",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "od prawej do lewej strony",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 226,
+  "topic": "programming_basics",
+  "courseName": "Podstawy programowania",
+  "question": "Jaki wynik da następujące wyrażenie napisane w ONP: 2 3 4 5 + * +?",
+  "options": [
+   {
+    "key": "a",
+    "text": "25",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "29",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1164,
+  "topic": "programming_basics",
+  "courseName": "Podstawy programowania",
+  "question": "Które z poniższych stwierdzeń najlepiej opisuje różnicę między wybranymi paradygmatami języków programowania?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Paradygmat imperatywny opisuje \"jak\", deklaratywny opisuje \"co\".",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Paradygmat imperatywny jest stosowany wyłącznie w językach niskiego poziomu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Języki funkcyjne są zawsze imperatywne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Programowanie obiektowe wyklucza paradygmat deklaratywny.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Programowanie obiektowe skupia się na łączeniu danych i zachowań w obiekty.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Paradygmat logiczny jest podzbiorem paradygmatu imperatywnego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1165,
+  "topic": "programming_basics",
+  "courseName": "Podstawy programowania",
+  "question": "W kontekście paradygmatów języków programowania, które z poniższych stwierdzeń najlepiej charakteryzują ich własności",
+  "options": [
+   {
+    "key": "a",
+    "text": "Paradygmat funkcyjny opiera się na ewaluacji funkcji matematycznych, logiczny na wnioskowaniu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Paradygmat funkcyjny skupia się na niezmiennych danych i funkcjach jako podstawowych jednostkach obliczeń.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "W paradygmacie logicznym nie istnieją zmienne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Oba paradygmaty są odmianami programowania proceduralnego.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Oba paradygmaty należą do szerszej grupy paradygmatów deklaratywnych.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Język Prolog jest przykładem języka funkcyjnego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1166,
+  "topic": "programming_basics",
+  "courseName": "Podstawy programowania",
+  "question": "Które z poniższych stwierdzeń najlepiej opisują różnicę między pewnymi pewnymi typami algorytmów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Algorytm deterministyczny dla tych samych danych zawsze przechodzi przez tę samą ścieżkę obliczeń.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Algorytm deterministyczny zawsze daje różne wyniki dla tych samych danych wejściowych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Algorytm niedeterministyczny nie może być zaimplementowany na komputerze.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Złożoność P dotyczy algorytmów niedeterministycznych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Algorytm niedeterministyczny może być postrzegany jako posiadający zdolność \"zgadywania\" poprawnej ścieżki.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Każdy algorytm niedeterministyczny ma złożoność wykładniczą.",
+    "correct": false
+   }
+  ]
+ }
+]

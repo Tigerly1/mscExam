@@ -1,0 +1,1231 @@
+[
+ {
+  "id": 86,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Aby sprawdzić, czy dwa obiekty typu String w języku Java mają taką samą zawartość, można:",
+  "options": [
+   {
+    "key": "a",
+    "text": "użyć metody equals()",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "==",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 87,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Który z poniższych fragmentów kodu w języku Java sprawdza, czy obiekt wskazywany przez referencję xyz należy do klasy XYZ?",
+  "options": [
+   {
+    "key": "a",
+    "text": "if (xyz instanceof XYZ)",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "if (xyz.dynamicCastTo(XYZ.class) != null)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "XYZ.class.isInstance(xyz)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "XYZ.class.isAssignableFrom(xyz.getClass())",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 88,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Tablica w języku Java jest zadeklarowana jako: int tab[] = new int[]{3, 2, 1, 0}; Który z fragmentów kodu poprawnie wypisze jej elementy?",
+  "options": [
+   {
+    "key": "a",
+    "text": "for (int i: tab) System.out.println(tab[i] + \" \");",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "for (int i = 0; i < tab.length; i++) System.out.println(tab[i] + \" \");",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "for (int i: tab) System.out.println(i + \" \");",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 89,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Które zdanie opisujące własności klas w języku Java jest prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "aby zaznaczyć, że klasa dziedziczy po kilku klasach, należy podać ich listę po słowie kluczowym extends, np. class D extends A, B, C {}",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "dla każdej klasy w języku Java możliwe jest zdefiniowanie klasy potomnej",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "klasa może implementować wiele interfejsów",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "w języku Java zawsze bezpośrednio możemy dziedziczyć po jednej klasie",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 90,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "W jaki sposób usuwane są obiekty w języku Java?",
+  "options": [
+   {
+    "key": "a",
+    "text": "usuwa się je przez przekazanie referencji do usuwanego obiektu do metody System.gc()",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "nie są programowo usuwane, to środowisko wykonawcze podejmuje decyzje czy i kiedy je usunąć",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 91,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Które z poniższych stwierdzeń odnoszące się do klas wewnętrznych i zagnieżdżonych w języku Java są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "w metodach klasy zagnieżdżonej (zadeklarowanej z modyfikatorem static) jest dostępna referencja Outer.this, gdzie Outer jest nazwą klasy zewnętrznej",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "obiekt klasy wewnętrznej ma swój stan niezależny od innych obiektów powiązanych z obiektem klasy zewnętrznej",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "klasy wewnętrzne muszą dziedziczyć po otaczających je klasach zewnętrznych",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "klasa wewnętrzna (zadeklarowana bez modyfikatora static) nie ma dostępu do prywatnych zmiennych klasy zewnętrznej",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1242,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: Class C { public static void main(String[] args) { int[]a1[]=new int[3][3]; //3 int a2[4]={3,4,5,6}; //4 int a2[5]; //5 }} Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "int[] a = new int[5]; (poprawna deklaracja).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Błąd kompilacji w liniach 3,4,5.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wszystkie linie są poprawne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Tablice w Javie mają dynamiczny rozmiar.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Rozmiar tablicy jest ustalany w momencie tworzenia (new) i nie może być zmieniony.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "tablica.length() zwraca liczbę elementów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1243,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: public class A extends Thread { public int i; public void run() { i = 1; } public static void main(String[] args) throws Exception { A a = new A();",
+  "options": [
+   {
+    "key": "a",
+    "text": "Aby uruchomić wątek, należy wywołać metodę start(), która wywoła run().",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i);",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Nie wypisze nic.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wypisze \"11\".",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Można implementować interfejs Runnable lub dziedziczyć po klasie Thread.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Metoda run() uruchamia nowy wątek w systemie operacyjnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1244,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: class C{ public static void main(String[] args) { try { try { try {} catch(RuntimeException e){} } catch(Exception e) {} } catch(NullPointerException e) {} finally { System.out.println(\"finally\"); } }} Jaki jest rezultat kompilacji i wykonania programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Blok finally wykonuje się zawsze, niezależnie od tego, czy wystąpił wyjątek.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Runtime Exception",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wypisze \"finally\".",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Błąd kompilacji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Blok finally jest często używany do zwalniania zasobów.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Blok catch musi zawsze występować po bloku finally.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1245,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: public class C { public static void main ( String a[]) { Thread t = Thread.currentThread ( ) ; t.setPriority(-1); System.out.println(\"Done!\"); } } Jaki będzie rezultat kompilacji i wykonania programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Priorytet musi mieścić się w zakresie od Thread.MIN_PRIORITY (1) do Thread.MAX_PRIORITY (10).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Runtime Exception",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Done!",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Błąd kompilacji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wartość priorytetu 0 jest dozwolona.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wyższy priorytet gwarantuje, że wątek zakończy się szybciej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1246,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: interface I{ void f1(); // 1 public void f2(); // 2 protected void f3(); // 3 private void f4(); // 4 } Które linie generują błędy kompilacji? (w komentarzach podany numery linii)",
+  "options": [
+   {
+    "key": "a",
+    "text": "W klasycznych interfejsach metody są domyślnie public abstract.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Błąd kompilacji w liniach 1,2,3,4.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Tylko linia 3 i 4 generują błędy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Interfejsy nie mogą mieć metod.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Od Javy 8 interfejsy mogą posiadać metody domyślne (default) i statyczne.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Metody w interfejsach mogą być final.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1247,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: class C { static int s; public static void main(String a[]){ C obj=new C(); obj.m1(); System.out.println(s); } void m1() { int x=1; m2(x); System.out.println(x+\"\"); } void m2(int x){ x=x*2; s=x; } } Jaki jest rezultat kompilacji i wykonania programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Java zawsze przekazuje argumenty przez wartość.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wypisze: \"2,0\"",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wypisze: \"1 2\".",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wypisze: \"2 2\".",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Dla obiektów przekazywana jest wartość referencji (kopia wskaźnika).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Słowo kluczowe 'ref' pozwala na przekazywanie przez referencję.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1248,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: class C { public static void main(String[] args) { int i1=1; switch(i1){ case 1: System.out.println(\"one \"); case 2: System.out.println(\"two \"); case 3: System.out.println(\"three \"); }}} Jaki jest rezultat kompilacji i wykonania programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Po dopasowaniu case, wykonają się wszystkie kolejne instrukcje (fall-through).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wypisze: \"one \"",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wypisze: \"one two three \"",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wypisze: \"one \" i zakończy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Switch obsługuje tylko typy całkowite (int, long).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Od Javy 7 switch obsługuje typ String.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1249,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: class C1 { static interface I { static class C2 {} } public static void main(String a[]) { C1.I.C2 ob1=new C1.I.C2(); System.out.println(\"obj created\"); } } Jaki jest rezultat kompilacji i wykonania programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Interfejsy mogą zawierać klasy statyczne.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Błąd kompilacji",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wypisze: \"obj created\"",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Interfejsy nie mogą mieć metod main.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Klasy wewnętrzne nie mogą być statyczne.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Klasa wewnętrzna ma dostęp do prywatnych pól klasy zewnętrznej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1250,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano następujący kod źródłowy w języku Java: class C1 { static class C2 { static int i1; } public static void main(String a[]) { System.out.println(C1.C2.i1); } } Jaki jest rezultat kompilacji i wykonania programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pola statyczne są inicjalizowane wartościami domyślnymi (0 dla int).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wypisze: \"0\"",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Błąd kompilacji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Runtime Exception.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Klasa statyczna wymaga obiektu klasy zewnętrznej do utworzenia instancji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Klasa statyczna wewnętrzna może dziedziczyć po klasie zewnętrznej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1251,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Ile obiektów (instancji klasy StringBuffer) zostanie utworzonych w wyniku wykonania poniższego kodu w języku Java: StringBuffer s1 = new StringBuffer(\"abc\"); StringBuffer s2 = s1; StringBuffer s3 = new StringBuffer(\"abc\");",
+  "options": [
+   {
+    "key": "a",
+    "text": "2 (s1 tworzy nowy obiekt, s3 tworzy drugi nowy obiekt).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "1",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "3",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "0",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "4",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "StringBuffer nie jest klasą w Javie.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1252,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Która z poniższych metod jest statyczną metodą w klasie Thread dostępnej w standardowym API dla języka Java?",
+  "options": [
+   {
+    "key": "a",
+    "text": "sleep, yield, currentThread, interrupted.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "join",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "start",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "run",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "wait",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "notify",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1253,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano poniższy kod źródłowy w języku Java: class c1 { public void m1() { System.out.println(\"m1 w klasie C1\"); } } class c2 { public c1 m1() { return new c1(){ public void m1() { System.out.println(\"m1 w klasie anonimowej\"); } } } public static void main(String a[]) { c1 ob1 =new c2().m1(); ob1.m1(); }} Jaki będzie wynik kompilacji i wykonania tego kodu jako programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Klasa anonimowa nadpisuje metodę, więc zostanie wywołana wersja z klasy anonimowej.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Program wypisze łańcuch: \"m1 w klasie anonimowej\"",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Program wypisze: \"m1 w klasie C1\"",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Błąd kompilacji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Klasy anonimowe nie mogą implementować interfejsów.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Klasa anonimowa może mieć własny konstruktor.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1254,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano poniższy kod źródłowy w języku Java:class C{ int i; public static void main (String[] args) { int i; //1 private int a = 1; //2 protected int b = 1; //3 public int c = 1; //4 System.out.println(a+b+c); //5 }} Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczony numery lini)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zmienne lokalne nie mogą mieć modyfikatorów public, private, protected.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wykonanie kodu spowoduje wyprowadzenie wyniku: \"3\"",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Błąd kompilacji w liniach 2, 3, 4.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wypisze \"1\".",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Zmienne lokalne mogą być oznaczone jako final.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Zmienne lokalne są widoczne w całej klasie.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1255,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano poniższy kod źródłowy w języku Java: public class Command { public static void main (String[] a1) { System.out.print(a1[1] + a1[2] + a1[3]); }} Jaki jest wynik próby kompilacji i wykonania powyższego programu przy pomocy poniższego polecenia? polecenie: java Command A B C",
+  "options": [
+   {
+    "key": "a",
+    "text": "Indeksowanie zaczyna się od 0.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Runtime Exception",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "ABC",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Błąd kompilacji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "args[0] zawsze przechowuje nazwę uruchomionego programu.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Tablica args może być pusta (length == 0).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1256,
+  "topic": "java",
+  "courseName": "Programowanie zaawansowane (Java)",
+  "question": "Zapisano poniższy kod źródłowy w języku Java: class C{ static String m(int i) {return \"int\";} static String m(float i) {return \"float\";} public static void main (String[] args) { long a1 = 1; double b1 = 2; System.out.print(m(a1)+\",\"+ m(b1)); }} Jaki będzie rezultat kompilacji i wykonania programu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "long może być niejawnie konwertowany na float, ale double nie pasuje do float bez rzutowania.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Kompilacja tego kodu zakończy się błędem.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wypisze: \"int,float\".",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wypisze: \"float,float\".",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Java nie obsługuje przeciążania metod.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Typ byte jest automatycznie promowany do char.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 177,
+  "topic": "oop_design",
+  "courseName": "Programowanie obiektowe",
+  "question": "Generalizacja:",
+  "options": [
+   {
+    "key": "a",
+    "text": "organizuje obiekty w hierarchię uogólniania/uszczegóławiania",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "organizuje klasy w hierarchię całości/części",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia interfejsów",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia implementacji",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 178,
+  "topic": "oop_design",
+  "courseName": "Programowanie obiektowe",
+  "question": "Kompozycja:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest to struktura agregacji, w której klasy części mogą być powiązane tylko z jedną klasą całości",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "ogranicza powiązanie klasy części do jednej klasy całości",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "ogranicza powiązanie obiektu części do jednego obiektu całości",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "jest silnym powiązaniem z czasem życia części ograniczonym do czasu życia całości",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 179,
+  "topic": "oop_design",
+  "courseName": "Programowanie obiektowe",
+  "question": "Relacja zależności wskazuje, że:",
+  "options": [
+   {
+    "key": "a",
+    "text": "klasa dostarcza implementacji usług interfejsu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "istnieje szczególne powiązanie między klasami",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "implementacja klasy może się zmienić, gdy zmieni się implementacja innej klasy",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "zmiana specyfikacji jednej usługi może mieć wpływ na poprawność działania innej",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "zmiana stanu obiektu zależy od stanu innego obiektu",
+    "correct": false
+   },
+   {
+    "key": "g",
+    "text": "przypadek użycia zależy od innego przypadku użycia",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 180,
+  "topic": "oop_design",
+  "courseName": "Programowanie obiektowe",
+  "question": "Relacja realizacji wskazuje, że",
+  "options": [
+   {
+    "key": "a",
+    "text": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "klasa dostarcza implementacji usług interfejsu",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "klasa realizuje usługi delegowane z innej klasy",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "klasa wykorzystuje usługi interfejsu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 181,
+  "topic": "oop_design",
+  "courseName": "Programowanie obiektowe",
+  "question": "Wielokrotne użycie wspierane jest w modelu obiektowym przez:",
+  "options": [
+   {
+    "key": "a",
+    "text": "kwalifikowane powiązania",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "kompozycje z delegacją roli",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "istnienie klas obiektów",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "dziedziczenie implementacji",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 196,
+  "topic": "concurrent_programming",
+  "courseName": "Programowanie współbieżne",
+  "question": "Sekcja krytyczna procesu jest to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "część procesu, w której wykorzystywany jest zasób dzielony",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "część procesu, w której wykonywana jest komunikacja z użytkownikiem",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "część procesu, w której wykonywana jest nieskończona pętla",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "część procesu, w której deklarowane są lokalne zmienne",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 197,
+  "topic": "concurrent_programming",
+  "courseName": "Programowanie współbieżne",
+  "question": "Wzajemnym wykluczaniem nazywamy problem współzawodnictwa procesów o zasób, który:",
+  "options": [
+   {
+    "key": "a",
+    "text": "musi zostać zainicjalizowany przez jeden z procesów",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest zmienną przechowywaną w rejestrach procesora",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jednocześnie może być wykorzystywany tylko przez jeden z nich",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "może być wykorzystywany tylko przez z góry określony czas",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 198,
+  "topic": "concurrent_programming",
+  "courseName": "Programowanie współbieżne",
+  "question": "Komunikację nazywamy asynchroniczną jeżeli:",
+  "options": [
+   {
+    "key": "a",
+    "text": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 199,
+  "topic": "concurrent_programming",
+  "courseName": "Programowanie współbieżne",
+  "question": "Zjawisko blokady w programie współbieżnym jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zatrzymaniem pracy jednego ze współbieżnych procesów",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "przejawem braku bezpieczeństwa programu współbieżnego",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 200,
+  "topic": "concurrent_programming",
+  "courseName": "Programowanie współbieżne",
+  "question": "Zjawisko zagłodzenia w programie współbieżnym jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "przejawem braku bezpieczeństwa programu współbieżnego",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony, mimo że występuje ono dowolną liczbę razy",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "nienaturalnym przerwaniem pracy jednego ze współbieżnych procesów",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "sytuacją, kiedy nie ma gwarancji, że określone zdarzenie wykona się w skończonym czasie",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "pojawieniem się cyklu w relacji Lamporta \"happen-before\"",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 201,
+  "topic": "concurrent_programming",
+  "courseName": "Programowanie współbieżne",
+  "question": "Komunikację nazywamy synchroniczną jeżeli:",
+  "options": [
+   {
+    "key": "a",
+    "text": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 80,
+  "topic": "functional_programming",
+  "courseName": "Podstawy programowania",
+  "question": "Jaki typ danych w Haskellu będzie miało następujące wyrażenie: r x = x:r x",
+  "options": [
+   {
+    "key": "a",
+    "text": "r :: [a]",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "r :: Integer a => a -> [a]",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "r :: a -> [a]",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 81,
+  "topic": "functional_programming",
+  "courseName": "Podstawy programowania",
+  "question": "Jak wygląda poprawna wartość w Haskellu dla typu: data Tree a = L a | N (Tree a) a (Tree a)",
+  "options": [
+   {
+    "key": "a",
+    "text": "Tree 5 Nil Nil",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "N (L 4) 5 (L '4')",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "N (L 4) 5 (L 4)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "N (L '4') '5' (L '4')",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 82,
+  "topic": "functional_programming",
+  "courseName": "Podstawy programowania",
+  "question": "Haskell jest językiem opartym o paradygmat:",
+  "options": [
+   {
+    "key": "a",
+    "text": "funkcyjny",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "strukturalny",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "imperatywny",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "obiektowy",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 83,
+  "topic": "functional_programming",
+  "courseName": "Podstawy programowania",
+  "question": "Zaznacz prawdziwe zdania odnoszące się do programowania funkcyjnego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "w programowaniu funkcyjnym koncepcja funkcji jest taka, jak w algebrze",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "programowanie funkcyjne opiera się na rachunku lambda",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "dobrym nawykiem w programowaniu funkcyjnym jest, aby zmienne były niemutowalne",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "w programowaniu funkcyjnym możemy korzystać jedynie z wbudowanych typów danych",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "funkcyjny styl programowania można uprawiać w ograniczonym zakresie w językach imperatywnych jak C albo JavaScript",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "funkcyjnymi językami programowania są: Erlang, Haskell, C#, Perl",
+    "correct": false
+   },
+   {
+    "key": "g",
+    "text": "można używać funkcyjnego stylu programowania w języku JavaScript",
+    "correct": true
+   },
+   {
+    "key": "h",
+    "text": "niektóre języki imperatywne zostały wyposażone w konstrukcje z języków funkcyjnych",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 84,
+  "topic": "functional_programming",
+  "courseName": "Podstawy programowania",
+  "question": "Funkcje wyższego rzędu w programowaniu funkcyjnym to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "funkcje zwracające inne funkcje jako rezultat obliczeń",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "funkcje, które przyjmują inne funkcje jako parametry",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "potoczne określenie funkcji trudnych w implementacji",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 85,
+  "topic": "functional_programming",
+  "courseName": "Podstawy programowania",
+  "question": "Jaki mechanizm w językach funkcyjnych pozwala na wykonanie operacji na zbiorze danych?",
+  "options": [
+   {
+    "key": "a",
+    "text": "iteracja",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "rekurencja",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "funkcje specyficzne dla języka",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "warunkowy skok do etykiety",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "pętla",
+    "correct": false
+   }
+  ]
+ }
+]

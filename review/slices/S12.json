@@ -1,0 +1,1332 @@
+[
+ {
+  "id": 1231,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Znaczniki semantyczne w HTML5:",
+  "options": [
+   {
+    "key": "a",
+    "text": "<article>, <section>, <nav>, <header>, <footer>.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "div",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "span",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "table",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "<main>, <aside>, <figure>.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "<font>, <center>, <bold>.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1232,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Jakich znaczników HTML5 użyjesz do wyświetlenia zawartości pliku video?",
+  "options": [
+   {
+    "key": "a",
+    "text": "<video>",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "file",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "media",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "object",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "<embed>",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "<source> (używany wewnątrz <video>).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1233,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Który element może być użyty w HTML5 do specyfikacji linku nawigacyjnego?",
+  "options": [
+   {
+    "key": "a",
+    "text": "<nav> (kontener dla linków) oraz <a> (sam link).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "navigation",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "link",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "anchor",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "<menu>",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "<href>",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1234,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Atrybut for w znaczniku <label>:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służy do powiązania etykiety z konkretnym elementem formularza (poprzez jego id).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "aby etykieta była aktywna.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "określa czas wyświetlania etykiety.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy do stylowania w CSS.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "pozwala na kliknięcie w etykietę w celu aktywacji pola.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "jest wymagany dla każdego znacznika <p>.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1235,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Aplikacje Single Page Application (SPA):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Cała logika i renderowanie widoków odbywa się głównie po stronie klienta.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zarządzanie stanem aplikacji realizowane jest po stronie frontendu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "wymagają przeładowania całej strony przy każdej nawigacji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie mogą korzystać z API.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Przykładowe frameworki to React, Angular, Vue.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Są zawsze indeksowane przez wyszukiwarki lepiej niż strony statyczne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1236,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Jakich operacji HTTP możesz użyć do aktualizacji części danych istniejącego już użytkownika?",
+  "options": [
+   {
+    "key": "a",
+    "text": "PATCH (częściowa aktualizacja), PUT (pełna zamiana).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "PATCH",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "POST",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "UPDATE",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "DELETE",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "OPTIONS",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1237,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Który z poniższych adresów API ( według konwencji REST API) powinien być użyty do zwrócenia informacji o wszystkich samochodach użytkownika posiadającego id równe 4?",
+  "options": [
+   {
+    "key": "a",
+    "text": "/users/4/cars",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "/users?id=4/cars/all",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "/get_all_cars_for_user_4",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "/cars/user/4",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "/users/4/actions/get-cars",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "/api/v1/users/4/cars",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1238,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Poprawny format JSON:",
+  "options": [
+   {
+    "key": "a",
+    "text": "{ \"user\": \"Jan Kowalski\", \"age\": 100 }",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "{ \"user\" : Jan Kowalski, \"age\": 100 }",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "{ user: \"Jan Kowalski\", age: 100 }",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "[ \"user\": \"Jan Kowalski\" ]",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "{ 'user': 'Jan Kowalski' }",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "{ \"user\": \"Jan\", \"data\": [1, 2, 3] }",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1239,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Responsywność (Responsive Web Design):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Technika projektowania stron tak, aby ich wygląd dostosowywał się do rozmiaru ekranu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zapewnia dostosowanie wyglądu aplikacji w kontekście potrzeb użytkownika.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "oznacza szybkie reagowanie serwera na zapytania.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "dotyczy tylko aplikacji mobilnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wykorzystuje elastyczne siatki (grid), elastyczne obrazy oraz Media Queries.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Wymaga tworzenia oddzielnej strony pod adresem m.domena.pl.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1240,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Nowoczesne frameworki JavaScript (JavaScript frameworks) takie jak Angular, React czy Vue",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wykorzystują komponentowe podejście do budowy interfejsu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wykorzystują wiązania dwukierunkowe do synchronizacji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służą wyłącznie do stylowania stron.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie pozwalają na używanie zewnętrznych bibliotek.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwalają na deklaratywne definiowanie interfejsu użytkownika.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Wymaga znajomości języka Java.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1241,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Node.js:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest środowiskiem uruchomieniowym JavaScript opartym na silniku V8.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "implementuje tylko operacje asynchroniczne.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest frameworkiem CSS.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy do tworzenia wyłącznie aplikacji desktopowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wykorzystuje model Event Loop do obsługi wielu połączeń jednocześnie.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest językiem programowania kompilowanym do kodu maszynowego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1257,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Wzorzec architektury Model-View-Controller (MVC) w technologii ASP .NET Core MVC obejmuje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Modele (dane), Widoki (interfejs), Kontrolery (logika).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Warstwę modeli - warstwa definiująca strukturę danych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Kontrolery służą do stylowania stron.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Widoki odpowiadają za dostęp do bazy danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Kontroler wybiera odpowiedni widok i przekazuje mu dane z modelu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "MVC jest wzorcem wyłącznie dla aplikacji desktopowych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1258,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Aby przechowywać stan aplikacji webowej (dane ulotne, których nie chcemy utrwalać w bazie danych) w ASP.NET CORE MVC można użyć:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Session, Cookies, TempData, QueryString.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Stanu sesji (HttpContext.Session)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Tylko w bazie danych SQL Server.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "W plikach tekstowych na serwerze.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "View State nie jest używany w ASP.NET Core.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Protokół HTTP jest stanowy z natury.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1259,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Przekazywanie przez referencję w C#:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Słowa kluczowe ref oraz out pozwalają na przekazywanie typów wartościowych przez referencję.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Przekazać do metody zmienną przez referencję przy pomocy słowa kluczowego ref.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "C# nie obsługuje referencji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wszystkie obiekty są zawsze przekazywane przez kopię.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "'out' wymaga, aby zmienna została zainicjalizowana wewnątrz metody.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "'ref' nie wymaga inicjalizacji zmiennej przed przekazaniem.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1260,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Czy w języku C# można tworzyć klasy zagnieżdżone (deklarować klasę wewnątrz deklaracji innej klasy)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Klasy zagnieżdżone mogą mieć dowolny modyfikator dostępu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Można deklarować, ale tylko klasy prywatne.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "C# nie pozwala na klasy zagnieżdżone.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Klasy zagnieżdżone muszą być statyczne.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Klasa zagnieżdżona ma dostęp do prywatnych pól klasy nadrzędnej.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Klasa nadrzędna ma dostęp do prywatnych pól klasy zagnieżdżonej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1261,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Które z poniższych konwersji typów (rzutowań typów) w języku C# są dozwolone?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Każda klasa dziedziczy po System.Object, więc upcasting jest zawsze bezpieczny.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Rzutowanie referencji do obiektu dowolnej klasy na referencję do klasy \"Object\"",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Można rzutować string na int bezpośrednio.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Rzutowanie w dół (downcasting) nigdy nie wymaga operatora rzutowania.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Operator 'as' zwraca null, jeśli rzutowanie się nie powiedzie.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Operator 'is' służy do konwersji typów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1262,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "LINQ (Language Integrated Query):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Składnia zintegrowana z językiem pozwalająca na operacje na kolekcjach.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Language INtegrated Query - zestaw konstrukcji programistycznych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Biblioteka do obsługi grafiki 3D.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Protokół komunikacji sieciowej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na zapytania do różnych źródeł danych.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Wymaga użycia słowa kluczowego 'foreach' do każdego zapytania.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1263,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Deklaracja Polecenia najwyższego poziomu (Top-level statements) w języku C# podlega pewnym zasadom. Wśród nich są:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwalają na pisanie kodu bezpośrednio w pliku bez jawnej definicji klasy i Main.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dyrektywa \"using\" musi znajdいる na początku pliku.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Można mieć wiele plików z Top-level statements w jednym projekcie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie można w nich definiować metod.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "W projekcie może istnieć tylko jeden plik z Top-level statements.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Są dostępne od wersji C# 1.0.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1264,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Synchronizacja wątków w C#:",
+  "options": [
+   {
+    "key": "a",
+    "text": "lock, Monitor, Mutex, Semaphore, AutoResetEvent.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "semaforów (\"Semaphore\")",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "tylko za pomocą instrukcji if.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie jest możliwa w .NET Core.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Instrukcja lock jest cukrem składniowym dla Monitor.Enter i Monitor.Exit.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Mutex działa tylko w obrębie jednego procesu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1265,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Do definiowania wyrażeń lambda (lambda expression) w C# używa się operatora:",
+  "options": [
+   {
+    "key": "a",
+    "text": "=> (tzw. goes to).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "->",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "::",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "lambda",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": ":=",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": ".",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1266,
+  "topic": "web_programming",
+  "courseName": "Programowanie aplikacji webowych",
+  "question": "Zarejestrowanie zdarzenia (metody, która będzie wywołana w celu obsługi zdarzenia) w języku C# odbywa się za pomocą operatora:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Używa się operatora += do dodania delegata.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "+=",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "=",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "subscribe",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "add",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "register",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1150,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Parser LR:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest parserem typu bottom-up (od dołu do góry).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "odczytuje symbole wejściowe od lewej strony do prawej.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie obsługuje gramatyk z lewostronną rekurencją.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest wolniejszy od parsera LL.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "buduje wyprowadzenie prawostronne w odwrotnej kolejności.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "jest stosowany tylko dla języków regularnych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1151,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Rozstrzygalność przynależności gramatyki bezkontekstowej do klasy LL(k):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest rozstrzygalna dla dowolnego ustalonego k.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "jest rozstrzygalne tylko jeśli gramatyka zawiera lewostronną rekurencję.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest nierozstrzygalna dla k > 1.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zależy od liczby symboli terminalnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest nierozstrzygalna dla gramatyk wieloznacznych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "wymaga sprowadzenia do postaci normalnej Chomsky'ego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1152,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Porównanie gramatyk LL i LR:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Klasa gramatyk LL(k) jest właściwym podzbiorem klasy gramatyk LR(k).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "gramatyki LL oraz LR opisują częściowo rozłączne klasy gramatyk.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Każda gramatyka LR jest gramatyką LL.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Gramatyki LL są potężniejsze od LR.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Gramatyki LR radzą sobie z lewostronną rekurencją, której LL nie obsługuje bezpośrednio.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Gramatyki LL(1) są równoważne gramatykom LR(1).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1153,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Złożoność analizatorów LL(k) oraz LR(k) dla słowa o długości n wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Czasowa O(n) i pamięciowa O(n).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "czasową Theta(n) i pamięciową Theta(n).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Czasowa O(n^2).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Czasowa O(2^n).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pamięciowa O(1).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Czasowa O(log n).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1154,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Dla gramatyki bezkontekstowej z produkcjami: E→E+E E→E*E E → id następujące wyprowadzenia są prawostronne:",
+  "options": [
+   {
+    "key": "a",
+    "text": "E => E+E => E+EE => E+Eid => E+idid => id+idid.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "E => E+E => id+E => id+EE => id+idE => id+idid.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "E => id.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "E => EE => idid.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest niemożliwe dla tej gramatyki.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Zawsze kończy się symbolem E.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1155,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Które stwierdzenie jest prawdziwe dotyczące gramatyk LR?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nie każda gramatyka bezkontekstowa jest klasy LR(k) (np. gramatyki wieloznaczne nie są LR).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Każda gramatyka bezkontekstowa jest klasy LR(k) dla pewnego k > 0.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Gramatyki LR(0) mogą opisywać wszystkie języki bezkontekstowe.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Analiza LR wymaga gramatyki w postaci normalnej Greibach.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Gramatyki LR(1) są wystarczające do opisu większości języków programowania.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Gramatyki LR nie mogą być generowane automatycznie.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1156,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Dla gramatyki bezkontekstowej z produkcjami: E' → E E→E+T | T T→T*F|F F → (E) | id domknięcie (closure) zbioru sytuacji I= {E' →•E} zawiera sytuacje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "E' -> .E, E -> .E+T, E -> .T, T -> .TF, T -> .F, F -> .(E), F -> .id.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "E' -> E.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "E -> E.+T.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "F -> id.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Tylko E' -> .E.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wszystkie produkcje z kropką na końcu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1157,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Dana jest gramatyka (wzbogacona) z produkcjami: E' → E E→E+T | T T→T*F|F F → (E) | id Które z podanych symboli należą do zbioru FOLLOW(F):",
+  "options": [
+   {
+    "key": "a",
+    "text": "+, *, ), $ (koniec napisu).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "id.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "E, T.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "(, id.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Tylko $.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wszystkie nieterminale.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1158,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Gramatyka operatorowa:",
+  "options": [
+   {
+    "key": "a",
+    "text": "To gramatyka bezkontekstowa, w której żadna produkcja nie ma po prawej stronie dwóch sąsiednich nieterminali ani epsilona.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Gramatyka operatorowa jest gramatyką bezkontekstową.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Służy wyłącznie do opisu języków regularnych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie może zawierać symboli terminalnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na łatwą implementację parserów wyrażeń matematycznych.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest zawsze wieloznaczna.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1159,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Analiza leksykalna (skaner) obejmuje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Grupowanie znaków wejściowych w leksemy i generowanie odpowiadających im tokenów.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "usunięcie tokenów a znalezienie leksemów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "budowanie drzewa składniowego.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "sprawdzanie zgodności typów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "usuwanie komentarzy i białych znaków z kodu źródłowego.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "generowanie kodu pośredniego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1160,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Analizatory LL oraz LR:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Oba są analizatorami kierunkowymi (przetwarzają wejście od lewej do prawej).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "LL nie jest analizatorem kierunkowym.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "LR przetwarza wejście od prawej do lewej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Żaden z nich nie używa stosu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wykorzystują wiedzę o symbolach już przetworzonych oraz podglądają symbole w przód (lookahead).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Są stosowane tylko w kompilatorach języka C.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1161,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Parametr k w analizatorach LL(k) oznacza:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Liczbę symboli podglądanych (lookahead) w przód na wejściu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "parametr k oznacza liczbę błędów, po których analizator przerywa działanie.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "liczbę kroków wyprowadzenia.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "maksymalną głębokość stosu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "liczbę nieterminali w gramatyce.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "liczbę stanów automatu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1162,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Która z poniższych opcji najlepiej opisuje klasyfikację Chomsky'ego dotyczącą gramatyk formalnych?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Cztery poziomy gramatyk: typ 0, typ 1, typ 2, typ 3.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Klasyfikacja Chomsky'ego obejmuje pięć poziomów gramatyk.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Tylko języki programowania.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wyłącznie gramatyki skończone.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Typ 2 to gramatyki bezkontekstowe, a typ 3 to gramatyki regularne.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Typ 0 to gramatyki liniowe.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1163,
+  "topic": "compilation",
+  "courseName": "Teoria kompilacji i kompilatory",
+  "question": "Które z poniższych stwierdzeń najlepiej opisuje rolę metajęzyka w kontekście antynomii semantycznych?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Metajęzyk służy do opisu i analizy innego języka (przedmiotowego).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Metajęzyk jest językiem, który jest bardziej złożony niż język przedmiotowy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Metajęzyk nie może zawierać nazw.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Metajęzyk jest zawsze językiem naturalnym.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Rozróżnienie języka przedmiotowego od metajęzyka pozwala na definiowanie prawdy bez popadania w paradoksy.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Metajęzyk służy wyłącznie do tłumaczenia tekstów.",
+    "correct": false
+   }
+  ]
+ }
+]

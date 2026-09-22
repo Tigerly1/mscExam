@@ -1,0 +1,1599 @@
+[
+ {
+  "id": 34,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, w których przypadkach klauzule instrukcji SELECT są ułożone we właściwej kolejności:",
+  "options": [
+   {
+    "key": "a",
+    "text": "from, where, group by, having, order by",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "from, group by, having, where, order by",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "from, group by, where, having, order by",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 35,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące postaci normalnej Boyce'a-Codda:",
+  "options": [
+   {
+    "key": "a",
+    "text": "dowolną relację R o schemacie H można sprowadzić do BCNF stosując dekompozycję bezstratną, ale niekoniecznie zachowującą zależności funkcyjne",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dowolna relacja dwuatrybutowa jest w BCNF",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jeżeli schemat relacji znajduje się w postaci normalnej Boyce'a-Codda, to nie ma w nim redundancji",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "BCNF oznacza, że lewa strona każdej nietrywialnej zależności funkcyjnej zawiera klucz",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "atrybut z prawej strony zależności może być podstawowy",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "schematy relacji zawsze należy doprowadzać do postaci BCNF",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 36,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Dana jest relacja R o schemacie H = {A, B, C, D, E} oraz zbiór zależności funkcyjnych F = {{B, C} -> {D, E}, {C, D} -> {B, E}, {D} -> {C}, {E} -> {B}}. W jakiej maksymalnie postaci normalnej jest relacja R? Zakładamy, że jest w 1NF.",
+  "options": [
+   {
+    "key": "a",
+    "text": "1NF",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "2NF",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "3NF",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "4NF",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 37,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące trzeciej postaci normalnej:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jeżeli wszystkie atrybuty ze schematu relacji są atrybutami kluczowymi, to relacja jest w 3NF",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dowolną relację można sprowadzić do 3NF stosując dekompozycję bezstratną i zachowującą zależności funkcyjne",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "3NF oznacza, że każdy atrybut niekluczowy (informacyjny) zależy wyłącznie od klucza; innymi słowy, atrybuty informacyjne są wzajemnie niezależne",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "BCNF jest nieco bardziej restrykcyjną wersją 3NF - w BCNF wszystkie atrybuty (również kluczowe) muszą spełniać warunek zależności wyłącznie od klucza; ten dodatkowy wymóg ma znaczenie, gdy relacja zawiera wiele kluczy",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "jeżeli relacja jest w BCNF, to jest również w 3NF",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "jeżeli relacja jest w 3NF, to możliwe jest występowanie pewnych redundancji",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "relacja jest w 3NF, jeżeli jest w 2NF i nie zawiera zależności funkcyjnych",
+    "correct": false
+   },
+   {
+    "key": "h",
+    "text": "jeżeli relacja jest w 3NF, to jest również w BCNF",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 38,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące kluczy obcych w relacyjnym modelu danych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wartości klucza obcego są unikatowe",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "klucze obce są sposobem łączenia danych przechowywanych w różnych tabelach",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "klucz obcy jest kolumną lub grupą kolumn tabeli, która czerpie swoje wartości z tej samej dziedziny, co klucz główny powiązanej z nią tabeli",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "klucz obcy musi odnosić się do istniejącej krotki lub przyjmować wartość NULL, aby jawnie stwierdzić, że nie ma związku z reprezentowanymi obiektami w bazie danych albo że ten związek jest nieznany",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "klucz obcy nie musi być unikatowy w obrębie tabeli",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "klucz obcy może pochodzić z tej samej tabeli, gdy chcemy stworzyć związek rekurencyjny",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "klucz obcy i klucz do którego się on odwołuje muszą mieć tyle samo atrybutów",
+    "correct": true
+   },
+   {
+    "key": "h",
+    "text": "muszą się nazywać tak samo jak klucz tabeli głównej",
+    "correct": false
+   },
+   {
+    "key": "i",
+    "text": "muszą zawierać nazwę tabeli głównej w swojej nazwie",
+    "correct": false
+   },
+   {
+    "key": "j",
+    "text": "powinny wskazywać na klucz główny w tabeli głównej",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 39,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, które ograniczenia można definiować na poziomie kolumny (w instrukcji create table):",
+  "options": [
+   {
+    "key": "a",
+    "text": "wartość domyślna atrybutu",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "krótsze ścieżki na płycie głownej",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "większy bufor",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "unikalne wartości atrybutu",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "proste klucze główne",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "NULL / NOT NULL",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "wyrażenia regularne",
+    "correct": false
+   },
+   {
+    "key": "h",
+    "text": "funkcje walidujące",
+    "correct": false
+   },
+   {
+    "key": "i",
+    "text": "wyzwalacze typu \"zdarzenie, warunek, akcja\"",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż wszystkie prawdziwe stwierdzenia dotyczące wartości NULL:",
+  "options": [
+   {
+    "key": "a",
+    "text": "w modelu relacyjnym wartość NULL jest traktowana jako trzecia, różna od false i true, wartość logiczna",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dwie wartości NULL są traktowane jako równe",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "wartości NULL są różne od spacji, zera czy też pustego łańcucha znaków",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "jeżeli wystąpi w wartości atrybutu NULL, to suma po tym atrybucie też jest NULL",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "klucz obcy musi zawierać przynajmniej jedną wartość NULL",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "wartość NULL oznacza zero",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 41,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Które wyrażenie SQL zwraca wszystkie wiersze tabeli \"Osoby\" posortowane malejąco według atrybutu \"Imie\"?",
+  "options": [
+   {
+    "key": "a",
+    "text": "SELECT * FROM Osoby SORT BY 'Imie' DESC",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "SELECT * FROM Osoby ORDER BY Imie DESC",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "SELECT * FROM Osoby SORT 'Imie' DESC",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "SELECT * FROM Osoby ORDER Imie DESC",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 42,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Jak możesz zmienić wartość \"Kowalski\" na \"Nowak\" w atrybucie \"Nazwisko\" w tabeli \"Osoby\"?",
+  "options": [
+   {
+    "key": "a",
+    "text": "MODIFY Osoby SET Nazwisko='Nowak' WHERE Nazwisko='Kowalski'",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "MODIFY Osoby SET Nazwisko='Kowalski' INTO Nazwisko='Nowak'",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "UPDATE Osoby SET Nazwisko='Kowalski' INTO Nazwisko='Nowak'",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "UPDATE Osoby SET Nazwisko='Nowak' WHERE Nazwisko='Kowalski'",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 43,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Jak można przy pomocy SQL uzyskać informację o liczbie wierszy w tabeli \"Osoby\"?",
+  "options": [
+   {
+    "key": "a",
+    "text": "SELECT COUNT(*) FROM Osoby",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "SELECT COUNT() FROM Osoby",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "SELECT COLUMNS() FROM Osoby",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "SELECT COLUMNS(*) FROM Osoby",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 44,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Jako można przy pomocy SQL wybrać wszystkie wiersze z tabeli \"Osoby\", w których wartość atrybutu \"Imie\" zaczyna się od \"a\"?",
+  "options": [
+   {
+    "key": "a",
+    "text": "SELECT * FROM Osoby WHERE Imie LIKE '%a'",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "SELECT * FROM Osoby WHERE Imie='%a%'",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "SELECT * FROM Osoby WHERE Imie LIKE 'a%'",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "SELECT * FROM Osoby WHERE Imie='a'",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 45,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Którą z poniższych cech musi posiadać klucz właściwy?",
+  "options": [
+   {
+    "key": "a",
+    "text": "jego wartość jednoznacznie wyznacza wiersz w danej tabeli",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "jest automatycznie generowany przez System Zarządzania Bazą Danych",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie może być generowany przez SZBD",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jego wartość składa się tylko z jednego atrybutu",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "nie może być pomniejszony o żaden atrybut",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "żaden podzbiór jego atrybutów nie może być kluczem",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 46,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Algebra relacji jest podstawą dla:",
+  "options": [
+   {
+    "key": "a",
+    "text": "realizacji przez relacyjny SZBD operacji języka manipulacji danymi",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "budowy diagramów ERD",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "budowy diagramów DFD",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "algorytmicznych języków relacyjnych baz danych",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 47,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Które z poniższych cech posiadają widoki (view)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "mogą realizować politykę ograniczania dostępu do danych",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "ułatwiają konstrukcję zapytań SQL do bazy danych",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zabezpieczają dane przed ich utratą w trakcie realizacji złożonych transakcji",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "powodują problemy z konstrukcją zapytań SQL do bazy danych",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "dostarczają prostego mechanizmu uaktualniania danych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 48,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Z jakim problemem trzeba się uporać przy odwzorowaniu w schemacie relacyjnej bazy danych relacji typu n:m (wiele do wiele)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "zdefiniować podwójne indeksowanie plików odpowiadających każdej z tabel",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "trzeba zaprojektować dodatkową tabelę",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "dobrać odpowiedni klucz obcy w drugiej z tabel",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "trzeba użyć dodatkowo widoku (view)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 49,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Które z poniższych stwierdzeń są prawdziwe, jeśli dotyczą systemów baz danych realizowanych w architekturze klient-serwer?",
+  "options": [
+   {
+    "key": "a",
+    "text": "mocno obciążają sieć w stosunku do systemów scentralizowanych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "pozwalają klientom pracować w różnych systemach operacyjnych",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "uniezależniają sposób realizacji aplikacji od serwera",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "wymagają co najmniej dwóch komputerów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 50,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Systemy OLTP i OLAP różnią się przede wszystkim:",
+  "options": [
+   {
+    "key": "a",
+    "text": "czasem reakcji na zapytanie",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "stopniem szczegółowości przechowywanych danych",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zakresem realizowanych funkcji użytkowych",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 51,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Rolą hurtowni danych jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przygotowanie danych do szybkiej analizy",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "kontrola poprawności danych realizowana podczas wykonywania transakcji",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "minimalizacja plików fizycznych przez ujednolicenie sposobu przechowywania danych",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "przechowywanie danych w sposób scentralizowany",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "wydajne odpowiadanie na zapytania o charakterze analitycznym",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "zwiększenie bezpieczeństwa",
+    "correct": false
+   },
+   {
+    "key": "g",
+    "text": "obsługa dużej ilości równoległych transakcji modyfikujących dane",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 52,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Modele danych w postaci gwiazdy i płatka śniegu:",
+  "options": [
+   {
+    "key": "a",
+    "text": "ich implementacja przyspiesza analizę danych",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "pozwalają oddać sens złożonej struktury danych",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zapewniają brak redundancji danych",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "pomagają utrzymać spójność danych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1102,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, które z poniższych stwierdzeń opisują poprawnie własności relacyjnych baz danych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wartością atrybutu może być wyrażenie obliczalne.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Każda relacja musi posiadać klucz główny, który jednoznacznie identyfikuje krotki.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Kolejność wierszy w tabeli ma znaczenie semantyczne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Atrybuty w relacji mogą być wielowartościowe (np. tablice).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Relacja jest zbiorem krotek (brak duplikatów).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Relacyjna baza danych nie obsługuje więzów integralności.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1103,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, które z poniższych stwierdzeń dotyczących kluczy obcych w relacyjnych bazach danych są prawdziwe.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nazwa atrybutu klucza obcego musi być taka sama jak nazwa atrybutu klucza w tabeli nadrzędnej.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Klucz obcy służy do wymuszania więzów integralności referencyjnej między tabelami.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Klucz obcy nie może zawierać wartości NULL.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "W jednej tabeli może istnieć tylko jeden klucz obcy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Klucz obcy może odwoływać się do klucza głównego lub unikalnego w innej tabeli.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Usunięcie rekordu nadrzędnego zawsze powoduje usunięcie rekordu z kluczem obcym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1104,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Dana jest zmienna relacyjna o schemacie H={A,B,C,D} i zbiorze zależności funkcyjnych F={{A,B} -> C, {A,C} -> D}. Jedynym kluczem tej zmiennej relacyjnej jest para atrybutów {A,B}. W jakiej maksymalnie postaci normalnej jest ta zmienna relacyjna? (Zakładamy, że jest w 1NF.)",
+  "options": [
+   {
+    "key": "a",
+    "text": "BCNF",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "2NF",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "3NF",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "1NF",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "4NF",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "5NF",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1105,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Dana jest zmienna relacyjna o schemacie H={A,B,C,D} i zbiorze zależności funkcyjnych F={A -> B, C -> D}. Jedynym kluczem tej zmiennej relacyjnej jest para atrybutów {A,C}. Jak należy zdekomponować zmienną relacyjną, aby uzyskać zbiór zmiennych relacyjnych w 3NF?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Dekompozycja na {A,B} oraz {C,D} oraz {A,C}.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "{A,B}, {C,D}",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "{A,B,C}, {D}",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "{A,B,D}, {C}",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Nie wymaga dekompozycji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "{A,B,C,D}",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1106,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż prawdziwe stwierdzenia dotyczące kluczy w modelu relacyjnym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zbiór wszystkich atrybutów wchodzących w skład nagłówka zmiennej relacyjnej jest kluczem.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Klucz nadmiarowy (superklucz) to zbiór atrybutów zawierający klucz kandydujący.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Każda tabela może mieć wiele kluczy głównych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Klucz kandydujący może być pusty.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Klucz kandydujący to minimalny superklucz.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Klucz główny to jeden z wybranych kluczy kandydujących.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1107,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, które z poniższych stwierdzeń dotyczących normalizacji są prawdziwe w relacyjnym modelu danych.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Dowolną zmienną relacyjną można sprowadzić do 3NF stosując dekompozycję bezstratną i zachowującą zależności funkcyjne.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Postać BCNF zawsze zachowuje wszystkie zależności funkcyjne.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "2NF eliminuje zależności przechodnie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Normalizacja zawsze zwiększa wydajność odczytu danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "1NF wymaga, aby wszystkie wartości atrybutów były atomowe.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "3NF eliminuje zależności wielowartościowe.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1108,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż prawdziwe stwierdzenia dotyczące powiązań w relacyjnych bazach danych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Relacja wiele-do-wielu wymaga wprowadzenia tabeli pośredniczącej (asocjacyjnej).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Powiązania klucz-klucz obcy mogą być tylko typu jeden do jednego lub jeden do wielu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Klucz obcy musi zawsze wskazywać na klucz główny, nigdy na klucz unikalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Między dwiema tabelami może istnieć tylko jedno powiązanie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Relacja jeden-do-jednego może być zaimplementowana w jednej tabeli lub dwóch połączonych kluczami głównymi.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Relacje w SQL są zawsze symetryczne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1109,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż prawdziwe stwierdzenia dotyczące podzapytań w PostgreSQL:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wewnątrz instrukcji INSERT można stosować wyłącznie podzapytania skalarne.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Podzapytania mogą być stosowane w klauzulach SELECT, FROM, WHERE oraz HAVING.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Podzapytanie w klauzuli FROM nie musi mieć nadanego aliasu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Podzapytania skorelowane są zawsze szybsze od zwykłych podzapytań.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Podzapytanie skalarne zwraca dokładnie jedną wartość (jeden wiersz i jedną kolumnę).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Podzapytania nie mogą być zagnieżdżone.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1110,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, które z poniższych stwierdzeń dotyczących typów złączeń w relacyjnych bazach danych są prawdziwe.",
+  "options": [
+   {
+    "key": "a",
+    "text": "LEFT JOIN zwraca wszystkie wiersze z lewej tabeli i dopasowane wiersze z prawej tabeli (lub NULL).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Złączenie wewnętrzne (INNER JOIN) zawiera wszystkie rekordy z lewej tabeli, nawet jeśli nie ma dopasowania.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "FULL JOIN zwraca tylko rekordy, które mają dopasowanie w obu tabelach.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "CROSS JOIN wymaga podania warunku ON.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "RIGHT JOIN jest symetryczny do LEFT JOIN (zwraca wszystko z prawej tabeli).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "NATURAL JOIN łączy tabele po wszystkich kolumnach o tych samych nazwach.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1111,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, które z własności przetwarzania transakcyjnego oznacza skrót ACID.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Atomiczność, Spójność (Consistency), Izolacja, Trwałość (Durability).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Agregacja, Całkowitość, Identyfikacja, Dostępność.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Asynchroniczność, Ciągłość, Interakcja, Decentralizacja.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Automatyzacja, Certyfikacja, Integracja, Dokumentacja.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Akceptacja, Cyliczność, Indeksacja, Definicja.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Autoryzacja, Ciągłość, Izolacja, Dostępność.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1112,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż prawdziwe stwierdzenia dotyczące funkcji agregujących w PostgreSQL:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Funkcje agregujące (np. SUM, AVG) nie mogą być używane bezpośrednio w klauzuli WHERE.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Klauzula HAVING służy do filtrowania wyników przed agregacją.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Funkcja COUNT() pomija wartości NULL.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Funkcje agregujące można stosować tylko w zapytaniach z GROUP BY.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Funkcja COUNT(*) zlicza wszystkie wiersze, w tym te z wartościami NULL.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Funkcja MAX() działa tylko na typach numerycznych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1113,
+  "topic": "databases",
+  "courseName": "Bazy danych",
+  "question": "Wskaż, które z poniższych stwierdzeń dotyczących związku relacyjnych baz danych z matematyczną teorią relacji są prawdziwe.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Relacja w sensie matematycznym to podzbiór iloczynu kartezjańskiego zbiorów (dziedzin).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Tabele relacyjnych baz danych w których istnieją klucze są relacjami.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Każda tabela w SQL jest matematyczną relacją (nawet jeśli dopuszcza duplikaty).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Model relacyjny nie opiera się na teorii zbiorów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Atrybuty relacji odpowiadają kolumnom tabeli, a krotki odpowiadają wierszom.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Relacja matematyczna dopuszcza nieskończoną liczbę krotek w bazie danych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1126,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Jeżeli kolor punktu zapisany jest na 16 bitach (High Color), to może on przyjąć:",
+  "options": [
+   {
+    "key": "a",
+    "text": "65536 różnych barw.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "16,7 miliona barw.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "256 barw.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "1024 barwy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "32768 barw.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "2^24 barw.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1127,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "W modelu oświetlenia Phonga, odbicie zwierciadlane (specular):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zależy od kąta między wektorem kierunku obserwacji a wektorem kierunku odbicia światła.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Jest niezależne od kąta pomiędzy wektorem normalnym powierzchni a wektorem w kierunku źródła światła.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Nie zależy od właściwości materiału.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest identyczne dla każdego punktu powierzchni.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Odpowiada za kolor cienia obiektu.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest modelowane za pomocą funkcji sinus.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1128,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "W Ray-tracingu rekurencyjnym promienie wtórne to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Promienie odbite, załamane (transmitowane) oraz promienie cienia.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wektory normalne do wszystkich powierzchni.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "promienie biegnące bezpośrednio z oka do rzutni.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "promienie generowane przez źródła światła rozproszonego.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "promienie pierwotne.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "tylko promienie załamane.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1129,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Metoda bilansu energetycznego (Radiosity):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Bazuje na zasadzie zachowania energii i modeluje wymianę światła między powierzchniami rozpraszającymi.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dobrze symuluje odbicia zwierciadlane.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest metodą niezależną od widoku (view-independent).",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "nie wymaga podziału powierzchni na patche.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest szybsza od ray-tracingu dla scen z wieloma lustrami.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "oblicza oświetlenie tylko dla punktów widocznych z kamery.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1130,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Modele kolorów subtraktywne to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "CMYK.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "RGB.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "HSV.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "YUV.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "HSL.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Lab.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1131,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Przeplot obrazu (Interlacing):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Polega na wyświetlaniu najpierw linii parzystych, a następnie nieparzystych (lub odwrotnie).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "algorytm renderingu bazujący na skalowaniu obrazu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "technika antyaliasingu przestrzennego.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "metoda kompresji bezstratnej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "służy do zwiększenia rozdzielczości pionowej.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "jest stosowany w nowoczesnych monitorach LCD.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1132,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Skrót RLE (Run-Length Encoding) oznacza:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Metodę bezstratnej kompresji danych polegającą na zliczaniu powtórzeń tych samych wartości.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wspieraną sprzętowo bibliotekę do grafiki 3D.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "algorytm rasteryzacji linii.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "format zapisu tekstur 3D.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "metodę kompresji stratnej dźwięku.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "protokół przesyłania obrazu w sieci.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1133,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Podstawowe transformacje geometryczne w grafice 3D to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Translacja (przesunięcie), Rotacja (obrót) i Skalowanie.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "przenikanie, zasłanianie, teksturowanie.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "cieniowanie, oświetlanie, rzutowanie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "teselacja, kliping, rasteryzacja.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "transformacja barwna.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "filtracja splotowa.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1134,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "W grafice 3D, Ray-Tracing:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwala na łatwe uzyskanie efektów takich jak cienie, odbicia zwierciadlane i załamania światła.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "technika renderingu bazująca na koncepcji modelu oświetlenia lokalnego.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest zawsze szybszy od rasteryzacji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie obsługuje przezroczystości.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "polega na rzutowaniu wierzchołków na ekran.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nie wymaga obliczania przecięć promienia z obiektami.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1135,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Bufor Z (Z-buffer):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służy do rozstrzygania widoczności powierzchni poprzez przechowywanie głębokości pikseli.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "metoda nakładania tekstury na obiekt.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służy do przechowywania składowej alfa koloru.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest wykorzystywany tylko w ray-tracingu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "przechowuje współrzędne XY piksela.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "zwiększa zużycie pamięci karty graficznej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1136,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "W grafice komputerowej 3D teselacja:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Polega na podziale skomplikowanych prymitywów geometrycznych na prostsze.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "służy do wygładzania krawędzi (antyaliasing).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest procesem zamiany obrazu wektorowego na rastrowy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "polega na usuwaniu niewidocznych krawędzi.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest wykonywana wyłącznie na procesorze (CPU).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "służy do kompresji siatek wielokątów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1137,
+  "topic": "computer_graphics",
+  "courseName": "Grafika komputerowa",
+  "question": "Cieniowanie Phonga (Phong Shading):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Polega na interpolacji wektorów normalnych wewnątrz wielokąta i obliczaniu modelu oświetlenia dla każdego piksela.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "technika cieniowania polegająca na obliczeniu jasności dla jednego z wierzchołków fasety.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest identyczne z cieniowaniem Gourauda.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie pozwala na uzyskanie odblasków zwierciadlanych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest mniej kosztowne obliczeniowo niż cieniowanie Gourauda.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "daje gorsze efekty wizualne niż cieniowanie płaskie (flat).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1170,
+  "topic": "image_processing",
+  "courseName": "Przetwarzanie obrazów cyfrowych",
+  "question": "Które stwierdzenia dotyczące kompresji JPEG są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wykorzystuje stratną kompresję opartą na dyskretnej transformacie kosinusowej (DCT).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Typowo w procesie kompresji wykorzystuje transformatę Fouriera.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest optymalna do kompresji tekstu i grafiki o ostrych krawędziach.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie pozwala na regulację stopnia kompresji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wykorzystuje kwantyzację w celu usunięcia informacji mniej istotnych dla ludzkiego oka.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest formatem wyłącznie bezstratnym.",
+    "correct": false
+   }
+  ]
+ }
+]

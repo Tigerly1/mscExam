@@ -1,0 +1,1389 @@
+[
+ {
+  "id": 102,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Algorytmy optymalizacji statycznej:",
+  "options": [
+   {
+    "key": "a",
+    "text": "metoda simpleksu Neldera-Meada jest metodą bezgradientową",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "metoda Newtona wymaga obliczania w każdym kroku gradientu i hesjanu",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "metody z funkcją kary (penalty methods) stosuje się w przypadkach optymalizacji bez ograniczeń",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "metoda najszybszego spadku wymaga obliczania hesjanu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 103,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n, ^^x_{i-1} < x_i^^, i = 1, 2, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \\sum_{j=0}^m a_{j, m}x^j^^. Zaznacz prawdziwe implikacje.",
+  "options": [
+   {
+    "key": "a",
+    "text": "m = n => ^^E_m = 0^^",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "m > n => ^^E_m < 0^^",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "^^E_m > 0^^ => n > m",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 104,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \\sum_{j=0}^m a_{j,m}x^j^^. Rozważamy 3 sposoby obliczania błędu aproksymacji ^^E_m^^: 1. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\sum_{i=0}^n |y_i-W_m(x_i)|^^ 2. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\sum_{i=0}^n (y_i-W_m(x_i))^2^^ 3. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\max_{i=0, 1, ..., n} |y_i-W_m(x_i)|^^ Obliczanie współczynników ^^a_i^^ można sprowadzić do zagadnienia liniowego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "w przypadku 1",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w przypadku 2",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "w przypadku 3",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "w żadnym z tych przypadków",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 105,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Dla tych samych danych eksperymentalnych podanych poniżej wyznaczono 3 funkcje aproksymujące. i | 0 1 2 x | 2 4 6 y | 1 2 1 W każdym przypadku k = 1, 2, 3 funkcja aproksymująca miała taką samą postać ^^f_k(x) = a_k * x + b_k^^, ale użyto innego kryterium jakości aproksymacji: 1. Dla k = 1: ^^min_{a_1, b_1} \\sum_{i=0}^2 |y_i-f_1(x_i)|^^ 2. Dla k = 2: ^^min_{a_2, b_2} \\sum_{i=0}^2 (y_i-f_2(x_i))^2^^ 3. Dla k = 3: ^^min_{a_3, b_3} max_{i=0,1,2} |y_i-f_3(x_i)|^^ Zaznacz prawidłowe odpowiedzi.",
+  "options": [
+   {
+    "key": "a",
+    "text": "a_1 = a_2 = a_3, b_1 = b_2 = b_3",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "a_1 = a_2 = a_3, b_1 != b_2 != b_3",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 106,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Rozważmy funkcję kwadratową n zmiennych: ^^f(x) = x^TAx + b^Tx + c^^ A jest macierzą (n x n), b wektorem (n x 1) o stałych współczynnikach, c jest skalarem. Załóżmy, że macierz A jest dodatnio określona. Funkcja ^f ma minimum w punkcie ^^x_{min}^^. Rozważmy tylko 3 metody szukania minimum tej funkcji: simpleksu Neldera-Meada, najszybszego spadku (steepest descent) oraz Newtona. Startujemy z dowolnego punktu ^^x_0^^, różnym od ^^x_{min}^^.",
+  "options": [
+   {
+    "key": "a",
+    "text": "metoda Newtona gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "metoda najszybszego spadku gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "metoda simpleksu Neldera-Meada gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 107,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Czy obliczanie parametrów (współczynników) funkcji aproksymującej można sprowadzić do rozwiązywania układu równań?",
+  "options": [
+   {
+    "key": "a",
+    "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest funkcją liniową względem zmiennej niezależnej",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "nie można",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 108,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Do aproksymacji zbioru punktów ^^P = \\{ (x_i, y_i) | i = 0, 1, ..., n \\}^^ używamy funkcji ^^f^{(k)}(x;a_{k,j}|j=0,1,...,m)^^. ^^a_{k, j}^^ to parametry funkcji. Stosując 3 różne kryteria jakości aproksymacji (miary błędu aproksymacji) podane poniżej otrzymujemy trzy różne funkcje aproksymujące ^^f_k(x)^^, k = 1, 2, 3 dla tej samej wartości m, a różniące się między sobą wartościami parametrów ^^a_{k, j}^^. 1. k = 1: ^^min \\sum_{i=0}^n |y_i-f^{(1)}(x_i)|^^ 2. k = 2: ^^min \\sum_{i=0}^n (f_i-f^{(2)}(x_i))^2^^ 3. k = 3: ^^min^^ ^^max_{i=0,1,...,n} |y_i-f^{(3)}(x_i)|^^ Niech ^^\\Delta^{(k)}_{max}^^ oznacza odległość (w sensie metryki maksimum) k-tej funkcji aproksymującej ^^f_k^^ od najbardziej oddalonego punktu ze zbioru P, tzn. ^^\\Delta^{(k)}_{max} = \\max_{i=0,...,n}|y_i-f^{(k)}(x_i)|^^. Zaznacz prawdziwe relacje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "^^\\Delta_{\\max}^{(1)} \\geq \\Delta_{\\max}^{(2)}^^",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "^^\\Delta_{\\max}^{(1)} \\leq \\Delta_{\\max}^{(2)}^^",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "^^\\Delta_{\\max}^{(3)} \\leq \\Delta_{\\max}^{(2)}^^",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "^^\\Delta_{\\max}^{(3)} \\leq \\Delta_{\\max}^{(1)}^^",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 109,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Warunkiem koniecznym i wystarczającym zbieżności metod iteracyjnych prostych (takich jak metoda Jacobiego czy metoda Gaussa-Seidla) rozwiązywania układów równań liniowych jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "promień spektralny macierzy iterowanej w danej metodzie jest zawsze mniejszy od 1",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "promień spektralny macierzy iterowanej w danej metodzie jest zawsze większy od 1",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 110,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Do metod nazywanych metodami dokładnymi rozwiązywania układów równań liniowych zalicza się:",
+  "options": [
+   {
+    "key": "a",
+    "text": "metoda Jacobiego",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "metoda rozkładu LU",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "metoda Gaussa",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "metoda Jordana",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "eliminacja Gaussa z wyborem elementu głównego",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "metoda Cramera",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "metoda SOR (Successive Over-Relaxation)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 111,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Które z poniżej wymienionych zagadnień numerycznych wykorzystują właściwości przybliżania funkcji wielomianem interpolującym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "metoda siecznych, metoda stycznych szukania miejsc zerowych funkcji",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "obliczanie całki oznaczonej funkcji za pomocą kwadratur Newtona-Cotesa",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "równania różniczkowe zwyczajne",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "rozwiązywanie układów równań metodami iteracyjnymi",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 112,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Wielomiany sklejane (ang. spline) trzeciego stopnia muszą spełniać następujące warunki w punktach sklejeń:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przechodzenie funkcji interpolującej przez węzły interpolacji",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "ciągłość pochodnej funkcji interpolującej",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "ciągłość funkcji interpolującej",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "ciągłość drugiej pochodnej funkcji interpolującej",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 113,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Wskaż zdania prawdziwe dotyczące zagadnienia interpolacji wielomianowej z wykorzystaniem jednomianów (tzw. bazy naturalnej):",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest to zadanie dobrze uwarunkowane",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "ma zdecydowanie lepsze właściwości numeryczne niż metoda Lagrange'a",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest to zadanie źle uwarunkowane",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 114,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Błędy związane z ograniczeniem nieskończonego ciągu wymaganych obliczeń do skończonej liczby działań nazywamy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "błędami zaokrągleń (ang. rounding errors)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "błędami niedomiaru (ang. underflow errors)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "błędami obcięcia (ang. truncation errors)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "błędami nadmiaru (ang. overflow errors)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 115,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Jeśli niewielkie względne zaburzenia danych wejściowych powodują niewielkie względne zmiany wyników, to wówczas:",
+  "options": [
+   {
+    "key": "a",
+    "text": "współczynnik uwarunkowania osiąga wysoką wartość",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "współczynnik uwarunkowania osiąga niską wartość",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 116,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Warunkami wystarczającymi, gwarantującymi zbieżność poszukiwania miejsc zerowych funkcji f(x) metodą bisekcji są:",
+  "options": [
+   {
+    "key": "a",
+    "text": "funkcja f(x) jest ciągła w przedziale domkniętym [a, b]",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "pierwsza i druga pochodna f(x) istnieją i są ciągłe w przedziale domkniętym [a, b]",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "pierwsza i druga pochodna mają stały znak w całym przedziale",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "na końcach przedziału [a, b] wartości funkcji f(x) przyjmują przeciwne znaki, czyli zachodzi f(a) * f(b) < 0",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 117,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Stosując algorytm stycznych poszukiwania jednokrotnego miejsca zerowego funkcji f(x) w przedziale domkniętym [a, b] w dostatecznej bliskości pierwiastka uzyskujemy zbieżność:",
+  "options": [
+   {
+    "key": "a",
+    "text": "kwadratową",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wykładniczą",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 118,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Do całkowania numerycznego używa się m. in. kwadratur Newtona-Cotesa. Do prostych kwadratur Newtona-Cotesa należą:",
+  "options": [
+   {
+    "key": "a",
+    "text": "metoda Eulera",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "metoda Romberga",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "metoda trapezów",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "metoda Simpsona",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "reguła 3/8",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "metoda Boole'a",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 119,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Efekt Rungego jest charakterystyczny dla następujących metod interpolacji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "interpolacji funkcjami sklejanymi 1 stopnia dla węzłów równoodległych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "interpolacji funkcjami sklejanymi 3 stopnia dla węzłów równoodległych",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "interpolacji metodą Lagrange'a (wielomianowej) dla węzłów równoodległych",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "interpolacji metodą Lagrange'a dla węzłów będących zerami wielomianów Czebyszewa",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 120,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Które zdania dotyczące metody eliminacji Gaussa rozwiązywania układów równań są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest to metoda iteracyjna",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest to metoda dokładna",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "przekształca macierz do postaci macierzy schodkowej",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "nie wymaga przekształcenia układu równań do postaci z macierzą trójkątną górną",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 121,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Aby wyeliminować lub znacząco ograniczyć efekt Rungego przy zadaniu interpolacji można:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zastosować interpolację funkcjami sklejanymi zamiast metody Lagrange'a",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zastosować interpolację z węzłami gęściej upakowanymi na końcach przedziału",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zastosować do interpolacji miejsca zerowa wielomianów Czebyszewa",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 122,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Dokładność reprezentacji zmiennoprzecinkowej jest określona przez:",
+  "options": [
+   {
+    "key": "a",
+    "text": "liczbę bitów mantysy",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "liczbę bitów mantysy i wykładnika",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zakres wykładnika",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "liczbę bitów mantysy i zakres wykładnika",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 123,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Efekt Rungego w interpolacji wielomianowej to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wynik wyboru złej funkcji interpolującej",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wynik braku jednoznaczności rozwiązania zadania interpolacji",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "konsekwencja arytmetyki zmiennoprzecinkowej",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wynik błędu metody",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 124,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Funkcje sklejane stopnia m na przedziale [a, b]:",
+  "options": [
+   {
+    "key": "a",
+    "text": "są ciągłe wraz z (m-1) pochodnymi na [a, b]",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "są ciągłe wraz z (m+1) pochodnymi na [a, b]",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "są używane tylko do interpolacji przedziałowej",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie są przydatne do interpolowania funkcji periodycznych",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "są jednoznacznie określone przez podanie warunków brzegowych",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nadają się tylko do interpolowania przedziałowego funkcji z nieciągłymi osobliwościami",
+    "correct": false
+   },
+   {
+    "key": "g",
+    "text": "są przydatne nie tylko do interpolacji, ale też do aproksymacji",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 125,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Wybierz poprawną odpowiedź:",
+  "options": [
+   {
+    "key": "a",
+    "text": "interpolacja z węzłami będącymi zerami wielomianu Czebyszewa odpowiedniego stopnia eliminuje efekt Rungego",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "przybliżenia Pade to technika aproksymacji średniokwadratowej",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "funkcje sklejane nie mogą być wykorzystane do aproksymacji średniokwadratowej ze względu na postać minimalizowanej normy",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "aproksymacja średniokwadratowa polega na minimalizacji normy Czebyszewa",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 126,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Metoda Newtona-Raphsona rozwiązywania równań nieliniowych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wykorzystuje niejawnie przyspieszenie Aitkena",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest przykładem metody iteracyjnej o stałym punkcie",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jest przykładem metody interpolacyjnej",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ma rząd zbieżności równy 1",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ma rząd zbieżności równy 2",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "jest szybciej zbieżna niż metoda siecznych",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "jest szybciej zbieżna niż metoda bisekcji",
+    "correct": true
+   },
+   {
+    "key": "h",
+    "text": "nie może być uogólniona dla układów równań nieliniowych",
+    "correct": false
+   },
+   {
+    "key": "i",
+    "text": "wymaga znajomości pochodnej funkcji",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 127,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Metoda eliminacji Gaussa rozwiązywania układów równań liniowych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wymaga wyszukiwania elementu wiodącego i polega na przekształceniu macierzy do postaci trójkątnej górnej",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "polega na doprowadzeniu macierzy do postaci diagonalnej",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "ma złożoność ^^O(n^3)^^, gdzie ^^n^^ - liczba równań",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "jest przykładem metody iteracyjnej niestacjonarnej",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ma złożoność ^^O(n^2)^^, gdzie ^^n^^ - liczba równań",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 128,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Metody dekompozycji LU:",
+  "options": [
+   {
+    "key": "a",
+    "text": "mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "należą do rodziny metod iteracyjnych niestacjonarnych",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie wymagają wyszukiwania elementu wiodącego",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "są przydatne tylko do rozwiązywania układów równań z macierzą symetryczną dodatnio określoną",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "mają lepszą złożoność obliczeniową niż metoda Gaussa, gdyż nie wymagają wyszukiwania elementu wiodącego",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "są metodami iteracyjnymi stacjonarnymi",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 129,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Wybierz poprawne zdania opisujące metody minimalizacji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wzór Davidona-Fletchera-Powella jest podstawą metody zmiennej metryki",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "metoda sprzężonych kierunków jest przykładem ogólnej metody poszukiwania minimum globalnego",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "metoda największego spadku jest przykładem metody poszukiwania minimum globalnego",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "metoda simpleksów należy do metod gradientowych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 130,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Szybka transformata Fouriera:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest możliwa tylko wtedy, gdy liczba punktów jest całkowitą potęgą 2",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "ma złożoność obliczeniową ^^O(n)^^, gdzie ^^n^^ - liczba węzłów",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest realizacją wzoru całkowego Fouriera na architekturach równoległych",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "polega na zamianie pojedynczej transformaty Fouriera na sumę transformat Fouriera",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 131,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Podejście wariacyjne do rozwiązywania równań różniczkowych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "nie nadaje się do obliczeń numerycznych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "polega na tym, że szukamy funkcji minimalizującej odpowiedni funkcjonał",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "polega na wprowadzeniu specjalnej siatki całkowania",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "polega na uzmiennieniu położeń części punktów siatki",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1037,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754). Dodatnie liczby rzeczywiste z zakresu od 𝑉 𝐴𝐿𝑀𝐼𝑁 = 2.2 ⋅ 10−308 do 𝑉 𝐴𝐿𝑀𝐴𝑋 = 1.8 ⋅ 10308 są zapisywane w formacie podwójnej precyzji z względnym błędem zaokrąglenia nie większym od 𝜀 = 2−52 ≈ 2.2 ⋅ 10−16 . Które zdania są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wszystkie liczby wymierne, poza całkowitymi, są reprezentowane z niezerowym błędem zaokrąglenia.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Liczby wymierne, których rozwinięcie w bazie 2 jest nieskończone (np. 0.1), są reprezentowane z błędem zaokrąglenia.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Błąd względny reprezentacji jest stały dla wszystkich liczb.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Liczba 0.1 jest reprezentowana dokładnie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Mantysa ma długość 64 bitów.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wykładnik jest zapisywany w kodzie uzupełnień do dwóch (U2).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1038,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Niech 𝑎, 𝑏, 𝑐 będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową 𝜀. Liczba 𝑐 jest wynikiem operacji arytmetycznej ∘ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym. Niech 𝛿𝑐 oznacza błąd względny wyniku operacji 𝑐 = 𝑎 ∘ 𝑏. (dokładniej: jego wartość bezwzględną). W których przypadkach błąd wyniku 𝛿𝑐 może być wielokrotnie (kilka rzędów) większy od błędów argumentów 𝑎 i 𝑏 , czyli 𝛿𝑐 ≫ 2𝜀",
+  "options": [
+   {
+    "key": "a",
+    "text": "w przypadku dzielenia liczby różnej od zera przez liczbę różną od zera.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "w przypadku odejmowania dwóch liczb o bardzo zbliżonych wartościach.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "w przypadku mnożenia dwóch bardzo dużych liczb.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "w przypadku dodawania liczby bardzo małej do bardzo dużej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "w przypadku wyznaczania pierwiastka kwadratowego.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "w przypadku podnoszenia do kwadratu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1039,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Obliczanie pierwiastków ciągłej funkcji 𝑓 jednej zmiennej rzeczywistej 𝑥 metodami iteracyjnymi. Wartości funkcji dla pierwszych dwóch wartości wyrazów ciągu iteracyjnego 𝑥0 i 𝑥1 spełniają nierówność 𝑓(𝑥0 )𝑓(𝑥1 ) < 0. Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę",
+  "options": [
+   {
+    "key": "a",
+    "text": "siecznych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "bisekcji (połowienia przedziału).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Newtona (stycznych).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "iteracji prostych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "odwrotnej interpolacji kwadratowej.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "żadna z powyższych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1040,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Należy rozwiązać układ równań liniowych 𝐴𝑥 = 𝑏 z dowolną rzeczywistą, nieosobliwą macierzą 𝐴 𝑛×𝑛, 𝑛 ≫ 1. Złożoność obliczeniowa algorytmu obliczenia rozwiązania jest mniejsza (w stosunku do metody eliminacyjnej Gaussa), jeżeli macierz 𝐴 jest zadana w postaci: Zaznacz zdania prawdziwe.",
+  "options": [
+   {
+    "key": "a",
+    "text": "macierz A jest już rozłożona na iloczyn A = LU.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "macierz A jest pełna i niesymetryczna.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "macierz A ma wymiar 10x10.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "stosujemy metodę Cramera dla dużych n.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "macierz A jest macierzą osobliwą.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "macierz A jest macierzą Hilberta.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1041,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Rozkład według wartości szczególnych (SVD):",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest możliwy tylko dla macierzy kwadratowej.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest możliwy dla dowolnej macierzy prostokątnej m x n.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "wymaga, aby macierz była dodatnio określona.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie pozwala na wyznaczenie rzędu macierzy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "macierze U i V w rozkładzie są macierzami trójkątnymi.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "wartości osobliwe są zawsze ujemne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1042,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Które zdania są prawdziwe dotyczące eliminacji Gaussa?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wybór elementu głównego (pivoting) jest stosowany w celu poprawy stabilności numerycznej algorytmu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wybór elementu głównego jest realizowany n - 1 razy w algorytmie eliminacyjnym Gaussa.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Eliminacja Gaussa bez wyboru elementu głównego jest zawsze stabilna.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Złożoność czasowa eliminacji Gaussa wynosi O(n^2).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Eliminacja Gaussa służy do wyznaczania wartości własnych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Macierz po eliminacji Gaussa jest macierzą diagonalną.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1043,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Które zdanie jest prawdziwe dotyczące wyznaczania wartości własnych?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Aby wyznaczyć n wartości własnych dowolnej macierzy kwadratowej A n×n nie stosuje się metod iteracyjnych.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Dla macierzy o stopniu n > 4 nie istnieją ogólne algorytmy skończone (algebraiczne) wyznaczające wartości własne (wynika to z twierdzenia Abla).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Wartości własne macierzy trójkątnej nie leżą na jej przekątnej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każda macierz kwadratowa ma wyłącznie rzeczywiste wartości własne.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Metoda potęgowa znajduje wszystkie wartości własne jednocześnie.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wartości własne macierzy A i A^T są zawsze różne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1044,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Które zdania są prawdziwe dotyczące rozkładu SVD (A = UΣV^T)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Rozkład SVD jest wykorzystywany w kompresji obrazów poprzez ucinanie najmniejszych wartości osobliwych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Macierz Σ jest macierzą ortogonalną.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Macierze U i V są macierzami diagonalnymi.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wartości osobliwe na przekątnej Σ mogą być ujemne.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Macierze U i V są macierzami ortogonalnymi.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "SVD nie pozwala na obliczenie macierzy pseudoodwrotnej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1045,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Szukanie minimum funkcji wielu zmiennych. Przyjmijmy, że funkcja, której minimum należy znaleźć, jest ,,funkcją kwadratową'', a dokładniej - ma postać formy kwadratowej 𝐹 (𝑥) = 𝑥𝑇 𝐴𝑥 + 𝑏𝑇 𝑥 + 𝑐 , 𝑥 ∈ ℝ 𝑛 i macierz A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła,. 𝑘 - liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja 𝐹 ma minimum. Które zdania są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Dla bezgradientowej metody Neldera-Meada: k < n.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Metoda sprzężonych gradientów znajduje minimum takiej funkcji w co najwyżej n iteracjach (w arytmetyce dokładnej).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Metoda najszybszego spadku zawsze zbiega w jednej iteracji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Metoda Newtona wymaga obliczania tylko pierwszej pochodnej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Minimum funkcji kwadratowej nie istnieje, jeśli A jest dodatnio określona.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Metoda Newtona dla funkcji kwadratowej zbiega w n iteracjach.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1046,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares) Dane: 20 pomiarów położenia 𝑠 𝑖 pojazdu w ruchu prostoliniowym w chwilach 𝑡𝑖 , 𝑖 = 1, 2, … , 20. Funkcja aproksymująca zależności położenia od czasu: 𝑠(𝑡) = 𝑎0 + 𝑎1 𝑡 + 𝑎2 𝑡2 . Które zdania są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Podany przykład nie jest odpowiedni dla liniowego zadania najmniejszych kwadratów, bo funkcja aproksymująca jest funkcją kwadratową.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Jest to liniowe zadanie najmniejszych kwadratów, ponieważ funkcja jest liniowa względem parametrów a0, a1, a2.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Wymaga rozwiązania układu równań nieliniowych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Można ją stosować tylko dla 2 pomiarów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Parametry a0, a1, a2 muszą być liczbami całkowitymi.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Błąd aproksymacji w każdym punkcie musi wynosić zero.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1047,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Metoda ilorazów różnicowych. Zależność błędu przybliżania wartości pochodnej funkcji analitycznej 𝑓 w punkcie 𝑥, 𝑥 ∈ 𝑅 metodą ilorazów różnicowych według formuły dwupunktowej od kroku ℎ można zapisać wzorem − 𝑓 ′ (𝑥)∣∣ . 𝑓(𝑥+ℎ)−𝑓(𝑥) 𝜀(ℎ) = ∣∣ ℎ",
+  "options": [
+   {
+    "key": "a",
+    "text": "W algorytmie obliczania przybliżenia wartości pochodnej metodą ilorazów z urojonym krokiem ih nie występuje odejmowanie bliskich wartości, co eliminuje błąd kasowania.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Metoda ilorazów różnicowych jest zawsze dokładniejsza od różniczkowania automatycznego.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Krok h powinien być jak największy, aby zminimalizować błąd metody.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Metoda ta wymaga znajomości drugiej pochodnej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Różniczkowanie z urojonym krokiem wymaga użycia liczb zespolonych.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Metoda ilorazów różnicowych wstecz jest zawsze rzędu O(h^2).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1048,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Różniczkowanie automatyczne:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Metodę różniczkowania automatycznego można stosować tylko dla funkcji jednej zmiennej.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Pozwala na obliczanie wartości pochodnych z dokładnością maszynową, wykorzystując regułę łańcuchową.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Polega na symbolicznym wyznaczaniu wzoru pochodnej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest znacznie wolniejsze od metod ilorazów różnicowych dla funkcji wielu zmiennych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wymaga numerycznego całkowania funkcji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Nie pozwala na obliczanie gradientów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1049,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Zaznacz zdanie prawdziwe dotyczące rozkładu QR:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Rozkład danej macierzy A na iloczyn QR jest jednoznaczny.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Rozkład QR jest jednoznaczny, jeśli macierz A jest pełnego rzędu kolumnowego, a elementy na przekątnej macierzy R są dodatnie.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Metoda Grama-Schmidta jest najbardziej stabilną numerycznie metodą wyznaczania rozkładu QR.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Macierz Q w rozkładzie QR jest macierzą trójkątną.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Rozkład QR nie może być stosowany do rozwiązywania zadań najmniejszych kwadratów.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Macierz R jest macierzą ortogonalną.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1050,
+  "topic": "numerical_methods",
+  "courseName": "Metody numeryczne",
+  "question": "Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną 𝑚 = 𝑎0 + 𝑎1 ℎ . Warunki zgodności danych z funkcją aproksymującą zapiszemy jako",
+  "options": [
+   {
+    "key": "a",
+    "text": "Prowadzi do rozwiązania układu nadwyznaczonego (100 równań z 2 niewiadomymi) w sensie najmniejszych kwadratów.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wymaga odwrócenia macierzy 100x100.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Zawsze daje rozwiązanie przechodzące przez wszystkie punkty pomiarowe.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie można jej stosować, gdy pomiary są obarczone błędem.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Funkcja błędu jest funkcją liniową.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Rozwiązanie zawsze istnieje i jest jednoznaczne, jeśli macierz układu ma pełny rząd.",
+    "correct": true
+   }
+  ]
+ }
+]
