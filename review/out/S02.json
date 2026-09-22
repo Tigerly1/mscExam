@@ -1,0 +1,3217 @@
+{
+ "questions": [
+  {
+   "id": 4,
+   "question": "Korzystając z układu FPGA można wykonać:",
+   "options": [
+    {
+     "key": "a",
+     "text": "na przykład dowolny układ kombinacyjny, ograniczony jedynie wielkością struktury FPGA",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "na przykład dowolny układ sekwencyjny, ograniczony jedynie wielkością struktury FPGA",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "na przykład pamięć RAM, w tym pamięć dwuportową, ograniczoną jedynie wielkością struktury FPGA",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "na przykład kompletny procesor, także wielordzeniowy, o dowolnej liście rozkazów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "wyłącznie układy kombinacyjne, ponieważ struktura FPGA nie zawiera przerzutników",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "wyłącznie procesory o architekturze zgodnej z architekturą przewidzianą przez producenta układu FPGA",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "dowolny układ cyfrowy bez żadnych ograniczeń co do jego wielkości",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "fpga",
+    "uklad-kombinacyjny",
+    "uklad-sekwencyjny"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- FPGA zawiera matrycę bloków LUT realizujących dowolne funkcje logiczne, więc każdy układ kombinacyjny da się w nim zbudować – granicą jest liczba dostępnych bloków.\n- Każdy blok logiczny ma także przerzutnik, a bloki można łączyć ze sprzężeniem zwrotnym, więc powstaje dowolny układ sekwencyjny (liczniki, automaty, rejestry) – znów ograniczony tylko wielkością struktury.\n- W konsekwencji można w FPGA zrealizować pamięć RAM (także dwuportową z Block RAM) oraz kompletny procesor (soft-core), również wielordzeniowy.\n\n**Dlaczego błędne**\n- „Tylko układy kombinacyjne” – FPGA ma przerzutniki i pamięć, więc układy sekwencyjne są jak najbardziej możliwe.\n- „Tylko procesory o architekturze zgodnej z producentem FPGA” – producent FPGA nie definiuje żadnej architektury procesora; lista rozkazów jest dowolna.\n- „Bez ograniczeń wielkości” – zasoby (LUT, przerzutniki, BRAM) są skończone.\n\n**Zapamiętaj**\nFPGA = dowolny układ kombinacyjny lub sekwencyjny (w tym RAM i procesor), ograniczony jedynie wielkością struktury i częstotliwością.",
+   "changes": []
+  },
+  {
+   "id": 5,
+   "question": "Układ kombinacyjny to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "układ logiczny nie pamiętający stanów poprzednich",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w jego skład mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "układ cyfrowy, w którym stan wyjść zależy wyłącznie od stanu wejść",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "można go zbudować z samych bramek NAND bez sprzężeń zwrotnych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "przykładami są sumator pełny, dekoder i multiplekser",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "wymaga sygnału zegarowego do poprawnej pracy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "przykładami są licznik binarny i rejestr przesuwny",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "układ, w którym stan wyjść zależy od aktualnych wejść oraz od stanu poprzedniego",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uklad-kombinacyjny",
+    "uklad-sekwencyjny",
+    "sumator-pelny"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Układ kombinacyjny z definicji nie pamięta stanów poprzednich – nie zawiera elementów pamięci.\n- Stan wyjść zależy wyłącznie od aktualnego stanu wejść (funkcja logiczna ^^Y=f(X)^^).\n- Można go zbudować z samych bramek NAND bez sprzężeń zwrotnych – NAND jest funkcjonalnie pełna, a brak pętli gwarantuje brak pamięci.\n- Sumator pełny, dekoder, multiplekser to klasyczne przykłady układów kombinacyjnych.\n\n**Dlaczego błędne**\n- „Bramki wraz z przerzutnikami JK” – przerzutnik jest elementem pamiętającym; taki układ jest sekwencyjny.\n- „Wymaga sygnału zegarowego” – układ kombinacyjny nie ma stanu, więc zegar nie jest potrzebny.\n- „Licznik i rejestr jako przykłady” – to układy sekwencyjne, bo pamiętają stan.\n\n**Zapamiętaj**\nKombinacyjny = wyjścia zależą tylko od wejść, brak pamięci, brak sprzężeń zwrotnych i przerzutników.",
+   "changes": []
+  },
+  {
+   "id": 6,
+   "question": "Układ sekwencyjny to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "układ logiczny nie pamiętający stanów poprzednich",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "może składać się z samych bramek logicznych",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "może się składać z samych bramek logicznych bez sprzężeń zwrotnych",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "w skład jego mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "układ, w którym stan wyjść zależy od aktualnych wejść oraz od stanu poprzedniego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "przykładami są przerzutniki, liczniki, rejestry i pamięć RAM",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "przykładem układu sekwencyjnego jest sumator pełny jednobitowy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "układ, w którym stan wyjść zależy wyłącznie od aktualnego stanu wejść",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "nie może zawierać sprzężeń zwrotnych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uklad-sekwencyjny",
+    "uklad-kombinacyjny",
+    "pamiec-ram"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Układ sekwencyjny może składać się z samych bramek logicznych – dwie bramki NAND ze skrzyżowanym sprzężeniem zwrotnym tworzą przerzutnik RS, czyli element pamięci.\n- Może zawierać bramki w połączeniu z przerzutnikami JK – to typowa budowa liczników i automatów.\n- Stan wyjść zależy od wejść i od stanu wewnętrznego (poprzedniego), bo układ posiada pamięć.\n- Przerzutniki, liczniki, rejestry i pamięć RAM to przykłady układów sekwencyjnych.\n\n**Dlaczego błędne**\n- „Nie pamięta stanów poprzednich” – to definicja układu kombinacyjnego.\n- „Same bramki bez sprzężeń zwrotnych” – bez pętli nie powstaje pamięć, układ jest kombinacyjny.\n- „Sumator pełny jako przykład” – sumator jest kombinacyjny.\n\n**Zapamiętaj**\nSekwencyjny = ma pamięć; pamięć wymaga sprzężenia zwrotnego (jawnego lub ukrytego w przerzutnikach).",
+   "changes": []
+  },
+  {
+   "id": 7,
+   "question": "Pamięć RAM:",
+   "options": [
+    {
+     "key": "a",
+     "text": "posiada wejścia adresowe, wejścia sterujące oraz wejście/wyjście danych",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "można wykonać z bramek NAND",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "można wykonać z bramek NAND bez sprzężeń zwrotnych",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest układem sekwencyjnym",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "przy n liniach adresowych pozwala zaadresować 2^n komórek pamięci",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "jest układem kombinacyjnym, ponieważ stan wyjść danych zależy wyłącznie od stanu wejść adresowych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zachowuje zapisane dane po wyłączeniu zasilania",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "posiada wyłącznie wejścia adresowe i wyjście danych, bez wejść sterujących",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "pamiec-ram",
+    "uklad-sekwencyjny",
+    "wskaznik-adresowanie"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Pamięć RAM ma wejścia adresowe (wybór komórki), wejścia sterujące (CS, WE, OE) i linie danych (wejście/wyjście) – to jej standardowy interfejs.\n- Komórkę RAM stanowi zatrzask ze sprzężeniem zwrotnym, który da się zbudować z bramek NAND (bramka funkcjonalnie pełna), a dekoder adresu i bufory także.\n- RAM jest układem sekwencyjnym, bo pamięta dane; n linii adresowych pozwala zaadresować ^^2^n^^ komórek.\n- Zawartość SRAM/DRAM ginie po wyłączeniu zasilania – pamięć ulotna.\n\n**Dlaczego błędne**\n- „Z bramek NAND bez sprzężeń zwrotnych” – bez sprzężeń zwrotnych powstaje układ kombinacyjny, który niczego nie pamięta.\n- „Układ kombinacyjny” – RAM pamięta stan, jest sekwencyjna.\n- „Zachowuje dane po wyłączeniu zasilania” – to cecha ROM/Flash, nie RAM.\n\n**Zapamiętaj**\nRAM = adres + sterowanie + dane; jest układem sekwencyjnym, więc bramki NAND tak, ale tylko ze sprzężeniem zwrotnym.",
+   "changes": []
+  },
+  {
+   "id": 8,
+   "question": "Pamięć RAM dwuportowa:",
+   "options": [
+    {
+     "key": "a",
+     "text": "możemy wykonać z bramek NAND bez sprzężeń zwrotnych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "to pamięć RAM z dwoma interfejsami, pozwalającymi niezależnie uzyskać dostęp do tych samych komórek pamięci",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "w układach FPGA taki rodzaj pamięci nie występuje",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "to specjalne pamięci RAM, które umożliwiają dwóm niezależnym procesom (kontrolerom pamięci) dostęp do wspólnych danych",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "można ją wykorzystać wyłącznie w procesorach wielordzeniowych",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "każdy z portów posiada własne linie adresowe, linie danych i sygnały sterujące, a oba porty mogą pracować w tym samym cyklu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "w układach FPGA bloki pamięci (Block RAM) są zwykle wykonane właśnie jako pamięci dwuportowe",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "składa się z dwóch fizycznie osobnych bloków komórek, po jednym dla każdego portu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "jest zawsze wolniejsza od pamięci jednoportowej o tej samej pojemności",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "jest układem kombinacyjnym",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ram-dwuportowa",
+    "pamiec-ram",
+    "fpga"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Pamięć dwuportowa to jedna macierz komórek z dwoma niezależnymi interfejsami (adres, dane, sterowanie), więc dwa układy mogą równocześnie sięgać do tych samych komórek.\n- Umożliwia dwóm niezależnym procesom lub kontrolerom pamięci dostęp do wspólnych danych – to jej główne zastosowanie (komunikacja procesor–DMA, bufor obrazu).\n- Każdy port ma własne linie adresowe i danych; oba porty mogą pracować w tym samym cyklu.\n- W FPGA bloki Block RAM są fabrycznie dwuportowe.\n\n**Dlaczego błędne**\n- „NAND bez sprzężeń zwrotnych” – każda pamięć wymaga sprzężenia zwrotnego (element pamiętający).\n- „W FPGA nie występuje” – odwrotnie, to podstawowy zasób FPGA.\n- „Wyłącznie w procesorach wielordzeniowych” – stosowana wszędzie, gdzie dwa układy dzielą dane.\n- „Dwa fizycznie osobne bloki komórek” – to byłyby dwie pamięci, nie pamięć dwuportowa.\n- „Zawsze wolniejsza” – dwa równoległe dostępy zwiększają przepustowość.\n\n**Zapamiętaj**\nDwuportowa RAM = jedna zawartość, dwa niezależne porty pracujące jednocześnie.",
+   "changes": []
+  },
+  {
+   "id": 9,
+   "question": "Procesor:",
+   "options": [
+    {
+     "key": "a",
+     "text": "możemy wykonać przy użyciu FPGA, ale tylko jednordzeniowy",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "żadne z pozostałych",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "to sekwencyjne urządzenie cyfrowe, które pobiera dane z pamięci operacyjnej, interpretuje je i wykonuje jako rozkazy",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "tryby adresowania procesora wykonywanego przy użyciu FPGA muszą być zgodne z trybami przewidzianymi przez producenta układu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "możemy wykonać przy użyciu FPGA",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "składa się m.in. z jednostki sterującej, jednostki arytmetyczno-logicznej oraz rejestrów, w tym licznika rozkazów i rejestru rozkazów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wykonuje rozkazy w cyklu: pobranie rozkazu, dekodowanie, wykonanie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest układem kombinacyjnym, ponieważ wynik zależy wyłącznie od pobranego rozkazu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wykonany przy użyciu FPGA musi być zgodny z architekturą x86",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "możemy wykonać przy użyciu FPGA, ale wyłącznie z listą rozkazów przewidzianą przez producenta układu FPGA",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "procesor-soft-core",
+    "fpga",
+    "lista-rozkazow-isa",
+    "uklad-sekwencyjny"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Procesor to sekwencyjne urządzenie cyfrowe: pobiera słowa z pamięci operacyjnej, dekoduje je i wykonuje jako rozkazy w kolejnych cyklach.\n- Procesor można wykonać w FPGA (soft-core: MicroBlaze, NIOS, RISC-V) – FPGA realizuje dowolny układ sekwencyjny.\n- Główne bloki to jednostka sterująca, ALU i rejestry (w tym licznik rozkazów i rejestr rozkazów).\n- Cykl rozkazowy: pobranie, dekodowanie, wykonanie.\n\n**Dlaczego błędne**\n- „W FPGA tylko jednordzeniowy” – liczbę rdzeni ogranicza tylko wielkość struktury.\n- „Tryby adresowania zgodne z producentem FPGA” – producent FPGA nie definiuje procesora; projektant sam ustala tryby adresowania i listę rozkazów.\n- „Układ kombinacyjny” – procesor pamięta stan (rejestry, PC), jest sekwencyjny.\n- „Zgodny z x86” – architektura jest dowolna.\n- „Żadne z pozostałych” – opcja zależna od zestawu; ponieważ istnieją zdania prawdziwe, jest fałszywa.\n\n**Zapamiętaj**\nProcesor = sekwencyjny wykonawca rozkazów z pamięci; w FPGA można zbudować dowolny, także wielordzeniowy.",
+   "changes": [
+    "b: opcja „żadne z pozostałych” zachowana bez zmian – [POSITION-DEPENDENT]"
+   ]
+  },
+  {
+   "id": 10,
+   "question": "Lista rozkazów procesora:",
+   "options": [
+    {
+     "key": "a",
+     "text": "w skład listy rozkazów zawsze wchodzi mnożenie",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "w procesorze wykonywanym przy użyciu FPGA musi być zgodna z listą rozkazów przewidzianą przez producenta układu FPGA",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "projektowana jest w zależności od potrzeb związanych z zastosowaniem procesora",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "określa formaty rozkazów oraz dostępne tryby adresowania",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "praktycznie zawsze zawiera rozkazy skoku warunkowego, bez których nie da się zrealizować pętli",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "jest identyczna we wszystkich procesorach, różnią się one tylko szybkością",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zależy od zainstalowanego systemu operacyjnego",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "procesory różnych producentów (np. x86 i ARM) mają wzajemnie zgodne listy rozkazów",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lista-rozkazow-isa",
+    "procesor-soft-core",
+    "rozkazy-skoku"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Lista rozkazów projektowana jest zgodnie z potrzebami zastosowania procesora – prosty sterownik ma kilkanaście rozkazów, procesor DSP rozkazy mnóż-i-dodaj.\n- Określa formaty rozkazów oraz dostępne tryby adresowania – to elementy definicji ISA.\n- Praktycznie każda lista zawiera rozkazy skoku warunkowego, bez których nie da się zrealizować pętli i instrukcji warunkowych.\n- Różne rodziny (x86, ARM, RISC-V) mają różne, niezgodne listy rozkazów.\n\n**Dlaczego błędne**\n- „Zawsze zawiera mnożenie” – wiele procesorów (6502, PicoBlaze, RISC-V bez rozszerzenia M) mnoży programowo.\n- „W FPGA zgodna z listą producenta FPGA” – producent FPGA nie definiuje procesora ani listy rozkazów.\n- „Identyczna we wszystkich procesorach” – fałsz, różne ISA.\n- „Zależy od systemu operacyjnego” – odwrotnie, system dostosowuje się do ISA.\n\n**Zapamiętaj**\nISA = interfejs sprzęt–oprogramowanie ustalony przez architekta pod zastosowanie; mnożenie nie jest obowiązkowe, skoki praktycznie tak.",
+   "changes": []
+  },
+  {
+   "id": 11,
+   "question": "Karta graficzna:",
+   "options": [
+    {
+     "key": "a",
+     "text": "może być układem kombinacyjnym",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "przy użyciu FPGA nie można zbudować karty graficznej ze sprzętowym wspomaganiem OpenGL",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "prostą wersję można zapisać w dwudziestu kilku liniach VHDL",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "OpenGL to specyfikacja otwartego i uniwersalnego API do tworzenia grafiki; jest to zestaw podstawowych funkcji umożliwiających tworzenie grafiki",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "jej pamięć obrazu bywa realizowana jako pamięć RAM dwuportowa: jeden port zapisuje piksele, drugi czyta je do wyświetlenia",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "jest układem sekwencyjnym",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "OpenGL to zamknięta, własnościowa biblioteka firmy Microsoft dostępna wyłącznie w systemie Windows",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "nie potrzebuje pamięci, ponieważ obraz generowany jest bezpośrednio z danych procesora",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "w FPGA nie można zbudować nawet prostego kontrolera VGA",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "karta-graficzna-opengl",
+    "fpga",
+    "uklad-sekwencyjny",
+    "ram-dwuportowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Prosty kontroler VGA (liczniki pozycji, sygnały HSYNC/VSYNC, wybór koloru) to dwadzieścia kilka linii VHDL – klasyczne ćwiczenie.\n- OpenGL to otwarta, uniwersalna specyfikacja API – zestaw funkcji do tworzenia grafiki 2D/3D niezależny od producenta.\n- Karta zawiera pamięć obrazu, często dwuportową: jeden port zapisuje piksele, drugi czyta je do wyświetlenia.\n- Karta graficzna jest układem sekwencyjnym – zlicza pozycje pikseli i pamięta obraz.\n\n**Dlaczego błędne**\n- „Może być układem kombinacyjnym” – generowanie obrazu wymaga liczników i pamięci, więc układ jest sekwencyjny.\n- „W FPGA nie można zbudować karty ze sprzętowym OpenGL” – można, granicą jest wielkość FPGA.\n- „OpenGL to zamknięta biblioteka Microsoftu” – to opis Direct3D; OpenGL jest otwarty (Khronos Group).\n- „Nie potrzebuje pamięci” – frame buffer jest niezbędny.\n\n**Zapamiętaj**\nKarta graficzna = pamięć obrazu + liczniki sygnałów wideo (układ sekwencyjny), realizowalna w FPGA; OpenGL = otwarte API graficzne.",
+   "changes": []
+  },
+  {
+   "id": 12,
+   "question": "Licznik rozkazów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest to licznik z wejściem równoległym wykorzystywanym wyłącznie przy skokach bezwarunkowych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "służy do pamiętania adresu mającego się wykonać rozkazu lub adresu aktualnie pobieranego argumentu z pamięci programu",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest inkrementowany po pobraniu każdego słowa z pamięci programu, a przy skokach, wywołaniach podprogramów i przerwaniach ładowany równolegle nową wartością",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "jego szerokość odpowiada szerokości przestrzeni adresowej pamięci programu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "przechowuje kod aktualnie wykonywanego rozkazu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "służy do zliczania liczby wykonanych operacji arytmetycznych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "jego zawartość nie zmienia się w wyniku wykonania rozkazu skoku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "licznik-rozkazow",
+    "rejestr-rozkazow",
+    "rozkazy-skoku"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Licznik rozkazów przechowuje adres rozkazu, który ma się wykonać, a po pobraniu kodu rozkazu – adres aktualnie pobieranego argumentu z pamięci programu (jest inkrementowany po każdym pobranym słowie).\n- Jest inkrementowany po pobraniu słowa z pamięci programu i ładowany równolegle przy skokach, wywołaniach i przerwaniach.\n- Jego szerokość odpowiada szerokości przestrzeni adresowej programu.\n\n**Dlaczego błędne**\n- „Wejście równoległe wyłącznie przy skokach bezwarunkowych” – wpis równoległy wykorzystują też skoki warunkowe (gdy warunek spełniony), CALL, RET i przerwania.\n- „Przechowuje kod rozkazu” – to rejestr rozkazów; PC przechowuje adres.\n- „Zlicza operacje arytmetyczne” lub „część ALU” – PC adresuje pamięć programu, nie liczy operacji i nie należy do ALU.\n- „Nie zmienia się w wyniku skoków” – skok właśnie polega na wpisie do PC.\n\n**Zapamiętaj**\nPC = adres następnego słowa pobieranego z pamięci programu (rozkazu lub jego argumentu); IR = kod rozkazu.",
+   "changes": []
+  },
+  {
+   "id": 13,
+   "question": "Rozkaz skoku bezwarunkowego procesora:",
+   "options": [
+    {
+     "key": "a",
+     "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie wpływa na stan licznika rozkazów procesora",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie sprawdza stanu znaczników (flag) procesora",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "adres docelowy może być podany bezpośrednio, względnie (PC + przesunięcie) albo pośrednio z rejestru",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "powoduje zawsze skok pod adres zero pamięci programu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "jest wykonywany przez ALU i ustawia znacznik zera (Z)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wykonuje skok tylko wtedy, gdy znacznik zera (Z) jest ustawiony",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozkazy-skoku",
+    "licznik-rozkazow"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Skok bezwarunkowy zawsze wpisuje do licznika rozkazów adres rozkazu docelowego – niezależnie od stanu jakichkolwiek znaczników.\n- Nie sprawdza stanu znaczników (flag) procesora – warunek po prostu nie istnieje.\n- Adres docelowy może być podany bezpośrednio, względnie (PC + przesunięcie) albo pośrednio z rejestru.\n\n**Dlaczego błędne**\n- „Tylko przy spełnieniu warunku” – to definicja skoku warunkowego.\n- „Nie wpływa na stan licznika rozkazów” – skok właśnie polega na zmianie PC.\n- „Zawsze skacze pod adres zero” – adres docelowy jest dowolny, określony w rozkazie.\n- „Wykonywany w ALU i ustawia znacznik Z” – skok to operacja sterująca, nie arytmetyczna; nie modyfikuje znaczników.\n\n**Zapamiętaj**\nJMP: zawsze ^^PC \\leftarrow adres^^; skok bezwarunkowy nie zależy od flag i nie ustawia flag.",
+   "changes": []
+  },
+  {
+   "id": 14,
+   "question": "Rozkaz skoku warunkowego procesora:",
+   "options": [
+    {
+     "key": "a",
+     "text": "nie wpływa na stan licznika rozkazów procesora",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "żadne z pozostałych",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "gdy warunek skoku nie jest spełniony, wykonywany jest kolejny rozkaz w naturalnej kolejności",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "warunek skoku sprawdzany jest na podstawie znaczników (flag) ustawionych przez wcześniejsze operacje, np. porównanie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "sam wykonuje porównanie argumentów, dlatego nie potrzebuje znaczników procesora",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "zawsze wykonuje skok pod adres zero pamięci programu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "nie występuje w procesorach o architekturze RISC",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozkazy-skoku",
+    "licznik-rozkazow",
+    "alu"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Skok warunkowy wpisuje adres docelowy do licznika rozkazów tylko wtedy, gdy warunek (stan znaczników Z, C, N, V) jest spełniony.\n- Gdy warunek nie jest spełniony, wykonywany jest kolejny rozkaz w kolejności (PC już zinkrementowany).\n- Warunek dotyczy znaczników ustawionych przez wcześniejsze operacje ALU (CMP, SUB, ADD) – skok zależy więc od wyników poprzednich operacji.\n\n**Dlaczego błędne**\n- „Nie wpływa na licznik rozkazów” – wpływa, gdy warunek spełniony.\n- „Niezależnie od warunku” – to skok bezwarunkowy.\n- „Sam wykonuje porównanie” – zwykle porównanie robi osobny rozkaz CMP/SUB, skok tylko czyta flagi.\n- „Zawsze skacze pod adres zero”, „niedostępny w RISC” – fałsz; BEQ/BNE istnieją w MIPS, ARM, RISC-V.\n- „Żadne z pozostałych” – opcja zależna od zestawu; istnieje zdanie prawdziwe.\n\n**Zapamiętaj**\nSkok warunkowy = „jeśli flaga, to ^^PC \\leftarrow adres^^, inaczej idź dalej”.",
+   "changes": [
+    "d: opcja „żadne z pozostałych” zachowana bez zmian – [POSITION-DEPENDENT]"
+   ]
+  },
+  {
+   "id": 15,
+   "question": "Rozkaz procesora wykonujący dodanie dwóch liczb:",
+   "options": [
+    {
+     "key": "a",
+     "text": "powoduje dodanie dwóch liczb, wynik zapisuje do licznika rozkazów",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "wykorzystuje ALU",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "żadne z pozostałych",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wynik zapisuje do rejestru docelowego (np. akumulatora) lub pamięci i ustawia znaczniki, np. Z (zero) i C (przeniesienie)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "argumenty mogą pochodzić z rejestrów, z pamięci lub być stałą zapisaną w rozkazie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "nie zmienia stanu znaczników (flag) procesora",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wykonywany jest przez jednostkę sterującą bez udziału ALU",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest dostępny wyłącznie w procesorach 64-bitowych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "alu",
+    "kod-u2",
+    "licznik-rozkazow"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Rozkaz dodawania wykorzystuje ALU – to właśnie jednostka arytmetyczno-logiczna wykonuje sumowanie.\n- Wynik zapisywany jest do rejestru docelowego (akumulatora) lub pamięci, a znaczniki Z, C, V, N są ustawiane zgodnie z wynikiem.\n- Argumenty mogą pochodzić z rejestrów, pamięci lub być stałą w rozkazie (tryb natychmiastowy).\n\n**Dlaczego błędne**\n- „Wynik do licznika rozkazów” – to zmieniałoby przebieg programu; wynik idzie do rejestru danych, a PC tylko inkrementuje się o długość rozkazu.\n- „Nie zmienia znaczników” – ADD typowo ustawia Z, C, V, N.\n- „Wykonywany przez jednostkę sterującą bez udziału ALU” – jednostka sterująca tylko steruje, liczy ALU.\n- „Tylko w procesorach 64-bitowych” – dodawanie jest w każdym procesorze.\n- „Żadne z pozostałych” – opcja zależna od zestawu; istnieje zdanie prawdziwe.\n\n**Zapamiętaj**\nADD: argumenty → ALU → rejestr wyniku + flagi; licznik rozkazów zmienia się tylko przez inkrementację lub skok.",
+   "changes": [
+    "c: opcja „żadne z pozostałych” zachowana bez zmian – [POSITION-DEPENDENT]"
+   ]
+  },
+  {
+   "id": 16,
+   "question": "W procesorze wykorzystującym przetwarzanie potokowe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wykonanie pojedynczej instrukcji rozkłada się na ciąg prostszych etapów",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "rozpoczęcie wykonania rozkazu może nastąpić dopiero po zakończeniu wykonania poprzedniego rozkazu",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "w jednej chwili różne etapy różnych rozkazów mogą być wykonywane równocześnie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "w stanie ustalonym kończy się wykonanie około jednego rozkazu na takt, mimo że każdy rozkaz przechodzi przez kilka etapów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "czas wykonania pojedynczego rozkazu (od pobrania do zapisu wyniku) jest krótszy niż w procesorze bez potoku",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "ten sam etap dwóch kolejnych rozkazów jest zawsze wykonywany w tej samej chwili",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "nie można wykonywać rozkazów skoku, ponieważ zaburzałyby one pracę potoku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "przetwarzanie-potokowe",
+    "superskalarnosc",
+    "rozkazy-skoku"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Istota potoku: wykonanie rozkazu rozkłada się na ciąg prostszych etapów (pobranie, dekodowanie, wykonanie, dostęp do pamięci, zapis).\n- W potoku skalarnym każdy etap ma jeden egzemplarz sprzętu, więc pierwszy etap kolejnego rozkazu zaczyna się dopiero po zakończeniu pierwszego etapu poprzedniego – z przesunięciem o jeden takt.\n- W jednej chwili różne etapy różnych rozkazów wykonują się równocześnie, a w stanie ustalonym kończy się około jeden rozkaz na takt – rośnie przepustowość.\n\n**Dlaczego błędne**\n- „Rozkaz zaczyna się dopiero po zakończeniu poprzedniego” – to procesor bez potoku; potok nakłada rozkazy na siebie.\n- „Skraca czas wykonania pojedynczego rozkazu” – latencja nie maleje (a nawet nieco rośnie); zyskuje przepustowość.\n- „Ten sam etap dwóch rozkazów jednocześnie” – to cecha superskalarności, nie zwykłego potoku.\n- „Skoki są niemożliwe” – skoki powodują hazardy sterowania, ale są wykonywane (predykcja, opróżnianie potoku).\n\n**Zapamiętaj**\nPotok: etapy nakładają się w czasie, przepustowość rośnie, latencja pojedynczego rozkazu nie maleje.",
+   "changes": []
+  },
+  {
+   "id": 17,
+   "question": "W procesorze wykorzystującym superskalarność:",
+   "options": [
+    {
+     "key": "a",
+     "text": "rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "ten sam etap dwóch kolejnych rozkazów może być wykonywany w tej samej chwili",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "możliwe jest jednoczesne wykonanie więcej niż jednej instrukcji",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "procesor posiada więcej niż jedną jednostkę wykonawczą (np. kilka ALU), do których równolegle kierowane są niezależne rozkazy",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "konieczne jest sprzętowe wykrywanie zależności danych między jednocześnie wykonywanymi rozkazami",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "procesor musi posiadać co najmniej dwa rdzenie, po jednym dla każdego równolegle wykonywanego rozkazu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "o tym, które rozkazy wykonają się równolegle, decyduje wyłącznie kompilator w czasie kompilacji",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "w jednym takcie może zakończyć się co najwyżej jeden rozkaz",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "superskalarnosc",
+    "przetwarzanie-potokowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Procesor superskalarny ma zduplikowane jednostki (kilka dekoderów, kilka ALU), więc ten sam etap dwóch kolejnych rozkazów może wykonywać się w tej samej chwili.\n- Możliwe jest jednoczesne wykonanie więcej niż jednej instrukcji – IPC może przekroczyć 1.\n- Wymaga to sprzętowego wykrywania zależności między rozkazami (i często przemianowania rejestrów, wykonania poza kolejnością).\n\n**Dlaczego błędne**\n- „Pierwszy etap dopiero po zakończeniu pierwszego etapu poprzedniego” – to ograniczenie zwykłego potoku skalarnego; superskalarność je znosi.\n- „Wymaga wielu rdzeni” – superskalarność to równoległość wewnątrz jednego rdzenia, jednego strumienia rozkazów.\n- „Kompilator z góry ustala równoległość” – to VLIW; w superskalarnym decyduje sprzęt dynamicznie.\n- „Najwyżej jeden rozkaz na takt” – to procesor skalarny.\n\n**Zapamiętaj**\nSuperskalarny = wiele jednostek wykonawczych, kilka rozkazów w tym samym etapie w tym samym takcie, IPC > 1.",
+   "changes": []
+  },
+  {
+   "id": 18,
+   "question": "Rejestr rozkazów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "przechowuje adres rozkazu wczytany z pamięci programu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jego zawartość wykorzystywana jest przez jednostkę sterującą",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "w trakcie wykonywania rozkazu zawartość rejestru rozkazów musi zmienić się bezpośrednio przed pobraniem argumentu rozkazu z pamięci programu",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "przechowuje kod rozkazu wczytany z pamięci programu",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "jego zawartość pozostaje niezmieniona przez cały czas wykonywania rozkazu, aż do pobrania kodu następnego rozkazu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "nie jest bezpośrednio dostępny dla programisty w modelu programowym procesora",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "przechowuje argument (daną) pobrany z pamięci dla aktualnie wykonywanego rozkazu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "programista może zmienić jego zawartość odpowiednim rozkazem przesłania",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "jego zawartość jest wykorzystywana wyłącznie przez ALU, a nie przez jednostkę sterującą",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rejestr-rozkazow",
+    "licznik-rozkazow",
+    "procesor-soft-core"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Rejestr rozkazów przechowuje kod rozkazu wczytany z pamięci programu w fazie pobrania.\n- Jego zawartość dekoduje jednostka sterująca, generując na jej podstawie sygnały sterujące dla ALU, rejestrów i pamięci.\n- Zawartość IR pozostaje niezmieniona przez cały czas wykonywania rozkazu – jednostka sterująca korzysta z niej w każdym takcie, także w chwili pobierania argumentu.\n- IR nie jest dostępny w modelu programowym – programista nie może go odczytać ani zapisać.\n\n**Dlaczego błędne**\n- „Przechowuje adres rozkazu” – adres przechowuje licznik rozkazów.\n- „Musi zmienić się bezpośrednio przed pobraniem argumentu” – gdyby kod rozkazu został nadpisany, jednostka sterująca nie wiedziałaby, co zrobić z argumentem; argument trafia do rejestru danych/adresowego, a IR zmienia się dopiero przy pobraniu następnego rozkazu.\n- „Przechowuje argument (daną)” – argumenty idą do akumulatora/rejestrów, nie do IR.\n- „Programista może go modyfikować rozkazem” – IR jest rejestrem wewnętrznym.\n\n**Zapamiętaj**\nIR = kod rozkazu, stały do końca jego wykonania, czytany przez jednostkę sterującą; PC = adres.",
+   "changes": [
+    "c: true -> false, bo zawartość rejestru rozkazów musi pozostać niezmieniona przez cały cykl wykonania rozkazu (jednostka sterująca dekoduje ją także podczas pobierania argumentu); argument trafia do rejestru danych/adresowego, a IR zmienia się dopiero przy pobraniu następnego rozkazu"
+   ]
+  },
+  {
+   "id": 1090,
+   "question": "Jednostka arytmetyczno-logiczna ALU:",
+   "options": [
+    {
+     "key": "a",
+     "text": "musi być układem sekwencyjnym.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jest podstawowym blokiem procesora wykonującym operacje obliczeniowe i logiczne.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nie może zawierać sumatorów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy wyłącznie do przechowywania danych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wykonuje operacje takie jak dodawanie, odejmowanie, AND, OR.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "zarządza przerwaniami sprzętowymi.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "ustawia znaczniki (flagi) wyniku, np. zero (Z), przeniesienie (C), znak (N), nadmiar (V).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "w jej skład wchodzi sumator wielobitowy, a odejmowanie realizowane jest jako dodawanie uzupełnienia do dwóch.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "przechowuje adres następnego rozkazu do wykonania.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "jest zawsze układem 8-bitowym, niezależnie od szerokości słowa procesora.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "alu",
+    "sumator-pelny",
+    "uklad-kombinacyjny"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- ALU to podstawowy blok procesora wykonujący operacje arytmetyczne i logiczne.\n- Wykonuje dodawanie, odejmowanie, AND, OR (a także XOR, NOT, przesunięcia, porównania).\n- Ustawia znaczniki wyniku: Z (zero), C (przeniesienie), N (znak), V (nadmiar).\n- Zawiera sumator wielobitowy zbudowany z sumatorów pełnych; odejmowanie realizuje jako dodawanie uzupełnienia do dwóch.\n\n**Dlaczego błędne**\n- „Musi być układem sekwencyjnym” – podstawowa ALU jest kombinacyjna: wynik zależy tylko od argumentów i kodu operacji.\n- „Nie może zawierać sumatorów” – sumator to jej serce.\n- „Służy wyłącznie do przechowywania danych” – przechowują rejestry; ALU liczy.\n- „Zarządza przerwaniami” – to zadanie jednostki sterującej/kontrolera przerwań.\n- „Przechowuje adres następnego rozkazu” – to licznik rozkazów.\n- „Zawsze 8-bitowa” – szerokość ALU odpowiada słowu procesora (8, 16, 32, 64 bity).\n\n**Zapamiętaj**\nALU = kombinacyjny „kalkulator” procesora: sumator + logika + znaczniki; nie pamięta danych i nie steruje.",
+   "changes": []
+  },
+  {
+   "id": 1091,
+   "question": "Układ sekwencyjny:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest to układ logiczny nie pamiętający stanów poprzednich.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "to układ, w którym stan wyjść zależy od aktualnych wejść oraz od stanu poprzedniego (posiada pamięć).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "to inaczej układ kombinacyjny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie wymaga sygnału zegarowego.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "przykładami są przerzutniki, liczniki, rejestry.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "nie posiada sprzężenia zwrotnego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "można go zbudować z samych bramek NAND, pod warunkiem zastosowania sprzężeń zwrotnych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "opisuje się go funkcją przejść (nowy stan) i funkcją wyjść, np. jako automat Moore'a lub Mealy'ego.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "przykładem układu sekwencyjnego jest sumator pełny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "nie da się go zbudować z samych bramek NAND.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uklad-sekwencyjny",
+    "uklad-kombinacyjny",
+    "pamiec-ram"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Układ sekwencyjny to układ, w którym wyjścia zależą od aktualnych wejść oraz stanu poprzedniego – posiada pamięć.\n- Przykłady: przerzutniki, liczniki, rejestry (także pamięć RAM i procesor).\n- Pamięć stanu realizuje sprzężenie zwrotne – najprostszy element pamiętający to dwie skrzyżowane bramki NAND (przerzutnik RS).\n- Opisuje się go funkcją przejść (nowy stan) i funkcją wyjść (automat Moore'a lub Mealy'ego).\n\n**Dlaczego błędne**\n- „Nie pamięta stanów poprzednich”, „to inaczej układ kombinacyjny”, „nie posiada sprzężenia zwrotnego” – to cechy układu kombinacyjnego.\n- „Nie wymaga zegara” – traktowane jako fałsz: typowy układ sekwencyjny jest synchroniczny; zegar nie jest cechą wykluczoną (istnieją asynchroniczne, ale zdanie ogólne jest nieprawdziwe).\n- „Sumator pełny jako przykład” – sumator jest kombinacyjny.\n- „Nie da się go zbudować z bramek NAND” – można, ze sprzężeniem zwrotnym.\n\n**Zapamiętaj**\nSekwencyjny = wejścia + stan → wyjścia; stan wymaga sprzężenia zwrotnego.",
+   "changes": []
+  },
+  {
+   "id": 1092,
+   "question": "Pamięć RAM dwuportowa:",
+   "options": [
+    {
+     "key": "a",
+     "text": "pozwala na jednoczesny dostęp do dwóch różnych komórek pamięci (np. odczyt i zapis).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nie może być zaimplementowana w układach FPGA.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest zawsze wolniejsza od pamięci jednoportowej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy wyłącznie do przechowywania instrukcji procesora.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wymaga dwóch oddzielnych układów scalonych.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nie posiada linii adresowych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "posiada dwa niezależne komplety linii adresowych, danych i sterujących.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest stosowana m.in. jako bufor FIFO, pamięć obrazu oraz do wymiany danych między dwoma procesorami.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "zapis danych możliwy jest zawsze tylko przez jeden z portów, drugi służy wyłącznie do odczytu.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "przechowuje dwie niezależne kopie danych, po jednej dla każdego portu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ram-dwuportowa",
+    "pamiec-ram",
+    "fpga"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Pamięć dwuportowa pozwala na jednoczesny dostęp do dwóch komórek (np. odczyt przez port A i zapis przez port B), także do tej samej komórki.\n- Ma dwa niezależne komplety linii adresowych, danych i sterujących.\n- Typowe zastosowania: bufory FIFO, pamięć obrazu, wymiana danych między dwoma procesorami lub między procesorem i DMA.\n\n**Dlaczego błędne**\n- „Nie może być w FPGA” – Block RAM w FPGA jest dwuportowa.\n- „Zawsze wolniejsza” – dwa równoległe dostępy zwiększają przepustowość.\n- „Wyłącznie do instrukcji” – przechowuje dowolne dane.\n- „Wymaga dwóch układów scalonych” – to jedna macierz komórek z dwoma portami.\n- „Nie ma linii adresowych” – ma ich dwa zestawy.\n- „Zapis możliwy tylko przez jeden port” – to opisuje pamięć simple dual-port; w pełnej dwuportowej oba porty mogą zapisywać.\n\n**Zapamiętaj**\nDwuportowa RAM = jedna zawartość, dwa niezależne porty (adres+dane+sterowanie) pracujące równocześnie.",
+   "changes": []
+  },
+  {
+   "id": 1093,
+   "question": "Procesor w układzie FPGA:",
+   "options": [
+    {
+     "key": "a",
+     "text": "może mieć architekturę dostosowaną do specyficznych potrzeb użytkownika (tzw. soft-core).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "musi być zgodny z architekturą x86.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie może posiadać własnej listy rozkazów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest zawsze szybszy od procesorów dedykowanych (ASIC).",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "nie może być taktowany zegarem.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nie posiada rejestrów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "jest opisywany w języku HDL (VHDL, Verilog) i syntezowany do zasobów logicznych FPGA (LUT, przerzutniki, Block RAM).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "przykładami są MicroBlaze, NIOS II oraz rdzenie RISC-V; w jednym FPGA można umieścić wiele takich rdzeni.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "w jednym układzie FPGA można zrealizować tylko jeden rdzeń procesora.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "jego lista rozkazów jest narzucona przez producenta układu FPGA.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "procesor-soft-core",
+    "fpga",
+    "lista-rozkazow-isa"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Procesor w FPGA (soft-core) może mieć architekturę dostosowaną do potrzeb użytkownika – własne rozkazy, rejestry, szerokość słowa.\n- Jest opisywany w języku HDL (VHDL/Verilog) i syntezowany do zasobów FPGA (LUT, przerzutniki, Block RAM).\n- Przykłady: MicroBlaze, NIOS II, rdzenie RISC-V; można umieścić wiele rdzeni w jednym FPGA.\n\n**Dlaczego błędne**\n- „Musi być zgodny z x86” – architektura dowolna.\n- „Nie może mieć własnej listy rozkazów” – może, to główna zaleta.\n- „Zawsze szybszy od ASIC” – zwykle wolniejszy (niższa częstotliwość, większa powierzchnia).\n- „Nie może być taktowany”, „nie ma rejestrów” – to normalny procesor sekwencyjny z zegarem i rejestrami.\n- „Tylko jeden rdzeń” – ograniczeniem są zasoby FPGA.\n- „Lista rozkazów narzucona przez producenta FPGA” – producent FPGA nie definiuje procesora.\n\n**Zapamiętaj**\nSoft-core = procesor opisany w HDL i zrealizowany w FPGA: dowolna architektura, dowolna liczba rdzeni, zwykle wolniejszy niż ASIC.",
+   "changes": []
+  },
+  {
+   "id": 1094,
+   "question": "Lista rozkazów procesora (ISA):",
+   "options": [
+    {
+     "key": "a",
+     "text": "w skład listy rozkazów zawsze wchodzi mnożenie.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "definiuje zestaw instrukcji rozumianych przez procesor oraz ich formaty.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest identyczna dla wszystkich procesorów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie zawiera instrukcji skoków.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "określa dostępne tryby adresowania.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "zależy od systemu operacyjnego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "stanowi interfejs między sprzętem a oprogramowaniem – kompilator generuje kod maszynowy dla konkretnej listy rozkazów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "ta sama lista rozkazów może być realizowana przez różne mikroarchitektury (np. x86 przez procesory Intel i AMD).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wszystkie rozkazy dowolnej listy rozkazów mają zawsze tę samą długość w bajtach.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "jest ustalana przez kompilator w czasie kompilacji programu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lista-rozkazow-isa",
+    "procesor-soft-core",
+    "rozkazy-skoku"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- ISA definiuje zestaw instrukcji rozumianych przez procesor oraz ich formaty (pola kodu operacji i argumentów).\n- Określa dostępne tryby adresowania, widoczne rejestry i znaczniki.\n- Jest interfejsem między sprzętem a oprogramowaniem – kompilator generuje kod dla konkretnej ISA.\n- Ta sama ISA może być realizowana przez różne mikroarchitektury (np. x86 przez Intel i AMD).\n\n**Dlaczego błędne**\n- „Zawsze zawiera mnożenie” – wiele prostych procesorów mnoży programowo.\n- „Identyczna dla wszystkich procesorów” – x86, ARM, RISC-V są różne.\n- „Nie zawiera skoków” – bez skoków nie ma pętli ani warunków.\n- „Zależy od systemu operacyjnego” – odwrotnie.\n- „Wszystkie rozkazy tej samej długości” – to cecha RISC, a nie ISA w ogóle (x86 ma 1–15 bajtów).\n- „Ustalana przez kompilator” – kompilator dostosowuje się do ISA.\n\n**Zapamiętaj**\nISA = zestaw rozkazów + formaty + tryby adresowania + rejestry; interfejs sprzęt–oprogramowanie, niezależny od OS.",
+   "changes": []
+  },
+  {
+   "id": 1095,
+   "question": "Karta graficzna i FPGA:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Układy FPGA mogą być wykorzystane do budowy akceleratorów graficznych i przetwarzania obrazu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "przy użyciu FPGA nie można zbudować karty graficznej ze sprzętowym wspomaganiem OpenGL.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "FPGA nie nadaje się do obliczeń równoległych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "karty graficzne nie używają pamięci RAM.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "FPGA są używane wyłącznie w telekomunikacji.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "GPU i FPGA to te same układy.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "prosty kontroler VGA generujący sygnały synchronizacji i kolor pikseli można opisać w kilkudziesięciu liniach VHDL.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "FPGA różni się od GPU tym, że jego struktura logiczna jest konfigurowana przez użytkownika, a nie ustalona fabrycznie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "sprzętową akcelerację grafiki można zrealizować wyłącznie w układach GPU, nigdy w FPGA.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "akcelerator graficzny w FPGA jest układem kombinacyjnym, ponieważ nie potrzebuje pamięci obrazu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "karta-graficzna-opengl",
+    "fpga",
+    "ram-dwuportowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- FPGA nadaje się do budowy akceleratorów graficznych i przetwarzania obrazu – wiele bloków może pracować równolegle nad pikselami.\n- Prosty kontroler VGA w FPGA to kilkadziesiąt linii VHDL; w dużym FPGA da się zrealizować także rdzeń 3D ze wsparciem OpenGL.\n- Karta graficzna używa pamięci obrazu (RAM, często dwuportowej).\n\n**Dlaczego błędne**\n- „W FPGA nie można zbudować karty ze sprzętowym OpenGL” – można, granicą jest wielkość układu.\n- „FPGA nie nadaje się do obliczeń równoległych” – odwrotnie, to jego główna siła.\n- „Karty nie używają RAM” – frame buffer i pamięć tekstur to RAM.\n- „FPGA tylko w telekomunikacji” – używane w przetwarzaniu obrazu, HPC, motoryzacji, prototypowaniu ASIC.\n- „GPU i FPGA to te same układy” – GPU ma stałą architekturę wielu rdzeni SIMD, FPGA to konfigurowalna logika.\n- „Wyłącznie GPU” – FPGA również akceleruje grafikę.\n- „Kombinacyjny akcelerator bez pamięci” – przetwarzanie obrazu wymaga buforów, czyli układu sekwencyjnego.\n\n**Zapamiętaj**\nFPGA to konfigurowalna logika o dużej równoległości – nadaje się do grafiki i przetwarzania obrazu, ale nie jest GPU.",
+   "changes": []
+  },
+  {
+   "id": 1096,
+   "question": "Licznik rozkazów (Program Counter):",
+   "options": [
+    {
+     "key": "a",
+     "text": "przechowuje adres następnej instrukcji do pobrania z pamięci.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "służy do zliczania liczby wykonanych operacji arytmetycznych.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest częścią jednostki ALU.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "przechowuje kody błędów procesora.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "jest rejestrem 8-bitowym w procesorach 64-bitowych.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nie może być zmieniony przez instrukcję skoku.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "po pobraniu słowa rozkazu jest automatycznie zwiększany o długość tego rozkazu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jego zawartość jest zmieniana przez rozkazy skoku, wywołania podprogramu (CALL) i powrotu (RET) oraz przez przerwania.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "przechowuje kod (treść) aktualnie wykonywanego rozkazu.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "przechowuje adres ostatnio wykonanej instrukcji, a nie następnej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "licznik-rozkazow",
+    "rejestr-rozkazow",
+    "rozkazy-skoku"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Licznik rozkazów (PC) przechowuje adres następnej instrukcji do pobrania z pamięci programu.\n- Po pobraniu słowa rozkazu jest automatycznie zwiększany o długość rozkazu.\n- Rozkazy skoku, wywołania podprogramu (CALL) i powrotu (RET) oraz przerwania wpisują do niego nową wartość.\n- Jego szerokość wynika z wielkości przestrzeni adresowej (np. 32 bity → 4 GiB).\n\n**Dlaczego błędne**\n- „Zlicza operacje arytmetyczne” – nie; wskazuje adres w programie.\n- „Część ALU” – to rejestr jednostki sterującej/adresowej, nie ALU.\n- „Kody błędów” – to rejestr stanu/rejestry wyjątków.\n- „8-bitowy w procesorze 64-bitowym” – ma szerokość adresu (64 bity).\n- „Nie może być zmieniony przez skok” – skok właśnie to robi.\n- „Przechowuje kod rozkazu” – to rejestr rozkazów.\n- „Adres ostatnio wykonanej instrukcji” – wskazuje następną, nie poprzednią.\n\n**Zapamiętaj**\nPC = adres następnego rozkazu; inkrementowany po pobraniu, ładowany przez skoki, CALL/RET i przerwania.",
+   "changes": []
+  },
+  {
+   "id": 1097,
+   "question": "Rozkaz skoku warunkowego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zmienia kolejność wykonywania instrukcji w zależności od stanu znaczników (flag) procesora.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zawsze wykonuje skok do adresu zero.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie zależy od wyników poprzednich operacji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest instrukcją typu ALU.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "nie jest dostępny w architekturze RISC.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "zawsze czyści pamięć cache.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "gdy warunek jest spełniony, do licznika rozkazów wpisywany jest adres docelowy; w przeciwnym razie wykonywany jest następny rozkaz.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest wykorzystywany przez kompilator do realizacji instrukcji warunkowych (if) i pętli (while, for).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "w procesorach potokowych powoduje hazardy sterowania, dlatego stosuje się predykcję skoków.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "zawsze wykonuje skok, niezależnie od stanu znaczników.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "nie może zmienić zawartości licznika rozkazów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozkazy-skoku",
+    "licznik-rozkazow",
+    "przetwarzanie-potokowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Skok warunkowy zmienia kolejność wykonania w zależności od stanu znaczników (Z, C, N, V) ustawionych przez wcześniejsze operacje.\n- Gdy warunek jest spełniony, do licznika rozkazów wpisywany jest adres docelowy; w przeciwnym razie wykonuje się następny rozkaz.\n- Kompilator realizuje nim instrukcje `if` oraz pętle `while`/`for`.\n- W procesorach potokowych skoki powodują hazardy sterowania, dlatego stosuje się predykcję skoków.\n\n**Dlaczego błędne**\n- „Zawsze skok do adresu zero” – adres jest dowolny.\n- „Nie zależy od poprzednich operacji” – zależy, przez znaczniki.\n- „Instrukcja typu ALU” – to instrukcja sterująca; ALU tylko wcześniej ustawia flagi.\n- „Niedostępny w RISC” – BEQ/BNE istnieją w MIPS, ARM, RISC-V.\n- „Czyści cache” – nie ma to związku ze skokiem.\n- „Zawsze wykonuje skok” – to skok bezwarunkowy.\n\n**Zapamiętaj**\nSkok warunkowy: flagi → decyzja → ewentualny wpis do PC; podstawa instrukcji warunkowych i pętli.",
+   "changes": []
+  },
+  {
+   "id": 1098,
+   "question": "Rozkaz dodawania w procesorze:",
+   "options": [
+    {
+     "key": "a",
+     "text": "pobiera argumenty (np. z rejestrów), wykonuje sumowanie w ALU i zapisuje wynik.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nie może używać adresowania bezpośredniego.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest dostępny tylko w procesorach 64-bitowych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zawsze ustawia flagę przerwania.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "może ustawić flagi takie jak Zero (Z), Carry (C), Overflow (V).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "nie zmienia stanu rejestrów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "znacznik przeniesienia (C) informuje o przeniesieniu poza najstarszy bit, a znacznik nadmiaru (V) o przekroczeniu zakresu w kodzie U2.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "ten sam rozkaz dodawania działa poprawnie zarówno dla liczb bez znaku, jak i dla liczb w kodzie U2.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wynik dodawania zapisywany jest zawsze do licznika rozkazów.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "dodawanie wykonywane jest bez udziału jednostki arytmetyczno-logicznej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "alu",
+    "kod-u2",
+    "licznik-rozkazow"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Rozkaz dodawania pobiera argumenty (z rejestrów, pamięci lub stałej), sumuje w ALU i zapisuje wynik do rejestru docelowego.\n- Może ustawić znaczniki Zero (Z), Carry (C), Overflow (V) oraz znak (N).\n- Znacznik C sygnalizuje przeniesienie poza najstarszy bit (dla liczb bez znaku), a V – nadmiar dla liczb w U2, np. 8-bitowe 127 + 1 daje −128 i V = 1.\n- Ten sam rozkaz obsługuje liczby bez znaku i w U2 – sumowanie bitowe jest identyczne.\n\n**Dlaczego błędne**\n- „Nie może używać adresowania bezpośredniego” – może; argument może być w pamięci pod podanym adresem.\n- „Tylko w 64-bitowych” – każdy procesor dodaje.\n- „Zawsze ustawia flagę przerwania” – nie ma związku z przerwaniami.\n- „Nie zmienia stanu rejestrów” – zapisuje wynik do rejestru.\n- „Wynik do licznika rozkazów” – zmieniłoby to przebieg programu; wynik idzie do rejestru danych.\n- „Nie wykorzystuje ALU” – ALU jest niezbędna.\n\n**Zapamiętaj**\nADD: argumenty → ALU → rejestr wyniku + flagi Z, C, V, N; działa dla liczb bez znaku i w U2 jednocześnie.",
+   "changes": []
+  },
+  {
+   "id": 1099,
+   "question": "Przetwarzanie potokowe (pipelining):",
+   "options": [
+    {
+     "key": "a",
+     "text": "pozwala na jednoczesne wykonywanie różnych etapów wielu instrukcji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "skraca czas wykonania pojedynczej instrukcji (latency).",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "eliminuje potrzebę stosowania pamięci cache.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest stosowane tylko w procesorach jednoukładowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zwiększa przepustowość (throughput) procesora.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "uniemożliwia wykonywanie skoków.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "wymaga podziału wykonania instrukcji na etapy oddzielone rejestrami międzyetapowymi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "zależności danych między instrukcjami oraz skoki powodują hazardy, rozwiązywane np. przez forwarding, wstrzymania (stall) i predykcję skoków.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wymaga procesora wielordzeniowego – każdy etap wykonywany jest przez osobny rdzeń.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "przyspieszenie jest zawsze dokładnie równe liczbie etapów potoku, niezależnie od programu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "przetwarzanie-potokowe",
+    "superskalarnosc",
+    "rozkazy-skoku"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Pipelining pozwala jednocześnie wykonywać różne etapy wielu instrukcji (jedna w pobraniu, druga w dekodowaniu, trzecia w wykonaniu).\n- Zwiększa przepustowość – w stanie ustalonym kończy się około jednej instrukcji na takt.\n- Wymaga podziału wykonania na etapy oddzielone rejestrami międzyetapowymi.\n- Zależności danych i skoki powodują hazardy, rozwiązywane przez forwarding, wstrzymania (stall) i predykcję skoków.\n\n**Dlaczego błędne**\n- „Skraca latencję pojedynczej instrukcji” – nie; instrukcja i tak przechodzi wszystkie etapy, latencja bywa nawet dłuższa.\n- „Eliminuje cache” – przeciwnie, szybki potok wymaga szybkiej pamięci.\n- „Tylko w procesorach jednoukładowych” – bez związku.\n- „Uniemożliwia skoki” – skoki są kosztowne, ale możliwe.\n- „Wymaga wielu rdzeni” – potok działa w jednym rdzeniu.\n- „Przyspieszenie zawsze równe liczbie etapów” – to granica idealna, hazardy ją obniżają.\n\n**Zapamiętaj**\nPotok = więcej instrukcji na sekundę (throughput), nie krótszy czas jednej instrukcji (latency).",
+   "changes": []
+  },
+  {
+   "id": 1100,
+   "question": "Sumator jednobitowy pełny (Full Adder):",
+   "options": [
+    {
+     "key": "a",
+     "text": "posiada trzy wejścia (dwa bity składników i przeniesienie) oraz dwa wyjścia (suma i przeniesienie).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nie uwzględnia przeniesienia z poprzedniej pozycji.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest układem sekwencyjnym.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy do mnożenia liczb.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "składa się wyłącznie z bramek NOT.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "jest podstawą budowy sumatorów wielobitowych.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "realizuje funkcje S = A xor B xor Cin oraz Cout = AB + Cin(A xor B).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "można go zbudować z dwóch półsumatorów i bramki OR.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "posiada dwa wejścia i jedno wyjście.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "dla wejść A = 1, B = 1, Cin = 1 daje sumę 1 i przeniesienie 0.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sumator-pelny",
+    "alu",
+    "uklad-kombinacyjny"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Sumator pełny ma trzy wejścia (A, B, przeniesienie wejściowe) i dwa wyjścia (suma S, przeniesienie wyjściowe).\n- Jest podstawą sumatorów wielobitowych – kaskada n sumatorów pełnych z propagacją przeniesienia daje sumator n-bitowy.\n- Realizuje funkcje ^^S = A \\oplus B \\oplus C_{in}^^ oraz ^^C_{out} = AB + C_{in}(A \\oplus B)^^.\n- Można go zbudować z dwóch półsumatorów i bramki OR (lub z samych bramek NAND).\n\n**Dlaczego błędne**\n- „Nie uwzględnia przeniesienia” – to półsumator.\n- „Układ sekwencyjny” – jest kombinacyjny, bez pamięci i zegara.\n- „Służy do mnożenia” – jest składnikiem mnożarek, ale sam dodaje.\n- „Wyłącznie z bramek NOT” – bramki jednowejściowe nie realizują funkcji dwuargumentowych.\n- „Dwa wejścia, jedno wyjście” – to opis niepełny nawet dla półsumatora.\n- „Wynik 1+1+1 = suma 1, przeniesienie 0” – prawidłowo S = 1, C = 1 (trzy jedynki = 11₂).\n\n**Zapamiętaj**\nFull adder: 3 wejścia, 2 wyjścia, kombinacyjny, klocek sumatora wielobitowego.",
+   "changes": []
+  },
+  {
+   "id": 1101,
+   "question": "Rejestr rozkazów (Instruction Register):",
+   "options": [
+    {
+     "key": "a",
+     "text": "przechowuje aktualnie dekodowaną i wykonywaną instrukcję.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jest dostępny bezpośrednio dla programisty.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "służy do przechowywania wyników operacji zmiennoprzecinkowych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest tożsamy z licznikiem rozkazów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "przechowuje adresy pamięci RAM.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "jest częścią jednostki sterującej procesora.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "jego zawartość jest dekodowana przez jednostkę sterującą, która na tej podstawie generuje sygnały sterujące.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest ładowany w fazie pobrania rozkazu (fetch) i zachowuje wartość do zakończenia wykonania tego rozkazu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "jego zawartość zmienia się przy każdym pobraniu argumentu rozkazu z pamięci.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "zlicza liczbę wykonanych rozkazów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rejestr-rozkazow",
+    "licznik-rozkazow",
+    "procesor-soft-core"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Rejestr rozkazów przechowuje aktualnie dekodowaną i wykonywaną instrukcję – jej kod pobrany z pamięci programu.\n- Jego zawartość dekoduje jednostka sterująca, generując sygnały sterujące.\n- Jest ładowany w fazie pobrania (fetch) i zachowuje wartość do końca wykonania rozkazu.\n\n**Dlaczego błędne**\n- „Dostępny bezpośrednio dla programisty” – to rejestr wewnętrzny, poza modelem programowym.\n- „Wyniki zmiennoprzecinkowe” – to rejestry FPU.\n- „Tożsamy z licznikiem rozkazów” – PC przechowuje adres, IR kod.\n- „Przechowuje adresy RAM” – to rejestr adresowy/PC.\n- „Część jednostki sterującej” – w banku traktowane jako fałsz: IR jest osobnym rejestrem współpracującym z jednostką sterującą (w niektórych podręcznikach zalicza się go do niej – konwencja).\n- „Zmienia się przy każdym pobraniu argumentu” – kod rozkazu musi być zachowany do końca wykonania.\n- „Zlicza rozkazy” – nie ma funkcji licznika.\n\n**Zapamiętaj**\nIR = kod bieżącego rozkazu dla jednostki sterującej; PC = adres następnego rozkazu.",
+   "changes": []
+  },
+  {
+   "id": 19,
+   "question": "Transmisja asynchroniczna:",
+   "options": [
+    {
+     "key": "a",
+     "text": "układy nadawczy i odbiorczy synchronizowane są wspólną dodatkową linią z sygnałem synchronicznym",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "podczas transmisji asynchronicznej występują kolejno po sobie wycinki czasu zawierające i nie zawierające informacji",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "aby przygotować odbiorcę na przyjęcie sygnału zawierającego informacje, są wysyłane sygnały startu oraz sygnały stopu, rozpoczynające i kończące przesyłanie porcji informacji",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "nadajnik i odbiornik posiadają własne, niezależne generatory zegarowe ustawione na tę samą nominalną prędkość transmisji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "typowa ramka (np. UART) zawiera bit startu, 5–9 bitów danych, opcjonalny bit parzystości oraz 1–2 bity stopu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "dane przesyłane są ciągłym strumieniem bez przerw między kolejnymi znakami, a synchronizacja odtwarzana jest z preambuły bloku",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "nie wymaga bitów startu i stopu, ponieważ granice znaków wyznacza wspólny sygnał zegarowy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "częstotliwości zegarów nadajnika i odbiornika mogą różnić się dowolnie, ponieważ odbiornik synchronizuje się na każdym bicie danych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "transmisja-asynchroniczna",
+    "ascii-utf8"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- W transmisji asynchronicznej dane płyną porcjami (ramkami znaków) oddzielonymi przerwami o dowolnej długości – kolejno po sobie występują wycinki czasu z informacją i bez niej.\n- Każdą porcję rozpoczyna bit startu, a kończy bit (bity) stopu – przygotowują odbiornik i wyznaczają granice ramki.\n- Nadajnik i odbiornik mają własne, niezależne zegary o tej samej nominalnej prędkości (baud rate); synchronizacja następuje na zboczu bitu startu.\n- Typowa ramka UART: bit startu, 5–9 bitów danych, opcjonalny bit parzystości, 1–2 bity stopu.\n\n**Dlaczego błędne**\n- „Wspólna dodatkowa linia z sygnałem synchronizującym” – to transmisja synchroniczna (SPI, I2C).\n- „Dane przesyłane ciągłym strumieniem bez przerw” – to również cecha transmisji synchronicznej.\n- „Bez bitów startu i stopu” – są one istotą transmisji asynchronicznej.\n- „Zegary nie muszą mieć zbliżonej częstotliwości” – muszą (tolerancja kilku procent), inaczej próbkowanie „ucieka” w ramce.\n\n**Zapamiętaj**\nAsynchroniczna = brak wspólnego zegara, każda porcja obramowana bitem startu i stopu, między porcjami przerwy.",
+   "changes": []
+  },
+  {
+   "id": 208,
+   "question": "Wartość 5/16 ma postać w systemie binarnym:",
+   "options": [
+    {
+     "key": "a",
+     "text": "0.0101",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "0.1011",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "0.1010",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "0.0110",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "0.101",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "0.00101",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "0.0111",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ulamki-binarne"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- ^^5/16 = 0{,}3125^^. Metoda mnożenia: 0,3125·2 = 0,625 → 0; 0,625·2 = 1,25 → 1; 0,25·2 = 0,5 → 0; 0,5·2 = 1,0 → 1. Wynik ^^0{,}0101_2^^.\n- Sprawdzenie wagami: ^^0\\cdot\\tfrac12 + 1\\cdot\\tfrac14 + 0\\cdot\\tfrac18 + 1\\cdot\\tfrac1{16} = 0{,}25 + 0{,}0625 = 0{,}3125^^.\n- Ogólnie ułamek ^^k/2^n^^ to k zapisane binarnie na n pozycjach po przecinku: 5 = 101, na 4 pozycjach 0101.\n\n**Dlaczego błędne**\n- ^^0{,}1011_2 = 11/16 = 0{,}6875^^.\n- ^^0{,}1010_2 = 10/16 = 5/8 = 0{,}625^^ – cyfry 5/16 czytane w odwrotnej kolejności.\n- ^^0{,}0110_2 = 6/16 = 3/8^^.\n- ^^0{,}101_2 = 5/8^^ – brakuje zera po przecinku, wartość dwa razy większa.\n- ^^0{,}00101_2 = 5/32^^ – jedno zero za dużo, wartość dwa razy mniejsza.\n\n**Zapamiętaj**\nUłamek o mianowniku ^^2^n^^ ma dokładnie n cyfr binarnych; pierwsza otrzymana w mnożeniu cyfra jest pierwszą po przecinku.",
+   "changes": []
+  },
+  {
+   "id": 209,
+   "question": "Wartość 1/10 ma postać w systemie binarnym:",
+   "options": [
+    {
+     "key": "a",
+     "text": "0.1010 (rozwinięcie skończone)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "0.0(0011)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "0.(1010)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "0.0(1010)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "0.(0011)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "0.00(0011)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "0.0001",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "0.0(0110)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ulamki-binarne",
+    "zmiennopozycyjne-ieee754"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- ^^1/10 = 0{,}1^^: 0,1·2 = 0,2 → 0; 0,2·2 = 0,4 → 0; 0,4·2 = 0,8 → 0; 0,8·2 = 1,6 → 1; 0,6·2 = 1,2 → 1; 0,2 – stan powtarza się, więc okres 0011. Wynik ^^0{,}0(0011)_2 = 0{,}000110011\\ldots_2^^.\n- Kontrola: ^^1/5 = 0{,}(0011)_2^^ (bo ^^3/15 = 0011_2/1111_2^^), a ^^1/10 = 1/5 \\cdot 1/2^^ to przesunięcie o jedną pozycję w prawo.\n\n**Dlaczego błędne**\n- ^^0{,}1010_2 = 10/16 = 0{,}625^^ – zapis skończony, a 1/10 ma rozwinięcie okresowe (mianownik 10 nie jest potęgą 2).\n- ^^0{,}(1010)_2 = 10/15 = 2/3^^.\n- ^^0{,}0(1010)_2 = 1/3^^.\n- ^^0{,}(0011)_2 = 1/5 = 0{,}2^^ – dwa razy za dużo.\n- ^^0{,}00(0011)_2 = 1/20 = 0{,}05^^ – dwa razy za mało.\n- ^^0{,}0001_2 = 1/16 = 0{,}0625^^ – tylko urwana część rozwinięcia.\n\n**Zapamiętaj**\n0,1 nie ma skończonego zapisu binarnego – stąd błędy zaokrągleń w arytmetyce zmiennoprzecinkowej.",
+   "changes": [
+    "a: doprecyzowano tekst opcji „0.1010” dopiskiem „(rozwinięcie skończone)”, aby odróżnić ją od zapisu okresowego 0.(1010)"
+   ]
+  },
+  {
+   "id": 210,
+   "question": "Język formalny jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "sposobem zapisu algorytmów opartym na blokach operacyjnych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "sposobem zapisu algorytmów opartym na pseudokodzie",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zbiorem słów (ciągów symboli) nad ustalonym alfabetem, zdefiniowanym przez ścisłe reguły, np. gramatykę",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "podstawą definicji języków programowania, których składnię opisuje gramatyka (np. w notacji EBNF)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "odmianą języka naturalnego, w której nie obowiązują ścisłe reguły budowy zdań",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "zawsze skończonym zbiorem słów, ponieważ alfabet jest skończony",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "sposobem opisu wyłącznie semantyki (znaczenia) programu, bez określania jego składni",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "jezyk-formalny-skladnia-semantyka",
+    "ebnf"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- W ujęciu kursu „Wstęp do informatyki” język formalny wymieniany jest jako sposób zapisu algorytmu oparty na pseudokodzie – zapis o ściśle określonej składni, niezależny od konkretnego języka programowania.\n- Formalnie: język formalny to zbiór słów nad ustalonym alfabetem, zdefiniowany ścisłymi regułami (gramatyką).\n- Języki programowania są językami formalnymi – ich składnię opisuje gramatyka (np. w EBNF).\n- Języki formalne klasyfikuje hierarchia Chomsky'ego (regularne, bezkontekstowe, kontekstowe, rekurencyjnie przeliczalne).\n\n**Dlaczego błędne**\n- „Oparty na blokach operacyjnych” – to schemat blokowy (sieć działań), zapis graficzny, nie język formalny.\n- „Język naturalny bez ścisłych reguł” – język formalny jest przeciwieństwem: reguły są precyzyjne i jednoznaczne.\n- „Zawsze skończony zbiór słów” – większość interesujących języków (np. wszystkie poprawne programy) jest nieskończona.\n- „Definiuje wyłącznie semantykę” – gramatyka języka formalnego opisuje składnię, nie znaczenie.\n\n**Zapamiętaj**\nJęzyk formalny = precyzyjnie zdefiniowany zbiór słów nad alfabetem; jako zapis algorytmu – pseudokod, nie schemat blokowy.",
+   "changes": []
+  },
+  {
+   "id": 211,
+   "question": "Syntaktyka języka programowania opisuje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "znaczenie instrukcji w języku",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "formalnie poprawne programy",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "budowę instrukcji w języku",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "działanie poprawnego programu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "reguły składni zapisuje się np. gramatyką w notacji BNF/EBNF lub diagramami składniowymi",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "poprawność składniową programu sprawdza analizator składniowy (parser) kompilatora",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wynik działania programu dla zadanych danych wejściowych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "poprawność składniowa może być sprawdzona dopiero w czasie wykonania programu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "program poprawny składniowo zawsze działa poprawnie",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "jezyk-formalny-skladnia-semantyka",
+    "ebnf"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Syntaktyka (składnia) opisuje budowę instrukcji w języku – jakie ciągi symboli są poprawnie zbudowane.\n- Zapisuje się ją gramatyką w notacji BNF/EBNF lub diagramami składniowymi.\n- Poprawność składniową sprawdza analizator składniowy (parser) kompilatora; błąd składniowy (np. brak średnika) jest wykrywany przed uruchomieniem.\n\n**Dlaczego błędne**\n- „Znaczenie instrukcji” – to semantyka.\n- „Formalnie poprawne programy” i „działanie poprawnego programu” – dystraktory: składnia dotyczy budowy konstrukcji, a działanie opisuje semantyka.\n- „Wynik działania programu” – semantyka/wykonanie.\n- „Sprawdzana dopiero w czasie wykonania” – składnię sprawdza kompilator; w czasie wykonania ujawniają się błędy semantyczne (logiczne).\n- „Program poprawny składniowo zawsze działa poprawnie” – może być semantycznie błędny (dzielenie przez zero, zła logika).\n\n**Zapamiętaj**\nSyntaktyka = jak zbudować (forma); semantyka = co to znaczy (treść).",
+   "changes": []
+  },
+  {
+   "id": 212,
+   "question": "Semantyka języka programowania opisuje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "znaczenie instrukcji w języku",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "formalnie poprawne programy",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "budowę instrukcji w języku",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "działanie poprawnego programu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "może być opisana formalnie metodą operacyjną, denotacyjną lub aksjomatyczną",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "program poprawny składniowo może być niepoprawny semantycznie, np. dzielić przez zero",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "jest opisywana za pomocą notacji EBNF",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "zbiór słów kluczowych i symboli dopuszczalnych w programie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "jest sprawdzana wyłącznie przez analizator składniowy (parser)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "jezyk-formalny-skladnia-semantyka",
+    "ebnf"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Semantyka opisuje znaczenie instrukcji w języku – co instrukcja robi, jak zmienia stan programu, jaką wartość ma wyrażenie.\n- Formalne metody opisu semantyki: operacyjna, denotacyjna, aksjomatyczna (logika Hoare'a).\n- Program poprawny składniowo może być semantycznie błędny (np. użycie niezadeklarowanej zmiennej, dzielenie przez zero).\n\n**Dlaczego błędne**\n- „Budowę instrukcji” – to syntaktyka.\n- „Formalnie poprawne programy”, „działanie poprawnego programu” – dystraktory z banku; semantyka to znaczenie konstrukcji, a nie zbiór programów.\n- „Notacja EBNF opisuje semantykę” – EBNF opisuje składnię.\n- „Zbiór słów kluczowych” – to element składni (leksyki).\n- „Sprawdzana wyłącznie przez parser” – parser sprawdza składnię; semantykę statyczną sprawdza analiza semantyczna, dynamiczną – wykonanie.\n\n**Zapamiętaj**\nSemantyka odpowiada na pytanie „co to znaczy / co robi”, syntaktyka – „jak to napisać”.",
+   "changes": []
+  },
+  {
+   "id": 213,
+   "question": "Nawiasy <> w notacji EBNF oznaczają:",
+   "options": [
+    {
+     "key": "a",
+     "text": "opcjonalne wystąpienie elementu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "symbol terminalny",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "symbol nieterminalny",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "wielokrotne występowanie elementu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "symbol, który występuje po lewej stronie produkcji i jest rozwijany przez inne reguły gramatyki",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "alternatywę (wybór jednego z elementów)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "grupowanie elementów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "komentarz w opisie gramatyki",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ebnf",
+    "jezyk-formalny-skladnia-semantyka"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- W notacji BNF/EBNF nawiasy kątowe `<>` otaczają symbol nieterminalny – pojęcie składniowe (np. `<instrukcja>`, `<cyfra>`), które trzeba dalej rozwinąć według innej produkcji.\n- Symbol nieterminalny występuje po lewej stronie produkcji (`<liczba> ::= ...`).\n- Symbole terminalne to konkretne znaki języka, zapisywane w cudzysłowach lub bez nawiasów.\n\n**Dlaczego błędne**\n- „Opcjonalne wystąpienie” – to nawiasy kwadratowe `[ ]`.\n- „Wielokrotne występowanie” – to nawiasy klamrowe `{ }`.\n- „Symbol terminalny” – terminale są w cudzysłowach (`\"if\"`), nie w `<>`.\n- „Alternatywa” – to kreska pionowa `|`.\n- „Grupowanie” – to nawiasy okrągłe `( )`.\n- „Komentarz” – w ISO EBNF komentarz to `(* ... *)`.\n\n**Zapamiętaj**\nEBNF: `<>` nieterminal, `[ ]` opcja, `{ }` powtórzenie, `|` alternatywa, `\"...\"` terminal.",
+   "changes": []
+  },
+  {
+   "id": 214,
+   "question": "Kodem ASCII możemy zakodować:",
+   "options": [
+    {
+     "key": "a",
+     "text": "dowolny znak z zakresu 0-128",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "dowolny znak z zakresu 0-255",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "dowolny znak z zakresu 32-255",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "dowolny znak z zakresu 0-127",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "128 różnych znaków, w tym znaki sterujące o kodach 0–31 i 127",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "cyfry 0–9 kodami 48–57, wielkie litery kodami 65–90, a małe litery kodami 97–122",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "polskie litery ą, ę, ł, ż",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "dowolny znak Unicode",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "dowolny znak z zakresu 1-256",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ascii-utf8"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- ASCII jest kodem 7-bitowym, więc definiuje ^^2^7 = 128^^ znaków o kodach 0–127.\n- Znaki 0–31 oraz 127 to znaki sterujące (NUL, LF, CR, ESC, DEL), 32–126 to znaki drukowalne.\n- Cyfry mają kody 48–57, wielkie litery 65–90, małe 97–122 (mała = wielka + 32).\n\n**Dlaczego błędne**\n- „0–128” – 128 wartości to 0–127; kod 128 nie należy do ASCII.\n- „0–255” – to 8-bitowe rozszerzenia (ISO 8859, Windows-1250), nie ASCII.\n- „32–255” – pomija znaki sterujące i dodaje rozszerzenia.\n- „Polskie litery ą, ę, ł” – nie ma ich w ASCII; wymagają ISO 8859-2, CP1250 lub Unicode.\n- „Dowolny znak Unicode” – Unicode ma ponad milion punktów kodowych.\n\n**Zapamiętaj**\nASCII = 7 bitów = 128 znaków = kody 0–127; wszystko powyżej to już nie ASCII.",
+   "changes": []
+  },
+  {
+   "id": 215,
+   "question": "Kodowanie znaków metodą UTF-8 cechuje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "pozwala zakodować dowolne znaki Unicode",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zmienna długość kodu",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "pozwala zakodować dowolne znaki ASCII za pomocą 1 bajta",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "pozwala zakodować dowolne znaki ASCII za pomocą 8 bajtów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "pozwala zakodować dowolne znaki Unicode za pomocą nie więcej niż 6 bajtów",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "kod znaku ASCII może być częścią dłuższego kodu",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "bajty kontynuacji mają postać 10xxxxxx, a liczba wiodących jedynek pierwszego bajtu określa długość kodu znaku",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "polskie litery diakrytyczne (np. ą, ł) zajmują w UTF-8 dwa bajty",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "każdy znak zajmuje dokładnie 2 bajty",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "nie pozwala zakodować znaków spoza zestawu ASCII",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "pozwala zakodować polskie litery diakrytyczne za pomocą 1 bajta",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ascii-utf8",
+    "kodowanie-huffmana"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- UTF-8 koduje dowolny znak Unicode (cały zakres U+0000–U+10FFFF).\n- Ma zmienną długość: 1, 2, 3 lub 4 bajty (pierwotna specyfikacja dopuszczała do 6 bajtów – stąd „nie więcej niż 6 bajtów” jest prawdziwym górnym ograniczeniem).\n- Znaki ASCII kodowane są na 1 bajcie identycznie jak w ASCII – plik ASCII jest poprawnym plikiem UTF-8.\n- Bajty kontynuacji mają postać `10xxxxxx`, a liczba wiodących jedynek pierwszego bajtu podaje długość sekwencji.\n- Polskie litery (np. ą, ł) zajmują 2 bajty.\n\n**Dlaczego błędne**\n- „ASCII na 8 bajtów” – 1 bajt.\n- „Kod ASCII może być częścią dłuższego kodu” – nie; bajty 0xxxxxxx nigdy nie występują wewnątrz sekwencji wielobajtowych (samosynchronizacja).\n- „Każdy znak na dokładnie 2 bajtach” – to (w przybliżeniu) UCS-2/UTF-16, nie UTF-8.\n- „Nie pozwala zakodować znaków spoza ASCII” – koduje wszystkie znaki Unicode.\n- „Polskie litery na 1 bajcie” – zajmują 2 bajty.\n\n**Zapamiętaj**\nUTF-8: zmienna długość 1–4 bajty, zgodność z ASCII, bajty kontynuacji zaczynają się od „10”.",
+   "changes": []
+  },
+  {
+   "id": 216,
+   "question": "Cechami kodu uzupełnień do dwóch są:",
+   "options": [
+    {
+     "key": "a",
+     "text": "podwójna reprezentacja 0",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "pojedyncza reprezentacja 0",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "symetryczny zakres liczb",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "asymetryczny zakres liczb",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "najstarszy bit ma wagę -2^(n-1) i jest jednocześnie bitem znaku",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "dodawanie i odejmowanie wykonuje się tym samym sumatorem co dla liczb bez znaku, ignorując przeniesienie poza najstarszy bit",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "liczbę przeciwną otrzymuje się przez negację wszystkich bitów i dodanie 1",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "najstarszy bit jest wyłącznie znakiem i nie wpływa na wartość bezwzględną liczby",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "liczbę przeciwną otrzymuje się przez samą negację wszystkich bitów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "dodawanie liczb ze znakiem wymaga osobnego układu sumatora niż dodawanie liczb bez znaku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kod-u2",
+    "alu"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- W U2 zero ma pojedynczą reprezentację (same zera); słowo 111…1 oznacza −1, nie −0.\n- Zakres jest asymetryczny: ^^[-2^{n-1}, 2^{n-1}-1]^^, np. 8 bitów: −128…127 – liczb ujemnych jest o jedną więcej.\n- Najstarszy bit ma wagę ^^-2^{n-1}^^ – jest bitem znaku, ale wchodzi do wartości liczby.\n- Dodawanie i odejmowanie wykonuje ten sam sumator co dla liczb bez znaku, z pominięciem przeniesienia poza najstarszy bit.\n- Negacja: zaneguj bity i dodaj 1.\n\n**Dlaczego błędne**\n- „Podwójna reprezentacja 0” i „symetryczny zakres” – to cechy kodu znak-moduł i U1.\n- „Najstarszy bit tylko znakiem bez wagi” – to kod znak-moduł.\n- „Negacja przez samą negację bitów” – to U1; w U2 trzeba jeszcze dodać 1.\n- „Osobne układy dla liczb ze znakiem” – zaleta U2 polega właśnie na wspólnym sumatorze.\n\n**Zapamiętaj**\nU2: jedno zero, asymetryczny zakres, MSB o wadze ^^-2^{n-1}^^, negacja = NOT + 1.",
+   "changes": []
+  },
+  {
+   "id": 217,
+   "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: mantysa zajmuje 22 bity, w tym bit znaku, cecha zajmuje 10 bitów, w tym bit znaku. Cecha i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy (mantysa jest ułamkiem [1/2...1)). Jaka jest największa możliwa liczba w tym systemie?",
+   "options": [
+    {
+     "key": "a",
+     "text": "10^10",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "(1-2^(-21)) * 2^(2^9-1)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "(1-2^(-22)) * 2^(2^9-1)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "(1-2^(-21)) * 2^(2^10-1)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "(1-2^(-21)) * 2^(2^9)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "2^21 * 2^(2^9-1)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "(1-2^(-21)) * 2^(2^9-1) jest największą liczbą, ponieważ mantysa ma 21 bitów wartości, a cecha w kodzie U2 na 10 bitach osiąga maksimum 2^9-1",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmiennopozycyjne-ieee754",
+    "kod-u2",
+    "ulamki-binarne"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Mantysa ma 22 bity, z których jeden to znak, więc 21 bitów ułamka; największa mantysa to ^^0{,}111\\ldots1_2 = 1 - 2^{-21}^^ (mantysa jest ułamkiem z zakresu [1/2, 1)).\n- Cecha ma 10 bitów w U2, więc największa cecha to ^^2^9 - 1 = 511^^.\n- Największa liczba: ^^(1 - 2^{-21}) \\cdot 2^{2^9 - 1} = (1-2^{-21})\\cdot 2^{511}^^.\n\n**Dlaczego błędne**\n- ^^10^{10}^^ – wartość z powietrza; ^^2^{511} \\approx 10^{154}^^.\n- ^^(1-2^{-22})\\cdot 2^{511}^^ – nie uwzględnia bitu znaku mantysy (22 bity ułamka zamiast 21).\n- ^^(1-2^{-21})\\cdot 2^{2^{10}-1}^^ – nie uwzględnia bitu znaku cechy (cecha bez znaku).\n- ^^(1-2^{-21})\\cdot 2^{2^9}^^ – największa liczba w U2 na 10 bitach to ^^2^9-1^^, nie ^^2^9^^.\n- ^^2^{21}\\cdot 2^{511}^^ – mantysa jest ułamkiem mniejszym od 1, nie liczbą całkowitą.\n\n**Zapamiętaj**\nMax = (największa mantysa ^^1-2^{-k}^^) × ^^2^{\\text{największa cecha}}^^, pamiętając o bitach znaku w obu polach.",
+   "changes": []
+  },
+  {
+   "id": 218,
+   "question": "Jaka jest minimalna liczba bitów, aby reprezentować liczby zmiennopozycyjne z zakresu -10^6...10^6 z dokładnością do 2 miejsc znaczących?",
+   "options": [
+    {
+     "key": "a",
+     "text": "8 bitów",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "12 bitów",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "4 bity",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "14 bitów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "10 bitów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "16 bitów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "20 bitów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "32 bity",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmiennopozycyjne-ieee754",
+    "kod-u2",
+    "wskaznik-adresowanie"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Dokładność 2 miejsc znaczących wymaga rozróżnienia około 100 wartości mantysy: ^^\\lceil \\log_2 100 \\rceil = 7^^ bitów.\n- Zakres ^^\\pm 10^6^^: ^^10^6 \\approx 2^{20}^^, cecha musi więc sięgać około 20, co daje 5 bitów; oszacowanie łącznie z bitem znaku prowadzi do kilkunastu bitów – w banku zadań przyjęto odpowiedź 12 bitów (7 bitów mantysy + 5 bitów cechy; znak liczby traktowany w tym oszacowaniu jako zawarty w polach). Uwaga: zależnie od konwencji liczenia bitów znaku wynik może wynosić 12–14; obowiązująca w banku odpowiedź to 12.\n\n**Dlaczego błędne**\n- 4 bity – nie zmieszczą nawet 2 cyfr znaczących (16 wartości).\n- 8 bitów – mieści mantysę, ale nie ma miejsca na cechę pokrywającą zakres do ^^10^6^^.\n- 10 bitów – za mało na 7 bitów mantysy i 5 bitów cechy.\n- 14, 16, 20, 32 bity – wystarczają, ale nie są liczbą minimalną.\n\n**Zapamiętaj**\nBity mantysy ≈ 3,32 × liczba cyfr znaczących; bity cechy z ^^\\log_2 \\log_2(\\text{zakres})^^; sumuj z bitami znaku.",
+   "changes": [
+    "poprawiono treść pytania: „-106...106” to ucięty zapis potęgi „-10^6...10^6”"
+   ]
+  },
+  {
+   "id": 219,
+   "question": "W standardzie IEEE 754 liczby zmiennopozycyjne podwójnej precyzji:",
+   "options": [
+    {
+     "key": "a",
+     "text": "mantysa zawiera 52 bity łącznie z bitem znaku",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "mantysa zawiera 53 bity łącznie z bitem znaku",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "wykładnik zawiera 11 bitów",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "wykładnik zawiera 12 bitów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "gwarantują 7-8 dziesiętnych miejsc znaczących",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "liczba zajmuje łącznie 64 bity: bit znaku, 11 bitów wykładnika i 52 bity mantysy",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wykładnik zapisany jest z przesunięciem (bias) równym 1023",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "gwarantują około 15-16 dziesiętnych miejsc znaczących",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wykładnik zapisany jest w kodzie uzupełnień do dwóch",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "zajmują 32 bity",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmiennopozycyjne-ieee754",
+    "ulamki-binarne"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Wykładnik double ma 11 bitów (bias 1023).\n- Mantysa ma 52 jawne bity plus ukrytą wiodącą jedynkę – 53 bity precyzji („53 bity łącznie z bitem znaku” to konwencja banku licząca 52 + 1).\n- Liczba zajmuje 64 bity: 1 znak + 11 wykładnik + 52 mantysa.\n- Wykładnik zapisany jest z przesunięciem (bias) 1023, bez własnego bitu znaku.\n- Precyzja to około 15–16 cyfr dziesiętnych (^^53 \\log_{10} 2 \\approx 15{,}95^^).\n\n**Dlaczego błędne**\n- „Mantysa 52 bity łącznie ze znakiem” – w konwencji banku 53.\n- „Wykładnik 12 bitów” – 11.\n- „Gwarantują 7–8 cyfr znaczących” – to pojedyncza precyzja (24 bity → ~7 cyfr); double daje 15–16.\n- „Wykładnik w U2” – jest z przesunięciem.\n- „Zajmują 32 bity” – to float; double ma 64.\n\n**Zapamiętaj**\ndouble = 1 + 11 + 52 (+1 ukryty) bitów, ~16 cyfr znaczących; float = 1 + 8 + 23, ~7 cyfr.",
+   "changes": [
+    "e: true -> false, bo 7-8 cyfr znaczących to precyzja pojedyncza (float, 24 bity mantysy); podwójna precyzja (53 bity) daje ok. 15-16 cyfr dziesiętnych"
+   ]
+  },
+  {
+   "id": 220,
+   "question": "Do czego służy stos systemowy?",
+   "options": [
+    {
+     "key": "a",
+     "text": "do przechowywania wszystkich zmiennych w programie",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "do przechowywania zmiennych alokowanych procedurą ^^new(p)^^",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "do przechowywania zmiennych lokalnych procedur i funkcji",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "do przechowywania adresów powrotu z funkcji",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "do przechowywania zmiennych alokowanych dynamicznie",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "do przechowywania parametrów przekazywanych do procedur i funkcji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "do zapamiętywania zawartości rejestrów, które procedura musi odtworzyć przed powrotem",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "do przechowywania kodu maszynowego programu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "do przechowywania zmiennych globalnych programu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "stos ma nieograniczony rozmiar, więc głębokość rekurencji nie jest limitowana",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stos-systemowy",
+    "licznik-rozkazow",
+    "wskaznik-adresowanie"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Stos systemowy przechowuje zmienne lokalne procedur i funkcji – każde wywołanie tworzy ramkę z własnymi kopiami.\n- Przechowuje adresy powrotu z funkcji – rozkaz CALL odkłada zawartość licznika rozkazów, RET ją pobiera.\n- Przechowuje też parametry przekazywane do procedur i zapamiętane wartości rejestrów.\n- Struktura LIFO obsługiwana przez wskaźnik stosu (SP), rozkazy PUSH/POP; dzięki ramkom możliwa jest rekurencja.\n\n**Dlaczego błędne**\n- „Wszystkie zmienne” – globalne i statyczne są w segmencie danych, dynamiczne na stercie.\n- „Zmienne alokowane new(p)” i „alokowane dynamicznie” – to sterta (heap); na stosie leży jedynie wskaźnik.\n- „Kod maszynowy programu” – segment kodu.\n- „Zmienne globalne” – segment danych.\n- „Nieograniczony rozmiar” – stos ma limit; jego przekroczenie to stack overflow.\n\n**Zapamiętaj**\nStos: zmienne lokalne, parametry, adresy powrotu (automatycznie); sterta: new/malloc (jawnie).",
+   "changes": []
+  },
+  {
+   "id": 221,
+   "question": "Liczby stałopozycyjne w komputerze są reprezentowane w kodzie uzupełnień do 2. Dla jakich wartości funkcja abs(x) będzie obliczona prawidłowo?",
+   "options": [
+    {
+     "key": "a",
+     "text": "tylko dla liczb ujemnych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "tylko dla liczb nieujemnych",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "dla wszystkich liczb typu integer",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wszystkich poza najmniejszą liczbą w reprezentacji",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "dla wszystkich liczb poza największą liczbą w reprezentacji",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "dla wszystkich liczb poza zerem",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "tylko dla liczb parzystych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "dla wszystkich liczb z wyjątkiem -2^(n-1), gdzie n to liczba bitów reprezentacji",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kod-u2",
+    "alu"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- W U2 na n bitach zakres to ^^[-2^{n-1}, 2^{n-1}-1]^^. Wartość bezwzględna najmniejszej liczby, ^^2^{n-1}^^, nie mieści się w zakresie, więc ^^\\text{abs}(-2^{n-1})^^ daje w wyniku nadmiaru znów ^^-2^{n-1}^^ (np. dla 8 bitów: 10000000 → negacja 01111111, +1 → 10000000).\n- Dla wszystkich pozostałych liczb (ujemnych i nieujemnych) negacja mieści się w zakresie i abs jest poprawna.\n\n**Dlaczego błędne**\n- „Tylko ujemne” / „tylko nieujemne” – abs działa dla obu grup, z jednym wyjątkiem.\n- „Dla wszystkich integer” – wyjątkiem jest INT_MIN.\n- „Wszystkich poza największą liczbą” – największa liczba (^^2^{n-1}-1^^) jest dodatnia, abs jej nie zmienia.\n- „Poza zerem” – abs(0) = 0 jest poprawne.\n- „Tylko dla parzystych” – bez związku.\n\n**Zapamiętaj**\nW U2 liczb ujemnych jest o jedną więcej niż dodatnich, więc −INT_MIN = INT_MIN (nadmiar) i abs(INT_MIN) jest błędne.",
+   "changes": []
+  },
+  {
+   "id": 222,
+   "question": "Zmienna typu wskaźnik zajmuje 4 bajty. Ile pamięci można zaadresować takim wskaźnikiem?",
+   "options": [
+    {
+     "key": "a",
+     "text": "64 kilobajty",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "4 gigabajty",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "2 megabajty",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "6 gigabajtów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "8 kilobajtów",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "4 megabajty",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "32 gigabajty",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "16 gigabajtów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "2^32 bajtów, czyli 4 GiB",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wskaznik-adresowanie",
+    "pamiec-ram"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- 4 bajty = 32 bity, więc wskaźnik rozróżnia ^^2^{32} = 4\\,294\\,967\\,296^^ adresów; przy adresowaniu bajtowym to 4 GiB.\n- ^^2^{32} = 2^2 \\cdot 2^{30} = 4 \\cdot 1\\,\\text{Gi}^^.\n- Stąd systemy 32-bitowe adresują co najwyżej 4 GB pamięci; wskaźnik 8-bajtowy (64 bity) rozszerza przestrzeń do ^^2^{64}^^ bajtów.\n\n**Dlaczego błędne**\n- 64 KB – to ^^2^{16}^^, wskaźnik 2-bajtowy.\n- 2 MB, 8 KB – nie są potęgami dwójki odpowiadającymi 32 bitom.\n- 6 GB – wymaga 33 bitów.\n- 4 MB – to ^^2^{22}^^.\n- 32 GB – to ^^2^{35}^^.\n- 16 GB – to ^^2^{34}^^.\n\n**Zapamiętaj**\nn bitów adresu → ^^2^n^^ bajtów: 16 → 64 KB, 20 → 1 MB, 32 → 4 GB, 64 → 16 EB.",
+   "changes": []
+  },
+  {
+   "id": 1167,
+   "question": "Które stwierdzenia dotyczące entropii Shannona są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Określa średnią ilość informacji przypadającą na jeden symbol źródła.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wartość entropii zawsze jest dodatnia (lub zero).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Jest maksymalna, gdy wszystkie symbole mają różne prawdopodobieństwa.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie zależy od prawdopodobieństwa wystąpienia symboli.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Entropia jest maksymalna dla rozkładu jednostajnego (wszystkie symbole równie prawdopodobne).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jednostką entropii jest zawsze bajt.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Dla źródła o dwóch równie prawdopodobnych symbolach (np. rzut uczciwą monetą) entropia wynosi 1 bit.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Średnia długość słowa bezstratnego kodu nie może być mniejsza od entropii źródła (twierdzenie Shannona o kodowaniu źródła).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Entropia źródła może przyjmować wartości ujemne, gdy jeden z symboli jest bardzo mało prawdopodobny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Entropia rośnie, gdy jeden z symboli staje się niemal pewny (prawdopodobieństwo bliskie 1).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "entropia-shannona",
+    "kodowanie-huffmana"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Entropia ^^H = -\\sum p_i \\log_2 p_i^^ to wartość oczekiwana ilości informacji, czyli średnia ilość informacji na jeden symbol źródła.\n- Każdy składnik ^^-p_i\\log_2 p_i \\ge 0^^, więc entropia jest zawsze nieujemna (dodatnia lub zero) – zero tylko dla źródła deterministycznego.\n- Maksimum ^^\\log_2 n^^ osiąga dla rozkładu jednostajnego – wszystkie symbole równie prawdopodobne.\n- Dla uczciwej monety H = 1 bit; przy podstawie logarytmu 2 jednostką jest bit.\n- Twierdzenie Shannona: średnia długość bezstratnego kodu nie może być mniejsza od entropii.\n\n**Dlaczego błędne**\n- „Maksymalna, gdy symbole mają różne prawdopodobieństwa” – odwrotnie, różnicowanie prawdopodobieństw obniża entropię.\n- „Nie zależy od prawdopodobieństw” – zależy wyłącznie od nich.\n- „Jednostką jest zawsze bajt” – bit (lub nat, hartley).\n- „Może być ujemna” – nie, każdy składnik jest nieujemny.\n- „Rośnie, gdy jeden symbol staje się prawie pewny” – maleje do zera.\n\n**Zapamiętaj**\nEntropia = średnia informacja na symbol, ^^0 \\le H \\le \\log_2 n^^, maksimum dla rozkładu jednostajnego.",
+   "changes": [
+    "b: false -> true, bo entropia Shannona jest zawsze nieujemna: każdy składnik -p_i·log2(p_i) ≥ 0, zatem H ≥ 0 (H = 0 tylko dla źródła deterministycznego)"
+   ]
+  },
+  {
+   "id": 1168,
+   "question": "Które z podanych stwierdzeń w odniesieniu do kodu Hamminga są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pozwala na wykrywanie i korekcję błędów pojedynczego bitu (SEC) oraz wykrywanie błędów dwóch bitów (DED).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Kod Hamminga pozwala korygować błędy polegające na przekłamaniu dwóch bitów.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Jest kodem o zmiennej długości słowa.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie używa bitów parzystości.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Odległość Hamminga dla kodu korygującego pojedyncze błędy musi wynosić co najmniej 3.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Kod Hamminga jest kodem stratnym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Bity kontrolne umieszczane są na pozycjach będących potęgami dwójki, a obliczony przez odbiorcę syndrom wskazuje numer przekłamanej pozycji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dla k bitów danych liczba bitów kontrolnych r spełnia warunek 2^r ≥ k + r + 1, np. kod Hamminga (7,4) ma 4 bity danych i 3 kontrolne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Kod Hamminga jest metodą kompresji danych zmniejszającą liczbę przesyłanych bitów.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Do korekcji pojedynczego błędu wystarczy jeden bit parzystości dodany do słowa danych.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kod-hamminga",
+    "entropia-shannona"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Kod Hamminga koryguje pojedynczy błąd (SEC), a w wersji rozszerzonej o dodatkowy bit parzystości wykrywa również błędy dwubitowe (DED) – standard SEC-DED w pamięciach ECC.\n- Aby korygować pojedyncze błędy, minimalna odległość Hamminga musi wynosić co najmniej 3 (koryguje się ^^\\lfloor (d-1)/2 \\rfloor^^ błędów).\n- Bity kontrolne leżą na pozycjach będących potęgami 2, a syndrom obliczony przez odbiorcę wskazuje numer błędnej pozycji.\n- Liczba bitów kontrolnych r spełnia ^^2^r \\ge k + r + 1^^, np. Hamming(7,4).\n\n**Dlaczego błędne**\n- „Koryguje błędy dwóch bitów” – do tego trzeba ^^d \\ge 5^^; Hamming ma 3 (4 w wersji rozszerzonej).\n- „Zmienna długość słowa” – kod stałej długości.\n- „Nie używa bitów parzystości” – opiera się właśnie na nich.\n- „Kod stratny” – bezstratny, dane odtwarzane dokładnie.\n- „Metoda kompresji” – to kod korekcyjny, dodaje redundancję.\n- „Jeden bit parzystości wystarcza do korekcji” – pojedyncza parzystość (d = 2) tylko wykrywa 1 błąd.\n\n**Zapamiętaj**\nHamming: d = 3 → 1 błąd korygowany; + bit parzystości → d = 4, SEC-DED; syndrom = pozycja błędu.",
+   "changes": []
+  },
+  {
+   "id": 1169,
+   "question": "Kodowanie Shannona-Fano i Huffmana:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Tworzą kody prefiksowe.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Kodowanie Shannona-Fano tworzy kod postfiksowy.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Są metodami kompresji stratnej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Huffmana daje zawsze gorsze wyniki niż Shannona-Fano.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Kodowanie Huffmana jest optymalnym kodowaniem prefiksowym dla danych prawdopodobieństw symboli.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Oba kody wymagają przesyłania słownika razem z danymi.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Symbolom o większym prawdopodobieństwie przypisywane są krótsze słowa kodowe.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Kodowanie Huffmana buduje drzewo kodu oddolnie, łącząc dwa najrzadsze symbole, a Shannona-Fano odgórnie, dzieląc zbiór symboli na części o zbliżonym prawdopodobieństwie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Średnia długość słowa kodu Huffmana spełnia H ≤ L < H + 1, gdzie H jest entropią źródła.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Oba kody przypisują wszystkim symbolom słowa kodowe tej samej długości.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Kod Huffmana może osiągnąć średnią długość słowa mniejszą niż entropia źródła.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kodowanie-huffmana",
+    "entropia-shannona",
+    "kod-hamminga"
+   ],
+   "explanation": "**Dlaczego poprawne**\n- Oba algorytmy tworzą kody prefiksowe – żadne słowo kodowe nie jest początkiem innego, więc strumień dekoduje się jednoznacznie bez separatorów.\n- Kod Huffmana jest optymalny wśród kodów prefiksowych dla danego rozkładu: minimalna średnia długość ^^L^^, przy czym ^^H \\le L < H + 1^^.\n- Symbolom częstszym przypisywane są krótsze słowa kodowe.\n- Huffman buduje drzewo oddolnie (łącząc dwa najrzadsze symbole), Shannon-Fano odgórnie (dzieląc zbiór na połowy o zbliżonych prawdopodobieństwach).\n\n**Dlaczego błędne**\n- „Shannon-Fano tworzy kod postfiksowy” – tworzy kod prefiksowy.\n- „Kompresja stratna” – oba są bezstratne.\n- „Huffman zawsze gorszy” – odwrotnie, Huffman jest nie gorszy (Shannon-Fano bywa nieoptymalny).\n- „Oba wymagają przesyłania słownika” – w banku traktowane jako fałsz: istnieją warianty adaptacyjne i tabele ustalone z góry.\n- „Stała długość słów” – to kody o zmiennej długości.\n- „Średnia długość mniejsza od entropii” – niemożliwe dla kodu bezstratnego.\n\n**Zapamiętaj**\nHuffman i Shannon-Fano: bezstratne kody prefiksowe zmiennej długości; Huffman optymalny, ^^H \\le L < H+1^^.",
+   "changes": []
+  }
+ ],
+ "glossary": [
+  {
+   "id": "fpga",
+   "term": "Układ FPGA (Field-Programmable Gate Array)",
+   "topic": "digital_systems",
+   "short": "Programowalny układ cyfrowy złożony z matrycy konfigurowalnych bloków logicznych, przerzutników, bloków pamięci i programowalnych połączeń, w którym użytkownik realizuje dowolny układ cyfrowy.",
+   "details": "**Budowa.** FPGA składa się z tysięcy–milionów bloków logicznych (LUT, czyli tablice prawdy 4–6 wejściowe, plus przerzutnik D), konfigurowalnych połączeń między nimi, bloków pamięci (Block RAM, zwykle dwuportowej), bloków DSP (mnożarki) oraz bloków wejścia/wyjścia. Konfiguracja (bitstream) ładowana jest do wewnętrznej pamięci SRAM przy włączeniu zasilania.\n\n**Jak działa projektowanie.** Projektant opisuje układ w języku HDL (VHDL, Verilog) lub schematem, narzędzie syntezy zamienia opis na sieć bramek i przerzutników, a następnie mapuje ją na zasoby konkretnego FPGA (place & route). Wynikiem jest bitstream.\n\n**Co można zrealizować.** Ponieważ LUT realizuje dowolną funkcję logiczną, a przerzutniki dają pamięć stanu, w FPGA da się wykonać:\n- dowolny układ kombinacyjny (dekodery, sumatory, multipleksery),\n- dowolny układ sekwencyjny (liczniki, automaty, rejestry),\n- pamięci RAM (jedno- i dwuportowe) z Block RAM lub z LUT,\n- kompletne procesory (tzw. soft-core: MicroBlaze, NIOS II, RISC-V), także wielordzeniowe, z dowolną listą rozkazów i trybami adresowania zaprojektowanymi przez użytkownika,\n- kontrolery grafiki, akceleratory obliczeń równoległych i przetwarzania obrazu.\n\nJedynym ograniczeniem jest wielkość struktury (liczba LUT, przerzutników, pamięci) oraz maksymalna częstotliwość taktowania. Producent FPGA nie narzuca żadnej architektury procesora ani listy rozkazów – to cecha odróżniająca FPGA od mikrokontrolera z gotowym rdzeniem.\n\n**Przykład.** Prosty kontroler VGA generujący sygnały synchronizacji i kolory to kilkadziesiąt linii VHDL; procesor 8-bitowy to kilkaset linii.\n\n**Na egzaminie uważaj na:**\n- „w FPGA można wykonać tylko procesor jednordzeniowy” – fałsz, liczba rdzeni ograniczona jest tylko zasobami,\n- „lista rozkazów / tryby adresowania muszą być zgodne z producentem FPGA” – fałsz, producent FPGA nie definiuje procesora,\n- „w FPGA nie ma pamięci dwuportowej” – fałsz, Block RAM jest typowo dwuportowa,\n- FPGA nie jest tym samym co GPU ani ASIC; procesor w FPGA jest zwykle wolniejszy od dedykowanego ASIC o tej samej architekturze.",
+   "related": [
+    "uklad-kombinacyjny",
+    "uklad-sekwencyjny",
+    "ram-dwuportowa",
+    "procesor-soft-core",
+    "karta-graficzna-opengl"
+   ]
+  },
+  {
+   "id": "uklad-kombinacyjny",
+   "term": "Układ kombinacyjny (combinational circuit)",
+   "topic": "digital_systems",
+   "short": "Układ logiczny, w którym stan wyjść w każdej chwili zależy wyłącznie od aktualnego stanu wejść; nie ma pamięci stanów poprzednich.",
+   "details": "**Definicja.** Układ kombinacyjny realizuje funkcję logiczną ^^Y = f(X)^^: dla danej kombinacji wejść zawsze pojawia się ta sama kombinacja wyjść (po czasie propagacji bramek). Nie zawiera elementów pamiętających ani sprzężeń zwrotnych, więc nie „pamięta” historii sygnałów.\n\n**Budowa.** Składa się wyłącznie z bramek logicznych (AND, OR, NOT, NAND, NOR, XOR) połączonych bez pętli. Każdy układ kombinacyjny da się zbudować z samych bramek NAND (lub samych NOR), bo są to bramki funkcjonalnie pełne. Opisuje się go tablicą prawdy, wyrażeniem boolowskim lub tablicą Karnaugha (minimalizacja).\n\n**Przykłady.** Sumator (półsumator, sumator pełny, sumator wielobitowy), komparator, dekoder, koder, multiplekser, demultiplekser, konwerter kodów, ALU (jednostka arytmetyczno-logiczna procesora w wersji podstawowej). Wszystkie te bloki dają wynik natychmiast po ustaleniu wejść.\n\n**Czego układ kombinacyjny nie może.** Nie może zawierać przerzutników (JK, D, T, RS) – z chwilą dodania przerzutnika lub sprzężenia zwrotnego układ staje się sekwencyjny. Nie może pamiętać danych, zliczać impulsów ani sterować sekwencją zdarzeń. Dlatego pamięć RAM, licznik, rejestr, procesor czy karta graficzna nie są układami kombinacyjnymi.\n\n**Zjawiska.** Hazard (chwilowe błędne stany na wyjściu spowodowane różnym czasem propagacji ścieżek) – nie jest to pamięć, lecz efekt przejściowy.\n\n**Na egzaminie uważaj na:**\n- „układ kombinacyjny nie pamięta stanów poprzednich” – prawda, to jego definicja,\n- „może zawierać bramki wraz z przerzutnikami JK” – fałsz (to układ sekwencyjny),\n- „stan wyjść zależy wyłącznie od stanu wejść” – prawda,\n- sumator pełny, ALU, dekoder są kombinacyjne; licznik, rejestr, RAM nie są,\n- kolejność: kombinacyjny = bez sprzężeń zwrotnych; sekwencyjny = sprzężenie zwrotne lub przerzutniki.",
+   "related": [
+    "uklad-sekwencyjny",
+    "sumator-pelny",
+    "alu"
+   ]
+  },
+  {
+   "id": "uklad-sekwencyjny",
+   "term": "Układ sekwencyjny (sequential circuit)",
+   "topic": "digital_systems",
+   "short": "Układ logiczny, którego wyjścia zależą od aktualnych wejść oraz od stanu wewnętrznego, czyli od historii sygnałów; posiada pamięć zrealizowaną przez sprzężenie zwrotne lub przerzutniki.",
+   "details": "**Definicja.** Układ sekwencyjny opisują dwie funkcje: funkcja przejść ^^S' = \\delta(S, X)^^ (nowy stan) i funkcja wyjść ^^Y = \\lambda(S, X)^^ (automat Mealy'ego) lub ^^Y = \\lambda(S)^^ (automat Moore'a). Stan ^^S^^ przechowywany jest w elementach pamięci.\n\n**Skąd bierze się pamięć.** Pamięć powstaje ze sprzężenia zwrotnego: wyjście bramek podane z powrotem na ich wejścia. Dwie bramki NAND ze skrzyżowanym sprzężeniem tworzą przerzutnik RS – najprostszy element pamiętający. Zatem układ sekwencyjny **może** składać się z samych bramek logicznych, ale **musi** zawierać sprzężenie zwrotne; bez sprzężenia zwrotnego same bramki dają układ kombinacyjny. Z przerzutników RS buduje się przerzutniki D, JK, T, a z nich rejestry, liczniki i pamięci.\n\n**Podział.** Synchroniczne (zmiana stanu tylko przy zboczu zegara) i asynchroniczne (zmiana natychmiast po zmianie wejść, np. zatrzask RS). Sygnał zegarowy jest więc typowy, lecz nie obowiązkowy.\n\n**Przykłady.** Przerzutniki, rejestry, liczniki, pamięć RAM (komórka SRAM to dwa skrzyżowane inwertery), automaty sterujące, procesor (pobiera i wykonuje rozkazy w kolejnych cyklach – jest urządzeniem sekwencyjnym), karta graficzna.\n\n**Przykład minimalny.** Zatrzask RS z dwóch NAND: ^^Q = \\overline{\\overline{S} \\cdot \\overline{Q}}^^, ^^\\overline{Q} = \\overline{\\overline{R} \\cdot Q}^^ – po zdjęciu sygnału S wyjście Q pozostaje ustawione: to jest pamiętanie.\n\n**Na egzaminie uważaj na:**\n- „może składać się z samych bramek logicznych” – prawda (z sprzężeniem zwrotnym),\n- „może składać się z samych bramek bez sprzężeń zwrotnych” – fałsz,\n- „nie pamięta stanów poprzednich” – fałsz, to definicja układu kombinacyjnego,\n- „nie wymaga zegara” – fałsz jako cecha ogólna (istnieją asynchroniczne, ale to nie jest cecha definicyjna; w bankach pytań zdanie traktowane jest jako fałszywe),\n- pamięć RAM można wykonać z bramek NAND, ale nie bez sprzężeń zwrotnych.",
+   "related": [
+    "uklad-kombinacyjny",
+    "pamiec-ram",
+    "procesor-soft-core"
+   ]
+  },
+  {
+   "id": "pamiec-ram",
+   "term": "Pamięć RAM (Random Access Memory)",
+   "topic": "digital_systems",
+   "short": "Pamięć o dostępie swobodnym: układ sekwencyjny przechowujący słowa danych pod adresami, z wejściami adresowymi, sterującymi (CS, WE, OE) i liniami danych.",
+   "details": "**Interfejs.** Pamięć RAM ma: wejścia adresowe ^^A_0 \\ldots A_{n-1}^^ (wybór jednej z ^^2^n^^ komórek), linie danych ^^D_0 \\ldots D_{m-1}^^ (dwukierunkowe wejście/wyjście lub oddzielne DI/DO) oraz wejścia sterujące: CS/CE (wybór układu), WE (zapis), OE (odczyt). Pojemność to ^^2^n \\cdot m^^ bitów, np. 10 linii adresowych i 8 linii danych daje 1 KiB.\n\n**Jak działa.** Dekoder adresu wybiera wiersz komórek. Przy zapisie (WE aktywne) dane z linii danych są zatrzaskiwane w wybranych komórkach; przy odczycie zawartość komórek jest podawana na wyjścia przez bufory trójstanowe. Dostęp swobodny oznacza, że czas dostępu nie zależy od adresu (w odróżnieniu od pamięci sekwencyjnych, np. taśm).\n\n**Rodzaje.** SRAM – komórka to przerzutnik (6 tranzystorów, dwa skrzyżowane inwertery), szybka, nieulotna tylko przy zasilaniu. DRAM – kondensator + tranzystor, wymaga odświeżania. W FPGA używa się SRAM (Block RAM, distributed RAM z LUT).\n\n**RAM jako układ logiczny.** Komórka pamięci to element pamiętający, czyli układ sekwencyjny ze sprzężeniem zwrotnym. Można ją zbudować z samych bramek NAND (zatrzask RS + bramki wyboru), ale **nie** bez sprzężeń zwrotnych – bez nich powstałby układ kombinacyjny, który niczego nie pamięta.\n\n**Przykład.** Pamięć 16×4: 4 linie adresowe, 4 linie danych, 16 słów po 4 bity, wymaga 64 zatrzasków i dekodera 4→16.\n\n**Na egzaminie uważaj na:**\n- „RAM posiada wejścia adresowe, sterujące oraz wejście/wyjście danych” – prawda,\n- „można wykonać z bramek NAND” – prawda; „z bramek NAND bez sprzężeń zwrotnych” – fałsz,\n- RAM nie jest układem kombinacyjnym,\n- RAM (SRAM/DRAM) jest ulotna; ROM/Flash są nieulotne,\n- liczba linii adresowych ^^n^^ daje ^^2^n^^ komórek, nie ^^n^^.",
+   "related": [
+    "ram-dwuportowa",
+    "uklad-sekwencyjny",
+    "wskaznik-adresowanie"
+   ]
+  },
+  {
+   "id": "ram-dwuportowa",
+   "term": "Pamięć RAM dwuportowa (dual-port RAM)",
+   "topic": "digital_systems",
+   "short": "Pamięć RAM z dwoma niezależnymi interfejsami (port A i B), każdy z własnymi liniami adresu, danych i sterowania, pozwalającymi równocześnie sięgać do tych samych komórek.",
+   "details": "**Budowa.** Jedna macierz komórek pamięci ma dwa komplety interfejsów: dwa dekodery adresu, dwa zestawy linii danych, dwa zestawy sygnałów sterujących (często dwa niezależne zegary). Oba porty widzą tę samą zawartość – to jedna pamięć, nie dwie kopie ani dwa układy scalone.\n\n**Jak działa.** W tym samym cyklu port A może np. czytać komórkę 17, a port B zapisywać komórkę 250 (lub tę samą). Konflikt zachodzi tylko przy jednoczesnym zapisie tej samej komórki lub zapisie i odczycie tej samej komórki – wtedy zachowanie definiuje tryb (read-first, write-first) albo układ arbitra. Wersje: true dual-port (dwa porty pełne R/W), simple dual-port (jeden zapis, jeden odczyt), pseudo dual-port (multipleksowanie w czasie jednego portu).\n\n**Zastosowania.** Komunikacja dwóch niezależnych procesów lub kontrolerów (np. procesor i kontroler DMA, dwa procesory, procesor i kontroler grafiki), bufory FIFO, pamięć obrazu karty graficznej (jeden port zapisuje piksele, drugi czyta je do wyświetlenia), bufory sieciowe, przekraczanie domen zegarowych. Nie jest ograniczona do procesorów wielordzeniowych.\n\n**W FPGA.** Bloki Block RAM w FPGA (Xilinx, Intel/Altera, Lattice) są fabrycznie dwuportowe – to podstawowy zasób pamięciowy FPGA. Dwuportowość nie oznacza spowolnienia; przepustowość rośnie, bo dwa dostępy mogą odbywać się równocześnie.\n\n**Realizacja logiczna.** Jak każda RAM jest układem sekwencyjnym: komórki to zatrzaski ze sprzężeniem zwrotnym; da się je zbudować z bramek NAND, ale nie bez sprzężeń zwrotnych.\n\n**Na egzaminie uważaj na:**\n- „dwa interfejsy, niezależny dostęp do tych samych komórek” – prawda,\n- „w FPGA nie występuje” – fałsz (Block RAM),\n- „wyłącznie w procesorach wielordzeniowych” – fałsz,\n- „wymaga dwóch układów scalonych” / „nie ma linii adresowych” / „zawsze wolniejsza” – fałsz,\n- „można wykonać z bramek NAND bez sprzężeń zwrotnych” – fałsz.",
+   "related": [
+    "pamiec-ram",
+    "fpga",
+    "karta-graficzna-opengl"
+   ]
+  },
+  {
+   "id": "procesor-soft-core",
+   "term": "Procesor i procesor soft-core w FPGA",
+   "topic": "digital_systems",
+   "short": "Procesor to sekwencyjne urządzenie cyfrowe pobierające z pamięci operacyjnej rozkazy, dekodujące je i wykonujące; soft-core to procesor zrealizowany z zasobów logicznych FPGA według projektu użytkownika.",
+   "details": "**Czym jest procesor.** Procesor (CPU) to układ sekwencyjny działający w cyklu: pobranie rozkazu z pamięci (fetch) pod adresem z licznika rozkazów, dekodowanie (decode) w jednostce sterującej na podstawie rejestru rozkazów, wykonanie (execute) w ALU lub przez transfer danych, zapis wyniku (write-back). Główne bloki: jednostka sterująca, ALU, rejestry (w tym licznik rozkazów PC i rejestr rozkazów IR), magistrale adresowa i danych, interfejs pamięci.\n\n**Procesor w FPGA (soft-core).** Ponieważ FPGA realizuje dowolny układ sekwencyjny, można w nim opisać w VHDL/Verilog kompletny procesor. Przykłady: MicroBlaze (Xilinx), NIOS II (Intel), rdzenie RISC-V, PicoBlaze, klony 8051 i Z80. Projektant decyduje o:\n- liście rozkazów (własna lub istniejąca, np. RISC-V),\n- trybach adresowania,\n- szerokości słowa, liczbie rejestrów, obecności mnożenia,\n- liczbie rdzeni – można umieścić wiele rdzeni, ograniczeniem są tylko zasoby FPGA.\n\nProducent FPGA nie narzuca architektury ani listy rozkazów; nie ma wymogu zgodności z x86. Soft-core jest taktowany zegarem jak każdy procesor, posiada rejestry i pamięć. Jest zwykle wolniejszy (niższa częstotliwość) i większy od równoważnego ASIC, ale elastyczny i możliwy do modyfikacji.\n\n**Przykład.** Prosty procesor 8-bitowy: PC (8 bitów), IR, akumulator, ALU z dodawaniem/odejmowaniem/AND/OR, kilkanaście rozkazów (LDA, STA, ADD, JMP, JZ) – kilkaset linii VHDL.\n\n**Na egzaminie uważaj na:**\n- „procesor to sekwencyjne urządzenie pobierające dane z pamięci operacyjnej, interpretujące i wykonujące je jako rozkazy” – prawda,\n- „w FPGA tylko jednordzeniowy” – fałsz,\n- „tryby adresowania / lista rozkazów muszą być zgodne z producentem FPGA” – fałsz,\n- „musi być zgodny z x86”, „nie ma własnej listy rozkazów”, „zawsze szybszy od ASIC” – fałsz,\n- procesor nie jest układem kombinacyjnym.",
+   "related": [
+    "fpga",
+    "lista-rozkazow-isa",
+    "licznik-rozkazow",
+    "rejestr-rozkazow",
+    "alu"
+   ]
+  },
+  {
+   "id": "lista-rozkazow-isa",
+   "term": "Lista rozkazów procesora (Instruction Set Architecture, ISA)",
+   "topic": "digital_systems",
+   "short": "Zbiór wszystkich rozkazów rozumianych przez procesor wraz z ich kodami, formatami, trybami adresowania i modelem rejestrów; jest projektowana pod zastosowanie procesora.",
+   "details": "**Co obejmuje ISA.** Lista rozkazów definiuje: zestaw operacji (transfer danych, arytmetyka, logika, skoki, wywołania podprogramów, obsługa stosu, wejście/wyjście), format słowa rozkazu (pola kodu operacji i argumentów), dostępne tryby adresowania (natychmiastowy, bezpośredni, rejestrowy, pośredni, indeksowy, względny), widoczne dla programisty rejestry, sposób obsługi przerwań i znaczniki (flagi). Jest to interfejs między sprzętem a oprogramowaniem (kompilatorem, asemblerem).\n\n**Jak powstaje.** Architekt procesora wybiera rozkazy według potrzeb zastosowania: procesor sterownika pralki nie potrzebuje mnożenia zmiennoprzecinkowego, procesor DSP potrzebuje rozkazu mnóż-i-dodaj. Mnożenie sprzętowe **nie** jest obowiązkowe – wiele prostych procesorów (np. 6502, PicoBlaze, RISC-V bez rozszerzenia M) realizuje mnożenie programowo przez dodawanie i przesunięcia. Minimalny zestaw obowiązkowy to w praktyce transfer danych, jakaś operacja arytmetyczno-logiczna i skok warunkowy (bez skoków nie da się zrealizować pętli ani warunków).\n\n**ISA a implementacja.** Ta sama ISA (np. x86, ARM, RISC-V) może być realizowana przez różne mikroarchitektury (z potokiem, superskalarne, w FPGA). ISA nie zależy od systemu operacyjnego – to system dostosowuje się do ISA. Różne rodziny procesorów mają różne ISA; nie ma jednej wspólnej listy.\n\n**Procesor w FPGA.** Producent FPGA nie definiuje żadnej listy rozkazów – projektant soft-core'a ustala ją sam lub przyjmuje istniejącą.\n\n**Podział.** CISC (dużo złożonych rozkazów, różne długości, x86) i RISC (mało prostych rozkazów stałej długości, ARM, RISC-V, MIPS). Skoki warunkowe występują w obu.\n\n**Na egzaminie uważaj na:**\n- „zawsze zawiera mnożenie” – fałsz,\n- „projektowana w zależności od zastosowania procesora” – prawda,\n- „w FPGA musi być zgodna z listą producenta układu” – fałsz,\n- „identyczna dla wszystkich procesorów”, „zależy od systemu operacyjnego”, „nie zawiera skoków” – fałsz,\n- „określa tryby adresowania i formaty instrukcji” – prawda.",
+   "related": [
+    "procesor-soft-core",
+    "rozkazy-skoku",
+    "alu",
+    "fpga"
+   ]
+  },
+  {
+   "id": "licznik-rozkazow",
+   "term": "Licznik rozkazów (Program Counter, PC)",
+   "topic": "digital_systems",
+   "short": "Rejestr procesora przechowujący adres w pamięci programu, spod którego pobierany będzie następny rozkaz lub aktualnie pobierany argument rozkazu.",
+   "details": "**Rola.** Licznik rozkazów (PC, w x86 nazywany IP/EIP/RIP) wskazuje miejsce w pamięci programu. W cyklu pobrania procesor wystawia zawartość PC na magistralę adresową, odczytuje kod rozkazu do rejestru rozkazów i zwiększa PC (^^PC \\leftarrow PC + 1^^ lub o długość rozkazu). Jeśli rozkaz ma argument w kolejnych komórkach pamięci programu (stała, adres), PC wskazuje ten argument i znów jest inkrementowany. Stąd definicja: PC pamięta adres mającego się wykonać rozkazu **lub** adres aktualnie pobieranego argumentu z pamięci programu.\n\n**Budowa.** Jest to licznik binarny z możliwością załadowania równoległego (wpis nowej wartości) i zerowania (reset – start programu od ustalonego adresu). Wejście równoległe wykorzystują: skoki bezwarunkowe, skoki warunkowe (gdy warunek spełniony), wywołanie podprogramu CALL, powrót RET (adres ze stosu), obsługa przerwań (adres procedury obsługi). Nie jest więc prawdą, że wpis równoległy służy wyłącznie skokom bezwarunkowym.\n\n**Szerokość.** Szerokość PC odpowiada szerokości przestrzeni adresowej programu: 16 bitów pozwala adresować 64 KiB, 32 bity – 4 GiB. W procesorze 64-bitowym PC ma 64 bity (praktycznie 48 używanych), nigdy 8.\n\n**Czym PC nie jest.** Nie zlicza wykonanych operacji, nie przechowuje kodów błędów, nie jest częścią ALU (choć inkrementacja może korzystać z osobnego sumatora), nie jest tożsamy z rejestrem rozkazów (PC = adres, IR = kod rozkazu).\n\n**Przykład.** Program pod adresami 100: `LDA #5` (2 bajty), 102: `JMP 200`. Po pobraniu LDA PC=101 (argument 5), po pobraniu argumentu PC=102, po JMP do PC wpisuje się 200.\n\n**Na egzaminie uważaj na:**\n- „służy do pamiętania adresu mającego się wykonać rozkazu lub adresu aktualnie pobieranego argumentu” – prawda,\n- „wejście równoległe wyłącznie przy skokach bezwarunkowych” – fałsz,\n- skok bezwarunkowy zawsze zmienia PC; skok warunkowy – tylko gdy warunek spełniony; rozkaz ADD nie zapisuje wyniku do PC,\n- „nie może być zmieniony przez skok” – fałsz.",
+   "related": [
+    "rejestr-rozkazow",
+    "rozkazy-skoku",
+    "procesor-soft-core",
+    "stos-systemowy"
+   ]
+  },
+  {
+   "id": "rejestr-rozkazow",
+   "term": "Rejestr rozkazów (Instruction Register, IR)",
+   "topic": "digital_systems",
+   "short": "Rejestr procesora, do którego wpisywany jest kod rozkazu pobrany z pamięci programu; jego zawartość dekoduje jednostka sterująca, aby wygenerować sygnały sterujące wykonaniem rozkazu.",
+   "details": "**Rola w cyklu rozkazowym.** W fazie pobrania (fetch) kod rozkazu spod adresu wskazywanego przez licznik rozkazów trafia z magistrali danych do rejestru rozkazów. W fazie dekodowania jednostka sterująca (układ sterujący – automat lub mikroprogram) odczytuje pole kodu operacji i pola argumentów z IR i na tej podstawie generuje w kolejnych taktach sygnały sterujące: wybór operacji ALU, zapis do rejestrów, odczyt pamięci, wpis do PC. Zawartość IR musi pozostać **stabilna przez cały czas wykonywania rozkazu**, bo jednostka sterująca stale z niej korzysta – także w chwili, gdy procesor pobiera z pamięci programu argument rozkazu (stałą lub adres). Argument trafia do innego rejestru (rejestr danych, rejestr adresowy, akumulator), nie do IR. IR zmienia się dopiero przy pobraniu następnego rozkazu.\n\n**IR a PC.** Licznik rozkazów przechowuje **adres** rozkazu; rejestr rozkazów przechowuje **kod** (treść) rozkazu. To dwa różne rejestry.\n\n**Dostępność.** IR jest rejestrem wewnętrznym, niewidocznym w modelu programowym – programista nie może go odczytać ani zapisać rozkazem (w odróżnieniu od akumulatora czy rejestrów ogólnego przeznaczenia). W wielu opisach architektury IR zalicza się do jednostki sterującej lub umieszcza obok niej – to kwestia konwencji.\n\n**Szerokość.** Odpowiada długości słowa rozkazu (np. 8, 16, 32 bity); w procesorach CISC o zmiennej długości rozkazu może być pobierany w kilku częściach lub buforowany w kolejce rozkazów.\n\n**Przykład.** Rozkaz `ADD R1, R2` o kodzie 0x3A12: po pobraniu IR=0x3A12; pole 0x3A dekodowane jako ADD, pola 1 i 2 wybierają rejestry; ALU dodaje, wynik do R1; IR nie zmienia się aż do następnego fetch.\n\n**Na egzaminie uważaj na:**\n- „przechowuje kod rozkazu wczytany z pamięci programu” – prawda; „przechowuje adres rozkazu” – fałsz (to PC),\n- „zawartość wykorzystywana przez jednostkę sterującą” – prawda,\n- „zawartość musi zmienić się bezpośrednio przed pobraniem argumentu” – fałsz: kod rozkazu musi być zachowany do końca wykonania,\n- „dostępny bezpośrednio dla programisty”, „przechowuje wyniki zmiennoprzecinkowe”, „tożsamy z licznikiem rozkazów” – fałsz.",
+   "related": [
+    "licznik-rozkazow",
+    "procesor-soft-core",
+    "lista-rozkazow-isa"
+   ]
+  },
+  {
+   "id": "rozkazy-skoku",
+   "term": "Rozkazy skoku bezwarunkowego i warunkowego",
+   "topic": "digital_systems",
+   "short": "Rozkazy zmieniające kolejność wykonywania programu przez wpis nowego adresu do licznika rozkazów: skok bezwarunkowy zawsze, skok warunkowy tylko gdy spełniony jest warunek zależny od znaczników.",
+   "details": "**Mechanizm.** Normalnie licznik rozkazów rośnie sekwencyjnie. Rozkaz skoku wpisuje do licznika rozkazów (PC) adres docelowy, więc następny rozkaz pobierany jest z innego miejsca programu.\n\n**Skok bezwarunkowy (JMP, B, GOTO).** Zawsze powoduje ^^PC \\leftarrow adres^^, niezależnie od jakiegokolwiek warunku. Adres może być podany bezpośrednio, względnie (PC + przesunięcie) lub pośrednio (z rejestru). Zawsze wpływa na stan PC.\n\n**Skok warunkowy (JZ, JNZ, JC, BEQ, BNE, ...).** Jednostka sterująca sprawdza znaczniki (flagi) rejestru stanu: Z (zero), C (przeniesienie), N/S (znak), V/O (nadmiar), ustawione przez wcześniejszą operację ALU (np. CMP, SUB, ADD). Jeżeli warunek jest spełniony – wpis adresu do PC; jeżeli nie – PC pozostaje zinkrementowany i wykonuje się kolejny rozkaz. Skok warunkowy zależy więc od wyników poprzednich operacji. Adres docelowy jest dowolny, nie „zawsze zero”. Skoki warunkowe są w każdej praktycznej architekturze, także RISC (BEQ/BNE w MIPS i RISC-V). Skok nie jest rozkazem ALU (choć porównanie może wykorzystywać ALU) i nie czyści pamięci cache.\n\n**Podprogramy.** CALL to skok z odłożeniem adresu powrotu na stos; RET pobiera adres ze stosu do PC.\n\n**W potoku.** Skoki powodują hazardy sterowania – potok musi przewidywać kierunek skoku lub opróżniać się, ale skoki są oczywiście wykonywalne.\n\n**Przykład.** `CMP A, 0` ustawia Z=1, gdy A=0; `JZ koniec` wpisze adres `koniec` do PC tylko przy Z=1.\n\n**Na egzaminie uważaj na:**\n- skok bezwarunkowy: „wpisuje adres do PC niezależnie od warunku” – prawda; „tylko przy spełnionym warunku” – fałsz,\n- skok warunkowy: „wpisuje adres do PC tylko przy spełnionym warunku” – prawda; „niezależnie od warunku” – fałsz,\n- „nie wpływa na stan licznika rozkazów” – fałsz dla obu (warunkowy wpływa, gdy warunek jest spełniony),\n- „zależy od stanu znaczników” – prawda dla warunkowego.",
+   "related": [
+    "licznik-rozkazow",
+    "alu",
+    "lista-rozkazow-isa",
+    "przetwarzanie-potokowe"
+   ]
+  },
+  {
+   "id": "alu",
+   "term": "Jednostka arytmetyczno-logiczna (ALU) i rozkaz dodawania",
+   "topic": "digital_systems",
+   "short": "Kombinacyjny blok procesora wykonujący operacje arytmetyczne (dodawanie, odejmowanie) i logiczne (AND, OR, XOR, NOT, przesunięcia) oraz ustawiający znaczniki wyniku.",
+   "details": "**Budowa.** ALU ma dwa wejścia argumentów ^^A^^, ^^B^^ (n bitów), wejście wyboru operacji (kod z jednostki sterującej), wyjście wyniku i wyjścia znaczników: Z (wynik zerowy), C (przeniesienie/pożyczka), N (znak), V (nadmiar w U2). Wewnątrz znajduje się sumator wielobitowy (łańcuch sumatorów pełnych lub sumator z przewidywaniem przeniesień), bramki AND/OR/XOR dla każdej pozycji, układ przesuwający oraz multiplekser wybierający wynik. Odejmowanie realizuje się jako dodawanie uzupełnienia do dwóch: ^^A - B = A + \\overline{B} + 1^^.\n\n**Charakter układu.** Podstawowa ALU jest układem **kombinacyjnym** – wynik zależy tylko od argumentów i kodu operacji. Nie musi być układem sekwencyjnym (choć np. wielocyklowe mnożenie lub dzielenie może korzystać z automatu). ALU nie przechowuje danych – to zadanie rejestrów – i nie obsługuje przerwań (to jednostka sterująca/kontroler przerwań).\n\n**Rozkaz dodawania (ADD).** Przebieg: pobranie kodu rozkazu do IR, dekodowanie, pobranie argumentów (z rejestrów, akumulatora, pamięci – w dowolnym trybie adresowania, także bezpośrednim), podanie na wejścia ALU z kodem „dodaj”, zapis wyniku do rejestru docelowego (akumulatora) – **nie** do licznika rozkazów – oraz aktualizacja znaczników Z, C, V, N. ADD zmienia więc stan rejestrów; nie ustawia flagi przerwania; występuje w każdym procesorze, nie tylko 64-bitowym.\n\n**Przykład (8 bitów).** ^^0xFF + 0x01 = 0x00^^ z C=1, Z=1; ^^0x7F + 0x01 = 0x80^^ z V=1 (nadmiar w U2: 127+1 = -128).\n\n**Na egzaminie uważaj na:**\n- „ALU wykonuje dodawanie, odejmowanie, AND, OR” – prawda; „musi być sekwencyjna”, „nie może zawierać sumatorów”, „służy do przechowywania danych”, „zarządza przerwaniami” – fałsz,\n- rozkaz dodawania „wykorzystuje ALU” – prawda; „wynik zapisuje do licznika rozkazów” – fałsz,\n- ADD „może ustawić flagi Z, C, V” – prawda,\n- licznik rozkazów nie jest częścią ALU.",
+   "related": [
+    "sumator-pelny",
+    "uklad-kombinacyjny",
+    "kod-u2",
+    "rozkazy-skoku"
+   ]
+  },
+  {
+   "id": "sumator-pelny",
+   "term": "Sumator jednobitowy pełny (full adder) i sumatory wielobitowe",
+   "topic": "digital_systems",
+   "short": "Układ kombinacyjny dodający trzy bity: dwa bity składników i przeniesienie z pozycji młodszej, dający bit sumy i bit przeniesienia na pozycję starszą.",
+   "details": "**Półsumator vs sumator pełny.** Półsumator (half adder) ma dwa wejścia A, B i wyjścia ^^S = A \\oplus B^^, ^^C = A \\cdot B^^ – nie uwzględnia przeniesienia wejściowego, więc nadaje się tylko na najmłodszą pozycję. Sumator pełny (full adder) ma **trzy** wejścia: A, B, ^^C_{in}^^ i **dwa** wyjścia:\n^^S = A \\oplus B \\oplus C_{in}^^,\n^^C_{out} = A B + C_{in}(A \\oplus B)^^.\n\n**Tablica prawdy (fragment).** 0+0+0 → S=0,C=0; 1+1+0 → S=0,C=1; 1+1+1 → S=1,C=1; 1+0+1 → S=0,C=1.\n\n**Budowa.** Z dwu półsumatorów i bramki OR, albo bezpośrednio z bramek XOR, AND, OR; można go też zbudować z samych bramek NAND (funkcjonalnie pełnych). Nie da się go zbudować z samych bramek NOT (jednowejściowych, nie realizują funkcji dwuargumentowych). Jest to układ kombinacyjny – bez pamięci i zegara.\n\n**Sumator wielobitowy.** n sumatorów pełnych połączonych kaskadowo: ^^C_{out}^^ pozycji i podaje się na ^^C_{in}^^ pozycji i+1 (sumator szeregowy z propagacją przeniesienia, ripple-carry; czas rośnie liniowo z n). Szybsze wersje: sumator z przewidywaniem przeniesień (carry-lookahead), carry-select. Sumator wielobitowy jest sercem ALU; służy też do odejmowania w U2 (negacja B i ^^C_{in}=1^^) i jako blok składowy mnożarek (ale sam nie mnoży).\n\n**Przykład.** 4-bitowe 0111 + 0101: pozycja 0: 1+1+0 → S=0,C=1; pozycja 1: 1+0+1 → S=0,C=1; pozycja 2: 1+1+1 → S=1,C=1; pozycja 3: 0+0+1 → S=1,C=0. Wynik 1100 = 12.\n\n**Na egzaminie uważaj na:**\n- pełny sumator: 3 wejścia, 2 wyjścia – prawda; „nie uwzględnia przeniesienia” to półsumator,\n- „jest układem sekwencyjnym” – fałsz,\n- „służy do mnożenia” – fałsz (jest składnikiem mnożarki, ale sam dodaje),\n- „jest podstawą sumatorów wielobitowych” – prawda.",
+   "related": [
+    "alu",
+    "uklad-kombinacyjny",
+    "kod-u2"
+   ]
+  },
+  {
+   "id": "przetwarzanie-potokowe",
+   "term": "Przetwarzanie potokowe (pipelining)",
+   "topic": "digital_systems",
+   "short": "Technika, w której wykonanie rozkazu dzieli się na etapy (pobranie, dekodowanie, wykonanie, dostęp do pamięci, zapis), a kolejne rozkazy przechodzą przez etapy z przesunięciem o jeden takt, tak że różne etapy różnych rozkazów wykonują się jednocześnie.",
+   "details": "**Idea.** Jak na taśmie montażowej: rozkaz nie musi czekać, aż poprzedni całkowicie się zakończy. Klasyczny potok RISC ma 5 etapów: IF (pobranie), ID (dekodowanie), EX (wykonanie w ALU), MEM (dostęp do pamięci), WB (zapis do rejestru). W takcie ^^t^^ rozkaz ^^i^^ jest w etapie EX, rozkaz ^^i+1^^ w ID, rozkaz ^^i+2^^ w IF.\n\n**Zasady w potoku skalarnym.** Każdy etap ma jeden egzemplarz sprzętu, więc w danej chwili tylko jeden rozkaz może być w danym etapie: pierwszy etap kolejnego rozkazu zaczyna się dopiero po zakończeniu pierwszego etapu poprzedniego rozkazu (jeden takt później). Natomiast **nie** trzeba czekać na zakończenie całego poprzedniego rozkazu – to właśnie zysk potoku.\n\n**Co potok daje, a czego nie.** Zwiększa **przepustowość** (throughput): w stanie ustalonym kończy się ~1 rozkaz na takt zamiast 1 na k taktów. Skraca też cykl zegara (etapy są prostsze). **Nie skraca** czasu wykonania pojedynczego rozkazu (latencji) – rozkaz nadal przechodzi wszystkie k etapów, a przez rejestry międzyetapowe latencja bywa nawet nieco dłuższa. Idealne przyspieszenie to k razy; w praktyce mniej z powodu hazardów.\n\n**Hazardy.** Strukturalne (konflikt zasobów), danych (rozkaz potrzebuje wyniku poprzedniego – rozwiązanie: forwarding, stall) i sterowania (skoki – potok nie wie, skąd pobrać następny rozkaz; rozwiązanie: predykcja skoków, opróżnienie potoku). Skoki są wykonywalne, tylko kosztowne. Potok nie eliminuje pamięci cache – przeciwnie, szybki etap IF/MEM wymaga cache.\n\n**Przykład.** 5-etapowy potok, 100 rozkazów, 1 takt na etap: bez potoku 500 taktów, z potokiem ^^5 + 99 = 104^^ takty.\n\n**Na egzaminie uważaj na:**\n- „wykonanie instrukcji rozkłada się na ciąg prostszych etapów” – prawda,\n- „pierwszy etap rozkazu może zacząć się dopiero po zakończeniu pierwszego etapu poprzedniego” – prawda w potoku (skalarnym); „rozpoczęcie rozkazu dopiero po zakończeniu poprzedniego” – fałsz,\n- „zwiększa przepustowość” – prawda; „skraca latencję pojedynczej instrukcji” – fałsz,\n- „eliminuje cache”, „uniemożliwia skoki” – fałsz.",
+   "related": [
+    "superskalarnosc",
+    "rozkazy-skoku",
+    "procesor-soft-core"
+   ]
+  },
+  {
+   "id": "superskalarnosc",
+   "term": "Superskalarność (superscalar execution)",
+   "topic": "digital_systems",
+   "short": "Architektura procesora z wieloma równoległymi jednostkami wykonawczymi i potokami, pozwalająca pobierać, dekodować i wykonywać więcej niż jeden rozkaz w tym samym takcie.",
+   "details": "**Idea.** Procesor skalarny z potokiem kończy najwyżej jeden rozkaz na takt (IPC ≤ 1). Procesor superskalarny ma zduplikowane zasoby: kilka jednostek pobierania/dekodowania, kilka ALU, jednostki zmiennoprzecinkowe, jednostki ładowania/zapisu. W jednym takcie pobiera pakiet kilku rozkazów, dekoduje je i – jeśli są niezależne – wysyła równolegle do różnych jednostek. W efekcie **ten sam etap dwóch kolejnych rozkazów może wykonywać się w tej samej chwili** (np. dwa rozkazy w etapie EX równocześnie), co w zwykłym potoku było niemożliwe. IPC może przekraczać 1 (typowo 2–6).\n\n**Mechanizmy pomocnicze.** Wykrywanie zależności danych między rozkazami (scoreboard, algorytm Tomasulo), przemianowanie rejestrów (register renaming – usuwa zależności fałszywe), wykonanie poza kolejnością (out-of-order execution) z buforem uporządkowania (reorder buffer), aby wyniki były zatwierdzane w kolejności programu, predykcja skoków i wykonanie spekulatywne. Zależności decydują o tym, ile rozkazów faktycznie da się wykonać równolegle (równoległość na poziomie instrukcji, ILP).\n\n**Różnica od potoku.** Potok = równoległość *różnych* etapów różnych rozkazów; superskalarność = dodatkowo równoległość *tych samych* etapów wielu rozkazów. Praktycznie każdy procesor superskalarny jest też potokowy. Superskalarność to rozwiązanie sprzętowe (dynamiczne), w odróżnieniu od VLIW, gdzie równoległość ustala kompilator.\n\n**Przykład.** Intel Pentium (1993) – dwa potoki U i V, dwa proste rozkazy całkowitoliczbowe na takt. Współczesne rdzenie x86/ARM: 4–8 dekoderów, ponad 10 portów wykonawczych.\n\n**Na egzaminie uważaj na:**\n- „ten sam etap dwóch kolejnych rozkazów może wykonywać się jednocześnie” – prawda,\n- „możliwe jednoczesne wykonanie więcej niż jednej instrukcji” – prawda,\n- „pierwszy etap rozkazu dopiero po zakończeniu pierwszego etapu poprzedniego” – fałsz dla procesora superskalarnego (prawda dla zwykłego potoku),\n- superskalarność ≠ wielordzeniowość: to równoległość wewnątrz jednego rdzenia, jednego strumienia rozkazów.",
+   "related": [
+    "przetwarzanie-potokowe",
+    "procesor-soft-core"
+   ]
+  },
+  {
+   "id": "karta-graficzna-opengl",
+   "term": "Karta graficzna, OpenGL i FPGA",
+   "topic": "digital_systems",
+   "short": "Karta graficzna to sekwencyjny układ generujący obraz (pamięć obrazu, kontroler sygnałów wideo, ewentualnie akcelerator); OpenGL to otwarta, uniwersalna specyfikacja API do tworzenia grafiki 2D/3D.",
+   "details": "**Karta graficzna – budowa.** Podstawowe elementy: pamięć obrazu (frame buffer, RAM – często dwuportowa: procesor zapisuje piksele, kontroler czyta je do wyświetlenia), kontroler generujący sygnały synchronizacji poziomej i pionowej oraz adresy pikseli (liczniki!), przetwornik lub interfejs cyfrowy (VGA/DVI/HDMI) oraz – w kartach nowoczesnych – procesor graficzny GPU: setki–tysiące prostych jednostek wykonujących równolegle shadery (przekształcenia wierzchołków, rasteryzację, teksturowanie). Ponieważ karta zlicza pozycje pikseli i pamięta obraz, jest układem **sekwencyjnym** – nie może być układem kombinacyjnym.\n\n**Karta graficzna w FPGA.** Prosty kontroler VGA (liczniki pozycji, generacja HSYNC/VSYNC, wybór koloru) mieści się w dwudziestu kilku–kilkudziesięciu liniach VHDL i jest klasycznym ćwiczeniem studenckim. Nic nie stoi na przeszkodzie, by w większym FPGA zrealizować akcelerator 3D ze sprzętowym wsparciem funkcji OpenGL (istnieją takie projekty, np. otwarte rdzenie GPU) – ograniczeniem jest tylko wielkość struktury. FPGA są też używane do akceleracji przetwarzania obrazu i obliczeń równoległych (wiele bloków pracuje równolegle), nie tylko w telekomunikacji. GPU i FPGA to różne układy: GPU ma stałą architekturę wielu rdzeni SIMD, FPGA to konfigurowalna logika.\n\n**OpenGL.** Open Graphics Library – otwarta, niezależna od producenta i platformy specyfikacja API (zbioru funkcji) do renderowania grafiki 2D i 3D, opracowana przez SGI (1992), obecnie zarządzana przez Khronos Group. Definiuje potok renderowania (wierzchołki → prymitywy → rasteryzacja → fragmenty → bufor ramki). Implementują ją sterowniki kart; sprzętowe wspomaganie oznacza, że operacje OpenGL wykonuje GPU zamiast CPU. Konkurenci: Direct3D (zamknięty, Microsoft), Vulkan (następca OpenGL).\n\n**Na egzaminie uważaj na:**\n- „karta graficzna może być układem kombinacyjnym” – fałsz,\n- „prostą wersję można zapisać w dwudziestu kilku liniach VHDL” – prawda,\n- „przy użyciu FPGA nie można zbudować karty ze sprzętowym OpenGL” – fałsz,\n- „OpenGL to specyfikacja otwartego, uniwersalnego API do tworzenia grafiki” – prawda,\n- „karty graficzne nie używają RAM”, „GPU i FPGA to te same układy”, „FPGA tylko w telekomunikacji” – fałsz.",
+   "related": [
+    "fpga",
+    "ram-dwuportowa",
+    "uklad-sekwencyjny"
+   ]
+  },
+  {
+   "id": "transmisja-asynchroniczna",
+   "term": "Transmisja asynchroniczna i synchroniczna",
+   "topic": "transmission",
+   "short": "Transmisja szeregowa, w której nadajnik i odbiornik nie dzielą wspólnej linii zegara; każdą porcję danych (znak) obramowuje bit startu i bit(y) stopu, a między znakami mogą występować przerwy.",
+   "details": "**Zasada.** W transmisji **asynchronicznej** (np. UART, RS-232) nie ma osobnej linii sygnału zegarowego. Nadajnik i odbiornik mają własne, niezależne generatory ustawione na tę samą nominalną prędkość (baud rate, np. 9600 bit/s). Linia w stanie spoczynku ma poziom 1 (mark). Ramka znaku:\n1. **bit startu** (0) – zbocze opadające budzi odbiornik i synchronizuje jego zegar na czas jednej ramki,\n2. 5–9 bitów danych (najmłodszy bit pierwszy),\n3. opcjonalny bit parzystości,\n4. **bit(y) stopu** (1) – 1, 1.5 lub 2 bity, gwarantują powrót do stanu spoczynku i zaznaczają koniec porcji informacji.\n\nOdbiornik próbkuje linię w środku każdego bitu (zwykle zegar 16× szybszy). Ponieważ synchronizacja odnawia się przy każdym bicie startu, niewielka różnica częstotliwości zegarów (do ~2–3%) nie powoduje błędów. Między ramkami linia może pozostawać w spoczynku dowolnie długo – w kanale przeplatają się wycinki czasu zawierające informację (ramki) i niezawierające jej (przerwy). Koszt: nadmiar ok. 20–30% (bity start/stop na 8 bitów danych).\n\n**Transmisja synchroniczna.** Nadajnik i odbiornik pracują w takt wspólnego zegara – przesyłanego dodatkową linią (SPI, I2C) lub odtwarzanego z samego sygnału danych (kodowanie Manchester, NRZI, w Ethernet, USB). Dane płyną ciągłym strumieniem w blokach poprzedzonych znakami/preambułą synchronizującą; brak bitów startu/stopu na każdym znaku daje większą efektywność. Zdanie „układy synchronizowane wspólną dodatkową linią z sygnałem synchronicznym” opisuje transmisję **synchroniczną**, nie asynchroniczną.\n\n**Przykład.** 8N1 przy 9600 bit/s: ramka 10 bitów → 960 znaków/s; czas bitu ^^\\approx 104\\,\\mu s^^.\n\n**Na egzaminie uważaj na:**\n- asynchroniczna: bity startu i stopu obramowują każdą porcję danych – prawda,\n- asynchroniczna: kolejno po sobie wycinki czasu z informacją i bez informacji – prawda,\n- „wspólna dodatkowa linia zegara” – to transmisja synchroniczna, fałsz dla asynchronicznej,\n- asynchroniczna ≠ brak jakiejkolwiek synchronizacji: zegary muszą mieć zbliżoną częstotliwość, a synchronizacja następuje na bicie startu.",
+   "related": [
+    "kod-hamminga",
+    "ascii-utf8"
+   ]
+  },
+  {
+   "id": "ulamki-binarne",
+   "term": "Ułamki w systemie binarnym (konwersja części ułamkowej)",
+   "topic": "number_representation",
+   "short": "Zapis liczby z zakresu [0,1) jako sumy ujemnych potęg dwójki; część ułamkową konwertuje się metodą kolejnych mnożeń przez 2, a ułamki o mianowniku niebędącym potęgą 2 mają rozwinięcie okresowe.",
+   "details": "**Znaczenie pozycji.** Cyfry po przecinku binarnym mają wagi ^^2^{-1}=0{,}5^^, ^^2^{-2}=0{,}25^^, ^^2^{-3}=0{,}125^^, ^^2^{-4}=0{,}0625^^, ... Liczba ^^0{,}b_1 b_2 b_3\\ldots_2 = \\sum b_i 2^{-i}^^.\n\n**Konwersja dziesiętny → binarny (metoda mnożenia).** Ułamek mnożymy przez 2; część całkowita wyniku (0 lub 1) jest kolejną cyfrą, część ułamkowa idzie do następnego kroku. Koniec, gdy część ułamkowa = 0 lub gdy powtórzy się wcześniejszy stan (wtedy rozwinięcie jest okresowe).\n\nPrzykład ^^5/16 = 0{,}3125^^: 0,3125·2=0,625 → **0**; 0,625·2=1,25 → **1**; 0,25·2=0,5 → **0**; 0,5·2=1,0 → **1**. Wynik ^^0{,}0101_2^^. Sprawdzenie: ^^0{,}25+0{,}0625 = 0{,}3125^^. Ogólnie ułamek ^^k/2^n^^ ma dokładnie n cyfr binarnych – to k zapisane binarnie na n pozycjach.\n\nPrzykład ^^1/10 = 0{,}1^^: 0,1·2=0,2 → 0; 0,2·2=0,4 → 0; 0,4·2=0,8 → 0; 0,8·2=1,6 → 1; 0,6·2=1,2 → 1; 0,2 – stan już był, więc okres. Wynik ^^0{,}0(0011)_2 = 0{,}000110011\\ldots_2^^. Podobnie ^^1/3 = 0{,}(01)_2^^, ^^1/5 = 0{,}(0011)_2^^, ^^0{,}2 = 0{,}(0011)_2^^, ^^1/10 = 1/5 \\cdot 1/2^^ – przesunięcie o jedną pozycję w prawo.\n\n**Kiedy rozwinięcie jest skończone.** Wtedy i tylko wtedy, gdy mianownik ułamka nieskracalnego jest potęgą dwójki. Dlatego 0,1, 0,2, 0,3 nie mają dokładnej reprezentacji binarnej – stąd błędy typu ^^0{,}1+0{,}2 \\neq 0{,}3^^ w zmiennoprzecinkowych obliczeniach.\n\n**Konwersja binarny → dziesiętny.** Sumujemy wagi jedynek: ^^0{,}1011_2 = 0{,}5+0{,}125+0{,}0625 = 0{,}6875 = 11/16^^; ^^0{,}1010_2 = 0{,}625 = 5/8^^.\n\n**Na egzaminie uważaj na:**\n- odwrócenie kolejności cyfr (0,0101 to 5/16; 0,1010 to 10/16 = 5/8),\n- ułamki dziesiętne skończone (0,1) zwykle są binarnie okresowe,\n- okres w nawiasie: ^^0{,}0(0011)^^ oznacza 0,0 a potem powtarzane 0011 – nie mylić z ^^0{,}(0011)=1/5^^ ani z ^^0{,}(1010)=2/3^^,\n- przy konwersji metodą mnożenia cyfry odczytuje się od góry (pierwsza otrzymana = pierwsza po przecinku).",
+   "related": [
+    "zmiennopozycyjne-ieee754",
+    "kod-u2"
+   ]
+  },
+  {
+   "id": "jezyk-formalny-skladnia-semantyka",
+   "term": "Język formalny, syntaktyka i semantyka języka programowania",
+   "topic": "number_representation",
+   "short": "Język formalny to zbiór ciągów symboli (słów) nad alfabetem zdefiniowany ścisłymi regułami (gramatyką); syntaktyka opisuje budowę poprawnych instrukcji, semantyka – ich znaczenie.",
+   "details": "**Język formalny.** Alfabet ^^\\Sigma^^ to skończony zbiór symboli; słowo to skończony ciąg symboli; język formalny ^^L \\subseteq \\Sigma^*^^ to dowolny zbiór słów. Język definiuje się gramatyką (zbiór reguł produkcji, np. w notacji BNF/EBNF), wyrażeniem regularnym lub automatem. Hierarchia Chomsky'ego dzieli języki na regularne, bezkontekstowe, kontekstowe i rekurencyjnie przeliczalne. Języki programowania są językami formalnymi (ich składnia jest zwykle bezkontekstowa). W kursie „Wstęp do informatyki” język formalny pojawia się jako jeden ze **sposobów zapisu algorytmu**: obok opisu słownego, schematu blokowego (bloki operacyjne) i języka programowania wymienia się zapis w języku formalnym w postaci pseudokodu – tzn. zapis o ściśle określonej składni, ale nieprzeznaczony do bezpośredniego wykonania.\n\n**Syntaktyka (składnia).** Zbiór reguł określających, jakie ciągi symboli są poprawnie zbudowanymi programami: budowę identyfikatorów, wyrażeń, instrukcji, deklaracji. Opisuje się ją gramatyką (EBNF) i diagramami składniowymi. Sprawdza ją analizator leksykalny i składniowy (parser) kompilatora. Syntaktyka mówi **jak zbudować** instrukcję (`if warunek then instrukcja`), ale nic o tym, co ona robi.\n\n**Semantyka.** Znaczenie poprawnych składniowo konstrukcji: co instrukcja robi, jak zmienia stan programu, jaką wartość ma wyrażenie. Rodzaje: operacyjna (opis wykonania na abstrakcyjnej maszynie), denotacyjna (funkcje matematyczne), aksjomatyczna (reguły Hoare'a). Program może być poprawny składniowo, a semantycznie bezsensowny (`x = x / 0`). Semantyka statyczna (typy, deklaracje) sprawdzana jest w kompilacji, dynamiczna – w czasie wykonania.\n\n**Rozróżnienie egzaminacyjne.** Syntaktyka = **budowa** instrukcji. Semantyka = **znaczenie** instrukcji. Ani jedna, ani druga nie „opisuje formalnie poprawnych programów” jako całości ani „działania poprawnego programu” – te sformułowania w banku są dystraktorami.\n\n**Przykład.** `a := b + 1;` Składnia: identyfikator, `:=`, wyrażenie, `;`. Semantyka: oblicz wartość b, dodaj 1, przypisz do a.\n\n**Na egzaminie uważaj na:**\n- „syntaktyka opisuje budowę instrukcji” – prawda; „znaczenie instrukcji” – to semantyka,\n- „semantyka opisuje znaczenie instrukcji” – prawda,\n- „język formalny to zapis algorytmu oparty na blokach operacyjnych” – fałsz (to schemat blokowy); „oparty na pseudokodzie” – prawda w ujęciu kursu,\n- błąd składniowy wykrywa kompilator; błąd semantyczny (logiczny) często ujawnia się dopiero w działaniu.",
+   "related": [
+    "ebnf",
+    "ulamki-binarne"
+   ]
+  },
+  {
+   "id": "ebnf",
+   "term": "Notacja BNF/EBNF (Extended Backus–Naur Form)",
+   "topic": "number_representation",
+   "short": "Metajęzyk do formalnego opisu składni języków: symbole nieterminalne w nawiasach <>, symbole terminalne w cudzysłowach, produkcje ::= lub =, z metasymbolami dla opcji [ ], powtórzeń { } i alternatywy |.",
+   "details": "**BNF.** Wprowadzona przez Backusa i Naura do opisu Algolu 60. Gramatyka to zbiór produkcji postaci `<nieterminal> ::= ciąg symboli`. **Symbole nieterminalne** (pojęcia składniowe, np. `<instrukcja>`, `<wyrażenie>`, `<cyfra>`) ujmuje się w nawiasy kątowe `<>` – oznaczają one coś, co trzeba dalej rozwinąć według innej produkcji. **Symbole terminalne** to konkretne znaki/słowa języka (np. `if`, `+`, `0`), które pojawiają się w programie dosłownie; w EBNF zapisuje się je w cudzysłowach `\"if\"` lub apostrofach. Alternatywę oznacza `|`.\n\n**EBNF – rozszerzenia.**\n- `[ X ]` – opcjonalne wystąpienie X (zero lub jeden raz),\n- `{ X }` – wielokrotne (zero lub więcej) wystąpienie X,\n- `( X | Y )` – grupowanie,\n- `X - Y` – wyjątek, `n * X` – n powtórzeń (ISO 14977),\n- `=` zamiast `::=`, `;` na końcu produkcji, `,` jako konkatenacja (ISO).\n\n**Przykład.**\n```\n<liczba>  ::= [\"-\"] <cyfra> {<cyfra>}\n<cyfra>   ::= \"0\" | \"1\" | ... | \"9\"\n<if>      ::= \"if\" <warunek> \"then\" <instr> [\"else\" <instr>]\n```\n`<liczba>` i `<cyfra>` to nieterminale; `\"-\"`, `\"0\"`, `\"if\"` to terminale; `[\"-\"]` – opcjonalny minus; `{<cyfra>}` – dowolnie wiele cyfr.\n\n**Zastosowanie.** Dokumentacja języków (Pascal, Java Language Specification, XML, JSON), generatory parserów (ANTLR, yacc – w swojej odmianie), diagramy składniowe (równoważna forma graficzna).\n\n**Na egzaminie uważaj na:**\n- `< >` – symbol **nieterminalny** (nie terminalny, nie opcja),\n- `[ ]` – opcjonalność; `{ }` – powtórzenie zero lub więcej razy; `|` – alternatywa,\n- terminale są w cudzysłowach lub bez nawiasów,\n- BNF/EBNF opisuje **składnię** (syntaktykę), nie semantykę,\n- gramatyki EBNF opisują języki bezkontekstowe – każda konstrukcja EBNF da się przepisać na czystą BNF przez dodatkowe nieterminale i rekurencję.",
+   "related": [
+    "jezyk-formalny-skladnia-semantyka"
+   ]
+  },
+  {
+   "id": "ascii-utf8",
+   "term": "Kody znaków ASCII i UTF-8",
+   "topic": "number_representation",
+   "short": "ASCII to 7-bitowy kod 128 znaków (0–127); UTF-8 to kodowanie Unicode o zmiennej długości (1–4 bajty, w pierwotnej specyfikacji do 6), zgodne wstecz z ASCII.",
+   "details": "**ASCII.** American Standard Code for Information Interchange – kod **7-bitowy**, definiuje ^^2^7 = 128^^ znaków o kodach 0–127: 0–31 i 127 to znaki sterujące (NUL, LF=10, CR=13, ESC=27, DEL=127), 32 to spacja, 48–57 cyfry '0'–'9', 65–90 wielkie litery, 97–122 małe litery (mała = wielka + 32). Zakres 128–255 to rozszerzenia 8-bitowe (ISO 8859-2, Windows-1250 dla polskich znaków) – nie są częścią ASCII. „Zakres 0–128” jest błędny (129 wartości; 128 nie należy do ASCII).\n\n**Unicode.** Zbiór ponad 1,1 mln punktów kodowych (U+0000–U+10FFFF) dla wszystkich pism. Kodowania: UTF-8, UTF-16, UTF-32.\n\n**UTF-8 – jak działa.** Kod o **zmiennej długości**:\n- U+0000–U+007F: 1 bajt `0xxxxxxx` – identyczny z ASCII, więc każdy plik ASCII jest poprawnym UTF-8,\n- U+0080–U+07FF: 2 bajty `110xxxxx 10xxxxxx` (np. polskie litery: „ą” = C4 85),\n- U+0800–U+FFFF: 3 bajty `1110xxxx 10xxxxxx 10xxxxxx`,\n- U+10000–U+10FFFF: 4 bajty `11110xxx 10xxxxxx 10xxxxxx 10xxxxxx`.\nPierwotna specyfikacja (RFC 2279) dopuszczała 5- i 6-bajtowe sekwencje (do ^^2^{31}^^ punktów); RFC 3629 ograniczył ją do 4 bajtów. Stąd zdanie „nie więcej niż 6 bajtów” jest prawdziwe jako górne ograniczenie.\n\n**Samosynchronizacja.** Bajt początkowy zaczyna się od `0` lub `11...`, bajty kontynuacji od `10`. Dlatego bajt z zakresu ASCII (0xxxxxxx) **nigdy nie jest częścią dłuższego kodu** – można szukać znaku '/' lub '\\0' w tekście UTF-8 bajt po bajcie bez ryzyka trafienia w środek innego znaku. Liczba jedynek na początku pierwszego bajtu podaje długość sekwencji.\n\n**Na egzaminie uważaj na:**\n- ASCII: 0–127 – prawda; 0–128, 0–255, 32–255 – fałsz,\n- UTF-8: zmienna długość, koduje dowolny znak Unicode, znaki ASCII na 1 bajcie – prawda,\n- „ASCII na 8 bajtów” – fałsz; „kod ASCII może być częścią dłuższego kodu” – fałsz,\n- UTF-8 to nie to samo co Unicode (Unicode = zbiór znaków, UTF-8 = sposób zapisu); UTF-16 używa 2 lub 4 bajtów, UTF-32 zawsze 4.",
+   "related": [
+    "kod-hamminga",
+    "kodowanie-huffmana"
+   ]
+  },
+  {
+   "id": "kod-u2",
+   "term": "Kod uzupełnień do dwóch (U2, two's complement)",
+   "topic": "number_representation",
+   "short": "Reprezentacja liczb całkowitych ze znakiem, w której najstarszy bit ma wagę ujemną ^^-2^{n-1}^^; ma jedną reprezentację zera i asymetryczny zakres od ^^-2^{n-1}^^ do ^^2^{n-1}-1^^.",
+   "details": "**Definicja.** Wartość słowa n-bitowego ^^b_{n-1}\\ldots b_0^^ w U2: ^^x = -b_{n-1}2^{n-1} + \\sum_{i=0}^{n-2} b_i 2^i^^. Najstarszy bit jest bitem znaku (1 = liczba ujemna), ale ma jednocześnie wagę liczbową.\n\n**Negacja.** ^^-x^^ uzyskujemy negując wszystkie bity i dodając 1 (lub: od prawej przepisujemy do pierwszej jedynki włącznie, resztę negujemy). Przykład 8-bitowy: ^^5 = 00000101^^, ^^-5 = 11111010 + 1 = 11111011^^.\n\n**Zakres.** Dla n bitów: ^^[-2^{n-1}, 2^{n-1}-1]^^, np. 8 bitów: −128…127, 32 bity: −2 147 483 648…2 147 483 647. Zakres jest **asymetryczny**: liczb ujemnych jest o jedną więcej, bo zero „zabiera” jedno miejsce po stronie nieujemnej. Zero ma **jedną** reprezentację (000…0); wzór 111…1 to −1. To przewaga nad kodem znak-moduł (ZM) i U1, które mają dwa zera (+0 i −0) i zakres symetryczny ^^\\pm(2^{n-1}-1)^^.\n\n**Arytmetyka.** Dodawanie i odejmowanie wykonuje się jak dla liczb bez znaku, ignorując przeniesienie poza najstarszy bit – ten sam sumator obsługuje liczby ze znakiem i bez. Nadmiar (overflow) występuje, gdy dodajemy dwie liczby tego samego znaku i wynik ma znak przeciwny. Rozszerzenie znaku: powielamy bit znaku na nowe starsze pozycje.\n\n**Pułapka abs(x).** Ponieważ ^^|-2^{n-1}| = 2^{n-1}^^ nie mieści się w zakresie, negacja najmniejszej liczby daje… ją samą: ^^-(-128) = -128^^ w 8 bitach (10000000 → 01111111 + 1 = 10000000). Funkcja `abs` jest więc poprawna dla wszystkich liczb **oprócz najmniejszej** w reprezentacji (INT_MIN). Analogicznie `-INT_MIN` przepełnia.\n\n**Na egzaminie uważaj na:**\n- U2: pojedyncza reprezentacja zera – prawda; podwójna – fałsz (to ZM/U1),\n- U2: zakres asymetryczny – prawda; symetryczny – fałsz,\n- abs(x) poprawna „dla wszystkich poza najmniejszą liczbą” – prawda; „dla wszystkich integer” – fałsz,\n- najstarszy bit ma wagę ^^-2^{n-1}^^, nie jest tylko flagą znaku,\n- 8 bitów U2: 127 + 1 = −128 (nadmiar).",
+   "related": [
+    "zmiennopozycyjne-ieee754",
+    "alu",
+    "wskaznik-adresowanie"
+   ]
+  },
+  {
+   "id": "zmiennopozycyjne-ieee754",
+   "term": "Liczby zmiennopozycyjne i standard IEEE 754",
+   "topic": "number_representation",
+   "short": "Reprezentacja liczby jako ^^x = (-1)^s \\cdot m \\cdot 2^{e}^^ ze znakiem, mantysą i cechą (wykładnikiem); IEEE 754 definiuje formaty binary32 (1+8+23 bity) i binary64 (1+11+52 bity) z ukrytą jedynką i przesuniętym wykładnikiem.",
+   "details": "**Model ogólny.** Słowo dzieli się na pola: znak ^^s^^, cechę (wykładnik) ^^e^^ i mantysę ^^m^^. Wartość: ^^x = (-1)^s \\cdot m \\cdot 2^{e}^^. W formatach „szkolnych” cecha i mantysa mogą być zapisane w U2, a mantysa znormalizowana do ^^[1/2, 1)^^ – przecinek na lewo od mantysy, pierwszy bit ułamka równy 1. Największa liczba to największa mantysa razy ^^2^{\\text{max cecha}}^^. Przykład: mantysa 22 bity z bitem znaku (21 bitów ułamka) → ^^m_{max} = 1 - 2^{-21}^^; cecha 10 bitów U2 → ^^e_{max} = 2^9 - 1 = 511^^; ^^x_{max} = (1-2^{-21}) \\cdot 2^{511}^^. Ogólnie: k bitów ułamka daje ^^1-2^{-k}^^, p bitów cechy w U2 daje ^^2^{p-1}-1^^.\n\n**Ile bitów potrzeba.** Liczba miejsc znaczących wyznacza długość mantysy: d cyfr dziesiętnych wymaga ^^\\lceil d \\cdot \\log_2 10 \\rceil \\approx 3{,}32 d^^ bitów (2 cyfry → 7 bitów, plus bit znaku). Zakres wyznacza cechę: ^^10^6 \\approx 2^{20}^^, więc cecha musi pomieścić około ±20 (6 bitów w U2) lub 0…20 (5 bitów), zależnie od konwencji. Sumując bity znaku, mantysy i cechy otrzymuje się kilkanaście bitów – w banku zadań dla zakresu ^^\\pm 10^6^^ i 2 cyfr znaczących przyjęto 12 bitów.\n\n**IEEE 754.**\n| format | znak | wykładnik | mantysa (jawna) | precyzja | cyfry dziesiętne | bias |\n|---|---|---|---|---|---|---|\n| binary32 (float) | 1 | 8 | 23 | 24 bity z ukrytą 1 | ~7 | 127 |\n| binary64 (double) | 1 | 11 | 52 | 53 bity z ukrytą 1 | ~15–16 | 1023 |\n\nWykładnik zapisany z przesunięciem (bias): ^^E = e + bias^^, bez bitu znaku w wykładniku. Mantysa znormalizowana ^^1{,}f^^ – wiodąca jedynka nie jest zapisywana (ukryty bit), więc double ma 53 bity precyzji („53 bity łącznie ze znakiem” to konwencja licząca 52 jawne + 1). Wartości specjalne: E=0 – zero i liczby zdenormalizowane; E=max – ^^\\pm\\infty^^ (f=0) i NaN (f≠0). Zero ma dwie reprezentacje (+0, −0). Epsilon maszynowy double ^^2^{-52} \\approx 2{,}2\\cdot10^{-16}^^; float ^^2^{-23} \\approx 1{,}2\\cdot10^{-7}^^.\n\n**Na egzaminie uważaj na:**\n- double: wykładnik **11** bitów, mantysa 52 jawne (53 z ukrytą jedynką), 15–16 cyfr znaczących; „7–8 cyfr” dotyczy float,\n- „mantysa 52 bity łącznie z bitem znaku” – fałsz w konwencji banku (bit znaku jest osobny, a 52+1 = 53),\n- największa liczba w formacie U2: ^^(1-2^{-k})\\cdot 2^{2^{p-1}-1}^^, nie ^^10^{p}^^,\n- 0,1 nie jest reprezentowalne dokładnie; porównania `==` liczb zmiennoprzecinkowych są zawodne.",
+   "related": [
+    "kod-u2",
+    "ulamki-binarne"
+   ]
+  },
+  {
+   "id": "stos-systemowy",
+   "term": "Stos systemowy i sterta (call stack, heap)",
+   "topic": "number_representation",
+   "short": "Stos systemowy to obszar pamięci LIFO zarządzany automatycznie przez procesor i kompilator, przechowujący adresy powrotu, parametry i zmienne lokalne procedur; zmienne dynamiczne (new, malloc) leżą na stercie.",
+   "details": "**Jak działa stos.** Procesor ma rejestr wskaźnika stosu (SP). Rozkaz `PUSH` zmniejsza SP i zapisuje słowo; `POP` odczytuje i zwiększa SP (stos zwykle rośnie w dół pamięci). Struktura LIFO – ostatnio odłożony element jest zdejmowany pierwszy.\n\n**Wywołanie procedury.** `CALL f` odkłada na stos **adres powrotu** (bieżącą wartość licznika rozkazów) i skacze do f. Prolog f tworzy **ramkę stosu** (stack frame): zapisuje stary wskaźnik ramki, rezerwuje miejsce na **zmienne lokalne** i rejestry do odtworzenia; **parametry** przekazywane są na stosie lub w rejestrach. `RET` pobiera adres powrotu ze stosu do PC. Dzięki temu rekurencja działa – każde wywołanie ma własną ramkę z własnymi kopiami zmiennych lokalnych. Po powrocie ramka znika – zmienna lokalna przestaje istnieć (stąd błąd zwracania wskaźnika do zmiennej lokalnej).\n\n**Co NIE leży na stosie.** Zmienne globalne i statyczne – w segmencie danych (istnieją przez cały czas działania). Zmienne **alokowane dynamicznie** (`new(p)`, `new`, `malloc`) – na **stercie** (heap), zarządzanej przez alokator; na stosie leży jedynie wskaźnik do nich. Zatem stos nie przechowuje „wszystkich zmiennych w programie”.\n\n**Stos a przerwania.** Przy przerwaniu procesor odkłada na stos adres powrotu i rejestr stanu; procedura obsługi kończy się `IRET`.\n\n**Rozmiar i błędy.** Stos ma ograniczony rozmiar (typowo 1–8 MB); zbyt głęboka rekurencja lub duże tablice lokalne dają przepełnienie stosu (stack overflow). Sterta jest ograniczona pamięcią dostępną i wymaga jawnego zwalniania (lub GC).\n\n**Przykład (Pascal/C).**\n```\nprocedure f(n: integer); var a: array[1..100] of integer;   { a – na stosie }\nvar p: ^integer; begin new(p); ... end;                       { p^ – na stercie, p – na stosie }\n```\n\n**Na egzaminie uważaj na:**\n- stos: zmienne lokalne procedur i funkcji, adresy powrotu, parametry – prawda,\n- „wszystkie zmienne programu”, „zmienne alokowane dynamicznie / przez new(p)” – fałsz (sterta),\n- stos rośnie i maleje automatycznie przy wywołaniach; sterta – jawnie,\n- rekurencja jest możliwa właśnie dzięki stosowi z ramkami.",
+   "related": [
+    "licznik-rozkazow",
+    "wskaznik-adresowanie"
+   ]
+  },
+  {
+   "id": "wskaznik-adresowanie",
+   "term": "Wskaźnik a rozmiar przestrzeni adresowej",
+   "topic": "number_representation",
+   "short": "Wskaźnik przechowuje adres komórki pamięci; wskaźnik o n bitach rozróżnia ^^2^n^^ adresów, więc przy adresowaniu bajtowym pozwala zaadresować ^^2^n^^ bajtów (4 bajty = 32 bity = 4 GiB).",
+   "details": "**Zasada.** Jeżeli adres ma n bitów, istnieje ^^2^n^^ różnych adresów. Przy adresowaniu bajtowym (każdy adres = jeden bajt, tak jest w praktycznie wszystkich współczesnych architekturach) przestrzeń adresowa ma ^^2^n^^ bajtów.\n\n**Tabela.**\n- 8 bitów → ^^2^8 = 256^^ B,\n- 10 bitów → 1 KiB (1024 B),\n- 16 bitów (2 bajty) → ^^2^{16} = 65\\,536^^ B = 64 KiB,\n- 20 bitów → 1 MiB (8086 z segmentacją),\n- 24 bity → 16 MiB,\n- 32 bity (4 bajty) → ^^2^{32} = 4\\,294\\,967\\,296^^ B = 4 GiB,\n- 48 bitów → 256 TiB (praktyczny limit x86-64),\n- 64 bity (8 bajtów) → ^^2^{64}^^ B = 16 EiB.\n\n**Konwersje.** ^^2^{10}^^ = kilo (Ki), ^^2^{20}^^ = mega (Mi), ^^2^{30}^^ = giga (Gi). Zatem ^^2^{32} = 2^2 \\cdot 2^{30} = 4^^ GiB. Chcąc zaadresować 6 GB trzeba ^^\\lceil \\log_2(6\\cdot 2^{30}) \\rceil = 33^^ bitów – 4-bajtowy wskaźnik nie wystarczy.\n\n**Konsekwencje.** Systemy 32-bitowe widzą co najwyżej 4 GiB pamięci (w praktyce mniej, bo część przestrzeni zajmują urządzenia; obejście: PAE). W C `sizeof(void*)` wynosi 4 na platformie 32-bitowej, 8 na 64-bitowej. Rozmiar wskaźnika nie zależy od typu, na który wskazuje (`int*`, `char*`, `double*` mają tę samą wielkość). Wskaźnik jest liczbą bez znaku; arytmetyka wskaźników (`p+1`) przesuwa o `sizeof(*p)` bajtów, nie o 1 bajt.\n\n**Pamięć RAM.** Liczba linii adresowych pamięci RAM działa tak samo: n linii → ^^2^n^^ komórek. Pamięć 64 KiB × 8 bitów potrzebuje 16 linii adresowych i 8 linii danych.\n\n**Na egzaminie uważaj na:**\n- 4-bajtowy wskaźnik → 4 GB (nie 64 KB, 2 MB, 6 GB ani 8 KB); 2-bajtowy → 64 KB,\n- potęga dwójki, nie mnożenie: 4 bajty to nie 4·256, lecz ^^256^4^^,\n- wielkość wskaźnika ≠ wielkość wskazywanego obiektu,\n- ^^2^{32}^^ bajtów to 4 GiB ≈ 4,29 GB (w jednostkach dziesiętnych).",
+   "related": [
+    "pamiec-ram",
+    "stos-systemowy",
+    "kod-u2"
+   ]
+  },
+  {
+   "id": "entropia-shannona",
+   "term": "Entropia Shannona (information entropy)",
+   "topic": "number_representation",
+   "short": "Miara średniej ilości informacji (niepewności) przypadającej na jeden symbol źródła: ^^H = -\\sum_i p_i \\log_2 p_i^^ bitów na symbol; nieujemna, maksymalna dla rozkładu jednostajnego.",
+   "details": "**Definicja.** Dla źródła emitującego symbole ^^x_1,\\ldots,x_n^^ z prawdopodobieństwami ^^p_i^^:\n^^H(X) = -\\sum_{i=1}^{n} p_i \\log_2 p_i = \\sum_i p_i \\cdot I(x_i)^^,\ngdzie ^^I(x_i) = -\\log_2 p_i^^ to ilość informacji (zaskoczenie) niesiona przez pojedynczy symbol: im mniej prawdopodobny symbol, tym więcej informacji. Entropia to **wartość oczekiwana** (średnia) ilości informacji na symbol. Przy logarytmie o podstawie 2 jednostką jest **bit** (shannon); przy podstawie e – nat, przy 10 – hartley. Bajt nie jest jednostką entropii.\n\n**Własności.**\n1. ^^H \\ge 0^^ – każdy składnik ^^-p_i \\log_2 p_i \\ge 0^^, bo ^^0 < p_i \\le 1^^. Entropia nigdy nie jest ujemna; równa 0 tylko gdy jeden symbol ma ^^p=1^^ (źródło deterministyczne – brak niepewności).\n2. ^^H \\le \\log_2 n^^ – **maksimum dla rozkładu jednostajnego** ^^p_i = 1/n^^ (wszystkie symbole równie prawdopodobne, największa niepewność). Im bardziej zróżnicowane prawdopodobieństwa, tym mniejsza entropia – nie odwrotnie.\n3. Entropia **zależy wyłącznie od rozkładu prawdopodobieństw**, nie od znaczenia ani „wartości” symboli.\n4. Dla źródła bez pamięci entropia ciągu n symboli to ^^nH^^.\n\n**Związek z kodowaniem.** Twierdzenie Shannona o kodowaniu źródła: żaden bezstratny kod nie może mieć średniej długości słowa ^^L < H^^; kod Huffmana osiąga ^^H \\le L < H + 1^^. Redundancja = ^^L - H^^. Entropia mówi więc, do jakiej granicy da się skompresować dane.\n\n**Przykłady.** Moneta uczciwa: ^^H = 1^^ bit. Kostka: ^^\\log_2 6 \\approx 2{,}58^^ bitów. Źródło o p = (0,5; 0,25; 0,25): ^^H = 0{,}5 + 0{,}5 + 0{,}5 = 1{,}5^^ bita. Źródło o p = (0,9; 0,1): ^^H \\approx 0{,}469^^ bita – mniej niż 1, bo jeden wynik prawie pewny.\n\n**Na egzaminie uważaj na:**\n- „średnia ilość informacji na symbol” – prawda,\n- „zawsze dodatnia lub zero” – prawda (nieujemna),\n- „maksymalna dla rozkładu jednostajnego” – prawda; „maksymalna, gdy symbole mają różne prawdopodobieństwa” – fałsz,\n- „nie zależy od prawdopodobieństw” – fałsz; „jednostką jest bajt” – fałsz (bit),\n- entropia rośnie z liczbą równie prawdopodobnych symboli: ^^\\log_2 n^^.",
+   "related": [
+    "kodowanie-huffmana",
+    "kod-hamminga"
+   ]
+  },
+  {
+   "id": "kod-hamminga",
+   "term": "Kod Hamminga i odległość Hamminga",
+   "topic": "number_representation",
+   "short": "Liniowy kod korekcyjny dodający do k bitów danych r bitów parzystości tak, że ^^2^r \\ge k + r + 1^^; ma odległość Hamminga 3, więc koryguje 1 błąd (SEC); z dodatkowym bitem parzystości wykrywa też 2 błędy (SEC-DED).",
+   "details": "**Odległość Hamminga.** Liczba pozycji, na których różnią się dwa słowa tej samej długości (np. 1011 i 1001 → 1). Minimalna odległość kodu ^^d_{min}^^ decyduje o możliwościach: kod **wykrywa** do ^^d_{min}-1^^ błędów i **koryguje** do ^^\\lfloor (d_{min}-1)/2 \\rfloor^^ błędów. Aby korygować pojedynczy błąd, potrzeba ^^d_{min} \\ge 3^^; aby korygować 2 błędy – ^^d_{min} \\ge 5^^.\n\n**Konstrukcja kodu Hamminga.** Pozycje słowa numerujemy od 1. Bity parzystości umieszczamy na pozycjach będących potęgami 2 (1, 2, 4, 8, ...), dane na pozostałych. Bit parzystości ^^p_j^^ pilnuje parzystości wszystkich pozycji, których numer ma ustawiony bit j w zapisie binarnym (p1: 1,3,5,7,...; p2: 2,3,6,7,...; p4: 4,5,6,7,...). Liczba bitów kontrolnych r spełnia ^^2^r \\ge k + r + 1^^: Hamming(7,4) – 4 bity danych + 3 parzystości; Hamming(12,8); Hamming(72,64) w pamięci ECC.\n\n**Dekodowanie.** Odbiorca liczy syndrom: dla każdego ^^p_j^^ sprawdza parzystość swojej grupy; bity syndromu ustawione tam, gdzie parzystość się nie zgadza. Syndrom zapisany binarnie **wskazuje numer pozycji błędnego bitu** (0 = brak błędu) – wystarczy zanegować ten bit. Przykład (7,4): dane 1011 → słowo 0110011; przekłamanie pozycji 5 daje syndrom 101 = 5.\n\n**SEC-DED.** Klasyczny Hamming ma ^^d_{min}=3^^: koryguje 1 błąd, lecz dwa błędy myli z innym pojedynczym błędem i „poprawia” źle. Dodanie globalnego bitu parzystości (rozszerzony kod Hamminga, ^^d_{min}=4^^) daje SEC-DED: korekcja pojedynczych i **wykrywanie** (bez korekcji) podwójnych błędów – standard w pamięciach ECC. Kod Hamminga **nie koryguje** błędów dwubitowych.\n\n**Cechy.** Kod stałej długości (n bitów na słowo), bezstratny (dane odtwarzane dokładnie), liniowy, systematyczny, oparty na bitach parzystości. Nie jest kodem kompresji.\n\n**Na egzaminie uważaj na:**\n- „koryguje błędy dwóch bitów” – fałsz; „koryguje 1, wykrywa 2 (SEC-DED)” – prawda dla wersji rozszerzonej,\n- „odległość Hamminga kodu korygującego pojedyncze błędy ≥ 3” – prawda,\n- „zmienna długość słowa”, „nie używa bitów parzystości”, „kod stratny” – fałsz,\n- pojedynczy bit parzystości: ^^d_{min}=2^^ – wykrywa 1 błąd, nie koryguje niczego.",
+   "related": [
+    "entropia-shannona",
+    "transmisja-asynchroniczna",
+    "ascii-utf8"
+   ]
+  },
+  {
+   "id": "kodowanie-huffmana",
+   "term": "Kodowanie Huffmana i Shannona-Fano (kody prefiksowe)",
+   "topic": "number_representation",
+   "short": "Bezstratne kodowania entropijne przypisujące symbolom częstym krótkie, a rzadkim długie słowa kodowe; obie metody dają kody prefiksowe, a Huffmana jest optymalny wśród kodów prefiksowych dla danego rozkładu.",
+   "details": "**Kod prefiksowy.** Żadne słowo kodowe nie jest prefiksem (początkiem) innego. Dzięki temu strumień bitów dekoduje się jednoznacznie „w locie”, bez separatorów: czytamy bity aż do rozpoznania słowa. Kod prefiksowy odpowiada drzewu binarnemu, w którym symbole są liśćmi. Nierówność Krafta: ^^\\sum 2^{-l_i} \\le 1^^.\n\n**Shannon-Fano (odgórnie).** 1. Posortuj symbole malejąco wg prawdopodobieństwa. 2. Podziel listę na dwie części o możliwie równych sumach prawdopodobieństw. 3. Pierwszej części dopisz bit 0, drugiej 1. 4. Rekurencyjnie dziel części, aż zostaną pojedyncze symbole. Daje kod prefiksowy, ale **nie zawsze optymalny**.\n\n**Huffman (oddolnie).** 1. Każdy symbol to węzeł o wadze ^^p_i^^. 2. Wybierz dwa węzły o najmniejszych wagach, połącz w nowy węzeł o wadze równej sumie. 3. Powtarzaj, aż zostanie jeden korzeń. 4. Krawędzie lewe oznacz 0, prawe 1; słowo kodowe symbolu to ścieżka od korzenia do liścia. Wynik: **optymalny kod prefiksowy** – minimalna średnia długość ^^L = \\sum p_i l_i^^ spośród wszystkich kodów prefiksowych dla tego rozkładu, ^^H \\le L < H+1^^. Huffman jest więc nie gorszy niż Shannon-Fano (nigdy „zawsze gorszy”); dla prawdopodobieństw będących potęgami 1/2 oba osiągają ^^L = H^^.\n\n**Przykład.** p(A)=0,4, p(B)=0,3, p(C)=0,2, p(D)=0,1. Huffman: łącz D+C=0,3; potem 0,3(B)+0,3(CD)=0,6; potem A+0,6. Kody: A=0, B=10, C=111, D=110 (lub symetrycznie); ^^L = 0{,}4+0{,}6+0{,}6+0{,}3 = 1{,}9^^ bita; ^^H \\approx 1{,}846^^.\n\n**Cechy wspólne.** Kompresja **bezstratna** (dekodowanie odtwarza dane dokładnie). Kod ma zmienną długość słów, stałą dla danego symbolu. Do dekodowania odbiorca musi znać drzewo/tabelę kodu: w wariancie statycznym przesyła się ją z danymi lub przyjmuje z góry (np. stałe tabele w JPEG), w wariancie adaptacyjnym (Vitter, FGK) obie strony budują drzewo równolegle i słownika nie trzeba przesyłać. Stwierdzenie „oba kody wymagają przesyłania słownika” traktowane jest jako fałszywe. Huffman nie jest optymalny wśród wszystkich kodów – kodowanie arytmetyczne zbliża się do H bez straty do 1 bitu na symbol.\n\n**Na egzaminie uważaj na:**\n- „tworzą kody prefiksowe” – prawda; „Shannon-Fano tworzy kod postfiksowy” – fałsz,\n- „Huffman optymalny wśród kodów prefiksowych dla danych prawdopodobieństw” – prawda,\n- „są metodami kompresji stratnej” – fałsz,\n- „Huffman zawsze gorszy niż Shannon-Fano” – fałsz (odwrotnie: nie gorszy),\n- Huffman buduje drzewo od liści (oddolnie), Shannon-Fano od korzenia (odgórnie).",
+   "related": [
+    "entropia-shannona",
+    "kod-hamminga",
+    "ascii-utf8"
+   ]
+  }
+ ]
+}

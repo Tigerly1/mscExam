@@ -1,0 +1,1500 @@
+[
+ {
+  "id": 182,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "autorem klasyfikacji (hierarchii) języków formalnych jest Noam Chomsky",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zbiór wszystkich palindromów nad danym alfabetem jest językiem regularnym",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "istnieją języki, które nie należą do hierarchii Chomsky'ego, więc nie są generowane przez żadną gramatykę ani akceptowane przez żaden automat",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "językiem formalnym nazywamy dowolny podzbiór zbioru wszystkich możliwych słów zbudowanych z symboli należących do skończonego alfabetu",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "język oznaczany jako ^^\\{\\epsilon\\}^^ jest językiem pustym",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "najszerszą klasą języków w hierarchii Chomsky'ego jest klasa języków rekurencyjnie przeliczalnych generowanych przez gramatyki bez ograniczeń",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "jeżeli L jest językiem bezkontekstowym, to istnieje automat ze stosem akceptujący ten język i jest on mu równoważny",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 183,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Niech N będzie niedeterministycznym automatem skończonym posiadającym ^^n^^ stanów, oraz niech M będzie minimalnym deterministycznym automatem skończonym rozpoznającym ten sam język, posiadającym ^^m^^ stanów. Wtedy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "^^m \\leq n^^",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "^^m \\leq 2^n^^",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "^^n \\leq m^^",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "M posiada dokładnie jeden stan akceptujący",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "każdy deterministyczny automat skończony rozpoznający ten sam język musi posiadać co najmniej ^^2^n^^ stanów",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "każdy automat deterministyczny akceptujący ten sam język co N musi mieć co najwyżej ^^2^n^^ stanów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 184,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jeśli język ^^L^^ spełnia tezę lematu o pompowaniu dla języków regularnych, to język ^^L^^ jest regularny",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jeśli język ^^L^^ jest skończony, to ^^L*^^ musi być regularny",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "każdy język, który nie jest regularny, jest nieskończony",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "pomimo, że języki regularne w trywialny sposób są bezkontekstowe, to istnieją języki regularne nie spełniające lematu o pompowaniu dla języków bezkontekstowych",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "żeby sprawdzić, czy dany automat akceptuje język nieskończony, można iterując po wszystkich słowach złożonych z alfabetu sprawdzić, czy liczba słów przez niego akceptowanych jest nieskończona",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "zupełny deterministyczny automat skończony, który nie akceptuje żadnego słowa, nie ma osiągalnych stanów akceptujących",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 185,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Dla języków i gramatyk formalnych, odnośnie postaci normalnej Chomsky'ego oraz postaci normalnej Greibach można sformułować następujące stwierdzenia (duże litery alfabetu łacińskiego to symbole nieterminalne, a litery małe to symbole terminalne):",
+  "options": [
+   {
+    "key": "a",
+    "text": "gramatyka w postaci Chomsky'ego zawiera produkcje postaci ^^A \\rightarrow BC^^, ^^A \\rightarrow a^^, a gramatyka w postaci Greibach zawiera produkcje postaci ^^A \\rightarrow aX^^ (gdzie ^^X^^ to ciąg symboli nieterminalnych, może być pusty), oraz każdą gramatykę bezkontekstową w postaci normalnej Chomsky'ego można przekształcić do postaci normalnej Greibach",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dla dowolnej gramatyki bezkontekstowej ^^G^^ istnieje taka gramatyka bezkontekstowa ^^G'^^ będąca w postaci normalnej Chomsky'ego, że ^^L(G') = L(G) - \\{\\epsilon\\}^^",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "dla każdego języka bezkontekstowego istnieje gramatyka w postaci normalnej Chomsky'ego",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Chomsky'ego",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Greibach",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 186,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Odnośnie lematu o pompowaniu dla języków regularnych prawdziwe są następujące stwierdzenia:",
+  "options": [
+   {
+    "key": "a",
+    "text": "lemat służy pokazaniu, że określone języki są regularne",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "schemat postępowania jest następujący: skoro język posiada pewne własności regularności, to jest regularny",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "lemat służy do dowodzenia, że dany język nie jest językiem regularnym",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "lemat służy do dowodzenia, że dany język jest językiem regularnym",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 187,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Jeżeli ^^r^^ oraz ^^s^^ są wyrażeniami regularnymi dla języków odpowiednio ^^R^^ oraz ^^S^^, to ^^(r + s)^^, ^^rs^^ oraz ^^r*^^ są wyrażeniami regularnymi reprezentującymi odpowiednio zbiory:",
+  "options": [
+   {
+    "key": "a",
+    "text": "^^R \\cup S^^, ^^R \\times S^^, ^^R^{+}^^",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "^^R \\cup S^^, ^^R \\times S^^, ^^R*^^",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "^^R \\cup S^^, ^^RS^^, ^^R*^^",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "^^R \\cup S^^, ^^RS^^, ^^R^{+}^^",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 188,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Mamy języki ^^L1 = \\{ a^{2^n}, n > 0 \\}^^ oraz ^^L2 = \\{ a^{2n}, n > 0 \\}^^. Które z tych języków są regularne?",
+  "options": [
+   {
+    "key": "a",
+    "text": "^^L1^^ - nie, ^^L2^^ - nie",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "^^L1^^ - tak, ^^L2^^ - nie",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "^^L1^^ - nie, ^^L2^^ - tak",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "^^L1^^ - tak, ^^L2^^ - tak",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 189,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Eliminując niejednoznaczność gramatyki poprzez konwersję do innej gramatyki musimy zachować bez zmian:",
+  "options": [
+   {
+    "key": "a",
+    "text": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zbiór słów generowanych przez oryginalną gramatykę",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 190,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Która z następujących metod parsingu może przetworzyć najszerszą klasę gramatyk:",
+  "options": [
+   {
+    "key": "a",
+    "text": "parser SLR",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "zstępujący parser rekurencyjny bez nawracania",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "kanoniczny parser LR",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "parser Earleya",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "parser LL(1)",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "parser CYK",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "parser LALR(1)",
+    "correct": false
+   },
+   {
+    "key": "h",
+    "text": "parser oparty na priorytecie operatorów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 191,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Wybierz stwierdzenia, które są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "LR wymaga usunięcia lewostronnej rekurencji",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "LL wymaga na początku faktoryzacji lewostronnej",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "gramatyki parsowane przez LR są nadzbiorem właściwym gramatyk parsowanych przez LL",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "LR parsuje od prawej do lewej, LL od lewej do prawej",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "dla każdej gramatyki jednoznacznej można skonstruować parser LR(1)",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "żadna gramatyka niejednoznaczna nie może być gramatyką LR(1)",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "tworzenie parsera jest sensowną procedurą tylko dla jednoznacznej gramatyki bezkontekstowej (nie ma sensu konstruowanie parsera dla gramatyki niejednoznacznej)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 192,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Typowy skaner języka formalnego ma za zadanie",
+  "options": [
+   {
+    "key": "a",
+    "text": "wyodrębnić symbole leksykalne",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zliczyć słowa kluczowe i sprawdzić ich kolokacje",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zliczyć lewe i prawe nawiasy sprawdzając wstępnie ich sparowanie",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wczytać kod źródłowy programu do postaci tokenów",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 193,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "W odniesieniu do pracy parserów klasy LR(k) i funkcji action prawdziwe są stwierdzenia:",
+  "options": [
+   {
+    "key": "a",
+    "text": "funkcja action przyjmuje wartości ze zbioru {shift, reduce, goto, accept, error}",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "na stosie trzymane są prefiksy i sufiksy form zdaniowych, co do których jest nadzieja na ich wykorzystanie",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "funkcja action przyjmuje wartości ze zbioru {shift, reduce, accept, error}",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "na stosie trzymane są prefiksy wszystkich form zdaniowych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 194,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Budowa tablic sterujących dla analizatorów klasy LR może stwarzać pewne trudności, szczególnie w zakresie automatyzacji, co ma pośredni wpływ na istnienie wielu odmian tych parserów. Które z poniższych prostych stwierdzeń są poprawne:",
+  "options": [
+   {
+    "key": "a",
+    "text": "pierwsza litera w nazwie SLR oznacza Shift",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "pierwsza litera w nazwie SLR oznacza Simple",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "pierwsze litery w nazwie LALR oznaczają LookAhead",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "pierwsza litera w nazwie GLR oznacza Grammar",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 195,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Porównując gramatyki LL oraz LR można powiedzieć, że:",
+  "options": [
+   {
+    "key": "a",
+    "text": "gramatyki LL opisują szerszą klasę niż LR",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "gramatyki LR opisują szerszą klasę niż LL",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "każda gramatyka LL jest również gramatyką LR",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "każda gramatyka LR jest również gramatyką LL",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1075,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_ne = {<M>: L(M) != pusty} koduje problem:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Czy dla danej maszyny Turinga M, język przez nią akceptowany jest niepusty?",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Czy maszyna Turinga M zatrzymuje się dla słowa pustego?",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Czy język L(M) jest skończony?",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Czy maszyna M jest uniwersalna?",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Czy M akceptuje wszystkie słowa?",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Czy M jest maszyną deterministyczną?",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1076,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_nr = {<M> : L(M) nie jest rekurencyjny}:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest akceptowany przez uniwersalną MT.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Nie jest rekurencyjnie przeliczalny (ani jego dopełnienie).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Jest językiem regularnym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest językiem bezkontekstowym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest rekurencyjnie przeliczalny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1077,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_eq = {<M> <N>: L(M) = L(N)}:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nie jest rozpoznawany przez żadną maszynę Turinga (nie jest rekurencyjnie przeliczalny).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Jest rozstrzygalny dla dowolnych maszyn Turinga.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest językiem bezkontekstowym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest akceptowany przez automat ze stosem.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest rekurencyjny.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest językiem regularnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1078,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Problem decyzyjny „Czy dane maszyny Turinga M i N akceptują ten sam język?” jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Nierozstrzygalny.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Częściowo rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Rozstrzygalny tylko dla automatów skończonych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Rozstrzygalny w czasie wielomianowym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "P-zupełny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1079,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Twierdzenie Rice'a orzeka, że każda nietrywialna własność semantyczna języków akceptowanych przez maszyny Turinga jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nierozstrzygalna (język L = {<M>: L(M) ma własność S} nie jest rekurencyjny).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Rekurencyjnie przeliczalna.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Regularna.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Rozstrzygalna w czasie wielomianowym.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Prawdziwa dla wszystkich maszyn Turinga.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Zależna od liczby stanów maszyny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1080,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Niech S będzie pewną własnością zbiorów rekurencyjnie przeliczalnych. Jeśli S nie jest monotoniczna to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "S jest nieprzeliczalna lub pusta.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Język L = {<M>: L(M) należy do S} nie jest rekurencyjnie przeliczalny.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "S jest zawsze rozstrzygalna.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "S zawiera wszystkie języki regularne.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "S jest rekurencyjna.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "S jest skończona.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1081,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Funkcję Ackermana:",
+  "options": [
+   {
+    "key": "a",
+    "text": "da się przedstawić w reprezentacji Maszyny Turinga.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest funkcją rekurencyjną, ale nie jest prymitywnie rekurencyjna.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "nie jest obliczalna.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ma złożoność wielomianową.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "rośnie szybciej niż jakakolwiek funkcja prymitywnie rekurencyjna.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "jest funkcją liniową.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1082,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Dany jest język L_e = {w : w = <M> => L(M) = pusty}. Koduje on problem:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Czy język akceptowany przez maszynę Turinga M jest pusty?",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Czy dla słowa w niebędącego kodem MT, jest ono akceptowane przez pewną MT?",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Czy maszyna M akceptuje wszystkie słowa?",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Czy M jest maszyną deterministyczną?",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Czy M zatrzymuje się na słowie w?",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Czy L(M) jest skończony?",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1083,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_e = {<M> : L(M) = pusty}:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest prymitywnie rekurencyjny.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Nie jest rekurencyjnie przeliczalny.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Jest rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest językiem kontekstowym.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jego dopełnienie L_ne jest rekurencyjnie przeliczalne.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest językiem regularnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1084,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_ne = {<M>: L(M) != pusty}:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest rekurencyjnie przeliczalny (ale nie rekurencyjny).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Jest rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Nie jest akceptowany przez żadną maszynę Turinga.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest językiem skończonym.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest językiem regularnym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest rekurencyjny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1085,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Problem decyzyjny, czy język akceptowany przez daną maszynę Turinga jest pusty, jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Częściowo rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Nierozstrzygalny i nie jest nawet częściowo rozstrzygalny.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wielomianowy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Rozstrzygalny dla automatów ze stosem.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "P-zupełny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1086,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Problem decyzyjny, czy język akceptowany przez daną maszynę Turinga jest niepusty, jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nie jest nawet problemem częściowo rozstrzygalnym.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Częściowo rozstrzygalny (można symulować M na wszystkich słowach równolegle).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Rekurencyjny.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Regularny.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Rozstrzygalny w czasie wykładniczym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1087,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_r = {<M>: L(M) jest rekurencyjny} koduje problem:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Czy język akceptowany przez maszynę Turinga M jest rozstrzygalny?",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Czy dla danej maszyny Turinga M, L(M) jest rekurencyjnie przeliczalny?",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Czy M zatrzymuje się dla każdego wejścia?",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Czy M ma skończoną liczbę stanów?",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Czy L(M) jest językiem regularnym?",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Czy M jest uniwersalna?",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1088,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_nr = {<M>: L(M) nie jest rekurencyjny} koduje problem:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Czy język akceptowany przez maszynę Turinga M jest nierozstrzygalny?",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Czy dana maszyna Turinga M, posiada własność stopu?",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Czy M jest maszyną uniwersalną?",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Czy L(M) jest językiem regularnym?",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Czy M jest deterministyczna?",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Czy M ma nieskończoną taśmę?",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1089,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Język L_r = {<M>: L(M) jest rekurencyjny}:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nie jest rekurencyjny (wynika z twierdzenia Rice'a).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Jest rekurencyjnie przeliczalny.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest rozstrzygalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest regularny.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest bezkontekstowy.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Nie jest rekurencyjnie przeliczalny.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1114,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Gramatyka formalna jest wieloznaczna, jeżeli:",
+  "options": [
+   {
+    "key": "a",
+    "text": "istnieje przynajmniej jedno słowo w języku tej gramatyki, które posiada więcej niż jedno drzewo wyprowadzenia (syntaktyczne).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "posiada symbole nieterminalne o wielu produkcjach.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "generuje język nieskończony.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie można jej sprowadzić do postaci normalnej Chomsky'ego.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "posiada słowo, dla którego istnieje więcej niż jedno wyprowadzenie lewostronne.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "generuje słowa o różnej długości.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1115,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "W kontekście języków formalnych, (oznaczenie: ^ to symbol potęgowania, którego argumenty mogą być w nawiasach klamrowych., następujące stwierdzenia są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Język L = {a^n b^n : n > 0} nie jest regularny, ale jest bezkontekstowy.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "L1 = {f^{2^{n}}: n > 0} jest regularny.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Każdy język bezkontekstowy jest regularny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Języki regularne nie są zamknięte ze względu na dopełnienie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Klasa języków regularnych jest właściwym podzbiorem klasy języków bezkontekstowych.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Każdy język akceptowany przez automat skończony jest bezkontekstowy.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1116,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Mamy gramatykę (duże litery to symbole nieterminalne, małe to symbole terminalne, S to symbol startowy) zawierającą produkcje: S -> AB, A -> Aa | bB, B -> a | Sb oraz formę zdaniową: baaABb. Które stwierdzenie jest prawdziwe",
+  "options": [
+   {
+    "key": "a",
+    "text": "nie jest wyprowadzana.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest formą zdaniową, jeśli można ją uzyskać w dowolnej liczbie kroków z symbolu startowego S.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zawiera wyłącznie symbole terminalne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest słowem języka.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest symbolem startowym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nie może zawierać nieterminali.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1117,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "W odniesieniu do wyrażeń regularnych i generowanych łańcuchów, które stwierdzenia są prawdziwe Wyrażenie regularne: (x+y)*y(a+ab)*",
+  "options": [
+   {
+    "key": "a",
+    "text": "Generuje słowa kończące się sekwencją 'y' po której następuje 'a' lub 'ab'.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Zawiera dokładnie 7 łańcuchów o długości mniejszej niż 4.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Nie generuje słowa 'y'.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Generuje słowo 'xa'.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Generuje słowo 'yya'.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Generuje słowo 'xyab'.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1118,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Lemat o pompowaniu dla języków regularnych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służy do dowodzenia, że dany język nie jest regularny.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Długość pompowania dla łańcucha o długości x jest równa x+1.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Każdy język spełniający warunki lematu o pompowaniu jest regularny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Dotyczy wyłącznie języków skończonych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Mówi, że każde słowo języka regularnego można dowolnie skracać.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Pozwala na konstrukcję automatu minimalnego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1119,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Rozważmy gramatykę S ---> PQ | SQ | PS P ---> x Q--> yKtóre stwierdzenia są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "W gramatyce w postaci normalnej Chomsky'ego liczba kroków wyprowadzenia słowa o długości n wynosi dokładnie 2n-1.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Liczba użytych produkcji musi być równa n.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Nie da się wyprowadzić słów o długości większej niż 2.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Gramatyka ta jest regularna.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wymaga n^2 kroków.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Liczba kroków jest zawsze parzysta.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1120,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "W odniesieniu do języków regularnych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Języki regularne są zamknięte ze względu na sumę, iloczyn i dopełnienie.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Jeśli L1 jest regularny a L1-L2 jest regularny, to L2 musi być regularny.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Każdy język podzbiór języka regularnego jest regularny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Automaty niedeterministyczne akceptują szerszą klasę języków niż deterministyczne.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Każdy język regularny jest akceptowany przez pewien deterministyczny automat skończony.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Języki regularne nie są zamknięte ze względu na gwiazdkę Kleene'ego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1121,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Mamy gramatykę z następującymi produkcjami: S -> XY X -> aX|a Y -> aYb|\\epsilon",
+  "options": [
+   {
+    "key": "a",
+    "text": "Generuje język {a^m b^n : m > n >= 0}.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Generuje język {a^n b^n : n >= 0}.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest gramatyką regularną.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie generuje słowa 'a'.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Generuje słowo 'ab'.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Generuje język {a^n b^m : n > m}.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1122,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Które z poniższych zdań odnośnie gramatyk formalnych są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Z każdej gramatyki bezkontekstowej można usunąć epsilon-produkcje (chyba że język zawiera słowo puste).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Gramatyki bezkontekstowe są zamknięte ze względu na przekrój (intersekcję).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Każdy język regularny jest generowany przez gramatykę typu 0.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Gramatyki kontekstowe nie mogą mieć produkcji skracających.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Każdy język regularny jest bezkontekstowy.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Gramatyki typu 3 generują języki kontekstowe.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1123,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "Odnośnie twierdzenia Myhill-Nerode'a następujące zdania są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Podaje warunek konieczny i dostateczny na to, by język był regularny.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Służy do minimalizacji automatów deterministycznych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Twierdzenie ma znaczenie w kontekście konwersji NAS na DAS.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Dotyczy wyłącznie języków bezkontekstowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Relacja Myhill-Nerode'a ma skończony indeks wtedy i tylko wtedy, gdy język jest regularny.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Pozwala na rozstrzygnięcie problemu stopu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1124,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "W kontekście języków formalnych następujące stwierdzenia są prawdziwe",
+  "options": [
+   {
+    "key": "a",
+    "text": "Są akceptowane przez liniowo ograniczone automaty Turinga (LBA).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Język kontekstowy jest akceptowany przez NAS (automat skończony).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Są podzbiorem języków regularnych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Ich gramatyki mogą zawierać produkcję A -> BC.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Gramatyki kontekstowe (typ 1) mają produkcje postaci alpha A beta -> alpha gamma beta, gdzie gamma != epsilon.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Każdy język kontekstowy jest bezkontekstowy.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1125,
+  "topic": "formal_languages",
+  "courseName": "Lingwistyka formalna i automaty",
+  "question": "W odniesieniu do języków formalnych następujące zdania są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Akceptuje klasę języków bezkontekstowych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Może akceptować napis wejściowy poprzez stan końcowy lub pusty stos.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest równoważny automatowi skończonemu z dwoma stosami.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Zawsze musi być deterministyczny.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Niedeterministyczne automaty ze stosem są silniejsze od deterministycznych (akceptują szerszą klasę języków).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Nie może mieć więcej niż jeden stan.",
+    "correct": false
+   }
+  ]
+ }
+]

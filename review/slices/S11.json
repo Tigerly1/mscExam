@@ -1,0 +1,1826 @@
+[
+ {
+  "id": 1013,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Rachunek predykatów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "nie zawiera żadnych aksjomatów dla kwantyfikatorów.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "zawiera reguły wnioskowania i aksjomaty dotyczące kwantyfikatorów ogólnego i egzystencjalnego.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jest tożsamy z klasycznym rachunkiem zdań.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie pozwala na używanie symboli relacyjnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "rozszerza rachunek zdań o kwantyfikatory i symbole relacyjne/funkcyjne.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "jest rozstrzygalny w sensie ogólnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1014,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Prawo transpozycji (p -> q) <=> (~q -> ~p):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwala przyjąć, że prawdziwość zdania: \"Jeśli Kopernik nie urodził się w Krakowie, to Kepler nie urodził się w Toruniu\" pociąga prawdziwość zdania: \"jeśli Kepler urodził się w Toruniu, to Kopernik urodził się w Krakowie\".",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Orzeka, że z fałszywości implikacji wynika prawdziwość jej następnika.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest podstawą dowodów wprost w matematyce.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Mówi, że koniunkcja jest przemienna.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Głosi, że z p -> q wynika ~p -> ~q.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Dotyczy wyłącznie kwantyfikatorów ogólnych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1015,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Teorią w sensie logicznym w ustalonym języku L nazywamy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zbiór wszystkich konsekwencji logicznych zbioru zdań mających swój dowód w tej teorii.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "zbiór zdań zamknięty ze względu na operację konsekwencji.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "dowolny zbiór formuł otwartych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zbiór wszystkich tautologii danego języka.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "zbiór aksjomatów, które nie są ze sobą spójne.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "dowolny zbiór słów nad alfabetem L.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1016,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Model dla teorii rachunku predykatów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Musi zawierać symbole funkcyjne, interpretujące w modelu zmienne języka tej teorii.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Składa się z niepustej dziedziny oraz interpretacji symboli predykatywnych, funkcyjnych i stałych.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Jest zawsze skończony.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie zależy od języka teorii.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest zbiorem wszystkich zdań prawdziwych w danej teorii.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Może mieć pustą dziedzinę (uniwersum).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1017,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Twierdzenie o pełności dla klasycznego rachunku zdań orzeka, że:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Każde zdanie klasycznego rachunku zdań jest formułą (w jego języku), lecz nie każda formuła jest zdaniem.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Każda tautologia jest dowodliwa w systemie aksjomatycznym.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "System logiczny jest niespójny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każdy model jest skończony.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Każdy zbiór zdań sprzecznych posiada model.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Rachunek zdań jest niezupełny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1018,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "W języku rachunku predykatów wyróżnić możemy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wyłącznie termy, bez żadnych typów formuł.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "termy, formuły atomowe oraz formuły złożone (z użyciem spójników i kwantyfikatorów).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "tylko stałe i zmienne, bez predykatów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wyłącznie kwantyfikatory.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "tylko zdania, bez formuł otwartych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "wyłącznie symbole relacyjne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1019,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Zdanie \"Jeśli Słowacki wielkim poetą był, to jeśli przez Kraków przepływa Nil, to Słowacki wielkim poetą był\" (schemat p -> (q -> p)) jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "nie da się ocenić bez znajomości jego modelu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "tautologią klasycznego rachunku zdań.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zdaniem zawsze fałszywym (kontrtautologią).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zdaniem spełnialnym, ale nie będącym tautologią.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "zdaniem przygodnym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "zdaniem fałszywym w modelu standardowym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1020,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Tautologia rachunku predykatów to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "formuła prawdziwa w każdym modelu (przy każdej interpretacji).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "formuła prawdziwa w przynajmniej jednym modelu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "formuła, która nie zawiera kwantyfikatorów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zdanie, które jest prawdziwe w modelu standardowym liczb naturalnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "formuła, która posiada dowód w arytmetyce Peano.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "zdanie, które jest fałszywe w przynajmniej jednym modelu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1021,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Logika pierwszego rzędu to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "logika bez żadnych kwantyfikatorów",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "logika dopuszczająca kwantyfikowanie wyłącznie po zmiennych obiektowych (indywiduach).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "logika dopuszczająca kwantyfikowanie po zbiorach i relacjach.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "system logiczny, w którym nie istnieją zmienne.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "logika, w której nie można definiować relacji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "logika, w której każdy model jest skończony.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1022,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Kwantyfikatory \"istnieje takie x, że\" oraz \"dla każdego x, takiego, że\":",
+  "options": [
+   {
+    "key": "a",
+    "text": "mają swoje semantyczne interpretacje w modelach dla języka, w którym występują.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "są spójnikami logicznymi o argumentach zdaniowych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie mogą występować w jednej formule jednocześnie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "odnoszą się wyłącznie do zbiorów skończonych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "są definiowane wyłącznie przez reguły syntaktyczne.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nie podlegają negacji.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1023,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Funkcja interpretacji semantycznej, określonej dla języka rachunku predykatów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "interpretuje predykaty jako relacje w dziedzinie modelu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "przypisuje każdemu zdaniu wartość \"prawda\" niezależnie od modelu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "interpretuje zmienne wolne jako kwantyfikatory ogólne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy wyłącznie do upraszczania formuł.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "interpretuje symbole funkcyjne jako funkcje w dziedzinie modelu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "przypisuje każdemu termowi wartość logiczną.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1024,
+  "topic": "logic",
+  "courseName": "Logika",
+  "question": "Twierdzenie o dedukcji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "pozwala przenieść przesłanki do treści implikacji we wniosku (jeśli ze zbioru G i zdania A wynika B, to z G wynika A -> B).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "pozwala przenieść przesłanki do zbioru wniosków.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "mówi, że każda teoria jest rozstrzygalna.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "dotyczy wyłącznie rachunku predykatów z identycznością.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "orzeka o pełności systemu logicznego.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "mówi, że z A wynika B wtedy i tylko wtedy, gdy A jest fałszywe.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1025,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Każda permutacja zbioru skończonego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "może być w sposób jednoznaczny rozłożona na niekoniecznie rozłączne transpozycje.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "może być rozłożona na iloczyn rozłącznych cykli w sposób jednoznaczny (z dokładnością do kolejności czynników).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jest zawsze transpozycją.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie może być przedstawiona jako złożenie cykli.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ma zawsze parzystą liczbę inwersji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "jest cyklem o długości n.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1026,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "W grafie właściwym nieskierowanym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "najniższy stopień węzła może być mniejszy od spójności krawędziowej.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "spójność krawędziowa jest zawsze mniejsza lub równa minimalnemu stopniowi wierzchołka (lambda(G) <= delta(G)).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "liczba wierzchołków o stopniu nieparzystym musi być nieparzysta.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "suma stopni wierzchołków jest równa liczbie krawędzi.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "spójność wierzchołkowa jest zawsze większa od krawędziowej.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "graf jest drzewem, jeśli ma n krawędzi.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1027,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Grupa symetrii danej figury geometrycznej to grupa tych przekształceń płaszczyzny, względem których danafigura jest niezmiennicza. Działaniem grupowym jest składanie przekształceń.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Grupa symetrii siedmiokąta foremnego jest siedmioelementowa.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Jest grupą dihedralną D7 i posiada 14 elementów (7 obrotów i 7 symetrii osiowych).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Jest grupą cykliczną Z7.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie zawiera żadnych symetrii osiowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest grupą abelową.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Zawiera dokładnie 49 elementów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1028,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Grupą nie jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "(C[0,1], +) - zbiór wszystkich funkcji ciągłych o dziedzinie w [0,1] z dodawaniem funkcji po wartościach jako działanie grupowym.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "(N, +) - zbiór liczb naturalnych z dodawaniem.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "(Z, +) - zbiór liczb całkowitych z dodawaniem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "(R*, *) - zbiór liczb rzeczywistych bez zera z mnożeniem.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "(Q, +) - zbiór liczb wymiernych z dodawaniem.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "(Z_n, +_n) - zbiór reszt z dzielenia przez n z dodawaniem modulo n.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1029,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Niech X będzie zbiorem częściowo uporządkowanym.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jeśli X jest skończony, to element maksymalny jest równocześnie elementem największym.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Jeśli X ma element największy, to jest on jedynym elementem maksymalnym.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Każdy zbiór częściowo uporządkowany ma element najmniejszy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Relacja częściowego porządku jest zwrotna, symetryczna i przechodnia.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Każdy podzbiór X ma kres górny.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Element minimalny jest zawsze elementem najmniejszym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1030,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Kostką Qn nazywamy graf, którego wierzchołki są zaetykietowane wszystkimi możliwymi zerojedynkowymi ciągami n−elementowymi a krawędzie łączą te wierzchołki, których etykiety różnią się dokładnie na jednym miejscu.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Kostka Q3 ma 8 wierzchołków i 12 krawędzi.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Kostka Qn ma n wierzchołków.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Kostka Qn jest grafem pełnym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każdy wierzchołek w Qn ma stopień 2^n.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Kostka Qn jest grafem planarnym dla każdego n.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Kostka Qn nie jest grafem dwudzielnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1031,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Liczba chromatyczna grafu to minimalna liczba kolorów, jakimi można pokolorować wierzchołki grafu tak, aby żadne dwa wierzchołki połączone krawędzią nie były tego samego koloru.",
+  "options": [
+   {
+    "key": "a",
+    "text": "2",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "3",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "4",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "8",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "1",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "5",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1032,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Każdy zbiór częściowo uporządkowany:",
+  "options": [
+   {
+    "key": "a",
+    "text": "ma element maksymalny.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "może nie posiadać elementów maksymalnych ani minimalnych (np. zbiór liczb całkowitych z relacją <=).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jest zawsze liniowo uporządkowany.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "musi być skończony.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ma dokładnie jeden element najmniejszy.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "jest gęsty.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1033,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Wskaż zdania prawdziwe dotyczące porządków:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zbiór liczb całkowitych z relacją arytmetyczną ”mniejsze lub równe” jest dobrze uporządkowany.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Zbiór liczb naturalnych z relacją ”mniejsze lub równe” jest dobrze uporządkowany.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Każdy porządek liniowy jest dobrym porządkiem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Relacja inkluzji podzbiorów jest zawsze porządkiem liniowym.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Relacja podzielności na liczbach naturalnych jest porządkiem liniowym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Zbiór liczb rzeczywistych z relacją <= jest dobrze uporządkowany.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1034,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Jeśli X jest zbiorem n−elementowym i Y jest zbiorem m-elementowym, n > 0, m > 0, to",
+  "options": [
+   {
+    "key": "a",
+    "text": "liczność rodziny wszystkich podzbiorów zbioru X (zbioru potęgowego) jest równa 2^n.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "liczba wszystkich permutacji zbioru X wynosi n^2.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "liczba k-elementowych podzbiorów zbioru X wynosi n! / k!.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "liczba relacji zwrotnych na zbiorze X wynosi 2^n.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "liczba wszystkich relacji na zbiorze X wynosi n^n.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "liczba wszystkich funkcji ze zbioru X w X wynosi n!.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1035,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Niech Pn oznacza zbiór permutacji n-elementowych. W P3:",
+  "options": [
+   {
+    "key": "a",
+    "text": "istnieją dokładnie 2 permutacje cykliczne o długości 3.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "istnieje 6 permutacji cyklicznych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "każda permutacja jest cyklem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie istnieje permutacja identycznościowa.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "liczba wszystkich permutacji wynosi 9.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "każda permutacja jest parzysta.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1036,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Niech X będzie zbiorem n-elementowym (n > 2) i R będzie relacją równoważności na X.",
+  "options": [
+   {
+    "key": "a",
+    "text": "Liczba klas równoważności musi być podzielnikiem liczby n.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Klasy równoważności tworzą partycję (podział) zbioru X.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Każda klasa równoważności musi mieć tyle samo elementów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Relacja równoważności nie musi być przechodnia.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Liczba relacji równoważności na X jest równa 2^n.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Suma wszystkich klas równoważności jest zbiorem pustym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1051,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Które z poniższych zdań jest jednym z aksjomatów prawdopodobieństwa Kołmogorowa dla przestrzeni probabilistycznej (Ω, , 𝑃) :",
+  "options": [
+   {
+    "key": "a",
+    "text": "P(A) >= 0 dla każdego zdarzenia A.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "P(A) <= 0.5 dla każdego zdarzenia A.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "P(Omega) = 0.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "P(A u B) = P(A) + P(B) dla dowolnych zdarzeń A, B.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "P(Omega) = 1.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "P(A) + P(A') = 1 (to jest wniosek, ale często mylony z aksjomatem).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1052,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "W statystyce populacją nazywamy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zbiór wszystkich możliwych cech pewnego wybranego parametru.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "zbiór wszystkich elementów, o których chcemy wyciągnąć wnioski.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "podzbiór elementów wybrany do badania.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "średnią wartość z próby.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "zbiór wszystkich wyników pomiarów w próbie.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "wyłącznie grupę ludzi w danym regionie.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1053,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "W statystyce estymatorem nazywamy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "dowolną statystykę (funkcję z próby) służącą do oszacowania nieznanego parametru populacji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "błąd pomiarowy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "wartość parametru w całej populacji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "liczbę elementów w próbie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "hipotezę zerową.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "poziom istotności testu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1054,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "W statystyce błędem pierwszego rodzaju nazywamy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przyjęcie hipotezy alternatywnej przy niskiej wielkości efektu.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "odrzucenie hipotezy zerowej, mimo że jest ona prawdziwa.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "nieodrzucenie hipotezy zerowej, mimo że jest ona fałszywa.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "błąd wynikający z małej liczebności próby.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "błąd gruby pomiaru.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "błąd zaokrąglenia w obliczeniach statystycznych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1055,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Liczbę wszystkich różnych k-elementowych ciągów (wariacji z powtórzeniami) utworzonych ze zbioru n-elementowego liczymy wzorem:",
+  "options": [
+   {
+    "key": "a",
+    "text": "n^k",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "n! / (n-k)!",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "symbol Newtona (n nad k)",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "k^n",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "n! / k!",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "2^n",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1056,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "W rachunku prawdopodobieństwa wzór na prawdopodobieństwo całkowite:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jak znaleźć wartość graniczną prawdopodobieństwa sumy przeliczalnej rodziny wstępującej zbiorów.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "pozwala obliczyć prawdopodobieństwo zdarzenia poprzez sumowanie prawdopodobieństw warunkowych względem zupełnego układu zdarzeń.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "dotyczy wyłącznie zdarzeń niezależnych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy do obliczania prawdopodobieństwa a posteriori (wzór Bayesa).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "wymaga, aby zdarzenia warunkujące miały prawdopodobieństwo 1.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "mówi, że P(A|B) = P(B|A).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1057,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "W rachunku prawdopodobieństwa zdarzenia niezależne od każdego innego zdarzenia:",
+  "options": [
+   {
+    "key": "a",
+    "text": "istnieją, ale mogą być tylko zbiorem pustym, albo całą przestrzenią.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "to zdarzenia o prawdopodobieństwie 0 lub 1.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "nie istnieją w żadnej przestrzeni probabilistycznej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "to wszystkie zdarzenia w przestrzeni dyskretnej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "to zdarzenia, których suma wynosi 1.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "to zdarzenia rozłączne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1058,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Sigma-ciałem zbiorów borelowskich na R nazywamy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "najmniejsze sigma-ciało na R które zawiera wszystkie zbiory otwarte (lub przedziały postaci (-inf, a]).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zbiór wszystkich podzbiorów R.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zbiór wszystkich liczb wymiernych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zbiór przedziałów domkniętych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "zbiór wszystkich funkcji ciągłych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "zbiór wszystkich punktów na prostej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1059,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Zmienną losową X : Omega -> R nazywamy funkcję, dla której:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przeciwobraz dowolnego przedziału (-inf, a] dla a w R jest zdarzeniem (należy do sigma-ciała).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "obraz każdego zdarzenia jest liczbą dodatnią.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "dziedzina jest zbiorem liczb rzeczywistych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wartości są zawsze całkowite.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "funkcja jest zawsze rosnąca.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "funkcja jest bijekcją.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1060,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Które z podanych własności są własnościami każdej dystrybuanty FX zmiennej losowej X:",
+  "options": [
+   {
+    "key": "a",
+    "text": "FX jest ściśle rosnąca.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "FX jest niemalejąca i prawostronnie ciągła.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "FX(x) dąży do 1 gdy x dąży do minus nieskończoności.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "FX jest zawsze funkcją ciągłą.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Granica FX(x) przy x dążącym do plus nieskończoności wynosi 1.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "FX(x) może przyjmować wartości ujemne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1061,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Wariancja zmiennej losowej służy do:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wyznaczania skośności dystrybucji zmiennej losowej.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "określenia stopnia rozproszenia wartości zmiennej losowej wokół jej wartości oczekiwanej.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "obliczania najbardziej prawdopodobnej wartości.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wyznaczania mediany.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "określenia kierunku zależności między dwiema zmiennymi.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "obliczania wartości średniej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1062,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Jeżeli dwie zmienne losowe X i Y są niezależne, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "rozkład ich sumy jest sumą ich rozkładów.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wariancja ich sumy jest sumą ich wariancji (Var(X+Y) = Var(X) + Var(Y)).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "ich korelacja wynosi 1.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ich wartości oczekiwane muszą być równe 0.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ich kowariancja wynosi 0.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "P(X|Y) = P(Y).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1063,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Dany jest graf G utworzony z n-wierzchołkowej kliki (n>5), poprzez usunięcie 3 krawędzi. Wskaż zdania prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "G jest eulerowski dla n nieparzystych.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Jeśli usunięte krawędzie tworzą cykl C3, to stopnie wszystkich wierzchołków pozostają parzyste (dla n nieparzystego), więc graf jest eulerowski.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Graf po usunięciu krawędzi zawsze przestaje być spójny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Liczba krawędzi w takim grafie wynosi n(n-1)/2.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Graf G jest zawsze planarny.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "G nie posiada cyklu Hamiltona.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1064,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Czy graf cyklu C5 jest grafem dwudzielnym?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nie, ponieważ nie jest eulerowski.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Nie, ponieważ zawiera cykl o nieparzystej długości.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Tak, ponieważ każdy graf płaski jest dwudzielny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Tak, ponieważ ma 5 wierzchołków.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Tak, bo można go pokolorować 2 kolorami.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Nie, bo jego liczba chromatyczna wynosi 3.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1065,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Dany jest graf G o sześciu wierzchołkach i stopniach: 2, 2, 3, 4, 4, 5. Czy G może być grafem planarnym?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nie.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Tak. Przykład konstrukcji: wierzchołek stopnia 5 łączymy ze wszystkimi pozostałymi, a między pozostałymi 5 wierzchołkami dodajemy krawędzie tak, by stopnie wyniosły 4,4,3,2,2 (np. resztowe stopnie 3,3,2,1,1).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Nie, ponieważ zawiera wierzchołek o stopniu 5.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Tak, każdy graf o 6 wierzchołkach jest planarny.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Nie, bo zawiera podgraf izomorficzny z K3,3.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Tak, bo suma stopni jest parzysta.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1066,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Dany jest wielościan wypukły o 11 wierzchołkach, w którym 7 ścian to trójkąty, a 4 to czworokąty. Korzystając ze wzoru Eulera (V-E+F=2), określ rodzaj ostatniej (12-stej) ściany:",
+  "options": [
+   {
+    "key": "a",
+    "text": "czworokątem.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "trójkątem.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "pięciokątem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "sześciokątem.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "siedmiokątem.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nie da się określić.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1067,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Graf G został zbudowany z grafów Hamiltona, G1=(V1,E1) i G2=(V2,E2), w następujący sposób. Z V1 wybrano podzbiór W1 (W1 różne od V1) wierzchołków, stanowiących kolejne węzły cyklu Hamiltona w G1, oraz z V2 podzbiór W2 (W2 różne od V2) wierzchołków, stanowiących kolejne węzły cyklu Hamiltona w G2, a następnie połączono węzły W1 i W2 dodatkowymi krawędziami, tak że każdy węzeł W1 jest sąsiedni z każdym węzłem W2. Wskaż zdania prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "G jest grafem Hamiltona dla |W1| + |W2| > 3.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "G jest grafem Hamiltona, jeśli istnieją krawędzie łączące cykle Hamiltona w G1 i G2 pozwalające na utworzenie jednego wspólnego cyklu.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "G nigdy nie jest grafem Hamiltona.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "G jest grafem pełnym.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "G jest zawsze dwudzielny.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "G nie posiada mostów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1068,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Indeks chromatyczny (minimalna liczba kolorów krawędzi) drzewa o maksymalnym stopniu wierzchołka Delta wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "|V|",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Delta (maksymalny stopień wierzchołka).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Delta + 1",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "2",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Delta - 1",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "3",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1069,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Dany jest dowolny graf spójny G=(V,E), w którym każda krawędź jest mostem. Które zdania są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "G jest drzewem.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "G zawiera przynajmniej jeden cykl.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "G jest grafem pełnym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "G ma więcej krawędzi niż wierzchołków.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Liczba krawędzi E = V - 1.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Graf G jest dwuspójny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1070,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Podać najmniejszą liczbę krawędzi, jaką należy usunąć z grafu dwudzielnego pełnego K3,3, aby uzyskać graf regularny stopnia 2:",
+  "options": [
+   {
+    "key": "a",
+    "text": "3",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "3 (usuwamy krawędzie tworzące doskonałe skojarzenie).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "1",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "6",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "0",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "9",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1071,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Dana jest klika K8. Liczba podgrafów izomorficznych z K5 (czyli liczba 5-elementowych podzbiorów wierzchołków) wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "56 (8 po 5).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "120",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "40",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "8! / 5!",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "28",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "64",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1072,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Dana jest klika K8 o wierzchołkach v1, v2,..., v8. Liczba dróg prostych w tym grafie, prowadzących z v1 do v2 i posiadających co najwyżej 3 krawędzie, wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "37 (długość 1: 1, długość 2: 6, długość 3: 30).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "43",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "8",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "64",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "120",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "56",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1073,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Liczba dróg prostych o długości dokładnie 1, 2 lub 3 krawędzi w klice K8 wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "C(8,3) + C(8,2) + C(8,1)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "1 + 6 + 30 = 37 (między parą wierzchołków).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "8! / (8-k)!",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "n^k",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "8*7/2",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "37 * (8*7/2) (dla wszystkich par).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1074,
+  "topic": "math",
+  "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
+  "question": "Dany jest graf o 21 krawędziach, 7 wierzchołkach stopnia 1, 3 stopnia 2, 7 stopnia 3 i pozostałych stopnia 4. Ile jest wierzchołków stopnia 4?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nie da się zbudować takiego grafu.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "2 (suma stopni 7*1 + 3*2 + 7*3 + 4*x = 34 + 4x = 42 => 4x=8 => x=2).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "5",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "0",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "3",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "4",
+    "correct": false
+   }
+  ]
+ }
+]

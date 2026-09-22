@@ -1,0 +1,1180 @@
+[
+ {
+  "id": 1326,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Najważniejszymi własnościami systemów złożonych (ang. complex systems) w domenie skali i czasu są:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Emergencja, samoorganizacja, nieliniowość, sprzężenia zwrotne.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Emergencja",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Przewidywalność długoterminowa.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Centralne zarządzanie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Adaptacyjność.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wrażliwość na warunki początkowe (efekt motyla).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1327,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Wskaż które zdania są prawdziwe w odniesieniu do homogenicznego i synchronicznego Automatu Komórkowego (CA)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Homogeniczny - te same reguły; Synchroniczny - jednoczesna aktualizacja.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Gra Life zaproponowana przez matematyka Johna Conwaya jest przykładem homogenicznego i synchronicznego automatu komórkowego.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "W grze Life reguły zmieniają się w każdej iteracji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Gra Life wymaga interwencji użytkownika w każdym kroku.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wszystkie komórki w automacie synchronicznym zmieniają stan w tym samym momencie zegarowym.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Homogeniczność oznacza, że siatka musi być nieskończona.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1328,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Własności homogenicznego automatu komórkowego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Identyczna reguła przejścia, identyczny zbiór stanów i identyczny kształt sąsiedztwa dla każdej komórki.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Reguła przejścia identyczna dla całej siatki.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Każda komórka ma inną liczbę sąsiadów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Siatka musi być zawsze skończona.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Zapewnia niezmienniczość reguł względem przesunięcia (translativity).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Stany komórek muszą być liczbami binarnymi.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1329,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Niehomogeniczny Automat Komórkowy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Może posiadać różne reguły przejścia lub różne zbiory stanów dla poszczególnych komórek.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Niehomogeniczny automat komórkowy wyłącznie charakteryzuje się różnymi zbiorami stanów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest zawsze odwracalny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie może być symulowany na komputerze.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na modelowanie środowisk o zróżnicowanych właściwościach fizycznych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wymaga asynchronicznej aktualizacji.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1330,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Symulacja zdarzeń dyskretnych (DES):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Modeluje system jako sekwencyjną listę zdarzeń w czasie.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "DES stanowią alternatywną metodę modelowania wobec systemów Agent Based Modeling (ABM).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Czas in DES płynie w sposób ciągły.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Służy wyłącznie do modelowania procesów chemicznych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Zdarzenia są umieszczane w kolejce priorytetowej (event list).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Stan systemu zmienia się płynnie między zdarzeniami.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1331,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Periodyczne warunki brzegowe dla Automatu Komórkowego oznaczają następujące własności dla obiektu poruszającego się po siatce:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Przeciwległe krawędzie siatki są ze sobą połączone.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Poruszający się obiekt definitywnie znika z siatki po osiągnięciu granicznych komórek.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Powodują odbicie się obiektu od ściany.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Są stosowane tylko w automatach 1D.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Siatka 2D z takimi warunkami ma topologię torusa.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Eliminują efekty brzegowe w symulacjach.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1332,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Algorytmy poszukujące ekstremum funkcji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Gradient Descent, Adam, Algorytmy Genetyczne, Simulated Annealing.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Stochastic Gradient Descent",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "K-Means",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "PCA",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "PSO (Particle Swarm Optimization).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "BFS (Breadth-First Search).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1333,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Algorytmy redukcji wymiarowości:",
+  "options": [
+   {
+    "key": "a",
+    "text": "PCA (Principal Component Analysis), t-SNE, UMAP, Autoenkodery.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "K-Nearest Neighbors",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Linear Regression",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Decision Trees",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "LDA (Linear Discriminant Analysis).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "SVD (Singular Value Decomposition).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1334,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Metryki skuteczności modelu predykcyjnego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "MSE (Mean Squared Error), MAE, R-squared (dla regresji); Accuracy, F1 (dla klasyfikacji).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wariancja",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Odchylenie standardowe wag.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Liczba iteracji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Log-Loss.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Współczynnik Giniego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1335,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Uczenie częściowo nadzorowane (Semi-supervised Learning):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wykorzystuje małą ilość danych etykietowanych i dużą ilość danych nieetykietowanych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Nie potrzebuje etykiet.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest tożsame z uczeniem ze wzmocnieniem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wymaga etykiet dla wszystkich przykładów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest przydatne, gdy etykietowanie danych jest drogie lub czasochłonne.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wykorzystuje techniki takie jak self-training lub co-training.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1336,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Funkcje aktywacji w sieciach neuronowych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Sigmoid, ReLU, Tanh, Softmax.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Sigmoid",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Linear (tylko w regresji).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Logarytmiczna.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ELU (Exponential Linear Unit).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Heaviside (funkcja skokowa).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1337,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Instancja odstająca (Outlier):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Przykład w zbiorze danych, który znacząco odbiega od pozostałych obserwacji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Inną nazwą instancji etykietowanej.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Element zawsze usuwany przed trenowaniem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Środek ciężkości klastra.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Może negatywnie wpływać na modele takie jak regresja liniowa.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest zawsze wynikiem błędu pomiarowego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1338,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Algorytm K-Means:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest algorytmem uczenia nienadzorowanego służącym do klasteryzacji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Jest metodą uczenia nadzorowanego.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wymaga etykiet klas dla każdego punktu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Zawsze znajduje globalne optimum.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Dąży do minimalizacji wariancji wewnątrz klastrów.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest czuły na początkową inicjalizację środków klastrów.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1339,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Dla cech X, Y uzyskano wartość współczynnika korelacji liniowej -0.95. Co on oznacza?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Oznacza bardzo silną ujemną korelację liniową.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wzrostowi wartości cechy X towarzyszy wzrost wartości cechy Y.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Oznacza brak związku między cechami.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wskazuje na związek nieliniowy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Punkty na wykresie rozrzutu układają się blisko linii prostej o ujemnym nachyleniu.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Oznacza, że X powoduje Y (związek przyczynowo-skutkowy).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1340,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Mając uzupełnioną macierz błędów (confusion matrix), które metryki do oceny jakości modelu można obliczyć?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Accuracy, Precision (Precyzja), Recall (Czułość), F1-score, Specificity.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "precyzję",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Średni błąd kwadratowy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Współczynnik determinacji R2.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Matthews Correlation Coefficient (MCC).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Entropia krzyżowa.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1341,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Algorytmy uczenia nadzorowanego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Regresja liniowa, SVM, Drzewa decyzyjne, k-NN, Sieci neuronowe.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "K-NearestNeighbors",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "K-Means",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "PCA",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Naive Bayes.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Random Forest.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1342,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Algorytmy uczenia nienadzorowanego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "K-Means, DBSCAN, PCA, Apriori, Autoenkodery.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Regresja Liniowa",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Random Forest",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Naive Bayes",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "GMM (Gaussian Mixture Models).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "t-SNE.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1343,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Wskaż poprawne właściwości odnoszące się do analizy składowych głównych (PCA).",
+  "options": [
+   {
+    "key": "a",
+    "text": "Metoda statystyczna służąca do redukcji wymiarowości.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Jest metodą nienadzorowaną.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Służy do klasyfikacji obrazów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Wymaga danych w postaci tekstowej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Maksymalizuje wariancję rzutowanych danych.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Składowe główne są skorelowane.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1344,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Jakie zastrzeżenia przewidział Turing przeciwko sensowności zaproponowanego przez siebie testu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Turing rozważał m.in. argument z braku świadomości, argument z niepełnosprawności maszyny.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Maszyna cyfrowa jest w stanie zrobić tylko to, co nakazuje jej program.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Test Turinga jest niemożliwy do przeprowadzenia.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Maszyny nigdy nie będą umiały grać w szachy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Chiński Pokój Searla jest znanym argumentem przeciwko testowi Turinga.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Turing przewidywał, że maszyny nigdy nie przejdą testu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1345,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Parametr k w algorytmie kNN (k-Nearest Neighbors):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Oznacza liczbę najbliższych sąsiadów branych pod uwagę przy klasyfikacji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "k oznacza liczbę rozpoznawanych klas.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "k to liczba warstw w sieci.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "k to wymiarowość danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Małe k może prowadzić do overfittingu.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "k musi być zawsze liczbą parzystą.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1346,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "W ramach klasyfikacji binarnej uzyskano następujące wyniki: TP = 90; TN = 30; FP = 10; FN = 70. Ile wynosi wartość predykcyjna dodatnia?",
+  "options": [
+   {
+    "key": "a",
+    "text": "PPV = TP / (TP + FP).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "0,5",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "0,9",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "0,7",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Dla TP=90 i FP=10 wynosi 0.9.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest tożsama z czułością (Recall).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1347,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Przewidywanie jednego ulubionego koloru danej osoby (z 5 możliwych: {żółty, różowy, niebieski, zielony, czerwony}) to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest to zadanie klasyfikacji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Klasteryzacja",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Regresja",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Redukcja wymiarowości",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Zadanie uczenia nadzorowanego.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Zadanie optymalizacji globalnej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1348,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Macierz pomyłek (Confusion Matrix):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jej rozmiar to N x N, gdzie N to liczba klas.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Macierz pomyłek zawsze ma rozmiar 2x2.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Pokazuje tylko błędy modelu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie pozwala na obliczenie czułości.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Przekątna macierzy zawiera liczby poprawnych predykcji.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Służy do oceny modeli regresji.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1349,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Jakie parametry należy ustawić w algorytmie DBSCAN do grupowania danych?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Epsilon (promień sąsiedztwa) oraz MinPts (minimalna liczba punktów).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Liczba iteracji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Liczba klastrów k.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Współczynnik uczenia.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "DBSCAN nie wymaga podania liczby klastrów z góry.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "DBSCAN radzi sobie z klastrami o różnych gęstościach.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1350,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Które z poniższych cech najlepiej opisują algorytm k-średnich (k-means)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Grupuje dane poprzez minimalizację sumy kwadratów odległości od środków klastrów.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wymaga określenia liczby klastrów na początku.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Jest odporny na wartości odstające.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Działa dobrze dla klastrów o dowolnych kształtach.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest algorytmem iteracyjnym.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Gwarantuje znalezienie globalnego minimum funkcji celu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1351,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Jakie diagramy, ze względu na swoje właściwości wizualne, są najbardziej efektywne do prezentacji wyników grupowania przez algorytm k- średnich (k-means)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Najlepiej widoczna na wykresie punktowym (scatter plot).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wykres punktowy.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Wykres kołowy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Histogram.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wykres łokcia (Elbow method) służy do wyboru optymalnego k.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Dendrogram.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1352,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Które z poniższych opcji opisują cechy lub zastosowania algorytmu grupowania aglomeracyjnego?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Tworzy hierarchię klastrów (dendrogram).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Redukcja wymiarowości danych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wymaga podania liczby klastrów przed startem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest zawsze szybsze od k-means.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Może stosować różne kryteria łączenia (linkage).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest metodą uczenia nadzorowanego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1353,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Które z poniższych stwierdzeń trafnie opisują metodę analizy głównych składowych (PCA)?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Nowe cechy (składowe) są liniowymi kombinacjami cech oryginalnych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "PCA tworzy składowe, które są wzajemnie ortogonalne.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Zawsze zachowuje 100% wariancji danych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Służy do usuwania brakujących danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Składowe główne są uporządkowane według ilości wyjaśnianej wariancji.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "PCA jest bardzo wrażliwe na skalowanie danych.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1354,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Które z poniższych zastosowań są odpowiednie dla algorytmu Apriori?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służy do odkrywania częstych zbiorów elementów i reguł asocjacyjnych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Analiza koszykowa w handlu detalicznym.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Klasyfikacja spamu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Rozpoznawanie twarzy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wykorzystuje miary takie jak wsparcie (support), ufność (confidence) i przyrost (lift).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest stosowany w systemach rekomendacyjnych.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1355,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Które z poniższych metod, algorytmów lub technik są stosowane w uczeniu nienadzorowanym?",
+  "options": [
+   {
+    "key": "a",
+    "text": "K-Means, Hierarchical Clustering, PCA, Autoenkodery, SOM.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Autoenkodery, sieć Kohonena",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Regresja liniowa, k-NN",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Random Forest, XGBoost",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Analiza składowych niezależnych (ICA).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "SVD.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1356,
+  "topic": "machine_learning",
+  "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
+  "question": "Elementy uczenia ze wzmocnieniem (Reinforcement Learning):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Agent, Środowisko (Environment), Stan (State), Akcja (Action), Nagroda (Reward), Polityka (Policy).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Polityka",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Etykieta klasy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Zbiór treningowy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Funkcja wartości (Value Function).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Eksploracja vs Eksploatacja.",
+    "correct": true
+   }
+  ]
+ }
+]

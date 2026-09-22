@@ -1,0 +1,1493 @@
+[
+ {
+  "id": 132,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Wymagania stawiane schematom rozwiązywania numerycznego zagadnienia początkowego to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jawne uwzględnienie warunków brzegowych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wprowadzenie siatki przestrzennej zgodnej z siatką czasową",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zgodność aproksymacji różnicowej, dokładność, stabilność, efektywność czasowa i pamięciowa",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "algorytm powinien mieć względnie małe wskaźniki uwarunkowania",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "współczynnik propagacji błędu < 1, zgodność aproksymacji różnicowej",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "wskaźniki uwarunkowania powinny mieć takie same wartości w każdej iteracji algorytmu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 133,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Zaletami prowadzenia transmisji w trybie pełnego dupleksu w standardzie Ethernet są:",
+  "options": [
+   {
+    "key": "a",
+    "text": "całkowita likwidacja kolizji w segmencie sieci",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "możliwość dwukrotnego zwiększenia sumarycznej przepustowości sieci",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "brak ograniczenia długości medium transmisyjnego w segmencie warstwy fizycznej wynikającego z wymogów protokołu CSMA/CD",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "możliwości wykorzystania urządzeń hub",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 134,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Model odniesienia OSI/ISO:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest modelem czterowarstwowym",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "definiuje standardy w ramach każdej warstwy (np. protokół IP w warstwie sieciowej)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "określa zadania poszczególnych warstw",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "pozwala na niezależny rozwój sprzętu i oprogramowania w ramach poszczególnych warstw",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 135,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Osiągnięcie przepustowości 1 Gb/s na kablu UTP kategorii 5e (tym samym, który jest używany w transmisji 100 Mb/s) w standardzie Ethernet jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "możliwe dzięki wykorzystaniu do transmisji wszystkich czterech par",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "możliwe dzięki wykorzystaniu bardziej złożonego kodowania",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "nie jest możliwe - wymaga kabla o lepszych parametrach",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie jest możliwe - taką przepustowość można osiągnąć tylko używając światłowodu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 136,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Kodowanie sygnałów w transmisji w sieciach komputerowych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wpływa na uzyskiwaną przepustowość",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "jest zależne od wykorzystywanego medium",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jest przedmiotem zainteresowania warstwy sieciowej modelu OSI/ISO",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "może pozwalać na osiągnięcie samosynchronizacji nadajnika i odbiornika",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 137,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Istnienie ograniczenia maksymalnej odległości między komunikującymi się hostami wynika z:",
+  "options": [
+   {
+    "key": "a",
+    "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy łącza danych",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w ramach jednego segmentu sieci: parametrów medium fizycznego",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy sieciowej",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "w ramach kilku segmentów sieci rozdzielonych przełącznicami: wymogów protokołu warstwy sieciowej",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 138,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Wirtualne sieci lokalne:",
+  "options": [
+   {
+    "key": "a",
+    "text": "można definiować w oparciu o adresy fizyczne",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "mogą być rozpięte na wielu urządzeniach warstwy drugiej modelu OSI/ISO",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "stanowią mechanizm alternatywny dla budowy drzewa rozpinającego",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "stanowią podstawowy mechanizm zapobiegania przeciążeniom mostka",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "wyznaczają domenę rozgłoszeniową",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "poprawiają bezpieczeństwo sieci",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "można definiować w oparciu o adresy logiczne",
+    "correct": true
+   },
+   {
+    "key": "h",
+    "text": "można definiować w oparciu o porty routera",
+    "correct": false
+   },
+   {
+    "key": "i",
+    "text": "służą do dynamicznego uzyskiwania adresu IP",
+    "correct": false
+   },
+   {
+    "key": "j",
+    "text": "mogą być używane zamiast protokołu ARP",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 139,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Algorytm budowy drzewa rozpinającego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest stosowany w przypadku mostków uczących się",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "służy zapobieżeniu występowania zapętleń transmisji ramek",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jest jednym ze sposobów elekcji głównego routera w sieci",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy zrównoważeniu obciążenia pomiędzy łączami o takich samych przepustowościach",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 140,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Które warstwy modelu OSI/ISO są różne dla sieci WAN i LAN?",
+  "options": [
+   {
+    "key": "a",
+    "text": "fizyczna i łącza danych",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "fizyczna i sieci",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "łącza danych i sieci",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "fizyczna, łącza danych i sieci",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 141,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Dopisz, do czego jest wykorzystywany protokół ARP:",
+  "options": [
+   {
+    "key": "a",
+    "text": "uzyskiwania adresu IP",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "uzyskiwania adresu MAC urządzenia spoza naszej sieci lokalnej",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "określenie odwzorowania między adresami warstwy 3 i 2 modelu OSI/ISO",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "wyznaczania ścieżki pakietu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 142,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Jeżeli dwie stacje znajdujące się w innych sieciach IP połączone są ze sobą dokładnie jednym routerem i chcą komunikować się ze sobą, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "obydwie stacje muszą posiadać jednakową maskę",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "musi być uruchomiony mechanizm Proxy ARP na routerze",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "na routerze konieczne jest dodanie pozycji routingu statycznego",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wymagane jest ustawienie na każdej stacji adresu IP",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 143,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Protokół IP w wersji 4 posiada następujące cechy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "pozwala na fragmentację pakietów w węzłach pośrednich i u nadawcy",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zawiera mechanizmy potwierdzania doręczenia pakietów",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "umożliwia kontrolę nagłówka pakietu za pomocą sumy kontrolnej",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "jest protokołem połączeniowym",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "umożliwia komunikację priorytetową",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "jest zawodny, ale każda utrata pakietu jest sygnalizowana",
+    "correct": false
+   },
+   {
+    "key": "g",
+    "text": "posiada płaską adresację",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 144,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "W jakich przypadkach jest stosowany protokół ICMP?",
+  "options": [
+   {
+    "key": "a",
+    "text": "transmisji danych wysokopriorytetowych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "uzyskiwania informacji o konfiguracji sieci",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "sygnalizacji sytuacji awaryjnych",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "wyszukiwania odbiorców ruchu multicastowego",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 145,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Jaki mechanizm uniemożliwia nieskończone krążenie ramek IP w sieci w przypadku wystąpienia pętli?",
+  "options": [
+   {
+    "key": "a",
+    "text": "mechanizm split-horizon",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "mechanizm trigger-update",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "pole TTL",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "NAT",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "STP",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 146,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Parametr \"niezawodność łącza\" wchodzi w skład metryki protokołu routingu:",
+  "options": [
+   {
+    "key": "a",
+    "text": "EIGRP",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "RIPv2",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "IGRP",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "OSPF",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 147,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Protokół UDP:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wprowadza mechanizmy fragmentacji dla danych użytkownika przekraczających maksymalny rozmiar datagramu UDP",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "pozwala na grupowanie danych otrzymanych do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "stosuje porty jako adresy warstwy transportowej",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "nie zabezpiecza przed duplikacją i zmianą kolejności datagramów",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 148,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Adres typu broadcast (rozgłoszenia) IP w wersji 4, w której znajduje się host 110.104.1.10 i którą określa maska 255.0.0.0, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "110.104.1.10",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "110.255.255.255",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "110.104.1.255",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 149,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Pole o nazwie Time To Live w datagramie IP, które zabezpiecza przed zapętleniem routowania datagramu pomiędzy kolejnymi routerami w sieci, zawiera:",
+  "options": [
+   {
+    "key": "a",
+    "text": "liczbę routerów, przez jakie datagram IP może zostać przekazany danej",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "czas w sekundach, w którym datagram IP można jeszcze przekazywać dalej",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 150,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Protokół UDP definiuje identyfikatory przesyłanych do hosta-odbiorcy datagramów zwane numerami portów, o długości:",
+  "options": [
+   {
+    "key": "a",
+    "text": "8 bitów",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "32 bity",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "4 bity",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "16 bitów",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 151,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Wartości adresu IPv6 oraz maski, określające wszystkie hosty w internecie, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "::/0",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "0.0.0.0/0",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "::/2000",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ff02::1",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 152,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Istnienie zasady “Longest prefix match” w rutowaniu IP spowoduje, że adres docelowy 200.200.200.1 datagramu IP przy istnieniu w tablicy rutowania jednocześnie reguł o wzorcach i maskach (podano w notacji CIDR): 200.200.200.0/18, 200.200.200.0/20, 200.200.200.0/22, 200.200.200.0/24 zostanie dopasowany do:",
+  "options": [
+   {
+    "key": "a",
+    "text": "200.200.200.0/20",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "200.200.200.0/18",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "200.200.200.0/22",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "200.200.200.0/24",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 153,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Maksymalna długość pakietu IP wersja 4, licząc w bajtach, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "nie istnieje taki limit",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "1500",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "65535",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "576",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "1025",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 154,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Router iBGP (internal Border Gateway Protocol), którego wprowadzenie do systemu rutowania iBGP umożliwia znaczne zredukowanie ilości otwartych sesji BGP między innymi routerami (rezygnację z tzw. full-mesh) nosi nazwę:",
+  "options": [
+   {
+    "key": "a",
+    "text": "BGP Mirror",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Route Reflector Client (RRC)",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 155,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Liczba klas CoS (Class of Service), definiowanych przez podstawowy mechanizm implementacji QoS (Quality of Service) w Ethernet (czyli standard IEEE 802.1p), to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "8",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "255",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "16",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "65536",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "7",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 156,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Wariant protokołu STP (Spanning Tree Protocol, IEEE 802.1d) pozwalający w technologii Ethernet na logiczne pogrupowanie sieci VLAN i budowanie mniejszej liczby drzew rozpinających (po 1 drzewie dla każdej grupy) to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "PVSTP (Per VLAN Spanning Tree Protocol)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "MSTP (Multiple Spanning Tree Protocol)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "RSTP (Rapid Spanning Tree Protocol)",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "SPB (Shortest Path Bridging)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 157,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Nazwa procesu przekazywania wiedzy o trasach pomiędzy różnymi protokołami rutowania dynamicznego IP w routerach IP, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "redystrybucja",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "IP Route Spoofing",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 158,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Co określa standard IEEE 802.1Q?",
+  "options": [
+   {
+    "key": "a",
+    "text": "wirtualne sieci LAN (VLAN) budowane w środowisku transportującym ramki",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "technologię tunelowania sieci VLAN o nazwie Q-in-Q",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "private VLAN nadbudowaną nad Ethernet",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 159,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Protokół umożliwiający konwersję adresu IP zdalnej stacji na jej adres MAC w Ethernet, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "SLIP (Serial Line Internet Protocol)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "ARP (Address Resolution Protocol)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "MLD (Multicast Listener Discovery)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 160,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Dwie podwarstwy definiowane w ramach warstwy drugiej modelu ISO-OSI to odpowiednio:",
+  "options": [
+   {
+    "key": "a",
+    "text": "FDDI i CDDI",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "LAN i WAN",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "LP (Link Pulse) i PHY (Physical)",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "LLC (Logical Link Control) i MAC (Media Access Control)",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 161,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Rodzaj obszaru (area) w domenie OSPF (Open Shortest Path First) nie otrzymującego żadnych informacji o zewnętrznych (external) trasach rutowania OSPF, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "backbone",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "internal",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "stub area",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "NSSA",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 162,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Parametr o nazwie “Wielkość okna” (Window size), którego wartość przekazywana jest w datagramach potwierdzenia TCP (Transmission Control Protocol Acknowledgment) w kierunku od odbiorcy do nadawcy ma na celu:",
+  "options": [
+   {
+    "key": "a",
+    "text": "określenie długości następnego datagramu, oraz wszystkich kolejnych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "określić ilość danych, jaką nadawca może w danej chwili wysłać (służy do sterowania przepływem)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "określenie ilości danych w datagramie, w którym się znajduje - i w przypadku potwierdzeń TCP nie ma żadnego znaczenia",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "informowanie o wielkości datagramu, jaką może przyjąć host w aktualnym stanie",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 163,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Dwa rodzaje obszarów (area) w protokole routingu dynamicznego IS-IS (Intermediate System to Intermediate System), to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "intra-area i inter-area",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "stub i backbone",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "LAN i WAN",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Autonomous System i Internal System",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1267,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Pula adresów IPv4 przewidziana dla grup IP Multicast (Klasa D adresów IPv4), to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zakres od 224.0.0.0 do 239.255.255.255.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "239.0.0.0 – 255.255.255.255",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "192.168.0.0 – 192.168.255.255",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "10.0.0.0 – 10.255.255.255",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "127.0.0.0 – 127.255.255.255",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "172.16.0.0 – 172.31.255.255",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1268,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Przykłady polskich nazw warstw w stosowanym w sieciach komputerowych modelu ISO OSI RM (ISO Open Systems Interconnection Reference Model), to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Fizyczna, Łącza danych, Sieciowa, Transportowa, Sesji, Prezentacji, Aplikacji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Warstwa sesji",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Warstwa sprzętowa",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Warstwa internetowa",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Warstwa 3 to warstwa sieciowa (np. protokół IP).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Model ISO/OSI ma 4 warstwy.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1269,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Protokół automatycznie eliminujący możliwość zapętlenia transmisji ramki typu broadcast w sieci Ethernet (powstania tzw. broadcast storm), to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Blokuje redundantne ścieżki w sieci Ethernet, tworząc strukturę drzewa bez pętli.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "STP (Spanning Tree Protocol)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "DHCP",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "BGP",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Służy do automatycznej konfiguracji adresów IP.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Działa w warstwie 3 modelu OSI.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1270,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Sieć 210.210.210.192/26:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zakres adresów użytkowych: 210.210.210.193 - 210.210.210.254.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "210.210.210.210",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "210.210.210.190",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "210.210.210.255",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Adres rozgłoszeniowy to 210.210.210.255.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Maska podsieci to 255.255.255.0.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1271,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Jakiej techniki przesyłania ruchu sieciowego poprzez ruter IP użyjesz, gdy w sieciach IP organizacji, w której pracujesz, zabrakło adresów IPv4 dla urządzeń, a dodatkowo urządzenia te nie powinny być bezpośrednio dostępne i adresowalne z Internetu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "NAT (Network Address Translation).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "RPF (Reverse Path Forwarding)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "DNS",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ICMP",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ARP",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "OSPF",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1272,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Tak zwana sól (ang. salt), czyli dane losowe dodawane do hasła podczas obliczania funkcji skrótu przechowywanej w systemach informatycznych, ma na celu:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Unikalny ciąg znaków dodawany do hasła przed haszowaniem.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "utrudnienie sortowania haseł przez użytkowników.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "skrócenie czasu obliczania funkcji skrótu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "umożliwienie odzyskania hasła w postaci jawnej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Chroni przed atakami z użyciem Rainbow Tables.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest przechowywana w bezpiecznym module sprzętowym (HSM).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1273,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Standard definiujący schemat dla certyfikatów służących do budowania struktury hierarchicznej infrastruktury klucza publicznego, stosowany na przykład w zabezpieczonych technologiach webowych, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "X.509",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "H.323",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "PKI-Standard",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "SSL-Cert",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "AES-256",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "RSA-4096",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1274,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Protokół UDP:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest bezpołączeniowy, nie gwarantuje dostarczenia pakietów.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "definiuje 16-to bitową adresację gniazd.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zapewnia retransmisję zgubionych danych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wymaga nawiązania połączenia.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Ma mniejszy narzut nagłówka niż TCP.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest stosowany w protokole HTTP/1.1.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1275,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Zapisana liczbowo wartość maski podsieci IPv4 dla adresu sieci: 5.5.5.0/30, to",
+  "options": [
+   {
+    "key": "a",
+    "text": "255.255.255.252",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "255.255.255.0",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "255.255.255.248",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "255.255.255.192",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "255.255.255.254",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "255.255.255.128",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1276,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Czy protokół TCP, stosowany w komunikacji w sieciach komputerowych, wymusza swoimi uwarunkowaniami technicznymi limit długości transmisji danych, przypadających na jedno połączenie?",
+  "options": [
+   {
+    "key": "a",
+    "text": "TCP traktuje dane jako strumień bajtów bez narzuconego limitu całkowitej długości.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "tak, jest to zawsze 4GB.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zależy od wersji systemu operacyjnego.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wynosi 64 KB na segment.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wynosi 2^64 bajtów.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Jest ograniczony rozmiarem okna (window size).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1277,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Długość unikatowego adresu MAC (Media Access Control), stosowanego w interfejsach NIC (Network Interface Card) warstwy 2 ISO OSI (na przykład w Ethernet), to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "48 bitów (6 bajtów).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "32 bity",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "64 bity",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "128 bitów",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "24 bity",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "16 bitów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1278,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Światłowód, w którym wiązka światła o danej (takiej samej) długości fali może przemieszczać się tylko jedną drogą i nie można przesłać kilku wiązek o takiej samej długości fali przez ten światłowód jednocześnie, oznaczamy określeniem:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Posiada bardzo cienki rdzeń, co pozwala na przesyłanie tylko jednego modu światła.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "jednomodowy",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "wielomodowy",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "gradientowy",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na transmisję na znacznie większe odległości niż wielomodowy.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest tańszy w instalacji niż skrętka miedziana.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1279,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Przykłady wykorzystywanych obecnie szeregowych magistral cyfrowych, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "SPI, I2C, UART, USB, CAN.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "SPI, I2C",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "PCI Express",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ATA",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "SCSI",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "ISA",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1280,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Przykłady specyfikacji protokołów komunikacyjnych dla sieci bezprzewodowych lub systemów komunikacji bezprzewodowej to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wi-Fi (802.11), Bluetooth, ZigBee, LoRaWAN, 5G.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "LoRaWAN",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Ethernet",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "RS-232",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Token Ring",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Frame Relay",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1281,
+  "topic": "networks",
+  "courseName": "Sieci komputerowe",
+  "question": "Adres IPv6 w sieci 5::0/64:",
+  "options": [
+   {
+    "key": "a",
+    "text": "5::1, 5::abcd, itp.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "1::1",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "5:0:0:0:0:0:0:1",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "::5",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "5::g123",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "5::1:2:3:4:5",
+    "correct": false
+   }
+  ]
+ }
+]

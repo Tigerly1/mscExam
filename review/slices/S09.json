@@ -1,0 +1,1549 @@
+[
+ {
+  "id": 164,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Dla uniknięcia błędów uwarunkowanych czasowo, maksymalna liczba procesów, które mogą znajdować się wewnątrz sekcji krytycznej, wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "8",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "1",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "0",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "16",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 165,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Inicjalna wartość semafora uogólnionego implementującego sekcję krytyczną wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "0",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "1",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "-1",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "dowolna liczba dodatnia",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 166,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Proces transferowania danych, które mają być docelowo wyprowadzone na urządzenie peryferyjne, do przestrzeni pamięci pomocniczej i transferowanie ich na to urządzenie w dogodniejszym czasie nosi nazwę:",
+  "options": [
+   {
+    "key": "a",
+    "text": "spooling",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "virtualization",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "caching",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "throttling",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 167,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Centralny Procesor, po otrzymaniu informacji o przerwaniu z urządzenia wejścia/wyjścia:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zatrzymuje się na określony okres czasu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "przekazuje sterowanie do systemu obsługi przerwań po zakończeniu wykonywania bieżącej instrukcji",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 168,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Który z problemów rozwiązuje zaproponowany przez Dijkstrę algorytm bankiera:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wzajemnego wykluczania (mutual exclusion)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wzajemnego zakleszczenia (deadlock exclusion)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "unikania zakleszczenia (deadlock avoidance)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "unikania wykluczania (exclusion avoidance)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 169,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "System operacyjny jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zbiorem składników sprzętowych (hardware routines)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "zbiorem driverów obsługujących urządzenia wejścia-wyjścia (input-output devices)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zbiorem składników programowych (software routines)",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 170,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Szyfrowanie kluczem publicznym w szyfrowaniu asymetrycznym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "pozwala jedynie właściwemu odbiorcy odkodować komunikat",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "tylko posiadacz klucza prywatnego może odkodować komunikat",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "wystarczy użyć tego samego klucza do deszyfrowania wiadomości",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wiadomość zaszyfrowana za pomocą klucza publicznego może być odszyfrowana tylko za pomocą klucza prywatnego",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 171,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Buforowanie plików realizowane jest w celu:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zwiększenia wydajności dostępu do pamięci pomocniczej",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wspomagania obsługi przerwań",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zwiększenia wydajności procesora",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wyrównania różnic prędkości przesyłania danych między różnymi urządzeniami",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 172,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Zaznacz prawdziwe stwierdzenia na temat stronicowania:",
+  "options": [
+   {
+    "key": "a",
+    "text": "stronicowanie rozwiązuje problem zewnętrznej fragmentacji pamięci",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "tablica stron jest stosowana do translacji adresu logicznego na adres fizyczny",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na strony, a pamięć logiczna na ramki, oraz że rozmiary stron i ramek są jednakowe",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "stronicowanie rozwiązuje problem wewnętrznej fragmentacji pamięci",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na ramki, a pamięć logiczna na strony, oraz że rozmiary stron i ramek są jednakowe",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 173,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Zaznacz prawdziwe stwierdzenia na temat segmentacji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "segmentacja ułatwia nadanie częściom procesu odpowiednich atrybutów ochrony: dopuszczalny odczyt, dopuszczalny zapis, dopuszczalne wykonanie",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zastosowanie segmentacji wyklucza zastosowanie stronicowania",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "mogą istnieć następujące przykładowe rodzaje segmentów: kodu, danych, stosu",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "elementy tablicy segmentów zawierają adresy/numery ramek, w których znajdują się segmenty oraz rozmiary poszczególnych segmentów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 174,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Zaznacz prawdziwe stwierdzenia na temat algorytmów wywłaszczania stron:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zaletą algorytmu zastępowania stron FIFO jest to, że nie zachodzi w nim efekt zwany anomalią Belady'ego",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "w algorytmie zastępowania stron LRU zastępowana jest strona, która najdłużej nie była używana",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "w algorytmie zastępowania stron zwanym algorytmem drugiej szansy algorytm wykorzystuje bit odniesienia, który określa, czy w pewnym przedziale czasu nastąpiło odwołanie do strony",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "zasadą działania algorytmu optymalnego zastępowania stron jest to, że zastąpiona zostaje strona, która najdłużej nie będzie używana",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "w algorytmie zastępowania stron LRU zachodzi efekt zwany anomalią Belady'ego",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "optymalny algorytm wywłaszczania stron zapewnia minimalną ilość wywłaszczeń stron przy ustalonej liczbie ramek",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "algorytm FIFO wywłaszcza stronę, do której czas dostępu był najdawniejszy",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 175,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Zaznacz prawdziwe stwierdzenia dotyczące pamięci wirtualnej:",
+  "options": [
+   {
+    "key": "a",
+    "text": "stronicowanie na żądanie jest jednym ze sposobów realizacji pamięci wirtualnej",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "procedura leniwej wymiany (ang. lazy swapper) polega na tym, że nie wykonuje się wymiany stron w pamięci, jeśli nie zachodzi taka potrzeba",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "pamięć wirtualna umożliwia wykonywanie procesów, które nie są w całości przechowywane w pamięci operacyjnej",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "przydział ramek oparty na globalnym algorytmie zastępowania może ograniczyć szamotanie (w porównaniu do algorytmu lokalnego zastępowania), gdyż szamoczący się proces nie doprowadza do szamotania innych procesów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 176,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Zaznacz prawdziwe zdania na temat semaforów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zaletą aktywnego czekania w trybie użytkownika jest brak konieczności kosztownego przejścia do trybu uprzywilejowanego (systemowego)",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "semafor może być użyty do synchronizacji dostępu do sekcji krytycznej",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "aktywne czekanie oznacza ciągłe testowanie wartości wyrażenia do momentu, gdy przyjmie ono wartość, dla której czekanie może być zakończone",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "semafor nie nadaje się do zdeterminowania kolejności wykonywanych operacji w grupie współbieżnych procesów",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "semafor może być użyty do synchronizacji dostępu do sekcji krytycznej, poprzez sygnalizowanie (V) przed wejściem i czekanie (P) po zakończeniu",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "mogą wykonywać operacje czekaj (P) i sygnalizuj (V)",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "aktywne czekanie polega na uśpieniu procesu i aktywnym oczekiwaniu na sygnał wybudzający",
+    "correct": false
+   },
+   {
+    "key": "h",
+    "text": "można stworzyć semafor zliczający z 2 semaforów binarnych i zmiennej zliczającej wykorzystującej te semafory",
+    "correct": true
+   },
+   {
+    "key": "i",
+    "text": "przed wejściem do sekcji krytycznej wykonywana jest operacja sygnalizuj (V)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1138,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Algorytm bankiera (Dijkstra) służy do:",
+  "options": [
+   {
+    "key": "a",
+    "text": "unikania zakleszczenia (deadlock avoidance) poprzez sprawdzanie stanu bezpiecznego.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wykrywania cykli w grafie zasobów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "szeregowania procesów w systemie czasu rzeczywistego.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zarządzania pamięcią wirtualną.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "znajdowania najkrótszej ścieżki w sieci komputerowej.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "optymalizacji zużycia energii przez procesor.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1139,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Buforowanie plików (File Buffering):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zwiększa wydajność poprzez redukcję liczby fizycznych operacji wejścia/wyjścia na dysku.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "służy wyłącznie do zabezpieczenia danych przed usunięciem.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "uniemożliwia jednoczesny dostęp wielu procesów do pliku.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest realizowane tylko w systemach 64-bitowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "polega na szyfrowaniu zawartości pliku.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "jest zawsze zarządzane przez użytkownika, a nie system operacyjny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1140,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Centralny Procesor, po otrzymaniu informacji o przerwaniu z urządzenia wejścia/wyjścia:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Procesor kończy bieżącą instrukcję, zapisuje stan i przekazuje sterowanie do ISR.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "procesor natychmiast przerywa wykonywanie bieżącej instrukcji w jej połowie.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "przerwania są ignorowane w trybie użytkownika.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "tylko system operacyjny może generować przerwania.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "przerwania mogą być maskowalne lub niemaskowalne (NMI).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "po obsłudze przerwania procesor zawsze restartuje system.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1141,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Inicjalna wartość semafora binarnego implementującego sekcję krytyczną (mutex) wynosi:",
+  "options": [
+   {
+    "key": "a",
+    "text": "1",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "0",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "-1",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "n (liczba procesów)",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "nieskończoność",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "2",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1142,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Algorytm szeregowania z wywłaszczaniem (preemptive scheduling):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwala na przerwanie bieżącego procesu i przekazanie procesora innemu procesowi.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "szeregowanie bez wywłaszczenia.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie pozwala na zmianę procesu przed jego zakończeniem.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest stosowany tylko w systemach wsadowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "przykładem jest algorytm Round Robin (karuzelowy).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "minimalizuje liczbę przełączeń kontekstu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1143,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Aby system operacyjny mógł wykonywać wielozadaniowość (multitasking):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wymaga wsparcia sprzętowego (np. przerwania zegarowe, ochrona pamięci).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "musi posiadać przynajmniej 2 procesory fizyczne.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie może używać pamięci wirtualnej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wymaga, aby wszystkie programy były napisane w tym samym języku.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "musi implementować mechanizm przełączania kontekstu (context switching).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "nie może obsługiwać sieci.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1144,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Jeżeli wirtualny adres w programie jest 16 bitowy i rozmiar strony jest 0,5 K to możemy maksymalnie zaadresować następującą liczbę stron:",
+  "options": [
+   {
+    "key": "a",
+    "text": "128.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "64.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "256.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "1024.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "512.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "32.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1145,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Pamięć asocjacyjna (TLB - Translation Lookaside Buffer):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Przechowuje ostatnio używane mapowania adresów wirtualnych na fizyczne.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "jest konieczna dla efektywnej realizacji stronicowania.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służy do przechowywania danych na dysku.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest wolniejsza od pamięci RAM.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest rodzajem pamięci cache dla tablicy stron.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "przechowuje kody instrukcji procesora.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1146,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Maksymalna liczba procesów wewnątrz sekcji krytycznej (dla zapewnienia wzajemnego wykluczania):",
+  "options": [
+   {
+    "key": "a",
+    "text": "1",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "2",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Dowolna liczba.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "0",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "n-1",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "n",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1147,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Problem producent-konsument może być rozwiązany przy pomocy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Semafory, monitory, kolejki komunikatów.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "tylko Monitorów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "wyłącznie zmiennych globalnych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "tylko w systemach jednoprocesorowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "algorytmu Dijkstry znajdowania najkrótszej ścieżki.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "instrukcji skoku bezwarunkowego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1148,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Stan uprzywilejowany (Kernel Mode):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwala na wykonywanie wszystkich instrukcji procesora, w tym instrukcji sterujących sprzętem.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "umożliwia wykonywanie instrukcji systemu operacyjnego.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest dostępny dla każdej aplikacji użytkownika.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy do przyspieszania obliczeń matematycznych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "przejście do tego stanu następuje m.in. podczas wywołania systemowego (system call).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "wyklucza dostęp do pamięci RAM.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1149,
+  "topic": "operating_systems",
+  "courseName": "Systemy operacyjne",
+  "question": "Komunikacja synchroniczna między procesami:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Powoduje zawieszenie procesu wysyłającego do momentu odebrania komunikatu przez odbiorcę.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "umożliwia procesom synchronizację ich aktywności.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie wymaga potwierdzenia odbioru.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest zawsze szybsza od komunikacji asynchronicznej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest realizowana np. przez mechanizm rendezvous.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "nie może być stosowana w systemach rozproszonych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 202,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Prawo dostępu do pliku 453 pozwala:",
+  "options": [
+   {
+    "key": "a",
+    "text": "właścicielowi czytać plik",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wszystkim czytać plik",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "właścicielowi na odczyt, grupie na odczyt i uruchomienie, pozostałym na zapis i uruchomienie",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "grupie na odczyt i zapis, pozostałym tylko na odczyt",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 203,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Przy konfiguracji obsługi sieci w Unixie:",
+  "options": [
+   {
+    "key": "a",
+    "text": "plik /etc/hosts przechowuje listę znanych hostów i interfejsów sieciowych",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "plik /etc/hosts zawiera tylko adresy IP lokalnych interfejsów",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "plik /etc/networks zawiera adresy IP znanych sieci IP",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "plik /etc/networks przechowuje listę lokalnych interfejsów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 204,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące użytkownika i jego sesji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "praca programu logującego (login) jest sterowana m. in. zawartością plików /etc/nologin lub /etc/motd",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "o możliwościach użytkownika w systemie decyduje przynależność do odpowiednich grup użytkowników",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "w zależności od konfiguracji systemu mogą być odnotowywane podłączenia do systemu poprzez zmianę kontekstu użytkownika (komenda su)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "grupy użytkowników wprowadzono, aby ułatwić zarządzanie użytkownikami oraz podnieść bezpieczeństwo systemu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 205,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące procesu logowania się i uprawnień użytkowników:",
+  "options": [
+   {
+    "key": "a",
+    "text": "o postaci hasła decyduje administrator systemu zapisując ograniczenia w różnych wersjach systemu w różnych plikach konfiguracyjnych",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wszystkie grupy użytkowników dają im jednakowe uprawnienia",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "cała informacja dotycząca konfiguracji użytkownika w systemie jest zapisana jedynie w pliku /etc/passwd co zapewnia spójność informacji",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "do systemu użytkownik może podłączać się jedynie z konsoli systemu oraz zdalnie poprzez sieć",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "nazwa użytkownika w systemie UNIX musi być unikalna zaś numer identyfikacyjny może się powtarzać",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "technika shadow umożliwia podglądnięcie postaci zaszyfrowanej hasła każdego użytkownika w systemie przez dowolnego użytkownika",
+    "correct": false
+   },
+   {
+    "key": "g",
+    "text": "system PAM umożliwia m.in. odnotowywanie nieudanych prób podłączania się do systemu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 206,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Zaznacz prawdziwe stwierdzenia na temat procesów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "proces jest wykonaniem programu i składa się ze zbiorowości bajtów, w których wyróżnia się instrukcje maszynowe (tzw. tekst), dane i stos",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w kategoriach praktycznych proces w systemie UNIX jest jednostką utworzoną za pomocą funkcji systemowej fork (z wyjątkiem procesu o numerze 0)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "każdy uruchomiony w systemie UNIX proces otrzymuje od procesu potomnego dostęp do jego (procesu macierzystego) zmiennych środowiskowych",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "liczba możliwych do uruchomienia w systemie UNIX procesów jest ograniczona jedynie rozmiarem pamięci o dostępie swobodnym danego systemu komputerowego",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "wartość parametru NICE dla nowo utworzonego procesu jest wyliczana na podstawie średniego obciążenia systemu",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "każdy uruchomiony w systemie UNIX proces otrzymuje od systemu trzy otwarte pliki o numerach 0, 1 i 2",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "rekord w tablicy procesów znajdującej się w jądrze systemu operacyjnego zawiera podstawowe informacje o procesie, w tym jego właścicieli, listę segmentów oraz wskaźniki do U-obszaru",
+    "correct": true
+   },
+   {
+    "key": "h",
+    "text": "zmiana kontekstu z trybu użytkownika na tryb jądra następuje między innymi wówczas, gdy system przydziela procesor kolejnemu procesowi z kolejki gotowych do wykonania procesów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 207,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Interpretery poleceń systemu UNIX:",
+  "options": [
+   {
+    "key": "a",
+    "text": "w niektórych interpreterach poleceń można uniemożliwić odłączanie się od systemu poprzez wykorzystanie sekwencji Ctrl-D dzięki ustawieniu wartości odpowiedniej zmiennej środowiskowej",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wszystkie polecenia shella zwracają 0 (zero), kiedy wykonanie ich zakończy się niepowodzeniem lub wartość różną od 0 (zazwyczaj 1) w przypadku przeciwnym",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "każdy interpreter wykorzystuje trzy podstawowe typy zmiennych: specjalne, środowiska oraz programowe",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "błędne wykonanie komendy w linii komend można rozpoznać m. in. po zapisach do urządzenia /dev/null",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1171,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Pracując w powłoce bash pod kontrolą systemu operacyjnego Linux lub UNIX uruchomienie polecenia: rm / && echo ok",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zazwyczaj zakończy się błędem, a \"ok\" nie zostanie wypisane.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "spowoduje wypisanie na standardowym wyjściu komunikatu o niemożności usunięcia katalogu /",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "usunie wszystkie pliki w systemie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wypisze \"ok\" niezależnie od wyniku rm.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Operator && wykonuje drugie polecenie tylko wtedy, gdy pierwsze zakończyło się sukcesem (kod wyjścia 0).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Polecenie rm / bez opcji -r usunie katalog główny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1172,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie wzorca nazwy pliku data.{txt,sql,iq} będzie pasować do pliku o nazwie:",
+  "options": [
+   {
+    "key": "a",
+    "text": "data.txt, data.sql lub data.iq.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "data.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "dowolnego pliku zaczynającego się od data.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "tylko pliku o nazwie data.{txt,sql,iq}.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "plików o nazwach data.txtsql i data.txtiq.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "wzorzec ten nie jest obsługiwany przez bash.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1173,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Uprawnienia w systemie Linux/UNIX:",
+  "options": [
+   {
+    "key": "a",
+    "text": "System opiera się na uprawnieniach dla właściciela, grupy i innych (rwx).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "każdy użytkownik ma dostęp do wszystkich plików zarządzanych przez system operacyjny.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "tylko administrator (root) może czytać pliki.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "uprawnienia nie dotyczą katalogów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Uprawnienie 'x' dla katalogu pozwala na wejście do niego (cd).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Uprawnienia są zapisywane w treści pliku.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1174,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Posługując się nazwami plików, pracując w powłoce bash systemu operacyjnego Linux lub UNIX, ? (pytajnik) oznacza:",
+  "options": [
+   {
+    "key": "a",
+    "text": "dokładnie jeden dowolny znak.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dowolny ciąg znaków (w tym pusty).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zero lub jeden znak.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "znak zapytania.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "dowolną cyfrę.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "dowolną literę.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1175,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "System Linux/UNIX:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest systemem wielozadaniowym i wieloużytkownikowym.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "obsługuje wielu użytkowników.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie posiada systemu plików.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest systemem czasu rzeczywistego z natury.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jądro (kernel) zarządza zasobami sprzętowymi i udostępnia je aplikacjom.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest systemem wyłącznie tekstowym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1176,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Zmienna $? w powłoce bash dla systemu operacyjnego Linux lub UNIX przechowuje wartość:",
+  "options": [
+   {
+    "key": "a",
+    "text": "kod wyjścia (exit status) ostatnio wykonanego polecenia.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nie ma takiej zmiennej.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "identyfikator procesu powłoki.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ostatni argument poprzedniego polecenia.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "liczbę argumentów przekazanych do skryptu.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nazwę bieżącego użytkownika.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1177,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Uruchomienie, w powłoce bash systemu operacyjnego Linux lub UNIX, polecenia: ls | less powoduje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przekazanie standardowego wyjścia ls na standardowe wejście less.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "przekazanie standardowego wyjścia less na standardowe wejście ls.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "równoległe wykonanie obu poleceń bez powiązania.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zapisanie wyniku ls do pliku o nazwie less.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Umożliwia wygodne przeglądanie długiej listy plików generowanej przez ls.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Wyświetla tylko błędy polecenia ls.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1178,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Korzystając z systemu operacyjnego Linux lub UNIX, ustawienie praw dostępu 700 na pliku oznacza:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pełne prawa (rwx) dla właściciela i brak jakichkolwiek praw dla grupy i innych.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "brak praw dla innych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "prawo tylko do odczytu dla wszystkich.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "prawo do wykonywania dla grupy.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "prawo do zapisu dla wszystkich.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "plik jest ukryty.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1179,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie skrótu klawiszowego Control-c powoduje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wysyła sygnał SIGINT do bieżącego procesu na pierwszym planie.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nic.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "kopiuje zaznaczony tekst.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wylogowuje użytkownika.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Powoduje zazwyczaj natychmiastowe przerwanie działania programu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Zamyka wszystkie okna terminala.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1180,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX, użycie skrótu klawiszowego Control-z powoduje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wysyła sygnał SIGTSTP, wstrzymując działanie procesu i przenosząc go w tło.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wstrzymanie działania aktualnie obsługiwanego procesu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zamyka terminal.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "cofa ostatnią operację w edytorze.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Proces wstrzymany można przywrócić poleceniem 'fg' lub 'bg'.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Usuwa bieżącą linię poleceń.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1181,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Posługując się nazwami plików, pracując w powłoce bash systemu operacyjnego Linux lub UNIX, * (gwiazdka) oznacza:",
+  "options": [
+   {
+    "key": "a",
+    "text": "dowolny ciąg znaków (również pusty).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "pojedynczy znak.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "tylko litery.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "tylko cyfry.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "dowolny znak poza kropką na początku nazwy.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "tylko rozszerzenia plików.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1182,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Pliki, których nazwa zaczyna się od kropki (np. .bashrc):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Są traktowane jako pliki ukryte.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nie mogą być używane.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "są plikami systemowymi tylko do odczytu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "muszą mieć rozszerzenie .dot.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Można je wyświetlić za pomocą polecenia 'ls -a'.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Są automatycznie usuwane przy wylogowaniu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1183,
+  "topic": "unix_admin",
+  "courseName": "Systemy uniksowe",
+  "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie wzorca nazwy pliku [123]data będzie pasować do:",
+  "options": [
+   {
+    "key": "a",
+    "text": "1data, 2data lub 3data.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "data.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "123data.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "dowolnego pliku kończącego się na data.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "plików o nazwach [1]data, [2]data, [3]data.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "tylko pliku o nazwie [123]data.",
+    "correct": false
+   }
+  ]
+ }
+]

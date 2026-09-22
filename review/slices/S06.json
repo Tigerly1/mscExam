@@ -1,0 +1,1192 @@
+[
+ {
+  "id": 92,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "W językach imperatywnych (również obiektowych) przy wyborze reprezentacji dla danych rzeczywistych (zmiennoprzecinkowych) pojawiają się problemy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wystąpienia nadmiaru",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wystąpienia niedomiaru",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "dokładności",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 93,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Wskazania (pointers) w C, C++ używane są do reprezentowania (wskazywania):",
+  "options": [
+   {
+    "key": "a",
+    "text": "obszarów pamięci operacyjnej",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zmiennych złożonych",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zmiennych skalarnych",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "funkcji i metod",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 94,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "W jaki sposób można obliczyć długość tekstu przekazanego jako argument w poniższej funkcji w języku C? void foo(const char* txt) { ... }",
+  "options": [
+   {
+    "key": "a",
+    "text": "sizeof(txt)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "strlen(txt)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "txt.length()",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zliczając, ile znaków występuje w tekście od znaku na który wskazuje wskaźnik do znaku końca łańcucha znaków ('\\0')",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 95,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Co możesz powiedzieć o poniższej deklaracji w języku C? int t[10] = {1, 2, [4]=1};",
+  "options": [
+   {
+    "key": "a",
+    "text": "zgodnie ze standardem C99 spowoduje ona utworzenie tablicy zawierającej 10 elementów, z których 7 ma wartość 0",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "da ona taki sam efekt, jak deklaracja: int t[] = {1, 2, 0, 0, 1}",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 96,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "W jaki sposób obliczyć długość tablicy w funkcji foo() w języku C? void foo(double f[]) { // dlugosc tablicy t? }",
+  "options": [
+   {
+    "key": "a",
+    "text": "nie da się obliczyć",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "po wykonaniu poniższej instrukcji długość tablicy będzie umieszczona w zmiennej len: int len; for(len=0; t[len]; len++)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 97,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Która z implementacji funkcji zawierającej tablicę w języku C jest poprawna?",
+  "options": [
+   {
+    "key": "a",
+    "text": "int[] getTable() { int tab[10]; return tab; }",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "int * getTable(int n) { return (int*) malloc(n * sizeof(int)); }",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "int * getTable(int n) { return (int*) calloc(n, sizeof(n)); }",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 98,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Przeanalizuj poniższą deklarację w języku C: int (*x)(int, int);",
+  "options": [
+   {
+    "key": "a",
+    "text": "zmienna x jest dwuwymiarową tablicą wskaźników typu int* o zmiennym rozmiarze",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "deklaracja jest niezgodna ze składnią języka",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zmienna x jest wskaźnikiem na funkcję przyjmującą dwa argumenty typu int, zwracającą wartość typu int",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 99,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Które stwierdzenia dotyczące operatorów w języku C/C++ są poprawne:",
+  "options": [
+   {
+    "key": "a",
+    "text": "operatory addytywne mają mniejszy priorytet niż multiplikatywne",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wyrażenie z == ++z jest zawsze fałszywe dla zmiennej z typu int",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "żadne z pozostałych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 100,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Dzięki konwencji wywołania funkcji w języku C/C++ znanej jako __cdecl możliwa jest implementacja funkcji o zmiennej liczbie argumentów, jak printf(). Które stwierdzenia charakteryzujące funkcje typu __cdecl są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "w wygenerowanym kodzie wywołania funkcji argumenty umieszczane są na stosie od końca, dzięki temu na szczycie stosu jest jej pierwszy argument i analizując jego zawartość można określić spodziewaną liczbę argumentów wywołania",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w języku C kompilator może utworzyć kod wywołania funkcji typu __cdecl nie mając żadnych informacji o typach jej parametrów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 101,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "W jaki sposób przekazywany jest parametr będący tablicą do funkcji w języku C, np.: int main(int argc, char* argv[]) { ... }",
+  "options": [
+   {
+    "key": "a",
+    "text": "cała zawartość tablicy kopiowana jest na stos i funkcja działa na kopii tablicy",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "na stos przekazywany jest adres pierwszego elementu tablicy",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "tablice są zawsze przekazywane do funkcji jako wskaźnik",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "tablice są zawsze przekazywane do funkcji przez referencję",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "funkcja działa na kopii tablicy, dla której pamięć przydzielona jest na stercie; do funkcji trafia adres kopii tablicy",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "na stosie umieszczany jest pierwszy element tablicy",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1206,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Po wykonaniu fragmentu kodu napisanego w języku C: int a,b=1; a=b++ + b;",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wynik jest niezdefiniowany (undefined behavior).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "operator + nie ma w standardzie C określonej kolejności obliczenia operandów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "a zawsze wyniesie 3.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "a zawsze wyniesie 2.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wynik zależy od wersji kompilatora i poziomu optymalizacji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Kod ten nie skompiluje się w standardzie C11.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1207,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Typ double w języku C:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służy do przechowywania liczb zmiennoprzecinkowych podwójnej precyzji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w zmiennej tego typu możemy zapisać między innymi dowolną liczbę, którą można zapisać w typie char.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "ma mniejszy zakres niż typ float.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie może przechowywać wartości ujemnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Typowo zajmuje 8 bajtów w pamięci.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest typem całkowitym o dużej precyzji.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1208,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Przyjmijmy, że zmienne wskaźnikowe t oraz s są typu char, dodatkowo s wskazuje na niepusty łańcuch tekstowy, a t na adres pamięci rozpoczynający obszar przydzielony naszemu procesowi. Po wykonaniu fragmentu kodu napisanego w języku C: while(*t++=*s++);",
+  "options": [
+   {
+    "key": "a",
+    "text": "Kopiuje łańcuch znaków z s do t, włącznie ze znakiem końcowym '\\0'.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wskaźniki s oraz t zwiększą swoją wartość o tyle bajtów ile znaków znajduje się w łańcuchu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "pętla będzie trwać w nieskończoność.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "kopiuje tylko pierwszy znak.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest to idiomatyczny sposób kopiowania stringów w C.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Wymaga, aby t było większe od s.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1209,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Po wykonaniu fragmentu kodu oznaczającego deklarację w języku C: int tab[10], *ws=tab;",
+  "options": [
+   {
+    "key": "a",
+    "text": "ws wskazuje na pierwszy element tablicy (tab[0]).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nazwa tablicy tab jest wskaźnikiem na pierwszy element tablicy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "ws przechowuje kopię całej tablicy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "tab i ws to dwa różne typy, których nie można przypisać.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wyrażenie *(ws + 1) jest równoważne tab[1].",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Rozmiar tablicy tab można zmienić za pomocą realloc.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1210,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Fragmentu kodu w języku C: double (*fun1)(double, double);",
+  "options": [
+   {
+    "key": "a",
+    "text": "fun1 jest wskaźnikiem do funkcji przyjmującej dwa parametry typu double i zwracającej double.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "ogólnie nazwa funkcji jest jednocześnie wskaźnikiem do funkcji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest to wywołanie funkcji o nazwie fun1.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "deklaruje tablicę wskaźników.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "fun1 jest funkcją zwracającą wskaźnik do double.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Deklaracja ta jest błędna bez słowa kluczowego typedef.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1211,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Fragmentu kodu w języku C: int fib(int n){ if(n<3) return n; return fib(n-1) + fib(n-2); }",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest nieefektywna (złożoność wykładnicza) i przy każdym wywołaniu tworzy nową ramkę stosu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "przy każdym rekurencyjnym wywołaniu funkcji tworzona jest kopia argumentu n.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zawsze zwraca wynik w czasie O(n).",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie może być zaimplementowana w C.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Może prowadzić do przepełnienia stosu (stack overflow) dla dużych n.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest przykładem programowania dynamicznego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1212,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Algorytm minimax:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służy do wyboru optymalnego ruchu w grach dwuosobowych o sumie zerowej.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nawet w tak prostej grze jak kółko i krzyżyk nie da się przejrzeć całego drzewa ruchów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest algorytmem losowym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie wymaga funkcji oceny stanu gry.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Może być zoptymalizowany za pomocą odcięć alfa-beta (alpha-beta pruning).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest stosowany wyłącznie w grach karcianych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1213,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Wyszukiwanie w posortowanej tablicy n elementów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Można zastosować wyszukiwanie binarne o złożoności O(log n).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w celu wyszukania elementu o zadanej wartości musimy wykonać dokładnie n kroków.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zawsze wymaga O(n^2) operacji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie jest możliwe bez dodatkowego indeksu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wyszukiwanie liniowe jest zawsze szybsze dla n < 1000.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wymaga, aby tablica była posortowana malejąco.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1214,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Wyszukiwanie w posortowanej liście jednokierunkowej n elementów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wymaga przejścia sekwencyjnego, co daje złożoność pesymistyczną O(n).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wyszukanie elementu o zadanej wartości ma logarytmiczną złożoność czasową.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest szybsze niż w tablicy.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "pozwala na dostęp swobodny do elementów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Można zastosować wyszukiwanie binarne w czasie O(log n).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wymaga stałej ilości pamięci dodatkowej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1215,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Gdy mamy strukturę dynamiczną danych typu lista jednokierunkowa, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwala na wstawienie elementu w dowolnym miejscu, jeśli mamy wskaźnik do elementu poprzedzającego.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nie można wstawić nowego elementu w dowolnym miejscu w liście.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie posiada wskaźnika na następny element.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest strukturą o stałym rozmiarze.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Każdy węzeł przechowuje dane oraz wskaźnik na kolejny element.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Pozwala na szybkie (O(1)) pobranie poprzedniego elementu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1216,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Struktura typu drzewo:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Aby odwiedzić wszystkie n węzłów, należy zastosować algorytm przejścia o złożoności O(n).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w celu wypisania wszystkich elementów drzewa musimy przejść przez wszystkie elementy drzewa.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "każdy węzeł może mieć tylko jednego potomka.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie może być pusta.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Drzewo binarne to drzewo, w którym każdy węzeł ma co najwyżej dwóch potomków.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Drzewo jest grafem spójnym zawierającym cykle.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1217,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Gdy mamy strukturę dynamiczną typu drzewo wyszukiwań binarnych (BST), gdzie jest to drzewo spełniające własność, że dla każdego węzła zawierającego wartość x mającego lewego potomka zawierającego wartość l oraz prawego zawierającego wartość p, zachodzi: l<=x oraz x<=p, to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Średnia złożoność wyszukiwania wynosi O(log n), ale pesymistyczna to O(n).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w dowolnym drzewie tego typu znalezienie węzła ma logarytmiczną złożoność czasową.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zawsze jest zrównoważone.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie pozwala na przechowywanie duplikatów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Dla każdego węzła, wartości w lewym poddrzewie są mniejsze, a w prawym większe od wartości węzła.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "BST jest zawsze drzewem pełnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1218,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Przeanalizuj fragmenty kodu w języku C++, w którym pojawiają się zmienne, wskaźniki i referencje. Które z nich mają poprawną składnię?",
+  "options": [
+   {
+    "key": "a",
+    "text": "int x; int &r = x; (referencja musi być zainicjalizowana i nie może być null).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "int x; int&r=null; r=x;",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "int &r; r = 10;",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "int &r = null;",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Referencja może zostać przełączona na inny obiekt w trakcie działania programu.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Referencja zajmuje tyle samo pamięci co wskaźnik.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1219,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Które stwierdzenia odnoszące się ograniczeń narzucanych przez składnię języka C++ w odniesieniu do konstruktorów i destruktorów są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Klasa może mieć wiele konstruktorów, ale tylko jeden destruktor.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "W klasie można zdefiniować dowolną liczbę konstruktorów i co najwyżej jeden destruktor.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Destruktor może zwracać wartość int.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Konstruktor musi być zawsze publiczny.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Destruktor jest wywoływany automatycznie, gdy obiekt wychodzi poza zakres.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Konstruktor kopiujący nie może być prywatny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1220,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Które stwierdzenia odnoszące się do metod klas w języku C++ są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Metody statyczne nie posiadają wskaźnika this.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wskaźnik this nie jest dostępny w metodach statycznych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Metody wirtualne nie mogą być prywatne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każda metoda musi być wirtualna.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Metody stałe (const) nie mogą modyfikować pól klasy (poza polami mutable).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Metody statyczne mogą wywoływać metody niestatyczne bez obiektu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1221,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Zadeklarowano dwie klasy języka C++ class A{ int value; public: A(int _v):value(_v){} int getValue(){return value;} const char*getName(){return \"AAA\";} }; oraz class B:public A { public: // konstruktor const char*getName(){return \"B\";} }; Utworzono obiekt klasy B za pomocą następującej instrukcji: A*pa=new B(); Która implementacja konstruktora klasy B jest poprawna?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Konstruktor klasy pochodnej musi wywołać konstruktor klasy bazowej w liście inicjalizacyjnej.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "B::B(){super(0);}",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "B::B(){A(0);}",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "B::B(){this->A(0);}",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jeśli klasa bazowa nie ma konstruktora domyślnego, jawne wywołanie jest wymagane.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Klasa B automatycznie dziedziczy wszystkie pola prywatne klasy A jako publiczne.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1222,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Zadeklarowano cztery klasy języka C++ class A{ public: A(){std::cout<<\"A\";} }; class B{ public: B(){std::cout<<\"B\";} }; class C{ A a; public: C(){std::cout<<\"C\";} }; class D : public C{ public: B b; D(){std::cout<<\"D\";} }; Jaka jest kolejność wywołania konstruktorów przy tworzeniu obiektu klasy D?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Najpierw baza (C), potem pola (B), potem ciało konstruktora (D). Wewnątrz C: pole (A), potem ciało (C). Zatem: A, C, B, D.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Konstruktor B zostanie wywołany przed konstruktorem klasy C.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "B, A, C, D.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "D, B, C, A.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Kolejność zależy od kolejności deklaracji w pliku nagłówkowym.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Wszystkie konstruktory are wywoływane równolegle.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1223,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Zadeklarowano trzy klasy języka C++. class A { public: virtual ~A(){f();} virtual void f(){std::cout<<\"A\";} }; class B:public A { public: ~B(){f();} }; class C:public B { public: ~C(){f();} void f(){std::cout<<\"C\";} }; Zaimplementowano następującą funkcję main() int main(){ A* ptr = new C(); delete ptr; return 0; } Przy usuwaniu obiektu wołany jest jego destruktor. Które stwierdzenia dotyczące uruchamianych destruktorów są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jeśli klasa bazowa ma wirtualny destruktor, destruktory wywołają się od najbardziej pochodnej do bazy.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wpierw zostanie uruchomiony destruktor A, potem B, potem C.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wywoła się tylko destruktor klasy A.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Destruktory wywołują się w kolejności alfabetycznej.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Brak wirtualnego destruktora w klasie bazowej przy usuwaniu przez wskaźnik na bazę prowadzi do UB.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Destruktor wirtualny jest wymagany tylko w klasach abstrakcyjnych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1224,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Które stwierdzenia odnoszące się do przeciążania operatorów w języku C++ są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Niektóre operatory (np. <<, >>) są zazwyczaj przeciążane jako funkcje zaprzyjaźnione (friend).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wszystkie operatory muszą być zaimplementowane jako metody klasy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Nie można przeciążać operatora +.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Operatory logiczne nie podlegają przeciążaniu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Operatory takie jak =, [], (), -> muszą być zaimplementowane jako metody klasy.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Można tworzyć nowe operatory, np. **.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1225,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Wybierz poprawne stwierdzenia odnoszące się do obiektów funkcyjnych w języku C++",
+  "options": [
+   {
+    "key": "a",
+    "text": "To obiekty klas, które mają przeciążony operator nawiasów operator().",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Obiekty funkcyjne to obiekty klasy, która implementuje operator wywołania funkcji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Są to wskaźniki do funkcji statycznych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Można je tworzyć tylko za pomocą słowa kluczowego function.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Funktory mogą przechowywać stan między wywołaniami.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Są wolniejsze od zwykłych wskaźników do funkcji.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1226,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Które stwierdzenia odnoszące się do mechanizmu wyjątków w języku C++ są prawdziwe?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Podczas \"odwijania stosu\" niszczone są obiekty lokalne poprzez wywołanie ich destruktorów.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Podczas obsługi wyjątków zwalniana jest pamięć stosu oraz wołane są destruktory obiektów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wyjątki nie mogą być rzucane w konstruktorach.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każdy wyjątek musi dziedziczyć po klasie std::exception.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Rzucenie wyjątku w destruktorze podczas odwijania stosu powoduje wywołanie std::terminate.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Blok catch(...) łapie tylko wyjątki typu int.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1227,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Wybierz poprawne stwierdzenia odnoszące się do kontenerów języka C++",
+  "options": [
+   {
+    "key": "a",
+    "text": "std::list to lista dwukierunkowa, zapewnia stały czas O(1) wstawiania na obu końcach.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Szablon std::list umożliwia dodawanie elementów na początku i końcu listy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "std::vector zapewnia stały czas wstawiania w dowolnym miejscu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "std::map przechowuje elementy w sposób nieposortowany.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "std::vector zapewnia stały czas dostępu O(1) do dowolnego elementu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "std::deque nie pozwala na wstawianie na początku.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1228,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Załóżmy, że A jest klasą języka C++. Jakie warunki muszą być spełnione, aby móc przechowywać obiekty tej klasy w kontenerze std::set lub używać ich jako klucze w std::map?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wymagają, aby klucze posiadały zdefiniowaną relację ścisłego słabego porządku.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "muszą być zdefiniowane operatory boolowskie < , == oraz >.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "klucze muszą być typu całkowitego.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "obiekty muszą dziedziczyć po klasie Comparable.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Są zazwyczaj implementowane jako drzewa czerwono-czarne.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Zapewniają średni czas wyszukiwania O(1).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1229,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Które stwierdzenia odnoszące się do iteratorów w C++ są prawdziwe",
+  "options": [
+   {
+    "key": "a",
+    "text": "std::vector i std::deque posiadają iteratory swobodnego dostępu, a std::list tylko dwukierunkowe.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Iterator kontenera std::list umożliwia dostęp swobodny.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Iteratory nie mogą być porównywane.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Każdy iterator można przesunąć o n pozycji w czasie O(1).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Iteratory kontenerów asocjacyjnych (np. std::set) nie są iteratorami swobodnego dostępu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Iterator end() wskazuje na ostatni element kontenera.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1230,
+  "topic": "c_cpp",
+  "courseName": "Programowanie zaawansowane (C/C++)",
+  "question": "Które stwierdzenia odnoszące się do wyrażeń lambda w języku C++ są prawdziwe",
+  "options": [
+   {
+    "key": "a",
+    "text": "Każde wyrażenie lambda ma unikalny, nienazwany typ generowany przez kompilator.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wynikiem kompilacji identycznych wyrażeń lambda jest jeden współdzielony obiekt funkcyjny.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Lambdy nie mogą przechwytywać zmiennych przez referencję.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Lambdy są dostępne od standardu C++98.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Składnia [=] oznacza przechwycenie wszystkich zmiennych lokalnych przez kopię.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Lambdy nie mogą być używane jako argumenty funkcji STL.",
+    "correct": false
+   }
+  ]
+ }
+]

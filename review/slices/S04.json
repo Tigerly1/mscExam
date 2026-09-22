@@ -1,0 +1,1634 @@
+[
+ {
+  "id": 53,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Celem testowania oprogramowania jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zbadanie zgodności z wymaganiami",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wykrycie błędów w oprogramowaniu",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "zbadanie zgodności z oczekiwaniami użytkownika",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "sprawdzenie poprawności komentarzy w kodzie",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "ocena jakości oprogramowania",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "zdefiniowanie jakości kodu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 54,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Jakie są główne aktywności w modelu spiralnym?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Planowanie, Analiza Ryzyka, Konstrukcja, Walidacja",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Szybki Projekt, Budowa Prototypu, Ocena Prototypu, Redefinicja Prototypu",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Analiza Wymagań, Projektowanie, Kodowanie, Testowanie",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Definiowanie, Prototypowanie, Testowanie, Dostarczenie Produktu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 55,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Jakiego widoku nie znajdziesz w modelu architektonicznym Kruchtena?",
+  "options": [
+   {
+    "key": "a",
+    "text": "przypadków użycia",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "konstrukcji",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "logicznego",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "przepływu danych",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 56,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Jaką rolę na diagramach klas UML pełni kompozycja?",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest związkiem typu gen-spec między instancjami klasy",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest związkiem typu część-całość między obiektami",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "wspomaga graficzne rozlokowanie symboli klas na diagramie",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "oznacza ukrywanie złożoności obiektów przed użytkownikiem",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 57,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Jednym z celów inżynierii oprogramowania jest tworzenie oprogramowania, które jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wolne od błędów",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "dostarczane zgodnie z harmonogramem",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "niezawodne i efektywne",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "niezgodne z wymaganiami",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 58,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Przykładem ryzyka występującego podczas wytwarzania oprogramowania jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "odejście kluczowych osób z zespołu projektowego, zanim produkt zostanie wdrożony",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "konkurenci mogą sprzedawać taniej system o podobnej funkcjonalności",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "problemy ze zdefiniowaniem specyfikacji produktu",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "wykonywanie kolejnych faz zgodnie z ustalonym harmonogramem",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 59,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Tworzenie modelu obiektowego z istniejącej relacyjnej bazy danych jest określane jako:",
+  "options": [
+   {
+    "key": "a",
+    "text": "forward engineering",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "backward engineering",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "reverse engineering",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "inverse engineering",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 60,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Stosowanie techniki prototypowania jest zalecane dla:",
+  "options": [
+   {
+    "key": "a",
+    "text": "aplikacji budowanej w oparciu o frameworki",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "gdy liczy się czas dostarczenia",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zespołów programistów, którym brakuje znajomości dziedziny",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "gdy istnieje trudność uzyskania pełnej informacji o wymaganiach systemu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 61,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Które z poniższych stwierdzeń nie jest celem budowy modeli analitycznych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "opracowanie rozwiązań problemów",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "ustalenie wszystkich czynników / warunków w dziedzinie przedmiotowej / w otoczeniu projektu, które mogą wpłynąć na decyzje projektowe",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "stworzenie logicznego modelu systemu, opisującego sposób realizacji wymagań, ale bez szczegółów implementacyjnych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Wstępna próba zdefiniowania elementów systemu oraz ich wzajemnych relacji, organizowanie tych elementów w dobrze określone warstwy z wyraźnie nakreślonymi zależnościami nazywa się analizą:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przypadków użycia",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "architektoniczną",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "strukturalną",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "systemową",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 63,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Którego z poniższych narzędzi nie używa się podczas analizy systemowej?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Data Flow Diagram",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "Decision Tree",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "Object Modelling Technique",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "HOOD",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 64,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Które z podanych rodzajów wymagań nie są określane podczas przygotowywania definicji wymagań systemowych?",
+  "options": [
+   {
+    "key": "a",
+    "text": "abstrakcyjne wymagania funkcjonalne",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "szczegółowe wymagania funkcjonalne",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "cechy lub zachowania, których system nie powinien przejawiać",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "właściwości systemu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 65,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Które z wymienionych czynności występują dla wszystkich procesów wytwarzania oprogramowania?",
+  "options": [
+   {
+    "key": "a",
+    "text": "budowa i ulepszanie prototypów",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "retrospektywa celem polepszenia procesu",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "pozyskiwanie wymagań",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "ciągła integracja",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "testowanie wydajności",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "walidacja oprogramowania",
+    "correct": true
+   },
+   {
+    "key": "g",
+    "text": "specyfikowanie oprogramowania",
+    "correct": true
+   },
+   {
+    "key": "h",
+    "text": "zarządzanie konfiguracjami",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 66,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Zapis wymagania powinien bezwzględnie zawierać:",
+  "options": [
+   {
+    "key": "a",
+    "text": "informację o kolejności wprowadzenia danego wymagania w stosunku do innych wymagań",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "informację o uzależnieniu danego wymagania od innych wymagań lub powiązaniu z nimi",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "informację o pochodzeniu danego wymagania i jego uzasadnienie",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "informację o uzależnieniu projektu od wymagania, tj. powiązaniu danego wymagania ze składnikami systemu, które je implementują",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 67,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Prototypowanie z porzuceniem jest wariantem ewolucyjnego tworzenia oprogramowania, w którym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "tworzony jest fragment systemu zwany prototypem, odpowiadający ograniczonej części wymagań, celem eksperymentalnego rozeznania wymagań klienta i ustalenia lub walidacji ich specyfikacji oraz zbadania możliwości ich spełnienia",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "ze względu na dwukrotną realizację systemu - jako prototypu i systemu finalnego - wydłużony jest znacznie czas realizacji i powiększony koszt przedsięwzięcia, przez co ta metoda stosowana jest głównie wtedy, gdy przez oddanie prototypu zamiast finalnej wersji systemu można oddalić groźbę katastrofalnego opóźnienia i całkowitego załamania projektu",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie powstaje prawie żadna dokumentacja projektowa i stąd używana niekiedy nazwa \"metoda studencka\"",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie przywiązuje wagi do jakości oprogramowania wytworzonego prototypu ani nawet jego zdolności do funkcjonowania, o ile nie przeszkadza to w wykorzystaniu go do realizacji jego głównego celu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 68,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Do modeli iteracyjnych tworzenia oprogramowania zaliczamy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "metodę przyrostową",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "model kaskadowy",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "model spiralny tworzenia oprogramowania",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "ewolucyjny tworzenie oprogramowania",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "metodykę Kanban",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "programowanie ekstremalne",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 69,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Inspekcja (przegląd) wymagań jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "metodą walidacji wymagań",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nazywana formalną bądź nieformalną, zależnie od tego, czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania, czy tylko prowadzi luźną rozmowę z przestawicielami klienta",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "procesem \"ręcznym\" polegającym na grupowym czytaniu dokumentacji wymagań",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "niepodobna do inspekcji programów (kodu)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 70,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Systemy odziedziczone:",
+  "options": [
+   {
+    "key": "a",
+    "text": "to systemy starsze niż kilka-kilkanaście lat, których działanie pozostaje krytycznym czynnikiem z punktu widzenia funkcjonowania instytucji, ale technologia nie odpowiada aktualnym potrzebom",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "mają oprogramowanie i sprzęt niezmieniony od czasów ich zainstalowania, ale ich przeróbka i unowocześnienie nie jest możliwe z braku kompatybilnego sprzętu, odpowiednich kompilatorów języków programowania, bibliotek i odpowiednik specjalistów",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "można tylko całkowicie wycofać i/lub zastąpić nowymi systemami",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "obejmują oprogramowanie, sprzęt na którym może ono działać, dane użytkowe przez nie udostępniane i gromadzone, procedury biznesowe, prowadzone z użyciem oprogramowania",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 71,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Jakie aspekty powinien uwzględniać pełny model systemu w podejściu strukturalnym do analizy i projektowania?",
+  "options": [
+   {
+    "key": "a",
+    "text": "aspekt funkcjonalny, aspekt danych i ich powiązań",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "aspekt funkcjonalny i aspekt dynamiki systemu",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "aspekt danych i ich powiązań, aspekt dynamiki systemu",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "aspekt funkcjonalny, aspekt danych i ich powiązań, oraz dynamiki systemu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 72,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Aspekt funkcjonalny systemu informatycznego modelowany jest w podejściu strukturalnym przy pomocy:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Data Flow Diagrams",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Entity Relationship Diagrams",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "State Transition Diagrams",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Structure Charts",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Behaviour Diagrams",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 73,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Które z wymienionych podziałów wymagań niefunkcjonalnych są wyczerpujące i rozłączne?",
+  "options": [
+   {
+    "key": "a",
+    "text": "produktowe, organizacyjne, prawne",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "produktowe, prawne, parametryczne",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "produktowe, zewnętrzne, strategiczne",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "produktowe, organizacyjne, zewnętrzne",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 74,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Wymień elementy modelu środowiskowego w strukturalnym podejściu do analizy i projektowania systemów informatycznych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "ERD, DFD, STD",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "diagram kontekstowy, słownik danych, specyfikacja funkcji",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "opis celu systemu, wymagania funkcjonalne, wymagania niefunkcjonalne",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "opis celu systemu, lista zdarzeń, diagram kontekstowy",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 75,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Jaki zestaw diagramów jest używany w metodyce strukturalnej analizy i projektowania systemów informatycznych do pokazania wszystkich aspektów modelowanego systemu?",
+  "options": [
+   {
+    "key": "a",
+    "text": "DFD, ERD i STC",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "DFD i ERD",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "DFD, ERD i STD (lub ELH)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "DFD i STD",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 76,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Które obiekty graficzne są używane do tworzenia diagramu kontekstowego w metodyce strukturalnej analizy i projektowania systemów informatycznych:",
+  "options": [
+   {
+    "key": "a",
+    "text": "proces, przepływ danych (data flow), magazyn danych (data store)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "proces, obiekt zewnętrzny (external entity), magazyn danych (data store)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "przepływ danych (data flow), obiekt zewnętrzny (external entity), magazyn danych",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "proces, przepływ danych (data flow), obiekt zewnętrzny (external entity)",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 77,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Wybierz nazwy wszystkich obiektów graficznych używanych do konstruowania DFD (Data Flow Diagram) - diagramów przepływu danych w metodyce strukturalnej:",
+  "options": [
+   {
+    "key": "a",
+    "text": "proces (process)",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "obiekt zewnętrzny (external entity)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "magazyn danych (data store)",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "przepływ danych (data flow)",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 78,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Wskaż ten element dokumentacji projektowej, który zawiera zapis w postaci pseudokodu (metodyka strukturalna analizy i projektowania systemów informatycznych):",
+  "options": [
+   {
+    "key": "a",
+    "text": "opis wymagań niefunkcjonalnych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "opis wymagań funkcjonalnych",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "specyfikacja funkcji",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "opis celu przedsięwzięcia projektowego",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 79,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Który element DFD w metodyce strukturalnej stanowi podstawę konstruowania ERD (Entity Relationship Diagram) - diagramu związków encji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przepływ danych (data flow)",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "diagram kontekstowy (context diagram)",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "obiekt zewnętrzny (external entity)",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "magazyn danych (data store)",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1184,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Relacja rozszerzenia (<<extend>>) w diagramach przypadków użycia UML:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wskazuje opcjonalne zachowanie, które może zostać dołączone do przypadku użycia.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Używana jest do pokazania, że przypadek użycia jest podzbiorem innego przypadku użycia.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest obowiązkowa dla każdego przypadku użycia.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Służy do modelowania dziedziczenia między aktorami.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Strzałka relacji <<extend>> jest skierowana od przypadku użycia rozszerzającego do bazowego.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Zawsze wykonuje się razem z przypadkiem bazowym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1185,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Relacja „zawiera” (<<include>>) w diagramach przypadków użycia UML:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Wskazuje, że jeden przypadek użycia obowiązkowo wykorzystuje funkcjonalność innego.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Określa, że jeden przypadek użycia jest w całości zależny od funkcjonalności innego przypadku użycia.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest używana do modelowania opcjonalnych funkcji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Łączy aktora z przypadkiem użycia.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na wydzielenie wspólnej funkcjonalności do oddzielnego przypadku użycia.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Strzałka jest skierowana od przypadku dołączanego do bazowego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1186,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Jakie są kluczowe cechy podejścia strukturalnego Yourdona do analizy systemów?",
+  "options": [
+   {
+    "key": "a",
+    "text": "Opiera się na dekompozycji funkcjonalnej systemu i wykorzystuje diagramy przepływu danych (DFD).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Modelowanie zachowań systemu z użyciem złożonych diagramów stanów dla każdej funkcji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest tożsame z podejściem obiektowym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie uwzględnia modelowania danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wykorzystuje słownik danych oraz specyfikacje procesów.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest nowoczesną alternatywą dla Agile.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1187,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Model spiralny cyklu życia oprogramowania:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Jest modelem iteracyjnym, w którym kluczowym elementem jest analiza ryzyka.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Główny nacisk kładziony jest na szybkie wytwarzanie oprogramowania bez fazy testowania.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wyklucza możliwość powrotu do poprzednich faz.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Jest przeznaczony tylko dla bardzo małych projektów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Każdy obrót spirali obejmuje planowanie, analizę ryzyka, inżynierię i ocenę.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest modelem liniowym (kaskadowym).",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1188,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Cele metodyki Scrum:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Dostarczanie wartości biznesowej w krótkich iteracjach (Sprintach).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Zwiększenie przewidywalności i jakości dostaw poprzez regularne iteracje i stałe przeglądy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Wyeliminowanie potrzeby dokumentacji technicznej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Sztywne planowanie całego projektu na samym początku.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Wspieranie samoorganizacji zespołu i ciągłego doskonalenia procesu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Zastąpienie programistów przez Scrum Masterów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1189,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Poziomy dojrzałości w modelu CMM (Capability Maturity Model):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Początkowy, Powtarzalny, Zdefiniowany, Zarządzany, Optymalizujący.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Analiza, Projektowanie, Wdrożenie, Ocena.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Niski, Średni, Wysoki, Ekspercki.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Planowanie, Realizacja, Testowanie, Utrzymanie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Poziom 0, Poziom 1, Poziom 2, Poziom 3, Poziom 4.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Brak, Podstawowy, Zaawansowany, Profesjonalny.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1190,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Zdolność do pielęgnacji (Maintainability) oprogramowania:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Łatwość, z jaką można modyfikować oprogramowanie w celu naprawy błędów lub dostosowania.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zawartość pełnej dokumentacji technicznej kodu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "odporność systemu na ataki hakerskie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "szybkość działania aplikacji na starym sprzęcie.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Obejmuje takie aspekty jak czytelność kodu, modularność i testowalność.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Gwarantuje, że oprogramowanie nigdy nie będzie wymagało zmian.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1191,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Niezawodność (Reliability) oprogramowania:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Zdolność systemu do poprawnego działania w określonych warunkach przez określony czas.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w miarę możliwości najkrótszy okres bezczynności po awarii.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zgodność z wymaganiami estetycznymi użytkownika.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "brak konieczności aktualizacji systemu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest mierzona m.in. przez MTBF (Mean Time Between Failures).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Oznacza, że system jest w 100% wolny od błędów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1192,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Proces inżynierii wymagań:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Obejmuje pozyskiwanie, analizę, specyfikację, weryfikację i zarządzanie wymaganiami.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "wynajdowania, dokumentowania, wdrażania.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "dotyczy tylko wymagań niefunkcjonalnych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "kończy się przed rozpoczęciem projektowania.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Ma na celu zrozumienie i udokumentowanie potrzeb interesariuszy.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jest wykonywany wyłącznie przez programistów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1193,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Wymagania niefunkcjonalne (systemowe):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Określają jakościowe aspekty systemu, takie jak wydajność, bezpieczeństwo, dostępność.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "opisują właściwości i ograniczenia systemu np. niezawodność, czas odpowiedzi.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "opisują konkretne funkcje, które system musi realizować.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "są mniej ważne od wymagań funkcjonalnych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Często nazywane są \"atrybutami jakościowymi\" systemu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Nie mogą być testowane.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1194,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Testy jednostkowe (Unit Tests):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Sprawdzają poprawność działania najmniejszych testowalnych części kodu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zawsze wykonywane są w pełnej izolacji od innych komponentów systemu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "są wykonywane przez użytkownika końcowego.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służą do testowania wydajności całego systemu.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Automatyzacja testów jednostkowych ułatwia refaktoryzację kodu.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Powinny być pisane dopiero po zakończeniu całego projektu.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1195,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Aby ograniczyć zakres zmian w systemie (zasada niskiego sprzężenia):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Należy stosować hermetyzację, interfejsy oraz modularność.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "podejście komponentowe.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "należy pisać cały kod w jednym pliku.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "należy unikać stosowania wzorców projektowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Komponenty powinny zależeć od abstrakcji, a nie od konkretnych implementacji.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Należy stosować jak najwięcej zmiennych globalnych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1196,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Podejście modelowe (Model-Driven Development):",
+  "options": [
+   {
+    "key": "a",
+    "text": "Modele są głównym artefaktem procesu, z których może być generowany kod źródłowy.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "jednym z zadań analizy jest budowa modeli, opisujących działanie systemu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "modele UML są jedynym sposobem modelowania.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie jest prawdą że modele mogą służyć do dokumentacji.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na podniesienie poziomu abstrakcji w procesie tworzenia oprogramowania.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Wyklucza udział programistów w procesie.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1197,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Przykład aktywności DevOps:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Ciągła integracja i ciągłe wdrażanie (CI/CD) oraz automatyzacja infrastruktury.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "automatyczne monitorowanie parametrów uruchomionej aplikacji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "oddzielenie zespołu programistów od zespołu administratorów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "ręczne testowanie aplikacji przed każdym wydaniem.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Współpraca między zespołami rozwoju (Dev) i operacji (Ops) w całym cyklu życia.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Pisanie dokumentacji w formacie PDF.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1198,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Diagramy sekwencji UML:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Przedstawiają interakcje między obiektami w układzie chronologicznym.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "linia życia reprezentuje życie obiektu w czasie trwania interakcji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służą do modelowania statycznej struktury klas.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie pokazują komunikatów asynchronicznych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Skupiają się na kolejności przesyłanych komunikatów.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Są odmianą diagramów wdrożenia.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1199,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Diagramy stanów UML:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Modelują zachowanie obiektu poprzez opis stanów i zdarzeń.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "stan historii automatycznie aktualizuje stan obiektu.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "są używane wyłącznie do modelowania baz danych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie pozwalają na definiowanie stanów zagnieżdżonych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Są szczególnie przydatne do modelowania systemów sterowania i protokołów.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Pokazują strukturę folderów w projekcie.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1200,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Diagramy aktywności UML:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Służą do modelowania przepływów sterowania i danych w procesach biznesowych lub algorytmach.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "użycie \"tokenu\" w różnych ścieżkach przepływu reprezentuje przypadek użycia.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "są identyczne z diagramami klas.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie obsługują współbieżności (fork/join).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwalają na wizualizację równoległych ścieżek wykonania.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Służą do projektowania baz danych NoSQL.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1201,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Diagramy wdrożenia (Deployment Diagrams) UML:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Przedstawiają fizyczną architekturę systemu, w tym węzły sprzętowe i artefakty.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Pokazują interfejsy użytkownika i ich interakcje.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służą do projektowania algorytmów sortowania.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "modelują relacje między tabelami w bazie danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Węzły mogą reprezentować serwery, stacje robocze lub urządzenia wbudowane.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Służą do modelowania logiki biznesowej.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1202,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Komunikaty na diagramach sekwencji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Reprezentują wywołania metod lub przesyłanie sygnałów między obiektami.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Komunikatów na diagramach reprezentują komunikaty poziome i pionowe.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "zawsze muszą być synchroniczne.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "są rysowane jako linie pionowe.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Komunikat zwrotny (reply) jest zazwyczaj rysowany linią przerywaną.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Nie mogą posiadać argumentów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1203,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "Zagnieżdżone stany w diagramach stanów UML:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwalają na hierarchiczną strukturę stanów, gdzie stan złożony zawiera w sobie podstany.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Zagnieżdżone stany umożliwiają definiowanie jednorazowych działań.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służą do modelowania pętli w programie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "są zabronione w standardzie UML 2.0.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwalają na współdzielenie przejść przez wszystkie podstany.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Służą do modelowania dziedziczenia klas.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1204,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "W odniesieniu i kontekście języka UML (Unified Modeling Language) można powiedzieć, że",
+  "options": [
+   {
+    "key": "a",
+    "text": "To proces generowania kodu źródłowego na podstawie modeli (diagramów).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Forward engineering to technika używana do optymalizacji kodu źródłowego.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "polega na tworzeniu dokumentacji z kodu.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "dotyczy tylko testowania oprogramowania.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Jest procesem ręcznego przepisywania diagramów na język naturalny.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Służy do usuwania błędów z bazy danych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1205,
+  "topic": "software_engineering",
+  "courseName": "Inżynieria oprogramowania",
+  "question": "W odniesieniu i kontekście języka UMLUML (Unified Modeling Language) można powiedzieć, że",
+  "options": [
+   {
+    "key": "a",
+    "text": "To proces tworzenia modeli (diagramów) na podstawie analizy istniejącego kodu źródłowego.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Backward engineering polega na analizie istniejącego systemu i tworzeniu diagramów UML.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służy do automatycznego naprawiania błędów w kodzie.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest niemożliwy dla języków obiektowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Pozwala na zrozumienie architektury starego systemu (legacy code).",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "Służy do szyfrowania kodu źródłowego.",
+    "correct": false
+   }
+  ]
+ }
+]

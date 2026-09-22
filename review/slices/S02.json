@@ -1,0 +1,1390 @@
+[
+ {
+  "id": 4,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Korzystając z układu FPGA można wykonać:",
+  "options": [
+   {
+    "key": "a",
+    "text": "na przykład dowolny układ kombinacyjny, ograniczony jedynie wielkością struktury FPGA",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "na przykład dowolny układ sekwencyjny, ograniczony jedynie wielkością struktury FPGA",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 5,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Układ kombinacyjny to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "układ logiczny nie pamiętający stanów poprzednich",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "w jego skład mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "układ cyfrowy, w którym stan wyjść zależy wyłącznie od stanu wejść",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 6,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Układ sekwencyjny to:",
+  "options": [
+   {
+    "key": "a",
+    "text": "układ logiczny nie pamiętający stanów poprzednich",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "może składać się z samych bramek logicznych",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "może się składać z samych bramek logicznych bez sprzężeń zwrotnych",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "w skład jego mogą wchodzić bramki logiczne w połączeniu z przerzutnikami JK",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 7,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Pamięć RAM:",
+  "options": [
+   {
+    "key": "a",
+    "text": "posiada wejścia adresowe, wejścia sterujące oraz wejście/wyjście danych",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "można wykonać z bramek NAND",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "można wykonać z bramek NAND bez sprzężeń zwrotnych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 8,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Pamięć RAM dwuportowa:",
+  "options": [
+   {
+    "key": "a",
+    "text": "możemy wykonać z bramek NAND bez sprzężeń zwrotnych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "to pamięć RAM z dwoma interfejsami, pozwalającymi niezależnie uzyskać dostęp do tych samych komórek pamięci",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "w układach FPGA taki rodzaj pamięci nie występuje",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "to specjalne pamięci RAM, które umożliwiają dwóm niezależnym procesom (kontrolerom pamięci) dostęp do wspólnych danych",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "można ją wykorzystać wyłącznie w procesorach wielordzeniowych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 9,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Procesor:",
+  "options": [
+   {
+    "key": "a",
+    "text": "możemy wykonać przy użyciu FPGA, ale tylko jednordzeniowy",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "żadne z pozostałych",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "to sekwencyjne urządzenie cyfrowe, które pobiera dane z pamięci operacyjnej, interpretuje je i wykonuje jako rozkazy",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "tryby adresowania procesora wykonywanego przy użyciu FPGA muszą być zgodne z trybami przewidzianymi przez producenta układu",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "możemy wykonać przy użyciu FPGA",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 10,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Lista rozkazów procesora:",
+  "options": [
+   {
+    "key": "a",
+    "text": "w skład listy rozkazów zawsze wchodzi mnożenie",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "w procesorze wykonywanym przy użyciu FPGA musi być zgodna z listą rozkazów przewidzianą przez producenta układu FPGA",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "projektowana jest w zależności od potrzeb związanych z zastosowaniem procesora",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Karta graficzna:",
+  "options": [
+   {
+    "key": "a",
+    "text": "może być układem kombinacyjnym",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "przy użyciu FPGA nie można zbudować karty graficznej ze sprzętowym wspomaganiem OpenGL",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "prostą wersję można zapisać w dwudziestu kilku liniach VHDL",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "OpenGL to specyfikacja otwartego i uniwersalnego API do tworzenia grafiki; jest to zestaw podstawowych funkcji umożliwiających tworzenie grafiki",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 12,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Licznik rozkazów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest to licznik z wejściem równoległym wykorzystywanym wyłącznie przy skokach bezwarunkowych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "służy do pamiętania adresu mającego się wykonać rozkazu lub adresu aktualnie pobieranego argumentu z pamięci programu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 13,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Rozkaz skoku bezwarunkowego procesora:",
+  "options": [
+   {
+    "key": "a",
+    "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie wpływa na stan licznika rozkazów procesora",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Rozkaz skoku warunkowego procesora:",
+  "options": [
+   {
+    "key": "a",
+    "text": "nie wpływa na stan licznika rozkazów procesora",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku niezależnie od warunku",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "powoduje wpisanie do licznika rozkazów adresu rozkazu mającego się wykonać po skoku, ale tylko w przypadku spełnienia warunku skoku",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "żadne z pozostałych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Rozkaz procesora wykonujący dodanie dwóch liczb:",
+  "options": [
+   {
+    "key": "a",
+    "text": "powoduje dodanie dwóch liczb, wynik zapisuje do licznika rozkazów",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "wykorzystuje ALU",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "żadne z pozostałych",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 16,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "W procesorze wykorzystującym przetwarzanie potokowe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "wykonanie pojedynczej instrukcji rozkłada się na ciąg prostszych etapów",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "rozpoczęcie wykonania rozkazu może nastąpić dopiero po zakończeniu wykonania poprzedniego rozkazu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 17,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "W procesorze wykorzystującym superskalarność:",
+  "options": [
+   {
+    "key": "a",
+    "text": "rozpoczęcie wykonania pierwszego etapu rozkazu może nastąpić dopiero po zakończeniu wykonania pierwszego etapu poprzedniego rozkazu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "ten sam etap dwóch kolejnych rozkazów może być wykonywany w tej samej chwili",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "możliwe jest jednoczesne wykonanie więcej niż jednej instrukcji",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 18,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Rejestr rozkazów:",
+  "options": [
+   {
+    "key": "a",
+    "text": "przechowuje adres rozkazu wczytany z pamięci programu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jego zawartość wykorzystywana jest przez jednostkę sterującą",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "w trakcie wykonywania rozkazu zawartość rejestru rozkazów musi zmienić się bezpośrednio przed pobraniem argumentu rozkazu z pamięci programu",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "przechowuje kod rozkazu wczytany z pamięci programu",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1090,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Jednostka arytmetyczno-logiczna ALU:",
+  "options": [
+   {
+    "key": "a",
+    "text": "musi być układem sekwencyjnym.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "jest podstawowym blokiem procesora wykonującym operacje obliczeniowe i logiczne.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "nie może zawierać sumatorów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy wyłącznie do przechowywania danych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "wykonuje operacje takie jak dodawanie, odejmowanie, AND, OR.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "zarządza przerwaniami sprzętowymi.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1091,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Układ sekwencyjny:",
+  "options": [
+   {
+    "key": "a",
+    "text": "jest to układ logiczny nie pamiętający stanów poprzednich.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "to układ, w którym stan wyjść zależy od aktualnych wejść oraz od stanu poprzedniego (posiada pamięć).",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "to inaczej układ kombinacyjny.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie wymaga sygnału zegarowego.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "przykładami są przerzutniki, liczniki, rejestry.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "nie posiada sprzężenia zwrotnego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1092,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Pamięć RAM dwuportowa:",
+  "options": [
+   {
+    "key": "a",
+    "text": "pozwala na jednoczesny dostęp do dwóch różnych komórek pamięci (np. odczyt i zapis).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nie może być zaimplementowana w układach FPGA.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest zawsze wolniejsza od pamięci jednoportowej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy wyłącznie do przechowywania instrukcji procesora.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "wymaga dwóch oddzielnych układów scalonych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nie posiada linii adresowych.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1093,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Procesor w układzie FPGA:",
+  "options": [
+   {
+    "key": "a",
+    "text": "może mieć architekturę dostosowaną do specyficznych potrzeb użytkownika (tzw. soft-core).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "musi być zgodny z architekturą x86.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie może posiadać własnej listy rozkazów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest zawsze szybszy od procesorów dedykowanych (ASIC).",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "nie może być taktowany zegarem.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nie posiada rejestrów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1094,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Lista rozkazów procesora (ISA):",
+  "options": [
+   {
+    "key": "a",
+    "text": "w skład listy rozkazów zawsze wchodzi mnożenie.",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "definiuje zestaw instrukcji rozumianych przez procesor oraz ich formaty.",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "jest identyczna dla wszystkich procesorów.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "nie zawiera instrukcji skoków.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "określa dostępne tryby adresowania.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "zależy od systemu operacyjnego.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1095,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Karta graficzna i FPGA:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Układy FPGA mogą być wykorzystane do budowy akceleratorów graficznych i przetwarzania obrazu.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "przy użyciu FPGA nie można zbudować karty graficznej ze sprzętowym wspomaganiem OpenGL.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "FPGA nie nadaje się do obliczeń równoległych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "karty graficzne nie używają pamięci RAM.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "FPGA są używane wyłącznie w telekomunikacji.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "GPU i FPGA to te same układy.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1096,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Licznik rozkazów (Program Counter):",
+  "options": [
+   {
+    "key": "a",
+    "text": "przechowuje adres następnej instrukcji do pobrania z pamięci.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "służy do zliczania liczby wykonanych operacji arytmetycznych.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest częścią jednostki ALU.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "przechowuje kody błędów procesora.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "jest rejestrem 8-bitowym w procesorach 64-bitowych.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "nie może być zmieniony przez instrukcję skoku.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1097,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Rozkaz skoku warunkowego:",
+  "options": [
+   {
+    "key": "a",
+    "text": "zmienia kolejność wykonywania instrukcji w zależności od stanu znaczników (flag) procesora.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zawsze wykonuje skok do adresu zero.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "nie zależy od wyników poprzednich operacji.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest instrukcją typu ALU.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "nie jest dostępny w architekturze RISC.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "zawsze czyści pamięć cache.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1098,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Rozkaz dodawania w procesorze:",
+  "options": [
+   {
+    "key": "a",
+    "text": "pobiera argumenty (np. z rejestrów), wykonuje sumowanie w ALU i zapisuje wynik.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nie może używać adresowania bezpośredniego.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest dostępny tylko w procesorach 64-bitowych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "zawsze ustawia flagę przerwania.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "może ustawić flagi takie jak Zero (Z), Carry (C), Overflow (V).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "nie zmienia stanu rejestrów.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1099,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Przetwarzanie potokowe (pipelining):",
+  "options": [
+   {
+    "key": "a",
+    "text": "pozwala na jednoczesne wykonywanie różnych etapów wielu instrukcji.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "skraca czas wykonania pojedynczej instrukcji (latency).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "eliminuje potrzebę stosowania pamięci cache.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest stosowane tylko w procesorach jednoukładowych.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "zwiększa przepustowość (throughput) procesora.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "uniemożliwia wykonywanie skoków.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1100,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Sumator jednobitowy pełny (Full Adder):",
+  "options": [
+   {
+    "key": "a",
+    "text": "posiada trzy wejścia (dwa bity składników i przeniesienie) oraz dwa wyjścia (suma i przeniesienie).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "nie uwzględnia przeniesienia z poprzedniej pozycji.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "jest układem sekwencyjnym.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "służy do mnożenia liczb.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "składa się wyłącznie z bramek NOT.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "jest podstawą budowy sumatorów wielobitowych.",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 1101,
+  "topic": "digital_systems",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Rejestr rozkazów (Instruction Register):",
+  "options": [
+   {
+    "key": "a",
+    "text": "przechowuje aktualnie dekodowaną i wykonywaną instrukcję.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "jest dostępny bezpośrednio dla programisty.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "służy do przechowywania wyników operacji zmiennoprzecinkowych.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "jest tożsamy z licznikiem rozkazów.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "przechowuje adresy pamięci RAM.",
+    "correct": false
+   },
+   {
+    "key": "f",
+    "text": "jest częścią jednostki sterującej procesora.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 19,
+  "topic": "transmission",
+  "courseName": "Podstawy techniki cyfrowej",
+  "question": "Transmisja asynchroniczna:",
+  "options": [
+   {
+    "key": "a",
+    "text": "układy nadawczy i odbiorczy synchronizowane są wspólną dodatkową linią z sygnałem synchronicznym",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "podczas transmisji asynchronicznej występują kolejno po sobie wycinki czasu zawierające i nie zawierające informacji",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "aby przygotować odbiorcę na przyjęcie sygnału zawierającego informacje, są wysyłane sygnały startu oraz sygnały stopu, rozpoczynające i kończące przesyłanie porcji informacji",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 208,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Wartość 5/16 ma postać w systemie binarnym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "0.0101",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "0.1011",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "0.1010",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 209,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Wartość 1/10 ma postać w systemie binarnym:",
+  "options": [
+   {
+    "key": "a",
+    "text": "0.1010",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "0.0(0011)",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "0.(1010)",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "0.0(1010)",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 210,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Język formalny jest:",
+  "options": [
+   {
+    "key": "a",
+    "text": "sposobem zapisu algorytmów opartym na blokach operacyjnych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "sposobem zapisu algorytmów opartym na pseudokodzie",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 211,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Syntaktyka języka programowania opisuje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "znaczenie instrukcji w języku",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "formalnie poprawne programy",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "budowę instrukcji w języku",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "działanie poprawnego programu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 212,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Semantyka języka programowania opisuje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "znaczenie instrukcji w języku",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "formalnie poprawne programy",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "budowę instrukcji w języku",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "działanie poprawnego programu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 213,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Nawiasy <> w notacji EBNF oznaczają:",
+  "options": [
+   {
+    "key": "a",
+    "text": "opcjonalne wystąpienie elementu",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "symbol terminalny",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "symbol nieterminalny",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "wielokrotne występowanie elementu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 214,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Kodem ASCII możemy zakodować:",
+  "options": [
+   {
+    "key": "a",
+    "text": "dowolny znak z zakresu 0-128",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "dowolny znak z zakresu 0-255",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "dowolny znak z zakresu 32-255",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "dowolny znak z zakresu 0-127",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 215,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Kodowanie znaków metodą UTF-8 cechuje:",
+  "options": [
+   {
+    "key": "a",
+    "text": "pozwala zakodować dowolne znaki Unicode",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "zmienna długość kodu",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "pozwala zakodować dowolne znaki ASCII za pomocą 1 bajta",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "pozwala zakodować dowolne znaki ASCII za pomocą 8 bajtów",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "pozwala zakodować dowolne znaki Unicode za pomocą nie więcej niż 6 bajtów",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "kod znaku ASCII może być częścią dłuższego kodu",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 216,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Cechami kodu uzupełnień do dwóch są:",
+  "options": [
+   {
+    "key": "a",
+    "text": "podwójna reprezentacja 0",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "pojedyncza reprezentacja 0",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "symetryczny zakres liczb",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "asymetryczny zakres liczb",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 217,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Dana jest następująca reprezentacja liczb zmiennopozycyjnych: mantysa zajmuje 22 bity, w tym bit znaku, cecha zajmuje 10 bitów, w tym bit znaku. Cecha i mantysa zapisywane są w kodzie U2. Przecinek leży na lewo od mantysy (mantysa jest ułamkiem [1/2...1)). Jaka jest największa możliwa liczba w tym systemie?",
+  "options": [
+   {
+    "key": "a",
+    "text": "10^10",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "(1-2^(-21)) * 2^(2^9-1)",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 218,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Jaka jest minimalna liczba bitów, aby reprezentować liczby zmiennopozycyjne z zakresu -106...106 z dokładnością do 2 miejsc znaczących?",
+  "options": [
+   {
+    "key": "a",
+    "text": "8 bitów",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "12 bitów",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "4 bity",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "14 bitów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 219,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "W standardzie IEEE 754 liczby zmiennopozycyjne podwójnej precyzji:",
+  "options": [
+   {
+    "key": "a",
+    "text": "mantysa zawiera 52 bity łącznie z bitem znaku",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "mantysa zawiera 53 bity łącznie z bitem znaku",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "wykładnik zawiera 11 bitów",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "wykładnik zawiera 12 bitów",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "gwarantują 7-8 dziesiętnych miejsc znaczących",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 220,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Do czego służy stos systemowy?",
+  "options": [
+   {
+    "key": "a",
+    "text": "do przechowywania wszystkich zmiennych w programie",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "do przechowywania zmiennych alokowanych procedurą ^^new(p)^^",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "do przechowywania zmiennych lokalnych procedur i funkcji",
+    "correct": true
+   },
+   {
+    "key": "d",
+    "text": "do przechowywania adresów powrotu z funkcji",
+    "correct": true
+   },
+   {
+    "key": "e",
+    "text": "do przechowywania zmiennych alokowanych dynamicznie",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 221,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Liczby stałopozycyjne w komputerze są reprezentowane w kodzie uzupełnień do 2. Dla jakich wartości funkcja abs(x) będzie obliczona prawidłowo?",
+  "options": [
+   {
+    "key": "a",
+    "text": "tylko dla liczb ujemnych",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "tylko dla liczb nieujemnych",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "dla wszystkich liczb typu integer",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "wszystkich poza najmniejszą liczbą w reprezentacji",
+    "correct": true
+   }
+  ]
+ },
+ {
+  "id": 222,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Zmienna typu wskaźnik zajmuje 4 bajty. Ile pamięci można zaadresować takim wskaźnikiem?",
+  "options": [
+   {
+    "key": "a",
+    "text": "64 kilobajty",
+    "correct": false
+   },
+   {
+    "key": "b",
+    "text": "4 gigabajty",
+    "correct": true
+   },
+   {
+    "key": "c",
+    "text": "2 megabajty",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "6 gigabajtów",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "8 kilobajtów",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1167,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Które stwierdzenia dotyczące entropii Shannona są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Określa średnią ilość informacji przypadającą na jeden symbol źródła.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Wartość entropii zawsze jest dodatnia (lub zero).",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest maksymalna, gdy wszystkie symbole mają różne prawdopodobieństwa.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie zależy od prawdopodobieństwa wystąpienia symboli.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Entropia jest maksymalna dla rozkładu jednostajnego (wszystkie symbole równie prawdopodobne).",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Jednostką entropii jest zawsze bajt.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1168,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Które z podanych stwierdzeń w odniesieniu do kodu Hamminga są prawdziwe:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Pozwala na wykrywanie i korekcję błędów pojedynczego bitu (SEC) oraz wykrywanie błędów dwóch bitów (DED).",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Kod Hamminga pozwala korygować błędy polegające na przekłamaniu dwóch bitów.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Jest kodem o zmiennej długości słowa.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Nie używa bitów parzystości.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Odległość Hamminga dla kodu korygującego pojedyncze błędy musi wynosić co najmniej 3.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Kod Hamminga jest kodem stratnym.",
+    "correct": false
+   }
+  ]
+ },
+ {
+  "id": 1169,
+  "topic": "number_representation",
+  "courseName": "Wstęp do informatyki",
+  "question": "Kodowanie Shannona-Fano i Huffmana:",
+  "options": [
+   {
+    "key": "a",
+    "text": "Tworzą kody prefiksowe.",
+    "correct": true
+   },
+   {
+    "key": "b",
+    "text": "Kodowanie Shannona-Fano tworzy kod postfiksowy.",
+    "correct": false
+   },
+   {
+    "key": "c",
+    "text": "Są metodami kompresji stratnej.",
+    "correct": false
+   },
+   {
+    "key": "d",
+    "text": "Huffmana daje zawsze gorsze wyniki niż Shannona-Fano.",
+    "correct": false
+   },
+   {
+    "key": "e",
+    "text": "Kodowanie Huffmana jest optymalnym kodowaniem prefiksowym dla danych prawdopodobieństw symboli.",
+    "correct": true
+   },
+   {
+    "key": "f",
+    "text": "Oba kody wymagają przesyłania słownika razem z danymi.",
+    "correct": false
+   }
+  ]
+ }
+]
