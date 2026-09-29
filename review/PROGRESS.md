@@ -1,34 +1,16 @@
-# Postęp przeglądu pytań (stan: 2026-09-22)
+# Postęp (2026-09-29)
 
-Cel: poprawić flagi odpowiedzi, dodać ukryte odpowiedzi (pula ≥7, `extra: true`), słownik pojęć, wyjaśnienia offline; potem zmiany w aplikacji.
+✅ Wszystkie 14 grup przejrzane (575 pytań), wyniki w review/out, scalone skryptem review/merge.py do:
+- data/questions.json — 5495 odpowiedzi w puli (~9.5/pytanie, dodatkowe mają `extra: true`, pozycyjne "żadne z..." `fixed: true` i są pomijane w losowaniu), 141 poprawionych flag
+- data/glossary.json — 332 hasła (co to jest / jak działa / pułapki), powiązane z pytaniami przez `terms`
+- data/explanations.json — wyjaśnienie offline do każdego pytania
 
-## Grupy (review/slices -> review/out), walidacja: `python3 review/validate_slice.py SXX`
+Aplikacja:
+- zawsze checkboxy, brak podpowiedzi ile poprawnych
+- losowanie podzbioru odpowiedzi (domyślnie 6, zmiana w Ustawieniach), losowa liczba poprawnych, losowa kolejność
+- klawisz S / przycisk Słownik: hasła do bieżącego pytania + wyszukiwarka; przeglądarka słownika na ekranie głównym
+- E: wyjaśnienie offline (AI przez OpenRouter tylko jako fallback)
+- escapowanie HTML w treści (<label>, <M> itp. już nie znikają)
 
-| Grupa | Tematy | Pytań | Status | Poprawki flag | Hasła słownika |
-|---|---|---|---|---|---|
-| S01 | algorithms, programming_basics | 41 | ✅ gotowe (0 błędów) | 5 | 34 |
-| S02 | digital_systems, transmission, number_representation | 46 | ✅ gotowe | 3 | 27 |
-| S03 | databases, computer_graphics, image_processing | 44 | ✅ gotowe | 5 | 35 |
-| S04 | software_engineering | 49 | ✅ gotowe | 8 | 31 |
-| S05 | java, oop, concurrent, functional | 38 | ⏳ do zrobienia (przerwane limitem) | | |
-| S06 | c_cpp | 35 | ⏳ | | |
-| S07 | numerical_methods | 44 | ⏳ | | |
-| S08 | networks | 47 | ⏳ | | |
-| S09 | operating_systems, unix_admin | 44 | ⏳ | | |
-| S10 | formal_languages | 41 | ⏳ | | |
-| S11 | logic, math | 48 | ⏳ | | |
-| S12 | web_programming, compilation | 35 | ⏳ | | |
-| S13 | machine_learning (1/2) | 32 | ⏳ | | |
-| S14 | machine_learning (2/2) | 31 | ⏳ | | |
-
-Razem: 180/575 pytań przejrzanych, 21 poprawek flag, 127 haseł.
-
-## Do sprawdzenia drugim przeglądem (niepewne)
-- q18 c (true→false, rejestr rozkazów), q218 (12 bitów — zależy od konwencji znaku)
-- q63 (Decision Tree jako „nieużywane w analizie”), q1288 e (zmienne swobodne), q231 (log^n)
-
-## Pozostałe kroki
-1. S05–S14 (instrukcja: review/AGENT_INSTRUCTIONS.md).
-2. Drugi przegląd zmian flag + dodatkowych odpowiedzi.
-3. Scalenie do data/questions.json, data/glossary.json, data/explanations.json.
-4. Aplikacja: checkboxy dla wszystkich pytań (bez zdradzania liczby poprawnych), losowanie podzbioru/kolejności odpowiedzi z puli, panel Słownik (klawisz S) + przeglądarka słownika, wyjaśnienia offline pod E, escapowanie HTML (np. `<label>`, `<M>` znikały).
+Do ewentualnego sprawdzenia (niepewne): q18c, q218, q63, q1288e, q231, q1270 b/d, q1247/1248 c, q179e, q104c, q1331f, q1050 (ucięta treść), q1031 (brak grafu).
+Lista wszystkich zmian flag: pole `changes` w review/out/*.json.

@@ -45,6 +45,19 @@ class ExamDrill {
             this.questions = data.questions;
             this.metadata = data.metadata;
 
+            try {
+                const [g, ex] = await Promise.all([
+                    fetch('data/glossary.json').then(r => r.json()),
+                    fetch('data/explanations.json').then(r => r.json())
+                ]);
+                this.glossary = g;
+                this.glossaryById = Object.fromEntries(g.map(e => [e.id, e]));
+                this.offlineExplanations = ex;
+            } catch (e) {
+                this.glossary = []; this.glossaryById = {}; this.offlineExplanations = {};
+            }
+            this.optionsPerQuestion = parseInt(localStorage.getItem('optionsPerQuestion')) || 6;
+
             // Load pre-cached explanations from server
             try {
                 const cacheResp = await fetch('data/ai_cache.json');
@@ -158,6 +171,11 @@ class ExamDrill {
                     <div class="qa-icon">&#x1F4AA;</div>
                     <div class="qa-title">Weak Areas</div>
                     <div class="qa-desc">Focus on topics below 70%</div>
+                </div>
+                <div class="quick-action-btn" onclick="app.showGlossary()">
+                    <div class="qa-icon">&#x1F4D6;</div>
+                    <div class="qa-title">Słownik pojęć</div>
+                    <div class="qa-desc">${(this.glossary || []).length} haseł: co to jest i jak działa</div>
                 </div>
                 <div class="quick-action-btn" onclick="app.quickStart('full')">
                     <div class="qa-icon">&#x1F4DA;</div>
@@ -280,7 +298,7 @@ class ExamDrill {
         this.answered = false;
 
         const progress = (this.currentQuestionIndex / this.sessionQuestions.length) * 100;
-        const inputType = question.multipleCorrect ? 'checkbox' : 'radio';
+        this.currentOptions = this.sampleOptions(question);
 
         const app = document.getElementById('app');
         app.innerHTML = `
@@ -300,18 +318,18 @@ class ExamDrill {
                     <div class="question-meta">
                         <span class="badge badge-topic">${this.getTopicDisplayName(question.topic)}</span>
                         ${question.semester ? `<span class="badge badge-semester">Sem ${question.semester}</span>` : ''}
-                        ${question.multipleCorrect ? '<span class="badge badge-multi">Multiple</span>' : ''}
+                        <span class="badge badge-multi">Zaznacz wszystkie prawdziwe</span>
                     </div>
                 </div>
 
                 <div class="question-text">${this.formatText(question.question)}</div>
 
                 <ul class="options-list" id="optionsList">
-                    ${question.options.map((opt, idx) => `
+                    ${this.currentOptions.map((opt, idx) => `
                         <li class="option-item">
                             <div class="option-label" data-key="${opt.key}" onclick="app.selectOption('${opt.key}')">
-                                <span class="option-check">${question.multipleCorrect ? '&#9744;' : '&#9675;'}</span>
-                                <span class="option-key">${opt.key})</span>
+                                <span class="option-check">&#9744;</span>
+                                <span class="option-key">${String.fromCharCode(97 + idx)})</span>
                                 <span class="option-text">${this.formatText(opt.text)}</span>
                                 <span class="kbd">${idx + 1}</span>
                             </div>
@@ -329,10 +347,15 @@ class ExamDrill {
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                         Wyjaśnij <span class="kbd">E</span>
                     </button>
+                    <button class="btn btn-explain" onclick="app.toggleTermsPanel()">
+                        &#x1F4D6; Słownik <span class="kbd">S</span>
+                    </button>
                     <button class="btn btn-secondary" onclick="app.renderHome()">
                         Wyjdź
                     </button>
                 </div>
+
+                <div class="explanation-panel" id="termsPanel"></div>
 
                 <div class="explanation-panel" id="explanationPanel">
                     <h4>Wyjaśnienie</h4>
@@ -340,23 +363,116 @@ class ExamDrill {
                 </div>
             </div>`;
 
-        if (window.MathJax) MathJax.typesetPromise();
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
         window.scrollTo(0, 0);
     }
 
     formatText(text) {
         if (!text) return '';
-        // MathJax handles ^^...^^ natively via config - no manual replacement needed
-        return text;
+        // escape HTML so things like <label>, <M>, a<b are shown literally; MathJax handles ^^...^^
+        return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    // Random subset of the answer pool: >=1 correct and >=1 incorrect, random number of correct,
+    // shuffled order. Position-dependent options ("żadne z ...") are skipped.
+    sampleOptions(question) {
+        const pool = question.options.filter(o => !o.fixed);
+        const n = Math.min(this.optionsPerQuestion || 6, pool.length);
+        const cor = this.shuffle(pool.filter(o => o.correct));
+        const inc = this.shuffle(pool.filter(o => !o.correct));
+        if (!cor.length || !inc.length) return this.shuffle(pool).slice(0, n);
+        const maxC = Math.min(cor.length, n - 1);
+        const minC = Math.max(1, n - inc.length);
+        const k = minC + Math.floor(Math.random() * (maxC - minC + 1));
+        return this.shuffle([...cor.slice(0, k), ...inc.slice(0, n - k)]);
+    }
+
+    // ── Glossary ──
+
+    termsForQuestion(question) {
+        return (question.terms || []).map(t => this.glossaryById[t]).filter(Boolean);
+    }
+
+    renderTermCard(e, open = false) {
+        return `<details class="term-card" ${open ? 'open' : ''}>
+            <summary><strong>${this.formatText(e.term)}</strong><span class="term-short">${this.formatText(e.short)}</span></summary>
+            <div class="term-details">${this.renderExplanation(e.details)}
+            ${(e.related || []).length ? `<div class="term-related">Powiązane: ${e.related.map(r => this.glossaryById[r] ? `<a href="#" onclick="app.openTerm('${r}');return false;">${this.formatText(this.glossaryById[r].term)}</a>` : '').join(', ')}</div>` : ''}
+            </div></details>`;
+    }
+
+    toggleTermsPanel() {
+        const panel = document.getElementById('termsPanel');
+        if (!panel) return;
+        if (panel.classList.contains('visible')) { panel.classList.remove('visible'); return; }
+        const q = this.sessionQuestions[this.currentQuestionIndex];
+        const terms = this.termsForQuestion(q);
+        panel.innerHTML = `<h4>Słownik — pojęcia do tego pytania</h4>
+            ${terms.map((e, i) => this.renderTermCard(e, i === 0)).join('') || '<p>Brak haseł dla tego pytania.</p>'}
+            <input type="text" class="glossary-search" id="termSearch" placeholder="Szukaj innego pojęcia..." oninput="app.searchTermsInline(this.value)">
+            <div id="termSearchResults"></div>`;
+        panel.classList.add('visible');
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([panel]);
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    searchGlossary(query, topic = 'all') {
+        const q = query.trim().toLowerCase();
+        return this.glossary.filter(e => (topic === 'all' || e.topic === topic) &&
+            (!q || e.term.toLowerCase().includes(q) || e.short.toLowerCase().includes(q) || (q.length > 3 && e.details.toLowerCase().includes(q))));
+    }
+
+    searchTermsInline(query) {
+        const box = document.getElementById('termSearchResults');
+        if (!box) return;
+        box.innerHTML = query.trim().length < 2 ? '' : this.searchGlossary(query).slice(0, 8).map(e => this.renderTermCard(e)).join('');
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([box]);
+    }
+
+    showGlossary(focusId = null) {
+        this.currentView = 'glossary';
+        const topics = [...new Set(this.glossary.map(e => e.topic))].sort((a, b) => this.getTopicDisplayName(a).localeCompare(this.getTopicDisplayName(b)));
+        document.getElementById('app').innerHTML = `
+            <div class="card">
+                <h2>Słownik pojęć</h2>
+                <p style="color:var(--text-muted); margin-bottom:12px;">${this.glossary.length} haseł — co to jest, jak dokładnie działa i na co uważać na egzaminie.</p>
+                <div class="filters">
+                    <div class="filter-group"><label>Szukaj</label>
+                        <input type="text" id="glossarySearch" class="glossary-search" placeholder="np. Dijkstra, 3NF, TCP..." oninput="app.renderGlossaryList()"></div>
+                    <div class="filter-group"><label>Temat</label>
+                        <select id="glossaryTopic" onchange="app.renderGlossaryList()"><option value="all">Wszystkie</option>
+                        ${topics.map(t => `<option value="${t}">${this.getTopicDisplayName(t)}</option>`).join('')}</select></div>
+                </div>
+                <div id="glossaryList"></div>
+                <div class="actions-row"><button class="btn btn-secondary" onclick="app.renderHome()">Wróć</button></div>
+            </div>`;
+        this.renderGlossaryList(focusId);
+    }
+
+    renderGlossaryList(focusId = null) {
+        const list = document.getElementById('glossaryList');
+        if (!list) return;
+        const items = focusId ? [this.glossaryById[focusId]] :
+            this.searchGlossary(document.getElementById('glossarySearch').value, document.getElementById('glossaryTopic').value);
+        list.innerHTML = items.slice(0, 150).map(e => this.renderTermCard(e, !!focusId)).join('') || '<p>Nic nie znaleziono.</p>';
+        if (items.length > 150) list.innerHTML += `<p style="color:var(--text-muted)">…i ${items.length - 150} więcej — zawęź wyszukiwanie.</p>`;
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([list]);
+    }
+
+    openTerm(id) {
+        const e = this.glossaryById[id];
+        if (!e) return;
+        if (this.currentView === 'glossary') { this.showGlossary(id); return; }
+        const box = document.getElementById('termSearchResults');
+        if (box) { box.innerHTML = this.renderTermCard(e, true); if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([box]); box.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
     }
 
     selectOption(key) {
         if (this.answered) return;
 
-        const question = this.sessionQuestions[this.currentQuestionIndex];
         const label = document.querySelector(`.option-label[data-key="${key}"]`);
 
-        if (question.multipleCorrect) {
+        {
             if (this.selectedAnswers.has(key)) {
                 this.selectedAnswers.delete(key);
                 label.classList.remove('selected');
@@ -366,15 +482,6 @@ class ExamDrill {
                 label.classList.add('selected');
                 label.querySelector('.option-check').innerHTML = '&#9745;';
             }
-        } else {
-            document.querySelectorAll('.option-label').forEach(l => {
-                l.classList.remove('selected');
-                l.querySelector('.option-check').innerHTML = '&#9675;';
-            });
-            this.selectedAnswers.clear();
-            this.selectedAnswers.add(key);
-            label.classList.add('selected');
-            label.querySelector('.option-check').innerHTML = '&#9679;';
         }
     }
 
@@ -383,14 +490,11 @@ class ExamDrill {
             this.nextQuestion();
             return;
         }
-        if (this.selectedAnswers.size === 0) {
-            this.showToast('Wybierz odpowiedź', 'info');
-            return;
-        }
 
         this.answered = true;
         const question = this.sessionQuestions[this.currentQuestionIndex];
-        const correctKeys = new Set(question.options.filter(o => o.correct).map(o => o.key));
+        const correctKeys = new Set(this.currentOptions.filter(o => o.correct).map(o => o.key));
+        const letter = k => String.fromCharCode(97 + this.currentOptions.findIndex(o => o.key === k));
         const isCorrect = this.setsEqual(this.selectedAnswers, correctKeys);
 
         this.score.total++;
@@ -421,7 +525,7 @@ class ExamDrill {
         const resultDiv = document.getElementById('answerResult');
         resultDiv.innerHTML = `
             <div class="answer-result ${isCorrect ? 'result-correct' : 'result-incorrect'}">
-                ${isCorrect ? 'Poprawnie!' : `Błędna odpowiedź — poprawne: ${[...correctKeys].join(', ')}`}
+                ${isCorrect ? 'Poprawnie!' : `Błędna odpowiedź — poprawne: ${[...correctKeys].map(letter).sort().join(', ')}`}
             </div>`;
 
         // Update button
@@ -480,9 +584,17 @@ class ExamDrill {
                 explainBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Wyjaśniono';
                 explainBtn.classList.add('btn-explained');
             }
-            if (window.MathJax) MathJax.typesetPromise();
+            if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
             setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
         };
+
+        const offline = this.offlineExplanations && this.offlineExplanations[String(question.id)];
+        if (offline) {
+            content.innerHTML = this.renderExplanation(offline) +
+                `<p style="margin-top:8px;"><em>Wyjaśnienie obejmuje całą pulę odpowiedzi (także niewylosowane). Pojęcia: ${this.termsForQuestion(question).map(e => `<a href="#" onclick="app.toggleTermsPanel();return false;">${this.formatText(e.term)}</a>`).join(', ')}</em></p>`;
+            finishLoading();
+            return;
+        }
 
         // Check cache (server + local)
         if (this.explanationCache[cacheKey]) {
@@ -671,10 +783,10 @@ Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w n
                 <div class="review-list">
                     ${this.wrongAnswers.map((q, i) => `
                         <div class="review-item" onclick="app.reviewQuestion(${i})">
-                            <div class="review-item-q">#${q.id}: ${q.question.substring(0, 100)}${q.question.length > 100 ? '...' : ''}</div>
+                            <div class="review-item-q">#${q.id}: ${this.formatText(q.question.substring(0, 100))}${q.question.length > 100 ? '...' : ''}</div>
                             <div class="review-item-info">
                                 <span>${this.getTopicDisplayName(q.topic)}</span>
-                                <span>Correct: ${q.options.filter(o => o.correct).map(o => o.key).join(', ')}</span>
+
                             </div>
                         </div>
                     `).join('')}
@@ -727,6 +839,7 @@ Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w n
 
                 <div class="question-text">${this.formatText(question.question)}</div>
 
+                <p style="color:var(--text-muted); font-size:13px;">Cała pula odpowiedzi (✓ = prawdziwe):</p>
                 <ul class="options-list">
                     ${question.options.map(opt => `
                         <li class="option-item">
@@ -754,7 +867,7 @@ Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w n
                 </div>
             </div>`;
 
-        if (window.MathJax) MathJax.typesetPromise();
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
     }
 
     async showReviewExplanation(questionId) {
@@ -913,6 +1026,13 @@ Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w n
                 </div>
 
                 <div class="settings-section">
+                    <h4>Liczba odpowiedzi na pytanie</h4>
+                    <p style="color:var(--text-muted); font-size:14px; margin-bottom:12px;">Odpowiedzi są losowane z puli (średnio ~9.5 na pytanie). Liczba poprawnych jest losowa.</p>
+                    <div class="filter-group"><input type="number" id="optsPerQ" min="3" max="10" value="${this.optionsPerQuestion}"
+                        onchange="app.optionsPerQuestion=Math.max(3,Math.min(10,parseInt(this.value)||6));localStorage.setItem('optionsPerQuestion',app.optionsPerQuestion)"></div>
+                </div>
+
+                <div class="settings-section">
                     <h4>Cache Management</h4>
                     <p style="color:var(--text-muted); font-size:14px; margin-bottom:12px;">
                         Export your cached explanations to share or back up, or import from a file.
@@ -931,6 +1051,7 @@ Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w n
                         <li><span>Select option</span><span><span class="kbd">1</span> - <span class="kbd">9</span></span></li>
                         <li><span>Submit / Next</span><span class="kbd">Enter</span></li>
                         <li><span>Show explanation</span><span class="kbd">E</span></li>
+                        <li><span>Słownik pojęć do pytania</span><span class="kbd">S</span></li>
                         <li><span>Go home</span><span class="kbd">Esc</span></li>
                     </ul>
                 </div>
@@ -1019,10 +1140,9 @@ Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w n
                 // Number keys to select options
                 const num = parseInt(e.key);
                 if (num >= 1 && num <= 9 && !this.answered) {
-                    const question = this.sessionQuestions[this.currentQuestionIndex];
-                    if (num <= question.options.length) {
+                    if (num <= this.currentOptions.length) {
                         e.preventDefault();
-                        this.selectOption(question.options[num - 1].key);
+                        this.selectOption(this.currentOptions[num - 1].key);
                     }
                 }
 
@@ -1030,6 +1150,11 @@ Używaj terminów technicznych. Jeśli to istotne, podaj wzory matematyczne (w n
                 if (e.key === 'Enter') {
                     e.preventDefault();
                     this.submitAnswer();
+                }
+
+                if (e.key === 's' || e.key === 'S') {
+                    e.preventDefault();
+                    this.toggleTermsPanel();
                 }
 
                 // E to show explanation

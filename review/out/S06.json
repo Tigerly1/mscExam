@@ -1,0 +1,2450 @@
+{
+ "questions": [
+  {
+   "id": 92,
+   "question": "W językach imperatywnych (również obiektowych) przy wyborze reprezentacji dla danych rzeczywistych (zmiennoprzecinkowych) pojawiają się problemy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wystąpienia nadmiaru",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wystąpienia niedomiaru",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "dokładności",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Niektóre liczby dziesiętne (np. 0.1) nie mają dokładnej reprezentacji binarnej, co powoduje błędy zaokrągleń.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "Skończona liczba bitów mantysy ogranicza liczbę cyfr znaczących.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Typ zmiennoprzecinkowy pozwala zapisać dowolnie dużą liczbę bez utraty dokładności.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Dodawanie liczb zmiennoprzecinkowych jest zawsze łączne: (a+b)+c == a+(b+c).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Nadmiar i niedomiar dotyczą wyłącznie liczb całkowitych.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmiennoprzecinkowe-ieee754"
+   ],
+   "explanation": "**Dlaczego poprawne:** liczby zmiennoprzecinkowe mają skończony zakres wykładnika (nadmiar, niedomiar) i skończoną mantysę (ograniczona dokładność, np. 0.1 nie ma dokładnej postaci binarnej).\n\n**Dlaczego błędne:** rzekomy brak nadmiaru/niedomiaru, „dowolnie duże liczby bez utraty dokładności” oraz łączność dodawania są fałszywe – zaokrąglenia psują łączność.\n\n**Zapamiętaj:** skończona liczba bitów = ograniczony zakres i ograniczona precyzja.",
+   "changes": []
+  },
+  {
+   "id": 93,
+   "question": "Wskazania (pointers) w C, C++ używane są do reprezentowania (wskazywania):",
+   "options": [
+    {
+     "key": "a",
+     "text": "obszarów pamięci operacyjnej",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zmiennych złożonych",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zmiennych skalarnych",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "funkcji i metod",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "innych wskaźników (wskaźnik do wskaźnika)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "wyłącznie zmiennych typu int",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wyłącznie obszarów pamięci przydzielonych dynamicznie (na stercie)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wskazniki-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** wskaźnik przechowuje adres, więc może wskazywać dowolny obszar pamięci, zmienne skalarne i złożone (struktury, tablice), funkcje (i metody w C++), a także inne wskaźniki.\n\n**Dlaczego błędne:** wskaźnik nie jest ograniczony do int ani do sterty – może wskazywać stos, dane statyczne i kod.\n\n**Zapamiętaj:** wskaźnik = adres + typ; wskazać można niemal wszystko, co ma adres.",
+   "changes": []
+  },
+  {
+   "id": 94,
+   "question": "W jaki sposób można obliczyć długość tekstu przekazanego jako argument w poniższej funkcji w języku C? void foo(const char* txt) { ... }",
+   "options": [
+    {
+     "key": "a",
+     "text": "sizeof(txt)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "strlen(txt)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "txt.length()",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zliczając, ile znaków występuje w tekście od znaku na który wskazuje wskaźnik do znaku końca łańcucha znaków ('\\0')",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "strlen(txt) zwraca liczbę znaków bez kończącego znaku '\\0'.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "pętla for(n=0; txt[n]; n++) po jej zakończeniu zostawia w n długość tekstu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "sizeof(*txt) zwraca długość tekstu.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "strlen(txt) zwraca długość tekstu wraz ze znakiem '\\0'.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lancuch-znakow-c",
+    "wskazniki-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** strlen zlicza znaki do '\\0' (bez niego); to samo robi ręczna pętla. Łańcuch w C to tablica znaków zakończona zerem.\n\n**Dlaczego błędne:** sizeof(txt) to rozmiar wskaźnika; txt.length() to składnia C++ (i to dla std::string), w C nie istnieje; strlen nie liczy znaku '\\0'.\n\n**Zapamiętaj:** długość łańcucha w C = liczba znaków przed '\\0'.",
+   "changes": []
+  },
+  {
+   "id": 95,
+   "question": "Co możesz powiedzieć o poniższej deklaracji w języku C? int t[10] = {1, 2, [4]=1};",
+   "options": [
+    {
+     "key": "a",
+     "text": "zgodnie ze standardem C99 spowoduje ona utworzenie tablicy zawierającej 10 elementów, z których 7 ma wartość 0",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "da ona taki sam efekt, jak deklaracja: int t[] = {1, 2, 0, 0, 1}",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Elementy niewymienione na liście inicjalizacyjnej są inicjalizowane zerem.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "Notacja [4]=1 to tzw. inicjalizator wskazany (designated initializer) wprowadzony w C99.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "t[4] ma wartość 1, a t[2], t[3] oraz t[5]..t[9] są zerami.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Deklaracja utworzy tablicę o 5 elementach, bo największy indeks to 4.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Zgodnie z C99 składnia [4]=1 jest błędem kompilacji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Element t[2] ma wartość nieokreśloną (śmieci).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tablice-w-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** tablica ma 10 elementów; inicjalizator wskazany [4]=1 (C99) ustawia t[4]; jawne wartości to t[0]=1, t[1]=2, t[4]=1, reszta (7 elementów) jest zerowana.\n\n**Dlaczego błędne:** int t[] = {1,2,0,0,1} ma tylko 5 elementów; [4]=1 nie jest błędem w C99; elementy pominięte nie są losowe.\n\n**Zapamiętaj:** rozmiar jawny 10 wygrywa, niewymienione elementy = 0.",
+   "changes": []
+  },
+  {
+   "id": 96,
+   "question": "W jaki sposób obliczyć długość tablicy w funkcji foo() w języku C? void foo(double f[]) { // dlugosc tablicy t? }",
+   "options": [
+    {
+     "key": "a",
+     "text": "nie da się obliczyć",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "po wykonaniu poniższej instrukcji długość tablicy będzie umieszczona w zmiennej len: int len; for(len=0; t[len]; len++)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Parametr double f[] jest w rzeczywistości typu double*.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "sizeof(f) wewnątrz foo zwraca rozmiar wskaźnika, a nie tablicy.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "Standardowe rozwiązanie to przekazanie długości tablicy jako dodatkowego parametru.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "sizeof(f)/sizeof(f[0]) daje wewnątrz foo liczbę elementów tablicy.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "strlen(f) zwraca liczbę elementów tablicy.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tablice-w-c",
+    "wskazniki-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** parametr double f[] jest dostosowany do double*, więc informacja o długości przepada; trzeba przekazać ją osobno.\n\n**Dlaczego błędne:** pętla używa nazwy t (nie f), a warunek t[len] kończy się na pierwszym zerze, nie na końcu tablicy; sizeof(f)/sizeof(f[0]) da rozmiar wskaźnika podzielony przez rozmiar double; strlen dotyczy łańcuchów char.\n\n**Zapamiętaj:** w funkcji tablica to wskaźnik – długość podaj jako parametr.",
+   "changes": []
+  },
+  {
+   "id": 97,
+   "question": "Która z implementacji funkcji zawierającej tablicę w języku C jest poprawna?",
+   "options": [
+    {
+     "key": "a",
+     "text": "int[] getTable() { int tab[10]; return tab; }",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "int * getTable(int n) { return (int*) malloc(n * sizeof(int)); }",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "int * getTable(int n) { return (int*) calloc(n, sizeof(n)); }",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "int * getTable(void) { static int tab[10]; return tab; }",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "int * getTable(int n) { return (int*) calloc(n, sizeof(int)); }, przy czym zwrócona pamięć jest wyzerowana i wymaga zwolnienia przez free.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "int * getTable(void) { int tab[10] = {0}; return tab; }",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "int * getTable(int n) { int tab[n]; return tab; }",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "alokacja-dynamiczna",
+    "tablice-w-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** malloc i calloc zwracają pamięć na stercie, która przeżywa funkcję (sizeof(n) to sizeof(int), bo n jest int); zmienna static też żyje po wyjściu z funkcji.\n\n**Dlaczego błędne:** int[] nie jest poprawnym typem zwracanym; zwracanie adresu tablicy lokalnej (także VLA) daje wiszący wskaźnik.\n\n**Zapamiętaj:** nie zwracaj adresu zmiennej automatycznej; pamięć ze sterty zwalniaj przez free.",
+   "changes": []
+  },
+  {
+   "id": 98,
+   "question": "Przeanalizuj poniższą deklarację w języku C: int (*x)(int, int);",
+   "options": [
+    {
+     "key": "a",
+     "text": "zmienna x jest dwuwymiarową tablicą wskaźników typu int* o zmiennym rozmiarze",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "deklaracja jest niezgodna ze składnią języka",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zmienna x jest wskaźnikiem na funkcję przyjmującą dwa argumenty typu int, zwracającą wartość typu int",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Po przypisaniu x = &funkcja (o pasującej sygnaturze) wywołanie (*x)(1,2) oraz x(1,2) jest poprawne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "Nawiasy wokół *x są konieczne, bo bez nich deklaracja oznaczałaby funkcję zwracającą int*.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "x jest funkcją przyjmującą dwa argumenty int i zwracającą wskaźnik do int.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "x jest wskaźnikiem na tablicę dwóch liczb typu int.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wskaznik-na-funkcje"
+   ],
+   "explanation": "**Dlaczego poprawne:** int (*x)(int,int) to wskaźnik na funkcję (int,int)→int; nawiasy przy *x są konieczne, bo bez nich deklaracja oznaczałaby funkcję zwracającą int*.\n\n**Dlaczego błędne:** to nie tablica ani deklaracja niezgodna ze składnią; nie jest to też funkcja zwracająca wskaźnik ani wskaźnik na tablicę.\n\n**Zapamiętaj:** czytaj od nazwy: x → wskaźnik → funkcja → int.",
+   "changes": []
+  },
+  {
+   "id": 99,
+   "question": "Które stwierdzenia dotyczące operatorów w języku C/C++ są poprawne:",
+   "options": [
+    {
+     "key": "a",
+     "text": "operatory addytywne mają mniejszy priorytet niż multiplikatywne",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wyrażenie z == ++z jest zawsze fałszywe dla zmiennej z typu int",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "żadne z pozostałych",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Operator przypisania = jest prawostronnie łączny (a=b=c to a=(b=c)).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "Operator && ma wyższy priorytet niż ||.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Operator == ma wyższy priorytet niż operatory relacyjne, np. <.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Wyrażenie a + b * c jest obliczane jako (a + b) * c.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "priorytet-operatorow-i-punkty-sekwencyjne"
+   ],
+   "explanation": "**Dlaczego poprawne:** * / % wiążą silniej niż + −; = jest prawostronnie łączny; && ma wyższy priorytet niż ||.\n\n**Dlaczego błędne:** z == ++z to niesekwencjonowany odczyt i modyfikacja z – niezdefiniowane zachowanie, więc nie można twierdzić, że jest „zawsze fałszywe”; == ma niższy priorytet niż <; przecinek ma najniższy priorytet; a+b*c to a+(b*c). Opcja „żadne z pozostałych” zależy od innych opcji.\n\n**Zapamiętaj:** mnożenie przed dodawaniem, ale kolejność obliczania operandów nie jest gwarantowana.",
+   "changes": [
+    "c: [POSITION-DEPENDENT] opcja „żadne z pozostałych” zależy od innych opcji; zostaje false, bo a jest prawdziwe"
+   ]
+  },
+  {
+   "id": 100,
+   "question": "Dzięki konwencji wywołania funkcji w języku C/C++ znanej jako __cdecl możliwa jest implementacja funkcji o zmiennej liczbie argumentów, jak printf(). Które stwierdzenia charakteryzujące funkcje typu __cdecl są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "w wygenerowanym kodzie wywołania funkcji argumenty umieszczane są na stosie od końca, dzięki temu na szczycie stosu jest jej pierwszy argument i analizując jego zawartość można określić spodziewaną liczbę argumentów wywołania",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w języku C kompilator może utworzyć kod wywołania funkcji typu __cdecl nie mając żadnych informacji o typach jej parametrów",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "W __cdecl to funkcja wywołująca usuwa argumenty ze stosu po powrocie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "W __cdecl argumenty są umieszczane na stosie od pierwszego do ostatniego, dlatego pierwszy argument jest najgłębiej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "W __cdecl to funkcja wywoływana usuwa argumenty ze stosu przed powrotem.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Funkcja printf() w konwencji __cdecl zna liczbę argumentów dzięki stałej liczbie zapisanej w nagłówku funkcji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Sprzątanie stosu przez wywołującego umożliwia wywołanie funkcji z inną liczbą argumentów niż liczba parametrów formalnych.",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "konwencja-cdecl",
+    "wskazniki-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** w __cdecl argumenty trafiają na stos od prawej do lewej, więc pierwszy leży na szczycie (printf odczytuje z formatu, ile ich jest), a stos sprząta wywołujący – dlatego możliwe są funkcje variadic. W C kompilator może wywołać funkcję zadeklarowaną bez prototypu (int f();) lub argumenty za „...” bez znajomości typów parametrów.\n\n**Dlaczego błędne:** w __stdcall stos sprząta wywoływany; kolejność od lewej do prawej jest błędna.\n\n**Zapamiętaj:** __cdecl: od prawej, sprząta wywołujący.",
+   "changes": [
+    "b: false -> true, bo w C (do C17) deklaracja bez prototypu int f(); i argumenty variadic pozwalają wygenerować wywołanie bez informacji o typach parametrów (kompilator stosuje tylko promocje domyślne); stem podkreśla język C. Niepewność: autor mógł mieć na myśli false"
+   ]
+  },
+  {
+   "id": 101,
+   "question": "W jaki sposób przekazywany jest parametr będący tablicą do funkcji w języku C, np.: int main(int argc, char* argv[]) { ... }",
+   "options": [
+    {
+     "key": "a",
+     "text": "cała zawartość tablicy kopiowana jest na stos i funkcja działa na kopii tablicy",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "na stos przekazywany jest adres pierwszego elementu tablicy",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "tablice są zawsze przekazywane do funkcji jako wskaźnik",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "tablice są zawsze przekazywane do funkcji przez referencję",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "funkcja działa na kopii tablicy, dla której pamięć przydzielona jest na stercie; do funkcji trafia adres kopii tablicy",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "na stosie umieszczany jest pierwszy element tablicy",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Parametr char* argv[] jest równoważny parametrowi char** argv.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zmiana elementu tablicy wewnątrz funkcji jest widoczna w funkcji wywołującej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "sizeof(argv) wewnątrz funkcji zwraca łączny rozmiar tablicy w bajtach.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Zmiana elementu argv[0] w funkcji modyfikuje tylko lokalną kopię całej tablicy, niewidoczną dla wywołującego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tablice-w-c",
+    "wskazniki-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** w C tablica w wywołaniu zanika (array-to-pointer decay) do adresu pierwszego elementu; char* argv[] to char** argv, więc zmiany elementów są widoczne u wywołującego.\n\n**Dlaczego błędne:** nie ma kopiowania całej tablicy ani na stos, ani na stertę; C nie ma referencji; na stosie nie leży pierwszy element, lecz jego adres; sizeof(argv) to rozmiar wskaźnika.\n\n**Zapamiętaj:** tablica → wskaźnik, przez wartość adresu.",
+   "changes": []
+  },
+  {
+   "id": 1206,
+   "question": "Po wykonaniu fragmentu kodu napisanego w języku C: int a,b=1; a=b++ + b;",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wynik jest niezdefiniowany (undefined behavior).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "operator + nie ma w standardzie C określonej kolejności obliczenia operandów.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "a zawsze wyniesie 3.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "a zawsze wyniesie 2.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wynik zależy od wersji kompilatora i poziomu optymalizacji.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Kod ten nie skompiluje się w standardzie C11.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Kod jest poprawny składniowo i się kompiluje (co najwyżej z ostrzeżeniem).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zmienna b jest modyfikowana i odczytywana w tym samym wyrażeniu bez sekwencjonowania.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Dodanie nawiasów a = (b++) + b; usuwa niezdefiniowane zachowanie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Przed standardem C11 kod był w pełni zdefiniowany, a UB pojawiło się dopiero w C11.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "priorytet-operatorow-i-punkty-sekwencyjne"
+   ],
+   "explanation": "**Dlaczego poprawne:** b jest modyfikowane (b++) i odczytywane w tym samym wyrażeniu bez sekwencjonowania → niezdefiniowane zachowanie. Standard C nie określa też kolejności obliczania operandów +.\n\n**Dlaczego błędne:** 2 lub 3 nie jest gwarantowane; kod się kompiluje; nawiasy nie pomagają; UB nie jest „zależne od wersji” w sensie formalnym – standard nie nakłada żadnych wymagań.\n\n**Zapamiętaj:** nie modyfikuj i nie czytaj tej samej zmiennej w jednym wyrażeniu bez punktu sekwencyjnego.",
+   "changes": [
+    "b: false -> true, bo standard C nie określa kolejności obliczania operandów + (unspecified order of evaluation)",
+    "e: zostaje false; niejednoznaczne, bo w praktyce wyniki różnią się między kompilatorami, ale formalnie to UB"
+   ]
+  },
+  {
+   "id": 1207,
+   "question": "Typ double w języku C:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Służy do przechowywania liczb zmiennoprzecinkowych podwójnej precyzji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w zmiennej tego typu możemy zapisać między innymi dowolną liczbę, którą można zapisać w typie char.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "ma mniejszy zakres niż typ float.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie może przechowywać wartości ujemnych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Typowo zajmuje 8 bajtów w pamięci.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest typem całkowitym o dużej precyzji.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Typowo (IEEE 754) ma 53 bity znaczące mantysy (52 zapisywane jawnie).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Może przechowywać wartości ujemne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wyrażenie 0.1 + 0.2 daje dokładnie 0.3.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Każda wartość typu long long może być zapisana w double bez utraty precyzji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmiennoprzecinkowe-ieee754"
+   ],
+   "explanation": "**Dlaczego poprawne:** double to zmiennoprzecinkowy typ podwójnej precyzji, typowo 8 bajtów; zakres obejmuje wszystkie wartości char (małe liczby całkowite są dokładnie reprezentowalne); przechowuje też wartości ujemne.\n\n**Dlaczego błędne:** zakres double jest większy niż float; nie jest typem całkowitym; 0.1+0.2 nie daje dokładnie 0.3; nie każdy long long mieści się w 53 bitach mantysy.\n\n**Zapamiętaj:** double = 64 bity IEEE 754, 53 bity znaczące.",
+   "changes": [
+    "b: false -> true, bo double reprezentuje dokładnie każdą wartość typu char (małe liczby całkowite)"
+   ]
+  },
+  {
+   "id": 1208,
+   "question": "Przyjmijmy, że zmienne wskaźnikowe t oraz s są typu char, dodatkowo s wskazuje na niepusty łańcuch tekstowy, a t na adres pamięci rozpoczynający obszar przydzielony naszemu procesowi. Po wykonaniu fragmentu kodu napisanego w języku C: while(*t++=*s++);",
+   "options": [
+    {
+     "key": "a",
+     "text": "Kopiuje łańcuch znaków z s do t, włącznie ze znakiem końcowym '\\0'.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wskaźniki s oraz t zwiększą swoją wartość o tyle bajtów ile znaków znajduje się w łańcuchu.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "pętla będzie trwać w nieskończoność.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "kopiuje tylko pierwszy znak.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest to idiomatyczny sposób kopiowania stringów w C.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga, aby t było większe od s.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Po zakończeniu pętli t wskazuje bajt za skopiowanym znakiem '\\0'.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Pętla kończy się, gdy skopiowany znak ma wartość 0, bo wartością wyrażenia przypisania jest przypisana wartość.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Pętla wykonuje się dokładnie strlen(s) razy.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Instrukcja sama alokuje pamięć potrzebną na skopiowany łańcuch.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lancuch-znakow-c",
+    "wskazniki-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** *t++=*s++ kopiuje znak i przesuwa oba wskaźniki; wartość przypisania to skopiowany znak, więc pętla kończy się po skopiowaniu '\\0'. To idiom kopiowania łańcuchów; po pętli t wskazuje bajt za '\\0'.\n\n**Dlaczego błędne:** wskaźniki przesuwają się o długość+1 (razem z '\\0'); pętla nie jest nieskończona ani nie kopiuje jednego znaku; adresy t i s nie muszą być w relacji (bufor musi mieć miejsce).\n\n**Zapamiętaj:** kopia z terminatorem, iteracji strlen+1.",
+   "changes": [
+    "b: zostaje false; wskaźniki zwiększą się o długość+1 (z '\\0'), nie o samą liczbę znaków"
+   ]
+  },
+  {
+   "id": 1209,
+   "question": "Po wykonaniu fragmentu kodu oznaczającego deklarację w języku C: int tab[10], *ws=tab;",
+   "options": [
+    {
+     "key": "a",
+     "text": "ws wskazuje na pierwszy element tablicy (tab[0]).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nazwa tablicy tab jest wskaźnikiem na pierwszy element tablicy.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "ws przechowuje kopię całej tablicy.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "tab i ws to dwa różne typy, których nie można przypisać.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wyrażenie *(ws + 1) jest równoważne tab[1].",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Rozmiar tablicy tab można zmienić za pomocą realloc.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "sizeof(tab) daje 10*sizeof(int), a sizeof(ws) daje rozmiar wskaźnika.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "ws[3] i tab[3] oznaczają ten sam element.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Instrukcja tab = ws; jest poprawna i przypisuje tablicy adres.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wyrażenie ws + 1 wskazuje adres o jeden bajt dalej niż ws.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tablice-w-c",
+    "wskazniki-c"
+   ],
+   "explanation": "**Dlaczego poprawne:** nazwa tablicy w wyrażeniu zanika do adresu pierwszego elementu, więc ws == &tab[0]; *(ws+1) to tab[1] (arytmetyka wskaźników).\n\n**Dlaczego błędne:** tablica nie jest wskaźnikiem (sizeof(tab) to 10*sizeof(int)); ws nie kopiuje tablicy; tab = ws jest niedozwolone (tablica nie jest l-wartością modyfikowalną); realloc dotyczy sterty, nie tablicy automatycznej; ws+1 to o sizeof(int) bajtów.\n\n**Zapamiętaj:** tablica ≠ wskaźnik, ale w wyrażeniach do niego zanika.",
+   "changes": []
+  },
+  {
+   "id": 1210,
+   "question": "Fragmentu kodu w języku C: double (*fun1)(double, double);",
+   "options": [
+    {
+     "key": "a",
+     "text": "fun1 jest wskaźnikiem do funkcji przyjmującej dwa parametry typu double i zwracającej double.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "ogólnie nazwa funkcji jest jednocześnie wskaźnikiem do funkcji.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest to wywołanie funkcji o nazwie fun1.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "deklaruje tablicę wskaźników.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "fun1 jest funkcją zwracającą wskaźnik do double.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Deklaracja ta jest błędna bez słowa kluczowego typedef.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Po przypisaniu fun1 = pow; wywołanie fun1(2, 3) jest poprawne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Nawiasy wokół *fun1 są konieczne, bo bez nich deklaracja oznaczałaby funkcję zwracającą double*.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Deklaracja double *fun1(double, double); oznacza to samo.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "fun1 jest tablicą dwóch wskaźników do double.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wskaznik-na-funkcje"
+   ],
+   "explanation": "**Dlaczego poprawne:** double (*fun1)(double,double) to wskaźnik na funkcję (double,double)→double; po przypisaniu np. fun1 = pow można ją wywołać jako fun1(2,3).\n\n**Dlaczego błędne:** to deklaracja, nie wywołanie; nie tablica; bez nawiasów byłaby to funkcja zwracająca double*; typedef nie jest wymagany. Uwaga: „nazwa funkcji jest wskaźnikiem” to skrót myślowy – formalnie oznacznik funkcji ulega konwersji do wskaźnika.\n\n**Zapamiętaj:** nawiasy wokół *nazwa czynią ją wskaźnikiem do funkcji.",
+   "changes": [
+    "b: zostaje false (niejednoznaczne: nazwa funkcji formalnie nie jest wskaźnikiem, tylko do niego konwertowana)"
+   ]
+  },
+  {
+   "id": 1211,
+   "question": "Fragmentu kodu w języku C: int fib(int n){ if(n<3) return n; return fib(n-1) + fib(n-2); }",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest nieefektywna (złożoność wykładnicza) i przy każdym wywołaniu tworzy nową ramkę stosu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "przy każdym rekurencyjnym wywołaniu funkcji tworzona jest kopia argumentu n.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zawsze zwraca wynik w czasie O(n).",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie może być zaimplementowana w C.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Może prowadzić do przepełnienia stosu (stack overflow) dla dużych n.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest przykładem programowania dynamicznego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Dodanie memoizacji (zapamiętywania wyników) obniża złożoność czasową do O(n).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Głębokość rekurencji, a więc zużycie stosu, rośnie liniowo z n.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zużycie stosu rośnie wykładniczo względem n.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Złożoność pamięciowa tej funkcji wynosi O(1).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rekurencja-fibonacci"
+   ],
+   "explanation": "**Dlaczego poprawne:** naiwna rekurencja Fibonacciego ma złożoność wykładniczą i każde wywołanie tworzy ramkę stosu z własną kopią n (przekazanie przez wartość); głębokość ~n może przepełnić stos; memoizacja obniża czas do O(n).\n\n**Dlaczego błędne:** czas nie jest O(n); to nie programowanie dynamiczne (brak zapamiętywania); stos zużywa O(n), nie wykładniczo i nie O(1); rekurencja w C jest możliwa.\n\n**Zapamiętaj:** naiwna rekurencja = powtarzane podproblemy.",
+   "changes": [
+    "b: false -> true, bo argument przekazywany jest przez wartość, więc każde wywołanie ma własną kopię n"
+   ]
+  },
+  {
+   "id": 1212,
+   "question": "Algorytm minimax:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Służy do wyboru optymalnego ruchu w grach dwuosobowych o sumie zerowej.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nawet w tak prostej grze jak kółko i krzyżyk nie da się przejrzeć całego drzewa ruchów.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest algorytmem losowym.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie wymaga funkcji oceny stanu gry.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Może być zoptymalizowany za pomocą odcięć alfa-beta (alpha-beta pruning).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest stosowany wyłącznie w grach karcianych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zakłada, że przeciwnik również wybiera ruchy optymalnie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Bez odcięć jego złożoność czasowa wynosi O(b^d) (b – współczynnik rozgałęzienia, d – głębokość).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Odcięcia alfa-beta mogą zmienić wybrany ruch na gorszy.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jest algorytmem zachłannym, bo ocenia tylko jeden ruch do przodu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "minimax"
+   ],
+   "explanation": "**Dlaczego poprawne:** minimax wybiera ruch optymalny przy założeniu, że przeciwnik też gra optymalnie (gry dwuosobowe o sumie zerowej); odcięcia alfa-beta przyspieszają go bez zmiany wyniku; koszt bez odcięć to O(b^d).\n\n**Dlaczego błędne:** drzewo kółka i krzyżyka (ok. 9! liści) da się przejrzeć w całości; algorytm jest deterministyczny; wymaga funkcji oceny (lub stanów końcowych); nie tylko gry karciane; alfa-beta nie zmienia wyniku; nie jest zachłanny.\n\n**Zapamiętaj:** minimax + alfa-beta = ten sam wynik, mniej węzłów.",
+   "changes": []
+  },
+  {
+   "id": 1213,
+   "question": "Wyszukiwanie w posortowanej tablicy n elementów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Można zastosować wyszukiwanie binarne o złożoności O(log n).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w celu wyszukania elementu o zadanej wartości musimy wykonać dokładnie n kroków.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zawsze wymaga O(n^2) operacji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie jest możliwe bez dodatkowego indeksu.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wyszukiwanie liniowe jest zawsze szybsze dla n < 1000.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wymaga, aby tablica była posortowana malejąco.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wyszukiwanie binarne porównuje szukaną wartość z elementem środkowym i odrzuca połowę zakresu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wyszukiwanie liniowe również działa na tablicy posortowanej, ze złożonością O(n).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wyszukiwanie binarne ma złożoność O(√n).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wyszukiwanie binarne działa poprawnie także na tablicy nieposortowanej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wyszukiwanie-binarne-liniowe"
+   ],
+   "explanation": "**Dlaczego poprawne:** wyszukiwanie binarne porównuje z elementem środkowym i odrzuca połowę, dając O(log n); liniowe działa też na posortowanej tablicy.\n\n**Dlaczego błędne:** nie „dokładnie n kroków” (koniec możliwy wcześniej); nie O(n²); indeks nie jest potrzebny; liniowe nie jest zawsze szybsze; kierunek sortowania nie jest wymagany (wystarczy zgodny komparator); nie O(√n); dla nieposortowanych binarne zawodzi.\n\n**Zapamiętaj:** posortowana tablica + dostęp swobodny = O(log n).",
+   "changes": []
+  },
+  {
+   "id": 1214,
+   "question": "Wyszukiwanie w posortowanej liście jednokierunkowej n elementów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wymaga przejścia sekwencyjnego, co daje złożoność pesymistyczną O(n).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wyszukanie elementu o zadanej wartości ma logarytmiczną złożoność czasową.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest szybsze niż w tablicy.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "pozwala na dostęp swobodny do elementów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Można zastosować wyszukiwanie binarne w czasie O(log n).",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wymaga stałej ilości pamięci dodatkowej.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Najlepszy przypadek (szukany element na początku) to O(1).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Przeszukiwanie można przerwać po napotkaniu elementu większego od szukanego.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Średnio wymaga ok. n/2 porównań, więc złożoność jest O(log n).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Dostęp do k-tego elementu listy ma złożoność O(1).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lista-jednokierunkowa",
+    "wyszukiwanie-binarne-liniowe"
+   ],
+   "explanation": "**Dlaczego poprawne:** lista nie ma dostępu swobodnego, więc szukanie idzie sekwencyjnie – O(n); iteracyjne przejście używa O(1) pamięci dodatkowej (wystarczy jeden wskaźnik); można przerwać po napotkaniu większego elementu.\n\n**Dlaczego błędne:** binarne O(log n) wymaga dostępu swobodnego; lista nie jest szybsza niż tablica; średnio ~n/2 porównań to wciąż O(n).\n\n**Zapamiętaj:** posortowanie listy nie daje wyszukiwania logarytmicznego.",
+   "changes": [
+    "f: false -> true, bo iteracyjne przeszukiwanie listy wymaga tylko O(1) dodatkowej pamięci"
+   ]
+  },
+  {
+   "id": 1215,
+   "question": "Gdy mamy strukturę dynamiczną danych typu lista jednokierunkowa, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pozwala na wstawienie elementu w dowolnym miejscu, jeśli mamy wskaźnik do elementu poprzedzającego.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nie można wstawić nowego elementu w dowolnym miejscu w liście.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie posiada wskaźnika na następny element.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest strukturą o stałym rozmiarze.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Każdy węzeł przechowuje dane oraz wskaźnik na kolejny element.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Pozwala na szybkie (O(1)) pobranie poprzedniego elementu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wstawienie nowego elementu na początek listy ma złożoność O(1).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Usunięcie węzła wymaga dostępu do jego poprzednika (lub przejścia od początku).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Dostęp do i-tego elementu ma złożoność O(1).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Węzły listy są przechowywane w jednym ciągłym bloku pamięci.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lista-jednokierunkowa"
+   ],
+   "explanation": "**Dlaczego poprawne:** węzeł zawiera dane i wskaźnik na następnik; wstawienie po znanym węźle to przepięcie dwóch wskaźników (O(1)); wstawienie na początek również O(1).\n\n**Dlaczego błędne:** wstawianie w środku jest możliwe; wskaźnik next istnieje; rozmiar dynamiczny; poprzednik nie jest osiągalny w O(1) (brak wskaźnika wstecz); elementy nie leżą w ciągłym bloku pamięci; dostęp do i-tego to O(i).\n\n**Zapamiętaj:** lista = szybkie wstawianie przy znanym miejscu, wolny dostęp.",
+   "changes": []
+  },
+  {
+   "id": 1216,
+   "question": "Struktura typu drzewo:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Aby odwiedzić wszystkie n węzłów, należy zastosować algorytm przejścia o złożoności O(n).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w celu wypisania wszystkich elementów drzewa musimy przejść przez wszystkie elementy drzewa.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "każdy węzeł może mieć tylko jednego potomka.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie może być pusta.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Drzewo binarne to drzewo, w którym każdy węzeł ma co najwyżej dwóch potomków.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Drzewo jest grafem spójnym zawierającym cykle.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Drzewo o n węzłach ma n−1 krawędzi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liść to węzeł bez potomków.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Każde drzewo binarne o n węzłach ma wysokość rzędu log n.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Drzewo o n węzłach ma n krawędzi.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "drzewa-i-bst"
+   ],
+   "explanation": "**Dlaczego poprawne:** przejście drzewa (pre-, in-, post-order, BFS) odwiedza każdy węzeł raz – O(n); wypisanie wszystkich elementów wymaga odwiedzenia wszystkich; drzewo binarne ma ≤2 potomków; drzewo o n węzłach ma n−1 krawędzi.\n\n**Dlaczego błędne:** węzeł może mieć wielu potomków; drzewo może być puste; drzewo jest spójne i acykliczne; wysokość drzewa binarnego nie zawsze wynosi log n.\n\n**Zapamiętaj:** drzewo = graf spójny bez cykli.",
+   "changes": [
+    "b: false -> true, bo wypisanie wszystkich elementów wymaga odwiedzenia wszystkich węzłów"
+   ]
+  },
+  {
+   "id": 1217,
+   "question": "Gdy mamy strukturę dynamiczną typu drzewo wyszukiwań binarnych (BST), gdzie jest to drzewo spełniające własność, że dla każdego węzła zawierającego wartość x mającego lewego potomka zawierającego wartość l oraz prawego zawierającego wartość p, zachodzi: l<=x oraz x<=p, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Średnia złożoność wyszukiwania wynosi O(log n), ale pesymistyczna to O(n).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w dowolnym drzewie tego typu znalezienie węzła ma logarytmiczną złożoność czasową.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zawsze jest zrównoważone.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie pozwala na przechowywanie duplikatów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Dla każdego węzła, wartości w lewym poddrzewie są mniejsze, a w prawym większe od wartości węzła.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "BST jest zawsze drzewem pełnym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Przejście in-order daje wartości w kolejności niemalejącej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Minimalna wartość znajduje się w skrajnie lewym węźle drzewa.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wstawianie posortowanego ciągu do pustego BST bez równoważenia daje drzewo zdegenerowane o wysokości n.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Przejście pre-order zawsze zwraca wartości w kolejności posortowanej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Pesymistyczna złożoność wyszukiwania w BST wynosi O(log n).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "drzewa-i-bst"
+   ],
+   "explanation": "**Dlaczego poprawne:** średnio (drzewo zbliżone do zrównoważonego) wyszukiwanie to O(log n), pesymistycznie (zdegenerowane drzewo) O(n); przejście in-order daje wartości niemalejąco; minimum jest w skrajnie lewym węźle.\n\n**Dlaczego błędne:** nie każde BST jest zrównoważone ani pełne, więc nie zawsze O(log n); przy l≤x≤p duplikaty są dozwolone – stąd nierówności nieostre, a twierdzenie o ostro mniejszych/większych jest nieprawdziwe; pre-order nie sortuje.\n\n**Zapamiętaj:** BST bez równoważenia: O(h), h od log n do n.",
+   "changes": [
+    "e: true -> false, bo przy definicji l<=x<=p dozwolone są duplikaty, więc wartości w poddrzewach nie muszą być ściśle mniejsze/większe"
+   ]
+  },
+  {
+   "id": 1218,
+   "question": "Przeanalizuj fragmenty kodu w języku C++, w którym pojawiają się zmienne, wskaźniki i referencje. Które z nich mają poprawną składnię?",
+   "options": [
+    {
+     "key": "a",
+     "text": "int x; int &r = x; (referencja musi być zainicjalizowana i nie może być null).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "int x; int&r=null; r=x;",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "int &r; r = 10;",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "int &r = null;",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Referencja może zostać przełączona na inny obiekt w trakcie działania programu.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Referencja zajmuje tyle samo pamięci co wskaźnik.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "int x; int *p = &x; int &r = *p;",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "const int &r = 5;",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "int x; int &&r = x;",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Zmienna lokalna int &r; jest poprawną deklaracją, a przypisanie r = 10 zainicjuje ją później.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "referencje-cpp"
+   ],
+   "explanation": "**Dlaczego poprawne:** referencja musi być zainicjalizowana obiektem i jest jego aliasem; const int& może wiązać się z tymczasową wartością; int &r = *p jest poprawne.\n\n**Dlaczego błędne:** null nie jest słowem kluczowym C++ (a referencja nie może być pusta); int &r; bez inicjalizacji jest błędem; referencji nie można przełączyć (r = x przypisuje wartość); rozmiar referencji nie jest gwarantowany jako równy wskaźnikowi; int&& nie wiąże się z l-wartością.\n\n**Zapamiętaj:** referencja = niezmienny alias.",
+   "changes": [
+    "f: zostaje false (niejednoznaczne: standard nie gwarantuje, że referencja zajmuje pamięć jak wskaźnik)"
+   ]
+  },
+  {
+   "id": 1219,
+   "question": "Które stwierdzenia odnoszące się ograniczeń narzucanych przez składnię języka C++ w odniesieniu do konstruktorów i destruktorów są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Klasa może mieć wiele konstruktorów, ale tylko jeden destruktor.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "W klasie można zdefiniować dowolną liczbę konstruktorów i co najwyżej jeden destruktor.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Destruktor może zwracać wartość int.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Konstruktor musi być zawsze publiczny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Destruktor jest wywoływany automatycznie, gdy obiekt wychodzi poza zakres.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Konstruktor kopiujący nie może być prywatny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Destruktor nie przyjmuje parametrów i nie można go przeciążać.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Konstruktor nie ma określonego typu zwracanego.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Konstruktor może być zadeklarowany jako wirtualny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Klasa może mieć wiele destruktorów różniących się listą parametrów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "konstruktory-destruktory"
+   ],
+   "explanation": "**Dlaczego poprawne:** konstruktorów może być wiele (przeciążanie), destruktor co najwyżej jeden, bez parametrów i bez typu zwracanego; jest wołany automatycznie po wyjściu obiektu z zakresu.\n\n**Dlaczego błędne:** destruktor nie zwraca wartości; konstruktor może być prywatny (np. singleton), także kopiujący; destruktora nie można przeciążać; konstruktor nie może być wirtualny.\n\n**Zapamiętaj:** wiele konstruktorów, jeden destruktor.",
+   "changes": [
+    "b: false -> true, bo dowolna liczba konstruktorów i co najwyżej jeden destruktor to prawda (równoważne pierwszej opcji)"
+   ]
+  },
+  {
+   "id": 1220,
+   "question": "Które stwierdzenia odnoszące się do metod klas w języku C++ są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Metody statyczne nie posiadają wskaźnika this.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wskaźnik this nie jest dostępny w metodach statycznych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Metody wirtualne nie mogą być prywatne.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Każda metoda musi być wirtualna.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Metody stałe (const) nie mogą modyfikować pól klasy (poza polami mutable).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Metody statyczne mogą wywoływać metody niestatyczne bez obiektu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Metoda wirtualna może być prywatna i nadpisywana w klasie pochodnej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Metodę statyczną można wywołać bez obiektu, przez A::f().",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Metody statyczne mogą być deklarowane jako const.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Metoda const może wywoływać dowolne metody niestałe tego samego obiektu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metody-klas-cpp"
+   ],
+   "explanation": "**Dlaczego poprawne:** metody statyczne nie należą do obiektu, więc nie mają this; metoda const nie modyfikuje pól (poza mutable); metoda wirtualna może być prywatna; statyczną wywołuje się przez A::f().\n\n**Dlaczego błędne:** metody prywatne mogą być wirtualne; nie każda musi być wirtualna; statyczna nie wywoła niestatycznej bez obiektu; static const nie istnieje; metoda const nie może wywoływać metod niestałych tego obiektu.\n\n**Zapamiętaj:** static = brak this, const = brak modyfikacji stanu.",
+   "changes": [
+    "b: false -> true, bo brak this w metodach statycznych to prawda (równoważne pierwszej opcji)"
+   ]
+  },
+  {
+   "id": 1221,
+   "question": "Zadeklarowano dwie klasy języka C++ class A{ int value; public: A(int _v):value(_v){} int getValue(){return value;} const char*getName(){return \"AAA\";} }; oraz class B:public A { public: // konstruktor const char*getName(){return \"B\";} }; Utworzono obiekt klasy B za pomocą następującej instrukcji: A*pa=new B(); Która implementacja konstruktora klasy B jest poprawna?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Konstruktor klasy pochodnej musi wywołać konstruktor klasy bazowej w liście inicjalizacyjnej.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "B::B(){super(0);}",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "B::B(){A(0);}",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "B::B(){this->A(0);}",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jeśli klasa bazowa nie ma konstruktora domyślnego, jawne wywołanie jest wymagane.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Klasa B automatycznie dziedziczy wszystkie pola prywatne klasy A jako publiczne.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Poprawna jest implementacja z listą inicjalizacyjną: B::B() : A(0) {}",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Konstruktor klasy bazowej A wykonuje się przed ciałem konstruktora klasy B.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "B::B() {} jest poprawne, bo kompilator wywoła A() automatycznie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "B::B() : base(0) {}",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "konstruktory-destruktory",
+    "polimorfizm-i-dziedziczenie-cpp"
+   ],
+   "explanation": "**Dlaczego poprawne:** A nie ma konstruktora domyślnego, więc B musi jawnie wywołać A(0) w liście inicjalizacyjnej: B::B() : A(0) {}. Konstruktor bazy wykonuje się przed ciałem konstruktora B.\n\n**Dlaczego błędne:** super to Java; A(0); w ciele tworzy tymczasowy obiekt (i nie wywołuje bazy), a wcześniej kompilator szuka A() i zgłasza błąd; this->A(0) jest niedozwolone; B::B() {} nie skompiluje się; pola prywatne pozostają prywatne (niedostępne).\n\n**Zapamiętaj:** bazę inicjalizuje się w liście inicjalizacyjnej.",
+   "changes": []
+  },
+  {
+   "id": 1222,
+   "question": "Zadeklarowano cztery klasy języka C++ class A{ public: A(){std::cout<<\"A\";} }; class B{ public: B(){std::cout<<\"B\";} }; class C{ A a; public: C(){std::cout<<\"C\";} }; class D : public C{ public: B b; D(){std::cout<<\"D\";} }; Jaka jest kolejność wywołania konstruktorów przy tworzeniu obiektu klasy D?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Najpierw baza (C), potem pola (B), potem ciało konstruktora (D). Wewnątrz C: pole (A), potem ciało (C). Zatem: A, C, B, D.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Konstruktor B zostanie wywołany przed konstruktorem klasy C.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "B, A, C, D.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "D, B, C, A.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Kolejność zależy od kolejności deklaracji w pliku nagłówkowym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wszystkie konstruktory są wywoływane równolegle.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wypisany zostanie ciąg ACBD.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Kolejność inicjalizacji pól określa kolejność ich deklaracji w klasie, a nie kolejność na liście inicjalizacyjnej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wypisany zostanie ciąg ACDB.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Kolejność na liście inicjalizacyjnej konstruktora decyduje o kolejności inicjalizacji pól.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "konstruktory-destruktory",
+    "polimorfizm-i-dziedziczenie-cpp"
+   ],
+   "explanation": "**Dlaczego poprawne:** kolejność: podobiekt bazowy C (najpierw jego pole A → \"A\", potem ciało C → \"C\"), potem pola D (B → \"B\"), potem ciało D → \"D\". Wynik: ACBD. Pola inicjalizowane są w kolejności deklaracji w klasie.\n\n**Dlaczego błędne:** B przed C, BACD, DBCA i ACDB łamią zasadę baza → pola → ciało; lista inicjalizacyjna nie zmienia kolejności; konstruktory nie działają równolegle.\n\n**Zapamiętaj:** baza, pola w kolejności deklaracji, ciało.",
+   "changes": [
+    "poprawiono błąd w opcji f: „are” -> „są”",
+    "e: zostaje false; kolejność zależy od deklaracji w klasie, ale zawsze baza przed polami – opcja jest myląca"
+   ]
+  },
+  {
+   "id": 1223,
+   "question": "Zadeklarowano trzy klasy języka C++. class A { public: virtual ~A(){f();} virtual void f(){std::cout<<\"A\";} }; class B:public A { public: ~B(){f();} }; class C:public B { public: ~C(){f();} void f(){std::cout<<\"C\";} }; Zaimplementowano następującą funkcję main() int main(){ A* ptr = new C(); delete ptr; return 0; } Przy usuwaniu obiektu wołany jest jego destruktor. Które stwierdzenia dotyczące uruchamianych destruktorów są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jeśli klasa bazowa ma wirtualny destruktor, destruktory wywołają się od najbardziej pochodnej do bazy.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wpierw zostanie uruchomiony destruktor A, potem B, potem C.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wywoła się tylko destruktor klasy A.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Destruktory wywołują się w kolejności alfabetycznej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Brak wirtualnego destruktora w klasie bazowej przy usuwaniu przez wskaźnik na bazę prowadzi do UB.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Destruktor wirtualny jest wymagany tylko w klasach abstrakcyjnych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wypisany zostanie ciąg CAA.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "W destruktorze B wywołanie f() daje A::f, bo część C została już zniszczona.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wypisany zostanie ciąg CCC.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wywołanie f() w destruktorze A wywoła C::f, bo f jest wirtualna.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "polimorfizm-i-dziedziczenie-cpp",
+    "konstruktory-destruktory"
+   ],
+   "explanation": "**Dlaczego poprawne:** wirtualny destruktor bazy sprawia, że delete przez A* uruchamia najpierw ~C, potem ~B, potem ~A. W destruktorach f() jest rozstrzygane wg aktualnego typu: ~C → C::f (\"C\"), ~B → A::f (\"A\"), ~A → A::f (\"A\"); wynik CAA. Bez wirtualnego destruktora delete przez wskaźnik bazy to UB.\n\n**Dlaczego błędne:** kolejność A→B→C jest odwrócona; nie tylko ~A; brak porządku alfabetycznego; wirtualny destruktor przydaje się w każdej klasie polimorficznej, nie tylko abstrakcyjnej.\n\n**Zapamiętaj:** niszczenie odwrotnie do tworzenia; wirtualne wywołania w destruktorze nie schodzą do klas pochodnych.",
+   "changes": []
+  },
+  {
+   "id": 1224,
+   "question": "Które stwierdzenia odnoszące się do przeciążania operatorów w języku C++ są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Niektóre operatory (np. <<, >>) są zazwyczaj przeciążane jako funkcje zaprzyjaźnione (friend).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wszystkie operatory muszą być zaimplementowane jako metody klasy.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Nie można przeciążać operatora +.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Operatory logiczne nie podlegają przeciążaniu.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Operatory takie jak =, [], (), -> muszą być zaimplementowane jako metody klasy.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Można tworzyć nowe operatory, np. **.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Operatorów ::, ., .* oraz ?: nie można przeciążać.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Przeciążenie operatora nie zmienia jego priorytetu ani łączności.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Przeciążony operator && zachowuje obliczanie skrótowe (short-circuit).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Operator sizeof można przeciążyć jako metodę klasy.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "przeciazanie-operatorow"
+   ],
+   "explanation": "**Dlaczego poprawne:** operatory strumieniowe << i >> mają po lewej stronie strumień, więc są funkcjami nie-składowymi (często friend); =, [], (), -> muszą być metodami; nie można przeciążać ::, ., .*, ?:; przeciążenie nie zmienia priorytetu.\n\n**Dlaczego błędne:** nie wszystkie muszą być metodami; + i operatory logiczne można przeciążać; nowych operatorów (np. **) tworzyć nie wolno; sizeof przeciążyć nie można; przeciążone && nie ma obliczania skrótowego.\n\n**Zapamiętaj:** można przeciążać istniejące operatory, nie zmieniając ich priorytetu.",
+   "changes": []
+  },
+  {
+   "id": 1225,
+   "question": "Wybierz poprawne stwierdzenia odnoszące się do obiektów funkcyjnych w języku C++",
+   "options": [
+    {
+     "key": "a",
+     "text": "To obiekty klas, które mają przeciążony operator nawiasów operator().",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Obiekty funkcyjne to obiekty klasy, która implementuje operator wywołania funkcji.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Są to wskaźniki do funkcji statycznych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Można je tworzyć tylko za pomocą słowa kluczowego function.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Funktory mogą przechowywać stan między wywołaniami.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Są wolniejsze od zwykłych wskaźników do funkcji.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Lambda jest obiektem funkcyjnym (kompilator generuje klasę z operator()).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Obiekt funkcyjny można przekazać do algorytmów STL, np. std::sort.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Obiekt funkcyjny musi dziedziczyć po klasie std::function.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Obiekt funkcyjny nie może mieć pól, więc nie przechowuje stanu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "funktory-i-lambdy"
+   ],
+   "explanation": "**Dlaczego poprawne:** obiekt funkcyjny (funktor) to obiekt klasy z operator(); może mieć pola, więc przechowuje stan między wywołaniami; lambda jest obiektem funkcyjnym; przekazuje się go do algorytmów STL.\n\n**Dlaczego błędne:** to nie wskaźniki do funkcji statycznych; nie wymaga słowa function; nie dziedziczy po std::function; jest zwykle nie wolniejszy (łatwiej go wstawić inline).\n\n**Zapamiętaj:** funktor = klasa z operator() + stan.",
+   "changes": [
+    "b: false -> true, bo to poprawna definicja obiektu funkcyjnego (równoważna pierwszej opcji)"
+   ]
+  },
+  {
+   "id": 1226,
+   "question": "Które stwierdzenia odnoszące się do mechanizmu wyjątków w języku C++ są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Podczas \"odwijania stosu\" niszczone są obiekty lokalne poprzez wywołanie ich destruktorów.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Podczas obsługi wyjątków zwalniana jest pamięć stosu oraz wołane są destruktory obiektów.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Wyjątki nie mogą być rzucane w konstruktorach.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Każdy wyjątek musi dziedziczyć po klasie std::exception.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Rzucenie wyjątku w destruktorze podczas odwijania stosu powoduje wywołanie std::terminate.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Blok catch(...) łapie tylko wyjątki typu int.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Blok catch(...) łapie wyjątek dowolnego typu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wyjątek rzucony w konstruktorze powoduje zniszczenie w pełni skonstruowanych pól i podobiektów bazowych, ale nie wywołuje destruktora niedokończonego obiektu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Po obsłużeniu wyjątku w bloku catch wykonanie programu wznawia się za instrukcją throw.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Złapanie wyjątku przez wartość catch(Base e) zachowuje dynamiczny typ obiektu pochodnego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wyjatki-cpp",
+    "konstruktory-destruktory"
+   ],
+   "explanation": "**Dlaczego poprawne:** odwijanie stosu niszczy obiekty lokalne (wołając destruktory) i zwalnia ramki stosu; wyjątek uciekający z destruktora podczas odwijania → std::terminate; catch(...) łapie dowolny typ; wyjątek w konstruktorze niszczy w pełni zbudowane pola i bazy.\n\n**Dlaczego błędne:** w konstruktorach wyjątki można rzucać (to standardowy sposób sygnalizacji błędu); typ wyjątku dowolny; po catch wykonanie nie wraca za throw; złapanie przez wartość obcina obiekt (slicing).\n\n**Zapamiętaj:** wyjątki: RAII + destruktory bez wyjątków.",
+   "changes": [
+    "b: false -> true, bo odwijanie stosu zwalnia pamięć stosu i wywołuje destruktory (zgodne z pierwszą opcją)"
+   ]
+  },
+  {
+   "id": 1227,
+   "question": "Wybierz poprawne stwierdzenia odnoszące się do kontenerów języka C++",
+   "options": [
+    {
+     "key": "a",
+     "text": "std::list to lista dwukierunkowa, zapewnia stały czas O(1) wstawiania na obu końcach.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Szablon std::list umożliwia dodawanie elementów na początku i końcu listy.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "std::vector zapewnia stały czas wstawiania w dowolnym miejscu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "std::map przechowuje elementy w sposób nieposortowany.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "std::vector zapewnia stały czas dostępu O(1) do dowolnego elementu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "std::deque nie pozwala na wstawianie na początku.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "std::deque umożliwia wstawianie na początku i na końcu w czasie O(1) zamortyzowanym.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dodanie elementu do std::vector może spowodować realokację pamięci i unieważnienie iteratorów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "std::list zapewnia dostęp swobodny O(1) przez operator[].",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wstawianie do std::map ma złożoność O(1).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kontenery-stl-iteratory"
+   ],
+   "explanation": "**Dlaczego poprawne:** std::list to lista dwukierunkowa: O(1) wstawienia na obu końcach (push_front/push_back); std::vector daje O(1) dostępu przez indeks; deque ma push_front i push_back w O(1) zamortyzowanym; vector przy realokacji unieważnia iteratory.\n\n**Dlaczego błędne:** wstawianie w środku vectora to O(n); std::map jest uporządkowana (drzewo); deque wspiera wstawianie na początku; list nie ma operator[]; wstawianie do map to O(log n).\n\n**Zapamiętaj:** vector – indeks, list – wstawianie, map – porządek.",
+   "changes": [
+    "b: false -> true, bo std::list ma push_front i push_back (dodawanie na początku i końcu)"
+   ]
+  },
+  {
+   "id": 1228,
+   "question": "Załóżmy, że A jest klasą języka C++. Jakie warunki muszą być spełnione, aby móc przechowywać obiekty tej klasy w kontenerze std::set lub używać ich jako klucze w std::map?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wymagają, aby klucze posiadały zdefiniowaną relację ścisłego słabego porządku.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "muszą być zdefiniowane operatory boolowskie < , == oraz >.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "klucze muszą być typu całkowitego.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "obiekty muszą dziedziczyć po klasie Comparable.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Są zazwyczaj implementowane jako drzewa czerwono-czarne.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Zapewniają średni czas wyszukiwania O(1).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Można dostarczyć własny komparator jako parametr szablonu zamiast operatora <.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wyszukiwanie w std::set ma złożoność O(log n).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Dwa klucze uznawane są za równoważne, gdy ani a<b, ani b<a.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Równość elementów w std::set jest sprawdzana operatorem ==.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "std::set dopuszcza wielokrotne przechowywanie tych samych wartości.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kontenery-stl-iteratory"
+   ],
+   "explanation": "**Dlaczego poprawne:** std::set/map wymagają ścisłego słabego porządku (domyślnie operator<, lub własny komparator); zwykle to drzewa czerwono-czarne; klucze są równoważne, gdy ani a<b, ani b<a; wyszukiwanie to O(log n).\n\n**Dlaczego błędne:** nie trzeba definiować ==, > (wystarczy <); klucze mogą być dowolnym typem; nie ma klasy Comparable; O(1) to własność tablic mieszających (unordered_set); równość nie jest sprawdzana przez ==; set nie dopuszcza duplikatów.\n\n**Zapamiętaj:** set/map = porządek (<), O(log n).",
+   "changes": []
+  },
+  {
+   "id": 1229,
+   "question": "Które stwierdzenia odnoszące się do iteratorów w C++ są prawdziwe",
+   "options": [
+    {
+     "key": "a",
+     "text": "std::vector i std::deque posiadają iteratory swobodnego dostępu, a std::list tylko dwukierunkowe.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Iterator kontenera std::list umożliwia dostęp swobodny.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Iteratory nie mogą być porównywane.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Każdy iterator można przesunąć o n pozycji w czasie O(1).",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Iteratory kontenerów asocjacyjnych (np. std::set) nie są iteratorami swobodnego dostępu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Iterator end() wskazuje na ostatni element kontenera.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Iterator end() wskazuje na pozycję za ostatnim elementem i nie wolno go dereferencjonować.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "std::advance na iteratorze dwukierunkowym działa w czasie O(n).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Iteratory std::set umożliwiają operację it + 5.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wstawienie elementu do std::vector nigdy nie unieważnia iteratorów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kontenery-stl-iteratory"
+   ],
+   "explanation": "**Dlaczego poprawne:** vector i deque mają iteratory swobodnego dostępu; list – dwukierunkowe; set/map – dwukierunkowe; end() wskazuje za ostatni element i nie wolno go dereferencjonować; std::advance na dwukierunkowym to O(n).\n\n**Dlaczego błędne:** iteratory można porównywać; nie każdy da się przesunąć o n w O(1); end() nie jest ostatnim elementem; it+5 na set nie skompiluje się; wstawienie do vectora może unieważnić iteratory.\n\n**Zapamiętaj:** kategoria iteratora zależy od kontenera.",
+   "changes": []
+  },
+  {
+   "id": 1230,
+   "question": "Które stwierdzenia odnoszące się do wyrażeń lambda w języku C++ są prawdziwe",
+   "options": [
+    {
+     "key": "a",
+     "text": "Każde wyrażenie lambda ma unikalny, nienazwany typ generowany przez kompilator.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wynikiem kompilacji identycznych wyrażeń lambda jest jeden współdzielony obiekt funkcyjny.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Lambdy nie mogą przechwytywać zmiennych przez referencję.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Lambdy są dostępne od standardu C++98.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Składnia [=] oznacza przechwycenie wszystkich zmiennych lokalnych przez kopię.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Lambdy nie mogą być używane jako argumenty funkcji STL.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Składnia [&] oznacza przechwycenie zmiennych przez referencję.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Lambda bez przechwytywania może być niejawnie skonwertowana do wskaźnika na funkcję.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zmienne przechwycone przez kopię ([=]) można domyślnie modyfikować w lambdzie bez słowa mutable.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Lambda przechwytująca zmienną lokalną przez referencję jest zawsze bezpieczna po wyjściu z zakresu funkcji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "funktory-i-lambdy"
+   ],
+   "explanation": "**Dlaczego poprawne:** każda lambda ma unikalny, anonimowy typ (nawet dla identycznego tekstu); [=] kopiuje, [&] przechwytuje przez referencję; lambda bez przechwytywania konwertuje się do wskaźnika na funkcję.\n\n**Dlaczego błędne:** przechwytywanie przez referencję jest możliwe; lambdy pojawiły się w C++11, nie C++98; można je stosować w algorytmach STL; kopie z [=] są domyślnie const (modyfikacja wymaga mutable); referencja do zmiennej lokalnej po wyjściu z zakresu jest wisząca.\n\n**Zapamiętaj:** lambda = anonimowa klasa funktora (C++11).",
+   "changes": []
+  }
+ ],
+ "glossary": [
+  {
+   "id": "zmiennoprzecinkowe-ieee754",
+   "term": "Liczby zmiennoprzecinkowe (IEEE 754 floating point)",
+   "topic": "c_cpp",
+   "short": "Liczba jest zapisana jako znak, wykładnik i mantysa w skończonej liczbie bitów, więc ma ograniczony zakres i precyzję.",
+   "details": "Zapis: ^^(-1)^s \\cdot 1.m \\cdot 2^e^^. float ma 32 bity (24 znaczące), double 64 bity (53 znaczące: 52 zapisywane), typowo 8 bajtów. Zakres double jest znacznie większy niż float, a precyzja ok. 15–16 cyfr dziesiętnych. Wynik operacji większy niż maksimum to nadmiar (overflow, +inf), mniejszy co do modułu niż najmniejsza liczba znormalizowana to niedomiar (underflow, 0 lub liczba zdenormalizowana). Większość ułamków dziesiętnych (0.1) nie ma skończonej postaci binarnej, więc 0.1+0.2 ≠ 0.3. Zaokrąglenia psują łączność dodawania. Małe liczby całkowite (w tym wartości char) są w double reprezentowane dokładnie do 2^53.\n\n**Na egzaminie uważaj na:**\n- double nie jest typem całkowitym i przechowuje liczby ujemne.\n- double ma większy zakres niż float.\n- Nie porównuj liczb zmiennoprzecinkowych przez ==.\n- Nie każdy long long mieści się w double bez straty.",
+   "related": [
+    "wskazniki-c"
+   ]
+  },
+  {
+   "id": "wskazniki-c",
+   "term": "Wskaźniki w C/C++ (pointers)",
+   "topic": "c_cpp",
+   "short": "Wskaźnik to zmienna przechowująca adres obiektu, tablicy lub funkcji w pamięci.",
+   "details": "Wskaźnik ma typ wskazywanego obiektu (int*, char*, struct S*, void (*)(int)). Operator & daje adres, * dereferencję. Arytmetyka wskaźników: p+1 przesuwa adres o sizeof(*p) bajtów, a *(p+i) jest równoważne p[i]. Wskaźnik może wskazywać zmienne skalarne, złożone (struktury, tablice), obszary pamięci ze stosu, sterty i danych statycznych, inne wskaźniki oraz funkcje (w C++ także metody, przez wskaźnik do składowej). sizeof(p) to rozmiar wskaźnika, nie wskazywanego obszaru. Wskaźnik do zmiennej lokalnej staje się wiszący po wyjściu z funkcji; dereferencja NULL to UB.\n\n**Na egzaminie uważaj na:**\n- Wskaźnik nie zna długości wskazywanej tablicy.\n- sizeof na parametrze tablicowym daje rozmiar wskaźnika.\n- Wskaźnik nie jest ograniczony do sterty ani do int.\n- p+1 to o sizeof(*p) bajtów, nie o 1.",
+   "related": [
+    "tablice-w-c",
+    "lancuch-znakow-c",
+    "wskaznik-na-funkcje"
+   ]
+  },
+  {
+   "id": "lancuch-znakow-c",
+   "term": "Łańcuch znaków w C (C string)",
+   "topic": "c_cpp",
+   "short": "Łańcuch w C to tablica char zakończona znakiem '\\0', odwołujemy się do niej wskaźnikiem char*.",
+   "details": "Nie ma osobnego typu string; długość wynika wyłącznie z położenia terminatora. strlen(s) zlicza znaki przed '\\0' (bez niego), więc bufor na kopię musi mieć strlen+1 bajtów. sizeof(s) dla char* to rozmiar wskaźnika. Idiom kopiowania: while(*t++ = *s++); – kopiuje znak, przesuwa wskaźniki, kończy się po skopiowaniu '\\0' (wartość przypisania 0), wykonując strlen+1 iteracji. Po pętli oba wskaźniki wskazują bajt za terminatorem. Bufor docelowy musi być wystarczająco duży, inaczej przepełnienie bufora (UB). Metody length() należą do std::string w C++, nie do C.\n\n**Na egzaminie uważaj na:**\n- strlen nie wlicza '\\0'.\n- Kopiowanie zwiększa wskaźniki o długość+1.\n- sizeof(txt) ≠ strlen(txt).\n- Nie ma txt.length() w C.",
+   "related": [
+    "wskazniki-c",
+    "tablice-w-c"
+   ]
+  },
+  {
+   "id": "tablice-w-c",
+   "term": "Tablice w C (arrays, array decay)",
+   "topic": "c_cpp",
+   "short": "Tablica to ciągły blok elementów tego samego typu; w wyrażeniach i jako parametr zanika do wskaźnika na pierwszy element.",
+   "details": "Tablica nie jest wskaźnikiem: sizeof(tab) = n*sizeof(element), tab nie można przypisać (tab = ws jest błędem). Nazwa tablicy w większości wyrażeń zanika do &tab[0], więc ws = tab, a *(ws+1) to tab[1]. Parametr T f[] jest równoważny T *f, dlatego w funkcji nie da się policzyć długości (sizeof daje rozmiar wskaźnika); długość przekazuje się osobno. Do funkcji trafia adres pierwszego elementu (przez wartość), więc zmiany elementów są widoczne u wywołującego; C nie ma referencji. Inicjalizacja: elementy pominięte są zerowane, a inicjalizator wskazany C99 int t[10]={1,2,[4]=1}; ustawia t[4]; rozmiar podany jawnie wygrywa nad liczbą wartości.\n\n**Na egzaminie uważaj na:**\n- int t[]={1,2,0,0,1} ma 5 elementów, nie 10.\n- Pętla po t[len]!=0 nie mierzy długości tablicy.\n- Nie zwracaj adresu tablicy lokalnej.\n- Tablica ≠ wskaźnik, ale zanika do niego.",
+   "related": [
+    "wskazniki-c",
+    "alokacja-dynamiczna",
+    "lancuch-znakow-c"
+   ]
+  },
+  {
+   "id": "alokacja-dynamiczna",
+   "term": "Alokacja pamięci na stercie (malloc, calloc, free)",
+   "topic": "c_cpp",
+   "short": "malloc i calloc przydzielają pamięć na stercie, która żyje do wywołania free, niezależnie od zakresu funkcji.",
+   "details": "malloc(n) zwraca niezainicjalizowany blok n bajtów, calloc(k, s) blok k*s bajtów wyzerowany. Oba zwracają NULL przy niepowodzeniu, a wskaźnik trzeba zwolnić dokładnie raz przez free. Rozmiar podaje się jako n*sizeof(T); sizeof(n) dla int n równa się sizeof(int). Ponieważ pamięć nie jest związana z ramką stosu, funkcja może ją zwrócić. Zwrócenie adresu tablicy lokalnej (także VLA) daje wiszący wskaźnik, bo ramka znika. Jako wynik można zwrócić też tablicę static (żyje przez cały program, ale jest jedna wspólna). Funkcja nie może zwracać tablicy jako wartości (int[] nie jest poprawnym typem zwracanym).\n\n**Na egzaminie uważaj na:**\n- Adres zmiennej lokalnej po return jest nieprawidłowy.\n- calloc zeruje, malloc nie.\n- Brak free to wyciek pamięci.\n- static w funkcji to wspólny bufor.",
+   "related": [
+    "tablice-w-c",
+    "wskazniki-c"
+   ]
+  },
+  {
+   "id": "wskaznik-na-funkcje",
+   "term": "Wskaźnik na funkcję (function pointer)",
+   "topic": "c_cpp",
+   "short": "Wskaźnik na funkcję przechowuje adres funkcji i pozwala ją wywołać pośrednio.",
+   "details": "Składnia: typ_wyniku (*nazwa)(typy_parametrów). Nawiasy wokół *nazwa są kluczowe: double (*f)(double,double) to wskaźnik do funkcji (double,double)→double, a double *f(double,double) to funkcja zwracająca double*. Czytaj od nazwy: f jest wskaźnikiem do funkcji przyjmującej ... zwracającej .... Przypisanie: f = pow; (lub &pow), wywołanie: f(2,3) albo (*f)(2,3). Nazwa funkcji w wyrażeniu ulega konwersji do wskaźnika, więc potocznie mówi się, że jest adresem funkcji. Typowe zastosowania: callbacki, tablice funkcji, qsort. Deklaracja nie jest wywołaniem i nie wymaga typedef, choć typedef ją upraszcza.\n\n**Na egzaminie uważaj na:**\n- Brak nawiasów zmienia sens deklaracji.\n- To nie tablica wskaźników.\n- Sygnatura musi pasować do przypisywanej funkcji.\n- Deklaracja nie wywołuje funkcji.",
+   "related": [
+    "wskazniki-c",
+    "funktory-i-lambdy"
+   ]
+  },
+  {
+   "id": "priorytet-operatorow-i-punkty-sekwencyjne",
+   "term": "Priorytet operatorów i kolejność obliczania (sequence points, UB)",
+   "topic": "c_cpp",
+   "short": "Priorytet mówi, jak grupowane są operatory, ale nie w jakiej kolejności obliczane są operandy; modyfikacja i odczyt tej samej zmiennej bez sekwencjonowania to UB.",
+   "details": "Priorytety (od najwyższego): postfiksowe, jednoargumentowe, * / %, + −, przesunięcia, < >, == !=, &, ^, |, &&, ||, ?:, przypisania (prawostronne), przecinek. Stąd a+b*c = a+(b*c), a && ma wyższy priorytet niż ||. Priorytet nie ustala kolejności obliczania operandów: w f()+g() lub b++ + b kolejność jest nieokreślona. Jeśli obiekt jest modyfikowany, a w tym samym wyrażeniu odczytywany lub modyfikowany ponownie bez sekwencjonowania, zachowanie jest niezdefiniowane (UB): np. a = b++ + b, z == ++z, i = i++. Standard nie nakłada wtedy żadnych wymagań, więc „wynik zależy od kompilatora” to potoczna nieprecyzyjność. Nawiasy zmieniają grupowanie, nie sekwencjonowanie.\n\n**Na egzaminie uważaj na:**\n- Nie zakładaj a==2 ani a==3 w a=b++ + b.\n- Nawiasy nie usuwają UB.\n- Kod z UB zwykle się kompiluje.\n- < ma wyższy priorytet niż ==.",
+   "related": [
+    "wskazniki-c"
+   ]
+  },
+  {
+   "id": "konwencja-cdecl",
+   "term": "Konwencja wywołania __cdecl (calling convention)",
+   "topic": "c_cpp",
+   "short": "W __cdecl argumenty trafiają na stos od prawej do lewej, a stos po wywołaniu czyści wywołujący.",
+   "details": "Wywołujący odkłada argumenty od ostatniego do pierwszego, więc pierwszy leży na szczycie stosu, tuż pod adresem powrotu. Wywoływana funkcja zawsze może więc znaleźć pierwszy parametr (np. napis formatu printf) i na jego podstawie ustalić resztę. Po powrocie to wywołujący usuwa argumenty ze stosu, dlatego wywoływana funkcja nie musi znać ich liczby – to umożliwia funkcje o zmiennej liczbie argumentów (va_list). Konwencja __stdcall ma czyszczenie po stronie wywoływanej, więc nie nadaje się do funkcji variadic. W C dozwolona jest deklaracja bez prototypu (int f();, przed C23) i argumenty po „...” – kompilator generuje wtedy wywołanie bez informacji o typach parametrów, stosując tylko domyślne promocje (float→double, char→int). W C++ prototyp jest wymagany.\n\n**Na egzaminie uważaj na:**\n- Kolejność odkładania: od prawej do lewej.\n- W cdecl stos czyści wywołujący, nie wywoływany.\n- printf nie zna typów, ufa formatowi.",
+   "related": [
+    "wskazniki-c"
+   ]
+  },
+  {
+   "id": "rekurencja-fibonacci",
+   "term": "Rekurencja i naiwny Fibonacci (recursion, memoization)",
+   "topic": "c_cpp",
+   "short": "Funkcja rekurencyjna wywołuje samą siebie; naiwny Fibonacci powtarza obliczenia podproblemów, co daje złożoność wykładniczą.",
+   "details": "Każde wywołanie tworzy nową ramkę stosu z własnymi kopiami parametrów (przekazanie przez wartość), więc n w kolejnych wywołaniach jest osobną zmienną. Dla fib(n)=fib(n−1)+fib(n−2) liczba wywołań rośnie jak ^^\\varphi^n^^ (wykładniczo), bo te same podproblemy liczone są wielokrotnie. Głębokość rekurencji to ok. n, więc zużycie stosu jest O(n) i dla dużych n grozi przepełnienie stosu. Memoizacja (zapamiętywanie wyników) lub iteracja obniżają czas do O(n); dopiero to jest programowanie dynamiczne. Rekurencja jest w C w pełni dozwolona.\n\n**Na egzaminie uważaj na:**\n- Czas naiwnej wersji nie jest O(n).\n- Stos rośnie liniowo, nie wykładniczo.\n- Naiwna rekurencja to nie programowanie dynamiczne.\n- Każde wywołanie ma własną kopię argumentu.",
+   "related": [
+    "wskazniki-c"
+   ]
+  },
+  {
+   "id": "minimax",
+   "term": "Algorytm minimax i odcięcia alfa-beta",
+   "topic": "c_cpp",
+   "short": "Minimax wybiera ruch maksymalizujący wynik gracza przy założeniu, że przeciwnik minimalizuje go, w grach dwuosobowych o sumie zerowej.",
+   "details": "Algorytm przeszukuje drzewo gry do stanów końcowych lub zadanej głębokości. W węzłach gracza wybiera maksimum wartości potomków, w węzłach przeciwnika minimum; liście oceniane są wynikiem lub funkcją oceny stanu. Jest deterministyczny i zakłada optymalną grę przeciwnika. Koszt czasowy to ^^O(b^d)^^ (b – rozgałęzienie, d – głębokość). Odcięcia alfa-beta pomijają gałęzie, które nie mogą wpłynąć na wynik, więc dają ten sam ruch przy mniejszej liczbie węzłów (w najlepszym razie ok. ^^O(b^{d/2})^^). Dla kółka i krzyżyka całe drzewo (do 9! liści) da się przejrzeć.\n\n**Na egzaminie uważaj na:**\n- Alfa-beta nie zmienia wyniku.\n- Nie jest losowy ani zachłanny.\n- Stosuje się nie tylko do gier karcianych.\n- Przy ograniczonej głębokości potrzebna jest funkcja oceny.",
+   "related": []
+  },
+  {
+   "id": "wyszukiwanie-binarne-liniowe",
+   "term": "Wyszukiwanie binarne i liniowe (binary / linear search)",
+   "topic": "c_cpp",
+   "short": "Liniowe sprawdza elementy po kolei w O(n), binarne w posortowanej tablicy dzieli zakres na pół w O(log n).",
+   "details": "Binarne porównuje szukaną wartość ze środkowym elementem i odrzuca połowę, w której jej być nie może; wymaga posortowania (w dowolnym kierunku, ze zgodnym porównaniem) i dostępu swobodnego (tablica), dlatego na liście jednokierunkowej nie daje O(log n). Liczba kroków to ^^\\lceil \\log_2 n \\rceil^^. Liniowe działa na dowolnych danych, a na posortowanych także, w najgorszym przypadku O(n), w najlepszym O(1). Dla małych n stałe czynniki mogą sprawiać, że liniowe jest szybsze, ale nie „zawsze”. Na nieposortowanych danych binarne daje błędne wyniki.\n\n**Na egzaminie uważaj na:**\n- Nie „dokładnie n kroków” – szukanie kończy się wcześniej.\n- Posortowana lista nie daje O(log n).\n- Binarne to O(log n), nie O(√n).\n- Nie potrzeba dodatkowego indeksu.",
+   "related": [
+    "lista-jednokierunkowa",
+    "tablice-w-c"
+   ]
+  },
+  {
+   "id": "lista-jednokierunkowa",
+   "term": "Lista jednokierunkowa (singly linked list)",
+   "topic": "c_cpp",
+   "short": "Dynamiczna struktura, w której każdy węzeł zawiera dane i wskaźnik na następny węzeł.",
+   "details": "Węzły leżą w dowolnych miejscach sterty i są połączone wskaźnikami next; rozmiar listy jest dynamiczny. Wstawienie na początek to O(1), wstawienie po znanym węźle to przepięcie dwóch wskaźników (O(1)); usunięcie węzła wymaga jego poprzednika, więc bez niego trzeba przejść listę od głowy. Nie ma dostępu swobodnego: dostęp do i-tego elementu to O(i), a poprzedni element nie jest osiągalny w O(1). Wyszukiwanie to O(n) także w liście posortowanej; iteracyjne wymaga O(1) pamięci dodatkowej i można je przerwać po napotkaniu większego elementu. Wyszukiwanie binarne nie ma tu sensu.\n\n**Na egzaminie uważaj na:**\n- Lista nie jest szybsza od tablicy w wyszukiwaniu.\n- Wstawianie w dowolnym miejscu jest możliwe.\n- Brak wskaźnika wstecz.\n- Węzły nie są w ciągłym bloku pamięci.",
+   "related": [
+    "wyszukiwanie-binarne-liniowe",
+    "alokacja-dynamiczna"
+   ]
+  },
+  {
+   "id": "drzewa-i-bst",
+   "term": "Drzewa i drzewa wyszukiwań binarnych (trees, BST)",
+   "topic": "c_cpp",
+   "short": "Drzewo to spójny graf acykliczny z korzeniem; BST przechowuje wartości tak, że lewe poddrzewo ≤ węzeł ≤ prawe.",
+   "details": "Drzewo o n węzłach ma n−1 krawędzi i może być puste. Drzewo binarne: każdy węzeł ma co najwyżej dwóch potomków. Przejścia pre-, in-, post-order i BFS odwiedzają każdy węzeł raz, czyli O(n); wypisanie wszystkich elementów wymaga odwiedzenia wszystkich. W BST wyszukiwanie, wstawianie i usuwanie kosztują O(h) (h – wysokość): średnio O(log n), w najgorszym O(n) (np. wstawianie ciągu posortowanego daje listę). Przejście in-order daje wartości niemalejąco, minimum to skrajnie lewy węzeł. Definicja z ≤ dopuszcza duplikaty. Równoważenie (AVL, czerwono-czarne) gwarantuje O(log n).\n\n**Na egzaminie uważaj na:**\n- BST nie jest zawsze zrównoważone ani pełne.\n- Pesymistycznie O(n), nie O(log n).\n- Drzewo nie ma cykli.\n- Pre-order nie sortuje.",
+   "related": [
+    "lista-jednokierunkowa",
+    "kontenery-stl-iteratory"
+   ]
+  },
+  {
+   "id": "referencje-cpp",
+   "term": "Referencje w C++ (references)",
+   "topic": "c_cpp",
+   "short": "Referencja to alias istniejącego obiektu, który musi zostać zainicjalizowany i nie może być później przełączony.",
+   "details": "int &r = x; robi z r drugą nazwę zmiennej x; r = y przypisuje wartość y do x, a nie zmienia wiązania. Referencja nie może być pusta, więc int &r; oraz int &r = null; są błędami (null nie istnieje w C++). Do l-wartości wiąże się T&, do wartości tymczasowych const T& (przedłuża ich życie) i T&& (rvalue reference), ale int&& nie wiąże się z l-wartością x. Można związać referencję z *p. Standard nie mówi, ile pamięci zajmuje referencja; w praktyce bywa implementowana jako wskaźnik, ale często jest eliminowana. C nie ma referencji, tablice w C przekazuje się wskaźnikiem.\n\n**Na egzaminie uważaj na:**\n- Referencji nie da się przełączyć.\n- Brak referencji zerowej.\n- Nie zakładaj, że sizeof-pamięć referencji = wskaźnik.\n- int&& nie wiąże się z lvalue.",
+   "related": [
+    "wskazniki-c",
+    "funktory-i-lambdy"
+   ]
+  },
+  {
+   "id": "konstruktory-destruktory",
+   "term": "Konstruktory i destruktory (constructors, destructors)",
+   "topic": "c_cpp",
+   "short": "Konstruktor inicjalizuje obiekt, destruktor sprząta po nim i jest wołany automatycznie na końcu życia obiektu.",
+   "details": "Konstruktorów może być wiele (przeciążanie), nie mają typu zwracanego, mogą być prywatne (singleton, prywatny konstruktor kopiujący) i nie mogą być wirtualne. Destruktor: co najwyżej jeden, bez parametrów i wartości zwracanej, wołany po wyjściu obiektu z zakresu lub po delete. Kolejność konstrukcji: podobiekty bazowe, potem pola w kolejności deklaracji w klasie (nie kolejności listy inicjalizacyjnej), na końcu ciało konstruktora. Destrukcja przebiega dokładnie odwrotnie. Konstruktor klasy pochodnej wywołuje konstruktor bazy w liście inicjalizacyjnej: B::B() : A(0) {}; jest to wymagane, gdy baza nie ma konstruktora domyślnego. W C++ nie ma super; A(0); w ciele tworzy tymczasowy obiekt.\n\n**Na egzaminie uważaj na:**\n- Wiele konstruktorów, jeden destruktor.\n- Baza przed polami przed ciałem.\n- Lista inicjalizacyjna nie zmienia kolejności pól.\n- Destruktor nie zwraca wartości.",
+   "related": [
+    "polimorfizm-i-dziedziczenie-cpp",
+    "wyjatki-cpp"
+   ]
+  },
+  {
+   "id": "metody-klas-cpp",
+   "term": "Metody klas: static, const, virtual (C++)",
+   "topic": "c_cpp",
+   "short": "Metody statyczne nie mają this, metody const nie zmieniają stanu obiektu, metody wirtualne umożliwiają polimorfizm.",
+   "details": "Metoda statyczna należy do klasy, nie ma wskaźnika this, wywołuje się ją A::f() bez obiektu, więc nie wywoła metody niestatycznej bez obiektu ani nie może być const. Metoda const nie modyfikuje pól niestatycznych (wyjątek: pola mutable), można ją wywołać na obiekcie const i nie może wywoływać metod niestałych. Metoda wirtualna wybierana jest w czasie wykonania wg dynamicznego typu; może być prywatna i mimo to nadpisywana w klasie pochodnej (idiom NVI). Nie każda metoda musi być wirtualna.\n\n**Na egzaminie uważaj na:**\n- Brak this w statycznych to fakt.\n- Wirtualna może być prywatna.\n- static const jest niepoprawne.\n- mutable omija const.",
+   "related": [
+    "polimorfizm-i-dziedziczenie-cpp",
+    "konstruktory-destruktory"
+   ]
+  },
+  {
+   "id": "polimorfizm-i-dziedziczenie-cpp",
+   "term": "Dziedziczenie, polimorfizm i wirtualny destruktor (C++)",
+   "topic": "c_cpp",
+   "short": "Wywołania metod wirtualnych są rozstrzygane wg dynamicznego typu, a wirtualny destruktor gwarantuje poprawne niszczenie obiektu przez wskaźnik do bazy.",
+   "details": "Metody wirtualne wołane przez wskaźnik do bazy trafiają do wersji z klasy rzeczywistego obiektu (vtable). Jeśli klasa bazowa ma wirtualny destruktor, delete przez A* niszczy obiekt od najbardziej pochodnej klasy do bazy (~C, ~B, ~A). Bez wirtualnego destruktora delete przez wskaźnik do bazy obiektu pochodnego to UB. Wirtualny destruktor przydaje się w każdej klasie polimorficznej, nie tylko abstrakcyjnej. W trakcie konstrukcji i destrukcji dynamiczny typ obiektu to typ aktualnie budowanej/niszczonej klasy, więc wirtualne wywołanie w destruktorze B nie trafi do C::f, tylko do wersji z B lub jej bazy. Pola prywatne bazy pozostają w pochodnej niedostępne.\n\n**Na egzaminie uważaj na:**\n- Kolejność destrukcji odwrotna do konstrukcji.\n- Wirtualne wywołania w (de)konstruktorze nie schodzą do pochodnych.\n- Brak virtual w destruktorze przy delete przez bazę to UB.",
+   "related": [
+    "konstruktory-destruktory",
+    "metody-klas-cpp"
+   ]
+  },
+  {
+   "id": "przeciazanie-operatorow",
+   "term": "Przeciążanie operatorów w C++ (operator overloading)",
+   "topic": "c_cpp",
+   "short": "Można nadać własne znaczenie istniejącym operatorom dla typów użytkownika, bez zmiany ich priorytetu i łączności.",
+   "details": "Operatory =, [], (), -> muszą być metodami klasy. Operatory strumieniowe << i >> mają po lewej stronie strumień, więc są funkcjami nie-składowymi, zwykle friend. Wiele operatorów (np. +) może być metodą lub funkcją globalną. Nie można przeciążać ::, ., .*, ?: ani sizeof i nie można tworzyć nowych operatorów (np. **). Operatory logiczne && i || można przeciążyć, ale tracą obliczanie skrótowe. Przeciążenie nie zmienia priorytetu, łączności ani liczby argumentów operatora.\n\n**Na egzaminie uważaj na:**\n- Nie wszystkie operatory muszą być metodami.\n- + można przeciążać.\n- Nowych operatorów nie wolno wprowadzać.\n- Przeciążone && nie skraca obliczeń.",
+   "related": [
+    "funktory-i-lambdy",
+    "metody-klas-cpp"
+   ]
+  },
+  {
+   "id": "funktory-i-lambdy",
+   "term": "Obiekty funkcyjne i lambdy (functors, lambda)",
+   "topic": "c_cpp",
+   "short": "Obiekt funkcyjny to obiekt klasy z przeciążonym operator(); lambda to skrót do zdefiniowania takiej klasy.",
+   "details": "Funktor może mieć pola, więc przechowuje stan między wywołaniami; bywa szybszy od wskaźnika na funkcję, bo kompilator może wstawić kod inline; przekazuje się go do algorytmów STL (std::sort). Nie musi dziedziczyć po std::function. Lambda (C++11) [przechwycenie](parametry){ciało} ma unikalny, anonimowy typ generowany przez kompilator, także dla identycznych tekstów. [=] kopiuje zmienne (domyślnie const bez mutable), [&] przechwytuje przez referencję (grozi wiszącą referencją po wyjściu z zakresu). Lambda bez przechwytywania konwertuje się do wskaźnika na funkcję.\n\n**Na egzaminie uważaj na:**\n- Lambdy pochodzą z C++11.\n- Lambdę można przechwytywać przez referencję.\n- Funktor nie jest wolniejszy z definicji.\n- Dwie identyczne lambdy mają różne typy.",
+   "related": [
+    "przeciazanie-operatorow",
+    "wskaznik-na-funkcje"
+   ]
+  },
+  {
+   "id": "wyjatki-cpp",
+   "term": "Wyjątki w C++ i odwijanie stosu (exceptions, stack unwinding)",
+   "topic": "c_cpp",
+   "short": "Wyjątek przerywa normalny przepływ; odwijanie stosu niszczy obiekty lokalne, aż do znalezienia pasującego catch.",
+   "details": "throw przekazuje sterowanie do najbliższego pasującego bloku catch; po drodze zwalniane są ramki stosu i wołane destruktory obiektów lokalnych (RAII). Rzucany może być dowolny typ, nie tylko dziedziczący po std::exception; catch(...) łapie wszystko. Po obsłużeniu wykonanie kontynuuje się za blokiem try/catch, nie za throw. Wyjątek można rzucić w konstruktorze (zniszczone zostaną w pełni skonstruowane pola i bazy, ale nie destruktor tego obiektu). Jeśli wyjątek ucieknie z destruktora podczas odwijania, wywołane jest std::terminate. Łapanie przez wartość powoduje slicing.\n\n**Na egzaminie uważaj na:**\n- Wyjątki w konstruktorach są dozwolone.\n- Destruktory nie powinny rzucać.\n- Wykonanie nie wraca za throw.\n- catch(...) nie jest tylko dla int.",
+   "related": [
+    "konstruktory-destruktory"
+   ]
+  },
+  {
+   "id": "kontenery-stl-iteratory",
+   "term": "Kontenery STL i iteratory (containers, iterators)",
+   "topic": "c_cpp",
+   "short": "Kontenery STL różnią się złożonością operacji, a kategoria iteratora zależy od struktury kontenera.",
+   "details": "vector: ciągła pamięć, dostęp [] w O(1), wstawianie w środku O(n), realokacja unieważnia iteratory. deque: push_front/back w O(1) zamort., dostęp swobodny. list: lista dwukierunkowa, push_front/back i wstawianie w znanym miejscu O(1), brak operator[]. set/map: uporządkowane, zwykle drzewa czerwono-czarne, operacje O(log n), wymagają ścisłego słabego porządku (operator< lub własny komparator; == i > nie są wymagane), równoważność to !(a<b)&&!(b<a). Iteratory vector i deque są swobodnego dostępu, list, set i map dwukierunkowe (std::advance O(n)). end() wskazuje za ostatni element.\n\n**Na egzaminie uważaj na:**\n- map nie jest nieuporządkowana.\n- Wyszukiwanie O(1) to unordered_*.\n- deque ma push_front.\n- Iterator end() nie jest ostatnim elementem.",
+   "related": [
+    "drzewa-i-bst",
+    "funktory-i-lambdy"
+   ]
+  }
+ ]
+}

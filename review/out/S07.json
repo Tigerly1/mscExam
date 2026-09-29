@@ -1,0 +1,2886 @@
+{
+ "questions": [
+  {
+   "id": 102,
+   "question": "Algorytmy optymalizacji statycznej:",
+   "options": [
+    {
+     "key": "a",
+     "text": "metoda simpleksu Neldera-Meada jest metodą bezgradientową",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "metoda Newtona wymaga obliczania w każdym kroku gradientu i hesjanu",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "metody z funkcją kary (penalty methods) stosuje się w przypadkach optymalizacji bez ograniczeń",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "metoda najszybszego spadku wymaga obliczania hesjanu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "metoda najszybszego spadku jest metodą gradientową",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "metody z funkcją kary służą do optymalizacji z ograniczeniami",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "metoda Neldera-Meada wymaga obliczania gradientu funkcji celu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "metoda Newtona jest metodą bezgradientową",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metody-minimalizacji",
+    "optymalizacja-z-ograniczeniami"
+   ],
+   "explanation": "**Dlaczego poprawne:** Nelder-Mead operuje na simpleksie wartości funkcji, więc jest bezgradientowy. Newton wymaga gradientu i hesjanu. Najszybszy spadek jest gradientowy (tylko gradient). Metody kary służą zadaniom z ograniczeniami.\n\n**Dlaczego błędne:** kara nie jest przeznaczona do zadań bez ograniczeń; najszybszy spadek nie liczy hesjanu; Nelder-Mead nie liczy gradientu, a Newton nie jest bezgradientowy.\n\n**Zapamiętaj:** bezgradientowe = Nelder-Mead, gradientowe = spadek, drugiego rzędu = Newton (∇ i hesjan), kara = ograniczenia.",
+   "changes": []
+  },
+  {
+   "id": 103,
+   "question": "Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n, ^^x_{i-1} < x_i^^, i = 1, 2, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \\sum_{j=0}^m a_{j, m}x^j^^. Zaznacz prawdziwe implikacje.",
+   "options": [
+    {
+     "key": "a",
+     "text": "m = n => ^^E_m = 0^^",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "m > n => błąd ^^E_m < 0^^",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "^^E_m > 0^^ => n > m",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "m = n − 1 => E_m = 0 (dla dowolnych danych)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "Jeśli wielomian ma co najmniej n+1 współczynników (m ≥ n), to ^^E_m = 0^^",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "^^E_m = 0^^ => m ≥ n dla dowolnych danych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Jeśli m < n, to błąd aproksymacji jest nieujemny (^^E_m \\geq 0^^)",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aproksymacja-najmniejszych-kwadratow",
+    "interpolacja-wielomianowa"
+   ],
+   "explanation": "**Dlaczego poprawne:** dla m=n wielomian interpoluje wszystkie n+1 punktów (węzły różne), więc E=0; to samo dla m>n (E nie może być ujemne, a jest równe 0). Kontrapozycja: jeśli E_m>0, to m<n. Dla m<n błąd jest zawsze nieujemny.\n\n**Dlaczego błędne:** E_m<0 jest niemożliwe (suma kwadratów lub norma ≥ 0). E=0 może wystąpić także dla m<n, gdy dane leżą na wielomianie niższego stopnia, więc „E=0 ⇒ m≥n” nie jest prawdą; m=n−1 nie gwarantuje zera.\n\n**Zapamiętaj:** E_m ≥ 0, a dla m ≥ n interpolacja daje błąd zero.",
+   "changes": [
+    "b: dopisano słowo „błąd” (tekst był identyczny z opcją a po normalizacji znaków); sens bez zmian, opcja nadal fałszywa"
+   ]
+  },
+  {
+   "id": 104,
+   "question": "Dla n + 1 wartości zmiennej niezależnej ^^x_i^^, i = 0, 1, ..., n wykonano pomiary i otrzymano n + 1 wartości ^^y_i^^. Zależność wielkości mierzonej od x aproksymowano wielomianem ^^W_m(x) = \\sum_{j=0}^m a_{j,m}x^j^^. Rozważamy 3 sposoby obliczania błędu aproksymacji ^^E_m^^: 1. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\sum_{i=0}^n |y_i-W_m(x_i)|^^ 2. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\sum_{i=0}^n (y_i-W_m(x_i))^2^^ 3. ^^E_m = \\min_{a_{0,m}, a_{1, m}, ..., a_{m, m}} \\max_{i=0, 1, ..., n} |y_i-W_m(x_i)|^^ Obliczanie współczynników ^^a_i^^ można sprowadzić do zagadnienia liniowego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "w przypadku 1",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w przypadku 2",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "w przypadku 3",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "w żadnym z tych przypadków",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "W przypadku 2 układ równań normalnych ma postać ^^A^TAa=A^Ty^^",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Przypadek 2 prowadzi do układu równań liniowych o m+1 niewiadomych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Przypadek 2 wymaga rozwiązywania nieliniowego układu równań",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Tylko przypadek 3 daje zagadnienie liniowe",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aproksymacja-najmniejszych-kwadratow"
+   ],
+   "explanation": "**Dlaczego poprawne:** kryterium kwadratowe (2) daje układ równań normalnych liniowych o m+1 niewiadomych. Kryteria z modułem (1) i z maksimum (3) nie dają wzoru zamkniętego, lecz po wprowadzeniu zmiennych pomocniczych sprowadzają się do zadania programowania liniowego, więc wszystkie trzy są „zagadnieniem liniowym” w sensie LP (rozumienie „zagadnienie liniowe” jest dwuznaczne: dla układu równań tylko przypadek 2).\n\n**Dlaczego błędne:** przypadek 2 nie jest nieliniowy; przypadek 3 nie jest jedynym liniowym; opcja „w żadnym” jest fałszywa (zależna od innych opcji).\n\n**Zapamiętaj:** L2 → układ równań normalnych; L1 i L∞ → programowanie liniowe.",
+   "changes": [
+    "c: false -> true, bo kryterium minimax (L∞) tak samo jak L1 sprowadza się do programowania liniowego (zmienne pomocnicze t≥|r_i|); flagi a i c muszą być spójne. Dwuznaczność: przy wąskim rozumieniu „układ równań liniowych” prawdziwe jest tylko b.",
+    "d: [POSITION-DEPENDENT] odwołuje się do pozostałych opcji"
+   ]
+  },
+  {
+   "id": 105,
+   "question": "Dla tych samych danych eksperymentalnych podanych poniżej wyznaczono 3 funkcje aproksymujące. i | 0 1 2 x | 2 4 6 y | 1 2 1 W każdym przypadku k = 1, 2, 3 funkcja aproksymująca miała taką samą postać ^^f_k(x) = a_k * x + b_k^^, ale użyto innego kryterium jakości aproksymacji: 1. Dla k = 1: ^^min_{a_1, b_1} \\sum_{i=0}^2 |y_i-f_1(x_i)|^^ 2. Dla k = 2: ^^min_{a_2, b_2} \\sum_{i=0}^2 (y_i-f_2(x_i))^2^^ 3. Dla k = 3: ^^min_{a_3, b_3} max_{i=0,1,2} |y_i-f_3(x_i)|^^ Zaznacz prawidłowe odpowiedzi.",
+   "options": [
+    {
+     "key": "a",
+     "text": "a_1 = a_2 = a_3, b_1 = b_2 = b_3",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "a_1 = a_2 = a_3, b_1 ≠ b_2, b_2 ≠ b_3, b_1 ≠ b_3",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "a_1 = a_2 = a_3 = 0",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "b_3 = 3/2",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "a_2 ≠ 0",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "b_1 = b_2",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "a_1 > 0, gdyż punkty rosną od x=2 do x=4",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aproksymacja-najmniejszych-kwadratow"
+   ],
+   "explanation": "**Dlaczego poprawne:** dla danych (2,1),(4,2),(6,1) wszystkie trzy proste są poziome: L2 daje a=0 i b=4/3 (średnia), L∞ a=0 i b=3/2 (środek zakresu), L1 a=0 i b=1 (mediana). Współczynniki a są równe (zero), b — różne.\n\n**Dlaczego błędne:** równość wszystkich b jest fałszywa (1, 4/3, 3/2 są różne); a≠0 jest fałszywe, bo dane są symetryczne względem x=4.\n\n**Zapamiętaj:** L1 ~ mediana, L2 ~ średnia, L∞ ~ środek zakresu; inne kryteria dają inne proste.",
+   "changes": [
+    "b: poprawiono zapis (łańcuch != był po normalizacji identyczny z opcją a): b_1 ≠ b_2, b_2 ≠ b_3, b_1 ≠ b_3"
+   ]
+  },
+  {
+   "id": 106,
+   "question": "Rozważmy funkcję kwadratową n zmiennych: ^^f(x) = x^TAx + b^Tx + c^^ A jest macierzą (n x n), b wektorem (n x 1) o stałych współczynnikach, c jest skalarem. Załóżmy, że macierz A jest dodatnio określona. Funkcja ^^f^^ ma minimum w punkcie ^^x_{min}^^. Rozważmy tylko 3 metody szukania minimum tej funkcji: simpleksu Neldera-Meada, najszybszego spadku (steepest descent) oraz Newtona. Startujemy z dowolnego punktu ^^x_0^^, różnym od ^^x_{min}^^.",
+   "options": [
+    {
+     "key": "a",
+     "text": "metoda Newtona gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "metoda najszybszego spadku gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "metoda simpleksu Neldera-Meada gwarantuje znalezienie minimum funkcji f w pierwszym kroku",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "metoda Newtona przy kwadratowej f i dodatnio określonej A wykonuje jeden krok x_1 = x_0 − H^{-1}∇f(x_0)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "metoda Newtona wymaga w tym zadaniu obliczenia gradientu i hesjanu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "metoda najszybszego spadku zawsze znajduje minimum po n krokach",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "metoda Neldera-Meada znajduje minimum funkcji kwadratowej dokładnie po jednej iteracji",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metody-minimalizacji"
+   ],
+   "explanation": "**Dlaczego poprawne:** dla f kwadratowej gradient jest liniowy, a hesjan stały (2A), więc krok Newtona wyznacza dokładnie punkt zerowania gradientu, czyli minimum (A dodatnio określona).\n\n**Dlaczego błędne:** najszybszy spadek zygzakuje i zbiega asymptotycznie (w 1 kroku tylko dla szczególnych startów lub A ∝ I); Nelder-Mead nie ma gwarancji dokładnego trafienia w minimum w jednej iteracji ani w n krokach.\n\n**Zapamiętaj:** Newton jest dokładny w jednym kroku dla funkcji kwadratowej.",
+   "changes": [
+    "poprawiono zapis w treści pytania: „^f” -> „^^f^^”"
+   ]
+  },
+  {
+   "id": 107,
+   "question": "Czy obliczanie parametrów (współczynników) funkcji aproksymującej można sprowadzić do rozwiązywania układu równań?",
+   "options": [
+    {
+     "key": "a",
+     "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest funkcją liniową względem zmiennej niezależnej",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "nie można",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "tak, jeśli funkcja aproksymująca jest liniową kombinacją znanych funkcji bazowych (liniowa względem parametrów) — dla kryterium średniokwadratowego dostajemy układ równań normalnych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "tak, dla wielomianu stopnia m układ równań normalnych ma rozmiar (m+1)×(m+1)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "nie można, bo parametry funkcji aproksymującej są zawsze wyznaczane tylko metodami iteracyjnymi",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "tak, ale wyłącznie gdy funkcja aproksymująca jest funkcją wykładniczą",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aproksymacja-najmniejszych-kwadratow"
+   ],
+   "explanation": "**Dlaczego poprawne:** przy funkcji liniowej względem parametrów (wielomian, kombinacja funkcji trygonometrycznych) i kryterium średniokwadratowym warunek zerowania pochodnych błędu daje liniowy układ równań normalnych o m+1 niewiadomych.\n\n**Dlaczego błędne:** „tylko dla funkcji liniowej względem x” zawęża zbyt mocno (wielomiany też); „nie można” jest fałszem; funkcje wykładnicze bez linearyzacji dają układ nieliniowy.\n\n**Zapamiętaj:** decyduje liniowość względem parametrów, nie względem x. Uwaga: opcja „wtedy i tylko wtedy, gdy wielomian” jest uproszczeniem (klasa liniowa jest szersza), ale zgodna z intencją autora.",
+   "changes": [
+    "b: pozostawiono true (intencja autora), zaznaczona dwuznaczność: prawdziwy warunek to liniowość względem parametrów, wielomiany są tylko przykładem"
+   ]
+  },
+  {
+   "id": 108,
+   "question": "Do aproksymacji zbioru punktów ^^P = \\{ (x_i, y_i) | i = 0, 1, ..., n \\}^^ używamy funkcji ^^f^{(k)}(x;a_{k,j}|j=0,1,...,m)^^. ^^a_{k, j}^^ to parametry funkcji. Stosując 3 różne kryteria jakości aproksymacji (miary błędu aproksymacji) podane poniżej otrzymujemy trzy różne funkcje aproksymujące ^^f_k(x)^^, k = 1, 2, 3 dla tej samej wartości m, a różniące się między sobą wartościami parametrów ^^a_{k, j}^^. 1. k = 1: ^^min \\sum_{i=0}^n |y_i-f^{(1)}(x_i)|^^ 2. k = 2: ^^min \\sum_{i=0}^n (y_i-f^{(2)}(x_i))^2^^ 3. k = 3: ^^min^^ ^^max_{i=0,1,...,n} |y_i-f^{(3)}(x_i)|^^ Niech ^^\\Delta^{(k)}_{max}^^ oznacza odległość (w sensie metryki maksimum) k-tej funkcji aproksymującej ^^f_k^^ od najbardziej oddalonego punktu ze zbioru P, tzn. ^^\\Delta^{(k)}_{max} = \\max_{i=0,...,n}|y_i-f^{(k)}(x_i)|^^. Zaznacz prawdziwe relacje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "^^\\Delta_{\\max}^{(1)} \\geq \\Delta_{\\max}^{(2)}^^",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "^^\\Delta_{\\max}^{(1)} \\leq \\Delta_{\\max}^{(2)}^^",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "^^\\Delta_{\\max}^{(3)} \\leq \\Delta_{\\max}^{(2)}^^",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "^^\\Delta_{\\max}^{(3)} \\leq \\Delta_{\\max}^{(1)}^^",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "Δ_max^(3) jest najmniejszą możliwą wartością maksymalnej odchyłki dla wybranej postaci funkcji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "suma modułów odchyłek dla f_1 jest nie większa niż dla f_2",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Δ_max^(3) ≥ Δ_max^(1)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Δ_max^(2) ≤ Δ_max^(3) dla dowolnych danych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aproksymacja-najmniejszych-kwadratow"
+   ],
+   "explanation": "**Dlaczego poprawne:** funkcja f_3 minimalizuje właśnie maksimum odchyłki, więc ma Δ najmniejsze spośród wszystkich funkcji tej postaci, w tym f_1 i f_2. Analogicznie f_1 ma najmniejszą sumę modułów.\n\n**Dlaczego błędne:** relacja Δ1 vs Δ2 nie jest rozstrzygnięta: dla stałej i danych {0,0,0,1,1,1,1,3} mediana daje Δ1=2, średnia Δ2=2,125 (Δ1<Δ2), a dla {0,0,0,10} Δ1=10>Δ2=7,5. Δ3 ≥ Δ1 lub Δ2 ≤ Δ3 jest sprzeczne z minimalnością L∞.\n\n**Zapamiętaj:** L∞ ma najmniejszą maksymalną odchyłkę.",
+   "changes": [
+    "a: true -> false, bo nierówność Δ1 ≥ Δ2 nie zachodzi zawsze (m=0, dane {0,0,0,1,1,1,1,3}: Δ1=2 < Δ2=2,125); zaś b też fałszywe",
+    "poprawiono w treści pytania (f_i-f^{(2)}) -> (y_i-f^{(2)})"
+   ]
+  },
+  {
+   "id": 109,
+   "question": "Warunkiem koniecznym i wystarczającym zbieżności metod iteracyjnych prostych (takich jak metoda Jacobiego czy metoda Gaussa-Seidla) rozwiązywania układów równań liniowych jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "promień spektralny macierzy iterowanej w danej metodzie jest zawsze mniejszy od 1",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "promień spektralny macierzy iterowanej w danej metodzie jest zawsze większy od 1",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "ścisła dominacja diagonalna macierzy A jest warunkiem wystarczającym zbieżności metod Jacobiego i Gaussa-Seidla",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "zbieżność tych metod nie zależy od wyboru wektora startowego, jeśli ρ(M) < 1",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "ścisła dominacja diagonalna jest warunkiem koniecznym zbieżności metody Jacobiego",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "promień spektralny równy 1 gwarantuje zbieżność metody iteracyjnej",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "warunek ρ(M) < 1 dotyczy tylko metody Jacobiego, a nie Gaussa-Seidla",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metody-iteracyjne-ukladow"
+   ],
+   "explanation": "**Dlaczego poprawne:** błąd iteracji zmienia się jak e^(k+1)=M e^(k), więc dla każdego startu zbieżność zachodzi wtedy i tylko wtedy, gdy ρ(M)<1. Dominacja diagonalna ścisła gwarantuje ρ(M)<1, ale nie jest konieczna.\n\n**Dlaczego błędne:** ρ>1 daje rozbieżność, a ρ=1 nie daje zbieżności; dominacja diagonalna nie jest warunkiem koniecznym.\n\n**Zapamiętaj:** zbieżność ⇔ ρ(M)<1.",
+   "changes": []
+  },
+  {
+   "id": 110,
+   "question": "Do metod nazywanych metodami dokładnymi rozwiązywania układów równań liniowych zalicza się:",
+   "options": [
+    {
+     "key": "a",
+     "text": "metoda Jacobiego",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "metoda rozkładu LU",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "metoda Gaussa",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "metoda Jordana",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "eliminacja Gaussa z wyborem elementu głównego",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "metoda Cramera",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "metoda SOR (Successive Over-Relaxation)",
+     "correct": false
+    },
+    {
+     "key": "h",
+     "text": "rozkład Choleskiego (dla macierzy symetrycznej dodatnio określonej)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "rozkład QR",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "metoda Gaussa-Seidla",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "metoda gradientów sprzężonych stosowana jako iteracja z kryterium stopu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "eliminacja-gaussa-lu",
+    "metody-iteracyjne-ukladow"
+   ],
+   "explanation": "**Dlaczego poprawne:** metody dokładne (bezpośrednie) dają rozwiązanie po skończonej liczbie operacji (w arytmetyce dokładnej): Gauss, Gauss-Jordan, LU, pivoting, Cramer, Cholesky, QR.\n\n**Dlaczego błędne:** Jacobi, Gauss-Seidel, SOR to metody iteracyjne (przybliżone), a sprzężone gradienty w praktyce stosuje się iteracyjnie.\n\n**Zapamiętaj:** dokładne = skończony algorytm eliminacji/rozkładu; iteracyjne = ciąg przybliżeń.",
+   "changes": []
+  },
+  {
+   "id": 111,
+   "question": "Które z poniżej wymienionych zagadnień numerycznych wykorzystują właściwości przybliżania funkcji wielomianem interpolującym:",
+   "options": [
+    {
+     "key": "a",
+     "text": "metoda siecznych, metoda stycznych szukania miejsc zerowych funkcji",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "obliczanie całki oznaczonej funkcji za pomocą kwadratur Newtona-Cotesa",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "równania różniczkowe zwyczajne",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "rozwiązywanie układów równań metodami iteracyjnymi",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "różniczkowanie numeryczne za pomocą wielomianu interpolacyjnego (ilorazy różnicowe)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "metoda odwrotnej interpolacji kwadratowej szukania miejsc zerowych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "metoda bisekcji",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "rozkład LU macierzy układu równań",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "interpolacja-wielomianowa",
+    "kwadratury-newtona-cotesa",
+    "metoda-bisekcji"
+   ],
+   "explanation": "**Dlaczego poprawne:** kwadratury Newtona-Cotesa całkują wielomian interpolujący; metody wielokrokowe równań różniczkowych (Adams) opierają się na interpolacji; różniczkowanie numeryczne różniczkuje wielomian interpolujący; odwrotna interpolacja kwadratowa jest metodą zer.\n\n**Dlaczego błędne:** para „sieczne i styczne” jest fałszywa jako całość (styczna wynika z rozwinięcia Taylora, nie z interpolacji); metody iteracyjne układów, bisekcja i LU nie używają interpolacji.\n\n**Zapamiętaj:** interpolacja stoi za całkowaniem, ODE wielokrokowymi i różniczkowaniem numerycznym.",
+   "changes": []
+  },
+  {
+   "id": 112,
+   "question": "Wielomiany sklejane (ang. spline) trzeciego stopnia muszą spełniać następujące warunki w punktach sklejeń:",
+   "options": [
+    {
+     "key": "a",
+     "text": "przechodzenie funkcji interpolującej przez węzły interpolacji",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "ciągłość pochodnej funkcji interpolującej",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "ciągłość funkcji interpolującej",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "ciągłość drugiej pochodnej funkcji interpolującej",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "w każdym podprzedziale funkcja jest wielomianem stopnia co najwyżej 3",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "konieczne są dwa dodatkowe warunki brzegowe (np. S''=0 na końcach)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "ciągłość trzeciej pochodnej funkcji interpolującej",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "zerowanie drugiej pochodnej w każdym węźle wewnętrznym",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "funkcje-sklejane"
+   ],
+   "explanation": "**Dlaczego poprawne:** splajn kubiczny przechodzi przez węzły, jest ciągły wraz z 1. i 2. pochodną, w podprzedziałach jest wielomianem stopnia ≤3; do jednoznaczności potrzeba 2 warunków brzegowych.\n\n**Dlaczego błędne:** trzecia pochodna może mieć skok w węzłach; druga pochodna nie zeruje się w węzłach (naturalny splajn zeruje ją tylko na końcach).\n\n**Zapamiętaj:** splajn kubiczny = C² i 2 warunki brzegowe.",
+   "changes": []
+  },
+  {
+   "id": 113,
+   "question": "Wskaż zdania prawdziwe dotyczące zagadnienia interpolacji wielomianowej z wykorzystaniem jednomianów (tzw. bazy naturalnej):",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest to zadanie dobrze uwarunkowane",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "ma zdecydowanie lepsze właściwości numeryczne niż metoda Lagrange'a",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest to zadanie źle uwarunkowane",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "macierz układu jest macierzą Vandermonde'a, źle uwarunkowaną dla wysokich stopni",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "współczynniki wielomianu wyznacza się z układu równań liniowych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "uwarunkowanie tego zadania poprawia się ze wzrostem stopnia wielomianu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "macierz układu jest macierzą diagonalną",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "interpolacja-wielomianowa",
+    "uwarunkowanie-zadania"
+   ],
+   "explanation": "**Dlaczego poprawne:** w bazie jednomianów układ ma macierz Vandermonde'a, której wskaźnik uwarunkowania rośnie bardzo szybko (wykładniczo) ze stopniem, więc zadanie jest źle uwarunkowane; współczynniki wynikają z układu liniowego.\n\n**Dlaczego błędne:** zadanie nie jest dobrze uwarunkowane i nie ma lepszych właściwości niż Lagrange; macierz nie jest diagonalna, a uwarunkowanie z rosnącym stopniem pogarsza się.\n\n**Zapamiętaj:** jednomiany w interpolacji = Vandermonde = źle uwarunkowane.",
+   "changes": []
+  },
+  {
+   "id": 114,
+   "question": "Błędy związane z ograniczeniem nieskończonego ciągu wymaganych obliczeń do skończonej liczby działań nazywamy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "błędami zaokrągleń (ang. rounding errors)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "błędami niedomiaru (ang. underflow errors)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "błędami obcięcia (ang. truncation errors)",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "błędami nadmiaru (ang. overflow errors)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zastąpienie nieskończonego szeregu Taylora sumą skończoną",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "błędem metody, który występuje także w arytmetyce dokładnej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "skończoną liczbą bitów mantysy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "błędami danych pomiarowych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "bledy-numeryczne"
+   ],
+   "explanation": "**Dlaczego poprawne:** ograniczenie nieskończonego procesu (szereg, granica, liczba iteracji) do skończonej liczby działań daje błąd obcięcia, czyli błąd metody, występujący nawet w arytmetyce dokładnej.\n\n**Dlaczego błędne:** zaokrąglenia wynikają ze skończonej reprezentacji liczb, niedomiar i nadmiar z wyjścia poza zakres wykładnika, a błędy danych są odrębnym źródłem.\n\n**Zapamiętaj:** skończoność procesu = obcięcie; skończoność reprezentacji = zaokrąglenie.",
+   "changes": []
+  },
+  {
+   "id": 115,
+   "question": "Jeśli niewielkie względne zaburzenia danych wejściowych powodują niewielkie względne zmiany wyników, to wówczas:",
+   "options": [
+    {
+     "key": "a",
+     "text": "współczynnik uwarunkowania osiąga wysoką wartość",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "współczynnik uwarunkowania osiąga niską wartość",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zadanie jest dobrze uwarunkowane",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "zadanie jest źle uwarunkowane",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "uwarunkowanie jest własnością zadania, a nie użytego algorytmu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "każdy algorytm rozwiązujący to zadanie jest niestabilny numerycznie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "względny błąd wyniku jest porównywalny z względnym błędem danych wejściowych",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uwarunkowanie-zadania"
+   ],
+   "explanation": "**Dlaczego poprawne:** niska wartość współczynnika uwarunkowania oznacza, że małe względne zaburzenia danych dają małe względne zmiany wyniku, czyli zadanie jest dobrze uwarunkowane; jest to własność samego zadania.\n\n**Dlaczego błędne:** wysoka wartość oznaczałaby wzmocnienie zaburzeń (zadanie źle uwarunkowane); dobre uwarunkowanie nie oznacza niestabilności żadnego algorytmu.\n\n**Zapamiętaj:** mały wskaźnik uwarunkowania = dobrze uwarunkowane.",
+   "changes": []
+  },
+  {
+   "id": 116,
+   "question": "Warunkami wystarczającymi, gwarantującymi zbieżność poszukiwania miejsc zerowych funkcji f(x) metodą bisekcji są:",
+   "options": [
+    {
+     "key": "a",
+     "text": "funkcja f(x) jest ciągła w przedziale domkniętym [a, b]",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "pierwsza i druga pochodna f(x) istnieją i są ciągłe w przedziale domkniętym [a, b]",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "pierwsza i druga pochodna mają stały znak w całym przedziale",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "na końcach przedziału [a, b] wartości funkcji f(x) przyjmują przeciwne znaki, czyli zachodzi f(a) * f(b) < 0",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "różniczkowalność funkcji f nie jest potrzebna do zbieżności metody bisekcji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "monotoniczność funkcji f w przedziale nie jest wymagana",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "funkcja f musi być monotoniczna w [a, b]",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "na końcach przedziału zachodzi f(a) * f(b) > 0",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metoda-bisekcji"
+   ],
+   "explanation": "**Dlaczego poprawne:** bisekcja korzysta tylko z ciągłości i zmiany znaku, aby zachować pierwiastek w przedziale; żadne założenia o pochodnych ani monotoniczności nie są potrzebne.\n\n**Dlaczego błędne:** warunki na pochodne i ich stały znak dotyczą metody Newtona; f(a)f(b)>0 nie gwarantuje pierwiastka; monotoniczność nie jest wymagana.\n\n**Zapamiętaj:** bisekcja = ciągłość + przeciwne znaki na końcach.",
+   "changes": []
+  },
+  {
+   "id": 117,
+   "question": "Stosując algorytm stycznych poszukiwania jednokrotnego miejsca zerowego funkcji f(x) w przedziale domkniętym [a, b] w dostatecznej bliskości pierwiastka uzyskujemy zbieżność:",
+   "options": [
+    {
+     "key": "a",
+     "text": "kwadratową",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wykładniczą",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "liczba poprawnych cyfr przybliżenia mniej więcej podwaja się w każdej iteracji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "zbieżność jest szybsza niż liniowa",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "liniową",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "sześcienną (rzędu 3)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "dla pierwiastka jednokrotnego błąd kolejnej iteracji jest proporcjonalny do kwadratu błędu poprzedniej",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metoda-newtona-raphsona"
+   ],
+   "explanation": "**Dlaczego poprawne:** dla pierwiastka jednokrotnego, blisko rozwiązania, e_{k+1} ≈ C e_k², więc rząd wynosi 2 (kwadratowa) — liczba poprawnych cyfr się podwaja.\n\n**Dlaczego błędne:** liniowa jest dla bisekcji (i dla pierwiastków wielokrotnych w Newtonie), sześcienna wymagałaby metod wyższego rzędu (np. Halleya); wykładnicza nie jest standardową nazwą rzędu zbieżności Newtona.\n\n**Zapamiętaj:** Newton (pierwiastek jednokrotny) = zbieżność kwadratowa.",
+   "changes": [
+    "b: „wykładniczą” pozostawiono false (nie jest to rząd zbieżności Newtona; poprawna nazwa to kwadratowa)"
+   ]
+  },
+  {
+   "id": 118,
+   "question": "Do całkowania numerycznego używa się m. in. kwadratur Newtona-Cotesa. Do prostych kwadratur Newtona-Cotesa należą:",
+   "options": [
+    {
+     "key": "a",
+     "text": "metoda Eulera",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "metoda Romberga",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "metoda trapezów",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "metoda Simpsona",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "reguła 3/8",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "metoda Boole'a",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "metoda punktu środkowego (prostokątów) jako otwarta kwadratura Newtona-Cotesa",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "kwadratura Gaussa-Legendre'a",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "metoda Rungego-Kutty",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "metoda Monte Carlo",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kwadratury-newtona-cotesa"
+   ],
+   "explanation": "**Dlaczego poprawne:** trapezy, Simpson, reguła 3/8 i Boole to proste kwadratury zamknięte oparte na wielomianie interpolującym w równoodległych węzłach; punkt środkowy jest kwadraturą otwartą.\n\n**Dlaczego błędne:** metoda Eulera i Rungego-Kutty rozwiązują równania różniczkowe, Romberg to ekstrapolacja Richardsona trapezów, Gauss-Legendre ma nierównoodległe węzły, Monte Carlo jest metodą losową.\n\n**Zapamiętaj:** N-C = równoodległe węzły + wielomian interpolacyjny.",
+   "changes": []
+  },
+  {
+   "id": 119,
+   "question": "Efekt Rungego jest charakterystyczny dla następujących metod interpolacji:",
+   "options": [
+    {
+     "key": "a",
+     "text": "interpolacji funkcjami sklejanymi 1 stopnia dla węzłów równoodległych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "interpolacji funkcjami sklejanymi 3 stopnia dla węzłów równoodległych",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "interpolacji metodą Lagrange'a (wielomianowej) dla węzłów równoodległych",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "interpolacji metodą Lagrange'a dla węzłów będących zerami wielomianów Czebyszewa",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "interpolacji wielomianowej wysokiego stopnia dla węzłów równoodległych (oscylacje przy końcach przedziału)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "interpolacji funkcjami sklejanymi 2 stopnia dla węzłów równoodległych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "aproksymacji średniokwadratowej wielomianem niskiego stopnia",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "interpolacji funkcjami sklejanymi kubicznymi z warunkami naturalnymi",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "efekt-rungego",
+    "funkcje-sklejane"
+   ],
+   "explanation": "**Dlaczego poprawne:** efekt Rungego to oscylacje wielomianu interpolacyjnego wysokiego stopnia na węzłach równoodległych, zwłaszcza przy końcach przedziału.\n\n**Dlaczego błędne:** splajny (dowolnego stopnia) interpolują przedziałowo niskim stopniem, więc nie wykazują efektu; węzły Czebyszewa go eliminują; aproksymacja niskiego stopnia nie interpoluje wszystkich węzłów.\n\n**Zapamiętaj:** Runge = Lagrange + węzły równoodległe + wysoki stopień.",
+   "changes": []
+  },
+  {
+   "id": 120,
+   "question": "Które zdania dotyczące metody eliminacji Gaussa rozwiązywania układów równań są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest to metoda iteracyjna",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jest to metoda dokładna",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "przekształca macierz do postaci macierzy schodkowej",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "nie wymaga przekształcenia układu równań do postaci z macierzą trójkątną górną",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wymaga dzielenia przez element wiodący, który bez wyboru elementu głównego musi być niezerowy",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "koszt jest rzędu ^^O(n^3)^^",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "gwarantuje zbieżność tylko dla macierzy dominujących diagonalnie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "po eliminacji macierz jest diagonalna",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "eliminacja-gaussa-lu"
+   ],
+   "explanation": "**Dlaczego poprawne:** Gauss jest metodą dokładną (skończona liczba operacji), sprowadza macierz do postaci schodkowej (trójkątnej górnej), po czym stosuje podstawianie wsteczne; jego koszt to O(n³); bez pivotingu zerowy element wiodący uniemożliwia dzielenie.\n\n**Dlaczego błędne:** nie jest metodą iteracyjną (nie ma pojęcia zbieżności), nie omija postaci trójkątnej, a po eliminacji macierz jest trójkątna, nie diagonalna.\n\n**Zapamiętaj:** Gauss = dokładna, trójkątna, O(n³).",
+   "changes": []
+  },
+  {
+   "id": 121,
+   "question": "Aby wyeliminować lub znacząco ograniczyć efekt Rungego przy zadaniu interpolacji można:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zastosować interpolację funkcjami sklejanymi zamiast metody Lagrange'a",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zastosować interpolację z węzłami gęściej upakowanymi na końcach przedziału",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zastosować do interpolacji miejsca zerowa wielomianów Czebyszewa",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "zastosować interpolację przedziałową funkcjami sklejanymi 1 stopnia (łamana)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "zwiększać stopień wielomianu interpolacyjnego dla węzłów równoodległych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "zwiększać liczbę węzłów równoodległych i interpolować jednym wielomianem",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zastosować węzły równoodległe i zmniejszyć krok arytmetyki",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "efekt-rungego",
+    "funkcje-sklejane"
+   ],
+   "explanation": "**Dlaczego poprawne:** efekt Rungego ogranicza się przez interpolację przedziałami niskim stopniem (splajny, łamana), węzły zagęszczone przy końcach oraz węzły Czebyszewa.\n\n**Dlaczego błędne:** zwiększanie stopnia lub liczby węzłów równoodległych nasila efekt; lepsza arytmetyka nic nie da, bo to błąd metody.\n\n**Zapamiętaj:** przeciw Rungemu: splajny lub węzły Czebyszewa.",
+   "changes": []
+  },
+  {
+   "id": 122,
+   "question": "Dokładność reprezentacji zmiennoprzecinkowej jest określona przez:",
+   "options": [
+    {
+     "key": "a",
+     "text": "liczbę bitów mantysy",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "liczbę bitów mantysy i wykładnika",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zakres wykładnika",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "liczbę bitów mantysy i zakres wykładnika",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "epsilon maszynowy wynika z liczby bitów mantysy",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "zwiększenie liczby bitów wykładnika przy stałej mantysie nie zwiększa dokładności względnej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zwiększenie liczby bitów wykładnika zwiększa dokładność względną",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wyłącznie przez przesunięcie (bias) wykładnika",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "arytmetyka-zmiennoprzecinkowa"
+   ],
+   "explanation": "**Dlaczego poprawne:** dokładność względna (epsilon maszynowy ≈ 2^-t) zależy tylko od liczby bitów mantysy; wykładnik określa zakres (VALMIN, VALMAX), nie precyzję.\n\n**Dlaczego błędne:** zakres wykładnika, bias ani liczba bitów wykładnika nie zmieniają odstępu względnego między liczbami.\n\n**Zapamiętaj:** mantysa = dokładność, wykładnik = zakres.",
+   "changes": []
+  },
+  {
+   "id": 123,
+   "question": "Efekt Rungego w interpolacji wielomianowej to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wynik wyboru złej funkcji interpolującej",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "wynik braku jednoznaczności rozwiązania zadania interpolacji",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "konsekwencja arytmetyki zmiennoprzecinkowej",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wynik błędu metody",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "błąd występujący także w arytmetyce dokładnej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "oscylacje wielomianu przy końcach przedziału dla węzłów równoodległych i dużego stopnia",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zanika wraz ze zwiększaniem liczby węzłów równoodległych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wynik błędów pomiarowych w danych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "efekt-rungego",
+    "bledy-numeryczne"
+   ],
+   "explanation": "**Dlaczego poprawne:** efekt Rungego to błąd metody (interpolacji wielomianem wysokiego stopnia na węzłach równoodległych) — występuje w arytmetyce dokładnej, jako oscylacje przy końcach przedziału.\n\n**Dlaczego błędne:** nie jest wyborem złej funkcji, nie wynika z niejednoznaczności interpolacji (wielomian jest jednoznaczny), ani z arytmetyki zmiennoprzecinkowej; zwiększanie liczby węzłów równoodległych go nasila.\n\n**Zapamiętaj:** Runge = błąd metody.",
+   "changes": []
+  },
+  {
+   "id": 124,
+   "question": "Funkcje sklejane stopnia m na przedziale [a, b]:",
+   "options": [
+    {
+     "key": "a",
+     "text": "są ciągłe wraz z (m-1) pochodnymi na [a, b]",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "są ciągłe wraz z pochodnymi do rzędu m+1 włącznie na [a, b]",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "są używane tylko do interpolacji przedziałowej",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie są przydatne do interpolowania funkcji periodycznych",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "są jednoznacznie określone przez podanie warunków brzegowych",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nadają się tylko do interpolowania przedziałowego funkcji z nieciągłymi osobliwościami",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "są przydatne nie tylko do interpolacji, ale też do aproksymacji",
+     "correct": true
+    },
+    {
+     "key": "h",
+     "text": "na każdym podprzedziale są wielomianami stopnia co najwyżej m",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "są wielomianami stopnia m na całym przedziale [a, b]",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "nie mogą interpolować węzłów nierównoodległych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "funkcje-sklejane"
+   ],
+   "explanation": "**Dlaczego poprawne:** splajn stopnia m jest kawałkami wielomianem stopnia ≤ m, ciągłym wraz z m−1 pochodnymi; służy do interpolacji i aproksymacji.\n\n**Dlaczego błędne:** m+1 ciągłych pochodnych oznaczałoby jeden wielomian; nie ograniczają się do interpolacji przedziałowej ani funkcji z osobliwościami; splajny periodyczne obsługują funkcje periodyczne; same warunki brzegowe nie określają splajnu bez węzłów i wartości; węzły nie muszą być równoodległe.\n\n**Zapamiętaj:** splajn stopnia m = klasa C^(m−1), kawałkami wielomian.",
+   "changes": [
+    "b: przeformułowano zapis (m+1) -> „pochodnymi do rzędu m+1 włącznie”, bo tekst był identyczny z opcją a po normalizacji; sens bez zmian"
+   ]
+  },
+  {
+   "id": 125,
+   "question": "Wybierz poprawną odpowiedź:",
+   "options": [
+    {
+     "key": "a",
+     "text": "interpolacja z węzłami będącymi zerami wielomianu Czebyszewa odpowiedniego stopnia eliminuje efekt Rungego",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "przybliżenia Pade to technika aproksymacji średniokwadratowej",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "funkcje sklejane nie mogą być wykorzystane do aproksymacji średniokwadratowej ze względu na postać minimalizowanej normy",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "aproksymacja średniokwadratowa polega na minimalizacji normy Czebyszewa",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "przybliżenia Padé są funkcjami wymiernymi",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "aproksymacja średniokwadratowa minimalizuje sumę kwadratów odchyłek",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "interpolacja wielomianowa na węzłach równoodległych wysokiego stopnia jest zawsze zbieżna do funkcji",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "aproksymacja jednostajna minimalizuje sumę kwadratów odchyłek",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "efekt-rungego",
+    "funkcje-sklejane",
+    "aproksymacja-najmniejszych-kwadratow"
+   ],
+   "explanation": "**Dlaczego poprawne:** węzły Czebyszewa eliminują efekt Rungego; Padé to aproksymacja funkcjami wymiernymi; średniokwadratowa minimalizuje sumę kwadratów (norma L2).\n\n**Dlaczego błędne:** Padé nie jest średniokwadratowe; splajny mogą służyć do aproksymacji średniokwadratowej; norma Czebyszewa (max) to aproksymacja jednostajna; wysokiego stopnia interpolacja na węzłach równoodległych nie jest zawsze zbieżna.\n\n**Zapamiętaj:** L2 = kwadraty, L∞ = maksimum (Czebyszew).",
+   "changes": []
+  },
+  {
+   "id": 126,
+   "question": "Metoda Newtona-Raphsona rozwiązywania równań nieliniowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wykorzystuje niejawnie przyspieszenie Aitkena",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jest przykładem metody iteracyjnej o stałym punkcie",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest przykładem metody interpolacyjnej",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "ma rząd zbieżności równy 1",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ma rząd zbieżności równy 2",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "jest szybciej zbieżna niż metoda siecznych",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "jest szybciej zbieżna niż metoda bisekcji",
+     "correct": true
+    },
+    {
+     "key": "h",
+     "text": "nie może być uogólniona dla układów równań nieliniowych",
+     "correct": false
+    },
+    {
+     "key": "i",
+     "text": "wymaga znajomości pochodnej funkcji",
+     "correct": true
+    },
+    {
+     "key": "j",
+     "text": "dla pierwiastka wielokrotnego zbieżność spada do liniowej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "dla układu równań nieliniowych wymaga macierzy Jacobiego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "l",
+     "text": "jest zbieżna dla dowolnego punktu startowego",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "m",
+     "text": "wymaga zmiany znaku funkcji na końcach przedziału",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "n",
+     "text": "ma rząd zbieżności równy 3",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metoda-newtona-raphsona",
+    "metoda-bisekcji"
+   ],
+   "explanation": "**Dlaczego poprawne:** Newton to iteracja punktu stałego x=g(x) z g=x−f/f', rzędu 2 dla pierwiastka jednokrotnego, wymaga f', szybszy niż sieczne (1,618) i bisekcja (1), a uogólnia się na układy przez macierz Jacobiego.\n\n**Dlaczego błędne:** nie wykorzystuje Aitkena, nie jest interpolacyjna, ma rząd 2 (nie 1 ani 3), zbieżność jest lokalna, nie wymaga przedziału ze zmianą znaku.\n\n**Zapamiętaj:** Newton = punkt stały, rząd 2, potrzebna pochodna, uogólnia się na układy.",
+   "changes": []
+  },
+  {
+   "id": 127,
+   "question": "Metoda eliminacji Gaussa rozwiązywania układów równań liniowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wymaga wyszukiwania elementu wiodącego i polega na przekształceniu macierzy do postaci trójkątnej górnej",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "polega na doprowadzeniu macierzy do postaci diagonalnej",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "ma złożoność ^^O(n^3)^^, gdzie ^^n^^ - liczba równań",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "jest przykładem metody iteracyjnej niestacjonarnej",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ma złożoność ^^O(n^2)^^, gdzie ^^n^^ - liczba równań",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "przekształca układ do równoważnego z macierzą trójkątną, który rozwiązuje się przez podstawianie wsteczne",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "koszt jest rzędu ^^\\tfrac{2}{3}n^3^^ operacji arytmetycznych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wymaga wielu iteracji do osiągnięcia zadanej dokładności",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "ma złożoność wykładniczą względem liczby równań",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "eliminacja-gaussa-lu"
+   ],
+   "explanation": "**Dlaczego poprawne:** eliminacja Gaussa przekształca macierz do trójkątnej górnej (z wyborem elementu wiodącego), potem podstawianie wsteczne; koszt (2/3)n³ czyli O(n³).\n\n**Dlaczego błędne:** nie sprowadza do postaci diagonalnej (to Gauss-Jordan), nie jest iteracyjna, koszt nie jest O(n²) ani wykładniczy.\n\n**Zapamiętaj:** Gauss = trójkątna + podstawianie wsteczne, O(n³).",
+   "changes": []
+  },
+  {
+   "id": 128,
+   "question": "Metody dekompozycji LU:",
+   "options": [
+    {
+     "key": "a",
+     "text": "mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "należą do rodziny metod iteracyjnych niestacjonarnych",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie wymagają wyszukiwania elementu wiodącego",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "są przydatne tylko do rozwiązywania układów równań z macierzą symetryczną dodatnio określoną",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "mają lepszą złożoność obliczeniową niż metoda Gaussa, gdyż nie wymagają wyszukiwania elementu wiodącego",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "są metodami iteracyjnymi stacjonarnymi",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "pozwalają rozwiązywać wiele układów z tą samą macierzą, ale różnymi prawymi stronami, kosztem O(n²) na każdy dodatkowy wektor",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "rozkład Choleskiego jest wariantem LU dla macierzy symetrycznych dodatnio określonych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "są metodami wymagającymi wielu iteracji do zbieżności",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "rozkład LU istnieje wyłącznie dla macierzy diagonalnych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "eliminacja-gaussa-lu"
+   ],
+   "explanation": "**Dlaczego poprawne:** rozkład LU raz rozkłada A (O(n³)), potem każde Ax=b kosztuje O(n²); Cholesky to LU dla SPD. Intencja autora banku: LU ma lepsze właściwości numeryczne od zwykłej eliminacji (dwuznaczne — LU z pivotingiem jest w istocie równoważne eliminacji).\n\n**Dlaczego błędne:** LU nie jest metodą iteracyjną, wciąż wymaga pivotingu dla stabilności, nie jest tańszy od Gaussa w O(·) i nie ogranicza się do macierzy SPD.\n\n**Zapamiętaj:** LU to eliminacja zapisana macierzowo; zaleta: wiele prawych stron.",
+   "changes": [
+    "a: pozostawiono true (intencja autora), ale dwuznaczne — LU z pivotingiem jest w istocie eliminacją Gaussa; uwaga w wyjaśnieniu",
+    "e: opcja odwołuje się do tego samego, nadal false"
+   ]
+  },
+  {
+   "id": 129,
+   "question": "Wybierz poprawne zdania opisujące metody minimalizacji:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wzór Davidona-Fletchera-Powella jest podstawą metody zmiennej metryki",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "metoda sprzężonych kierunków jest przykładem ogólnej metody poszukiwania minimum globalnego",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "metoda największego spadku jest przykładem metody poszukiwania minimum globalnego",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "metoda simpleksów należy do metod gradientowych",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "metoda BFGS należy do metod zmiennej metryki (quasi-Newtona)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "metoda DFP przybliża odwrotność hesjanu bez obliczania drugich pochodnych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "metoda Neldera-Meada wymaga obliczania gradientu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "metoda Newtona jest metodą bezgradientową",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metody-minimalizacji"
+   ],
+   "explanation": "**Dlaczego poprawne:** DFP i BFGS to metody zmiennej metryki — aktualizują przybliżenie odwrotności hesjanu z gradientów, bez liczenia drugich pochodnych.\n\n**Dlaczego błędne:** sprzężone kierunki i najszybszy spadek są lokalne (nie globalne); simpleks (Nelder-Mead) jest bezgradientowy; Newton potrzebuje gradientu i hesjanu.\n\n**Zapamiętaj:** DFP/BFGS = zmienna metryka; wszystkie te metody są lokalne.",
+   "changes": []
+  },
+  {
+   "id": 130,
+   "question": "Szybka transformata Fouriera:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest możliwa tylko wtedy, gdy liczba punktów jest całkowitą potęgą 2",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "ma złożoność obliczeniową ^^O(n)^^, gdzie ^^n^^ - liczba węzłów",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest realizacją wzoru całkowego Fouriera na architekturach równoległych",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "polega na zamianie pojedynczej transformaty Fouriera na sumę transformat Fouriera",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "ma złożoność ^^O(n \\log n)^^",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "algorytm Cooleya-Tukeya dzieli ciąg na elementy parzyste i nieparzyste",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "ma złożoność ^^O(n^2)^^, taką samą jak DFT liczona wprost",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "daje wynik gorszy niż DFT z definicji, bo jest tylko przybliżeniem",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "fft"
+   ],
+   "explanation": "**Dlaczego poprawne:** FFT zamienia jedną DFT n punktów na sumę mniejszych transformat (parzyste i nieparzyste), co daje O(n log n) i ten sam wynik co DFT.\n\n**Dlaczego błędne:** n nie musi być potęgą 2 (wersje mieszane, Bluestein); O(n) i O(n²) są błędne; FFT nie jest przybliżeniem ani „równoległą realizacją wzoru całkowego”.\n\n**Zapamiętaj:** FFT = dziel i zwyciężaj, O(n log n).",
+   "changes": []
+  },
+  {
+   "id": 131,
+   "question": "Podejście wariacyjne do rozwiązywania równań różniczkowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "nie nadaje się do obliczeń numerycznych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "polega na tym, że szukamy funkcji minimalizującej odpowiedni funkcjonał",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "polega na wprowadzeniu specjalnej siatki całkowania",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "polega na uzmiennieniu położeń części punktów siatki",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "metoda elementów skończonych opiera się na sformułowaniu wariacyjnym",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "w metodzie Ritza rozwiązanie przybliża się kombinacją funkcji bazowych, a współczynniki dobiera przez minimalizację funkcjonału",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "polega na zastąpieniu pochodnych ilorazami różnicowymi na siatce",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wymaga rozwiązania problemu początkowego metodą Rungego-Kutty",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "podejscie-wariacyjne"
+   ],
+   "explanation": "**Dlaczego poprawne:** podejście wariacyjne zamienia równanie różniczkowe na zadanie minimalizacji funkcjonału (Ritz) lub postać słabą (Galerkin); MES jest jego realizacją.\n\n**Dlaczego błędne:** ilorazy różnicowe na siatce to metoda różnic skończonych; Runge-Kutta rozwiązuje zagadnienia początkowe; podejście jest typowe dla obliczeń numerycznych; specjalna siatka całkowania i ruch węzłów to inne pojęcia.\n\n**Zapamiętaj:** wariacyjnie = minimalizuj funkcjonał.",
+   "changes": []
+  },
+  {
+   "id": 1037,
+   "question": "Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754). Dodatnie liczby rzeczywiste z zakresu od 𝑉 𝐴𝐿𝑀𝐼𝑁 = 2.2 ⋅ 10−308 do 𝑉 𝐴𝐿𝑀𝐴𝑋 = 1.8 ⋅ 10308 są zapisywane w formacie podwójnej precyzji z względnym błędem zaokrąglenia nie większym od 𝜀 = 2−52 ≈ 2.2 ⋅ 10−16 . Które zdania są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wszystkie liczby wymierne, poza całkowitymi, są reprezentowane z niezerowym błędem zaokrąglenia.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Liczby wymierne, których rozwinięcie w bazie 2 jest nieskończone (np. 0.1), są reprezentowane z błędem zaokrąglenia.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Błąd względny reprezentacji jest stały dla wszystkich liczb.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Liczba 0.1 jest reprezentowana dokładnie.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Mantysa ma długość 64 bitów.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wykładnik jest zapisywany w kodzie uzupełnień do dwóch (U2).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Liczba 0.5 jest reprezentowana dokładnie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Błąd względny reprezentacji liczby z zakresu nie przekracza ε.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wykładnik jest zapisywany z przesunięciem (kod z nadmiarem).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wszystkie liczby całkowite większe od 2^53 są reprezentowane dokładnie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Odstęp między sąsiednimi liczbami jest stały w całym zakresie.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "arytmetyka-zmiennoprzecinkowa",
+    "bledy-numeryczne"
+   ],
+   "explanation": "**Dlaczego poprawne:** liczby o nieskończonym rozwinięciu dwójkowym (0.1) są zaokrąglane, więc mają niezerowy błąd; 0.5 (2^-1) jest reprezentowane dokładnie; błąd względny jest ograniczony przez ε; wykładnik jest kodowany z nadmiarem (bias).\n\n**Dlaczego błędne:** nie wszystkie wymierne mają błąd (liczby dwójkowo-wymierne nie); błąd względny jest ograniczony, nie stały; 0.1 nie jest dokładne; mantysa ma 52(+1) bity, nie 64; wykładnik nie jest w U2; odstępy rosną z wartością.\n\n**Zapamiętaj:** dokładne są liczby dwójkowo-wymierne o krótkim rozwinięciu.",
+   "changes": []
+  },
+  {
+   "id": 1038,
+   "question": "Niech 𝑎, 𝑏, 𝑐 będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową 𝜀. Liczba 𝑐 jest wynikiem operacji arytmetycznej ∘ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym. Niech 𝛿𝑐 oznacza błąd względny wyniku operacji 𝑐 = 𝑎 ∘ 𝑏. (dokładniej: jego wartość bezwzględną). W których przypadkach błąd wyniku 𝛿𝑐 może być wielokrotnie (kilka rzędów) większy od błędów argumentów 𝑎 i 𝑏 , czyli 𝛿𝑐 ≫ 2𝜀",
+   "options": [
+    {
+     "key": "a",
+     "text": "w przypadku dzielenia liczby różnej od zera przez liczbę różną od zera.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "w przypadku odejmowania dwóch liczb o bardzo zbliżonych wartościach.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "w przypadku mnożenia dwóch bardzo dużych liczb.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "w przypadku dodawania liczby bardzo małej do bardzo dużej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "w przypadku wyznaczania pierwiastka kwadratowego.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "w przypadku podnoszenia do kwadratu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "w przypadku dodawania dwóch liczb o przeciwnych znakach i zbliżonych wartościach bezwzględnych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "w przypadku obliczania sqrt(x+1) − sqrt(x) dla dużego x",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "w przypadku dodawania dwóch liczb dodatnich",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "w przypadku mnożenia dwóch liczb o różnych znakach",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "bledy-numeryczne",
+    "arytmetyka-zmiennoprzecinkowa"
+   ],
+   "explanation": "**Dlaczego poprawne:** kasowanie (utrata cyfr znaczących) występuje przy odejmowaniu bliskich liczb (lub dodawaniu liczb przeciwnych znaków o zbliżonym module) — błąd względny wyniku bywa o wiele rzędów większy niż ε. Różnica sqrt(x+1) − sqrt(x) dla dużych x jest przykładem.\n\n**Dlaczego błędne:** mnożenie, dzielenie, pierwiastek, kwadrat oraz dodawanie liczb tego samego znaku dają błąd względny rzędu kilku ε; dodanie małej liczby do dużej gubi małą, ale błąd względny pozostaje mały.\n\n**Zapamiętaj:** niebezpieczne jest odejmowanie bliskich wartości.",
+   "changes": []
+  },
+  {
+   "id": 1039,
+   "question": "Obliczanie pierwiastków ciągłej funkcji 𝑓 jednej zmiennej rzeczywistej 𝑥 metodami iteracyjnymi. Wartości funkcji dla pierwszych dwóch wartości wyrazów ciągu iteracyjnego 𝑥0 i 𝑥1 spełniają nierówność 𝑓(𝑥0 )𝑓(𝑥1 ) < 0. Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę",
+   "options": [
+    {
+     "key": "a",
+     "text": "siecznych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "bisekcji (połowienia przedziału).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Newtona (stycznych).",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "iteracji prostych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "odwrotnej interpolacji kwadratowej.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "żadna z powyższych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "regula falsi (metoda fałszywej linii)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "metoda Müllera",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "metoda Steffensena",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metoda-bisekcji",
+    "metoda-newtona-raphsona"
+   ],
+   "explanation": "**Dlaczego poprawne:** przy f ciągłej i f(x0)f(x1)<0 bisekcja zawsze zachowuje przedział z pierwiastkiem i zbiega; regula falsi również zachowuje przedział i zbiega (wolniej i jednostronnie).\n\n**Dlaczego błędne:** sieczne, Newton, iteracje proste i odwrotna interpolacja kwadratowa nie mają gwarancji zbieżności dla dowolnej funkcji ciągłej (mogą wyjść poza przedział lub zbiegać do innego pierwiastka); Müller i Steffensen również nie są gwarantowane; opcja „żadna z powyższych” jest fałszywa (zależna od pozostałych).\n\n**Zapamiętaj:** globalnie gwarantowana jest metoda z zachowaniem przedziału.",
+   "changes": [
+    "f: [POSITION-DEPENDENT] „żadna z powyższych”"
+   ]
+  },
+  {
+   "id": 1040,
+   "question": "Należy rozwiązać układ równań liniowych 𝐴𝑥 = 𝑏 z dowolną rzeczywistą, nieosobliwą macierzą 𝐴 𝑛×𝑛, 𝑛 ≫ 1. Złożoność obliczeniowa algorytmu obliczenia rozwiązania jest mniejsza (w stosunku do metody eliminacyjnej Gaussa), jeżeli macierz 𝐴 jest zadana w postaci: Zaznacz zdania prawdziwe.",
+   "options": [
+    {
+     "key": "a",
+     "text": "macierz A jest już rozłożona na iloczyn A = LU.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "macierz A jest pełna i niesymetryczna.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "macierz A ma wymiar 10x10.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "stosujemy metodę Cramera dla dużych n.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "macierz A jest macierzą osobliwą.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "macierz A jest macierzą Hilberta.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "macierz A jest trójkątna górna (podstawianie wsteczne)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "macierz A jest trójdiagonalna (algorytm Thomasa)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "rozwiązanie x = A^{-1}b wyznaczane po obliczeniu A^{-1} metodą Gaussa-Jordana",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "macierz A jest pełna, o wymiarze n = 1000, bez żadnej struktury",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "eliminacja-gaussa-lu"
+   ],
+   "explanation": "**Dlaczego poprawne:** gdy A=LU jest już rozłożona, rozwiązanie wymaga dwóch podstawień, O(n²) zamiast O(n³); podobnie dla macierzy trójkątnej (O(n²)) i trójdiagonalnej (O(n)).\n\n**Dlaczego błędne:** pełna, niesymetryczna macierz kosztuje tyle samo co Gauss; mały rozmiar nie zmienia algorytmu; Cramer ma koszt bardzo duży; osobliwa jest sprzeczna z założeniem; Hilbert jest tylko źle uwarunkowana; jawne odwracanie kosztuje więcej.\n\n**Zapamiętaj:** struktura macierzy (LU, trójkątna, trójdiagonalna) obniża koszt.",
+   "changes": []
+  },
+  {
+   "id": 1041,
+   "question": "Rozkład według wartości szczególnych (SVD):",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest możliwy tylko dla macierzy kwadratowej.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jest możliwy dla dowolnej macierzy prostokątnej m x n.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "wymaga, aby macierz była dodatnio określona.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie pozwala na wyznaczenie rzędu macierzy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "macierze U i V w rozkładzie są macierzami trójkątnymi.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "wartości osobliwe są zawsze ujemne.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "liczba niezerowych wartości osobliwych jest równa rzędowi macierzy",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "macierze U i V są ortogonalne",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wartości osobliwe są zawsze równe wartościom własnym macierzy A",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "istnieje tylko dla macierzy pełnego rzędu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozklad-svd"
+   ],
+   "explanation": "**Dlaczego poprawne:** SVD istnieje dla każdej macierzy m×n; niezerowe σ_i określają rząd; U i V są ortogonalne.\n\n**Dlaczego błędne:** SVD nie wymaga kwadratowości, dodatniej określoności ani pełnego rzędu; U, V nie są trójkątne; σ_i ≥ 0 (nie ujemne); pozwala wyznaczyć rząd; σ_i to pierwiastki wartości własnych A^T A, nie wartości własne A.\n\n**Zapamiętaj:** SVD istnieje zawsze, σ ≥ 0.",
+   "changes": []
+  },
+  {
+   "id": 1042,
+   "question": "Które zdania są prawdziwe dotyczące eliminacji Gaussa?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wybór elementu głównego (pivoting) jest stosowany w celu poprawy stabilności numerycznej algorytmu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wybór elementu głównego jest realizowany n - 1 razy w algorytmie eliminacyjnym Gaussa.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Eliminacja Gaussa bez wyboru elementu głównego jest zawsze stabilna.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Złożoność czasowa eliminacji Gaussa wynosi O(n^2).",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Eliminacja Gaussa służy do wyznaczania wartości własnych.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Macierz po eliminacji Gaussa jest macierzą diagonalną.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "bez wyboru elementu głównego algorytm może zawieść, gdy element wiodący jest równy zero",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "częściowy wybór elementu głównego polega na wyborze elementu o największym module w kolumnie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wybór elementu głównego zmniejsza złożoność do O(n^2)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "pełny wybór elementu głównego polega na zamianie tylko wierszy",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "eliminacja-gaussa-lu",
+    "uwarunkowanie-zadania"
+   ],
+   "explanation": "**Dlaczego poprawne:** pivoting poprawia stabilność numeryczną i zapobiega dzieleniu przez zero; jest wykonywany w każdym z n−1 kroków eliminacji; częściowy wybiera największy moduł w kolumnie.\n\n**Dlaczego błędne:** bez pivotingu Gauss nie jest zawsze stabilny; złożoność to O(n³), a nie O(n²); Gauss nie służy do wartości własnych; po eliminacji macierz jest trójkątna; pełny pivoting dopuszcza zamianę wierszy i kolumn.\n\n**Zapamiętaj:** pivoting = stabilność, koszt nadal O(n³).",
+   "changes": []
+  },
+  {
+   "id": 1043,
+   "question": "Które zdanie jest prawdziwe dotyczące wyznaczania wartości własnych?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Aby wyznaczyć n wartości własnych dowolnej macierzy kwadratowej A n×n nie stosuje się metod iteracyjnych.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Dla macierzy o stopniu n > 4 nie istnieją ogólne algorytmy skończone (algebraiczne) wyznaczające wartości własne (wynika to z twierdzenia Abla).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Wartości własne macierzy trójkątnej nie leżą na jej przekątnej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Każda macierz kwadratowa ma wyłącznie rzeczywiste wartości własne.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Metoda potęgowa znajduje wszystkie wartości własne jednocześnie.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wartości własne macierzy A i A^T są zawsze różne.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wartości własne macierzy A i A^T są takie same.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Metoda potęgowa wyznacza dominującą wartość własną.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Algorytm QR wyznacza wartości własne w skończonej liczbie kroków algebraicznych dla dowolnego n.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Macierz rzeczywista niesymetryczna zawsze ma wyłącznie rzeczywiste wartości własne.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wartosci-wlasne"
+   ],
+   "explanation": "**Dlaczego poprawne:** z twierdzenia Abela-Ruffiniego dla n>4 nie ma ogólnego skończonego wzoru algebraicznego, więc stosuje się iteracje (potęgowa, QR). A i A^T mają ten sam wielomian charakterystyczny; metoda potęgowa daje dominującą wartość własną.\n\n**Dlaczego błędne:** metody iteracyjne są standardem; wartości własne trójkątnej leżą na przekątnej; macierz rzeczywista może mieć zespolone wartości; potęgowa nie znajduje wszystkich; A i A^T mają to samo widmo; QR jest iteracyjny.\n\n**Zapamiętaj:** n>4 → iteracje; widmo A = widmo A^T.",
+   "changes": []
+  },
+  {
+   "id": 1044,
+   "question": "Które zdania są prawdziwe dotyczące rozkładu SVD (A = UΣV^T)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Rozkład SVD jest wykorzystywany w kompresji obrazów poprzez ucinanie najmniejszych wartości osobliwych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Macierz Σ jest macierzą ortogonalną.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Macierze U i V są macierzami diagonalnymi.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wartości osobliwe na przekątnej Σ mogą być ujemne.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Macierze U i V są macierzami ortogonalnymi.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "SVD nie pozwala na obliczenie macierzy pseudoodwrotnej.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wartości osobliwe są pierwiastkami kwadratowymi wartości własnych A^T A.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Obcięcie SVD do k największych wartości osobliwych daje najlepsze przybliżenie macierzą rzędu k (Eckart-Young).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wartości osobliwe są zawsze równe wartościom własnym macierzy A.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "SVD istnieje tylko dla macierzy symetrycznych.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozklad-svd"
+   ],
+   "explanation": "**Dlaczego poprawne:** obcięcie najmniejszych wartości osobliwych daje najlepsze przybliżenie niskiego rzędu (kompresja obrazów); U i V są ortogonalne; σ_i to pierwiastki wartości własnych A^T A.\n\n**Dlaczego błędne:** Σ jest diagonalna, nieujemna, nie ortogonalna; U i V nie są diagonalne; wartości osobliwe są ≥ 0; SVD pozwala obliczyć pseudoodwrotność A^+=VΣ^+U^T; nie ogranicza się do macierzy symetrycznych.\n\n**Zapamiętaj:** U,V ortogonalne, Σ diagonalna, σ ≥ 0.",
+   "changes": []
+  },
+  {
+   "id": 1045,
+   "question": "Szukanie minimum funkcji wielu zmiennych. Przyjmijmy, że funkcja, której minimum należy znaleźć, jest ,,funkcją kwadratową'', a dokładniej - ma postać formy kwadratowej 𝐹 (𝑥) = 𝑥𝑇 𝐴𝑥 + 𝑏𝑇 𝑥 + 𝑐 , 𝑥 ∈ ℝ 𝑛 i macierz A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła,. 𝑘 - liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja 𝐹 ma minimum. Które zdania są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Dla bezgradientowej metody Neldera-Meada: k < n.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Metoda sprzężonych gradientów znajduje minimum takiej funkcji w co najwyżej n iteracjach (w arytmetyce dokładnej).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Metoda najszybszego spadku zawsze zbiega w jednej iteracji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Metoda Newtona wymaga obliczania tylko pierwszej pochodnej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Minimum funkcji kwadratowej nie istnieje, jeśli A jest dodatnio określona.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Metoda Newtona dla funkcji kwadratowej zbiega w n iteracjach.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Metoda Newtona znajduje minimum takiej funkcji w jednej iteracji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Metoda najszybszego spadku zbiega zazwyczaj tylko asymptotycznie (zygzakowanie).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Metoda sprzężonych gradientów potrzebuje 2n iteracji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Metoda DFP nigdy nie osiąga minimum funkcji kwadratowej w skończonej liczbie kroków.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metody-minimalizacji"
+   ],
+   "explanation": "**Dlaczego poprawne:** sprzężone gradienty kończą w ≤ n iteracjach dla formy kwadratowej; Newton – w jednej (hesjan stały); najszybszy spadek zbiega asymptotycznie.\n\n**Dlaczego błędne:** Nelder-Mead nie gwarantuje k<n; spadek nie kończy w 1 kroku; Newton nie potrzebuje n iteracji i wymaga też hesjanu; minimum istnieje dla dodatnio określonej A; CG nie potrzebuje 2n; DFP z dokładnym poszukiwaniem liniowym kończy w n krokach.\n\n**Zapamiętaj:** Newton 1 krok, CG ≤ n, spadek asymptotycznie.",
+   "changes": []
+  },
+  {
+   "id": 1046,
+   "question": "Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares) Dane: 20 pomiarów położenia 𝑠 𝑖 pojazdu w ruchu prostoliniowym w chwilach 𝑡𝑖 , 𝑖 = 1, 2, … , 20. Funkcja aproksymująca zależności położenia od czasu: 𝑠(𝑡) = 𝑎0 + 𝑎1 𝑡 + 𝑎2 𝑡2 . Które zdania są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Podany przykład nie jest odpowiedni dla liniowego zadania najmniejszych kwadratów, bo funkcja aproksymująca jest funkcją kwadratową.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Jest to liniowe zadanie najmniejszych kwadratów, ponieważ funkcja jest liniowa względem parametrów a0, a1, a2.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Wymaga rozwiązania układu równań nieliniowych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Można ją stosować tylko dla 2 pomiarów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Parametry a0, a1, a2 muszą być liczbami całkowitymi.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Błąd aproksymacji w każdym punkcie musi wynosić zero.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Rozwiązaniem jest układ równań normalnych A^T A a = A^T s, gdzie A ma 20 wierszy i 3 kolumny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zadanie wymaga optymalizacji nieliniowej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Funkcja s(t) musi być liniowa względem t, aby zadanie było liniowe.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aproksymacja-najmniejszych-kwadratow"
+   ],
+   "explanation": "**Dlaczego poprawne:** funkcja s(t)=a0+a1 t+a2 t² jest liniowa względem parametrów, więc zadanie jest liniowym zadaniem najmniejszych kwadratów: macierz 20×3, układ nadwyznaczony, równania normalne 3×3.\n\n**Dlaczego błędne:** kwadratowa zależność od t nie psuje liniowości względem a; układ nie jest nieliniowy; potrzeba co najmniej 3 pomiarów; parametry są rzeczywiste; błąd w punktach nie musi być zerowy.\n\n**Zapamiętaj:** liniowość względem parametrów, nie względem zmiennej niezależnej.",
+   "changes": []
+  },
+  {
+   "id": 1047,
+   "question": "Metoda ilorazów różnicowych. Zależność błędu przybliżania wartości pochodnej funkcji analitycznej 𝑓 w punkcie 𝑥, 𝑥 ∈ 𝑅 metodą ilorazów różnicowych według formuły dwupunktowej od kroku ℎ można zapisać wzorem − 𝑓 ′ (𝑥)∣∣ . 𝑓(𝑥+ℎ)−𝑓(𝑥) 𝜀(ℎ) = ∣∣ ℎ",
+   "options": [
+    {
+     "key": "a",
+     "text": "W algorytmie obliczania przybliżenia wartości pochodnej metodą ilorazów z urojonym krokiem ih nie występuje odejmowanie bliskich wartości, co eliminuje błąd kasowania.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Metoda ilorazów różnicowych jest zawsze dokładniejsza od różniczkowania automatycznego.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Krok h powinien być jak największy, aby zminimalizować błąd metody.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Metoda ta wymaga znajomości drugiej pochodnej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Różniczkowanie z urojonym krokiem wymaga użycia liczb zespolonych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Metoda ilorazów różnicowych wstecz jest zawsze rzędu O(h^2).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Dla formuły dwupunktowej błąd metody jest rzędu O(h).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dla zbyt małego h dominuje błąd kasowania (zaokrągleń).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Optymalny krok dla formuły dwupunktowej w double jest rzędu √ε, czyli około 10^-8.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Iloraz centralny ma błąd metody rzędu O(h).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Błąd zaokrągleń ilorazu maleje wraz ze zmniejszaniem h.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "roznicowanie-numeryczne",
+    "bledy-numeryczne"
+   ],
+   "explanation": "**Dlaczego poprawne:** przy kroku urojonym f'(x)≈Im f(x+ih)/h nie ma odejmowania bliskich wartości, więc nie ma kasowania, lecz potrzebne są liczby zespolone. Błąd formuły dwupunktowej to O(h), a błąd kasowania ∼ε/h, więc istnieje optymalny krok ∼√ε.\n\n**Dlaczego błędne:** nie jest zawsze dokładniejsze od różniczkowania automatycznego; największy krok zwiększa błąd metody; druga pochodna występuje tylko w analizie błędu; iloraz wstecz jest O(h), a centralny O(h²).\n\n**Zapamiętaj:** mały h zmniejsza błąd obcięcia, ale zwiększa kasowanie.",
+   "changes": []
+  },
+  {
+   "id": 1048,
+   "question": "Różniczkowanie automatyczne:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Metodę różniczkowania automatycznego można stosować tylko dla funkcji jednej zmiennej.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Pozwala na obliczanie wartości pochodnych z dokładnością maszynową, wykorzystując regułę łańcuchową.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Polega na symbolicznym wyznaczaniu wzoru pochodnej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest znacznie wolniejsze od metod ilorazów różnicowych dla funkcji wielu zmiennych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wymaga numerycznego całkowania funkcji.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Nie pozwala na obliczanie gradientów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Nie wprowadza błędu obcięcia metody różnic skończonych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Tryb wsteczny oblicza gradient funkcji skalarnej kosztem stałej krotności obliczenia funkcji, niezależnie od liczby zmiennych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wyniki są obarczone błędem obcięcia rzędu O(h).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wymaga doboru kroku h.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "roznicowanie-automatyczne",
+    "roznicowanie-numeryczne"
+   ],
+   "explanation": "**Dlaczego poprawne:** różniczkowanie automatyczne stosuje regułę łańcuchową do operacji elementarnych i daje pochodne z dokładnością maszynową bez kroku h; tryb wsteczny daje cały gradient tanio.\n\n**Dlaczego błędne:** działa dla wielu zmiennych i gradientów, nie jest symboliczne, nie wymaga całkowania, a dla wielu zmiennych jest zwykle szybsze od różnic skończonych; nie ma błędu O(h).\n\n**Zapamiętaj:** AD = reguła łańcuchowa, dokładność maszynowa, bez kroku h.",
+   "changes": []
+  },
+  {
+   "id": 1049,
+   "question": "Zaznacz zdanie prawdziwe dotyczące rozkładu QR:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Rozkład danej macierzy A na iloczyn QR jest jednoznaczny.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Rozkład QR jest jednoznaczny, jeśli macierz A jest pełnego rzędu kolumnowego, a elementy na przekątnej macierzy R są dodatnie.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Metoda Grama-Schmidta jest najbardziej stabilną numerycznie metodą wyznaczania rozkładu QR.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Macierz Q w rozkładzie QR jest macierzą trójkątną.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Rozkład QR nie może być stosowany do rozwiązywania zadań najmniejszych kwadratów.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Macierz R jest macierzą ortogonalną.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Rozkład QR wymaga, aby macierz A była kwadratowa.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Macierz Q ma kolumny ortonormalne, czyli ^^Q^TQ=I^^.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Metoda Householdera jest stabilna numerycznie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Zadanie najmniejszych kwadratów można rozwiązać z równania ^^Rx=Q^Tb^^.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Macierz R ma ortonormalne kolumny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozklad-qr",
+    "aproksymacja-najmniejszych-kwadratow"
+   ],
+   "explanation": "**Dlaczego poprawne:** przy pełnym rzędzie kolumnowym i dodatniej diagonali R rozkład QR jest jednoznaczny; Q ma kolumny ortonormalne; Householder jest stabilny; LS rozwiązujemy z Rx=Q^T b.\n\n**Dlaczego błędne:** bez warunków rozkład nie jest jednoznaczny; klasyczny Gram-Schmidt nie jest najstabilniejszy; Q nie jest trójkątna, a R nie jest ortogonalna; rozkład QR nadaje się do LS; macierz nie musi być kwadratowa.\n\n**Zapamiętaj:** Q ortogonalna, R trójkątna, jednoznaczność wymaga dodatniej diagonali R.",
+   "changes": []
+  },
+  {
+   "id": 1050,
+   "question": "Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną 𝑚 = 𝑎0 + 𝑎1 ℎ . Warunki zgodności danych z funkcją aproksymującą zapiszemy jako",
+   "options": [
+    {
+     "key": "a",
+     "text": "Prowadzi do rozwiązania układu nadwyznaczonego (100 równań z 2 niewiadomymi) w sensie najmniejszych kwadratów.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wymaga odwrócenia macierzy 100x100.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Zawsze daje rozwiązanie przechodzące przez wszystkie punkty pomiarowe.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie można jej stosować, gdy pomiary są obarczone błędem.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Funkcja błędu jest funkcją liniową.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Rozwiązanie zawsze istnieje i jest jednoznaczne, jeśli macierz układu ma pełny rząd.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Równania normalne mają rozmiar 2×2.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dla pomiarów obarczonych błędem rozwiązanie zwykle nie przechodzi przez wszystkie punkty.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Układ ma 2 równania i 100 niewiadomych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Model jest nieliniowy względem parametrów a0 i a1.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aproksymacja-najmniejszych-kwadratow",
+    "rozklad-qr"
+   ],
+   "explanation": "**Dlaczego poprawne:** warunki zgodności dają 100 równań z 2 niewiadomymi (układ nadwyznaczony), rozwiązywany w sensie najmniejszych kwadratów; równania normalne A^TA a=A^Tm mają rozmiar 2×2; przy pełnym rzędzie rozwiązanie jest jednoznaczne.\n\n**Dlaczego błędne:** nie trzeba odwracać macierzy 100×100; rozwiązanie zwykle nie przechodzi przez wszystkie punkty; metoda właśnie służy danym z błędami; funkcja błędu jest kwadratowa, nie liniowa.\n\n**Zapamiętaj:** 100 równań, 2 niewiadome → LS z jednoznacznym rozwiązaniem przy pełnym rzędzie.",
+   "changes": [
+    "treść pytania jest ucięta w źródle („zapiszemy jako” bez wzoru) — bez zmian"
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "id": "metody-minimalizacji",
+   "term": "Metody minimalizacji funkcji wielu zmiennych (unconstrained optimization)",
+   "topic": "numerical_methods",
+   "short": "Iteracyjne metody szukania minimum funkcji celu: bezgradientowe (Nelder-Mead), gradientowe (najszybszy spadek, sprzężone gradienty), Newtona i zmiennej metryki (DFP, BFGS).",
+   "details": "**Jak działają.** Nelder-Mead: simpleks n+1 punktów, odbicia/ekspansje/kontrakcje, bez gradientu. Najszybszy spadek: x_{k+1}=x_k−α∇f, wymaga gradientu, zbieżność liniowa, zygzakowanie. Newton: x_{k+1}=x_k−H⁻¹∇f, wymaga gradientu i hesjanu; dla funkcji kwadratowej z dodatnio określoną A trafia w minimum w jednym kroku. Sprzężone gradienty: dla formy kwadratowej n zmiennych kończą w ≤ n iteracjach (arytmetyka dokładna). DFP/BFGS (zmienna metryka, quasi-Newton): aktualizują przybliżenie odwrotności hesjanu, bez liczenia hesjanu.\n\nMetody z funkcją kary służą do optymalizacji **z ograniczeniami** (kara za naruszenie ograniczeń zamienia zadanie na bezograniczeniowe). Wszystkie wymienione metody są lokalne — nie gwarantują minimum globalnego.\n\n**Na egzaminie uważaj na:** (1) Nelder-Mead jest bezgradientowy; (2) najszybszy spadek nie potrzebuje hesjanu i nie kończy w 1 kroku; (3) Newton = gradient + hesjan; (4) to metody lokalne, nie globalne; (5) kara ≠ brak ograniczeń.",
+   "related": [
+    "aproksymacja-najmniejszych-kwadratow"
+   ]
+  },
+  {
+   "id": "aproksymacja-najmniejszych-kwadratow",
+   "term": "Aproksymacja i kryteria jakości L1, L2, L∞ (least squares)",
+   "topic": "numerical_methods",
+   "short": "Aproksymacja dobiera funkcję o m+1 parametrach do n+1 punktów, minimalizując miarę błędu: sumę modułów (L1), sumę kwadratów (L2) lub maksymalny moduł odchyłki (L∞).",
+   "details": "**Jak działa.** Dla modelu liniowego względem parametrów, f(x)=Σ a_j φ_j(x) (np. wielomian, funkcje trygonometryczne), kryterium L2 daje układ równań normalnych ^^A^TA a = A^Ty^^ (lub rozwiązanie przez QR/SVD). Układ A a = y jest nadwyznaczony (n+1 równań, m+1 niewiadomych, m<n). Dla L1 i L∞ zadanie sprowadza się do programowania liniowego (brak wzoru zamkniętego).\n\nFunkcja błędu L2 jest kwadratowa względem parametrów. Gdy m=n (i węzły różne), wielomian interpoluje dane i błąd wynosi 0; gdy m>n rozwiązanie nie jest jednoznaczne, błąd nadal 0 (nigdy ujemny).\n\nKażde kryterium minimalizuje własną miarę: L∞ daje najmniejszą możliwą maksymalną odchyłkę (Δ∞ ≤ Δ1, Δ2), L1 najmniejszą sumę modułów, L2 najmniejszą sumę kwadratów. Relacja Δ1 vs Δ2 nie jest ustalona.\n\n**Na egzaminie uważaj na:** (1) „liniowe zadanie” = liniowe względem parametrów, nie względem x; (2) błąd aproksymacji jest ≥ 0; (3) przykład 3 punktów (2,1),(4,2),(6,1): a=0 dla wszystkich kryteriów, b = 1; 4/3; 3/2; (4) aproksymacja nie musi przechodzić przez punkty.",
+   "related": [
+    "metody-minimalizacji",
+    "rozklad-qr",
+    "rozklad-svd",
+    "interpolacja-wielomianowa"
+   ]
+  },
+  {
+   "id": "interpolacja-wielomianowa",
+   "term": "Interpolacja wielomianowa (Lagrange, baza naturalna)",
+   "topic": "numerical_methods",
+   "short": "Wielomian stopnia n przechodzący przez n+1 różnych węzłów; jest jednoznaczny, ale sposób jego zapisu wpływa na uwarunkowanie obliczeń.",
+   "details": "**Jak działa.** Dla n+1 różnych węzłów istnieje dokładnie jeden wielomian stopnia ≤ n przechodzący przez punkty. W bazie naturalnej (1, x, x², …) współczynniki wyznacza się z układu z macierzą Vandermonde'a, która jest bardzo źle uwarunkowana (uwarunkowanie rośnie wykładniczo ze stopniem). Lepsze są postać Lagrange'a lub Newtona (ilorazy różnicowe), bazy ortogonalne, węzły Czebyszewa.\n\nWielomiany interpolacyjne są podstawą wielu algorytmów: kwadratur Newtona-Cotesa, metod wielokrotnych rozwiązywania równań różniczkowych zwyczajnych (Adams), różniczkowania numerycznego, metody siecznych i odwrotnej interpolacji.\n\n**Na egzaminie uważaj na:** (1) interpolacja w bazie jednomianów jest źle uwarunkowana; (2) wysoki stopień + węzły równoodległe → efekt Rungego; (3) metody iteracyjne rozwiązywania układów równań i bisekcja nie wykorzystują interpolacji; (4) wielomian interpolacyjny jest jednoznaczny niezależnie od zapisu.",
+   "related": [
+    "efekt-rungego",
+    "funkcje-sklejane",
+    "kwadratury-newtona-cotesa",
+    "uwarunkowanie-zadania"
+   ]
+  },
+  {
+   "id": "efekt-rungego",
+   "term": "Efekt Rungego i węzły Czebyszewa (Runge phenomenon)",
+   "topic": "numerical_methods",
+   "short": "Oscylacje wielomianu interpolacyjnego wysokiego stopnia przy końcach przedziału dla węzłów równoodległych; jest to błąd metody, nie arytmetyki.",
+   "details": "**Jak działa.** Błąd interpolacji ma postać ^^f^{(n+1)}(\\xi)/(n+1)! \\prod (x-x_i)^^. Dla węzłów równoodległych iloczyn ten rośnie gwałtownie przy końcach przedziału, a dla funkcji takich jak ^^1/(1+25x^2)^^ wielomian coraz bardziej oscyluje wraz ze wzrostem n (rozbieżność).\n\nSposoby ograniczenia: (1) węzły zagęszczone przy końcach, w szczególności zera wielomianów Czebyszewa ^^x_k=\\cos((2k+1)\\pi/(2n+2))^^, które minimalizują maks. iloczynu; (2) interpolacja przedziałami wielomianami niskiego stopnia (funkcje sklejane); (3) aproksymacja zamiast interpolacji.\n\n**Na egzaminie uważaj na:** (1) efekt Rungego jest błędem metody (istnieje w arytmetyce dokładnej); (2) dotyczy interpolacji Lagrange'a z węzłami równoodległymi, nie splajnów; (3) węzły Czebyszewa go eliminują; (4) to nie kwestia niejednoznaczności ani zaokrągleń.",
+   "related": [
+    "interpolacja-wielomianowa",
+    "funkcje-sklejane"
+   ]
+  },
+  {
+   "id": "funkcje-sklejane",
+   "term": "Funkcje sklejane (splines)",
+   "topic": "numerical_methods",
+   "short": "Funkcje kawałkami wielomianowe stopnia m, sklejone w węzłach tak, aby były ciągłe wraz z m−1 pochodnymi.",
+   "details": "**Jak działa.** Na każdym podprzedziale funkcja jest wielomianem stopnia ≤ m. W węzłach sklejeń wymaga się ciągłości funkcji i pochodnych do rzędu m−1. Splajn kubiczny (m=3): przechodzi przez węzły, jest ciągły wraz z 1. i 2. pochodną (3. pochodna może skakać). Dla n+1 węzłów jest 4n współczynników; interpolacja i ciągłość dają 4n−2 warunków, więc potrzeba 2 warunków brzegowych (naturalne S''=0, zamocowane, periodyczne). Układ jest trójdiagonalny.\n\nSplajny nie wykazują efektu Rungego, nadają się do interpolacji i aproksymacji (np. B-splajny w metodzie najmniejszych kwadratów), także funkcji periodycznych (splajny periodyczne).\n\n**Na egzaminie uważaj na:** (1) splajn stopnia m ma m−1 ciągłych pochodnych, nie m+1; (2) sam warunek brzegowy nie wystarcza — potrzebne też węzły; (3) splajn 1. stopnia to łamana; (4) splajny to nie tylko interpolacja.",
+   "related": [
+    "efekt-rungego",
+    "interpolacja-wielomianowa"
+   ]
+  },
+  {
+   "id": "metody-iteracyjne-ukladow",
+   "term": "Metody iteracyjne stacjonarne: Jacobi, Gauss-Seidel, SOR",
+   "topic": "numerical_methods",
+   "short": "Metody generujące ciąg przybliżeń x^{(k+1)} = M x^{(k)} + c, zbieżny do rozwiązania układu Ax=b, gdy promień spektralny M jest mniejszy od 1.",
+   "details": "**Jak działa.** Rozkład A=L+D+U. Jacobi: ^^x^{(k+1)}=-D^{-1}(L+U)x^{(k)}+D^{-1}b^^. Gauss-Seidel korzysta od razu z nowych składowych. SOR dodaje parametr relaksacji ω. Błąd zmienia się jak ^^e^{(k+1)}=Me^{(k)}^^, więc warunkiem koniecznym i wystarczającym zbieżności (dla każdego x^{(0)}) jest ^^\\rho(M)<1^^. Warunkiem wystarczającym (nie koniecznym) jest ścisła dominacja diagonalna A. Zbieżność nie zależy od wektora startowego; tempo zależy od ρ(M).\n\nSą to metody przybliżone (iteracyjne), efektywne dla dużych macierzy rzadkich — w przeciwieństwie do metod dokładnych (Gauss, LU).\n\n**Na egzaminie uważaj na:** (1) ρ(M)<1, nie >1; (2) dominacja diagonalna jest tylko wystarczająca; (3) Jacobi i SOR nie są metodami dokładnymi; (4) ρ=1 nie daje zbieżności.",
+   "related": [
+    "eliminacja-gaussa-lu"
+   ]
+  },
+  {
+   "id": "eliminacja-gaussa-lu",
+   "term": "Eliminacja Gaussa, rozkład LU i metody dokładne",
+   "topic": "numerical_methods",
+   "short": "Metody dokładne (bezpośrednie) rozwiązują Ax=b skończoną liczbą operacji: eliminacja Gaussa sprowadza A do postaci trójkątnej górnej, LU zapisuje ten proces jako A=LU.",
+   "details": "**Jak działa.** Gauss: w n−1 krokach zeruje się elementy pod przekątną (odejmowanie wielokrotności wiersza wiodącego), potem podstawianie wsteczne. Koszt ^^\\approx \\tfrac{2}{3}n^3^^, czyli ^^O(n^3)^^. Wybór elementu głównego (pivoting: częściowy — największy moduł w kolumnie; pełny — w podmacierzy) chroni przed dzieleniem przez zero i wzrostem błędów zaokrągleń; bez niego algorytm może być niestabilny. LU: A=LU (Doolittle, Crout, Cholesky dla SPD), rozwiązanie to Ly=b i Ux=y, każde O(n²). Rozkład wykonuje się raz, a wiele prawych stron kosztuje po O(n²). Jeśli A jest już rozłożona, koszt jest mniejszy niż w Gaussie. Gauss-Jordan sprowadza do macierzy diagonalnej, metoda Cramera jest dokładna, ale ma koszt rzędu n·n! (lub n⁴) — nieużyteczna dla dużych n.\n\n**Na egzaminie uważaj na:** (1) Gauss to metoda dokładna, nie iteracyjna; (2) po eliminacji macierz jest trójkątna, nie diagonalna; (3) O(n³), nie O(n²); (4) LU nie eliminuje potrzeby pivotingu; (5) Gauss nie służy do wartości własnych.",
+   "related": [
+    "metody-iteracyjne-ukladow",
+    "rozklad-qr",
+    "uwarunkowanie-zadania"
+   ]
+  },
+  {
+   "id": "rozklad-qr",
+   "term": "Rozkład QR (QR decomposition)",
+   "topic": "numerical_methods",
+   "short": "Rozkład A=QR, gdzie Q ma ortonormalne kolumny, a R jest trójkątna górna; stosowany do zadań najmniejszych kwadratów i wartości własnych.",
+   "details": "**Jak działa.** Dla A (m×n, pełny rząd kolumnowy) istnieje A=QR, ^^Q^TQ=I^^, R górnotrójkątna. Rozkład jest jednoznaczny, jeśli wymusimy dodatnie elementy diagonalne R. Metody: klasyczny Gram-Schmidt (niestabilny), zmodyfikowany Gram-Schmidt, odbicia Householdera i obroty Givensa (stabilne, zalecane). Zadanie najmniejszych kwadratów min‖Ax−b‖: rozwiązujemy ^^Rx=Q^Tb^^ (stabilniej niż równania normalne, bo cond(A) zamiast cond(A)²).\n\n**Na egzaminie uważaj na:** (1) Q jest ortogonalna, R trójkątna (nie odwrotnie); (2) jednoznaczność wymaga pełnego rzędu i dodatniej diagonali R; (3) Gram-Schmidt nie jest najstabilniejszy — Householder jest lepszy; (4) QR służy do najmniejszych kwadratów; (5) macierz nie musi być kwadratowa.",
+   "related": [
+    "aproksymacja-najmniejszych-kwadratow",
+    "rozklad-svd"
+   ]
+  },
+  {
+   "id": "rozklad-svd",
+   "term": "Rozkład według wartości osobliwych (SVD)",
+   "topic": "numerical_methods",
+   "short": "Rozkład A=UΣV^T dowolnej macierzy m×n, gdzie U i V są ortogonalne, a Σ diagonalna z nieujemnymi wartościami osobliwymi.",
+   "details": "**Jak działa.** Każda macierz rzeczywista m×n (nie tylko kwadratowa, dodatnio określona czy pełnego rzędu) ma SVD: ^^A=U\\Sigma V^T^^, ^^U^TU=I^^, ^^V^TV=I^^, Σ diagonalna, ^^\\sigma_1\\ge\\sigma_2\\ge\\dots\\ge0^^. Wartości osobliwe to pierwiastki z wartości własnych ^^A^TA^^. Liczba niezerowych σ_i to rząd macierzy; ^^cond_2(A)=\\sigma_{max}/\\sigma_{min}^^. Pseudoodwrotność: ^^A^+=V\\Sigma^+U^T^^. Twierdzenie Eckarta-Younga: obcięcie do k największych σ daje najlepsze przybliżenie rzędu k (kompresja obrazów, PCA).\n\n**Na egzaminie uważaj na:** (1) SVD istnieje zawsze; (2) σ_i ≥ 0, nigdy ujemne; (3) U, V ortogonalne, Σ diagonalna (nie trójkątne); (4) SVD pozwala wyznaczyć rząd i pseudoodwrotność; (5) σ_i ≠ wartości własne A w ogólnym przypadku.",
+   "related": [
+    "rozklad-qr",
+    "aproksymacja-najmniejszych-kwadratow",
+    "wartosci-wlasne"
+   ]
+  },
+  {
+   "id": "wartosci-wlasne",
+   "term": "Numeryczne wyznaczanie wartości własnych (eigenvalues)",
+   "topic": "numerical_methods",
+   "short": "Wartości własne to pierwiastki wielomianu charakterystycznego det(A−λI)=0; dla n≥5 muszą być wyznaczane metodami iteracyjnymi.",
+   "details": "**Jak działa.** Z twierdzenia Abela-Ruffiniego nie istnieje ogólny wzór algebraiczny na pierwiastki wielomianu stopnia ≥5, więc dla n>4 nie ma skończonego algorytmu ogólnego — stosuje się iteracje: metoda potęgowa (dominująca wartość własna), iteracja odwrotna, algorytm QR (podstawowa metoda dla wszystkich wartości własnych). Wartości własne macierzy trójkątnej leżą na przekątnej. Macierze A i A^T mają te same wartości własne. Macierz symetryczna rzeczywista ma wartości rzeczywiste, ogólna macierz rzeczywista może mieć zespolone. Eliminacja Gaussa nie wyznacza wartości własnych.\n\n**Na egzaminie uważaj na:** (1) wartości własne na przekątnej trójkątnej; (2) A i A^T mają to samo widmo; (3) metoda potęgowa daje tylko jedną (dominującą) wartość; (4) nie wszystkie są rzeczywiste; (5) n>4 → metody iteracyjne.",
+   "related": [
+    "rozklad-svd",
+    "eliminacja-gaussa-lu"
+   ]
+  },
+  {
+   "id": "bledy-numeryczne",
+   "term": "Rodzaje błędów numerycznych (truncation, rounding, cancellation)",
+   "topic": "numerical_methods",
+   "short": "Błąd obcięcia (metody) wynika z zastąpienia procesu nieskończonego skończonym, błąd zaokrągleń ze skończonej reprezentacji liczb, a kasowanie z odejmowania bliskich wartości.",
+   "details": "**Jak działa.** Błąd obcięcia (truncation): np. odrzucenie reszty szeregu Taylora, skończone kroki iteracji, efekt Rungego — występuje nawet w arytmetyce dokładnej. Błąd zaokrągleń (rounding): skończona liczba bitów mantysy, względny błąd ≤ ε. Nadmiar/niedomiar (overflow/underflow): wynik poza zakresem wykładnika. Kasowanie (cancellation): odejmowanie dwóch bliskich liczb, dla których względny błąd wyniku może być o wiele rzędów większy niż ε, bo cyfry znaczące się znoszą. Dodawanie liczb tego samego znaku, mnożenie, dzielenie i pierwiastkowanie zachowują względny błąd na poziomie kilku ε.\n\n**Na egzaminie uważaj na:** (1) skończona liczba działań = błąd obcięcia; (2) kasowanie dotyczy odejmowania bliskich liczb; (3) dodanie małej liczby do dużej gubi małą, ale nie zwiększa błędu względnego; (4) zmniejszanie h w ilorazach różnicowych zmniejsza błąd obcięcia, ale zwiększa kasowanie.",
+   "related": [
+    "arytmetyka-zmiennoprzecinkowa",
+    "uwarunkowanie-zadania",
+    "roznicowanie-numeryczne"
+   ]
+  },
+  {
+   "id": "uwarunkowanie-zadania",
+   "term": "Uwarunkowanie zadania i stabilność algorytmu (conditioning)",
+   "topic": "numerical_methods",
+   "short": "Uwarunkowanie opisuje wrażliwość wyniku zadania na zaburzenia danych; jest własnością zadania, nie algorytmu.",
+   "details": "**Jak działa.** Współczynnik uwarunkowania to stosunek względnej zmiany wyniku do względnego zaburzenia danych. Mała wartość — zadanie dobrze uwarunkowane (małe zaburzenia → małe zmiany wyniku); duża wartość — źle uwarunkowane. Dla układu Ax=b: ^^cond(A)=\\|A\\|\\|A^{-1}\\|^^, dla SPD i normy 2 równe ^^\\lambda_{max}/\\lambda_{min}^^. Przykłady źle uwarunkowanych: macierz Hilberta, macierz Vandermonde'a (interpolacja w bazie jednomianów). Stabilność algorytmu to odrębna cecha: algorytm stabilny nie wzmacnia błędów zaokrągleń ponad to, co wynika z uwarunkowania; np. eliminacja z pivotingiem jest stabilniejsza niż bez niego.\n\n**Na egzaminie uważaj na:** (1) małe zaburzenia → małe zmiany = niski wskaźnik uwarunkowania; (2) uwarunkowanie nie zależy od algorytmu; (3) dobry algorytm nie naprawi zadania źle uwarunkowanego; (4) macierz Hilberta i Vandermonde'a są źle uwarunkowane.",
+   "related": [
+    "arytmetyka-zmiennoprzecinkowa",
+    "interpolacja-wielomianowa",
+    "eliminacja-gaussa-lu"
+   ]
+  },
+  {
+   "id": "arytmetyka-zmiennoprzecinkowa",
+   "term": "Arytmetyka zmiennoprzecinkowa IEEE 754",
+   "topic": "numerical_methods",
+   "short": "Liczby zapisywane jako ±mantysa·2^wykładnik; dokładność względna zależy od liczby bitów mantysy, zakres od wykładnika.",
+   "details": "**Jak działa.** Podwójna precyzja (double): 1 bit znaku, 11 bitów wykładnika (kod z nadmiarem/biasem 1023, nie U2), 52 bity zapisanej mantysy (53 z ukrytą jedynką). Epsilon maszynowy ^^\\varepsilon=2^{-52}\\approx2.2\\cdot10^{-16}^^; względny błąd zaokrąglenia liczby z zakresu nie przekracza rzędu ε, ale odstępy między liczbami rosną wraz z ich wartością (błąd bezwzględny nie jest stały). Dokładnie reprezentowane są liczby dwójkowo-wymierne (całkowite do 2^53, 0.5, 0.25), natomiast liczby o nieskończonym rozwinięciu dwójkowym (0.1) są zaokrąglane. Liczba bitów mantysy określa dokładność, liczba bitów wykładnika — zakres (VALMIN, VALMAX).\n\n**Na egzaminie uważaj na:** (1) 0.1 nie jest reprezentowane dokładnie; (2) 0.5 tak — nie wszystkie ułamki dają błąd; (3) stały jest błąd względny (ograniczony), a nie bezwzględny; (4) dokładność = mantysa, zakres = wykładnik.",
+   "related": [
+    "bledy-numeryczne",
+    "uwarunkowanie-zadania"
+   ]
+  },
+  {
+   "id": "metoda-bisekcji",
+   "term": "Metoda bisekcji (połowienia przedziału)",
+   "topic": "numerical_methods",
+   "short": "Metoda szukania miejsca zerowego funkcji ciągłej przez dzielenie przedziału z różnymi znakami na końcach na połowy.",
+   "details": "**Jak działa.** Dane [a,b] z f(a)·f(b)<0 i f ciągła. Środek c=(a+b)/2; z dwóch połówek wybieramy tę, na której końcach znaki są przeciwne. Długość przedziału maleje 2 razy w każdym kroku, więc po k krokach jest ^^(b-a)/2^k^^ (zbieżność liniowa, rząd 1). Wystarczają dwa warunki: ciągłość na [a,b] i przeciwne znaki na końcach (twierdzenie Darboux/Bolzano) — nie potrzeba pochodnych, monotoniczności ani wypukłości. Jest to jedyna z klasycznych metod, której zbieżność jest gwarantowana dla dowolnej funkcji ciągłej spełniającej te warunki; sieczne i Newton mogą nie zbiegać.\n\n**Na egzaminie uważaj na:** (1) warunki na pochodne i ich znak dotyczą Newtona, nie bisekcji; (2) bisekcja jest wolna, ale niezawodna; (3) sieczne, Newton i iteracje proste nie zawsze zbiegają nawet przy zmianie znaku; (4) regula falsi również zachowuje przedział, ale nie zmniejsza go o połowę.",
+   "related": [
+    "metoda-newtona-raphsona"
+   ]
+  },
+  {
+   "id": "metoda-newtona-raphsona",
+   "term": "Metoda Newtona-Raphsona i rząd zbieżności",
+   "topic": "numerical_methods",
+   "short": "Iteracja x_{k+1}=x_k−f(x_k)/f'(x_k), będąca metodą punktu stałego o zbieżności kwadratowej dla pierwiastka jednokrotnego.",
+   "details": "**Jak działa.** W punkcie x_k prowadzimy styczną do wykresu i bierzemy jej miejsce zerowe. Jest to iteracja funkcji ^^g(x)=x-f(x)/f'(x)^^ (metoda punktu stałego, ^^g'(x^*)=0^^). W pobliżu pierwiastka jednokrotnego zbieżność jest kwadratowa (rząd 2): ^^e_{k+1}\\approx C e_k^2^^, liczba poprawnych cyfr się podwaja. Dla pierwiastka wielokrotnego zbieżność spada do liniowej. Wymaga f' (pochodnej); uogólnia się na układy równań nieliniowych (Jacobian: ^^x_{k+1}=x_k-J^{-1}f^^). Metoda siecznych zastępuje pochodną ilorazem różnicowym i ma rząd ≈1.618 (interpolacja liniowa). Bisekcja ma rząd 1. Newton bywa rozbieżny przy złym punkcie startowym i nie wymaga przedziału ze zmianą znaku.\n\n**Na egzaminie uważaj na:** (1) rząd 2, nie 1 ani 3; (2) szybszy od siecznych i bisekcji, ale wymaga pochodnej; (3) nie jest metodą interpolacyjną i nie korzysta z Aitkena; (4) zbieżność lokalna, nie globalna.",
+   "related": [
+    "metoda-bisekcji"
+   ]
+  },
+  {
+   "id": "kwadratury-newtona-cotesa",
+   "term": "Kwadratury Newtona-Cotesa (całkowanie numeryczne)",
+   "topic": "numerical_methods",
+   "short": "Całkowanie przez całkę z wielomianu interpolującego funkcję w równoodległych węzłach: trapezy, Simpson, reguła 3/8, Boole.",
+   "details": "**Jak działa.** Funkcję interpoluje się wielomianem w równoodległych węzłach, a jego całkę wyraża sumą ważoną wartości f. Stopień 1: trapezy; stopień 2: Simpson 1/3; stopień 3: reguła 3/8; stopień 4: Boole. Wersje złożone dzielą [a,b] na podprzedziały. Błąd trapezów ^^O(h^2)^^, Simpsona ^^O(h^4)^^. Reguły otwarte (np. punkt środkowy) nie używają końców. Metoda Romberga to ekstrapolacja Richardsona zastosowana do trapezów, a nie prosta kwadratura N-C; metoda Eulera służy do równań różniczkowych; kwadratury Gaussa mają węzły nierównoodległe. Wysokie stopnie N-C są niestabilne (ujemne wagi, efekt Rungego).\n\n**Na egzaminie uważaj na:** (1) Romberg ≠ prosta kwadratura N-C; (2) Euler to nie kwadratura; (3) Gauss-Legendre nie ma węzłów równoodległych; (4) N-C opiera się na interpolacji wielomianowej.",
+   "related": [
+    "interpolacja-wielomianowa"
+   ]
+  },
+  {
+   "id": "roznicowanie-numeryczne",
+   "term": "Różniczkowanie numeryczne: ilorazy różnicowe i krok urojony",
+   "topic": "numerical_methods",
+   "short": "Przybliżanie pochodnej ilorazem różnicowym; błąd obcięcia maleje z h, a błąd kasowania rośnie, więc istnieje optymalny krok.",
+   "details": "**Jak działa.** Iloraz w przód ^^(f(x+h)-f(x))/h^^ ma błąd metody O(h) (∝ f''h/2); iloraz centralny ^^(f(x+h)-f(x-h))/(2h)^^ ma O(h²). Dla małego h odejmujemy bliskie wartości, więc błąd zaokrągleń ∼ε/h rośnie. Suma błędów ma minimum przy h ∼ √ε ≈ 10⁻⁸ (formuła dwupunktowa). Różniczkowanie z krokiem urojonym (complex step) dla funkcji analitycznej: ^^f'(x)\\approx \\mathrm{Im}\\,f(x+ih)/h^^, nie ma odejmowania bliskich wartości, więc można brać h ∼ 10⁻²⁰⁰, ale wymaga arytmetyki zespolonej. Metoda nie wymaga znajomości f'' (ta występuje tylko w analizie błędu).\n\n**Na egzaminie uważaj na:** (1) największy krok nie minimalizuje błędu; (2) zbyt mały krok zwiększa błąd kasowania; (3) complex step usuwa kasowanie, ale wymaga liczb zespolonych; (4) iloraz wstecz i w przód są rzędu O(h), centralny O(h²).",
+   "related": [
+    "bledy-numeryczne",
+    "roznicowanie-automatyczne"
+   ]
+  },
+  {
+   "id": "roznicowanie-automatyczne",
+   "term": "Różniczkowanie automatyczne (automatic differentiation)",
+   "topic": "numerical_methods",
+   "short": "Technika obliczania dokładnych pochodnych programu przez systematyczne stosowanie reguły łańcuchowej do elementarnych operacji.",
+   "details": "**Jak działa.** Obliczenie funkcji rozkłada się na graf operacji elementarnych; dla każdej znane są pochodne i reguła łańcuchowa łączy je. Tryb prosty (forward) propaguje pochodne wraz z wartościami — koszt ∼n obliczeń dla gradientu n zmiennych. Tryb wsteczny (reverse, backpropagation) daje cały gradient funkcji skalarnej kosztem stałej krotności obliczenia f, niezależnie od n. Wyniki są dokładne z dokładnością maszynową (bez błędu obcięcia i bez doboru kroku h). Nie jest to różniczkowanie symboliczne (nie tworzy wzoru), ani numeryczne (nie różnice).\n\n**Na egzaminie uważaj na:** (1) AD ≠ symboliczne, ≠ ilorazy różnicowe; (2) działa dla funkcji wielu zmiennych i daje gradienty; (3) nie wymaga całkowania; (4) tryb wsteczny jest zwykle szybszy od różnic skończonych dla gradientu wielu zmiennych.",
+   "related": [
+    "roznicowanie-numeryczne"
+   ]
+  },
+  {
+   "id": "fft",
+   "term": "Szybka transformata Fouriera (FFT)",
+   "topic": "numerical_methods",
+   "short": "Algorytm typu „dziel i zwyciężaj” wyznaczający DFT n punktów w czasie O(n log n) zamiast O(n²).",
+   "details": "**Jak działa.** DFT ^^X_k=\\sum_{j=0}^{n-1}x_je^{-2\\pi ijk/n}^^ liczona wprost kosztuje O(n²). Algorytm Cooleya-Tukeya dzieli ciąg na elementy parzyste i nieparzyste: transformata n punktów to suma dwóch transformat n/2 punktów (z czynnikami obrotu), rekurencyjnie, co daje ^^O(n\\log n)^^. Klasyczna wersja radix-2 wymaga n=2^p, ale istnieją wersje dla dowolnego n (mieszane podstawy, Bluestein). FFT nie jest przybliżeniem — wynik jest ten sam co w DFT (z dokładnością zaokrągleń).\n\n**Na egzaminie uważaj na:** (1) złożoność O(n log n), nie O(n); (2) n nie musi być potęgą 2; (3) FFT to sposób obliczania DFT przez sumę mniejszych transformat; (4) nie jest to „wersja równoległa” wzoru całkowego.",
+   "related": [
+    "interpolacja-wielomianowa"
+   ]
+  },
+  {
+   "id": "podejscie-wariacyjne",
+   "term": "Podejście wariacyjne do równań różniczkowych (Ritz, Galerkin, MES)",
+   "topic": "numerical_methods",
+   "short": "Zamiast rozwiązywać równanie różniczkowe bezpośrednio, szuka się funkcji minimalizującej odpowiedni funkcjonał (lub spełniającej postać słabą).",
+   "details": "**Jak działa.** Równanie różniczkowe (np. Poissona) ma równoważny funkcjonał energii J[u]; rozwiązanie jest funkcją minimalizującą J. Aproksymuje się rozwiązanie kombinacją funkcji bazowych ^^u\\approx\\sum c_j\\varphi_j^^; minimalizacja J (metoda Ritza) albo zerowanie residuum względem funkcji testowych (Galerkin) daje układ równań liniowych na c_j. Metoda elementów skończonych to podejście wariacyjne z bazą funkcji kawałkami wielomianowych na siatce elementów. Jest to standardowa metoda obliczeń numerycznych, w odróżnieniu od metody różnic skończonych, która zastępuje pochodne ilorazami różnicowymi na siatce.\n\n**Na egzaminie uważaj na:** (1) wariacyjne = minimalizacja funkcjonału; (2) nadaje się do obliczeń (MES); (3) nie jest to specjalna siatka całkowania ani ruch węzłów siatki; (4) różnice skończone to inna rodzina metod.",
+   "related": [
+    "funkcje-sklejane"
+   ]
+  },
+  {
+   "id": "optymalizacja-z-ograniczeniami",
+   "term": "Optymalizacja z ograniczeniami: metody kary (penalty methods)",
+   "topic": "numerical_methods",
+   "short": "Metody kary zamieniają zadanie z ograniczeniami na ciąg zadań bez ograniczeń, dodając do funkcji celu karę za naruszenie ograniczeń.",
+   "details": "**Jak działa.** Minimalizujemy ^^f(x)^^ przy ograniczeniach ^^g_i(x)\\le0^^, ^^h_j(x)=0^^. Funkcja kary: ^^P(x,\\mu)=f(x)+\\mu\\left(\\sum\\max(0,g_i)^2+\\sum h_j^2\\right)^^. Dla rosnącego μ minimum P zbliża się do rozwiązania zadania z ograniczeniami. Do minimalizacji P używa się zwykłych metod bez ograniczeń. Funkcje bariery (punkty wewnętrzne) działają od strony dopuszczalnej. Kara nie ma zastosowania w zadaniach bez ograniczeń — nie ma czego karać. Duże μ pogarsza uwarunkowanie zadania.\n\n**Na egzaminie uważaj na:** (1) kara = zadania z ograniczeniami; (2) metoda Neldera-Meada, Newtona i najszybszego spadku same w sobie służą zadaniom bez ograniczeń; (3) duże μ psuje uwarunkowanie; (4) to nie są metody globalne.",
+   "related": [
+    "metody-minimalizacji"
+   ]
+  }
+ ]
+}

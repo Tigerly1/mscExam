@@ -1,0 +1,2540 @@
+{
+ "questions": [
+  {
+   "id": 86,
+   "question": "Aby sprawdzić, czy dwa obiekty typu String w języku Java mają taką samą zawartość, można:",
+   "options": [
+    {
+     "key": "a",
+     "text": "użyć metody equals()",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "==",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "użyć metody compareTo() i sprawdzić, czy zwraca 0",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "użyć metody Objects.equals(s1, s2)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "użyć metody equals() z argumentem będącym tym samym napisem w innej wielkości liter i uznać wynik true",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "porównać wyniki metod hashCode() obu obiektów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "operator == zawsze porównuje zawartość obiektów String",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-referencje-i-rownosc"
+   ],
+   "explanation": "**Dlaczego poprawne:** `equals()` porównuje zawartość napisów; `compareTo()` zwraca 0 dla identycznej zawartości; `Objects.equals` deleguje do `equals` (z obsługą null).\n**Dlaczego błędne:** `==` porównuje referencje (dwa różne obiekty o tej samej treści dają false); `hashCode()` może się zderzać, więc równość haszy nie dowodzi równości napisów.\n**Zapamiętaj:** zawartość obiektów porównujemy `equals`, tożsamość referencji operatorem `==`.",
+   "changes": []
+  },
+  {
+   "id": 87,
+   "question": "Który z poniższych fragmentów kodu w języku Java sprawdza, czy obiekt wskazywany przez referencję xyz należy do klasy XYZ?",
+   "options": [
+    {
+     "key": "a",
+     "text": "if (xyz instanceof XYZ)",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "if (xyz.dynamicCastTo(XYZ.class) != null)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "XYZ.class.isInstance(xyz)",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "XYZ.class.isAssignableFrom(xyz.getClass())",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "instanceof zwraca false, gdy xyz ma wartość null",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "if (xyz.isInstanceOf(XYZ))",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "if (xyz instanceof XYZ.class)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "if (xyz.getClass().equals(XYZ))",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-instanceof"
+   ],
+   "explanation": "**Dlaczego poprawne:** `instanceof`, `Class.isInstance` i `isAssignableFrom(getClass())` sprawdzają zgodność typu (również podklasy). `instanceof` zwraca false dla null.\n**Dlaczego błędne:** metody `dynamicCastTo` oraz `isInstanceOf` nie istnieją; `instanceof XYZ.class` nie skompiluje się (po instanceof podaje się nazwę typu); `getClass().equals(XYZ)` to niepoprawna składnia.\n**Zapamiętaj:** sprawdzenie typu = `instanceof` lub `Class.isInstance`.",
+   "changes": []
+  },
+  {
+   "id": 88,
+   "question": "Tablica w języku Java jest zadeklarowana jako: int tab[] = new int[]{3, 2, 1, 0}; Który z fragmentów kodu poprawnie wypisze jej elementy?",
+   "options": [
+    {
+     "key": "a",
+     "text": "for (int i: tab) System.out.println(tab[i] + \" \");",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "for (int i = 0; i < tab.length; i++) System.out.println(tab[i] + \" \");",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "for (int i: tab) System.out.println(i + \" \");",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "for (int x : tab) System.out.print(x + \" \");",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "System.out.println(java.util.Arrays.toString(tab));",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "for (int i = 0; i < tab.length; i += 2) System.out.println(tab[i]);",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "System.out.println(tab);",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-tablice"
+   ],
+   "explanation": "**Dlaczego poprawne:** pętla indeksowa, pętla for-each po wartościach, `Arrays.toString` wypisują elementy zgodnie z zapisem.\n**Dlaczego błędne:** w for-each `i` jest już wartością elementu, więc `tab[i]` indeksuje wartościami 3,2,1,0 i wypisuje w odwróconej kolejności; pętla z krokiem 2 pomija elementy; `println(tab)` wypisuje referencję, nie elementy.\n**Zapamiętaj:** w for-each zmienna pętli to element, nie indeks.",
+   "changes": [
+    "a: pozostaje false — tab[i] przy i będącym wartością elementu wypisuje elementy w odwróconej kolejności"
+   ]
+  },
+  {
+   "id": 89,
+   "question": "Które zdanie opisujące własności klas w języku Java jest prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "aby zaznaczyć, że klasa dziedziczy po kilku klasach, należy podać ich listę po słowie kluczowym extends, np. class D extends A, B, C {}",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "dla każdej klasy w języku Java możliwe jest zdefiniowanie klasy potomnej",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "klasa może implementować wiele interfejsów",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "w języku Java zawsze bezpośrednio możemy dziedziczyć po jednej klasie",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "klasa zadeklarowana jako final nie może mieć klas potomnych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "każda klasa bezpośrednio lub pośrednio dziedziczy po klasie Object",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "klasa potomna dziedziczy konstruktory klasy bazowej",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "klasa może rozszerzać jednocześnie dwie klasy abstrakcyjne",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "interfejs może rozszerzać klasę abstrakcyjną",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-dziedziczenie-interfejsy"
+   ],
+   "explanation": "**Dlaczego poprawne:** klasa może implementować wiele interfejsów, ale rozszerza dokładnie jedną klasę (domyślnie Object); klasa final nie ma potomków; każda klasa dziedziczy po Object.\n**Dlaczego błędne:** `extends A, B, C` jest niedozwolone (brak wielodziedziczenia klas); nie każda klasa może mieć potomka (final); konstruktory nie są dziedziczone; interfejs nie dziedziczy po klasie.\n**Zapamiętaj:** jedna klasa bazowa, wiele interfejsów.",
+   "changes": []
+  },
+  {
+   "id": 90,
+   "question": "W jaki sposób usuwane są obiekty w języku Java?",
+   "options": [
+    {
+     "key": "a",
+     "text": "usuwa się je przez przekazanie referencji do usuwanego obiektu do metody System.gc()",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "nie są programowo usuwane, to środowisko wykonawcze podejmuje decyzje czy i kiedy je usunąć",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "obiekt jest kandydatem do usunięcia przez garbage collector, gdy nie jest osiągalny z żadnej referencji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "wywołanie System.gc() jest jedynie sugestią dla maszyny wirtualnej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "obiekt usuwa się operatorem delete",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "przypisanie referencji wartości null gwarantuje natychmiastowe zwolnienie pamięci obiektu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "obiekt zostaje usunięty dokładnie w chwili wyjścia z bloku, w którym go utworzono",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-garbage-collector"
+   ],
+   "explanation": "**Dlaczego poprawne:** obiektami zarządza odśmiecacz (GC); obiekt jest kandydatem do usunięcia, gdy jest nieosiągalny; `System.gc()` to tylko sugestia.\n**Dlaczego błędne:** `System.gc()` nie przyjmuje referencji do usuwanego obiektu; w Javie nie ma operatora `delete`; przypisanie null nie gwarantuje natychmiastowego zwolnienia pamięci.\n**Zapamiętaj:** w Javie programista nie zwalnia obiektów jawnie — decyduje JVM.",
+   "changes": []
+  },
+  {
+   "id": 91,
+   "question": "Które z poniższych stwierdzeń odnoszące się do klas wewnętrznych i zagnieżdżonych w języku Java są prawdziwe?",
+   "options": [
+    {
+     "key": "a",
+     "text": "w metodach klasy zagnieżdżonej (zadeklarowanej z modyfikatorem static) jest dostępna referencja Outer.this, gdzie Outer jest nazwą klasy zewnętrznej",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "obiekt klasy wewnętrznej ma swój stan niezależny od innych obiektów powiązanych z obiektem klasy zewnętrznej",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "klasy wewnętrzne muszą dziedziczyć po otaczających je klasach zewnętrznych",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "klasa wewnętrzna (zadeklarowana bez modyfikatora static) nie ma dostępu do prywatnych zmiennych klasy zewnętrznej",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "obiekt niestatycznej klasy wewnętrznej jest powiązany z instancją klasy zewnętrznej i ma dostęp do niej przez Outer.this",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "klasę zagnieżdżoną zadeklarowaną jako static można utworzyć bez instancji klasy zewnętrznej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "klasa zagnieżdżona static ma dostęp do niestatycznych pól klasy zewnętrznej bez posiadania jej instancji",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "niestatyczną klasę wewnętrzną można utworzyć ze statycznej metody main wyrażeniem new Inner(), bez obiektu klasy zewnętrznej",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-klasy-zagniezdzone"
+   ],
+   "explanation": "**Dlaczego poprawne:** obiekt klasy wewnętrznej ma własne pola (własny stan); jest powiązany z instancją zewnętrzną (`Outer.this`); klasa static nested tworzy się bez instancji zewnętrznej.\n**Dlaczego błędne:** w klasie static nie ma `Outer.this`; klasa wewnętrzna nie musi dziedziczyć po zewnętrznej; ma dostęp do prywatnych składowych zewnętrznej; `new Inner()` ze statycznego main bez instancji zewnętrznej nie skompiluje się.\n**Zapamiętaj:** inner = związana z instancją zewnętrzną, static nested = nie.",
+   "changes": []
+  },
+  {
+   "id": 1242,
+   "question": "Zapisano następujący kod źródłowy w języku Java: Class C { public static void main(String[] args) { int[]a1[]=new int[3][3]; //3 int a2[4]={3,4,5,6}; //4 int a2[5]; //5 }} Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "int[] a = new int[5]; (poprawna deklaracja).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Błąd kompilacji w liniach 3,4,5.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wszystkie linie są poprawne.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Tablice w Javie mają dynamiczny rozmiar.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Rozmiar tablicy jest ustalany w momencie tworzenia (new) i nie może być zmieniony.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "tablica.length() zwraca liczbę elementów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Linia 3 jest poprawna: deklaruje a1 jako tablicę dwuwymiarową int[][].",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zapis int a2[4] z rozmiarem w deklaracji jest niepoprawny w Javie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Błąd kompilacji występuje tylko w linii 5.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Linie 4 i 5 są poprawne, ponieważ rozmiar tablicy można podać w deklaracji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Nowo utworzona tablica int[5] zawiera elementy o wartości domyślnej null.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-tablice"
+   ],
+   "explanation": "**Dlaczego poprawne:** `int[] a1[]` to tablica 2D (int[][]), więc linia 3 jest poprawna; rozmiar podaje się w `new`, nie w deklaratorze, a po utworzeniu jest stały.\n**Dlaczego błędne:** linie 4 i 5 (`int a2[4]=...`, `int a2[5];`) są błędami kompilacji, więc „3,4,5” i „wszystkie poprawne” są fałszem; tablice nie mają dynamicznego rozmiaru; `length` to pole, nie metoda; elementy int mają wartość domyślną 0.\n**Zapamiętaj:** w Javie `int a[5]` jest niepoprawne — `int[] a = new int[5]`.",
+   "changes": [
+    "b: pozostaje false — linia 3 jest poprawna, błędy tylko w liniach 4 i 5 (uwaga: w stemie 'Class' zamiast 'class' to oczywista literówka)"
+   ]
+  },
+  {
+   "id": 1243,
+   "question": "Zapisano następujący kod źródłowy w języku Java: public class A extends Thread { public int i; public void run() { i = 1; } public static void main(String[] args) throws Exception { A a = new A();",
+   "options": [
+    {
+     "key": "a",
+     "text": "Aby uruchomić wątek, należy wywołać metodę start(), która wywoła run().",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i);",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Nie wypisze nic.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wypisze \"11\".",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Można implementować interfejs Runnable lub dziedziczyć po klasie Thread.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Metoda run() uruchamia nowy wątek w systemie operacyjnym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Bezpośrednie wywołanie run() wykonuje metodę w bieżącym wątku, bez tworzenia nowego wątku.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Ponowne wywołanie start() na tym samym obiekcie wątku powoduje IllegalThreadStateException.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Metoda join() uruchamia wątek.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Metodę start() można wywołać na tym samym obiekcie Thread dowolną liczbę razy.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Thread.sleep(1000) w metodzie main usypia wątek obiektu a.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-watki"
+   ],
+   "explanation": "**Dlaczego poprawne:** wątek uruchamia `start()`, który wywołuje `run()` w nowym wątku; wątek tworzy się przez `Runnable` lub dziedziczenie po `Thread`; bezpośrednie `run()` wykonuje się w bieżącym wątku; drugi `start()` daje IllegalThreadStateException.\n**Dlaczego błędne:** `run()` sam wątku nie uruchamia; „nic nie wypisze” jest fałszem; wynik „11” nie jest gwarantowany (przy typowym przebiegu pierwszy odczyt daje 0, po sleep 1); `join()` nie startuje wątku. Uwaga: stem jest ucięty, a jedna opcja to fragment kodu.\n**Zapamiętaj:** start() tworzy wątek, run() to zwykła metoda.",
+   "changes": [
+    "b: pozostaje false — to fragment kodu (ucięty stem), a nie prawdziwe twierdzenie; stem jest ucięty w źródle"
+   ]
+  },
+  {
+   "id": 1244,
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C{ public static void main(String[] args) { try { try { try {} catch(RuntimeException e){} } catch(Exception e) {} } catch(NullPointerException e) {} finally { System.out.println(\"finally\"); } }} Jaki jest rezultat kompilacji i wykonania programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Blok finally wykonuje się zawsze, niezależnie od tego, czy wystąpił wyjątek.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Runtime Exception",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wypisze \"finally\".",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Błąd kompilacji.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Blok finally jest często używany do zwalniania zasobów.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Blok catch musi zawsze występować po bloku finally.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Blok try może występować z samym blokiem finally, bez catch.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Ustawienie catch(Exception) przed catch(RuntimeException) w tym samym try daje błąd kompilacji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Blok finally nie wykona się, jeśli w bloku try nie wystąpił wyjątek.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Blok finally wykona się zawsze, także po wywołaniu System.exit(0) w bloku try.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-wyjatki"
+   ],
+   "explanation": "**Dlaczego poprawne:** kod się kompiluje (catch dla Exception, RuntimeException i NullPointerException jest dozwolony) i wypisuje „finally”; finally wykonuje się niezależnie od wyjątku i służy do zwalniania zasobów; try może mieć samo finally.\n**Dlaczego błędne:** wyjątek nie zostaje zgłoszony; brak błędu kompilacji; catch występuje przed finally; finally wykonuje się także bez wyjątku; System.exit() w try może pominąć finally.\n**Zapamiętaj:** finally działa niemal zawsze (poza System.exit i zabiciem JVM).",
+   "changes": [
+    "c: false -> true, kod kompiluje się i wypisuje \"finally\""
+   ]
+  },
+  {
+   "id": 1245,
+   "question": "Zapisano następujący kod źródłowy w języku Java: public class C { public static void main ( String a[]) { Thread t = Thread.currentThread ( ) ; t.setPriority(-1); System.out.println(\"Done!\"); } } Jaki będzie rezultat kompilacji i wykonania programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Priorytet musi mieścić się w zakresie od Thread.MIN_PRIORITY (1) do Thread.MAX_PRIORITY (10).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Runtime Exception",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Done!",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Błąd kompilacji.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wartość priorytetu 0 jest dozwolona.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wyższy priorytet gwarantuje, że wątek zakończy się szybciej.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Metoda setPriority() zgłasza IllegalArgumentException dla wartości spoza zakresu 1–10.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Domyślny priorytet wątku to Thread.NORM_PRIORITY (5).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Ujemny priorytet jest automatycznie zaokrąglany do Thread.MIN_PRIORITY.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Specyfikacja JVM gwarantuje, że wątek o wyższym priorytecie zawsze wykona się przed wątkiem o niższym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-watki"
+   ],
+   "explanation": "**Dlaczego poprawne:** `setPriority` przyjmuje wartości 1–10, inne powodują IllegalArgumentException (RuntimeException) w czasie wykonania; domyślny priorytet to 5.\n**Dlaczego błędne:** „Done!” się nie wypisze; kod się kompiluje (-1 to poprawny int); priorytet 0 też jest poza zakresem; priorytet nie gwarantuje szybszego zakończenia ani ścisłej kolejności; wartość ujemna nie jest zaokrąglana.\n**Zapamiętaj:** priorytet spoza 1–10 = wyjątek w runtime.",
+   "changes": [
+    "b: false -> true, setPriority(-1) rzuca IllegalArgumentException, będący RuntimeException"
+   ]
+  },
+  {
+   "id": 1246,
+   "question": "Zapisano następujący kod źródłowy w języku Java: interface I{ void f1(); // 1 public void f2(); // 2 protected void f3(); // 3 private void f4(); // 4 } Które linie generują błędy kompilacji? (w komentarzach podany numery linii)",
+   "options": [
+    {
+     "key": "a",
+     "text": "W klasycznych interfejsach metody są domyślnie public abstract.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Błąd kompilacji w liniach 1,2,3,4.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Tylko linia 3 i 4 generują błędy.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Interfejsy nie mogą mieć metod.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Od Javy 8 interfejsy mogą posiadać metody domyślne (default) i statyczne.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Metody w interfejsach mogą być final.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Od Javy 9 interfejsy mogą zawierać metody prywatne, ale muszą mieć ciało.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Pola zadeklarowane w interfejsie są domyślnie public static final.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Metoda protected w interfejsie jest dozwolona, jeśli klasa implementująca ją nadpisze.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Linie 1 i 2 generują błąd kompilacji, bo nie zawierają słowa abstract.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-dziedziczenie-interfejsy"
+   ],
+   "explanation": "**Dlaczego poprawne:** metody interfejsu są domyślnie public abstract; od Javy 8 dozwolone są default i static, od Javy 9 private (z ciałem); pola są public static final.\n**Dlaczego błędne:** linia 3 (protected) i 4 (private bez ciała) to błędy, a linie 1 i 2 są poprawne; interfejsy mają metody; metoda interfejsu nie może być final; protected jest niedozwolone.\n**Zapamiętaj:** błędy tylko w liniach 3 i 4.",
+   "changes": [
+    "c: false -> true, linia 3 (protected) i 4 (private bez ciała) faktycznie są błędami kompilacji"
+   ]
+  },
+  {
+   "id": 1247,
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C { static int s; public static void main(String a[]){ C obj=new C(); obj.m1(); System.out.println(s); } void m1() { int x=1; m2(x); System.out.println(x+\"\"); } void m2(int x){ x=x*2; s=x; } } Jaki jest rezultat kompilacji i wykonania programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Java zawsze przekazuje argumenty przez wartość.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wypisze: \"2,0\"",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wypisze: \"1 2\".",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Wypisze: \"2 2\".",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Dla obiektów przekazywana jest wartość referencji (kopia wskaźnika).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Słowo kluczowe 'ref' pozwala na przekazywanie przez referencję.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zmiana parametru x w metodzie m2 nie zmienia zmiennej x w metodzie m1.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Pole statyczne s po wykonaniu m2 ma wartość 2.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zmienna x w m1 po wywołaniu m2 ma wartość 2.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Java pozwala przekazywać typy prymitywne przez referencję.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-referencje-i-rownosc"
+   ],
+   "explanation": "**Dlaczego poprawne:** argumenty przekazywane są przez wartość (dla obiektów kopiowana jest referencja). Zmiana lokalnego `x` w m2 nie zmienia `x` w m1, a pole statyczne `s` dostaje 2. Program wypisuje w osobnych liniach „1” i „2”, co odpowiada opcji „1 2”.\n**Dlaczego błędne:** „2,0” i „2 2” nie zgadzają się z przebiegiem; Java nie ma słowa `ref` ani przekazywania prymitywów przez referencję; `x` w m1 pozostaje 1.\n**Zapamiętaj:** Java = zawsze pass-by-value.",
+   "changes": [
+    "c: false -> true, faktyczny wynik to \"1\" oraz \"2\" (println), czyli \"1 2\""
+   ]
+  },
+  {
+   "id": 1248,
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C { public static void main(String[] args) { int i1=1; switch(i1){ case 1: System.out.println(\"one \"); case 2: System.out.println(\"two \"); case 3: System.out.println(\"three \"); }}} Jaki jest rezultat kompilacji i wykonania programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Po dopasowaniu case, wykonają się wszystkie kolejne instrukcje (fall-through).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wypisze: \"one \"",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wypisze: \"one two three \"",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Wypisze: \"one \" i zakończy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Switch obsługuje tylko typy całkowite (int, long).",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Od Javy 7 switch obsługuje typ String.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Instrukcja switch obsługuje m.in. typy char, byte, short, enum oraz String.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Instrukcja break kończy wykonywanie instrukcji switch.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Bez instrukcji break wykona się tylko dopasowana etykieta case.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Switch wymaga etykiety default, inaczej kod się nie skompiluje.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-switch"
+   ],
+   "explanation": "**Dlaczego poprawne:** bez `break` po dopasowaniu wykonują się wszystkie kolejne przypadki (fall-through), więc wypisze one, two, three (w osobnych liniach); od Javy 7 switch obsługuje String, a także char, byte, short, enum; `break` kończy switch.\n**Dlaczego błędne:** wypisanie samego „one” zakładałoby break; switch nie jest ograniczony do int/long (long w ogóle nie jest obsługiwany); default nie jest wymagany.\n**Zapamiętaj:** brak break = przechodzenie do kolejnych etykiet.",
+   "changes": [
+    "c: false -> true, fall-through wypisuje one, two, three",
+    "f: false -> true, od Javy 7 switch obsługuje String"
+   ]
+  },
+  {
+   "id": 1249,
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C1 { static interface I { static class C2 {} } public static void main(String a[]) { C1.I.C2 ob1=new C1.I.C2(); System.out.println(\"obj created\"); } } Jaki jest rezultat kompilacji i wykonania programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Interfejsy mogą zawierać klasy statyczne.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Błąd kompilacji",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wypisze: \"obj created\"",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Interfejsy nie mogą mieć metod main.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Klasy wewnętrzne nie mogą być statyczne.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Klasa wewnętrzna ma dostęp do prywatnych pól klasy zewnętrznej.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Klasa zagnieżdżona zadeklarowana wewnątrz interfejsu jest domyślnie public i static.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Klasę C2 można utworzyć bez instancji klasy C1.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Klasa zagnieżdżona w interfejsie jest domyślnie prywatna.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Interfejs nie może zawierać żadnych zagnieżdżonych typów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-klasy-zagniezdzone",
+    "java-dziedziczenie-interfejsy"
+   ],
+   "explanation": "**Dlaczego poprawne:** interfejs może zawierać klasy zagnieżdżone (domyślnie public static), więc `new C1.I.C2()` kompiluje się i wypisuje „obj created”; klasa zagnieżdżona ma dostęp do prywatnych składowych klasy otaczającej.\n**Dlaczego błędne:** błąd kompilacji nie występuje; interfejs może mieć statyczną metodę main (od Javy 8); klasy zagnieżdżone mogą być statyczne; nie są domyślnie prywatne; interfejs może zawierać typy zagnieżdżone.\n**Zapamiętaj:** typ zagnieżdżony w interfejsie to public static.",
+   "changes": [
+    "c: false -> true, kod się kompiluje i wypisuje \"obj created\"",
+    "f: false -> true, klasa zagnieżdżona/wewnętrzna ma dostęp do prywatnych składowych klasy zewnętrznej"
+   ]
+  },
+  {
+   "id": 1250,
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C1 { static class C2 { static int i1; } public static void main(String a[]) { System.out.println(C1.C2.i1); } } Jaki jest rezultat kompilacji i wykonania programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pola statyczne są inicjalizowane wartościami domyślnymi (0 dla int).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wypisze: \"0\"",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Błąd kompilacji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Runtime Exception.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Klasa statyczna wymaga obiektu klasy zewnętrznej do utworzenia instancji.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Klasa statyczna wewnętrzna może dziedziczyć po klasie zewnętrznej.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Dostęp do pola statycznego C1.C2.i1 nie wymaga utworzenia żadnego obiektu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zmienna statyczna istnieje w jednym egzemplarzu na klasę.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Niezainicjalizowane pole statyczne i1 ma wartość null.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Niezainicjalizowane pole statyczne powoduje błąd kompilacji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-klasy-zagniezdzone",
+    "java-zmienne-i-modyfikatory"
+   ],
+   "explanation": "**Dlaczego poprawne:** pola statyczne dostają wartości domyślne (0 dla int), a `C1.C2.i1` jest dostępne bez obiektu, więc program wypisze „0”; klasa static nested może dziedziczyć po klasie zewnętrznej.\n**Dlaczego błędne:** nie ma błędu kompilacji ani wyjątku; klasa static nie wymaga instancji zewnętrznej; pole int nie ma wartości null.\n**Zapamiętaj:** static nested jest niezależna od instancji klasy zewnętrznej.",
+   "changes": [
+    "b: false -> true, program wypisze \"0\"",
+    "f: false -> true, klasa static nested może rozszerzać klasę zewnętrzną (class C2 extends C1)"
+   ]
+  },
+  {
+   "id": 1251,
+   "question": "Ile obiektów (instancji klasy StringBuffer) zostanie utworzonych w wyniku wykonania poniższego kodu w języku Java: StringBuffer s1 = new StringBuffer(\"abc\"); StringBuffer s2 = s1; StringBuffer s3 = new StringBuffer(\"abc\");",
+   "options": [
+    {
+     "key": "a",
+     "text": "2 (s1 tworzy nowy obiekt, s3 tworzy drugi nowy obiekt).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "1",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "3",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "0",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "4",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "StringBuffer nie jest klasą w Javie.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Przypisanie s2 = s1 kopiuje tylko referencję i nie tworzy nowego obiektu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Powstaną 2 obiekty, a dla s2 tworzony jest dodatkowy, osobny obiekt.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Przypisanie s2 = s1 tworzy kopię obiektu StringBuffer.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-referencje-i-rownosc"
+   ],
+   "explanation": "**Dlaczego poprawne:** `new` tworzy obiekt dwa razy (s1 i s3), a `s2 = s1` kopiuje tylko referencję, więc obiektów jest 2.\n**Dlaczego błędne:** 0, 1, 3 lub 4 obiektów nie zgadza się z liczbą wykonań `new`; przypisanie referencji nie tworzy kopii; StringBuffer jest klasą standardową.\n**Zapamiętaj:** liczba obiektów = liczba wykonań `new`, nie liczba zmiennych.",
+   "changes": []
+  },
+  {
+   "id": 1252,
+   "question": "Która z poniższych metod jest statyczną metodą w klasie Thread dostępnej w standardowym API dla języka Java?",
+   "options": [
+    {
+     "key": "a",
+     "text": "sleep, yield, currentThread, interrupted.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "join",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "start",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "run",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wait",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "notify",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "holdsLock",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "onSpinWait",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "isInterrupted",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "interrupt",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-watki"
+   ],
+   "explanation": "**Dlaczego poprawne:** `sleep`, `yield`, `currentThread`, `interrupted`, `holdsLock`, `onSpinWait` są statyczne.\n**Dlaczego błędne:** `join`, `start`, `run`, `isInterrupted`, `interrupt`, `setPriority` są metodami instancyjnymi; `wait` i `notify` pochodzą z Object i też są instancyjne.\n**Zapamiętaj:** statyczne dotyczą wątku bieżącego (sleep, yield, currentThread, interrupted).",
+   "changes": []
+  },
+  {
+   "id": 1253,
+   "question": "Zapisano poniższy kod źródłowy w języku Java: class c1 { public void m1() { System.out.println(\"m1 w klasie C1\"); } } class c2 { public c1 m1() { return new c1(){ public void m1() { System.out.println(\"m1 w klasie anonimowej\"); } }; } public static void main(String a[]) { c1 ob1 =new c2().m1(); ob1.m1(); }} Jaki będzie wynik kompilacji i wykonania tego kodu jako programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Klasa anonimowa nadpisuje metodę, więc zostanie wywołana wersja z klasy anonimowej.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Program wypisze łańcuch: \"m1 w klasie anonimowej\"",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Program wypisze: \"m1 w klasie C1\"",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Błąd kompilacji.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Klasy anonimowe nie mogą implementować interfejsów.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Klasa anonimowa może mieć własny konstruktor.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Klasa anonimowa może rozszerzać klasę albo implementować interfejs (ale nie oba jednocześnie).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wywołanie ob1.m1() jest rozstrzygane na podstawie rzeczywistego typu obiektu w czasie wykonania.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wywołanie ob1.m1() wybiera metodę na podstawie typu referencji c1 już w czasie kompilacji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Klasa anonimowa nie może nadpisywać metod klasy bazowej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-klasy-zagniezdzone",
+    "java-dziedziczenie-interfejsy"
+   ],
+   "explanation": "**Dlaczego poprawne:** klasa anonimowa nadpisuje `m1`, a przy dynamicznym wiązaniu wybierana jest wersja z rzeczywistego typu obiektu, więc wypisze „m1 w klasie anonimowej”; klasa anonimowa może rozszerzać klasę albo implementować interfejs.\n**Dlaczego błędne:** wersja z c1 nie zostanie wywołana; brak błędu kompilacji (po poprawieniu brakującego średnika); klasy anonimowe mogą implementować interfejsy; nie mają własnego konstruktora (tylko blok inicjalizujący); metoda nie jest wybierana wg typu referencji.\n**Zapamiętaj:** polimorfizm decyduje w czasie wykonania.",
+   "changes": [
+    "stem: dodano brakujący średnik po klasie anonimowej w instrukcji return (literówka; bez niego kod nie kompilowałby się wbrew intencji zadania)"
+   ]
+  },
+  {
+   "id": 1254,
+   "question": "Zapisano poniższy kod źródłowy w języku Java:class C{ int i; public static void main (String[] args) { int i; //1 private int a = 1; //2 protected int b = 1; //3 public int c = 1; //4 System.out.println(a+b+c); //5 }} Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczony numery lini)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zmienne lokalne nie mogą mieć modyfikatorów public, private, protected.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wykonanie kodu spowoduje wyprowadzenie wyniku: \"3\"",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Błąd kompilacji w liniach 2, 3, 4.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Wypisze \"1\".",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Zmienne lokalne mogą być oznaczone jako final.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Zmienne lokalne są widoczne w całej klasie.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zmienna lokalna może być oznaczona modyfikatorem final.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zmienna lokalna jest widoczna tylko w bloku, w którym została zadeklarowana.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zmienne lokalne są domyślnie inicjalizowane wartościami domyślnymi jak pola klasy.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Modyfikator private przy zmiennej lokalnej ogranicza jej widoczność do metody.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-zmienne-i-modyfikatory"
+   ],
+   "explanation": "**Dlaczego poprawne:** zmienne lokalne nie mogą mieć modyfikatorów dostępu, więc linie 2, 3, 4 to błędy kompilacji; lokalne mogą być final; są widoczne tylko w bloku.\n**Dlaczego błędne:** nie ma wyniku „3” ani „1”, bo kod się nie kompiluje; zmienne lokalne nie są widoczne w całej klasie; linia 1 jest poprawna.\n**Zapamiętaj:** lokalne — tylko final, bez public/private/protected.",
+   "changes": [
+    "c: false -> true, błędy kompilacji faktycznie w liniach 2, 3, 4 (modyfikatory dostępu przy zmiennych lokalnych)",
+    "e: false -> true, zmienne lokalne mogą być final"
+   ]
+  },
+  {
+   "id": 1255,
+   "question": "Zapisano poniższy kod źródłowy w języku Java: public class Command { public static void main (String[] a1) { System.out.print(a1[1] + a1[2] + a1[3]); }} Jaki jest wynik próby kompilacji i wykonania powyższego programu przy pomocy poniższego polecenia? polecenie: java Command A B C",
+   "options": [
+    {
+     "key": "a",
+     "text": "Indeksowanie zaczyna się od 0.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Runtime Exception",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "ABC",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Błąd kompilacji.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "args[0] zawsze przechowuje nazwę uruchomionego programu.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Tablica args może być pusta (length == 0).",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Wywołanie a1[3] zgłasza ArrayIndexOutOfBoundsException, bo tablica ma długość 3.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "args[0] zawiera pierwszy argument wywołania, czyli A.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Program wypisze BC.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Brakujący argument jest zastępowany wartością null.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-tablice",
+    "java-wyjatki"
+   ],
+   "explanation": "**Dlaczego poprawne:** args = {A,B,C}, indeksy 0–2, więc `a1[3]` rzuca ArrayIndexOutOfBoundsException (RuntimeException); tablica args może być pusta (bez argumentów); args[0] to pierwszy argument.\n**Dlaczego błędne:** „ABC” nie zostanie wypisane; kod się kompiluje; args[0] nie zawiera nazwy programu (jak w C).\n**Zapamiętaj:** w Javie args[0] to pierwszy argument, nie nazwa programu.",
+   "changes": [
+    "b: false -> true, a1[3] poza zakresem — ArrayIndexOutOfBoundsException w czasie wykonania",
+    "f: false -> true, args może mieć długość 0, gdy nie podano argumentów"
+   ]
+  },
+  {
+   "id": 1256,
+   "question": "Zapisano poniższy kod źródłowy w języku Java: class C{ static String m(int i) {return \"int\";} static String m(float i) {return \"float\";} public static void main (String[] args) { long a1 = 1; double b1 = 2; System.out.print(m(a1)+\",\"+ m(b1)); }} Jaki będzie rezultat kompilacji i wykonania programu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "long może być niejawnie konwertowany na float, ale double nie pasuje do float bez rzutowania.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Kompilacja tego kodu zakończy się błędem.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Wypisze: \"int,float\".",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wypisze: \"float,float\".",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Java nie obsługuje przeciążania metod.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Typ byte jest automatycznie promowany do char.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Konwersja long → float jest dozwolona jako rozszerzająca, mimo możliwej utraty precyzji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dla wywołania m(b1) brak pasującej metody, bo double nie może być niejawnie zawężony do float ani int.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wywołanie m(a1) wybierze m(int), bo long mieści się w int.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Dla m(b1) Java wybierze m(float), zawężając double z utratą precyzji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "java-przeciazanie-konwersje"
+   ],
+   "explanation": "**Dlaczego poprawne:** `m(a1)` (long) wybiera `m(float)` przez rozszerzenie long→float, ale `m(b1)` (double) nie pasuje ani do int, ani do float bez rzutowania, więc jest błąd kompilacji.\n**Dlaczego błędne:** „int,float” i „float,float” zakładają poprawną kompilację; long nie zmieści się niejawnie w int; Java obsługuje przeciążanie; byte nie jest promowany do char.\n**Zapamiętaj:** niejawnie tylko rozszerzamy; double→float wymaga rzutowania.",
+   "changes": [
+    "b: false -> true, m(double) nie ma pasującej metody — błąd kompilacji"
+   ]
+  },
+  {
+   "id": 177,
+   "question": "Generalizacja:",
+   "options": [
+    {
+     "key": "a",
+     "text": "organizuje obiekty w hierarchię uogólniania/uszczegóławiania",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "organizuje klasy w hierarchię całości/części",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia interfejsów",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "znajduje swoje odzwierciedlenie w mechanizmie dziedziczenia implementacji",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "organizuje klasy w hierarchię uogólniania/uszczegóławiania",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "w UML jest oznaczana strzałką z pustym trójkątnym grotem, skierowaną do klasy ogólnej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wyraża relację „ma” (has-a) między klasą całości a klasą części",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest relacją między obiektem a klasą, której jest instancją",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uml-generalizacja"
+   ],
+   "explanation": "**Dlaczego poprawne:** generalizacja to hierarchia uogólniania/uszczegóławiania KLAS, odzwierciedlona w dziedziczeniu interfejsów (podtypowanie); w UML pusty trójkąt wskazuje klasę ogólną.\n**Dlaczego błędne:** dotyczy klas, nie obiektów; hierarchia całość/część to agregacja/kompozycja; dziedziczenie implementacji to mechanizm ponownego użycia, a nie odzwierciedlenie generalizacji; relacja „ma” to agregacja.\n**Zapamiętaj:** generalizacja = „jest rodzajem”, wyrażana dziedziczeniem interfejsu.",
+   "changes": []
+  },
+  {
+   "id": 178,
+   "question": "Kompozycja:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest to struktura agregacji, w której klasy części mogą być powiązane tylko z jedną klasą całości",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "ogranicza powiązanie klasy części do jednej klasy całości",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "ogranicza powiązanie obiektu części do jednego obiektu całości",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "jest silnym powiązaniem z czasem życia części ograniczonym do czasu życia całości",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "usunięcie obiektu całości powoduje usunięcie jego części",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "w UML jest oznaczana wypełnionym rombem przy klasie całości",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "obiekt części może należeć jednocześnie do wielu obiektów całości",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest słabszą formą powiązania niż zwykła agregacja",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "część może istnieć dłużej niż całość",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uml-kompozycja"
+   ],
+   "explanation": "**Dlaczego poprawne:** kompozycja ogranicza powiązanie OBIEKTU części do jednego obiektu całości, a czas życia części nie przekracza czasu życia całości (usunięcie całości usuwa części); w UML wypełniony romb.\n**Dlaczego błędne:** ograniczenie dotyczy obiektów, nie klas; część nie może należeć do wielu całości ani przeżyć całości; jest silniejsza, nie słabsza od agregacji.\n**Zapamiętaj:** kompozycja = agregacja z wyłącznością i zależnym czasem życia.",
+   "changes": []
+  },
+  {
+   "id": 179,
+   "question": "Relacja zależności wskazuje, że:",
+   "options": [
+    {
+     "key": "a",
+     "text": "klasa dostarcza implementacji usług interfejsu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "istnieje szczególne powiązanie między klasami",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "implementacja klasy może się zmienić, gdy zmieni się implementacja innej klasy",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "zmiana specyfikacji jednej usługi może mieć wpływ na poprawność działania innej",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "zmiana stanu obiektu zależy od stanu innego obiektu",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "przypadek użycia zależy od innego przypadku użycia",
+     "correct": false
+    },
+    {
+     "key": "h",
+     "text": "jest relacją kierunkową: klient zależy od dostawcy, a nie odwrotnie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "oznacza, że obiekt zawiera w swoim stanie trwałe referencje do obiektu innej klasy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "w UML jest oznaczana linią ciągłą z pustym rombem",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uml-zaleznosc-realizacja"
+   ],
+   "explanation": "**Dlaczego poprawne:** zależność oznacza, że klasa używa innej (np. jako argumentu usługi), więc zmiana implementacji lub specyfikacji usługi dostawcy może wpłynąć na klienta; jest kierunkowa.\n**Dlaczego błędne:** dostarczanie implementacji interfejsu to realizacja; „szczególne powiązanie” to asocjacja; zależność stanów obiektów to nie zależność klas; zależność przypadków użycia to include/extend; asocjacja z trwałą referencją to nie zależność.\n**Zapamiętaj:** zależność = „używa”, zmiana dostawcy może zepsuć klienta.",
+   "changes": [
+    "e: false -> true, to klasyczna definicja zależności: zmiana specyfikacji usługi dostawcy może wpłynąć na poprawność klienta (do potwierdzenia wg autora kursu)"
+   ]
+  },
+  {
+   "id": 180,
+   "question": "Relacja realizacji wskazuje, że",
+   "options": [
+    {
+     "key": "a",
+     "text": "obiekt klasy może być argumentem wywołania usługi innej klasy",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "klasa dostarcza implementacji usług interfejsu",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "klasa realizuje usługi delegowane z innej klasy",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "klasa wykorzystuje usługi interfejsu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "w UML jest oznaczana linią przerywaną z pustym trójkątnym grotem, skierowaną do interfejsu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "klasa realizująca interfejs może być używana wszędzie tam, gdzie oczekiwany jest ten interfejs",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "łączy klasę z jej klasą bazową, po której dziedziczy implementację",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "oznacza, że klasa jest częścią innej klasy",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uml-zaleznosc-realizacja"
+   ],
+   "explanation": "**Dlaczego poprawne:** realizacja to relacja klasa–interfejs: klasa dostarcza implementacji usług interfejsu (w UML linia przerywana z pustym trójkątem); klasa realizująca może być użyta tam, gdzie oczekiwany jest interfejs.\n**Dlaczego błędne:** argument wywołania i wykorzystanie usług interfejsu to zależność; delegowanie usług to nie realizacja; łączenie z klasą bazową to generalizacja; bycie częścią to kompozycja.\n**Zapamiętaj:** realizacja = „implementuje interfejs”, zależność = „używa”.",
+   "changes": []
+  },
+  {
+   "id": 181,
+   "question": "Wielokrotne użycie wspierane jest w modelu obiektowym przez:",
+   "options": [
+    {
+     "key": "a",
+     "text": "kwalifikowane powiązania",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "kompozycje z delegacją roli",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "istnienie klas obiektów",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "dziedziczenie implementacji",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "składanie obiektów z innych obiektów, którym powierza się część zadań",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "wielodziedziczenie jako jedyny mechanizm wielokrotnego użycia",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "kopiowanie kodu źródłowego klasy (copy-paste)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wielokrotne-uzycie",
+    "uml-generalizacja",
+    "uml-kompozycja"
+   ],
+   "explanation": "**Dlaczego poprawne:** wielokrotne użycie wspierają: klasy (jako wzorce obiektów), kompozycja z delegacją roli oraz dziedziczenie implementacji; także składanie obiektów z innych obiektów.\n**Dlaczego błędne:** kwalifikowane powiązania to sposób nawigacji/asocjacji, nie mechanizm reuse; wielodziedziczenie nie jest jedynym mechanizmem; copy-paste to antywzorzec; zmienne globalne nie służą do wielokrotnego użycia.\n**Zapamiętaj:** reuse = klasy + kompozycja/delegacja + dziedziczenie.",
+   "changes": []
+  },
+  {
+   "id": 196,
+   "question": "Sekcja krytyczna procesu jest to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "część procesu, w której wykorzystywany jest zasób dzielony",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "część procesu, w której wykonywana jest komunikacja z użytkownikiem",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "część procesu, w której wykonywana jest nieskończona pętla",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "część procesu, w której deklarowane są lokalne zmienne",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "w danym momencie w sekcji krytycznej dotyczącej danego zasobu może przebywać co najwyżej jeden proces",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "dostęp do niej wymaga protokołu wejścia i protokołu wyjścia",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "fragment procesu o najwyższym priorytecie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "fragment kodu wykonywany wyłącznie w jądrze systemu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sekcja-krytyczna"
+   ],
+   "explanation": "**Dlaczego poprawne:** sekcja krytyczna to fragment procesu korzystający z zasobu dzielonego; wymaga protokołu wejścia/wyjścia, a w danym momencie przebywa w niej co najwyżej jeden proces (dla danego zasobu).\n**Dlaczego błędne:** komunikacja z użytkownikiem, nieskończona pętla czy deklaracje zmiennych lokalnych nie czynią kodu krytycznym; nie chodzi o priorytet ani tryb jądra.\n**Zapamiętaj:** sekcja krytyczna = dostęp do zasobu dzielonego.",
+   "changes": []
+  },
+  {
+   "id": 197,
+   "question": "Wzajemnym wykluczaniem nazywamy problem współzawodnictwa procesów o zasób, który:",
+   "options": [
+    {
+     "key": "a",
+     "text": "musi zostać zainicjalizowany przez jeden z procesów",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jest zmienną przechowywaną w rejestrach procesora",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jednocześnie może być wykorzystywany tylko przez jeden z nich",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "może być wykorzystywany tylko przez z góry określony czas",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Rozwiązaniem może być semafor binarny lub monitor.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "dotyczy wyłącznie zasobów sprzętowych, takich jak drukarka",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zasób jest dostępny tylko procesom o wyższym priorytecie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "procesy wykonują się wtedy wyłącznie na jednym procesorze",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sekcja-krytyczna"
+   ],
+   "explanation": "**Dlaczego poprawne:** wzajemne wykluczanie to dostęp do zasobu, który w danej chwili może być używany tylko przez jeden proces; realizują je semafory binarne, monitory, blokady.\n**Dlaczego błędne:** inicjalizacja, rejestry procesora, ograniczenie czasu użycia, tylko zasoby sprzętowe, jeden procesor czy wyższy priorytet nie definiują wykluczania.\n**Zapamiętaj:** wykluczanie = co najwyżej jeden proces w sekcji krytycznej.",
+   "changes": []
+  },
+  {
+   "id": 198,
+   "question": "Komunikację nazywamy asynchroniczną jeżeli:",
+   "options": [
+    {
+     "key": "a",
+     "text": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "komunikaty są zwykle buforowane w kolejce, aż odbiorca je odbierze",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "nadawca jest wstrzymywany do czasu odebrania komunikatu przez odbiorcę",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wymaga spotkania (rendezvous) nadawcy z odbiorcą",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "musi być realizowana za pomocą pamięci dzielonej",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "komunikacja-sync-async"
+   ],
+   "explanation": "**Dlaczego poprawne:** w komunikacji asynchronicznej nadawca nie wymaga gotowości odbiorcy i po wysłaniu kontynuuje pracę; komunikaty są buforowane (kolejka, skrzynka).\n**Dlaczego błędne:** żądanie gotowości odbiorcy i synchronizacja procesów to cechy komunikacji synchronicznej; wstrzymywanie nadawcy i spotkanie (rendezvous) też; pamięć dzielona nie jest wymagana.\n**Zapamiętaj:** asynchroniczna = bez oczekiwania na odbiorcę.",
+   "changes": []
+  },
+  {
+   "id": 199,
+   "question": "Zjawisko blokady w programie współbieżnym jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zatrzymaniem pracy jednego ze współbieżnych procesów",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "przejawem braku bezpieczeństwa programu współbieżnego",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony mimo, że występuje ono dowolną liczbę razy",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Warunkiem koniecznym blokady jest cykliczne oczekiwanie procesów na zasoby.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Blokada może wystąpić, gdy dwa procesy zajmują po jednym zasobie i każdy czeka na zasób drugiego.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Blokada występuje wyłącznie w systemach wieloprocesorowych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Użycie semaforów binarnych wyklucza wystąpienie blokady.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "deadlock-zaglodzenie"
+   ],
+   "explanation": "**Dlaczego poprawne:** blokada (deadlock) to stan, w którym każdy proces czeka na działanie innego (cykl oczekiwania); jest brakiem bezpieczeństwa (stan niepożądany), a warunkiem koniecznym jest cykliczne oczekiwanie.\n**Dlaczego błędne:** samo zatrzymanie jednego procesu to nie blokada; proces nigdy niewznawiany mimo zdarzeń to zagłodzenie; blokada nie jest ograniczona do wieloprocesorów; semafory binarne jej nie wykluczają.\n**Zapamiętaj:** deadlock = cykl wzajemnego oczekiwania.",
+   "changes": []
+  },
+  {
+   "id": 200,
+   "question": "Zjawisko zagłodzenia w programie współbieżnym jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "stanem, w którym każdy proces oczekuje na działanie innego procesu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "przejawem braku bezpieczeństwa programu współbieżnego",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "stanem, w którym proces czekający na dane zdarzenie nie zostaje wznowiony, mimo że występuje ono dowolną liczbę razy",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "nienaturalnym przerwaniem pracy jednego ze współbieżnych procesów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "sytuacją, kiedy nie ma gwarancji, że określone zdarzenie wykona się w skończonym czasie",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "pojawieniem się cyklu w relacji Lamporta \"happen-before\"",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zagłodzenie jest naruszeniem własności żywotności (liveness).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Może wynikać z niesprawiedliwego przydziału zasobu, gdy proces jest stale pomijany.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zagłodzenie występuje tylko wtedy, gdy zachodzi cykl oczekiwania.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Semafor z kolejką FIFO nie zapobiega zagłodzeniu procesów oczekujących.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "deadlock-zaglodzenie"
+   ],
+   "explanation": "**Dlaczego poprawne:** zagłodzenie to brak gwarancji, że oczekiwany proces kiedykolwiek się wykona, mimo że zdarzenie występuje; to naruszenie żywotności, często przez niesprawiedliwy przydział.\n**Dlaczego błędne:** wzajemne oczekiwanie to blokada; brak bezpieczeństwa też; zagłodzenie nie jest awarią procesu; nie wymaga cyklu; semafor z kolejką FIFO zapobiega zagłodzeniu.\n**Zapamiętaj:** zagłodzenie = liveness, blokada = cykl oczekiwania.",
+   "changes": []
+  },
+  {
+   "id": 201,
+   "question": "Komunikację nazywamy synchroniczną jeżeli:",
+   "options": [
+    {
+     "key": "a",
+     "text": "nadawca żąda, by odbiorca był gotów do odebrania komunikatu",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nadawca nie żąda, by odbiorca był gotów do odebrania komunikatu",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "przy komunikacji mamy do czynienia z synchronizacją procesów",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "nadawca może wysłać wiadomość i kontynuować pracę bez wstrzymania",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "nadawca może zostać wstrzymany do czasu, aż odbiorca odbierze komunikat",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "wymaga buforowania nieograniczonej liczby komunikatów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "nie wymaga, by odbiorca był aktywny w momencie wysyłania",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "komunikacja-sync-async"
+   ],
+   "explanation": "**Dlaczego poprawne:** w komunikacji synchronicznej nadawca żąda gotowości odbiorcy, co oznacza synchronizację procesów (spotkanie, rendezvous).\n**Dlaczego błędne:** brak żądania gotowości i kontynuowanie pracy bez wstrzymania to komunikacja asynchroniczna; synchroniczna nie wymaga nieograniczonego buforowania ani niezależności od odbiorcy.\n**Zapamiętaj:** synchroniczna = wzajemne czekanie na gotowość.",
+   "changes": []
+  },
+  {
+   "id": 80,
+   "question": "Jaki typ danych w Haskellu będzie miało następujące wyrażenie: r x = x:r x",
+   "options": [
+    {
+     "key": "a",
+     "text": "r :: [a]",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "r :: Integer a => a -> [a]",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "r :: a -> [a]",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Wyrażenie r 1 reprezentuje nieskończoną listę jedynek dzięki leniwej ewaluacji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "Wartość take 3 (r 'a') to \"aaa\".",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "r :: [a] -> Int",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "r :: (a -> a) -> [a]",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wyrażenie head (r 1) nigdy się nie kończy, bo rekurencja nie ma warunku bazowego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "haskell-typy",
+    "leniwa-ewaluacja"
+   ],
+   "explanation": "**Dlaczego poprawne:** `r x = x : r x` przyjmuje element dowolnego typu i zwraca listę, więc `r :: a -> [a]`; dzięki leniwej ewaluacji `r 1` to nieskończona lista jedynek i `take 3 (r 'a')` daje \"aaa\".\n**Dlaczego błędne:** `[a]` pomija argument; `Integer a =>` jest niepoprawne (Integer to typ, nie klasa); `[a] -> a` odwraca typy; `head (r 1)` kończy się (wynik 1).\n**Zapamiętaj:** typ wynika z użycia: element → lista.",
+   "changes": []
+  },
+  {
+   "id": 81,
+   "question": "Jak wygląda poprawna wartość w Haskellu dla typu: data Tree a = L a | N (Tree a) a (Tree a)",
+   "options": [
+    {
+     "key": "a",
+     "text": "Tree 5 Nil Nil",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "N (L 4) 5 (L '4') (mieszane typy: liczba i znak)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "N (L 4) 5 (L 4)",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "N (L '4') '5' (L '4') (drzewo znaków)",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "L 'a'",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "N (L 'x') 'y' (N (L 'z') 'w' (L 'v'))",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "N (L 1) 2",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "L 1 2",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "haskell-typy"
+   ],
+   "explanation": "**Dlaczego poprawne:** `N (L 4) 5 (L 4)` to drzewo liczb, a `N (L '4') '5' (L '4')` drzewo znaków, bo wszystkie elementy mają ten sam typ a; poprawne są też `L 'a'` i zagnieżdżone `N`.\n**Dlaczego błędne:** `Tree` to konstruktor typu, nie wartości; `Nil` nie istnieje; mieszanie liczb i znaków łamie jednolity typ a; `N` wymaga trzech argumentów; `L` jednego.\n**Zapamiętaj:** parametr a musi być jednakowy w całym drzewie.",
+   "changes": [
+    "b, d: dopisano oznaczenie (drzewo znaków / mieszane typy Tree Num i Tree Char), aby tekst różnił się od opcji c po normalizacji apostrofów; flaga bez zmian"
+   ]
+  },
+  {
+   "id": 82,
+   "question": "Haskell jest językiem opartym o paradygmat:",
+   "options": [
+    {
+     "key": "a",
+     "text": "funkcyjny",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "strukturalny",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "imperatywny",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "obiektowy",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "deklaratywny",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "czysto funkcyjny — efekty uboczne są wyodrębnione (np. w monadach)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "logiczny (oparty na klauzulach Horna)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "proceduralny",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "programowanie-funkcyjne"
+   ],
+   "explanation": "**Dlaczego poprawne:** Haskell jest czysto funkcyjny i deklaratywny (funkcje bez efektów ubocznych, leniwa ewaluacja).\n**Dlaczego błędne:** nie jest imperatywny, strukturalny (w sensie instrukcji sterujących) ani obiektowy; nie jest logiczny (to Prolog); nie jest proceduralny.\n**Zapamiętaj:** Haskell = funkcyjny (deklaratywny).",
+   "changes": []
+  },
+  {
+   "id": 83,
+   "question": "Zaznacz prawdziwe zdania odnoszące się do programowania funkcyjnego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "w programowaniu funkcyjnym koncepcja funkcji jest taka, jak w algebrze",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "programowanie funkcyjne opiera się na rachunku lambda",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "dobrym nawykiem w programowaniu funkcyjnym jest, aby zmienne były niemutowalne",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "w programowaniu funkcyjnym możemy korzystać jedynie z wbudowanych typów danych",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "funkcyjny styl programowania można uprawiać w ograniczonym zakresie w językach imperatywnych jak C albo JavaScript",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "funkcyjnymi językami programowania są: Erlang, Haskell, C#, Perl",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "można używać funkcyjnego stylu programowania w języku JavaScript",
+     "correct": true
+    },
+    {
+     "key": "h",
+     "text": "niektóre języki imperatywne zostały wyposażone w konstrukcje z języków funkcyjnych",
+     "correct": true
+    },
+    {
+     "key": "i",
+     "text": "funkcje mogą być przekazywane jako argumenty i zwracane jako wyniki (funkcje pierwszej klasy)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "czysta funkcja dla tych samych argumentów zwraca ten sam wynik i nie ma efektów ubocznych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "podstawowym mechanizmem iteracji są pętle for ze zmienną licznikową",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "l",
+     "text": "wymaga zmiennych globalnych do przechowywania stanu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "programowanie-funkcyjne"
+   ],
+   "explanation": "**Dlaczego poprawne:** funkcja jak w algebrze (bez stanu), oparcie na rachunku lambda, niemutowalność jako dobry nawyk, styl funkcyjny w JavaScript i częściowo w C, języki imperatywne przejmują konstrukcje funkcyjne (lambdy, map), funkcje pierwszej klasy i czystość.\n**Dlaczego błędne:** można definiować własne typy; C# i Perl nie są funkcyjne; pętle ze zmiennym licznikiem to styl imperatywny; stan nie wymaga zmiennych globalnych.\n**Zapamiętaj:** funkcyjny styl to czyste funkcje i niemutowalność.",
+   "changes": []
+  },
+  {
+   "id": 84,
+   "question": "Funkcje wyższego rzędu w programowaniu funkcyjnym to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "funkcje zwracające inne funkcje jako rezultat obliczeń",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "funkcje, które przyjmują inne funkcje jako parametry",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "potoczne określenie funkcji trudnych w implementacji",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "przykładami są map, filter i foldr",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "funkcje wywoływane rekurencyjnie na więcej niż jednym poziomie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "funkcje o wyższym priorytecie wywołania niż pozostałe",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "funkcje przyjmujące więcej niż trzy argumenty",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "programowanie-funkcyjne"
+   ],
+   "explanation": "**Dlaczego poprawne:** funkcja wyższego rzędu przyjmuje funkcję jako argument lub zwraca funkcję (np. map, filter, foldr).\n**Dlaczego błędne:** to nie potoczna nazwa trudnych funkcji; nie chodzi o rekurencję, liczbę argumentów ani priorytet wywołania.\n**Zapamiętaj:** wyższy rząd = funkcje jako dane.",
+   "changes": []
+  },
+  {
+   "id": 85,
+   "question": "Jaki mechanizm w językach funkcyjnych pozwala na wykonanie operacji na zbiorze danych?",
+   "options": [
+    {
+     "key": "a",
+     "text": "iteracja",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "rekurencja",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "funkcje specyficzne dla języka",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "warunkowy skok do etykiety",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "pętla",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "funkcje wyższego rzędu, takie jak map, filter i fold",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "rekurencja ogonowa, którą kompilator może zoptymalizować do postaci iteracji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "modyfikacja zmiennej globalnej w każdym kroku",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wielowątkowe przetwarzanie z jawnymi blokadami",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "programowanie-funkcyjne"
+   ],
+   "explanation": "**Dlaczego poprawne:** w językach funkcyjnych operacje na zbiorach danych realizuje rekurencja oraz gotowe funkcje (map, filter, fold); rekurencja ogonowa może być zoptymalizowana do iteracji.\n**Dlaczego błędne:** iteracja, pętle i skok do etykiety to konstrukcje imperatywne; modyfikacja zmiennej globalnej i blokady nie są mechanizmem funkcyjnym.\n**Zapamiętaj:** funkcyjnie: rekurencja i funkcje wyższego rzędu zamiast pętli.",
+   "changes": []
+  }
+ ],
+ "glossary": [
+  {
+   "id": "java-referencje-i-rownosc",
+   "term": "Referencje, równość i przekazywanie argumentów (Java)",
+   "topic": "java",
+   "short": "Zmienne obiektowe przechowują referencje; == porównuje referencje, equals() zawartość, a argumenty są zawsze przekazywane przez wartość.",
+   "details": "**Jak to działa:** zmienna typu obiektowego zawiera referencję do obiektu na stercie. `new` tworzy obiekt; `b = a` kopiuje tylko referencję (dwie zmienne, jeden obiekt). Operator `==` porównuje referencje (tożsamość), `equals()` porównuje zawartość (String, Objects.equals), `compareTo()==0` też oznacza równość zawartości. `StringBuffer` nie nadpisuje equals().\n\nPrzekazywanie argumentów: zawsze przez wartość. Dla prymitywów kopiowana jest wartość, dla obiektów kopia referencji — zmiana pól obiektu widoczna jest u wywołującego, ale przypisanie nowej referencji do parametru już nie.\n\n**Przykład:** `StringBuffer s1=new StringBuffer(\"abc\"), s2=s1, s3=new StringBuffer(\"abc\");` daje 2 obiekty; `s1==s2` true, `s1==s3` false.\n\n**Na egzaminie uważaj na:** liczbę obiektów liczymy po `new`; `==` na String nie porównuje treści; Java nie ma `ref` ani pass-by-reference; hashCode nie dowodzi równości.",
+   "related": [
+    "java-instanceof"
+   ]
+  },
+  {
+   "id": "java-instanceof",
+   "term": "Sprawdzanie typu: instanceof i Class (Java)",
+   "topic": "java",
+   "short": "Zgodność typu obiektu sprawdza się operatorem instanceof lub metodami klasy Class (isInstance, isAssignableFrom).",
+   "details": "**Jak to działa:** `x instanceof T` zwraca true, gdy x nie jest null i jego typ dynamiczny jest T lub podtypem T. `T.class.isInstance(x)` robi to samo dynamicznie. `T.class.isAssignableFrom(x.getClass())` sprawdza, czy klasę x można przypisać do T. `x.getClass() == T.class` sprawdza dokładny typ (bez podklas).\n\n**Przykład:** dla `Object o = \"tekst\"`: `o instanceof String` true, `o instanceof Integer` false, `String.class.isInstance(o)` true.\n\nNiepoprawne konstrukcje: `x instanceof T.class` (po instanceof nazwa typu), nieistniejące metody typu `dynamicCastTo` czy `isInstanceOf`.\n\n**Na egzaminie uważaj na:** null daje false; instanceof uwzględnia dziedziczenie; nazwy metod muszą istnieć w API; getClass()== jest ścisłym porównaniem.",
+   "related": [
+    "java-dziedziczenie-interfejsy"
+   ]
+  },
+  {
+   "id": "java-tablice",
+   "term": "Tablice w Javie (arrays)",
+   "topic": "java",
+   "short": "Tablica to obiekt o stałym rozmiarze ustalanym przy tworzeniu przez new; length jest polem, a elementy mają wartości domyślne.",
+   "details": "**Jak to działa:** `int[] a = new int[5];` lub `new int[]{3,2,1,0}`. Rozmiar podaje się w wyrażeniu `new`, nie w deklaracji (`int a[5];` jest błędem) i nie zmienia się po utworzeniu. Długość to pole `a.length` (nie metoda). Elementy dostają wartości domyślne (0, false, null). `int[] a1[]` deklaruje tablicę int[][]. Indeksy 0..length-1; wyjście poza zakres daje ArrayIndexOutOfBoundsException. W `main(String[] args)` args to tablica argumentów wiersza poleceń (args[0] to pierwszy argument, tablica może być pusta).\n\n**Przykład:** `for (int x : tab) System.out.println(x);` — w for-each zmienna jest elementem, nie indeksem, więc `tab[x]` byłoby błędem logicznym.\n\n**Na egzaminie uważaj na:** `length` vs `length()`; brak dynamicznego rozmiaru; `println(tab)` wypisuje referencję; `i <= length` przekracza zakres.",
+   "related": [
+    "java-wyjatki"
+   ]
+  },
+  {
+   "id": "java-dziedziczenie-interfejsy",
+   "term": "Dziedziczenie, interfejsy i polimorfizm (Java)",
+   "topic": "java",
+   "short": "Klasa dziedziczy po jednej klasie (extends) i może implementować wiele interfejsów; metody są wiązane dynamicznie.",
+   "details": "**Jak to działa:** `class D extends A implements I, J` — dokładnie jedna klasa bazowa (domyślnie Object), wiele interfejsów. Klasa `final` nie może mieć potomków. Konstruktory nie są dziedziczone. Metody klasy nadpisywane są wiązane dynamicznie (wg rzeczywistego typu obiektu), niezależnie od typu referencji.\n\nInterfejs: metody domyślnie `public abstract`; od Javy 8 mogą być `default` i `static`, od Javy 9 `private` (z ciałem); pola są `public static final`; metody nie mogą być `protected` ani `final`. Typy zagnieżdżone w interfejsie są domyślnie `public static`. Interfejs rozszerza interfejsy, nie klasy.\n\n**Przykład:** `interface I { void f(); protected void g(); }` — g jest błędem.\n\n**Na egzaminie uważaj na:** brak wielodziedziczenia klas; `extends A, B` jest niepoprawne; klasa anonimowa nie ma konstruktora; wybór metody zależy od typu obiektu w runtime.",
+   "related": [
+    "java-klasy-zagniezdzone"
+   ]
+  },
+  {
+   "id": "java-garbage-collector",
+   "term": "Odśmiecanie pamięci (garbage collection)",
+   "topic": "java",
+   "short": "Pamięć obiektów zwalnia automatycznie odśmiecacz JVM, gdy obiekty stają się nieosiągalne; programista nie usuwa ich jawnie.",
+   "details": "**Jak to działa:** obiekty leżą na stercie. GC okresowo wyznacza obiekty osiągalne z korzeni (stos, zmienne statyczne) i zwalnia pozostałe. Kiedy to nastąpi, decyduje JVM. `System.gc()` jest tylko sugestią i nie przyjmuje żadnych argumentów. Nie ma operatora `delete`. Przypisanie `null` usuwa referencję, ale nie zwalnia pamięci natychmiast; wyjście z bloku też nie oznacza natychmiastowego zwolnienia.\n\n**Przykład:** `Object o = new Object(); o = null;` — obiekt staje się kandydatem do usunięcia.\n\n**Na egzaminie uważaj na:** brak gwarancji czasu; brak ręcznego zwalniania; finalize() jest przestarzałe i nie należy na nim polegać; cykle referencji nie przeszkadzają GC (liczy się osiągalność).",
+   "related": [
+    "java-referencje-i-rownosc"
+   ]
+  },
+  {
+   "id": "java-klasy-zagniezdzone",
+   "term": "Klasy zagnieżdżone, wewnętrzne i anonimowe (Java)",
+   "topic": "java",
+   "short": "Klasy zdefiniowane w innych klasach: statyczne zagnieżdżone, wewnętrzne (powiązane z instancją) i anonimowe.",
+   "details": "**Jak to działa:** klasa `static` zagnieżdżona nie potrzebuje instancji klasy zewnętrznej (`new Outer.Nested()`), nie ma `Outer.this`, może dziedziczyć po klasie zewnętrznej. Klasa wewnętrzna (bez static) jest związana z instancją zewnętrzną, ma własny stan i dostęp do wszystkich, także prywatnych, składowych zewnętrznej oraz do `Outer.this`; do utworzenia potrzebuje obiektu zewnętrznego. Klasa zagnieżdżona w interfejsie jest domyślnie public static. Klasa anonimowa rozszerza klasę albo implementuje interfejs, nie ma konstruktora (tylko blok inicjalizujący), a wywołanie jej metod jest wiązane dynamicznie. Pola statyczne mają wartości domyślne (0).\n\n**Przykład:** `new c1(){ public void m1(){...} };` — uwaga na średnik kończący instrukcję.\n\n**Na egzaminie uważaj na:** static nested nie ma Outer.this; inner nie musi dziedziczyć po zewnętrznej; dostęp do prywatnych składowych jest dozwolony.",
+   "related": [
+    "java-dziedziczenie-interfejsy",
+    "java-zmienne-i-modyfikatory"
+   ]
+  },
+  {
+   "id": "java-watki",
+   "term": "Wątki w Javie (Thread, Runnable)",
+   "topic": "java",
+   "short": "Wątek tworzy się przez dziedziczenie po Thread lub implementację Runnable i uruchamia metodą start(), która wywołuje run() w nowym wątku.",
+   "details": "**Jak to działa:** `start()` tworzy nowy wątek wykonawczy i wywołuje w nim `run()`. Bezpośrednie `run()` wykona kod w bieżącym wątku. Drugie `start()` daje IllegalThreadStateException. Statyczne metody Thread: `sleep`, `yield`, `currentThread`, `interrupted`, `holdsLock`, `onSpinWait`. Instancyjne: `start`, `run`, `join`, `interrupt`, `isInterrupted`, `setPriority`; `wait/notify` pochodzą z Object. Priorytet to liczba 1–10 (domyślnie 5); wartość spoza zakresu powoduje IllegalArgumentException. Priorytet nie gwarantuje kolejności wykonania.\n\n**Przykład:** `a.start(); print(a.i); sleep(1000); print(a.i);` zwykle wypisze 01, ale wynik nie jest gwarantowany.\n\n**Na egzaminie uważaj na:** run() nie tworzy wątku; wątek startuje raz; -1 i 0 są niepoprawnymi priorytetami; wynik bez synchronizacji jest niedeterministyczny.",
+   "related": [
+    "java-wyjatki"
+   ]
+  },
+  {
+   "id": "java-wyjatki",
+   "term": "Wyjątki: try, catch, finally (Java)",
+   "topic": "java",
+   "short": "Mechanizm obsługi błędów: try z blokami catch i finally; finally wykonuje się niezależnie od wystąpienia wyjątku.",
+   "details": "**Jak to działa:** kod ryzykowny w `try`; pasujący `catch` obsługuje wyjątek; `finally` wykonuje się zawsze (także bez wyjątku), poza System.exit() i awarią JVM. try może mieć tylko finally. catch dla podklasy nie może stać po catch dla nadklasy (błąd kompilacji). Wyjątki niekontrolowane (RuntimeException, w tym NullPointerException, IllegalArgumentException, ArrayIndexOutOfBoundsException) nie wymagają deklaracji; kontrolowane trzeba obsłużyć lub zadeklarować `throws`. finally służy do zwalniania zasobów.\n\n**Przykład:** zagnieżdżone try z catch(Exception) i catch(NullPointerException) kompiluje się, a brak wyjątku daje tylko wypisanie z finally.\n\n**Na egzaminie uważaj na:** kolejność catch; finally nie jest opcjonalnym „po catch” wymuszającym catch; błąd wykonania to wyjątek, nie błąd kompilacji.",
+   "related": [
+    "java-tablice"
+   ]
+  },
+  {
+   "id": "java-switch",
+   "term": "Instrukcja switch i fall-through (Java)",
+   "topic": "java",
+   "short": "Switch wybiera etykietę case; bez break wykonywane są także kolejne etykiety.",
+   "details": "**Jak to działa:** wartość wyrażenia jest porównywana z etykietami case. Po dopasowaniu wykonują się instrukcje tej etykiety i wszystkich następnych, aż do `break` lub końca switch (fall-through). `default` obsługuje brak dopasowania i nie jest obowiązkowy. Obsługiwane typy: byte, short, char, int (i opakowania), enum oraz String (od Javy 7); long, float, double i boolean nie są obsługiwane.\n\n**Przykład:** switch(1) z `case 1: print(\"one\"); case 2: print(\"two\"); case 3: print(\"three\");` wypisze one, two, three.\n\n**Na egzaminie uważaj na:** brak break = przechodzenie dalej; switch na String jest dozwolony od Javy 7; long nie jest obsługiwany; break kończy tylko switch.",
+   "related": [
+    "java-zmienne-i-modyfikatory"
+   ]
+  },
+  {
+   "id": "java-zmienne-i-modyfikatory",
+   "term": "Zmienne lokalne, pola i modyfikatory (Java)",
+   "topic": "java",
+   "short": "Pola klasy mają modyfikatory dostępu i wartości domyślne, a zmienne lokalne nie mogą mieć modyfikatorów dostępu.",
+   "details": "**Jak to działa:** pola klasy mogą być public/protected/private/package i static/final; dostają wartości domyślne (0, false, null). Zmienne lokalne (w metodach i blokach) nie mogą mieć public/private/protected (błąd kompilacji), mogą być `final`, muszą być zainicjalizowane przed użyciem i są widoczne tylko w swoim bloku. Pole statyczne istnieje w jednym egzemplarzu na klasę i jest dostępne bez obiektu (`C1.C2.i1`).\n\n**Przykład:** `int i; private int a = 1;` wewnątrz main — druga linia jest błędem kompilacji.\n\n**Na egzaminie uważaj na:** lokalne nie mają wartości domyślnych; final jest dozwolone; błąd kompilacji zamiast wyniku programu; zmienna lokalna przesłania pole o tej samej nazwie.",
+   "related": [
+    "java-klasy-zagniezdzone"
+   ]
+  },
+  {
+   "id": "java-przeciazanie-konwersje",
+   "term": "Przeciążanie metod i konwersje typów (Java)",
+   "topic": "java",
+   "short": "Przeciążona metoda wybierana jest w czasie kompilacji według typów argumentów i niejawnych konwersji rozszerzających.",
+   "details": "**Jak to działa:** kompilator wybiera metodę o najbardziej pasujących typach parametrów. Niejawne konwersje rozszerzające: byte→short→int→long→float→double oraz char→int. Zawężające (double→float, long→int) wymagają rzutowania. byte nie jest niejawnie konwertowany do char. long→float jest dozwolone (możliwa utrata precyzji). Jeśli żadna metoda nie pasuje bez rzutowania, jest błąd kompilacji. Przeciążanie różni się od nadpisywania (to drugie działa w runtime).\n\n**Przykład:** przy m(int), m(float): `m(longVar)` → float; `m(doubleVar)` → błąd kompilacji.\n\n**Na egzaminie uważaj na:** przeciążanie jest obsługiwane; wybór wg typu deklarowanego argumentów; double nie pasuje do float; long nie mieści się niejawnie w int.",
+   "related": [
+    "java-dziedziczenie-interfejsy"
+   ]
+  },
+  {
+   "id": "uml-generalizacja",
+   "term": "Generalizacja i dziedziczenie interfejsu (UML)",
+   "topic": "oop_design",
+   "short": "Generalizacja organizuje klasy w hierarchię uogólniania i uszczegóławiania, odzwierciedloną w dziedziczeniu interfejsów.",
+   "details": "**Jak to działa:** klasa szczegółowa (podklasa) jest rodzajem klasy ogólnej (nadklasy) — relacja „jest rodzajem” (is-a). Podklasa spełnia interfejs (specyfikację usług) nadklasy, dzięki czemu można ją podstawić w miejsce nadklasy (podtypowanie, polimorfizm). W UML: linia z pustym trójkątnym grotem wskazującym klasę ogólną. Dotyczy KLAS, nie obiektów. Dziedziczenie implementacji jest osobnym mechanizmem ponownego użycia kodu i nie jest tym samym co generalizacja.\n\n**Przykład:** Kwadrat uogólnia się do Prostokąta, a ten do Figury.\n\n**Na egzaminie uważaj na:** hierarchia całość/część to agregacja lub kompozycja; generalizacja to nie relacja „ma”; łączy klasy, nie obiekt z klasą (to instancja).",
+   "related": [
+    "wielokrotne-uzycie",
+    "uml-kompozycja"
+   ]
+  },
+  {
+   "id": "uml-kompozycja",
+   "term": "Agregacja i kompozycja (UML)",
+   "topic": "oop_design",
+   "short": "Agregacja to relacja całość–część; kompozycja jest jej silną formą, w której część należy do jednej całości i ginie razem z nią.",
+   "details": "**Jak to działa:** w agregacji obiekt całości zawiera lub grupuje obiekty części, które mogą istnieć samodzielnie i bywają współdzielone. Kompozycja ogranicza powiązanie OBIEKTU części do jednego obiektu całości, a czas życia części nie przekracza czasu życia całości (usunięcie całości usuwa części). Notacja UML: pusty romb (agregacja) i wypełniony romb (kompozycja) przy klasie całości. Kompozycja jest silniejsza niż agregacja.\n\n**Przykład:** Dom–Pokój (kompozycja), Drużyna–Zawodnik (agregacja).\n\n**Na egzaminie uważaj na:** ograniczenie dotyczy obiektów, nie klas; część nie może należeć do wielu całości ani przeżyć całość w kompozycji; nie mylić z generalizacją.",
+   "related": [
+    "uml-generalizacja",
+    "wielokrotne-uzycie"
+   ]
+  },
+  {
+   "id": "uml-zaleznosc-realizacja",
+   "term": "Zależność i realizacja (UML)",
+   "topic": "oop_design",
+   "short": "Zależność oznacza, że klasa korzysta z innej; realizacja oznacza, że klasa implementuje usługi interfejsu.",
+   "details": "**Jak to działa:** zależność (linia przerywana ze strzałką) to najsłabsza relacja: klient używa dostawcy, np. jako argumentu usługi, dlatego zmiana specyfikacji lub implementacji dostawcy może wpłynąć na poprawność klienta; jest kierunkowa. Realizacja (linia przerywana z pustym trójkątem) łączy klasę z interfejsem — klasa dostarcza implementacji usług interfejsu i może być używana tam, gdzie oczekiwany jest interfejs. Asocjacja to trwałe powiązanie; zależność przypadków użycia to include/extend.\n\n**Przykład:** Klasa Raport zależy od Drukarka (argument metody); Drukarka realizuje interfejs Urządzenie.\n\n**Na egzaminie uważaj na:** „używa interfejsu” to zależność, „implementuje interfejs” to realizacja; zależność to nie asocjacja i nie generalizacja.",
+   "related": [
+    "uml-generalizacja",
+    "uml-kompozycja"
+   ]
+  },
+  {
+   "id": "wielokrotne-uzycie",
+   "term": "Wielokrotne użycie w modelu obiektowym (reuse)",
+   "topic": "oop_design",
+   "short": "Wielokrotne użycie kodu i projektu wspierają klasy, kompozycja z delegacją oraz dziedziczenie implementacji.",
+   "details": "**Jak to działa:** klasa jest wzorcem, z którego powstaje wiele obiektów. Kompozycja z delegacją roli: obiekt składa się z innych obiektów i deleguje im część zadań. Dziedziczenie implementacji pozwala podklasie przejąć kod nadklasy. Polimorfizm i interfejsy umożliwiają wymianę implementacji bez zmiany klienta. Kwalifikowane powiązania to sposób wyszukiwania powiązanych obiektów, a nie mechanizm reuse.\n\n**Przykład:** Samochód składa się z Silnika i deleguje mu przyspieszanie.\n\n**Na egzaminie uważaj na:** wielodziedziczenie nie jest jedynym mechanizmem; copy-paste to antywzorzec; często preferuje się kompozycję nad dziedziczeniem implementacji.",
+   "related": [
+    "uml-kompozycja",
+    "uml-generalizacja"
+   ]
+  },
+  {
+   "id": "sekcja-krytyczna",
+   "term": "Sekcja krytyczna i wzajemne wykluczanie (mutual exclusion)",
+   "topic": "concurrent_programming",
+   "short": "Sekcja krytyczna to fragment procesu korzystający z zasobu dzielonego; wzajemne wykluczanie gwarantuje, że przebywa w niej co najwyżej jeden proces.",
+   "details": "**Jak to działa:** procesy współdzielą zasób, którego jednoczesne użycie prowadzi do błędów (wyścig). Fragment kodu z dostępem do zasobu to sekcja krytyczna. Struktura: protokół wejścia → sekcja krytyczna → protokół wyjścia → reszta. Wzajemne wykluczanie oznacza, że w danej chwili co najwyżej jeden proces jest w sekcji krytycznej dotyczącej zasobu. Realizacje: semafory binarne, monitory, blokady (lock), algorytmy Petersona i piekarni. Poprawne rozwiązanie zapewnia wykluczanie, brak blokady i brak zagłodzenia.\n\n**Przykład:** dwa procesy zwiększające ten sam licznik — operacja czytaj–zmień–zapisz musi być w sekcji krytycznej.\n\n**Na egzaminie uważaj na:** sekcja krytyczna nie zależy od komunikacji z użytkownikiem ani pętli nieskończonej; dotyczy zasobu dzielonego, nie priorytetu ani trybu jądra.",
+   "related": [
+    "deadlock-zaglodzenie"
+   ]
+  },
+  {
+   "id": "komunikacja-sync-async",
+   "term": "Komunikacja synchroniczna i asynchroniczna",
+   "topic": "concurrent_programming",
+   "short": "W komunikacji synchronicznej nadawca wymaga gotowości odbiorcy, w asynchronicznej wysyła bez czekania.",
+   "details": "**Jak to działa:** synchroniczna: nadawca i odbiorca muszą być jednocześnie gotowi (spotkanie, rendezvous); nadawca może być wstrzymany do odebrania komunikatu, co oznacza synchronizację procesów. Asynchroniczna: nadawca nie żąda gotowości odbiorcy, wysyła komunikat i kontynuuje pracę; komunikaty są buforowane w kolejce lub skrzynce, aż odbiorca je odbierze. Synchroniczna jest prostsza do analizy, asynchroniczna daje większą współbieżność, ale wymaga buforów.\n\n**Przykład:** kanał w CSP/Ada (rendezvous) vs kolejka komunikatów lub e-mail.\n\n**Na egzaminie uważaj na:** „nadawca żąda gotowości odbiorcy” = synchroniczna; „nadawca kontynuuje bez wstrzymania” = asynchroniczna; to nie zależy od pamięci dzielonej.",
+   "related": [
+    "sekcja-krytyczna"
+   ]
+  },
+  {
+   "id": "deadlock-zaglodzenie",
+   "term": "Blokada i zagłodzenie (deadlock, starvation)",
+   "topic": "concurrent_programming",
+   "short": "Blokada to cykliczne wzajemne oczekiwanie procesów; zagłodzenie to sytuacja, w której proces nie jest wznawiany mimo występowania zdarzenia.",
+   "details": "**Jak to działa:** blokada (deadlock): każdy proces czeka na działanie innego, więc nikt nie może kontynuować; wymaga cyklu oczekiwania (warunki Coffmana: wzajemne wykluczanie, trzymaj i czekaj, brak wywłaszczania, cykl). Jest brakiem bezpieczeństwa (osiągnięto stan niepożądany). Zagłodzenie (starvation): proces czekający na zdarzenie nie zostaje wznowiony, mimo że zdarzenie występuje dowolną liczbę razy, więc brak gwarancji wykonania w skończonym czasie; to naruszenie żywotności (liveness). Zapobiega mu sprawiedliwość, np. semafor silny z kolejką FIFO.\n\n**Przykład:** P1 trzyma A i chce B, P2 trzyma B i chce A → blokada; proces o niskim priorytecie stale pomijany → zagłodzenie.\n\n**Na egzaminie uważaj na:** nie mylić definicji obu zjawisk; zagłodzenie nie wymaga cyklu; blokada nie ogranicza się do wieloprocesorów.",
+   "related": [
+    "sekcja-krytyczna"
+   ]
+  },
+  {
+   "id": "haskell-typy",
+   "term": "Typy w Haskellu i typy algebraiczne",
+   "topic": "functional_programming",
+   "short": "Haskell ma silne statyczne typowanie z inferencją typów oraz definiowanie własnych typów algebraicznych (data).",
+   "details": "**Jak to działa:** kompilator wnioskuje najogólniejszy typ funkcji: `r x = x : r x` ma typ `a -> [a]` (element dowolnego typu → lista). Typ zmiennej `a` jest parametrem typu; ograniczenia zapisuje się klasami typów (`Num a =>`), a `Integer` to typ, nie klasa. `data Tree a = L a | N (Tree a) a (Tree a)` definiuje konstruktory wartości L (1 argument) i N (3 argumenty); wszystkie elementy drzewa muszą mieć ten sam typ a.\n\n**Przykład:** `N (L 4) 5 (L 4)` :: Tree Integer; `N (L '4') '5' (L '4')` :: Tree Char; `N (L 4) 5 (L '4')` jest błędem typów.\n\n**Na egzaminie uważaj na:** `Tree` to konstruktor typu, nie wartości; `Nil` nie istnieje w tym typie; konstruktor musi dostać wszystkie argumenty.",
+   "related": [
+    "leniwa-ewaluacja",
+    "programowanie-funkcyjne"
+   ]
+  },
+  {
+   "id": "leniwa-ewaluacja",
+   "term": "Leniwa ewaluacja (lazy evaluation)",
+   "topic": "functional_programming",
+   "short": "Wyrażenie jest obliczane dopiero wtedy, gdy jego wartość jest potrzebna, co pozwala definiować nieskończone struktury.",
+   "details": "**Jak to działa:** Haskell odracza obliczenie argumentu do chwili użycia (call-by-need). Definicja `r x = x : r x` tworzy nieskończoną listę: obliczana jest tylko potrzebna część. `head (r 1)` daje 1, `take 3 (r 'a')` daje \"aaa\", a pełne wypisanie `r 1` nigdy się nie kończy. Wartości są współdzielone i liczone najwyżej raz.\n\n**Przykład:** `take 5 [1..]` zwraca [1,2,3,4,5], choć [1..] jest nieskończona.\n\n**Na egzaminie uważaj na:** rekurencja bez przypadku bazowego nie zawsze zapętla się w językach leniwych; skończony prefiks jest osiągalny; całkowite wyliczenie nieskończonej listy nigdy się nie kończy.",
+   "related": [
+    "haskell-typy"
+   ]
+  },
+  {
+   "id": "programowanie-funkcyjne",
+   "term": "Programowanie funkcyjne (functional programming)",
+   "topic": "functional_programming",
+   "short": "Paradygmat deklaratywny oparty na funkcjach jak w algebrze, rachunku lambda, niemutowalnych danych i funkcjach wyższego rzędu.",
+   "details": "**Jak to działa:** program to złożenie funkcji. Czysta funkcja daje ten sam wynik dla tych samych argumentów i nie ma efektów ubocznych. Dane są niemutowalne, więc zamiast pętli stosuje się rekurencję (także ogonową) oraz funkcje wyższego rzędu (przyjmujące funkcje i zwracające funkcje): map, filter, fold. Funkcje są obiektami pierwszej klasy. Podstawą teoretyczną jest rachunek lambda. Styl funkcyjny można stosować także w językach imperatywnych (JavaScript, C++, Java, Python), które wprowadzają lambdy i konstrukcje z języków funkcyjnych. Haskell jest czysto funkcyjny; Erlang jest funkcyjny; C# i Perl nie są typowo funkcyjne.\n\n**Przykład:** `sum = foldr (+) 0`.\n\n**Na egzaminie uważaj na:** można definiować własne typy; funkcja wyższego rzędu to nie funkcja „trudna”; stan nie wymaga zmiennych globalnych; Haskell nie jest ani imperatywny, ani obiektowy.",
+   "related": [
+    "haskell-typy",
+    "leniwa-ewaluacja"
+   ]
+  }
+ ]
+}

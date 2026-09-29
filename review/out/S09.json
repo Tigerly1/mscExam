@@ -1,0 +1,3063 @@
+{
+ "questions": [
+  {
+   "id": 164,
+   "question": "Dla uniknięcia błędów uwarunkowanych czasowo, maksymalna liczba procesów, które mogą znajdować się wewnątrz sekcji krytycznej, wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "8",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "1",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "0",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "16",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "2 procesy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "n, gdzie n jest liczbą procesów w systemie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "równa liczbie procesorów w systemie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "co najwyżej jeden proces jednocześnie",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sekcja-krytyczna",
+    "semafor"
+   ],
+   "explanation": "**Dlaczego poprawne:** wzajemne wykluczanie wymaga, by w sekcji krytycznej znajdował się najwyżej jeden proces, więc maksimum to 1 (również sformułowanie „co najwyżej jeden proces”).\n\n**Dlaczego błędne:** 0 to nie maksimum, bo sekcja bywa zajęta. Wartości 2, 8, 16, n oraz liczba procesorów dopuszczałyby równoczesną modyfikację danych i wyścig (race condition).\n\n**Zapamiętaj:** sekcja krytyczna = maksymalnie 1 proces naraz.",
+   "changes": []
+  },
+  {
+   "id": 165,
+   "question": "Inicjalna wartość semafora uogólnionego implementującego sekcję krytyczną wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "0",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "1",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "-1 (wartość ujemna)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "dowolna liczba dodatnia",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "2 (dwa procesy jednocześnie)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "liczba równa liczbie procesów uczestniczących",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "równa liczbie procesorów w systemie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wartość jeden, wtedy semafor uogólniony działa jak binarny (mutex)",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "semafor",
+    "sekcja-krytyczna"
+   ],
+   "explanation": "**Dlaczego poprawne:** semafor inicjowany wartością 1 przepuszcza pierwszy proces (P zmniejsza do 0), a kolejne blokuje do operacji V, więc do sekcji wchodzi najwyżej jeden proces.\n\n**Dlaczego błędne:** 0 zablokowałby wszystkich na zawsze (zakleszczenie); -1 nie jest poprawną wartością początkową; wartość dodatnia większa od 1 (2, n) wpuściłaby kilka procesów naraz.\n\n**Zapamiętaj:** mutex = semafor z wartością początkową 1.",
+   "changes": [
+    "c: tekst '-1' -> '-1 (wartość ujemna)' (walidator traktował '-1' jako duplikat '1'), flaga bez zmian"
+   ]
+  },
+  {
+   "id": 166,
+   "question": "Proces transferowania danych, które mają być docelowo wyprowadzone na urządzenie peryferyjne, do przestrzeni pamięci pomocniczej i transferowanie ich na to urządzenie w dogodniejszym czasie nosi nazwę:",
+   "options": [
+    {
+     "key": "a",
+     "text": "spooling",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "virtualization",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "caching",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "throttling",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "swapping",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "polling",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "paging",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "np. buforowanie wydruków w kolejce zapisanej na dysku (kolejka drukowania)",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "spooling",
+    "buforowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** spooling zapisuje dane przeznaczone dla wolnego urządzenia do pamięci pomocniczej i przekazuje je urządzeniu później, np. w kolejce wydruku (SPOOL - Simultaneous Peripheral Operations On-Line).\n\n**Dlaczego błędne:** virtualization to abstrakcja zasobów; caching to kopia danych dla szybszego dostępu; throttling to ograniczanie przepustowości; swapping to wymiana procesów; polling to cykliczne odpytywanie urządzenia; paging to stronicowanie.\n\n**Zapamiętaj:** spooling = kolejka zadań na dysku dla wolnego urządzenia.",
+   "changes": []
+  },
+  {
+   "id": 167,
+   "question": "Centralny Procesor, po otrzymaniu informacji o przerwaniu z urządzenia wejścia/wyjścia:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zatrzymuje się na określony okres czasu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "przekazuje sterowanie do systemu obsługi przerwań po zakończeniu wykonywania bieżącej instrukcji",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zapisuje stan (m.in. licznik rozkazów i rejestr flag) przed skokiem do procedury obsługi przerwania",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "przerwania maskowalne może zignorować (odłożyć), jeśli są zamaskowane",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "przerywa bieżącą instrukcję w połowie i porzuca jej wyniki",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "kończy działanie bieżącego procesu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zawsze restartuje system",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "przerwania",
+    "tryby-pracy-procesora"
+   ],
+   "explanation": "**Dlaczego poprawne:** procesor kończy bieżącą instrukcję, zapisuje stan i przekazuje sterowanie do procedury obsługi przerwania (ISR); przerwania maskowalne można czasowo blokować.\n\n**Dlaczego błędne:** procesor nie zatrzymuje się na ustalony czas, nie przerywa instrukcji w połowie (przerwania sprawdzane są na granicy instrukcji), nie kończy procesu ani nie restartuje systemu.\n\n**Zapamiętaj:** koniec instrukcji, zapis stanu, skok do ISR, powrót.",
+   "changes": []
+  },
+  {
+   "id": 168,
+   "question": "Który z problemów rozwiązuje zaproponowany przez Dijkstrę algorytm bankiera:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wzajemnego wykluczania (mutual exclusion)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "wzajemnego zakleszczenia (deadlock exclusion)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "unikania zakleszczenia (deadlock avoidance)",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "unikania wykluczania (exclusion avoidance)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "przydziału zasobów w sposób pozostawiający system w stanie bezpiecznym (unikanie zakleszczenia)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "wykrywania i odtwarzania po zakleszczeniu (deadlock detection and recovery)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zapobiegania zakleszczeniu przez trwałą eliminację jednego z warunków Coffmana (deadlock prevention)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "szeregowania procesów o różnych priorytetach",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "algorytm-bankiera"
+   ],
+   "explanation": "**Dlaczego poprawne:** algorytm bankiera symuluje przydział i sprawdza, czy istnieje bezpieczna sekwencja zakończenia procesów, czyli unika zakleszczenia (deadlock avoidance).\n\n**Dlaczego błędne:** wzajemne wykluczanie to problem synchronizacji, rozwiązywany np. semaforami. „Wzajemne zakleszczenie” i „unikanie wykluczania” nie opisują tego algorytmu. Wykrywanie, zapobieganie (prevention) i szeregowanie to inne zagadnienia.\n\n**Zapamiętaj:** bankier = avoidance przez stan bezpieczny.",
+   "changes": []
+  },
+  {
+   "id": 169,
+   "question": "System operacyjny jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zbiorem składników sprzętowych (hardware routines)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "zbiorem driverów obsługujących urządzenia wejścia-wyjścia (input-output devices)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zbiorem składników programowych (software routines)",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "oprogramowaniem pośredniczącym między sprzętem a programami użytkowymi",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "programem zarządzającym zasobami komputera (procesor, pamięć, urządzenia)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "wyłącznie interpreterem poleceń (powłoką)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zbiorem programów użytkowych, takich jak edytory i przeglądarki",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "system-operacyjny-definicja"
+   ],
+   "explanation": "**Dlaczego poprawne:** system operacyjny to zbiór składników programowych, który zarządza zasobami i pośredniczy między sprzętem a użytkownikiem.\n\n**Dlaczego błędne:** sprzęt nie jest częścią systemu operacyjnego; same sterowniki to tylko jeden ze składników; powłoka i programy użytkowe (edytory, przeglądarki) nie stanowią całego systemu.\n\n**Zapamiętaj:** OS = oprogramowanie zarządzające zasobami.",
+   "changes": []
+  },
+  {
+   "id": 170,
+   "question": "Szyfrowanie kluczem publicznym w szyfrowaniu asymetrycznym:",
+   "options": [
+    {
+     "key": "a",
+     "text": "pozwala jedynie właściwemu odbiorcy odkodować komunikat",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "tylko posiadacz klucza prywatnego może odkodować komunikat",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "wystarczy użyć tego samego klucza do deszyfrowania wiadomości",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wiadomość zaszyfrowana za pomocą klucza publicznego może być odszyfrowana tylko za pomocą klucza prywatnego",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "klucz publiczny może być bezpiecznie udostępniany, a odszyfrowanie wymaga klucza prywatnego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "klucza prywatnego nie da się praktycznie wyznaczyć na podstawie klucza publicznego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wymaga wcześniejszej bezpiecznej wymiany tajnego klucza między nadawcą a odbiorcą",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wiadomość zaszyfrowaną kluczem publicznym można odszyfrować tym samym kluczem publicznym",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "jest zwykle szybsze od szyfrowania symetrycznego",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "szyfrowanie-asymetryczne"
+   ],
+   "explanation": "**Dlaczego poprawne:** wiadomość zaszyfrowaną kluczem publicznym odbiorcy odczyta tylko posiadacz klucza prywatnego, czyli właściwy odbiorca; klucza prywatnego nie da się praktycznie wyliczyć z publicznego.\n\n**Dlaczego błędne:** ten sam klucz do deszyfrowania nie wystarczy (to cecha szyfrowania symetrycznego); wcześniejsza wymiana tajnego klucza nie jest potrzebna; algorytmy asymetryczne są wolniejsze od symetrycznych.\n\n**Zapamiętaj:** szyfrujesz kluczem publicznym, odszyfrowuje tylko prywatny.",
+   "changes": [
+    "a: false -> true, bo tylko właściwy odbiorca (posiadacz klucza prywatnego) może odkodować komunikat, co jest równoważne poprawnemu b i d"
+   ]
+  },
+  {
+   "id": 171,
+   "question": "Buforowanie plików realizowane jest w celu:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zwiększenia wydajności dostępu do pamięci pomocniczej",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wspomagania obsługi przerwań",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zwiększenia wydajności procesora",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wyrównania różnic prędkości przesyłania danych między różnymi urządzeniami",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "zmniejszenia liczby fizycznych operacji dyskowych przez przechowywanie ostatnio używanych bloków w pamięci",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "umożliwienia współpracy urządzeń o różnej szybkości (np. procesor i dysk)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "zabezpieczenia plików przed usunięciem",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "szyfrowania danych zapisywanych na dysku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "buforowanie",
+    "spooling"
+   ],
+   "explanation": "**Dlaczego poprawne:** bufor wyrównuje różnice szybkości urządzeń, a przechowując ostatnio używane bloki zmniejsza liczbę operacji na dysku, czyli zwiększa wydajność dostępu do pamięci pomocniczej.\n\n**Dlaczego błędne:** buforowanie nie służy obsłudze przerwań ani nie zwiększa wydajności samego procesora (poprawia wykorzystanie procesora pośrednio, ale nie jest tym celem). Nie chroni przed usunięciem i nie szyfruje.\n\n**Zapamiętaj:** bufor = wyrównanie prędkości i mniej operacji I/O.",
+   "changes": [
+    "a: false -> true, bo buforowanie plików (buffer cache) rzeczywiście zwiększa wydajność dostępu do pamięci pomocniczej"
+   ]
+  },
+  {
+   "id": 172,
+   "question": "Zaznacz prawdziwe stwierdzenia na temat stronicowania:",
+   "options": [
+    {
+     "key": "a",
+     "text": "stronicowanie rozwiązuje problem zewnętrznej fragmentacji pamięci",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "tablica stron jest stosowana do translacji adresu logicznego na adres fizyczny",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na strony, a pamięć logiczna na ramki, oraz że rozmiary stron i ramek są jednakowe",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "stronicowanie rozwiązuje problem wewnętrznej fragmentacji pamięci",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "podczas stronicowania przyjmuje się, że pamięć fizyczna jest podzielona na ramki, a pamięć logiczna na strony, oraz że rozmiary stron i ramek są jednakowe",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "rozmiar strony jest zwykle potęgą dwójki, więc adres logiczny dzieli się na numer strony i przesunięcie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "ramki przydzielone procesowi nie muszą tworzyć spójnego obszaru pamięci fizycznej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "strony procesu muszą zajmować w pamięci fizycznej ciągły obszar",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "rozmiar strony jest zmienny i dobierany do długości każdego fragmentu procesu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stronicowanie",
+    "pamiec-wirtualna"
+   ],
+   "explanation": "**Dlaczego poprawne:** stronicowanie eliminuje fragmentację zewnętrzną (dowolne wolne ramki są wystarczające); tablica stron tłumaczy adres logiczny na fizyczny; pamięć fizyczna dzieli się na ramki, a logiczna na strony o tym samym rozmiarze.\n\n**Dlaczego błędne:** rola stron i ramek jest odwrócona w stwierdzeniu o fizycznej pamięci podzielonej na strony; fragmentacja wewnętrzna nadal występuje (niepełna ostatnia strona); strony nie muszą być ciągłe i mają stały rozmiar.\n\n**Zapamiętaj:** strony logiczne, ramki fizyczne; brak fragmentacji zewnętrznej, jest wewnętrzna.",
+   "changes": []
+  },
+  {
+   "id": 173,
+   "question": "Zaznacz prawdziwe stwierdzenia na temat segmentacji:",
+   "options": [
+    {
+     "key": "a",
+     "text": "segmentacja ułatwia nadanie częściom procesu odpowiednich atrybutów ochrony: dopuszczalny odczyt, dopuszczalny zapis, dopuszczalne wykonanie",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zastosowanie segmentacji wyklucza zastosowanie stronicowania",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "mogą istnieć następujące przykładowe rodzaje segmentów: kodu, danych, stosu",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "elementy tablicy segmentów zawierają adresy/numery ramek, w których znajdują się segmenty oraz rozmiary poszczególnych segmentów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "adres logiczny w segmentacji składa się z numeru segmentu i przesunięcia w segmencie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "element tablicy segmentów zawiera adres bazowy segmentu i jego długość (limit)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "segmenty mają zawsze jednakowy, stały rozmiar",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "segmentacja czysta całkowicie eliminuje fragmentację zewnętrzną",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "segmentacja",
+    "stronicowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** segmenty (kodu, danych, stosu) mogą mieć własne bity ochrony (odczyt, zapis, wykonanie); adres to para (segment, przesunięcie), a tablica zawiera bazę i limit.\n\n**Dlaczego błędne:** segmentacja można łączyć ze stronicowaniem; numery ramek i rozmiary w tablicy segmentów to pojęcia stronicowania (tablica segmentów ma bazę i limit); segmenty mają zmienną długość, przez co pojawia się fragmentacja zewnętrzna.\n\n**Zapamiętaj:** segment = logiczna jednostka o zmiennej długości z bazą i limitem.",
+   "changes": []
+  },
+  {
+   "id": 174,
+   "question": "Zaznacz prawdziwe stwierdzenia na temat algorytmów wywłaszczania stron:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zaletą algorytmu zastępowania stron FIFO jest to, że nie zachodzi w nim efekt zwany anomalią Belady'ego",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "w algorytmie zastępowania stron LRU zastępowana jest strona, która najdłużej nie była używana",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "w algorytmie zastępowania stron zwanym algorytmem drugiej szansy algorytm wykorzystuje bit odniesienia, który określa, czy w pewnym przedziale czasu nastąpiło odwołanie do strony",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "zasadą działania algorytmu optymalnego zastępowania stron jest to, że zastąpiona zostaje strona, która najdłużej nie będzie używana",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "w algorytmie zastępowania stron LRU zachodzi efekt zwany anomalią Belady'ego",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "optymalny algorytm wywłaszczania stron zapewnia minimalną ilość wywłaszczeń stron przy ustalonej liczbie ramek",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "algorytm FIFO wywłaszcza stronę, do której czas dostępu był najdawniejszy",
+     "correct": false
+    },
+    {
+     "key": "h",
+     "text": "algorytm zegarowy (clock) jest implementacją algorytmu drugiej szansy z cyklicznie przeglądaną kolejką",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "algorytm FIFO wymienia stronę, która najdłużej przebywa w pamięci",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "algorytm optymalny (OPT) jest łatwy do zaimplementowania, bo nie wymaga znajomości przyszłych odwołań",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "anomalia Belady'ego oznacza, że zwiększenie liczby ramek w FIFO może zmniejszyć liczbę błędów strony",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zastepowanie-stron",
+    "pamiec-wirtualna"
+   ],
+   "explanation": "**Dlaczego poprawne:** LRU usuwa stronę najdawniej używaną; druga szansa używa bitu odniesienia; OPT usuwa stronę, która najdłużej nie będzie używana i daje minimalną liczbę błędów strony; FIFO usuwa stronę najdłużej przebywającą w pamięci; clock to wariant drugiej szansy.\n\n**Dlaczego błędne:** FIFO ma anomalię Belady'ego (więcej ramek może dać WIĘCEJ błędów), LRU jej nie ma; FIFO patrzy na czas załadowania, nie ostatniego użycia; OPT wymaga znajomości przyszłości i nie jest realizowalny.\n\n**Zapamiętaj:** anomalia Belady'ego dotyczy FIFO, nie LRU ani OPT.",
+   "changes": []
+  },
+  {
+   "id": 175,
+   "question": "Zaznacz prawdziwe stwierdzenia dotyczące pamięci wirtualnej:",
+   "options": [
+    {
+     "key": "a",
+     "text": "stronicowanie na żądanie jest jednym ze sposobów realizacji pamięci wirtualnej",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "procedura leniwej wymiany (ang. lazy swapper) polega na tym, że nie wykonuje się wymiany stron w pamięci, jeśli nie zachodzi taka potrzeba",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "pamięć wirtualna umożliwia wykonywanie procesów, które nie są w całości przechowywane w pamięci operacyjnej",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "przydział ramek oparty na globalnym algorytmie zastępowania może ograniczyć szamotanie (w porównaniu do algorytmu lokalnego zastępowania), gdyż szamoczący się proces nie doprowadza do szamotania innych procesów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "pamięć wirtualna pozwala, by przestrzeń adresowa procesu była większa od pamięci fizycznej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "błąd strony występuje przy odwołaniu do strony nieobecnej w pamięci i powoduje jej sprowadzenie z dysku",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "przy stronicowaniu na żądanie wszystkie strony procesu są ładowane do pamięci przed jego startem",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "szamotanie występuje, gdy procesowi przydzielono zbyt dużo ramek",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "pamiec-wirtualna",
+    "stronicowanie",
+    "zastepowanie-stron"
+   ],
+   "explanation": "**Dlaczego poprawne:** stronicowanie na żądanie realizuje pamięć wirtualną; leniwa wymiana ładuje strony tylko w razie potrzeby, więc proces nie musi być w całości w RAM.\n\n**Dlaczego błędne:** globalne zastępowanie stron NIE ogranicza szamotania: szamoczący proces zabiera ramki innym i rozprzestrzenia problem (lokalne ogranicza go do procesu). Ładowanie wszystkiego na starcie to nie demand paging; szamotanie wynika z niedoboru ramek.\n\n**Zapamiętaj:** strony ładujemy na żądanie; globalne zastępowanie zaraża innych szamotaniem.",
+   "changes": []
+  },
+  {
+   "id": 176,
+   "question": "Zaznacz prawdziwe zdania na temat semaforów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zaletą aktywnego czekania w trybie użytkownika jest brak konieczności kosztownego przejścia do trybu uprzywilejowanego (systemowego)",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "semafor może być użyty do synchronizacji dostępu do sekcji krytycznej",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "aktywne czekanie oznacza ciągłe testowanie wartości wyrażenia do momentu, gdy przyjmie ono wartość, dla której czekanie może być zakończone",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "semafor nie nadaje się do zdeterminowania kolejności wykonywanych operacji w grupie współbieżnych procesów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "semafor może być użyty do synchronizacji dostępu do sekcji krytycznej, poprzez sygnalizowanie (V) przed wejściem i czekanie (P) po zakończeniu",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "na semaforze można wykonywać operacje czekaj (P) i sygnalizuj (V)",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "aktywne czekanie polega na uśpieniu procesu i aktywnym oczekiwaniu na sygnał wybudzający",
+     "correct": false
+    },
+    {
+     "key": "h",
+     "text": "można stworzyć semafor zliczający z 2 semaforów binarnych i zmiennej zliczającej wykorzystującej te semafory",
+     "correct": true
+    },
+    {
+     "key": "i",
+     "text": "przed wejściem do sekcji krytycznej wykonywana jest operacja sygnalizuj (V)",
+     "correct": false
+    },
+    {
+     "key": "j",
+     "text": "semafor binarny inicjowany wartością 1 może pełnić rolę muteksu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "operacja P na semaforze o wartości 0 powoduje oczekiwanie wywołującego procesu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "l",
+     "text": "operacja V zmniejsza wartość semafora",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "m",
+     "text": "semafor zliczający nie może przyjmować wartości większej niż 1",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "semafor",
+    "sekcja-krytyczna"
+   ],
+   "explanation": "**Dlaczego poprawne:** semafor służy do wzajemnego wykluczania (P przed wejściem, V po wyjściu) i do wymuszania kolejności operacji; na semaforze wykonuje się P i V; aktywne czekanie to ciągłe testowanie warunku i oszczędza przejścia do trybu jądra; semafor zliczający można zbudować z 2 binarnych i licznika.\n\n**Dlaczego błędne:** semafor nadaje się do ustalania kolejności; odwrócenie V i P jest błędne; aktywne czekanie nie polega na usypianiu; V zwiększa, a nie zmniejsza wartość.\n\n**Zapamiętaj:** P przed sekcją, V po niej.",
+   "changes": [
+    "f: poprawiono ucięty tekst opcji (dodano podmiot: semafor), bez zmiany sensu"
+   ]
+  },
+  {
+   "id": 1138,
+   "question": "Algorytm bankiera (Dijkstra) służy do:",
+   "options": [
+    {
+     "key": "a",
+     "text": "unikania zakleszczenia (deadlock avoidance) poprzez sprawdzanie stanu bezpiecznego.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wykrywania cykli w grafie zasobów.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "szeregowania procesów w systemie czasu rzeczywistego.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zarządzania pamięcią wirtualną.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "znajdowania najkrótszej ścieżki w sieci komputerowej.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "optymalizacji zużycia energii przez procesor.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "jest algorytmem unikania zakleszczeń opartym na macierzach Max, Allocation i Available",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "odrzuca żądania zasobów, które prowadziłyby do stanu niebezpiecznego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "eliminowania warunku wzajemnego wykluczania",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "planowania kolejności dostępu do dysku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "algorytm-bankiera"
+   ],
+   "explanation": "**Dlaczego poprawne:** algorytm bankiera sprawdza stan bezpieczny (istnienie bezpiecznej sekwencji) przed przydziałem zasobów, z użyciem macierzy Max, Allocation, Need i wektora Available.\n\n**Dlaczego błędne:** wykrywanie cykli w grafie zasobów to detekcja, a nie unikanie; szeregowanie czasu rzeczywistego, pamięć wirtualna, najkrótsza ścieżka i energia procesora nie mają związku z algorytmem; eliminacja wzajemnego wykluczania to prewencja.\n\n**Zapamiętaj:** bankier = unikanie zakleszczenia przez stan bezpieczny.",
+   "changes": []
+  },
+  {
+   "id": 1139,
+   "question": "Buforowanie plików (File Buffering):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zwiększa wydajność poprzez redukcję liczby fizycznych operacji wejścia/wyjścia na dysku.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "służy wyłącznie do zabezpieczenia danych przed usunięciem.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "uniemożliwia jednoczesny dostęp wielu procesów do pliku.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest realizowane tylko w systemach 64-bitowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "polega na szyfrowaniu zawartości pliku.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "jest zawsze zarządzane przez użytkownika, a nie system operacyjny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "pozwala przechowywać w pamięci ostatnio używane bloki plików i czytać wyprzedzająco kolejne",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "przy buforowaniu zapisu (write-back) dane mogą trafić na dysk z opóźnieniem",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "gwarantuje natychmiastowy trwały zapis każdej operacji write na dysk",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wymaga, aby plik został w całości wczytany do pamięci operacyjnej",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "buforowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** bufor redukuje liczbę fizycznych operacji na dysku (cache bloków, odczyt wyprzedzający, łączenie zapisów); zapis może być opóźniony.\n\n**Dlaczego błędne:** buforowanie nie służy wyłącznie ochronie przed usunięciem, nie blokuje współbieżnego dostępu, nie zależy od 32/64 bitów, nie szyfruje i jest zarządzane przez system, nie użytkownika. Nie gwarantuje natychmiastowego zapisu (do tego służy fsync).\n\n**Zapamiętaj:** buforowanie = mniej operacji I/O, kosztem opóźnionego zapisu.",
+   "changes": []
+  },
+  {
+   "id": 1140,
+   "question": "Centralny Procesor, po otrzymaniu informacji o przerwaniu z urządzenia wejścia/wyjścia:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Procesor kończy bieżącą instrukcję, zapisuje stan i przekazuje sterowanie do ISR.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "procesor natychmiast przerywa wykonywanie bieżącej instrukcji w jej połowie.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "przerwania są ignorowane w trybie użytkownika.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "tylko system operacyjny może generować przerwania.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "przerwania mogą być maskowalne lub niemaskowalne (NMI).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "po obsłudze przerwania procesor zawsze restartuje system.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "urządzenie zgłasza przerwanie sprzętowe, a jego numer wskazuje procedurę obsługi w wektorze przerwań",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "po zakończeniu ISR przywracany jest zapisany stan i wznawiane jest przerwane wykonanie programu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "przerwania z urządzeń wejścia/wyjścia są obsługiwane wyłącznie przez program użytkownika",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "procesor obsługuje przerwanie dopiero po zakończeniu całego bieżącego procesu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "przerwania",
+    "tryby-pracy-procesora"
+   ],
+   "explanation": "**Dlaczego poprawne:** procesor kończy bieżącą instrukcję, zapisuje stan i przekazuje sterowanie do ISR; przerwania mogą być maskowalne lub niemaskowalne (NMI); po ISR stan jest przywracany.\n\n**Dlaczego błędne:** przerwanie nie przerywa instrukcji w połowie, nie jest ignorowane w trybie użytkownika, generuje je także sprzęt (nie tylko system operacyjny), po obsłudze nie ma restartu systemu, a ISR działa w trybie jądra.\n\n**Zapamiętaj:** koniec instrukcji, zapis stanu, ISR, powrót.",
+   "changes": []
+  },
+  {
+   "id": 1141,
+   "question": "Inicjalna wartość semafora binarnego implementującego sekcję krytyczną (mutex) wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "1",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "0",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "-1 (wartość ujemna)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "n (liczba procesów)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "nieskończoność",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "2",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "3 (trzy procesy)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wartość równa liczbie procesów oczekujących",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "dowolna liczba całkowita ujemna",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wartość jeden (stan odblokowany: wejście do sekcji jest wolne)",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "semafor",
+    "sekcja-krytyczna"
+   ],
+   "explanation": "**Dlaczego poprawne:** mutex inicjowany wartością 1 oznacza wolną sekcję: pierwsze P zmniejsza do 0 i wpuszcza proces, następne blokują się do V.\n\n**Dlaczego błędne:** 0 oznacza sekcję zajętą od początku (wszyscy czekają na zawsze); -1, ujemne, 2, 3, n dopuszczałyby wiele procesów albo są niedozwolone dla semafora binarnego; nieskończoność nie jest wartością semafora binarnego.\n\n**Zapamiętaj:** mutex startuje od 1.",
+   "changes": [
+    "c: tekst '-1' -> '-1 (wartość ujemna)' (walidator traktował '-1' jako duplikat '1'), flaga bez zmian"
+   ]
+  },
+  {
+   "id": 1142,
+   "question": "Algorytm szeregowania z wywłaszczaniem (preemptive scheduling):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pozwala na przerwanie bieżącego procesu i przekazanie procesora innemu procesowi.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "szeregowanie bez wywłaszczenia.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie pozwala na zmianę procesu przed jego zakończeniem.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest stosowany tylko w systemach wsadowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "przykładem jest algorytm Round Robin (karuzelowy).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "minimalizuje liczbę przełączeń kontekstu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "wywłaszczenie następuje np. po wyczerpaniu kwantu czasu lub pojawieniu się procesu o wyższym priorytecie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wymaga sprzętowego zegara generującego przerwania",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "proces w stanie wykonywania zawsze pozostaje na procesorze aż do zakończenia lub dobrowolnego oddania procesora",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "przykładem jest algorytm FCFS (first come, first served)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "multitasking-szeregowanie",
+    "przerwania"
+   ],
+   "explanation": "**Dlaczego poprawne:** szeregowanie z wywłaszczaniem pozwala odebrać procesor bieżącemu procesowi (np. Round Robin po kwancie czasu, priorytety), co wymaga przerwań zegarowych.\n\n**Dlaczego błędne:** „bez wywłaszczenia” i „nie pozwala na zmianę procesu przed zakończeniem” opisują szeregowanie niewywłaszczające (np. FCFS); nie jest ograniczone do systemów wsadowych; wywłaszczanie zwiększa, a nie minimalizuje liczbę przełączeń kontekstu.\n\n**Zapamiętaj:** wywłaszczanie = więcej przełączeń, lepszy czas odpowiedzi.",
+   "changes": []
+  },
+  {
+   "id": 1143,
+   "question": "Aby system operacyjny mógł wykonywać wielozadaniowość (multitasking):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wymaga wsparcia sprzętowego (np. przerwania zegarowe, ochrona pamięci).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "musi posiadać przynajmniej 2 procesory fizyczne.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie może używać pamięci wirtualnej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wymaga, aby wszystkie programy były napisane w tym samym języku.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "musi implementować mechanizm przełączania kontekstu (context switching).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "nie może obsługiwać sieci.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "system musi przydzielać procesor kolejnym procesom w krótkich odstępach czasu (podział czasu)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "każdy proces ma własny kontekst (rejestry, licznik rozkazów) zapisywany przy przełączaniu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wymaga, aby każdy proces miał na wyłączność osobny procesor",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wymaga sprzętu z pamięcią wirtualną",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "multitasking-szeregowanie",
+    "tryby-pracy-procesora"
+   ],
+   "explanation": "**Dlaczego poprawne:** multitasking potrzebuje wsparcia sprzętowego (przerwania zegarowe, ochrona pamięci) i mechanizmu przełączania kontekstu.\n\n**Dlaczego błędne:** wystarczy jeden procesor (podział czasu); pamięć wirtualna jest dozwolona, ale niekonieczna; język programów, obsługa sieci i brak sieci nie mają związku.\n\n**Zapamiętaj:** multitasking = przerwania zegarowe, ochrona pamięci, przełączanie kontekstu.",
+   "changes": []
+  },
+  {
+   "id": 1144,
+   "question": "Jeżeli wirtualny adres w programie jest 16 bitowy i rozmiar strony jest 0,5 K to możemy maksymalnie zaadresować następującą liczbę stron:",
+   "options": [
+    {
+     "key": "a",
+     "text": "128.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "64.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "256.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "1024.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "512.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "32.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "16",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "2048",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "4096",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "2^7 stron (7 bitów numeru strony i 9 bitów przesunięcia)",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stronicowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** strona 0,5 K to 512 B = 2^9 B, więc 9 bitów adresu to przesunięcie, a pozostałe 16 - 9 = 7 bitów to numer strony, czyli 2^7 = 128 stron (przestrzeń 64 KB podzielona na 512 B).\n\n**Dlaczego błędne:** 64 wynikałoby ze strony 1 KB, 256 ze strony 256 B, 512 ze strony 128 B, 1024 i większe oraz 32 z innych rozmiarów strony.\n\n**Zapamiętaj:** liczba stron = 2^(bity adresu - bity przesunięcia).",
+   "changes": []
+  },
+  {
+   "id": 1145,
+   "question": "Pamięć asocjacyjna (TLB - Translation Lookaside Buffer):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Przechowuje ostatnio używane mapowania adresów wirtualnych na fizyczne.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jest konieczna dla efektywnej realizacji stronicowania.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "służy do przechowywania danych na dysku.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest wolniejsza od pamięci RAM.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "jest rodzajem pamięci cache dla tablicy stron.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "przechowuje kody instrukcji procesora.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "jest szybką pamięcią asocjacyjną, przeszukiwaną równolegle po numerze strony",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "trafienie w TLB pozwala uniknąć dodatkowego odwołania do tablicy stron w pamięci",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "zawiera cały zestaw stron procesu i zastępuje tablicę stron",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "po przełączeniu kontekstu jej zawartość zawsze pozostaje ważna dla nowego procesu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tlb",
+    "stronicowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** TLB to mała pamięć asocjacyjna, będąca cache tablicy stron i przechowująca ostatnio używane odwzorowania adresów wirtualnych na fizyczne.\n\n**Dlaczego błędne:** TLB nie przechowuje danych z dysku ani instrukcji i jest szybsza (nie wolniejsza) od RAM. Stwierdzenie, że jest „konieczna” dla efektywnego stronicowania, zostało zachowane jako fałszywe: stronicowanie działa bez niej (np. tablica stron w rejestrach), tylko wolniej; to sformułowanie bywa w wykładach niejednoznaczne.\n\n**Zapamiętaj:** TLB = cache tablicy stron.",
+   "changes": []
+  },
+  {
+   "id": 1146,
+   "question": "Maksymalna liczba procesów wewnątrz sekcji krytycznej (dla zapewnienia wzajemnego wykluczania):",
+   "options": [
+    {
+     "key": "a",
+     "text": "1",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "2",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Dowolna liczba.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "0",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "n-1",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "n",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "m, gdzie m to liczba procesorów w systemie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "3 procesy jednocześnie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "liczba równa liczbie procesów gotowych do wykonania",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "co najwyżej jeden proces jednocześnie",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sekcja-krytyczna",
+    "semafor"
+   ],
+   "explanation": "**Dlaczego poprawne:** wzajemne wykluczanie oznacza, że w sekcji krytycznej jest najwyżej jeden proces, więc maksimum wynosi 1.\n\n**Dlaczego błędne:** 0 nie jest maksimum, bo sekcja bywa zajęta; 2, 3, n-1, n, m, liczba procesów gotowych oraz „dowolna liczba” dopuszczają jednoczesną modyfikację zasobu i wyścig.\n\n**Zapamiętaj:** sekcja krytyczna = max 1 proces.",
+   "changes": []
+  },
+  {
+   "id": 1147,
+   "question": "Problem producent-konsument może być rozwiązany przy pomocy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Semafory, monitory, kolejki komunikatów.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "tylko Monitorów.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "wyłącznie zmiennych globalnych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "tylko w systemach jednoprocesorowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "algorytmu Dijkstry znajdowania najkrótszej ścieżki.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "instrukcji skoku bezwarunkowego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "w wariancie z ograniczonym buforem producent czeka, gdy bufor jest pełny",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "konsument musi czekać, gdy bufor jest pusty",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "producent i konsument nie wymagają żadnej synchronizacji",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "rozwiązanie wymaga zawsze dwóch procesorów",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "producent-konsument",
+    "semafor",
+    "komunikacja-synchroniczna"
+   ],
+   "explanation": "**Dlaczego poprawne:** problem można rozwiązać semaforami (empty, full, mutex), monitorami i kolejkami komunikatów; producent czeka na pełnym buforze, konsument na pustym.\n\n**Dlaczego błędne:** nie ograniczamy się do jednego mechanizmu (tylko monitory, wyłącznie zmienne globalne); działa też w systemach jednoprocesorowych; algorytm Dijkstry najkrótszej ścieżki i skok bezwarunkowy nie zapewniają synchronizacji; brak synchronizacji daje wyścig.\n\n**Zapamiętaj:** producent-konsument = semafory empty/full/mutex lub monitory, komunikaty.",
+   "changes": []
+  },
+  {
+   "id": 1148,
+   "question": "Stan uprzywilejowany (Kernel Mode):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pozwala na wykonywanie wszystkich instrukcji procesora, w tym instrukcji sterujących sprzętem.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "umożliwia wykonywanie instrukcji systemu operacyjnego.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest dostępny dla każdej aplikacji użytkownika.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy do przyspieszania obliczeń matematycznych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "przejście do tego stanu następuje m.in. podczas wywołania systemowego (system call).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "wyklucza dostęp do pamięci RAM.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "instrukcje uprzywilejowane (np. obsługa I/O, zmiana tablic stron) są dostępne tylko w tym trybie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "próba wykonania instrukcji uprzywilejowanej w trybie użytkownika powoduje wyjątek",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "programy użytkownika mogą do niego przejść zwykłą instrukcją skoku",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "w tym trybie procesor nie może obsługiwać przerwań",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tryby-pracy-procesora",
+    "przerwania"
+   ],
+   "explanation": "**Dlaczego poprawne:** tryb jądra pozwala wykonywać wszystkie instrukcje, w tym sterujące sprzętem, a więc także kod systemu operacyjnego; wejście następuje przy wywołaniu systemowym, przerwaniu lub wyjątku.\n\n**Dlaczego błędne:** tryb nie jest dostępny dla aplikacji wprost, nie służy do przyspieszania obliczeń, nie wyklucza dostępu do RAM ani obsługi przerwań.\n\n**Zapamiętaj:** kernel mode = pełne uprawnienia, wejście przez syscall/przerwanie.",
+   "changes": [
+    "b: false -> true, bo tryb uprzywilejowany umożliwia wykonywanie instrukcji systemu operacyjnego (jądro w nim działa)"
+   ]
+  },
+  {
+   "id": 1149,
+   "question": "Komunikacja synchroniczna między procesami:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Powoduje zawieszenie procesu wysyłającego do momentu odebrania komunikatu przez odbiorcę.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "umożliwia procesom synchronizację ich aktywności.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nie wymaga potwierdzenia odbioru.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest zawsze szybsza od komunikacji asynchronicznej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "jest realizowana np. przez mechanizm rendezvous.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "nie może być stosowana w systemach rozproszonych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "nadawca i odbiorca spotykają się w jednym momencie (blokujące send i receive)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "odbiorca wywołujący receive blokuje się, jeśli komunikat jeszcze nie nadszedł",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "nadawca kontynuuje pracę natychmiast po wysłaniu, nie czekając na odbiorcę",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wymaga bufora o nieograniczonej pojemności",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "komunikacja-synchroniczna",
+    "producent-konsument"
+   ],
+   "explanation": "**Dlaczego poprawne:** w komunikacji synchronicznej nadawca jest zawieszany do odebrania komunikatu, co synchronizuje aktywność procesów; przykładem jest rendezvous.\n\n**Dlaczego błędne:** wymaga potwierdzenia (nadawca czeka na odbiór); nie jest „zawsze szybsza” (blokuje); stosuje się ją także w systemach rozproszonych; nie potrzebuje nieograniczonego bufora.\n\n**Zapamiętaj:** synchroniczna = blokowanie do odbioru.",
+   "changes": [
+    "b: false -> true, bo blokujące wysyłanie i odbieranie synchronizują aktywności procesów"
+   ]
+  },
+  {
+   "id": 202,
+   "question": "Prawo dostępu do pliku 453 pozwala:",
+   "options": [
+    {
+     "key": "a",
+     "text": "właścicielowi czytać plik",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wszystkim czytać plik",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "właścicielowi na odczyt, grupie na odczyt i uruchomienie, pozostałym na zapis i uruchomienie",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "grupie na odczyt i zapis, pozostałym tylko na odczyt",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "grupa może plik czytać i uruchamiać, ale nie zapisywać",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "właściciel może czytać, zapisywać i uruchamiać plik",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "pozostałym wolno tylko czytać plik",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "grupa ma prawo zapisu do pliku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "prawa-dostepu-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** 453 to 4=r-- (właściciel), 5=r-x (grupa), 3=-wx (pozostali). Właściciel czyta, grupa czyta i uruchamia, pozostali zapisują i uruchamiają.\n\n**Dlaczego błędne:** pozostali nie mają odczytu (3 = -wx), więc „wszystkim czytać” i „tylko odczyt” są fałszywe; grupa nie ma prawa zapisu; właściciel nie ma w ani x.\n\n**Zapamiętaj:** r=4, w=2, x=1; cyfry: właściciel, grupa, inni.",
+   "changes": []
+  },
+  {
+   "id": 203,
+   "question": "Przy konfiguracji obsługi sieci w Unixie:",
+   "options": [
+    {
+     "key": "a",
+     "text": "plik /etc/hosts przechowuje listę znanych hostów i interfejsów sieciowych",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "plik /etc/hosts zawiera tylko adresy IP lokalnych interfejsów",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "plik /etc/networks zawiera adresy IP znanych sieci IP",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "plik /etc/networks przechowuje listę lokalnych interfejsów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "plik /etc/hosts mapuje nazwy hostów na adresy IP",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "plik /etc/networks mapuje nazwy sieci na adresy sieci",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "plik /etc/hosts zawiera hasła użytkowników zdalnych",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "plik /etc/networks zawiera tablicę routingu z bramami domyślnymi",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "konfiguracja-sieci-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** /etc/hosts to lokalna lista znanych hostów i ich adresów; /etc/networks to lista nazw i adresów znanych sieci IP.\n\n**Dlaczego błędne:** /etc/hosts nie ogranicza się do lokalnych interfejsów, a /etc/networks nie jest listą lokalnych interfejsów; nie zawierają haseł ani tablicy routingu.\n\n**Zapamiętaj:** hosts = hosty, networks = sieci.",
+   "changes": []
+  },
+  {
+   "id": 204,
+   "question": "W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące użytkownika i jego sesji:",
+   "options": [
+    {
+     "key": "a",
+     "text": "praca programu logującego (login) jest sterowana m. in. zawartością plików /etc/nologin lub /etc/motd",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "o możliwościach użytkownika w systemie decyduje przynależność do odpowiednich grup użytkowników",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "w zależności od konfiguracji systemu mogą być odnotowywane podłączenia do systemu poprzez zmianę kontekstu użytkownika (komenda su)",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "grupy użytkowników wprowadzono, aby ułatwić zarządzanie użytkownikami oraz podnieść bezpieczeństwo systemu",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "plik /etc/group definiuje grupy i ich członków",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "uprawnienia do plików są sprawdzane względem właściciela, grupy i pozostałych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "użytkownik może należeć tylko do jednej grupy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "polecenie su nigdy nie może być rejestrowane w logach",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uzytkownicy-logowanie",
+    "prawa-dostepu-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** login korzysta z /etc/nologin i /etc/motd; przynależność do grup wpływa na możliwości użytkownika; zależnie od konfiguracji rejestrowane jest su; grupy ułatwiają zarządzanie i podnoszą bezpieczeństwo.\n\n**Dlaczego błędne:** użytkownik może należeć do wielu grup, a su bywa rejestrowane (syslog, sulog).\n\n**Zapamiętaj:** grupy i logi to podstawa kontroli w UNIX.",
+   "changes": []
+  },
+  {
+   "id": 205,
+   "question": "W systemie operacyjnym UNIX prawdziwe są następujące stwierdzenia dotyczące procesu logowania się i uprawnień użytkowników:",
+   "options": [
+    {
+     "key": "a",
+     "text": "o postaci hasła decyduje administrator systemu zapisując ograniczenia w różnych wersjach systemu w różnych plikach konfiguracyjnych",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wszystkie grupy użytkowników dają im jednakowe uprawnienia",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "cała informacja dotycząca konfiguracji użytkownika w systemie jest zapisana jedynie w pliku /etc/passwd co zapewnia spójność informacji",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "do systemu użytkownik może podłączać się jedynie z konsoli systemu oraz zdalnie poprzez sieć",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "nazwa użytkownika w systemie UNIX musi być unikalna zaś numer identyfikacyjny może się powtarzać",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "technika shadow umożliwia podglądnięcie postaci zaszyfrowanej hasła każdego użytkownika w systemie przez dowolnego użytkownika",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "system PAM umożliwia m.in. odnotowywanie nieudanych prób podłączania się do systemu",
+     "correct": true
+    },
+    {
+     "key": "h",
+     "text": "hasła w technice shadow są przechowywane w /etc/shadow, czytelnym tylko dla roota",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "PAM pozwala konfigurować moduły uwierzytelniania niezależnie od aplikacji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "w systemie z techniką shadow plik /etc/passwd jest niedostępny dla zwykłych użytkowników",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "PAM służy wyłącznie do szyfrowania plików",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "uzytkownicy-logowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** o postaci hasła decyduje administrator (pliki zależne od wersji systemu); nazwa musi być unikalna, a UID technicznie może się powtarzać; PAM pozwala rejestrować nieudane logowania; shadow zabezpiecza skróty haseł.\n\n**Dlaczego błędne:** grupy nie dają jednakowych uprawnień; konfiguracja użytkownika jest w wielu plikach, nie tylko /etc/passwd; łączyć się można też np. przez su i inne usługi; shadow chowa skróty haseł przed zwykłymi użytkownikami, a nie je odsłania.\n\n**Zapamiętaj:** shadow ukrywa hasła, PAM konfiguruje uwierzytelnianie.",
+   "changes": []
+  },
+  {
+   "id": 206,
+   "question": "Zaznacz prawdziwe stwierdzenia na temat procesów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "proces jest wykonaniem programu i składa się ze zbiorowości bajtów, w których wyróżnia się instrukcje maszynowe (tzw. tekst), dane i stos",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w kategoriach praktycznych proces w systemie UNIX jest jednostką utworzoną za pomocą funkcji systemowej fork (z wyjątkiem procesu o numerze 0)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "każdy uruchomiony w systemie UNIX proces otrzymuje od procesu potomnego dostęp do jego (procesu macierzystego) zmiennych środowiskowych",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "liczba możliwych do uruchomienia w systemie UNIX procesów jest ograniczona jedynie rozmiarem pamięci o dostępie swobodnym danego systemu komputerowego",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wartość parametru NICE dla nowo utworzonego procesu jest wyliczana na podstawie średniego obciążenia systemu",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "każdy uruchomiony w systemie UNIX proces otrzymuje od systemu trzy otwarte pliki o numerach 0, 1 i 2",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "rekord w tablicy procesów znajdującej się w jądrze systemu operacyjnego zawiera podstawowe informacje o procesie, w tym jego właścicieli, listę segmentów oraz wskaźniki do U-obszaru",
+     "correct": true
+    },
+    {
+     "key": "h",
+     "text": "zmiana kontekstu z trybu użytkownika na tryb jądra następuje między innymi wówczas, gdy system przydziela procesor kolejnemu procesowi z kolejki gotowych do wykonania procesów",
+     "correct": false
+    },
+    {
+     "key": "i",
+     "text": "potomek utworzony przez fork dziedziczy od procesu macierzystego kopię zmiennych środowiskowych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "każdy proces poza początkowym ma proces macierzysty, którego numer zapisany jest jako PPID",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "wywołanie exec tworzy nowy proces, pozostawiając proces wywołujący bez zmian",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "l",
+     "text": "proces zombie to proces, który aktywnie zajmuje procesor i nie ma rekordu w tablicy procesów",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "procesy-unix",
+    "uzytkownicy-logowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** proces to wykonanie programu (tekst, dane, stos), powstaje przez fork (poza procesem 0), dziedziczy deskryptory 0, 1, 2, a jądro trzyma jego rekord w tablicy procesów (właściciele, segmenty, wskaźnik do U-obszaru).\n\n**Dlaczego błędne:** dziedziczenie środowiska idzie od rodzica do potomka; liczba procesów jest ograniczona limitami systemu, nie tylko RAM; NICE nie wynika ze średniego obciążenia; przydział procesora nie jest zmianą trybu użytkownik-jądro; exec podmienia obraz, nie tworzy procesu.\n\n**Zapamiętaj:** fork tworzy, exec podmienia, dziedziczenie od rodzica.",
+   "changes": []
+  },
+  {
+   "id": 207,
+   "question": "Interpretery poleceń systemu UNIX:",
+   "options": [
+    {
+     "key": "a",
+     "text": "w niektórych interpreterach poleceń można uniemożliwić odłączanie się od systemu poprzez wykorzystanie sekwencji Ctrl-D dzięki ustawieniu wartości odpowiedniej zmiennej środowiskowej",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wszystkie polecenia shella zwracają 0 (zero), kiedy wykonanie ich zakończy się niepowodzeniem lub wartość różną od 0 (zazwyczaj 1) w przypadku przeciwnym",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "każdy interpreter wykorzystuje trzy podstawowe typy zmiennych: specjalne, środowiska oraz programowe",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "błędne wykonanie komendy w linii komend można rozpoznać m. in. po zapisach do urządzenia /dev/null",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zmienna środowiskowa, np. PATH, jest przekazywana do procesów potomnych powłoki",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "kod wyjścia 0 oznacza zwykle pomyślne wykonanie polecenia",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "bash jest jedynym interpreterem poleceń w systemach UNIX",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "zmienne lokalne powłoki są zawsze automatycznie eksportowane do procesów potomnych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy",
+    "sygnaly-jobs"
+   ],
+   "explanation": "**Dlaczego poprawne:** w niektórych powłokach ignoreeof blokuje wylogowanie przez Ctrl-D; zmienne dzielą się na specjalne, środowiska i programowe.\n\n**Dlaczego błędne:** kod wyjścia jest odwrotny (0 = sukces, nie porażka); błędy poznaje się po kodzie wyjścia i stderr, a /dev/null to „kosz” odrzucający dane, nie wskaźnik błędu; bash nie jest jedyną powłoką; lokalne zmienne nie są eksportowane bez export.\n\n**Zapamiętaj:** 0 = sukces; /dev/null wyrzuca dane.",
+   "changes": []
+  },
+  {
+   "id": 1171,
+   "question": "Pracując w powłoce bash pod kontrolą systemu operacyjnego Linux lub UNIX uruchomienie polecenia: rm / && echo ok",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zazwyczaj zakończy się błędem, a \"ok\" nie zostanie wypisane.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "spowoduje wypisanie na standardowym wyjściu komunikatu o niemożności usunięcia katalogu /",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "usunie wszystkie pliki w systemie.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wypisze \"ok\" niezależnie od wyniku rm.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Operator && wykonuje drugie polecenie tylko wtedy, gdy pierwsze zakończyło się sukcesem (kod wyjścia 0).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Polecenie rm / bez opcji -r usunie katalog główny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "rm bez opcji -r odmawia usunięcia katalogu (komunikat „Is a directory”)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "komunikat o błędzie jest wypisywany na standardowe wyjście błędów (stderr)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "rm / && echo ok wypisze „ok”, bo rm zwraca 0 mimo błędu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "kod wyjścia rm w tym przypadku wynosi 0",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy"
+   ],
+   "explanation": "**Dlaczego poprawne:** rm bez -r nie usuwa katalogów, więc kończy się błędem (niezerowy kod wyjścia), a && wykonuje echo tylko po sukcesie (kod 0).\n\n**Dlaczego błędne:** komunikat idzie na stderr, nie na stdout; rm bez -r nie usuwa katalogu głównego ani plików w systemie; „ok” nie jest wypisane niezależnie od wyniku (to robiłoby ; lub ||).\n\n**Zapamiętaj:** && = drugie polecenie tylko po sukcesie; błędy na stderr.",
+   "changes": []
+  },
+  {
+   "id": 1172,
+   "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie wzorca nazwy pliku data.{txt,sql,iq} będzie pasować do pliku o nazwie:",
+   "options": [
+    {
+     "key": "a",
+     "text": "data.txt, data.sql lub data.iq.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "data.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "dowolnego pliku zaczynającego się od data.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "tylko pliku o nazwie data.{txt,sql,iq}.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "plików o nazwach data.txtsql i data.txtiq.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "wzorzec ten nie jest obsługiwany przez bash.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "nawiasy klamrowe powodują rozwinięcie (brace expansion) do trzech oddzielnych słów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "rozwinięcie następuje niezależnie od tego, czy pliki o takich nazwach istnieją",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wzorzec pasuje do pliku data.csv",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "klamry oznaczają zakres znaków jak w wyrażeniach regularnych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy"
+   ],
+   "explanation": "**Dlaczego poprawne:** bash rozwija data.{txt,sql,iq} do data.txt data.sql data.iq (brace expansion), niezależnie od istnienia plików.\n\n**Dlaczego błędne:** „data.” to nie żadna z trzech nazw; wzorzec nie oznacza dowolnego pliku zaczynającego się od data.; bash go obsługuje; nie skleja alternatyw (data.txtsql); klamry nie oznaczają zakresu znaków (to [ ]).\n\n**Zapamiętaj:** {a,b} = alternatywy, [ab] = jeden znak ze zbioru.",
+   "changes": []
+  },
+  {
+   "id": 1173,
+   "question": "Uprawnienia w systemie Linux/UNIX:",
+   "options": [
+    {
+     "key": "a",
+     "text": "System opiera się na uprawnieniach dla właściciela, grupy i innych (rwx).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "każdy użytkownik ma dostęp do wszystkich plików zarządzanych przez system operacyjny.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "tylko administrator (root) może czytać pliki.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "uprawnienia nie dotyczą katalogów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Uprawnienie 'x' dla katalogu pozwala na wejście do niego (cd).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Uprawnienia są zapisywane w treści pliku.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "uprawnienie 'w' dla katalogu pozwala tworzyć i usuwać w nim pliki",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "polecenie chmod zmienia uprawnienia pliku",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "uprawnienie 'r' dla zwykłego pliku pozwala go uruchomić",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "uprawnienie 'x' dla zwykłego pliku pozwala go modyfikować",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "prawa-dostepu-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** uprawnienia rwx są nadawane osobno właścicielowi, grupie i pozostałym; x dla katalogu pozwala do niego wejść (cd); w dla katalogu pozwala tworzyć i usuwać wpisy.\n\n**Dlaczego błędne:** nie każdy użytkownik ma dostęp do wszystkich plików; czytać mogą też inni niż root; uprawnienia dotyczą także katalogów; zapisane są w i-węźle, nie w treści pliku; r nie daje prawa uruchomienia, x nie daje zapisu.\n\n**Zapamiętaj:** r=czytaj, w=zapisz, x=uruchom/wejdź.",
+   "changes": []
+  },
+  {
+   "id": 1174,
+   "question": "Posługując się nazwami plików, pracując w powłoce bash systemu operacyjnego Linux lub UNIX, ? (pytajnik) oznacza:",
+   "options": [
+    {
+     "key": "a",
+     "text": "dokładnie jeden dowolny znak.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "dowolny ciąg znaków (w tym pusty).",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zero lub jeden znak.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "znak zapytania.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "dowolną cyfrę.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "dowolną literę.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "w nazwach plików ? nie pasuje do pustego ciągu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wzorzec plik?.txt pasuje do plik1.txt, ale nie do plik.txt",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "dowolny ciąg znaków zaczynający się od kropki",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "dowolną liczbę powtórzeń poprzedniego znaku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy"
+   ],
+   "explanation": "**Dlaczego poprawne:** ? w globbingu zastępuje dokładnie jeden dowolny znak, więc plik?.txt pasuje do plik1.txt, ale nie do plik.txt.\n\n**Dlaczego błędne:** dowolny ciąg (w tym pusty) to *; zero lub jeden znak to znaczenie w wyrażeniach regularnych, nie w globbingu; ? nie jest dosłownym znakiem zapytania; nie ogranicza się do cyfry ani litery; nie oznacza powtórzeń.\n\n**Zapamiętaj:** ? = dokładnie jeden znak, * = dowolny ciąg.",
+   "changes": []
+  },
+  {
+   "id": 1175,
+   "question": "System Linux/UNIX:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest systemem wielozadaniowym i wieloużytkownikowym.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "obsługuje wielu użytkowników.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nie posiada systemu plików.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest systemem czasu rzeczywistego z natury.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jądro (kernel) zarządza zasobami sprzętowymi i udostępnia je aplikacjom.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest systemem wyłącznie tekstowym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "używa hierarchicznego drzewa katalogów z jednym korzeniem /",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "urządzenia są reprezentowane jako pliki specjalne w katalogu /dev",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "obsługuje jednocześnie tylko jeden proces",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wymaga graficznego interfejsu do administracji",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "unix-ogolnie",
+    "procesy-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** UNIX/Linux jest wielozadaniowy i wieloużytkownikowy, obsługuje wielu użytkowników, a jądro zarządza zasobami sprzętowymi i udostępnia je aplikacjom.\n\n**Dlaczego błędne:** ma system plików, nie jest z natury systemem czasu rzeczywistego i nie jest wyłącznie tekstowy (ma GUI); nie jest jednoprocesowy i nie wymaga GUI.\n\n**Zapamiętaj:** UNIX = wielozadaniowy, wieloużytkownikowy, jądro zarządza zasobami.",
+   "changes": [
+    "b: false -> true, bo UNIX/Linux faktycznie obsługuje wielu użytkowników"
+   ]
+  },
+  {
+   "id": 1176,
+   "question": "Zmienna $? w powłoce bash dla systemu operacyjnego Linux lub UNIX przechowuje wartość:",
+   "options": [
+    {
+     "key": "a",
+     "text": "kod wyjścia (exit status) ostatnio wykonanego polecenia.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nie ma takiej zmiennej.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "identyfikator procesu powłoki.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "ostatni argument poprzedniego polecenia.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "liczbę argumentów przekazanych do skryptu.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nazwę bieżącego użytkownika.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "dla polecenia zakończonego sukcesem $? wynosi zwykle 0",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wartość $? można sprawdzić poleceniem echo $?",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "$? zawiera PID ostatnio uruchomionego procesu w tle",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "$? zawiera liczbę wszystkich uruchomionych procesów",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy"
+   ],
+   "explanation": "**Dlaczego poprawne:** $? przechowuje kod wyjścia (exit status) ostatnio wykonanego polecenia; 0 oznacza sukces.\n\n**Dlaczego błędne:** zmienna istnieje; PID powłoki to $$, PID ostatniego zadania w tle to $!, liczba argumentów to $#, ostatni argument to $_; nazwa użytkownika nie jest w $?.\n\n**Zapamiętaj:** $? = kod wyjścia, $$ = PID powłoki, $# = liczba argumentów.",
+   "changes": []
+  },
+  {
+   "id": 1177,
+   "question": "Uruchomienie, w powłoce bash systemu operacyjnego Linux lub UNIX, polecenia: ls | less powoduje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "przekazanie standardowego wyjścia ls na standardowe wejście less.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "przekazanie standardowego wyjścia less na standardowe wejście ls.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "równoległe wykonanie obu poleceń bez powiązania.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zapisanie wyniku ls do pliku o nazwie less.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Umożliwia wygodne przeglądanie długiej listy plików generowanej przez ls.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wyświetla tylko błędy polecenia ls.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "ls i less działają jednocześnie jako procesy połączone potokiem (pipe)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "less pozwala wyświetlać dane stronami i je przewijać",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "less zapisuje dane do pliku tymczasowego o nazwie ls",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "znak | przekazuje kod wyjścia ls jako argument less",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy"
+   ],
+   "explanation": "**Dlaczego poprawne:** potok | łączy stdout polecenia ls ze stdin polecenia less, dzięki czemu długą listę można wygodnie przeglądać stronami.\n\n**Dlaczego błędne:** kierunek jest odwrotny w opcji ze stdout less do ls; procesy nie są niepowiązane; wynik nie trafia do pliku o nazwie less (to robi >); less nie wyświetla wyłącznie błędów (stderr nie idzie do potoku).\n\n**Zapamiętaj:** A | B = stdout A do stdin B.",
+   "changes": []
+  },
+  {
+   "id": 1178,
+   "question": "Korzystając z systemu operacyjnego Linux lub UNIX, ustawienie praw dostępu 700 na pliku oznacza:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pełne prawa (rwx) dla właściciela i brak jakichkolwiek praw dla grupy i innych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "brak praw dla innych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "prawo tylko do odczytu dla wszystkich.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "prawo do wykonywania dla grupy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "prawo do zapisu dla wszystkich.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "plik jest ukryty.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "chmod 700 plik jest równoważne u=rwx,go=",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "grupa właściciela nie może ani czytać, ani zapisywać pliku",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "700 nadaje prawo wykonywania wszystkim użytkownikom",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "cyfra 7 oznacza rw- (odczyt i zapis bez wykonywania)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "prawa-dostepu-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** 700 to rwx------: pełne prawa dla właściciela, brak praw dla grupy i innych, więc także brak praw dla innych.\n\n**Dlaczego błędne:** 700 nie daje odczytu ani zapisu wszystkim, ani wykonywania grupie; nie ukrywa pliku (ukrywa go kropka w nazwie); 7 oznacza rwx, a nie rw-.\n\n**Zapamiętaj:** 7 = rwx (4+2+1), 0 = brak praw.",
+   "changes": [
+    "b: false -> true, bo przy 700 inni nie mają żadnych praw, więc 'brak praw dla innych' jest prawdą"
+   ]
+  },
+  {
+   "id": 1179,
+   "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie skrótu klawiszowego Control-c powoduje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wysyła sygnał SIGINT do bieżącego procesu na pierwszym planie.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nic.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "kopiuje zaznaczony tekst.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wylogowuje użytkownika.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Powoduje zazwyczaj natychmiastowe przerwanie działania programu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Zamyka wszystkie okna terminala.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "proces może przechwycić SIGINT lub go zignorować",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Ctrl-c jest kierowane do procesów pierwszoplanowych, a nie do zadań w tle",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wysyła sygnał SIGKILL, którego nie da się przechwycić",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wysyła sygnał SIGSTOP wstrzymujący proces",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sygnaly-jobs",
+    "procesy-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** Ctrl-c powoduje wysłanie SIGINT do procesu na pierwszym planie, co zwykle natychmiast przerywa program.\n\n**Dlaczego błędne:** to nie SIGKILL ani SIGSTOP; nie jest to „nic”; Ctrl-c nie kopiuje tekstu, nie wylogowuje i nie zamyka okien terminala.\n\n**Zapamiętaj:** Ctrl-c = SIGINT, Ctrl-z = SIGTSTP, Ctrl-d = EOF.",
+   "changes": []
+  },
+  {
+   "id": 1180,
+   "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX, użycie skrótu klawiszowego Control-z powoduje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wysyła sygnał SIGTSTP, wstrzymując działanie procesu i przenosząc go w tło.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wstrzymanie działania aktualnie obsługiwanego procesu.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zamyka terminal.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "cofa ostatnią operację w edytorze.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Proces wstrzymany można przywrócić poleceniem 'fg' lub 'bg'.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Usuwa bieżącą linię poleceń.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "polecenie jobs wyświetla listę wstrzymanych zadań",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "bg wznawia wstrzymane zadanie w tle, a fg na pierwszym planie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Ctrl-z kończy proces sygnałem SIGKILL",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wstrzymanego procesu nie da się już wznowić",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sygnaly-jobs",
+    "procesy-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** Ctrl-z wysyła SIGTSTP, który wstrzymuje działanie aktualnie obsługiwanego procesu; wznowienie fg lub bg.\n\n**Dlaczego błędne:** Ctrl-z nie zamyka terminala, nie cofa operacji w edytorze i nie usuwa bieżącej linii poleceń; nie zabija procesu, a wstrzymany proces można wznowić.\n\n**Zapamiętaj:** Ctrl-z = zatrzymaj (SIGTSTP), fg/bg = wznów.",
+   "changes": [
+    "b: false -> true, bo Ctrl-z rzeczywiście wstrzymuje działanie aktualnie obsługiwanego procesu"
+   ]
+  },
+  {
+   "id": 1181,
+   "question": "Posługując się nazwami plików, pracując w powłoce bash systemu operacyjnego Linux lub UNIX, * (gwiazdka) oznacza:",
+   "options": [
+    {
+     "key": "a",
+     "text": "dowolny ciąg znaków (również pusty).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "pojedynczy znak.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "tylko litery.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "tylko cyfry.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "dowolny znak poza kropką na początku nazwy.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "tylko rozszerzenia plików.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "wzorzec *.txt pasuje do wszystkich plików z rozszerzeniem txt",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "gwiazdka nie dopasowuje początkowej kropki w nazwie pliku ukrytego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "gwiazdka dopasowuje separator katalogów /",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "gwiazdka oznacza zero lub więcej powtórzeń poprzedniego znaku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy"
+   ],
+   "explanation": "**Dlaczego poprawne:** * zastępuje dowolny ciąg znaków, również pusty (nie obejmuje jednak początkowej kropki ani /).\n\n**Dlaczego błędne:** pojedynczy znak to ?; * nie oznacza tylko liter, cyfr ani rozszerzeń; „dowolny znak poza kropką” opisuje pojedynczy znak, a nie ciąg; powtórzenia poprzedniego znaku to sens gwiazdki w wyrażeniach regularnych.\n\n**Zapamiętaj:** * = dowolny ciąg (także pusty), ? = jeden znak.",
+   "changes": []
+  },
+  {
+   "id": 1182,
+   "question": "Pliki, których nazwa zaczyna się od kropki (np. .bashrc):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Są traktowane jako pliki ukryte.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "nie mogą być używane.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "są plikami systemowymi tylko do odczytu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "muszą mieć rozszerzenie .dot.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Można je wyświetlić za pomocą polecenia 'ls -a'.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Są automatycznie usuwane przy wylogowaniu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "polecenie ls bez opcji -a ich nie wyświetla",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wzorzec * nie rozwija się do nich",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "atrybut ukrycia jest zapisany w uprawnieniach rwx pliku",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "ukryte pliki są niedostępne dla użytkownika root",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy",
+    "prawa-dostepu-unix"
+   ],
+   "explanation": "**Dlaczego poprawne:** nazwa zaczynająca się od kropki oznacza plik ukryty; ls -a je pokazuje.\n\n**Dlaczego błędne:** można ich używać, nie są plikami tylko do odczytu ani systemowymi z definicji, nie wymagają rozszerzenia .dot, nie są usuwane przy wylogowaniu; ukrycie to tylko konwencja nazwy, a nie uprawnienie.\n\n**Zapamiętaj:** kropka = plik ukryty, ls -a pokazuje.",
+   "changes": []
+  },
+  {
+   "id": 1183,
+   "question": "Pracując w powłoce bash systemu operacyjnego Linux lub UNIX użycie wzorca nazwy pliku [123]data będzie pasować do:",
+   "options": [
+    {
+     "key": "a",
+     "text": "1data, 2data lub 3data.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "data.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "123data.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "dowolnego pliku kończącego się na data.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "plików o nazwach [1]data, [2]data, [3]data.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "tylko pliku o nazwie [123]data.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "nawiasy kwadratowe oznaczają jeden znak ze wskazanego zbioru",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "[1-3]data pasuje do tych samych nazw co [123]data",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wzorzec pasuje do pliku 12data",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "wzorzec pasuje do pliku 4data",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "powloka-podstawy"
+   ],
+   "explanation": "**Dlaczego poprawne:** [123] to jeden znak ze zbioru {1,2,3}, więc pasują 1data, 2data i 3data.\n\n**Dlaczego błędne:** „data” bez cyfry nie pasuje (wymagany jest jeden znak); 123data ma trzy znaki przed data; wzorzec nie oznacza dowolnego pliku kończącego się na data; nawiasy nie są dosłowne, więc [1]data itp. nie pasują.\n\n**Zapamiętaj:** [abc] = dokładnie jeden znak z listy.",
+   "changes": []
+  }
+ ],
+ "glossary": [
+  {
+   "id": "sekcja-krytyczna",
+   "term": "Sekcja krytyczna i wzajemne wykluczanie (critical section, mutual exclusion)",
+   "topic": "operating_systems",
+   "short": "Sekcja krytyczna to fragment kodu operujący na zasobie współdzielonym, który w danej chwili może wykonywać co najwyżej jeden proces.",
+   "details": "Procesy współbieżne modyfikujące wspólne dane bez koordynacji powodują błędy zależne od czasu (race condition), bo wynik zależy od kolejności przeplotu instrukcji. Rozwiązaniem jest protokół: sekcja wejściowa, sekcja krytyczna, sekcja wyjściowa. Poprawne rozwiązanie spełnia trzy warunki: wzajemne wykluczanie (w sekcji jest najwyżej 1 proces), postęp (decyzja o wejściu nie może być odwlekana w nieskończoność) i ograniczone oczekiwanie (brak głodzenia). Zabezpieczenie realizuje się semaforem, muteksem, monitorem lub instrukcjami atomowymi typu test-and-set. Liczba procesów w sekcji krytycznej wynosi więc 0 lub 1, a maksimum to 1, niezależnie od liczby procesów i procesorów.\n\n**Na egzaminie uważaj na:** maksimum to 1, a nie 0, 2 ani n; wykluczanie nie oznacza, że procesy nie mogą działać równolegle poza sekcją; sam brak wzajemnego wykluczania to nie to samo co deadlock.",
+   "related": [
+    "semafor",
+    "producent-konsument"
+   ]
+  },
+  {
+   "id": "semafor",
+   "term": "Semafor (semaphore): operacje P i V",
+   "topic": "operating_systems",
+   "short": "Semafor to zmienna całkowita dostępna tylko przez atomowe operacje P (czekaj) i V (sygnalizuj), służąca do synchronizacji procesów.",
+   "details": "Operacja P(S): jeśli S>0 to S:=S-1, w przeciwnym razie proces czeka (jest blokowany lub aktywnie czeka). Operacja V(S): S:=S+1 i ewentualne obudzenie oczekującego procesu. Semafor binarny przyjmuje wartości 0 i 1, zliczający (uogólniony) dowolną nieujemną wartość. Do sekcji krytycznej używa się semafora inicjowanego wartością 1: P przed wejściem, V po wyjściu. Do wymuszenia kolejności operacji (A przed B) używa się semafora inicjowanego 0: A robi V po zakończeniu, B robi P przed startem. Semafor zliczający można zbudować z dwóch binarnych i zmiennej licznikowej. Aktywne czekanie (busy waiting) to ciągłe testowanie warunku w pętli; unika przejścia do trybu jądra, ale marnuje procesor. Wersja z kolejką usypia proces.\n\n**Na egzaminie uważaj na:** odwrócona kolejność (V przed wejściem, P po wyjściu) jest błędna; aktywne czekanie to NIE usypianie procesu; semafory nadają się też do ustalania kolejności; wartość początkowa mutexu to 1, nie 0.",
+   "related": [
+    "sekcja-krytyczna",
+    "producent-konsument"
+   ]
+  },
+  {
+   "id": "producent-konsument",
+   "term": "Problem producent-konsument (bounded buffer)",
+   "topic": "operating_systems",
+   "short": "Klasyczny problem synchronizacji: producent wstawia elementy do ograniczonego bufora, a konsument je pobiera.",
+   "details": "Producent musi czekać, gdy bufor jest pełny, a konsument, gdy jest pusty; dostęp do bufora musi być wzajemnie wykluczany. Rozwiązanie semaforowe używa trzech semaforów: empty = N (wolne miejsca), full = 0 (zajęte miejsca) i mutex = 1. Producent: P(empty), P(mutex), wstaw, V(mutex), V(full). Konsument: P(full), P(mutex), pobierz, V(mutex), V(empty). Zamiana kolejności P(empty) i P(mutex) może prowadzić do zakleszczenia. Problem można rozwiązać także monitorami (zmienne warunkowe) oraz kolejkami komunikatów, a rozwiązanie działa zarówno w systemach jedno-, jak i wieloprocesorowych.\n\n**Na egzaminie uważaj na:** problem nie ogranicza się do jednego mechanizmu; nie ma nic wspólnego z algorytmem Dijkstry najkrótszej ścieżki; brak synchronizacji prowadzi do wyścigu.",
+   "related": [
+    "semafor",
+    "sekcja-krytyczna",
+    "komunikacja-synchroniczna"
+   ]
+  },
+  {
+   "id": "komunikacja-synchroniczna",
+   "term": "Komunikacja synchroniczna i asynchroniczna (message passing)",
+   "topic": "operating_systems",
+   "short": "W komunikacji synchronicznej nadawca (a często i odbiorca) blokuje się do chwili dostarczenia komunikatu; w asynchronicznej wysyłanie nie blokuje.",
+   "details": "Przy blokującym send nadawca jest zawieszany, dopóki odbiorca nie odbierze komunikatu; blokujący receive czeka na nadejście komunikatu. Spotkanie obu stron to rendezvous (np. Ada, CSP), które jednocześnie synchronizuje ich aktywność i nie wymaga bufora. Komunikacja asynchroniczna używa bufora (kolejki komunikatów), więc nadawca kontynuuje pracę, a odbiorca może odebrać później. Obie formy działają także w systemach rozproszonych. Komunikacja synchroniczna nie jest ,,zawsze szybsza: wymusza oczekiwanie, ale daje pewność odbioru i prostszą semantykę.\n\n**Na egzaminie uważaj na:** synchroniczna to nie brak potwierdzenia odbioru; jest szeroko stosowana w systemach rozproszonych; asynchroniczna wymaga buforowania komunikatów.",
+   "related": [
+    "producent-konsument",
+    "semafor"
+   ]
+  },
+  {
+   "id": "spooling",
+   "term": "Spooling (Simultaneous Peripheral Operations On-Line)",
+   "topic": "operating_systems",
+   "short": "Spooling to zapisywanie danych przeznaczonych dla wolnego urządzenia (np. drukarki) do pamięci pomocniczej i przekazywanie ich do urządzenia w dogodnym czasie.",
+   "details": "Procesy zamiast pisać bezpośrednio do drukarki zapisują zadania do plików w katalogu spool na dysku. Osobny proces (demon spoolera) pobiera zadania z kolejki i wysyła je kolejno do urządzenia. Dzięki temu urządzenia niepodzielne (drukarka) są współdzielone, a procesy nie czekają na wolne I/O. Różni się od buforowania (bufor wyrównuje prędkości i jest zwykle w pamięci RAM, dotyczy pojedynczej operacji) oraz od cache (kopia danych dla szybszego dostępu). Nie jest to swapping (wymiana procesów) ani paging (stronicowanie).\n\n**Na egzaminie uważaj na:** spooling nie jest tym samym co buforowanie, cache ani wirtualizacja; kluczowe jest użycie pamięci pomocniczej i opóźnione przekazanie do urządzenia.",
+   "related": [
+    "buforowanie"
+   ]
+  },
+  {
+   "id": "buforowanie",
+   "term": "Buforowanie plików i wejścia/wyjścia (buffering, buffer cache)",
+   "topic": "operating_systems",
+   "short": "Buforowanie to używanie obszaru pamięci pośredniej między procesem a urządzeniem, aby wyrównać różnice prędkości i zmniejszyć liczbę operacji na dysku.",
+   "details": "System trzyma w pamięci RAM ostatnio używane bloki plików (buffer cache). Odczyt trafiony w bufor nie wymaga operacji dyskowej. Zapis może być opóźniony (write-back) i grupowany, dzięki czemu wiele małych zapisów zamienia się w kilka dużych. Bufory pozwalają także dopasować rozmiary transferów oraz współpracować urządzeniom o różnej szybkości (procesor, dysk, sieć); możliwy jest też odczyt wyprzedzający (read-ahead). Ceną jest ryzyko utraty niezapisanych danych przy awarii zasilania (stąd sync, fsync). Buforowanie nie szyfruje danych, nie blokuje współbieżnego dostępu i jest zarządzane przez system operacyjny, a nie użytkownika. Nie zależy od architektury 32/64-bitowej.\n\n**Na egzaminie uważaj na:** buforowanie zwiększa wydajność dostępu do pamięci pomocniczej i wyrównuje prędkości; nie służy do ochrony przed usunięciem ani szyfrowaniu; nie jest tym samym co spooling.",
+   "related": [
+    "spooling",
+    "przerwania"
+   ]
+  },
+  {
+   "id": "przerwania",
+   "term": "Przerwania (interrupts) i procedura obsługi ISR",
+   "topic": "operating_systems",
+   "short": "Przerwanie to sygnał zmuszający procesor do zawieszenia bieżącego programu i wykonania procedury obsługi przerwania (ISR).",
+   "details": "Urządzenie wejścia/wyjścia zgłasza przerwanie sprzętowe. Procesor kończy bieżącą instrukcję (przerwania sprawdzane są na granicy instrukcji), zapisuje stan (licznik rozkazów, rejestr flag), na podstawie numeru przerwania wybiera procedurę z wektora przerwań i przekazuje jej sterowanie w trybie uprzywilejowanym. Po zakończeniu ISR przywracany jest stan i wznawiany przerwany program. Przerwania maskowalne można czasowo blokować, niemaskowalne (NMI) nie, i służą do zdarzeń krytycznych. Przerwanie zegarowe umożliwia wywłaszczanie procesów. Przerwania nie są ignorowane w trybie użytkownika i mogą pochodzić od sprzętu, a nie tylko od systemu operacyjnego. Po obsłudze procesor nie restartuje systemu.\n\n**Na egzaminie uważaj na:** procesor nie zatrzymuje się na ustalony czas ani nie przerywa instrukcji w połowie (przy przerwaniach I/O); istnieją przerwania maskowalne i niemaskowalne.",
+   "related": [
+    "tryby-pracy-procesora",
+    "multitasking-szeregowanie"
+   ]
+  },
+  {
+   "id": "tryby-pracy-procesora",
+   "term": "Tryb użytkownika i tryb jądra (user mode, kernel mode)",
+   "topic": "operating_systems",
+   "short": "Procesor ma co najmniej dwa tryby: uprzywilejowany (jądra), w którym dozwolone są wszystkie instrukcje, i nieuprzywilejowany (użytkownika).",
+   "details": "Jądro systemu działa w trybie uprzywilejowanym i ma dostęp do wszystkich instrukcji (obsługa I/O, zmiana tablic stron, wyłączanie przerwań) oraz całej pamięci. Programy użytkownika działają w trybie użytkownika; próba wykonania instrukcji uprzywilejowanej powoduje wyjątek. Przejście do trybu jądra następuje przez wywołanie systemowe (system call, instrukcja trap), przerwanie lub wyjątek, a powrót przez specjalną instrukcję powrotu. Program użytkownika nie może sam przełączyć się w tryb jądra zwykłym skokiem. Tryb jądra nie wyklucza dostępu do RAM ani nie służy do przyspieszania obliczeń.\n\n**Na egzaminie uważaj na:** tryb jądra nie jest dostępny dla aplikacji użytkownika wprost; wejście do niego jest kontrolowane przez syscall lub przerwanie.",
+   "related": [
+    "przerwania",
+    "multitasking-szeregowanie"
+   ]
+  },
+  {
+   "id": "multitasking-szeregowanie",
+   "term": "Wielozadaniowość, szeregowanie z wywłaszczaniem i przełączanie kontekstu",
+   "topic": "operating_systems",
+   "short": "Wielozadaniowość to pozorna lub rzeczywista współbieżność wielu procesów; szeregowanie z wywłaszczaniem pozwala odebrać procesorowi bieżący proces.",
+   "details": "Do multitaskingu wystarczy jeden procesor, dzięki podziałowi czasu. System potrzebuje wsparcia sprzętowego (przerwania zegarowe, ochrona pamięci) oraz mechanizmu przełączania kontekstu: zapisania rejestrów i licznika rozkazów procesu do jego PCB i załadowania kontekstu następnego. Szeregowanie niewywłaszczające (np. FCFS) pozwala procesowi działać do zakończenia lub dobrowolnego oddania procesora. Szeregowanie z wywłaszczaniem (Round Robin z kwantem czasu, priorytety z wywłaszczaniem) może przerwać proces po wyczerpaniu kwantu lub pojawieniu się procesu o wyższym priorytecie. Wywłaszczanie zwiększa liczbę przełączeń kontekstu i narzut, ale poprawia czas odpowiedzi. Nie ogranicza się do systemów wsadowych; multitasking działa też z pamięcią wirtualną i siecią.\n\n**Na egzaminie uważaj na:** wywłaszczanie zwiększa, a nie minimalizuje liczbę przełączeń kontekstu; FCFS nie jest wywłaszczające; multitasking nie wymaga 2 procesorów.",
+   "related": [
+    "przerwania",
+    "tryby-pracy-procesora"
+   ]
+  },
+  {
+   "id": "algorytm-bankiera",
+   "term": "Algorytm bankiera i unikanie zakleszczeń (deadlock avoidance)",
+   "topic": "operating_systems",
+   "short": "Algorytm bankiera Dijkstry decyduje, czy przydzielenie zasobów zostawi system w stanie bezpiecznym, i w ten sposób unika zakleszczenia.",
+   "details": "Zakleszczenie wymaga czterech warunków Coffmana: wzajemnego wykluczania, wstrzymywania i oczekiwania, braku wywłaszczania oraz cyklicznego oczekiwania. Algorytm wymaga, by procesy deklarowały maksymalne zapotrzebowanie (Max). Przechowuje macierze Allocation, Need = Max - Allocation oraz wektor Available. Przy żądaniu system symulacyjnie przydziela zasoby i sprawdza, czy istnieje bezpieczna sekwencja procesów, z których każdy może dokończyć pracę z dostępnych zasobów. Jeśli tak, żądanie jest spełnione, w przeciwnym razie proces czeka. Stan bezpieczny gwarantuje brak zakleszczenia, a niebezpieczny nie oznacza jeszcze zakleszczenia. Nie rozwiązuje wzajemnego wykluczania ani wykrywania cykli w grafie, nie dotyczy szeregowania ani pamięci wirtualnej.\n\n**Na egzaminie uważaj na:** avoidance (unikanie) to nie prevention (zapobieganie, eliminacja warunku Coffmana) ani detection (wykrywanie po fakcie).",
+   "related": [
+    "sekcja-krytyczna",
+    "semafor"
+   ]
+  },
+  {
+   "id": "system-operacyjny-definicja",
+   "term": "System operacyjny: definicja i zadania",
+   "topic": "operating_systems",
+   "short": "System operacyjny to zbiór programów (składników programowych) zarządzających zasobami sprzętowymi i pośredniczących między sprzętem a użytkownikiem.",
+   "details": "System operacyjny jest oprogramowaniem, a nie sprzętem. Realizuje zarządzanie procesorem (szeregowanie), pamięcią (stronicowanie, pamięć wirtualna), urządzeniami I/O (sterowniki, spooling, buforowanie), plikami i bezpieczeństwem. Udostępnia aplikacjom interfejs (wywołania systemowe), a użytkownikowi powłokę lub GUI. Sterowniki urządzeń są tylko jednym ze składników i nie wyczerpują definicji. Jądro działa w trybie uprzywilejowanym. Interpreter poleceń nie jest całym systemem, a jedynie jego częścią lub programem towarzyszącym.\n\n**Na egzaminie uważaj na:** system operacyjny to składniki programowe (software routines), nie sprzętowe; nie jest samym zbiorem driverów ani wyłącznie powłoką.",
+   "related": [
+    "tryby-pracy-procesora"
+   ]
+  },
+  {
+   "id": "szyfrowanie-asymetryczne",
+   "term": "Szyfrowanie asymetryczne z kluczem publicznym (public-key cryptography)",
+   "topic": "operating_systems",
+   "short": "W kryptografii asymetrycznej każdy użytkownik ma parę kluczy: publiczny (jawny) do szyfrowania i prywatny (tajny) do odszyfrowania.",
+   "details": "Nadawca szyfruje wiadomość kluczem publicznym odbiorcy, a odszyfrować ją może tylko właściciel odpowiadającego klucza prywatnego. Klucz publiczny można rozpowszechniać, bo z niego praktycznie nie da się wyliczyć klucza prywatnego (trudność faktoryzacji w RSA, logarytmu dyskretnego). Nie potrzeba wcześniejszej wymiany tajnego klucza, co jest zaletą wobec szyfrowania symetrycznego, w którym ten sam klucz szyfruje i deszyfruje. Wadą jest niższa szybkość, dlatego zwykle szyfruje się asymetrycznie klucz sesyjny, a dane symetrycznie. Odwrotne użycie (podpis cyfrowy) polega na podpisaniu kluczem prywatnym i weryfikacji kluczem publicznym.\n\n**Na egzaminie uważaj na:** ten sam klucz nie służy do szyfrowania i deszyfrowania w schemacie asymetrycznym; wiadomość zaszyfrowaną kluczem publicznym odczyta tylko posiadacz klucza prywatnego.",
+   "related": [
+    "system-operacyjny-definicja"
+   ]
+  },
+  {
+   "id": "stronicowanie",
+   "term": "Stronicowanie (paging) i tablica stron",
+   "topic": "operating_systems",
+   "short": "Stronicowanie dzieli pamięć logiczną na strony, a fizyczną na ramki tej samej wielkości; tablica stron tłumaczy adresy logiczne na fizyczne.",
+   "details": "Adres logiczny składa się z numeru strony p i przesunięcia d. Tablica stron mapuje p na numer ramki f, adres fizyczny to f razy rozmiar ramki plus d. Strony procesu mogą trafić do niesąsiadujących ramek, więc nie występuje fragmentacja zewnętrzna, natomiast ostatnia strona procesu bywa niepełna, co daje fragmentację wewnętrzną (średnio pół strony na proces). Rozmiar strony jest potęgą dwójki. Liczba stron przy n-bitowym adresie i stronie 2^k bajtów wynosi ^^2^{n-k}^^; np. adres 16-bitowy i strona 512 B (2^9) daje 2^7 = 128 stron. TLB przyspiesza translację. Stronicowanie różni się od segmentacji (segmenty mają zmienną długość i wynikają z podziału logicznego).\n\n**Na egzaminie uważaj na:** strony to pamięć logiczna, ramki to fizyczna (nie odwrotnie); stronicowanie nie rozwiązuje fragmentacji wewnętrznej; liczbę stron liczymy jako 2^(n-k).",
+   "related": [
+    "tlb",
+    "segmentacja",
+    "pamiec-wirtualna"
+   ]
+  },
+  {
+   "id": "tlb",
+   "term": "TLB (Translation Lookaside Buffer)",
+   "topic": "operating_systems",
+   "short": "TLB to mała, szybka pamięć asocjacyjna przechowująca ostatnio użyte odwzorowania numerów stron na numery ramek.",
+   "details": "Bez TLB każde odwołanie do pamięci wymaga dwóch dostępów do RAM: do tablicy stron i do właściwych danych. TLB działa jak cache tablicy stron: sprzęt porównuje numer strony równolegle ze wszystkimi wpisami. Trafienie (hit) daje numer ramki od razu; chybienie (miss) wymaga przejścia po tablicy stron i wstawienia wpisu do TLB. Efektywny czas dostępu to ważona średnia: ^^EAT = h \\cdot (t_{TLB}+t_{mem}) + (1-h)(t_{TLB}+2t_{mem})^^. TLB jest szybsza niż RAM, nie przechowuje danych z dysku ani kodu instrukcji. Przy przełączeniu procesu zawartość trzeba unieważnić lub oznaczać identyfikatorem przestrzeni adresowej (ASID).\n\n**Na egzaminie uważaj na:** TLB nie jest wolniejsza od RAM; nie zawiera danych ani instrukcji, tylko mapowania stron; jej brak nie uniemożliwia stronicowania, tylko je spowalnia.",
+   "related": [
+    "stronicowanie",
+    "pamiec-wirtualna"
+   ]
+  },
+  {
+   "id": "segmentacja",
+   "term": "Segmentacja pamięci (segmentation)",
+   "topic": "operating_systems",
+   "short": "Segmentacja dzieli przestrzeń adresową procesu na logiczne segmenty o zmiennej długości, np. kod, dane, stos.",
+   "details": "Adres logiczny to para (numer segmentu, przesunięcie). Tablica segmentów zawiera dla każdego segmentu adres bazowy w pamięci fizycznej i limit (długość); przesunięcie większe od limitu powoduje błąd ochrony. Wpis może też zawierać bity ochrony (odczyt, zapis, wykonanie), co ułatwia przydzielanie atrybutów poszczególnym częściom procesu. Segmentacja czysta cierpi na fragmentację zewnętrzną, bo segmenty mają różne długości. Można ją łączyć ze stronicowaniem (segmentacja ze stronicowaniem, np. Intel x86), więc jedno nie wyklucza drugiego. Ramki i numery ramek są pojęciem stronicowania, nie tablicy segmentów.\n\n**Na egzaminie uważaj na:** tablica segmentów zawiera bazę i limit, a nie numery ramek; segmentacja nie wyklucza stronicowania; segmenty mają zmienny rozmiar.",
+   "related": [
+    "stronicowanie",
+    "pamiec-wirtualna"
+   ]
+  },
+  {
+   "id": "pamiec-wirtualna",
+   "term": "Pamięć wirtualna i stronicowanie na żądanie (demand paging, thrashing)",
+   "topic": "operating_systems",
+   "short": "Pamięć wirtualna pozwala wykonywać procesy, które nie mieszczą się w całości w pamięci operacyjnej, ładując strony dopiero, gdy są potrzebne.",
+   "details": "Przy stronicowaniu na żądanie (lazy swapper) strona jest sprowadzana z dysku dopiero przy pierwszym odwołaniu. Odwołanie do strony nieobecnej wywołuje błąd strony (page fault): system znajduje wolną ramkę (lub wybiera ofiarę), wczytuje stronę i wznawia instrukcję. Przestrzeń adresowa procesu może być większa niż pamięć fizyczna. Szamotanie (thrashing) występuje, gdy procesom brakuje ramek, więc przez większość czasu obsługują błędy stron i wykorzystanie procesora gwałtownie spada. Globalne zastępowanie stron pozwala procesowi zabierać ramki innym, więc szamotanie jednego procesu może rozlać się na inne; zastępowanie lokalne ogranicza je do procesu. Zapobiega się mu przez model zbioru roboczego lub kontrolę częstości błędów strony.\n\n**Na egzaminie uważaj na:** globalne zastępowanie stron NIE ogranicza szamotania; stronicowanie na żądanie nie ładuje wszystkich stron na starcie; szamotanie wynika z braku ramek, nie z nadmiaru.",
+   "related": [
+    "stronicowanie",
+    "zastepowanie-stron",
+    "tlb"
+   ]
+  },
+  {
+   "id": "zastepowanie-stron",
+   "term": "Algorytmy zastępowania stron (FIFO, LRU, OPT, druga szansa, anomalia Belady'ego)",
+   "topic": "operating_systems",
+   "short": "Algorytmy zastępowania stron wybierają ofiarę, gdy zabrakło wolnych ramek, a wystąpił błąd strony.",
+   "details": "FIFO usuwa stronę, która najdłużej jest w pamięci (nie tę najdawniej użytą); jest prosty, ale cierpi na anomalię Belady'ego: dla niektórych ciągów odwołań więcej ramek daje więcej błędów strony. OPT (optymalny) usuwa stronę, która najdłużej nie będzie potrzebna; daje minimalną liczbę błędów przy danej liczbie ramek, ale wymaga znajomości przyszłości, więc jest wzorcem porównawczym. LRU usuwa stronę najdawniej użytą; należy do algorytmów stosowych i nie wykazuje anomalii Belady'ego, choć jego implementacja jest kosztowna. Algorytm drugiej szansy (i zegarowy) to FIFO z bitem odniesienia: strona z bitem 1 dostaje drugą szansę (bit zerowany), z bitem 0 jest usuwana.\n\n**Na egzaminie uważaj na:** FIFO ma anomalię Belady'ego, LRU i OPT nie; FIFO patrzy na czas załadowania, LRU na czas ostatniego użycia; OPT jest nierealizowalny w praktyce.",
+   "related": [
+    "pamiec-wirtualna",
+    "stronicowanie"
+   ]
+  },
+  {
+   "id": "prawa-dostepu-unix",
+   "term": "Prawa dostępu do plików w UNIX (rwx, chmod, notacja ósemkowa)",
+   "topic": "unix_admin",
+   "short": "Każdy plik ma uprawnienia odczytu, zapisu i wykonania osobno dla właściciela, grupy i pozostałych użytkowników.",
+   "details": "Uprawnienia to trzy trójki bitów rwx: r=4, w=2, x=1; suma cyfr daje wartość ósemkową dla właściciela, grupy i innych. Przykłady: 453 to właściciel r-- (4), grupa r-x (5), inni -wx (3); 700 to rwx------; 644 to rw-r--r--. Dla plików x pozwala uruchomić plik, r czytać, w modyfikować. Dla katalogów r pozwala listować nazwy, w tworzyć i usuwać wpisy, x wejść do katalogu (cd) i uzyskać dostęp do jego elementów. Uprawnienia zapisane są w i-węźle, a nie w treści pliku. Zmienia je chmod (np. chmod 700 plik lub u=rwx,go=). Root omija sprawdzanie uprawnień. Kolejność sprawdzania: właściciel, grupa, pozostali (pierwsze pasujące).\n\n**Na egzaminie uważaj na:** cyfry czytamy w kolejności właściciel-grupa-inni; uprawnienia dotyczą też katalogów; nie każdy użytkownik ma dostęp do wszystkich plików, ale nie tylko root może czytać.",
+   "related": [
+    "uzytkownicy-logowanie"
+   ]
+  },
+  {
+   "id": "uzytkownicy-logowanie",
+   "term": "Użytkownicy, grupy, logowanie, shadow i PAM w UNIX",
+   "topic": "unix_admin",
+   "short": "UNIX identyfikuje użytkowników nazwą i UID oraz grupami, a logowanie kontrolują pliki konfiguracyjne i moduły PAM.",
+   "details": "Konta opisuje /etc/passwd (nazwa, UID, GID, katalog domowy, powłoka), grupy /etc/group, a zaszyfrowane hasła (skróty) w systemach z techniką shadow /etc/shadow, czytelny tylko dla roota, podczas gdy /etc/passwd jest czytelny dla wszystkich. Nazwa użytkownika musi być unikalna, a UID technicznie może się powtórzyć. Możliwości użytkownika wynikają m.in. z przynależności do grup, które upraszczają zarządzanie i podnoszą bezpieczeństwo. Program login korzysta m.in. z /etc/nologin (blokada logowania zwykłych użytkowników) i /etc/motd (komunikat dnia). PAM (Pluggable Authentication Modules) umożliwia konfigurowalne uwierzytelnianie, ograniczenia haseł i rejestrowanie nieudanych prób. Logowanie może odbywać się z konsoli, zdalnie przez sieć (ssh) i przez su (zmiana kontekstu), a te zdarzenia mogą być odnotowywane w logach.\n\n**Na egzaminie uważaj na:** shadow ukrywa skróty haseł przed zwykłymi użytkownikami; grupy nie dają jednakowych uprawnień; logowanie nie ogranicza się do konsoli i sieci; informacje o użytkowniku są w wielu plikach.",
+   "related": [
+    "prawa-dostepu-unix",
+    "procesy-unix"
+   ]
+  },
+  {
+   "id": "konfiguracja-sieci-unix",
+   "term": "Pliki konfiguracji sieci w UNIX (/etc/hosts, /etc/networks)",
+   "topic": "unix_admin",
+   "short": "/etc/hosts to lokalna lista nazw hostów i ich adresów IP, a /etc/networks lista nazw i adresów znanych sieci.",
+   "details": "/etc/hosts mapuje nazwy hostów (i interfejsów) na adresy IP i jest sprawdzany przed lub obok DNS, zależnie od /etc/nsswitch.conf. Zawiera więc znane hosty, nie tylko lokalne interfejsy. /etc/networks mapuje nazwy sieci na adresy sieci IP (np. loopback 127.0.0.0), a nie listę interfejsów lokalnych. Interfejsy konfiguruje się poleceniami ifconfig lub ip, a trasy poleceniem route lub ip route. Nie ma w nich haseł ani tablicy routingu.\n\n**Na egzaminie uważaj na:** /etc/networks dotyczy sieci, /etc/hosts dotyczy hostów; żaden z nich nie jest listą interfejsów lokalnych samą w sobie.",
+   "related": [
+    "uzytkownicy-logowanie"
+   ]
+  },
+  {
+   "id": "procesy-unix",
+   "term": "Procesy w UNIX (fork, exec, tablica procesów, deskryptory 0-2)",
+   "topic": "unix_admin",
+   "short": "Proces w UNIX to wykonywany program (tekst, dane, stos) tworzony przez fork, opisany rekordem w tablicy procesów jądra.",
+   "details": "Nowy proces powstaje przez fork (kopia procesu macierzystego, wyjątek to proces 0 tworzony przy starcie), a exec podmienia obraz programu w istniejącym procesie. Potomek dziedziczy od rodzica zmienne środowiskowe i otwarte pliki, w tym deskryptory 0 (stdin), 1 (stdout), 2 (stderr). Jądro trzyma rekord w tablicy procesów (właściciele UID/GID, lista segmentów, wskaźnik do U-obszaru z danymi używanymi w trybie jądra). Liczba procesów jest ograniczona parametrami systemu (limity, rozmiar tablicy), nie tylko RAM. Wartość nice jest ustawiana domyślnie (dziedziczona), a nie liczona z obciążenia. Zmiana trybu użytkownik-jądro następuje przy wywołaniu systemowym, przerwaniu lub wyjątku.\n\n**Na egzaminie uważaj na:** dziedziczenie idzie od rodzica do potomka, nie odwrotnie; nice nie zależy od średniego obciążenia; przydział procesora nie jest zmianą trybu z użytkownika na jądro.",
+   "related": [
+    "sygnaly-jobs",
+    "uzytkownicy-logowanie"
+   ]
+  },
+  {
+   "id": "powloka-podstawy",
+   "term": "Powłoka bash: wzorce nazw plików, kody wyjścia i potoki",
+   "topic": "unix_admin",
+   "short": "Bash rozwija wzorce (wildcards) w nazwy plików, zwraca kod wyjścia poleceń w $? i łączy polecenia potokiem.",
+   "details": "Wzorce: * to dowolny ciąg znaków (także pusty, ale nie dopasowuje kropki na początku nazwy ani /), ? to dokładnie jeden znak, [123] to jeden znak ze zbioru (także [1-3]), {a,b,c} to rozwinięcie klamrowe (brace expansion) w osobne słowa, wykonywane niezależnie od istnienia plików: data.{txt,sql,iq} to data.txt data.sql data.iq. Kod wyjścia: 0 oznacza sukces, wartość niezerowa błąd; $? przechowuje kod ostatniego polecenia. A && B wykonuje B tylko po sukcesie A, A || B po porażce. Komunikaty błędów idą na stderr (2), nie na stdout. Potok A | B podłącza stdout procesu A do stdin B; procesy działają równolegle. Przykład: rm / bez -r kończy się błędem (Is a directory), więc echo ok się nie wykona. Pliki zaczynające się od kropki są ukryte (ls -a je pokazuje).\n\n**Na egzaminie uważaj na:** odwrócony sens kodu wyjścia (0 to sukces); ? nie oznacza zera lub jednego znaku; $? to nie PID; potok łączy wyjście lewego z wejściem prawego polecenia.",
+   "related": [
+    "sygnaly-jobs",
+    "prawa-dostepu-unix"
+   ]
+  },
+  {
+   "id": "sygnaly-jobs",
+   "term": "Sygnały i sterowanie zadaniami (SIGINT, SIGTSTP, fg, bg)",
+   "topic": "unix_admin",
+   "short": "Skróty Ctrl-c i Ctrl-z wysyłają do procesu na pierwszym planie sygnały SIGINT i SIGTSTP.",
+   "details": "Ctrl-c powoduje wysłanie SIGINT do grupy procesów pierwszoplanowych, co zwykle natychmiast kończy program (proces może sygnał przechwycić lub zignorować). Ctrl-z wysyła SIGTSTP, który wstrzymuje (zatrzymuje) proces i zwraca powłoce sterowanie; zadanie pozostaje na liście (jobs). Wznowić można je poleceniem fg (na pierwszym planie) lub bg (w tle). SIGKILL i SIGSTOP nie mogą być przechwycone. Ctrl-d oznacza koniec pliku (EOF) i może wylogować powłokę, chyba że ustawiono np. ignoreeof. Skróty nie kopiują tekstu ani nie zamykają okien terminala.\n\n**Na egzaminie uważaj na:** Ctrl-z nie kończy procesu, tylko go zatrzymuje; Ctrl-c to SIGINT, nie SIGKILL; Ctrl-d to EOF.",
+   "related": [
+    "procesy-unix",
+    "powloka-podstawy"
+   ]
+  },
+  {
+   "id": "unix-ogolnie",
+   "term": "System UNIX/Linux: cechy ogólne",
+   "topic": "unix_admin",
+   "short": "UNIX/Linux to wielozadaniowy, wieloużytkownikowy system z hierarchicznym systemem plików i jądrem zarządzającym zasobami.",
+   "details": "Jądro (kernel) zarządza procesami, pamięcią, urządzeniami i systemem plików, a udostępnia je aplikacjom przez wywołania systemowe. System plików to jedno drzewo z korzeniem /, a urządzenia są reprezentowane przez pliki specjalne w /dev. Wielu użytkowników może pracować jednocześnie, a system chroni ich dane uprawnieniami. Standardowo nie jest to system czasu rzeczywistego (szeregowanie z podziałem czasu), choć istnieją rozszerzenia RT. Ma interfejs tekstowy (powłoka), ale także graficzny (X11, Wayland), więc nie jest wyłącznie tekstowy.\n\n**Na egzaminie uważaj na:** UNIX obsługuje wielu użytkowników i ma system plików; nie jest z natury systemem czasu rzeczywistego ani wyłącznie tekstowym.",
+   "related": [
+    "powloka-podstawy",
+    "prawa-dostepu-unix"
+   ]
+  }
+ ]
+}
