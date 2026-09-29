@@ -1,0 +1,2376 @@
+{
+ "questions": [
+  {
+   "id": 1231,
+   "question": "Znaczniki semantyczne w HTML5:",
+   "options": [
+    {
+     "key": "a",
+     "text": "<article>, <section>, <nav>, <header>, <footer>.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "div",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "span",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "table",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "<main>, <aside>, <figure>.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "<font>, <center>, <bold>.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "<header>, <footer> i <nav> niosą znaczenie strukturalne w dokumencie, a nie tylko wygląd.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "<b>, <i> i <font> są znacznikami semantycznymi HTML5.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Znaczniki semantyczne działają tylko po dodaniu biblioteki JavaScript.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "html5-semantyka"
+   ],
+   "explanation": "**Dlaczego poprawne:** <article>, <section>, <nav>, <header>, <footer> oraz <main>, <aside>, <figure> opisują rolę treści w dokumencie.\n\n**Dlaczego błędne:** <div>, <span> i <table> są neutralne lub służą do układu/danych tabelarycznych; <font>, <center>, <b> to znaczniki prezentacyjne (przestarzałe); <bold> w ogóle nie istnieje.\n\n**Zapamiętaj:** Semantyczny znacznik mówi, czym treść jest, a nie jak wygląda.",
+   "changes": [
+    "e: false -> true, bo <main>, <aside> i <figure> to elementy semantyczne HTML5"
+   ]
+  },
+  {
+   "id": 1232,
+   "question": "Jakich znaczników HTML5 użyjesz do wyświetlenia zawartości pliku video?",
+   "options": [
+    {
+     "key": "a",
+     "text": "<video>",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "file",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "media",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "object",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "<embed>",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "<source> (używany wewnątrz <video>).",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "<track> wewnątrz <video> pozwala dodać napisy do filmu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "<audio> służy do wyświetlania zawartości pliku video.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Element <video> wymaga wtyczki Flash do odtwarzania.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "<img src=\"film.mp4\"> poprawnie odtworzy plik video.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "html5-multimedia-formularze"
+   ],
+   "explanation": "**Dlaczego poprawne:** <video> osadza odtwarzacz; <source> podaje alternatywne pliki/formaty wewnątrz <video>, <track> dodaje napisy.\n\n**Dlaczego błędne:** file i media nie są znacznikami HTML. <object> i <embed> to starsze, ogólne mechanizmy osadzania (wtyczki) - nie są znacznikiem HTML5 przeznaczonym do wideo, więc pozostawione jako fałsz. <audio> jest do dźwięku, <img> do obrazów; Flash nie jest potrzebny.\n\n**Zapamiętaj:** Wideo w HTML5: <video> + <source> (+ <track>).",
+   "changes": [
+    "f: false -> true, bo <source> jest znacznikiem używanym do wskazania plików wideo w <video>; <object>/<embed> pozostawione jako false (dopuszczalne, lecz nie właściwe w HTML5 - niejednoznaczne)"
+   ]
+  },
+  {
+   "id": 1233,
+   "question": "Który element może być użyty w HTML5 do specyfikacji linku nawigacyjnego?",
+   "options": [
+    {
+     "key": "a",
+     "text": "<nav> (kontener dla linków) oraz <a> (sam link).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "navigation",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "link",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "anchor",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "<menu>",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "<href>",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Atrybut href elementu <a> określa adres docelowy linku.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "<navigate> to element HTML5 służący do budowy menu nawigacyjnego.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "<nav> jest wymagany, aby element <a> działał jako link.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "html5-semantyka",
+    "html5-multimedia-formularze"
+   ],
+   "explanation": "**Dlaczego poprawne:** <nav> grupuje główne linki nawigacyjne, a <a href> tworzy sam hiperłącze.\n\n**Dlaczego błędne:** navigation, link, anchor nie są elementami nawigacji HTML5 (<link> jest w <head> dla zasobów); <menu> to lista poleceń/paska narzędzi; <href> to atrybut, nie znacznik. <a> działa bez <nav>.\n\n**Zapamiętaj:** <nav> to kontener, <a href> to link.",
+   "changes": []
+  },
+  {
+   "id": 1234,
+   "question": "Atrybut for w znaczniku <label>:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Służy do powiązania etykiety z konkretnym elementem formularza (poprzez jego id).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "aby etykieta była aktywna.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "określa czas wyświetlania etykiety.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy do stylowania w CSS.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "pozwala na kliknięcie w etykietę w celu aktywacji pola.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "jest wymagany dla każdego znacznika <p>.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wartość atrybutu for musi być równa wartości atrybutu id powiązanego pola formularza.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wartość atrybutu for musi być równa atrybutowi name pola formularza.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Atrybut for jest poprawny wyłącznie w znaczniku <div>.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Etykieta może otaczać pole (<label><input></label>) bez użycia atrybutu for.",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "html5-multimedia-formularze"
+   ],
+   "explanation": "**Dlaczego poprawne:** for wiąże etykietę z polem o takim samym id, dzięki czemu kliknięcie etykiety aktywuje (fokusuje/przełącza) pole; zagnieżdżenie pola w <label> daje to samo bez for.\n\n**Dlaczego błędne:** for nie ustawia czasu wyświetlania, nie służy do stylowania, nie odwołuje się do name ani nie dotyczy <p>; sformułowanie 'aby etykieta była aktywna' jest błędne - aktywuje się pole, nie etykieta.\n\n**Zapamiętaj:** label for = id pola.",
+   "changes": [
+    "e: false -> true, bo kliknięcie w etykietę powiązaną przez for aktywuje pole (fokus/zaznaczenie)"
+   ]
+  },
+  {
+   "id": 1235,
+   "question": "Aplikacje Single Page Application (SPA):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Cała logika i renderowanie widoków odbywa się głównie po stronie klienta.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zarządzanie stanem aplikacji realizowane jest po stronie frontendu.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "wymagają przeładowania całej strony przy każdej nawigacji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie mogą korzystać z API.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Przykładowe frameworki to React, Angular, Vue.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Są zawsze indeksowane przez wyszukiwarki lepiej niż strony statyczne.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Po załadowaniu aplikacji dane pobierane są z serwera (fetch/AJAX, np. JSON), a widok aktualizowany bez przeładowania strony.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "SPA nie mogą używać routingu po stronie klienta ani History API.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "SPA nie wymagają JavaScriptu w przeglądarce.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "spa"
+   ],
+   "explanation": "**Dlaczego poprawne:** SPA renderuje widoki i zarządza stanem po stronie klienta, komunikuje się z API i używa React/Angular/Vue.\n\n**Dlaczego błędne:** SPA nie przeładowuje strony przy nawigacji, korzysta z API, a SEO bywa trudniejsze (bez SSR), więc 'zawsze lepiej indeksowane' jest fałszem.\n\n**Zapamiętaj:** SPA = logika i stan we froncie, backend jako API.",
+   "changes": [
+    "b: false -> true, bo zarządzanie stanem w SPA jest po stronie frontendu"
+   ]
+  },
+  {
+   "id": 1236,
+   "question": "Jakich operacji HTTP możesz użyć do aktualizacji części danych istniejącego już użytkownika?",
+   "options": [
+    {
+     "key": "a",
+     "text": "PATCH (częściowa aktualizacja), PUT (pełna zamiana).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "PATCH",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "POST",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "UPDATE",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "DELETE",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "OPTIONS",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "PUT może posłużyć do aktualizacji użytkownika, o ile klient wyśle jego pełną reprezentację.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "GET służy do modyfikacji danych istniejącego użytkownika.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "HEAD służy do częściowej aktualizacji zasobu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rest-http"
+   ],
+   "explanation": "**Dlaczego poprawne:** PATCH modyfikuje część zasobu, PUT zastępuje całość.\n\n**Dlaczego błędne:** POST służy zwykle do tworzenia (nie jest idiomatyczną aktualizacją), UPDATE nie jest metodą HTTP, DELETE usuwa, OPTIONS zwraca dostępne metody, GET/HEAD tylko odczytują.\n\n**Zapamiętaj:** Częściowo: PATCH, całościowo: PUT.",
+   "changes": [
+    "b: false -> true, bo PATCH to częściowa aktualizacja zasobu (pasuje do stemu)"
+   ]
+  },
+  {
+   "id": 1237,
+   "question": "Który z poniższych adresów API ( według konwencji REST API) powinien być użyty do zwrócenia informacji o wszystkich samochodach użytkownika posiadającego id równe 4?",
+   "options": [
+    {
+     "key": "a",
+     "text": "/users/4/cars",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "/users?id=4/cars/all",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "/get_all_cars_for_user_4",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "/cars/user/4",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "/users/4/actions/get-cars",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "/api/v1/users/4/cars",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Nazwy zasobów w URL powinny być rzeczownikami, np. /users/4/cars, a nie czasownikami.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "/users/cars/4 poprawnie zwraca samochody użytkownika o id 4.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "/users/4/getCars jest zgodny z konwencją REST.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rest-http"
+   ],
+   "explanation": "**Dlaczego poprawne:** Hierarchia /users/{id}/cars (także z prefiksem /api/v1) jest zgodna z REST: rzeczowniki + hierarchia zasobów.\n\n**Dlaczego błędne:** Czasowniki w URL (get_all..., actions/get-cars, getCars), zapytanie z '/cars/all' wewnątrz query stringu i odwrócona hierarchia /cars/user/4 nie są konwencją REST.\n\n**Zapamiętaj:** REST: URL = zasób, akcja = metoda HTTP.",
+   "changes": [
+    "f: false -> true, bo /api/v1/users/4/cars to poprawna ścieżka REST (prefiks wersji nie zmienia hierarchii)"
+   ]
+  },
+  {
+   "id": 1238,
+   "question": "Poprawny format JSON:",
+   "options": [
+    {
+     "key": "a",
+     "text": "{ \"user\": \"Jan Kowalski\", \"age\": 100 }",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "{ \"user\" : Jan Kowalski, \"age\": 100 } (tekst bez cudzysłowów)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "{ user: \"Jan Kowalski\", age: 100 } (klucz bez cudzysłowów)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "[ \"user\": \"Jan Kowalski\" ] (para klucz: wartość w tablicy)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "{ 'user': 'Jan Kowalski' } (apostrofy zamiast cudzysłowów)",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "{ \"user\": \"Jan\", \"data\": [1, 2, 3] }",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "{ \"cars\": [], \"active\": true, \"address\": null } jest poprawnym JSON.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "{ \"user\": \"Jan\", } (przecinek po ostatniej parze) jest poprawnym JSON.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "{ \"age\": 0x1A } jest poprawnym JSON.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "json"
+   ],
+   "explanation": "**Dlaczego poprawne:** JSON wymaga kluczy i tekstów w cudzysłowach \"...\", a wartości mogą być liczbami, tekstami, tablicami, obiektami, true/false/null.\n\n**Dlaczego błędne:** Brak cudzysłowów wokół tekstu lub klucza, apostrofy, para klucz:wartość w tablicy oraz przecinek na końcu i liczby hex są niepoprawne.\n\n**Zapamiętaj:** JSON: tylko cudzysłowy podwójne, bez przecinka końcowego.",
+   "changes": [
+    "f: false -> true, bo obiekt z tablicą liczb jest poprawnym JSON",
+    "b: dopisano objaśnienie; c/d/e: dopisano krótkie objaśnienia w nawiasach, by teksty opcji były rozróżnialne (unikalne)"
+   ]
+  },
+  {
+   "id": 1239,
+   "question": "Responsywność (Responsive Web Design):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Technika projektowania stron tak, aby ich wygląd dostosowywał się do rozmiaru ekranu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zapewnia dostosowanie wyglądu aplikacji w kontekście potrzeb użytkownika.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "oznacza szybkie reagowanie serwera na zapytania.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "dotyczy tylko aplikacji mobilnych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wykorzystuje elastyczne siatki (grid), elastyczne obrazy oraz Media Queries.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga tworzenia oddzielnej strony pod adresem m.domena.pl.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Media Queries pozwalają stosować różne style CSS zależnie od np. szerokości okna.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Meta viewport (width=device-width) jest typowym elementem strony responsywnej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Media Queries są wykonywane po stronie serwera w kodzie backendu.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Elastyczne obrazy w RWD mają zawsze stały rozmiar wyrażony w pikselach.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rwd"
+   ],
+   "explanation": "**Dlaczego poprawne:** RWD dopasowuje układ do ekranu za pomocą elastycznych siatek, obrazów i Media Queries.\n\n**Dlaczego błędne:** RWD to nie szybkość serwera, nie tylko aplikacje mobilne, nie osobna witryna m.domena.pl; sformułowanie o 'potrzebach użytkownika' to raczej personalizacja/dostępność.\n\n**Zapamiętaj:** RWD = jedna strona, wiele rozmiarów ekranu.",
+   "changes": []
+  },
+  {
+   "id": 1240,
+   "question": "Nowoczesne frameworki JavaScript (JavaScript frameworks) takie jak Angular, React czy Vue",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wykorzystują komponentowe podejście do budowy interfejsu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wykorzystują wiązania dwukierunkowe do synchronizacji.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "służą wyłącznie do stylowania stron.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie pozwalają na używanie zewnętrznych bibliotek.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Pozwalają na deklaratywne definiowanie interfejsu użytkownika.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga znajomości języka Java.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Angular, React i Vue umożliwiają tworzenie aplikacji typu SPA.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Frameworki JavaScript działają wyłącznie po stronie serwera i nie mogą działać w przeglądarce.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Komponenty w Angular, React i Vue nie mogą być zagnieżdżane.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "frameworki-js",
+    "spa"
+   ],
+   "explanation": "**Dlaczego poprawne:** Frameworki opierają się na komponentach i deklaratywnym opisie UI.\n\n**Dlaczego błędne:** Wiązanie dwukierunkowe jest typowe dla Angulara/Vue, ale React ma przepływ jednokierunkowy - więc nie dotyczy wszystkich trzech; nie służą tylko do stylowania, pozwalają na biblioteki zewnętrzne, nie wymagają Javy.\n\n**Zapamiętaj:** Komponenty + deklaratywność, nie 'dwukierunkowość' wszędzie.",
+   "changes": []
+  },
+  {
+   "id": 1241,
+   "question": "Node.js:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest środowiskiem uruchomieniowym JavaScript opartym na silniku V8.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "implementuje tylko operacje asynchroniczne.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest frameworkiem CSS.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy do tworzenia wyłącznie aplikacji desktopowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wykorzystuje model Event Loop do obsługi wielu połączeń jednocześnie.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest językiem programowania kompilowanym do kodu maszynowego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "npm jest domyślnym menedżerem pakietów dla Node.js.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Node.js uruchamia kod aplikacji w osobnym wątku dla każdego połączenia klienta.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Node.js działa wyłącznie w przeglądarce internetowej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "nodejs"
+   ],
+   "explanation": "**Dlaczego poprawne:** Node.js = środowisko JS na silniku V8 z pętlą zdarzeń (jeden wątek JS, nieblokujące I/O).\n\n**Dlaczego błędne:** Node ma też API synchroniczne (np. fs.readFileSync), więc 'tylko asynchroniczne' jest fałszem; nie jest frameworkiem CSS, nie służy tylko do desktopu ani nie jest językiem kompilowanym.\n\n**Zapamiętaj:** Node = V8 + event loop.",
+   "changes": []
+  },
+  {
+   "id": 1257,
+   "question": "Wzorzec architektury Model-View-Controller (MVC) w technologii ASP .NET Core MVC obejmuje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Modele (dane), Widoki (interfejs), Kontrolery (logika).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Warstwę modeli - warstwa definiująca strukturę danych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Kontrolery służą do stylowania stron.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Widoki odpowiadają za dostęp do bazy danych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Kontroler wybiera odpowiedni widok i przekazuje mu dane z modelu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "MVC jest wzorcem wyłącznie dla aplikacji desktopowych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Kontroler w ASP.NET Core MVC zwykle dziedziczy po klasie Controller, a jego publiczne metody to akcje.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Widok w MVC zawiera logikę biznesową aplikacji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Kontroler renderuje HTML, a widok obsługuje żądania HTTP.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "mvc-aspnet"
+   ],
+   "explanation": "**Dlaczego poprawne:** Model to dane, widok to UI, kontroler przyjmuje żądanie, wybiera widok i przekazuje model.\n\n**Dlaczego błędne:** Kontrolery nie stylują stron, widoki nie sięgają do bazy, MVC nie jest tylko desktopowy.\n\n**Zapamiętaj:** M - dane, V - prezentacja, C - sterowanie.",
+   "changes": [
+    "b: false -> true, bo model to warstwa definiująca strukturę danych i jest częścią MVC"
+   ]
+  },
+  {
+   "id": 1258,
+   "question": "Aby przechowywać stan aplikacji webowej (dane ulotne, których nie chcemy utrwalać w bazie danych) w ASP.NET CORE MVC można użyć:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Session, Cookies, TempData, QueryString.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Stanu sesji (HttpContext.Session)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Tylko w bazie danych SQL Server.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "W plikach tekstowych na serwerze.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "View State nie jest używany w ASP.NET Core.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Protokół HTTP jest stanowy z natury.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Session w ASP.NET Core wymaga zarejestrowania usług i middleware (AddSession, UseSession).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "TempData przechowuje dane bezterminowo, aż do ręcznego usunięcia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zmienna statyczna jest zalecanym sposobem przechowywania stanu pojedynczego użytkownika.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stan-aspnet"
+   ],
+   "explanation": "**Dlaczego poprawne:** Session, Cookies, TempData i QueryString przechowują stan ulotny; ViewState znany z WebForms nie istnieje w Core.\n\n**Dlaczego błędne:** Baza SQL nie jest jedyną opcją, pliki tekstowe nie są zalecane, a HTTP jest bezstanowy.\n\n**Zapamiętaj:** HTTP bezstanowy - stan dodają sesje, cookies, TempData.",
+   "changes": [
+    "b: false -> true, bo HttpContext.Session jest mechanizmem stanu sesji"
+   ]
+  },
+  {
+   "id": 1259,
+   "question": "Przekazywanie przez referencję w C#:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Słowa kluczowe ref oraz out pozwalają na przekazywanie typów wartościowych przez referencję.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Przekazać do metody zmienną przez referencję przy pomocy słowa kluczowego ref.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "C# nie obsługuje referencji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wszystkie obiekty są zawsze przekazywane przez kopię.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "'out' wymaga, aby zmienna została zainicjalizowana wewnątrz metody.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "'ref' nie wymaga inicjalizacji zmiennej przed przekazaniem.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Przy wywołaniu metody z parametrem ref słowo ref trzeba podać także w miejscu wywołania.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Parametr out pozwala metodzie odczytać wartość przekazanej zmiennej przed jej przypisaniem.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Słowa ref i out można stosować wyłącznie dla typów referencyjnych.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "csharp-ref-out"
+   ],
+   "explanation": "**Dlaczego poprawne:** ref/out przekazują zmienną przez referencję; out musi być przypisany w metodzie, ref - zainicjalizowany przed wywołaniem.\n\n**Dlaczego błędne:** C# obsługuje referencje; obiekty (typy referencyjne) przekazywane są przez kopię referencji, a nie 'zawsze kopię obiektu'; ref wymaga inicjalizacji.\n\n**Zapamiętaj:** ref: init przed, out: przypisanie w środku.",
+   "changes": [
+    "b: false -> true, bo ref służy do przekazania zmiennej przez referencję",
+    "[POSITION-DEPENDENT]"
+   ]
+  },
+  {
+   "id": 1260,
+   "question": "Czy w języku C# można tworzyć klasy zagnieżdżone (deklarować klasę wewnątrz deklaracji innej klasy)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Klasy zagnieżdżone mogą mieć dowolny modyfikator dostępu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Można deklarować, ale tylko klasy prywatne.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "C# nie pozwala na klasy zagnieżdżone.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Klasy zagnieżdżone muszą być statyczne.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Klasa zagnieżdżona ma dostęp do prywatnych pól klasy nadrzędnej.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Klasa nadrzędna ma dostęp do prywatnych pól klasy zagnieżdżonej.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Domyślny modyfikator dostępu klasy zagnieżdżonej to private.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Klasa zagnieżdżona nie może dziedziczyć po innej klasie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Klasa zagnieżdżona może być tworzona wyłącznie wewnątrz metod klasy nadrzędnej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "csharp-klasy-rzutowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** Klasy zagnieżdżone są dozwolone, z dowolnym modyfikatorem i widzą prywatne składowe klasy zewnętrznej.\n\n**Dlaczego błędne:** Nie muszą być statyczne ani prywatne; klasa zewnętrzna nie widzi prywatnych pól zagnieżdżonej.\n\n**Zapamiętaj:** Wewnętrzna widzi zewnętrzną, nie odwrotnie.",
+   "changes": [
+    "e: false -> true, bo klasa zagnieżdżona ma dostęp do prywatnych składowych klasy nadrzędnej"
+   ]
+  },
+  {
+   "id": 1261,
+   "question": "Które z poniższych konwersji typów (rzutowań typów) w języku C# są dozwolone?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Każda klasa dziedziczy po System.Object, więc upcasting jest zawsze bezpieczny.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Rzutowanie referencji do obiektu dowolnej klasy na referencję do klasy \"Object\"",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Można rzutować string na int bezpośrednio.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Rzutowanie w dół (downcasting) nigdy nie wymaga operatora rzutowania.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Operator 'as' zwraca null, jeśli rzutowanie się nie powiedzie.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Operator 'is' służy do konwersji typów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Rzutowanie w dół (downcast) z Object na string wymaga jawnego operatora rzutowania.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jawne rzutowanie (string)obj zwraca null zamiast rzucać wyjątek, gdy typ jest niezgodny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Operator as można zastosować do typu int (bez możliwości null).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "csharp-klasy-rzutowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** Upcast do Object jest zawsze dozwolony, as zwraca null przy niepowodzeniu.\n\n**Dlaczego błędne:** string na int nie rzutuje się bezpośrednio, downcast wymaga jawnego rzutowania, is sprawdza typ, nie konwertuje.\n\n**Zapamiętaj:** Upcast niejawny, downcast jawny, as nie rzuca wyjątku.",
+   "changes": [
+    "b: false -> true, bo rzutowanie na Object jest zawsze dozwolone (upcast)"
+   ]
+  },
+  {
+   "id": 1262,
+   "question": "LINQ (Language Integrated Query):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Składnia zintegrowana z językiem pozwalająca na operacje na kolekcjach.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Language INtegrated Query - zestaw konstrukcji programistycznych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Biblioteka do obsługi grafiki 3D.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Protokół komunikacji sieciowej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Pozwala na zapytania do różnych źródeł danych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga użycia słowa kluczowego 'foreach' do każdego zapytania.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zapytania LINQ można pisać w składni zapytaniowej (from ... select) lub metodami rozszerzającymi (Where, Select).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "LINQ to Objects działa wyłącznie na tabelach bazy danych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zapytanie LINQ jest zawsze wykonywane natychmiast w chwili jego zdefiniowania.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "linq"
+   ],
+   "explanation": "**Dlaczego poprawne:** LINQ to zintegrowana z językiem składnia zapytań do kolekcji i różnych źródeł danych.\n\n**Dlaczego błędne:** LINQ nie służy do grafiki ani nie jest protokołem, nie wymaga foreach (wykonanie odroczone i wyzwalane m.in. ToList/foreach, ale nie każdym zapytaniem).\n\n**Zapamiętaj:** LINQ = zapytania w języku C# dla dowolnego źródła.",
+   "changes": [
+    "b: false -> true, bo to poprawne rozwinięcie skrótu i opis LINQ"
+   ]
+  },
+  {
+   "id": 1263,
+   "question": "Deklaracja Polecenia najwyższego poziomu (Top-level statements) w języku C# podlega pewnym zasadom. Wśród nich są:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pozwalają na pisanie kodu bezpośrednio w pliku bez jawnej definicji klasy i Main.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "dyrektywa \"using\" musi znajdować się na początku pliku.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Można mieć wiele plików z Top-level statements w jednym projekcie.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie można w nich definiować metod.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "W projekcie może istnieć tylko jeden plik z Top-level statements.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Są dostępne od wersji C# 1.0.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Kompilator generuje dla top-level statements niejawną metodę Main.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "W top-level statements nie można używać słowa kluczowego await.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Instrukcje najwyższego poziomu muszą być w pliku o nazwie Program.cs.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "csharp-top-level-lambda-zdarzenia"
+   ],
+   "explanation": "**Dlaczego poprawne:** Top-level statements omijają jawną klasę i Main, dyrektywy using muszą poprzedzać instrukcje, tylko jeden plik w projekcie.\n\n**Dlaczego błędne:** Można definiować metody (funkcje lokalne), wiele plików nie jest dozwolone, funkcja dostępna od C# 9.\n\n**Zapamiętaj:** Jeden plik top-level, using na początku.",
+   "changes": [
+    "b: naprawiono uszkodzony tekst 'znajdいる' -> 'znajdować się'; false -> true, bo using musi poprzedzać instrukcje najwyższego poziomu",
+    "d: pozostaje false, można definiować metody/funkcje lokalne"
+   ]
+  },
+  {
+   "id": 1264,
+   "question": "Synchronizacja wątków w C#:",
+   "options": [
+    {
+     "key": "a",
+     "text": "lock, Monitor, Mutex, Semaphore, AutoResetEvent.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "semaforów (\"Semaphore\")",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "tylko za pomocą instrukcji if.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie jest możliwa w .NET Core.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Instrukcja lock jest cukrem składniowym dla Monitor.Enter i Monitor.Exit.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Mutex działa tylko w obrębie jednego procesu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Instrukcja lock przyjmuje obiekt typu referencyjnego jako obiekt blokady.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Instrukcja lock może być użyta na zmiennej typu int.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Semaphore dopuszcza zawsze tylko jeden wątek w sekcji krytycznej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "csharp-synchronizacja"
+   ],
+   "explanation": "**Dlaczego poprawne:** lock, Monitor, Mutex, Semaphore, AutoResetEvent służą do synchronizacji; lock = Monitor.Enter/Exit w try/finally.\n\n**Dlaczego błędne:** if nie zapewnia synchronizacji, .NET Core ją wspiera, Mutex nazwany działa między procesami.\n\n**Zapamiętaj:** lock to cukier składniowy dla Monitor.",
+   "changes": [
+    "b: false -> true, bo Semaphore jest mechanizmem synchronizacji wątków"
+   ]
+  },
+  {
+   "id": 1265,
+   "question": "Do definiowania wyrażeń lambda (lambda expression) w C# używa się operatora:",
+   "options": [
+    {
+     "key": "a",
+     "text": "=> (tzw. goes to).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Operator strzałki ->",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Operator podwójnego dwukropka ::",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "lambda (słowo kluczowe)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Operator przypisania := (jak w Pascalu)",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Operator kropki .",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wyrażenie x => x * 2 może być przypisane do delegata, np. Func<int,int>.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Operator => w lambdach służy do porównania równości.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Operator ?? jest używany do definiowania wyrażeń lambda.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "csharp-top-level-lambda-zdarzenia"
+   ],
+   "explanation": "**Dlaczego poprawne:** Operator => (goes to) oddziela parametry od ciała lambdy.\n\n**Dlaczego błędne:** -> jest w Javie/C++ i wskaźnikach, :: to alias przestrzeni nazw, := to nie C#, lambda nie jest słowem kluczowym.\n\n**Zapamiętaj:** C# lambda: =>.",
+   "changes": [
+    "b-f: dopisano słowo 'Operator' przed symbolami, by teksty opcji były unikalne"
+   ]
+  },
+  {
+   "id": 1266,
+   "question": "Zarejestrowanie zdarzenia (metody, która będzie wywołana w celu obsługi zdarzenia) w języku C# odbywa się za pomocą operatora:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Używa się operatora += do dodania delegata.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Operator dodania delegata +=",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Operator przypisania =",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "subscribe",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "add",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "register",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Operator -= usuwa wcześniej dodaną metodę z listy obsługi zdarzenia.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zdarzenie rejestruje się metodą Subscribe() dostępną w każdej klasie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Operator = jest poprawnym sposobem rejestracji obsługi zdarzenia poza klasą, która je definiuje.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "csharp-top-level-lambda-zdarzenia"
+   ],
+   "explanation": "**Dlaczego poprawne:** Obsługę zdarzenia dodaje się operatorem += (delegat), usuwa -=.\n\n**Dlaczego błędne:** subscribe/add/register nie istnieją; = poza klasą nie jest dozwolone dla event.\n\n**Zapamiętaj:** += dodaje handler, -= usuwa.",
+   "changes": [
+    "b: false -> true, bo += to właśnie ten operator",
+    "b,c: dopisano słowo 'Operator' dla unikalności tekstów"
+   ]
+  },
+  {
+   "id": 1150,
+   "question": "Parser LR:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest parserem typu bottom-up (od dołu do góry).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "odczytuje symbole wejściowe od lewej strony do prawej.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nie obsługuje gramatyk z lewostronną rekurencją.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest wolniejszy od parsera LL.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "buduje wyprowadzenie prawostronne w odwrotnej kolejności.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "jest stosowany tylko dla języków regularnych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Parser LR przesuwa symbole na stos i redukuje uchwyty (shift/reduce).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Parser LR buduje drzewo wyprowadzenia od symbolu startowego w dół.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Parser LR nie używa stosu, bo działa na automacie skończonym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** LR czyta wejście od lewej, jest wstępujący i buduje wyprowadzenie prawostronne w odwrotnej kolejności.\n\n**Dlaczego błędne:** LR obsługuje lewostronną rekurencję, nie jest wolniejszy (liniowy), obejmuje bardzo szeroką klasę języków bezkontekstowych.\n\n**Zapamiętaj:** L-R: Left-to-right, Rightmost reverse.",
+   "changes": [
+    "b: false -> true, bo 'L' w LR oznacza czytanie wejścia od lewej do prawej"
+   ]
+  },
+  {
+   "id": 1151,
+   "question": "Rozstrzygalność przynależności gramatyki bezkontekstowej do klasy LL(k):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest rozstrzygalna dla dowolnego ustalonego k.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jest rozstrzygalne tylko jeśli gramatyka zawiera lewostronną rekurencję.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "jest nierozstrzygalna dla k > 1.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zależy od liczby symboli terminalnych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "jest nierozstrzygalna dla gramatyk wieloznacznych.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "wymaga sprowadzenia do postaci normalnej Chomsky'ego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Dla LL(1) sprawdza się rozłączność zbiorów FIRST alternatyw (a przy alternatywie pustej także FIRST/FOLLOW).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Gramatyka z lewostronną rekurencją może być LL(k) dla dostatecznie dużego k.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Każda gramatyka bezkontekstowa jest LL(k) dla pewnego k.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "gramatyki-ll-lr-klasy",
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** Przynależność do LL(k) dla ustalonego k jest rozstrzygalna algorytmem.\n\n**Dlaczego błędne:** Rozstrzygalność nie zależy od rekurencji, k>1, liczby terminali, wieloznaczności (wieloznaczna po prostu nie jest LL(k)) ani od CNF.\n\n**Zapamiętaj:** LL(k) dla ustalonego k - rozstrzygalne.",
+   "changes": []
+  },
+  {
+   "id": 1152,
+   "question": "Porównanie gramatyk LL i LR:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Klasa gramatyk LL(k) jest właściwym podzbiorem klasy gramatyk LR(k).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "gramatyki LL oraz LR opisują częściowo rozłączne klasy gramatyk.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Każda gramatyka LR jest gramatyką LL.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Gramatyki LL są potężniejsze od LR.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Gramatyki LR radzą sobie z lewostronną rekurencją, której LL nie obsługuje bezpośrednio.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Gramatyki LL(1) są równoważne gramatykom LR(1).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Każda gramatyka LL(1) jest gramatyką LR(1).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jeśli gramatyka jest LR(1), to jest też LL(1).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Gramatyki LL(k) obsługują lewostronną rekurencję bez żadnych przekształceń.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "gramatyki-ll-lr-klasy"
+   ],
+   "explanation": "**Dlaczego poprawne:** LL(k) jest właściwym podzbiorem LR(k), a LR poradzi sobie z lewą rekurencją.\n\n**Dlaczego błędne:** Klasy nie są rozłączne, nie każda LR jest LL, LL nie jest silniejsza, LL(1) nie jest równoważna LR(1).\n\n**Zapamiętaj:** LL ⊂ LR.",
+   "changes": []
+  },
+  {
+   "id": 1153,
+   "question": "Złożoność analizatorów LL(k) oraz LR(k) dla słowa o długości n wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Czasowa O(n) i pamięciowa O(n).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "czasową Theta(n) i pamięciową Theta(n).",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Czasowa O(n^2).",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Czasowa O(2^n).",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Pamięciowa O(1).",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Czasowa O(log n).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Czas działania analizatorów LL(k) i LR(k) jest liniowy względem długości słowa.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Czasowa O(n log n).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Czasowa O(n^3).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** Oba analizatory działają w czasie liniowym, pamięć (stos) do O(n). Wariant z Theta dla pamięci pozostawiono jako fałsz, bo zużycie stosu zależy od wejścia i gramatyki.\n\n**Dlaczego błędne:** O(n^2), O(2^n), O(log n) i pamięć O(1) są nieprawdziwe (trzeba przeczytać całe wejście, a stos może rosnąć).\n\n**Zapamiętaj:** Parsowanie LL/LR jest liniowe.",
+   "changes": []
+  },
+  {
+   "id": 1154,
+   "question": "Dla gramatyki bezkontekstowej z produkcjami: E→E+E E→E*E E → id następujące wyprowadzenia są prawostronne:",
+   "options": [
+    {
+     "key": "a",
+     "text": "E => E+E => E+EE => E+Eid => E+idid => id+idid.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "E => E+E => id+E => id+EE => id+idE => id+idid.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "E => id.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "E => EE => idid.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest niemożliwe dla tej gramatyki.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Zawsze kończy się symbolem E.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Ciąg E => E*E => E*id => id*id to wyprowadzenie prawostronne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Ciąg E => E+E => id+E => id+id to wyprowadzenie prawostronne.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wyprowadzenie E => E*E => id*E => id*id należy uznać za prawostronne, bo kończy się terminalami.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wyprowadzenia-lewo-prawostronne",
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** Wyprowadzenie prawostronne w każdym kroku rozwija skrajnie prawy nieterminal; jednokrokowe E => id jest zarówno lewo-, jak i prawostronne.\n\n**Dlaczego błędne:** Wyprowadzenie rozwijające najpierw lewe E jest lewostronne; 'E => EE' nie wynika z produkcji (brak operatora).\n\n**Zapamiętaj:** Prawostronne = zawsze rozwijaj skrajnie prawy nieterminal.",
+   "changes": [
+    "c: false -> true, bo jednokrokowe E => id jest poprawnym wyprowadzeniem prawostronnym"
+   ]
+  },
+  {
+   "id": 1155,
+   "question": "Które stwierdzenie jest prawdziwe dotyczące gramatyk LR?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nie każda gramatyka bezkontekstowa jest klasy LR(k) (np. gramatyki wieloznaczne nie są LR).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Każda gramatyka bezkontekstowa jest klasy LR(k) dla pewnego k > 0.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Gramatyki LR(0) mogą opisywać wszystkie języki bezkontekstowe.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Analiza LR wymaga gramatyki w postaci normalnej Greibach.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Gramatyki LR(1) są wystarczające do opisu większości języków programowania.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Gramatyki LR nie mogą być generowane automatycznie.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Gramatyki LR(1) opisują dokładnie deterministyczne języki bezkontekstowe.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Gramatyka wieloznaczna może być LR(1) po dodaniu lookahead.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "LR(0) jest silniejsza od LR(1).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "gramatyki-ll-lr-klasy"
+   ],
+   "explanation": "**Dlaczego poprawne:** Nie każda CFG jest LR(k); wieloznaczne nie są. LR(1) wystarcza dla większości języków programowania.\n\n**Dlaczego błędne:** Nie każda gramatyka jest LR(k), LR(0) jest najsłabsza, nie wymaga Greibach, generatory (yacc/bison) budują parsery LR automatycznie.\n\n**Zapamiętaj:** Wieloznaczność wyklucza LR(k).",
+   "changes": []
+  },
+  {
+   "id": 1156,
+   "question": "Dla gramatyki bezkontekstowej z produkcjami: E' → E E→E+T | T T→T*F|F F → (E) | id domknięcie (closure) zbioru sytuacji I= {E' →•E} zawiera sytuacje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "E' -> .E, E -> .E+T, E -> .T, T -> .T*F, T -> .F, F -> .(E), F -> .id.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "E' -> E.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "E -> E.+T.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "F -> id.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Tylko E' -> .E.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wszystkie produkcje z kropką na końcu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Domknięcie zawiera sytuację F -> .(E), bo po kropce stoi nieterminal F z produkcji T -> .F.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Domknięcie zawiera sytuację E -> T. (kropka na końcu).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Domknięcie zawiera sytuację T -> T*.F.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lr-closure-follow"
+   ],
+   "explanation": "**Dlaczego poprawne:** Domknięcie: dla A -> α.Bβ dodaj wszystkie B -> .γ, aż do stabilizacji. Poprawiono zapis T -> .T*F.\n\n**Dlaczego błędne:** E' -> E., E -> E.+T i F -> id. to sytuacje spoza I0 (wymagają przejścia goto); sytuacje z kropką na końcu nie należą do I0.\n\n**Zapamiętaj:** Closure rozwija nieterminale stojące tuż za kropką.",
+   "changes": [
+    "a: poprawiono ucięty zapis 'T -> .TF' na 'T -> .T*F'",
+    "[POSITION-DEPENDENT]"
+   ]
+  },
+  {
+   "id": 1157,
+   "question": "Dana jest gramatyka (wzbogacona) z produkcjami: E' → E E→E+T | T T→T*F|F F → (E) | id Które z podanych symboli należą do zbioru FOLLOW(F):",
+   "options": [
+    {
+     "key": "a",
+     "text": "+, *, ), $ (koniec napisu).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Symbol id.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "E, T.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "(, id.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Tylko $.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wszystkie nieterminale.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Symbol + należy do FOLLOW(F), bo F może kończyć T, T kończy E, a po E stoi + w produkcji E -> E+T.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Symbol ( należy do FOLLOW(F).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "FOLLOW(F) zawiera epsilon.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lr-closure-follow"
+   ],
+   "explanation": "**Dlaczego poprawne:** FOLLOW(F) = {+, *, ), $}.\n\n**Dlaczego błędne:** id i ( nie mogą następować po F; nieterminale nie należą do FOLLOW (zbiór terminali i $); nie tylko $.\n\n**Zapamiętaj:** FOLLOW = terminale, które mogą stać tuż po symbolu.",
+   "changes": [
+    "b: dopisano 'Symbol' dla unikalności tekstu",
+    "[POSITION-DEPENDENT]"
+   ]
+  },
+  {
+   "id": 1158,
+   "question": "Gramatyka operatorowa:",
+   "options": [
+    {
+     "key": "a",
+     "text": "To gramatyka bezkontekstowa, w której żadna produkcja nie ma po prawej stronie dwóch sąsiednich nieterminali ani epsilona.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Gramatyka operatorowa jest gramatyką bezkontekstową.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Służy wyłącznie do opisu języków regularnych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie może zawierać symboli terminalnych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Pozwala na łatwą implementację parserów wyrażeń matematycznych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest zawsze wieloznaczna.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "W gramatyce operatorowej priorytety i łączność operatorów wyznacza się relacjami pierwszeństwa między terminalami.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Gramatyka operatorowa dopuszcza produkcje A -> BC z dwoma sąsiednimi nieterminalami.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Każda gramatyka bezkontekstowa jest operatorowa.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "gramatyka-operatorowa"
+   ],
+   "explanation": "**Dlaczego poprawne:** Gramatyka operatorowa to CFG bez ε i bez sąsiednich nieterminali po prawej stronie; jest gramatyką bezkontekstową.\n\n**Dlaczego błędne:** Nie służy do języków regularnych, ma terminale (operatory), nie jest zawsze wieloznaczna.\n\n**Zapamiętaj:** Operatorowa = terminale rozdzielają nieterminale.",
+   "changes": [
+    "b: false -> true, bo gramatyka operatorowa jest szczególnym przypadkiem gramatyki bezkontekstowej"
+   ]
+  },
+  {
+   "id": 1159,
+   "question": "Analiza leksykalna (skaner) obejmuje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Grupowanie znaków wejściowych w leksemy i generowanie odpowiadających im tokenów.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "usunięcie tokenów a znalezienie leksemów.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "budowanie drzewa składniowego.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "sprawdzanie zgodności typów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "usuwanie komentarzy i białych znaków z kodu źródłowego.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "generowanie kodu pośredniego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Skaner zwykle rozpoznaje leksemy za pomocą wyrażeń regularnych i automatów skończonych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Analiza leksykalna wykrywa niezgodność liczby argumentów wywołania funkcji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Analiza leksykalna jest wykonywana po analizie składniowej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "analiza-leksykalna"
+   ],
+   "explanation": "**Dlaczego poprawne:** Skaner grupuje znaki w leksemy/tokeny i pomija komentarze oraz białe znaki.\n\n**Dlaczego błędne:** Drzewo składniowe buduje parser, typy sprawdza analiza semantyczna, kod pośredni generuje kolejna faza; opcja o 'usunięciu tokenów' jest bezsensowna.\n\n**Zapamiętaj:** Skaner: znaki -> tokeny.",
+   "changes": []
+  },
+  {
+   "id": 1160,
+   "question": "Analizatory LL oraz LR:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Oba są analizatorami kierunkowymi (przetwarzają wejście od lewej do prawej).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "LL nie jest analizatorem kierunkowym.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "LR przetwarza wejście od prawej do lewej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Żaden z nich nie używa stosu.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wykorzystują wiedzę o symbolach już przetworzonych oraz podglądają symbole w przód (lookahead).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Są stosowane tylko w kompilatorach języka C.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "LL(k) buduje wyprowadzenie lewostronne, a LR(k) prawostronne (w odwrotnej kolejności).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Analizatory LR działają zstępująco, a LL wstępująco.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Oba analizatory muszą wczytać całe wejście przed rozpoczęciem analizy.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** Oba czytają od lewej i podglądają lookahead.\n\n**Dlaczego błędne:** Oba używają stosu, LR nie czyta od prawej, ograniczenie do C jest bezpodstawne.\n\n**Zapamiętaj:** LL - top-down, LR - bottom-up.",
+   "changes": []
+  },
+  {
+   "id": 1161,
+   "question": "Parametr k w analizatorach LL(k) oznacza:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Liczbę symboli podglądanych (lookahead) w przód na wejściu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "parametr k oznacza liczbę błędów, po których analizator przerywa działanie.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "liczbę kroków wyprowadzenia.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "maksymalną głębokość stosu.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "liczbę nieterminali w gramatyce.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "liczbę stanów automatu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "LL(1) podgląda jeden symbol wejścia, by wybrać produkcję.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "k oznacza liczbę przebiegów analizatora przez wejście.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zwiększenie k zawsze zwiększa liczbę nieterminali gramatyki.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr",
+    "gramatyki-ll-lr-klasy"
+   ],
+   "explanation": "**Dlaczego poprawne:** k to długość lookahead (liczba podglądanych symboli).\n\n**Dlaczego błędne:** k nie oznacza liczby błędów, kroków, głębokości stosu, nieterminali ani stanów.\n\n**Zapamiętaj:** k = lookahead.",
+   "changes": []
+  },
+  {
+   "id": 1162,
+   "question": "Która z poniższych opcji najlepiej opisuje klasyfikację Chomsky'ego dotyczącą gramatyk formalnych?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Cztery poziomy gramatyk: typ 0, typ 1, typ 2, typ 3.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Klasyfikacja Chomsky'ego obejmuje pięć poziomów gramatyk.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Tylko języki programowania.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wyłącznie gramatyki skończone.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Typ 2 to gramatyki bezkontekstowe, a typ 3 to gramatyki regularne.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Typ 0 to gramatyki liniowe.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Typ 1 to gramatyki kontekstowe, a typ 0 to gramatyki ogólne (frazowe).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Typ 3 to gramatyki bezkontekstowe.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Każdy język typu 2 jest językiem regularnym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "hierarchia-chomsky"
+   ],
+   "explanation": "**Dlaczego poprawne:** Cztery typy: 0 (ogólne), 1 (kontekstowe), 2 (bezkontekstowe), 3 (regularne).\n\n**Dlaczego błędne:** Nie pięć poziomów, nie tylko języki programowania, nie tylko skończone, typ 0 to nie liniowe.\n\n**Zapamiętaj:** Im wyższy numer, tym prostsza klasa.",
+   "changes": []
+  },
+  {
+   "id": 1163,
+   "question": "Które z poniższych stwierdzeń najlepiej opisuje rolę metajęzyka w kontekście antynomii semantycznych?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Metajęzyk służy do opisu i analizy innego języka (przedmiotowego).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Metajęzyk jest językiem, który jest bardziej złożony niż język przedmiotowy.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Metajęzyk nie może zawierać nazw.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Metajęzyk jest zawsze językiem naturalnym.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Rozróżnienie języka przedmiotowego od metajęzyka pozwala na definiowanie prawdy bez popadania w paradoksy.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Metajęzyk służy wyłącznie do tłumaczenia tekstów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Antynomia kłamcy powstaje m.in. gdy język zawiera własny predykat prawdziwości.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Metajęzyk musi być tym samym językiem co język przedmiotowy.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Według Tarskiego prawdę dla języka można zdefiniować w nim samym bez ograniczeń.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "metajezyk"
+   ],
+   "explanation": "**Dlaczego poprawne:** Metajęzyk opisuje język przedmiotowy; rozdzielenie ich pozwala definiować prawdę bez paradoksów.\n\n**Dlaczego błędne:** Metajęzyk może zawierać nazwy, nie musi być naturalny, nie służy tylko do tłumaczenia. Opcja o 'bardziej złożonym' pozostawiona jako fałsz (u Tarskiego istotnie bogatszy, ale sformułowanie jest niejednoznaczne).\n\n**Zapamiętaj:** Rozdziel język przedmiotowy i metajęzyk.",
+   "changes": []
+  }
+ ],
+ "glossary": [
+  {
+   "id": "html5-semantyka",
+   "term": "Znaczniki semantyczne HTML5 (semantic elements)",
+   "topic": "web_programming",
+   "short": "Elementy HTML5 opisujące rolę treści w dokumencie (a nie jej wygląd), np. <article>, <nav>, <header>.",
+   "details": "**Jak działa:** znacznik semantyczny mówi przeglądarce, wyszukiwarkom i czytnikom ekranu, czym jest fragment treści. Główne: <header>, <footer>, <nav>, <main>, <section>, <article>, <aside>, <figure>/<figcaption>. Zastępują anonimowe <div> tam, gdzie znaczenie jest znane.\n\n**Nie są semantyczne:** <div> i <span> (neutralne kontenery), <table> (dane tabelaryczne, nie struktura strony), <font>, <center>, <b> (prezentacyjne, przestarzałe). <bold> nie istnieje.\n\n**Przykład:** `<nav><a href=\"/\">Start</a></nav>` - menu nawigacyjne.\n\n**Na egzaminie uważaj na:**\n- Każdy z <main>, <aside>, <figure> też jest semantyczny.\n- <div>/<span> nie są semantyczne.\n- <nav> to kontener, sam link to <a>.",
+   "related": [
+    "html5-multimedia-formularze"
+   ]
+  },
+  {
+   "id": "html5-multimedia-formularze",
+   "term": "Multimedia i formularze w HTML5 (video, label)",
+   "topic": "web_programming",
+   "short": "Elementy <video>, <source>, <track> do wideo oraz <label for> do powiązania etykiety z polem formularza.",
+   "details": "**Wideo:** <video controls> osadza odtwarzacz; wewnątrz <source src=... type=...> podaje alternatywne formaty, a <track> napisy. <audio> służy do dźwięku. <object>/<embed> to starsze ogólne mechanizmy osadzania (wtyczki).\n\n**Etykieta:** `<label for=\"email\">E-mail</label><input id=\"email\">` - wartość for musi równać się id pola (nie name). Efekt: kliknięcie etykiety ustawia fokus/przełącza pole, poprawia dostępność. Alternatywnie pole można zagnieździć w <label>.\n\n**Na egzaminie uważaj na:**\n- for odwołuje się do id, nie name.\n- Aktywuje się pole, a nie sama etykieta.\n- <file> i <media> nie istnieją w HTML.\n- <a href> tworzy link, <nav> jest tylko kontenerem.",
+   "related": [
+    "html5-semantyka"
+   ]
+  },
+  {
+   "id": "spa",
+   "term": "Aplikacje jednostronicowe (Single Page Application)",
+   "topic": "web_programming",
+   "short": "Aplikacja webowa ładująca jeden dokument HTML i aktualizująca widoki w przeglądarce bez przeładowania strony.",
+   "details": "**Jak działa:** po pierwszym załadowaniu JS renderuje widoki po stronie klienta, routing realizuje History API, dane pobierane są z API (fetch/AJAX, JSON). Stan aplikacji trzyma frontend (np. Redux, NgRx, Pinia). Przykłady: React, Angular, Vue.\n\n**Zalety:** płynność, mniejszy ruch (tylko dane). **Wady:** pierwsze ładowanie, SEO (wymaga SSR/prerenderingu), zależność od JS.\n\n**Na egzaminie uważaj na:**\n- SPA nie wymagają przeładowania strony przy nawigacji.\n- SPA korzystają z API.\n- Nie są 'zawsze lepiej indeksowane' niż strony statyczne.",
+   "related": [
+    "frameworki-js"
+   ]
+  },
+  {
+   "id": "rest-http",
+   "term": "REST i metody HTTP",
+   "topic": "web_programming",
+   "short": "Styl projektowania API, w którym zasoby mają URL-e (rzeczowniki), a akcję wyraża metoda HTTP.",
+   "details": "**Metody:** GET (odczyt), POST (tworzenie), PUT (pełna zamiana, idempotentna), PATCH (częściowa aktualizacja), DELETE (usunięcie), HEAD, OPTIONS. UPDATE nie istnieje.\n\n**URL:** rzeczowniki w liczbie mnogiej, hierarchia zasobów: `/users/4/cars` zwraca samochody użytkownika 4; wersję można dodać prefiksem `/api/v1/...`. Czasowniki w URL (`/get_cars`) i akcje w ścieżce są antywzorcem.\n\n**Na egzaminie uważaj na:**\n- PATCH częściowo, PUT całościowo.\n- Filtrowanie przez query string jest ok, ale hierarchia jest idiomatyczna.\n- Odwrócona hierarchia /cars/user/4 nie jest konwencją.",
+   "related": [
+    "json"
+   ]
+  },
+  {
+   "id": "json",
+   "term": "Format JSON",
+   "topic": "web_programming",
+   "short": "Tekstowy format wymiany danych: obiekty, tablice, teksty, liczby, true/false, null.",
+   "details": "**Zasady:** klucze i teksty tylko w podwójnych cudzysłowach; pary `\"klucz\": wartość` w klamrach `{}`; tablice `[]` zawierają same wartości (bez par klucz:wartość); brak przecinka po ostatnim elemencie; brak komentarzy; liczby dziesiętne (bez hex); wartości: obiekt, tablica, tekst, liczba, true, false, null.\n\n**Przykład:** `{ \"user\": \"Jan\", \"data\": [1, 2, 3] }` jest poprawny.\n\n**Na egzaminie uważaj na:**\n- Brak cudzysłowów wokół tekstu lub klucza to błąd.\n- Apostrofy są niepoprawne.\n- `[\"a\": 1]` jest niepoprawne.\n- Zagnieżdżona tablica liczb jest OK.",
+   "related": [
+    "rest-http"
+   ]
+  },
+  {
+   "id": "rwd",
+   "term": "Responsywne projektowanie stron (RWD)",
+   "topic": "web_programming",
+   "short": "Technika, w której jedna strona dopasowuje układ do rozmiaru ekranu.",
+   "details": "**Elementy:** elastyczne siatki (flexbox, grid, jednostki względne), elastyczne obrazy (max-width:100%), Media Queries (`@media (max-width: 600px)`), meta viewport. Wszystko po stronie klienta w CSS.\n\n**Nie jest:** szybkością odpowiedzi serwera, osobną witryną mobilną (m.domena.pl), wyłącznie aplikacją mobilną, personalizacją do potrzeb użytkownika.\n\n**Na egzaminie uważaj na:**\n- Media Queries to CSS, nie serwer.\n- RWD nie wymaga osobnej strony.\n- Dotyczy wszystkich urządzeń.",
+   "related": [
+    "html5-semantyka"
+   ]
+  },
+  {
+   "id": "frameworki-js",
+   "term": "Frameworki JavaScript (Angular, React, Vue)",
+   "topic": "web_programming",
+   "short": "Biblioteki/frameworki do budowy interfejsu opartego na komponentach i deklaratywnym opisie UI.",
+   "details": "**Cechy wspólne:** komponenty (zagnieżdżalne, wielokrotnego użytku), deklaratywne UI (opis co ma być widoczne), wirtualny lub inkrementalny DOM, budowa SPA, integracja z bibliotekami zewnętrznymi (npm).\n\n**Różnice:** Angular (TypeScript, pełny framework), Vue (progresywny, wiązanie v-model), React (biblioteka UI, przepływ danych jednokierunkowy).\n\n**Na egzaminie uważaj na:**\n- Dwukierunkowe wiązanie nie jest cechą wszystkich (React jest jednokierunkowy).\n- Nie służą do stylowania.\n- Nie wymagają Javy.\n- Działają w przeglądarce.",
+   "related": [
+    "spa",
+    "nodejs"
+   ]
+  },
+  {
+   "id": "nodejs",
+   "term": "Node.js i pętla zdarzeń (Event Loop)",
+   "topic": "web_programming",
+   "short": "Środowisko uruchomieniowe JavaScript oparte na silniku V8 z nieblokującym I/O.",
+   "details": "**Jak działa:** kod JS działa w jednym wątku; operacje I/O są delegowane do systemu/libuv, a po zakończeniu wynik wraca jako zdarzenie do kolejki, którą przetwarza pętla zdarzeń. Dzięki temu obsługuje wiele połączeń jednocześnie bez wątku na połączenie. Ma też API synchroniczne (`readFileSync`). Menedżer pakietów: npm.\n\n**Na egzaminie uważaj na:**\n- Node nie jest językiem ani frameworkiem CSS.\n- Nie jest tylko asynchroniczny.\n- Działa na serwerze/desktopie/CLI, nie tylko w przeglądarce.\n- Długie obliczenia blokują pętlę.",
+   "related": [
+    "frameworki-js"
+   ]
+  },
+  {
+   "id": "mvc-aspnet",
+   "term": "Wzorzec MVC w ASP.NET Core",
+   "topic": "web_programming",
+   "short": "Podział aplikacji na Model (dane), Widok (prezentacja) i Kontroler (sterowanie).",
+   "details": "**Przepływ:** żądanie trafia do routingu, który wybiera akcję kontrolera (metoda publiczna klasy dziedziczącej po Controller). Kontroler pobiera/tworzy model i zwraca widok (Razor .cshtml) z modelem. Widok renderuje HTML; nie zawiera logiki biznesowej ani dostępu do bazy.\n\n**Na egzaminie uważaj na:**\n- Model = struktura i logika danych.\n- Kontroler nie stylizuje stron ani nie renderuje HTML.\n- MVC dotyczy też aplikacji webowych.",
+   "related": [
+    "stan-aspnet"
+   ]
+  },
+  {
+   "id": "stan-aspnet",
+   "term": "Przechowywanie stanu w ASP.NET Core",
+   "topic": "web_programming",
+   "short": "Mechanizmy trzymania danych ulotnych między żądaniami HTTP: Session, Cookies, TempData, QueryString.",
+   "details": "**Tło:** HTTP jest bezstanowy, więc stan trzeba dodać. **Session** (HttpContext.Session) - dane po stronie serwera, wymaga AddSession/UseSession i ciasteczka z identyfikatorem. **Cookies** - dane u klienta. **TempData** - dane do następnego żądania (np. po redirect). **QueryString** - parametry w URL. ViewState z WebForms w Core nie istnieje.\n\n**Na egzaminie uważaj na:**\n- HTTP nie jest stanowy.\n- Baza nie jest jedyną opcją.\n- Zmienne statyczne są wspólne dla wszystkich użytkowników.",
+   "related": [
+    "mvc-aspnet"
+   ]
+  },
+  {
+   "id": "csharp-ref-out",
+   "term": "Parametry ref i out w C#",
+   "topic": "web_programming",
+   "short": "Słowa kluczowe przekazujące zmienną do metody przez referencję (a nie przez kopię wartości).",
+   "details": "**ref:** zmienna musi być zainicjalizowana przed wywołaniem; metoda może ją czytać i zmieniać. **out:** zmienna nie musi być zainicjalizowana, metoda musi ją przypisać przed powrotem. Słowo kluczowe podaje się też w miejscu wywołania. Dotyczy typów wartościowych (i referencyjnych - zmiana samej referencji).\n\n**Na egzaminie uważaj na:**\n- ref wymaga inicjalizacji przed przekazaniem.\n- Obiekty (typy referencyjne) domyślnie przekazywane są przez kopię referencji.\n- C# obsługuje referencje.",
+   "related": [
+    "csharp-klasy-rzutowanie"
+   ]
+  },
+  {
+   "id": "csharp-klasy-rzutowanie",
+   "term": "Klasy zagnieżdżone i rzutowanie w C#",
+   "topic": "web_programming",
+   "short": "Klasy deklarowane wewnątrz innej klasy oraz konwersje typów (upcast, downcast, as, is).",
+   "details": "**Klasy zagnieżdżone:** dowolny modyfikator dostępu (domyślnie private), nie muszą być statyczne; widzą prywatne składowe klasy zewnętrznej, ale nie odwrotnie.\n\n**Rzutowanie:** upcast (do klasy bazowej/Object) niejawny i bezpieczny; downcast jawny `(T)obj` rzuca InvalidCastException; `as` zwraca null (tylko typy referencyjne/nullable); `is` sprawdza typ, nie konwertuje. string nie rzutuje się na int.\n\n**Na egzaminie uważaj na:**\n- Kierunek dostępu do prywatnych pól.\n- as nie rzuca wyjątku.\n- Downcast wymaga operatora.",
+   "related": [
+    "csharp-ref-out"
+   ]
+  },
+  {
+   "id": "linq",
+   "term": "LINQ (Language Integrated Query)",
+   "topic": "web_programming",
+   "short": "Zintegrowana z językiem C# składnia zapytań do kolekcji, baz danych, XML itp.",
+   "details": "**Jak działa:** zapytania w składni `from x in src where ... select ...` lub metody rozszerzające (Where, Select, OrderBy). Wykonanie jest odroczone (deferred) do momentu iteracji lub ToList/Count. Źródła: LINQ to Objects, Entity Framework, XML.\n\n**Na egzaminie uważaj na:**\n- Nie jest biblioteką grafiki ani protokołem.\n- Nie wymaga foreach do każdego zapytania.\n- Nie jest ograniczony do baz danych.",
+   "related": [
+    "csharp-top-level-lambda-zdarzenia"
+   ]
+  },
+  {
+   "id": "csharp-top-level-lambda-zdarzenia",
+   "term": "Top-level statements, lambdy i zdarzenia w C#",
+   "topic": "web_programming",
+   "short": "Elementy składni C#: kod bez Main (C# 9), operator => w lambdach oraz += do obsługi zdarzeń.",
+   "details": "**Top-level statements:** kod bezpośrednio w pliku, kompilator generuje Main; tylko jeden taki plik w projekcie; using przed instrukcjami; można definiować funkcje lokalne i używać await; dostępne od C# 9.\n\n**Lambda:** `x => x*2` (operator => 'goes to').\n\n**Zdarzenia:** `obj.Event += handler` dodaje delegata, `-=` usuwa. Nie ma subscribe/add/register.\n\n**Na egzaminie uważaj na:**\n- C# 9, nie 1.0.\n- Metody można definiować.\n- -> nie jest operatorem lambd.",
+   "related": [
+    "linq"
+   ]
+  },
+  {
+   "id": "csharp-synchronizacja",
+   "term": "Synchronizacja wątków w C#",
+   "topic": "web_programming",
+   "short": "Mechanizmy zapewniające wyłączny dostęp do zasobów: lock, Monitor, Mutex, Semaphore, AutoResetEvent.",
+   "details": "**lock(obj)** to cukier składniowy dla Monitor.Enter/Exit w try/finally; obiekt blokady musi być typu referencyjnego. **Mutex** może być nazwany i działać między procesami. **Semaphore** dopuszcza N wątków jednocześnie. **AutoResetEvent** sygnalizuje wątkom.\n\n**Na egzaminie uważaj na:**\n- Mutex nie jest ograniczony do jednego procesu.\n- .NET Core wspiera synchronizację.\n- if nie synchronizuje.\n\n**Przykład:** `lock(_obj){ licznik++; }` - naraz tylko jeden wątek wykonuje blok.",
+   "related": [
+    "csharp-ref-out"
+   ]
+  },
+  {
+   "id": "parsery-ll-lr",
+   "term": "Analizatory składniowe LL(k) i LR(k)",
+   "topic": "compilation",
+   "short": "Deterministyczne parsery czytające wejście od lewej: LL zstępujący, LR wstępujący.",
+   "details": "**LL(k):** top-down, buduje wyprowadzenie lewostronne, k = liczba symboli lookahead. **LR(k):** bottom-up (shift/reduce), buduje wyprowadzenie prawostronne w odwrotnej kolejności, obsługuje lewostronną rekurencję. Oba używają stosu, czytają wejście od lewej do prawej i działają w czasie O(n).\n\n**Na egzaminie uważaj na:**\n- LR nie jest wolniejszy od LL.\n- LL nie obsługuje lewej rekurencji bezpośrednio.\n- Parsery LR nie służą tylko do języków regularnych.",
+   "related": [
+    "gramatyki-ll-lr-klasy",
+    "wyprowadzenia-lewo-prawostronne"
+   ]
+  },
+  {
+   "id": "gramatyki-ll-lr-klasy",
+   "term": "Klasy gramatyk LL(k) i LR(k)",
+   "topic": "compilation",
+   "short": "Klasy gramatyk bezkontekstowych, dla których istnieją deterministyczne parsery LL/LR.",
+   "details": "LL(k) jest właściwym podzbiorem LR(k). Przynależność do LL(k) dla ustalonego k jest rozstrzygalna. Gramatyki wieloznaczne ani lewostronnie rekurencyjne nie są LL(k), wieloznaczne nie są LR(k). LR(1) opisuje wszystkie deterministyczne języki bezkontekstowe. LL(1): zbiory FIRST alternatyw rozłączne.\n\n**Na egzaminie uważaj na:**\n- Nie każda CFG jest LR(k).\n- LL(1) nie jest równoważna LR(1).\n- Lewa rekurencja wyklucza LL.",
+   "related": [
+    "parsery-ll-lr"
+   ]
+  },
+  {
+   "id": "wyprowadzenia-lewo-prawostronne",
+   "term": "Wyprowadzenia lewo- i prawostronne",
+   "topic": "compilation",
+   "short": "Sposoby wyboru nieterminala do rozwinięcia w kolejnych krokach wyprowadzenia.",
+   "details": "**Lewostronne:** rozwijamy skrajnie lewy nieterminal. **Prawostronne:** skrajnie prawy. Przykład dla E→E+E|E*E|id: E⇒E+E⇒E+E*E⇒E+E*id⇒E+id*id⇒id+id*id jest prawostronne. Jednokrokowe E⇒id spełnia obie definicje. Uwaga: E⇒EE nie wynika z gramatyki.\n\n**Na egzaminie uważaj na:**\n- Sprawdź, czy każdy krok wynika z produkcji.\n- Rozwijaj tylko skrajny nieterminal.\n- Ten sam wyrazy wyjściowy ma zwykle wiele wyprowadzeń; parser LR odtwarza prawostronne w odwrotnej kolejności (redukcje).\n- Jeśli pierwszy krok używa E->E+E, a kolejne rozwijają lewy nieterminal, całość jest lewostronna.",
+   "related": [
+    "parsery-ll-lr"
+   ]
+  },
+  {
+   "id": "lr-closure-follow",
+   "term": "Domknięcie zbioru sytuacji LR i FOLLOW",
+   "topic": "compilation",
+   "short": "Domknięcie (closure) uzupełnia zbiór sytuacji LR(0), a FOLLOW wyznacza terminale mogące występować po nieterminalu.",
+   "details": "**Closure:** dla sytuacji A→α.Bβ dodaj B→.γ dla każdej produkcji B, powtarzaj do stabilizacji. Dla I={E'→.E}: E'→.E, E→.E+T, E→.T, T→.T*F, T→.F, F→.(E), F→.id. **FOLLOW(A):** terminale możliwe bezpośrednio po A oraz $ dla symbolu startowego. Dla F: {+, *, ), $}.\n\n**Na egzaminie uważaj na:**\n- Closure nie zawiera sytuacji z kropką na końcu ani E→E.+T (po goto).\n- FOLLOW zawiera terminale, nie nieterminale.",
+   "related": [
+    "gramatyki-ll-lr-klasy"
+   ]
+  },
+  {
+   "id": "gramatyka-operatorowa",
+   "term": "Gramatyka operatorowa",
+   "topic": "compilation",
+   "short": "Gramatyka bezkontekstowa bez ε-produkcji i bez sąsiednich nieterminali po prawej stronie.",
+   "details": "Między nieterminalami zawsze stoi terminal (operator). Pozwala na proste parsery pierwszeństwa operatorów dla wyrażeń arytmetycznych, relacje pierwszeństwa między terminalami.\n\n**Na egzaminie uważaj na:**\n- To gramatyka bezkontekstowa.\n- Może zawierać terminale.\n- Nie jest zawsze wieloznaczna.\n- Przykład: E -> E+E | E*E | (E) | id jest operatorowa, natomiast E -> EE nie jest (sąsiednie nieterminale).\n- Operatorowa gramatyka może być też wieloznaczna, ale nie musi.",
+   "related": [
+    "parsery-ll-lr"
+   ]
+  },
+  {
+   "id": "analiza-leksykalna",
+   "term": "Analiza leksykalna (lexical analysis)",
+   "topic": "compilation",
+   "short": "Pierwsza faza kompilacji: grupowanie znaków w leksemy i generowanie tokenów.",
+   "details": "Skaner czyta znaki, dopasowuje wzorce (wyrażenia regularne, automat skończony), zwraca tokeny, pomija komentarze i białe znaki. Drzewo buduje parser, typy sprawdza analiza semantyczna, a kod pośredni generuje kolejna faza.\n\n**Na egzaminie uważaj na:**\n- Leksem to ciąg znaków, token to jego kategoria.\n- Skaner nie sprawdza typów.\n\n**Przykład:** wejście `x = 42 + y;` daje tokeny: ID(x), ASSIGN, NUM(42), PLUS, ID(y), SEMI. Białe znaki zostają pominięte.\n- Komentarze usuwa skaner.",
+   "related": [
+    "parsery-ll-lr"
+   ]
+  },
+  {
+   "id": "hierarchia-chomsky",
+   "term": "Hierarchia Chomsky'ego",
+   "topic": "compilation",
+   "short": "Klasyfikacja gramatyk formalnych na cztery typy 0-3.",
+   "details": "Typ 0: ogólne (frazowe); typ 1: kontekstowe; typ 2: bezkontekstowe; typ 3: regularne. Każda klasa zawiera się w poprzedniej. Automaty: maszyna Turinga, LBA, automat ze stosem, automat skończony.\n\n**Na egzaminie uważaj na:**\n- Są cztery typy, nie pięć.\n- Typ 3 to regularne, nie bezkontekstowe.\n- Typ 0 to gramatyki ogólne, nie liniowe.\n\n**Przykład:** a^n b^n jest typu 2 (nie regularny); a*b* jest typu 3; a^n b^n c^n jest typu 1.",
+   "related": [
+    "gramatyki-ll-lr-klasy"
+   ]
+  },
+  {
+   "id": "metajezyk",
+   "term": "Język przedmiotowy i metajęzyk",
+   "topic": "compilation",
+   "short": "Rozróżnienie języka, o którym mówimy, od języka, którym o nim mówimy (Tarski).",
+   "details": "Metajęzyk opisuje i analizuje język przedmiotowy; może zawierać nazwy jego wyrażeń. Rozdzielenie poziomów pozwala zdefiniować prawdę bez antynomii (np. kłamcy), które powstają, gdy język mówi o własnej prawdziwości.\n\n**Na egzaminie uważaj na:**\n- Metajęzyk nie musi być naturalny.\n- Nie służy tylko do tłumaczenia.\n\n**Przykład:** w zdaniu \"'Śnieg jest biały' jest prawdziwe\" zdanie w cudzysłowie należy do języka przedmiotowego, a całość do metajęzyka.\n- Metajęzyk może być rozszerzeniem języka przedmiotowego.",
+   "related": [
+    "hierarchia-chomsky"
+   ]
+  }
+ ]
+}

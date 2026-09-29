@@ -1,0 +1,2134 @@
+{
+ "questions": [
+  {
+   "id": 1294,
+   "question": "Kodowanie 1 z n (One-Hot Encoding):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Reprezentacja zmiennych kategorycznych jako wektorów binarnych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "rodzaj zbioru danych, w którym tylko jedna kolumna ma istotne znaczenie.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "metoda kompresji obrazów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "algorytm sortowania danych tekstowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Służy do zamiany liczb zmiennoprzecinkowych na całkowite.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Jest stosowane w sieciach neuronowych do reprezentacji klas.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Dla zmiennej z k kategoriami tworzy wektor długości k z jedną jedynką i pozostałymi zerami.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zachowuje naturalny porządek kategorii, dzięki czemu nadaje się do cech porządkowych bez straty informacji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Dla zmiennej z k kategoriami tworzy jedną kolumnę z liczbami 1..k.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-one-hot",
+    "ml-activation"
+   ],
+   "explanation": "**Dlaczego poprawne:** Kodowanie 1 z n to wektory binarne z jedną jedynką oraz typowa reprezentacja klas w sieciach neuronowych.\n\n**Dlaczego błędne:** To nie zbiór danych z jedną istotną kolumną, kompresja obrazów, sortowanie tekstu ani konwersja float na int; kodowanie nie niesie informacji o porządku, a liczby 1..k to kodowanie porządkowe.\n\n**Zapamiętaj:** One-hot: k kategorii = k kolumn, jedna jedynka.",
+   "changes": []
+  },
+  {
+   "id": 1295,
+   "question": "Które z poniższych poleceń są poprawne, zakładając że df jest obiektem DataFrame biblioteki Pandas?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pozwala na stosowanie różnych funkcji agregujących do wybranych kolumn DataFrame.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "df.agg({'one': 'mean', 'four': 'sum'})",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Służy do usuwania duplikatów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie przyjmuje słowników jako argumentów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest tożsama z metodą apply().",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Działa tylko na obiektach typu Series.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "df.agg(['min', 'max']) jest poprawnym poleceniem i zwraca minimum i maksimum każdej kolumny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "df.agg({'one': 'mean', 'four': 'sum'}) zgłosi błąd, bo słownik nie może wiązać kolumn z funkcjami.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "df.agg('mean', axis=2) jest poprawnym poleceniem dla DataFrame.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-pandas-apply-map-agg"
+   ],
+   "explanation": "**Dlaczego poprawne:** agg pozwala przypisać różne funkcje agregujące różnym kolumnom (słownik) oraz przyjmuje listy funkcji.\n\n**Dlaczego błędne:** agg nie usuwa duplikatów (drop_duplicates), przyjmuje słowniki, działa też na DataFrame, nie jest tożsama z apply, a DataFrame ma tylko osie 0 i 1.\n\n**Zapamiętaj:** agg + słownik = różne agregacje dla różnych kolumn.",
+   "changes": []
+  },
+  {
+   "id": 1296,
+   "question": "Które z poniższych stwierdzeń są prawdziwe w odniesieniu do biblioteki Pandas?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Realizuje operacje złączenia dwóch obiektów DataFrame na podstawie wspólnych kolumn.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Polecenie merge pozwala złączyć dwa obiekty DataFrame poprzez porównanie wartości.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Zawsze modyfikuje oryginalne obiekty w miejscu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Służy do pionowego łączenia tabel.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Obsługuje typy złączeń: inner, left, right, outer.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga, aby obie tabele miały identyczne indeksy.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "pd.merge(df1, df2, on='id', how='left') zachowuje wszystkie wiersze lewej tabeli.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Domyślnym typem złączenia w merge jest outer.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Złączenie inner zachowuje wszystkie wiersze obu tabel.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-pandas-merge"
+   ],
+   "explanation": "**Dlaczego poprawne:** merge łączy tabele po wartościach kolumn (b jest tym samym co a, sformułowane inaczej, więc prawdziwe) i obsługuje inner, left, right, outer.\n\n**Dlaczego błędne:** merge zwraca nowy obiekt, nie łączy pionowo (to concat), nie wymaga identycznych indeksów; domyślny jest inner, a inner zachowuje tylko pasujące wiersze.\n\n**Zapamiętaj:** merge = JOIN po wartościach kolumn, domyślnie inner.",
+   "changes": [
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1297,
+   "question": "Zakładając że s jest obiektem Series biblioteki Pandas, polecenie s.map(x) spowoduje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Służy do mapowania wartości w Series na inne wartości.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jeżeli x jest ciągiem znaków, odfiltrowanie tylko tych wartości.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Zmienia nazwy kolumn w DataFrame.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Oblicza średnią kroczącą.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Mapuje wartości tylko typu tekstowego.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Jest wolniejsza od pętli for w Pythonie.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "s.map({'a': 1, 'b': 2}) zamienia wartości zgodnie ze słownikiem; brakujące klucze dają NaN.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Argumentem x może być funkcja, słownik lub Series.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "s.map(x) działa wyłącznie wtedy, gdy x jest słownikiem.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "s.map(x) zawsze modyfikuje s w miejscu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-pandas-apply-map-agg"
+   ],
+   "explanation": "**Dlaczego poprawne:** map przekształca każdą wartość Series według funkcji, słownika lub Series.\n\n**Dlaczego błędne:** map nie filtruje, nie dotyczy nazw kolumn DataFrame, nie liczy średniej kroczącej (rolling), działa na dowolnych typach i nie jest z zasady wolniejsza od pętli for.\n\n**Zapamiętaj:** map = element po elemencie w Series.",
+   "changes": []
+  },
+  {
+   "id": 1298,
+   "question": "Sferyczne układy odniesienia (ang. spatial reference systems, coordinate reference systems), takie jak np. WGS-84:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Modelują Ziemię jako elipsoidę lub sferę, używając szerokości i długości geograficznej.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "korzystają ze współrzędnych podanych w stopniach.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Pozwalają na łatwe obliczanie powierzchni w metrach kwadratowych bez rzutowania.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Są układami płaskimi.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Są używane w systemie GPS.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Nie uwzględniają spłaszczenia Ziemi na biegunach.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Odległości liczone bezpośrednio na współrzędnych w stopniach nie są wyrażone w metrach.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jednostką współrzędnych w WGS-84 (EPSG:4326) są metry.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Długość geograficzna przyjmuje wartości od 0° do 90°.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-crs"
+   ],
+   "explanation": "**Dlaczego poprawne:** WGS-84 to układ geograficzny na elipsoidzie, współrzędne w stopniach, używany w GPS.\n\n**Dlaczego błędne:** Nie jest układem płaskim, nie daje pól w m^2 bez rzutowania i uwzględnia spłaszczenie Ziemi; długość ma zakres −180..180°, a jednostką nie są metry.\n\n**Zapamiętaj:** WGS-84: stopnie, elipsoida, GPS.",
+   "changes": [
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1299,
+   "question": "Płaskie (izometryczne, rzutowane) układy odniesienia (ang. spatial reference systems, coordinate reference systems), takie jak np. PUWG 2000:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Powstają poprzez rzutowanie powierzchni elipsoidy na płaszczyznę.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "pozwalają na obliczenie odległości przy pomocy samego twierdzenia Pitagorasa.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Nie wprowadzają żadnych zniekształceń odległości.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Są używane wyłącznie w nawigacji morskiej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Używają współrzędnych kartezjańskich (X, Y) wyrażonych w metrach.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Są identyczne na całym świecie.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Rzutowanie na płaszczyznę zawsze zniekształca co najmniej jedną z cech: kąty, długości lub pola.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "PUWG 2000 jest geograficznym układem współrzędnych o jednostce stopnie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Do obliczania pól powierzchni w metrach kwadratowych układ rzutowany jest gorszym wyborem niż WGS-84 w stopniach.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-crs"
+   ],
+   "explanation": "**Dlaczego poprawne:** Układy płaskie powstają z rzutowania elipsoidy, mają X,Y w metrach, więc odległość liczy się z Pitagorasa (przybliżenie w obrębie strefy).\n\n**Dlaczego błędne:** Rzutowanie zawsze wprowadza zniekształcenia, układ nie jest użyty tylko w nawigacji morskiej ani identyczny na całym świecie; stopnie to układ geograficzny.\n\n**Zapamiętaj:** Płaski = metry + Pitagoras, ale ze zniekształceniami.",
+   "changes": [
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1300,
+   "question": "Optymalizacja czasu przetwarzania danych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Należy zoptymalizować algorytmy, użyć indeksowania, zrównoleglić obliczenia.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zwiększyć pamięć wirtualną.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zawsze kupić szybszy procesor.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zmniejszyć liczbę kolorów w interfejsie.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wykorzystać wektoryzację operacji (np. w NumPy).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Przenieść wszystkie dane do plików tekstowych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Stosowanie odpowiednich struktur danych i unikanie zbędnych kopii danych skraca czas przetwarzania.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zastąpienie operacji NumPy pętlami w czystym Pythonie przyspiesza obliczenia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Dodanie indeksów do tabeli zawsze przyspiesza także operacje zapisu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-data-performance"
+   ],
+   "explanation": "**Dlaczego poprawne:** Lepsze algorytmy, indeksy, równoległość i wektoryzacja (NumPy) realnie skracają czas.\n\n**Dlaczego błędne:** Pamięć wirtualna, sam szybszy procesor, zmniejszenie liczby kolorów UI i pliki tekstowe nie są rozwiązaniem; pętle Pythona są wolniejsze, a indeksy spowalniają zapis.\n\n**Zapamiętaj:** Optymalizuj algorytm i wektoryzuj.",
+   "changes": [
+    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1301,
+   "question": "Jeżeli dane, przy ich analizie, nie mieszczą się w dostępnej pamięci RAM należy do ich przetwarzania:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Należy stosować przetwarzanie strumieniowe (chunking), bazy danych lub systemy Out-of-Core.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "użyć bazy danych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zrezygnować z analizy części danych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wyłączyć system operacyjny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Zwiększyć rozmiar pliku wymiany (swap) do 1 TB.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Użyć biblioteki Dask lub Apache Spark.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Wczytywanie pliku porcjami (np. pd.read_csv z parametrem chunksize) pozwala przetworzyć dane większe niż RAM.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Pandas domyślnie przetwarza dane większe od RAM bez zmian w kodzie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wystarczy zwiększyć pamięć wirtualną, bo nie powoduje to spadku wydajności.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-data-performance"
+   ],
+   "explanation": "**Dlaczego poprawne:** Przetwarzanie strumieniowe/porcjami, baza danych oraz Dask/Spark to poprawne podejścia out-of-core.\n\n**Dlaczego błędne:** Rezygnacja z części danych zmienia wynik analizy, wyłączenie systemu jest absurdem, a swap 1 TB powoduje thrashing; Pandas trzyma dane w RAM.\n\n**Zapamiętaj:** Dane > RAM: chunking, baza, Dask/Spark.",
+   "changes": [
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "f: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1302,
+   "question": "Zakładając, że df jest obiektem typu DataFrame biblioteki Pandas, polecenie df.apply(moja_funkcja)spowoduje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wywołuje funkcję moja_funkcja dla każdej kolumny lub każdego wiersza.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "uruchomienie raz funkcji moja_funkcja.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Służy do filtrowania danych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Działa tylko na liczbach całkowitych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Zawsze zwraca obiekt typu Series.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Jest najbardziej wydajnym sposobem przetwarzania danych w Pandas.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Domyślnie funkcja jest stosowana do kolumn (axis=0).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Domyślnie funkcja jest stosowana do każdego wiersza (axis=1).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "df.apply modyfikuje df w miejscu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-pandas-apply-map-agg"
+   ],
+   "explanation": "**Dlaczego poprawne:** apply wywołuje funkcję dla każdej kolumny (domyślnie) lub wiersza.\n\n**Dlaczego błędne:** Nie uruchamia funkcji raz, nie filtruje, działa na różnych typach, wynik może być Series, DataFrame lub skalarem, a wektoryzacja jest wydajniejsza.\n\n**Zapamiętaj:** apply: domyślnie po kolumnach.",
+   "changes": []
+  },
+  {
+   "id": 1303,
+   "question": "Zakładając, że df jest obiektem typu DataFrame biblioteki Pandas, polecenie df.apply(moja_funkcja, axis=1)spowoduje:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wywołuje funkcję moja_funkcja dla każdego wiersza (row-wise).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "wywoływanie funkcji moja_funkcja za każdym razem gdy obiekt df zostanie zmodyfikowany.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wywołuje funkcję tylko dla pierwszej kolumny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Służy do transpozycji macierzy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest szybsze niż axis=0.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Pozwala na dostęp do wielu kolumn jednocześnie wewnątrz funkcji.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Funkcja otrzymuje jako argument obiekt Series reprezentujący jeden wiersz, którego indeksem są nazwy kolumn.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Funkcja otrzymuje jedną kolumnę naraz.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "axis=1 oznacza zastosowanie funkcji do każdego elementu osobno.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-pandas-apply-map-agg"
+   ],
+   "explanation": "**Dlaczego poprawne:** axis=1 daje funkcji cały wiersz, więc może ona korzystać z wielu kolumn naraz.\n\n**Dlaczego błędne:** Nie jest to wywołanie po każdej modyfikacji df, nie tylko pierwsza kolumna, nie transpozycja, i zwykle nie jest szybsze niż axis=0.\n\n**Zapamiętaj:** axis=1 = wiersz jako Series.",
+   "changes": [
+    "f: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1304,
+   "question": "Które z poniższych sposobów przechowywania danych pozwalają na jawne określenie, czy dana wartość jest liczbą całkowitą, liczbą zmiennoprzecinkową czy tekstem?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Formaty takie jak Parquet, Avro czy bazy danych SQL przechowują informacje o typach.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "plik JSON",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "plik CSV",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "plik tekstowy .txt",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Pliki binarne zawsze wymagają jawnego schematu.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "HDF5 obsługuje jawne typowanie.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Bazy danych SQL wymagają zadeklarowania typu każdej kolumny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "CSV zapisuje typ każdej kolumny w nagłówku pliku.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Plik tekstowy .txt przechowuje jawnie typ każdej wartości.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-data-formats"
+   ],
+   "explanation": "**Dlaczego poprawne:** Parquet, Avro, SQL i HDF5 mają jawny schemat typów.\n\n**Dlaczego błędne:** CSV, TXT i JSON nie mają jawnego rozróżnienia typów (JSON nie odróżnia int od float), a pliki binarne nie zawsze wymagają schematu.\n\n**Zapamiętaj:** Schemat = jawne typy.",
+   "changes": []
+  },
+  {
+   "id": 1305,
+   "question": "Obiekt GeoDataFrame w GeoPandas:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Rozszerza DataFrame o kolumnę 'geometry', która przechowuje obiekty przestrzenne.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zawiera dane geometryczne, a nie dane tekstowe ani numeryczne.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Może zawierać zarówno dane atrybutowe, jak i przestrzenne.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Nie obsługuje operacji złączeń.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wymaga zainstalowanej biblioteki Shapely.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Każdy wiersz musi mieć geometrię tego samego typu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Kolumna geometry jest typu GeoSeries.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "GeoDataFrame nie może mieć przypisanego układu współrzędnych (CRS).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "GeoDataFrame jest niezależną od Pandas strukturą i nie dziedziczy po DataFrame.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Umożliwia złączenia przestrzenne (sjoin).",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-geopandas",
+    "ml-crs"
+   ],
+   "explanation": "**Dlaczego poprawne:** GeoDataFrame rozszerza DataFrame o geometry, zawiera atrybuty i geometrie, wymaga Shapely i obsługuje złączenia.\n\n**Dlaczego błędne:** Nie zawiera wyłącznie geometrii, obsługuje złączenia, geometrie mogą być różnych typów, ma CRS i dziedziczy po DataFrame.\n\n**Zapamiętaj:** GeoDataFrame = DataFrame + geometry.",
+   "changes": []
+  },
+  {
+   "id": 1306,
+   "question": "Jakie są standardowe metody używane do oceny modeli w nadzorowanym uczeniu maszynowym?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Accuracy, Precision, Recall, F1-score, Macierz pomyłek, AUC-ROC.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Macierz pomyłek.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Średnia arytmetyczna wag neuronów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Liczba warstw w sieci.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Czas trenowania modelu.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Rozmiar pliku z modelem.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "AUC-ROC opiera się na TPR i FPR liczonych dla różnych progów decyzyjnych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Do oceny klasyfikatora wystarczy podać liczbę parametrów modelu.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Funkcja aktywacji ostatniej warstwy jest miarą jakości modelu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-eval-metrics"
+   ],
+   "explanation": "**Dlaczego poprawne:** Accuracy, precision, recall, F1, macierz pomyłek i AUC-ROC to standardowe metody oceny.\n\n**Dlaczego błędne:** Średnia wag, liczba warstw, czas trenowania i rozmiar pliku nie mierzą jakości predykcji.\n\n**Zapamiętaj:** Ocena = metryki na predykcjach.",
+   "changes": []
+  },
+  {
+   "id": 1307,
+   "question": "Metoda Leave-One-Out (LOOCV):",
+   "options": [
+    {
+     "key": "a",
+     "text": "To wariant walidacji krzyżowej, gdzie testujemy model na jednym przykładzie, a trenujemy na n-1.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "To metoda doboru parametrów tylko w sieciach neuronowych.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Służy do usuwania duplikatów ze zbioru.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest bardzo szybka dla dużych zbiorów danych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Minimalizuje obciążenie (bias) estymatora błędu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga n-krotnego trenowania modelu.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "LOOCV jest deterministyczna, bo nie wymaga losowego podziału danych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "LOOCV to k-krotna walidacja krzyżowa z k = 2.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "W LOOCV zbiór testowy zawiera połowę danych.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-cross-validation"
+   ],
+   "explanation": "**Dlaczego poprawne:** LOOCV to CV z k = n, testowanie na jednym przykładzie, małe obciążenie, n treningów.\n\n**Dlaczego błędne:** Nie jest tylko dla sieci, nie usuwa duplikatów i jest kosztowna dla dużych zbiorów.\n\n**Zapamiętaj:** LOOCV: n treningów, niski bias, wolna.",
+   "changes": []
+  },
+  {
+   "id": 1308,
+   "question": "Funkcja aktywacji w sieciach neuronowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wprowadza nieliniowość do modelu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Funkcja, zgodnie z którą obliczane są wyjścia neuronów.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Służy do inicjalizacji wag.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest używana tylko w warstwie wejściowej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ReLU (Rectified Linear Unit) jest popularną funkcją aktywacji.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Funkcja liniowa jest najczęściej stosowana w warstwach ukrytych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Sieć z wieloma warstwami z samych funkcji liniowych jest równoważna jednej warstwie liniowej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Sigmoida zwraca wartości z przedziału (−1, 1).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Softmax stosuje się zwykle w warstwach ukrytych, a ReLU w wyjściu klasyfikatora wieloklasowego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-activation"
+   ],
+   "explanation": "**Dlaczego poprawne:** Funkcja aktywacji nadaje nieliniowość i wyznacza wyjście neuronu; ReLU jest popularna.\n\n**Dlaczego błędne:** Nie inicjalizuje wag, nie jest tylko na wejściu, a funkcje liniowe nie są standardem w warstwach ukrytych; sigmoida daje (0,1).\n\n**Zapamiętaj:** Aktywacja = nieliniowość.",
+   "changes": []
+  },
+  {
+   "id": 1309,
+   "question": "Niezbilansowany zbiór danych (Imbalanced Data):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Sytuacja, w której jedna klasa jest znacznie liczniejsza od innych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Do walidacji powinniśmy zastosować metrykę F1.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Należy zawsze usunąć nadmiarowe dane z klasy liczniejszej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie ma wpływu na proces uczenia.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Można stosować techniki takie jak SMOTE (oversampling) lub undersampling.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Accuracy jest najlepszą metryką w tym przypadku.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Accuracy może być wysoka nawet wtedy, gdy model całkowicie ignoruje klasę mniejszościową.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "SMOTE polega na usuwaniu przykładów klasy większościowej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Przy niezbilansowanych danych precision i recall dla klasy mniejszościowej nie niosą informacji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-imbalanced",
+    "ml-eval-metrics"
+   ],
+   "explanation": "**Dlaczego poprawne:** Niezbilansowanie oznacza dominację jednej klasy; F1 i SMOTE/undersampling są właściwe.\n\n**Dlaczego błędne:** Usuwanie nadmiaru nie jest obowiązkowe, niezbilansowanie wpływa na uczenie, a accuracy jest wprowadzająca w błąd.\n\n**Zapamiętaj:** Niezbilansowane: nie accuracy, tylko F1/recall.",
+   "changes": []
+  },
+  {
+   "id": 1310,
+   "question": "Etykietowanie danych (Labeling):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Proces przypisywania poprawnych odpowiedzi do danych wejściowych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Zawsze wykonywany jest automatycznie.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Może być wykonywany ręcznie przez ekspertów.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Dotyczy tylko danych numerycznych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest kluczowym etapem w uczeniu nienadzorowanym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Błędne etykiety (noise) obniżają jakość modelu.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Etykiety są niezbędne w uczeniu nadzorowanym.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Etykietowanie polega na normalizacji cech numerycznych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Duży zbiór z błędnymi etykietami nigdy nie wpływa na dokładność modelu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-labeling",
+    "ml-supervised-unsupervised"
+   ],
+   "explanation": "**Dlaczego poprawne:** Etykietowanie to przypisywanie poprawnych odpowiedzi, często ręcznie, a błędy obniżają jakość modelu.\n\n**Dlaczego błędne:** Nie zawsze jest automatyczne, nie dotyczy tylko liczb i nie jest kluczowe w uczeniu nienadzorowanym.\n\n**Zapamiętaj:** Jakość etykiet = jakość modelu.",
+   "changes": []
+  },
+  {
+   "id": 1311,
+   "question": "Epoka (Epoch) w uczeniu maszynowym:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jedno pełne przejście algorytmu przez cały zbiór treningowy.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jednego cyklu, w którym pokazujemy sieci neuronowej wszystkie dane ze zbioru testowego.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Czas potrzebny na wytrenowanie jednego neuronu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Liczba warstw w sieci głębokiej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest tożsama z jedną iteracją (batch).",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Zbyt duża liczba epok może prowadzić do overfittingu.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Jedna epoka składa się z wielu iteracji, jeśli rozmiar batcha jest mniejszy niż zbiór treningowy.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liczba iteracji w epoce jest równa rozmiarowi batcha.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Po jednej epoce wagi sieci zawsze osiągają minimum globalne.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-epoch"
+   ],
+   "explanation": "**Dlaczego poprawne:** Epoka to jedno pełne przejście przez zbiór treningowy; za dużo epok grozi przeuczeniem.\n\n**Dlaczego błędne:** Epoka dotyczy zbioru treningowego, nie testowego; to nie czas trenowania neuronu, liczba warstw ani iteracja (batch).\n\n**Zapamiętaj:** Epoka = cały zbiór treningowy raz.",
+   "changes": []
+  },
+  {
+   "id": 1312,
+   "question": "Które z poniższych metod nie są zazwyczaj stosowane do oceny modeli w nadzorowanym uczeniu maszynowym?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Obszar pod krzywą ROC (AUC-ROC).",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Współczynnik korelacji Pearsona.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Accuracy.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "F1-score.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Log Loss (Cross-Entropy).",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Średni błąd bezwzględny (MAE) dla regresji.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Średnia arytmetyczna wag neuronów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Macierz pomyłek.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "RMSE dla zadań regresji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-eval-metrics"
+   ],
+   "explanation": "**Dlaczego poprawne:** Korelacja Pearsona nie jest standardową metryką jakości modelu nadzorowanego, podobnie średnia wag.\n\n**Dlaczego błędne:** AUC-ROC, accuracy, F1, log loss i MAE to standardowe metryki oceny (MAE w regresji); macierz pomyłek i RMSE też.\n\n**Zapamiętaj:** Metryki porównują predykcje z etykietami.",
+   "changes": []
+  },
+  {
+   "id": 1313,
+   "question": "Co można powiedzieć o modelu uczenia maszynowego w kontekście zjawiska nadmiernego dopasowania (przeuczenie, overfitting)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Model ma bardzo niską stratę na zbiorze treningowym, ale wysoką na testowym.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Model uczenia maszynowego jest zbyt dobrze dopasowany do danych treningowych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Model jest zbyt prosty, aby opisać dane.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wynika z braku danych treningowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Model \"uczy się na pamięć\" szumu w danych treningowych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest pożądane w systemach produkcyjnych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Błąd na zbiorze walidacyjnym rośnie, podczas gdy błąd treningowy nadal maleje.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Model ma wysoki błąd zarówno na zbiorze treningowym, jak i testowym.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Model ma niską wariancję i wysokie obciążenie.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-overfitting"
+   ],
+   "explanation": "**Dlaczego poprawne:** Przeuczony model ma niską stratę treningową i wysoką testową, zapamiętuje szum.\n\n**Dlaczego błędne:** Zbyt prosty model to niedouczenie, przeuczenie nie wynika z braku danych jako takiego i nie jest pożądane.\n\n**Zapamiętaj:** Przeuczenie: niski błąd train, wysoki test.",
+   "changes": []
+  },
+  {
+   "id": 1314,
+   "question": "Czym może być spowodowane nadmiernie dopasowanie (przeuczenie, overfitting)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zbyt duża liczba parametrów modelu w stosunku do małej liczby przykładów.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Zbyt skomplikowany model w stosunku do ilości i charakteru dostępnych danych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Zbyt duża liczba epok trenowania.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Zastosowanie regularyzacji.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Brak zbioru walidacyjnego.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Zbyt silne Dropout w sieciach neuronowych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zbyt mała liczba przykładów treningowych względem złożoności modelu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zbyt mała liczba parametrów modelu.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zbyt duży i różnorodny zbiór treningowy.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-overfitting",
+    "ml-epoch"
+   ],
+   "explanation": "**Dlaczego poprawne:** Nadmiar parametrów, złożoność, zbyt wiele epok i brak walidacji sprzyjają przeuczeniu (brak walidacji uniemożliwia jego wykrycie i early stopping).\n\n**Dlaczego błędne:** Regularyzacja przeciwdziała przeuczeniu, a zbyt silny Dropout raczej powoduje niedouczenie.\n\n**Zapamiętaj:** Za duży model + za mało danych = overfitting.",
+   "changes": []
+  },
+  {
+   "id": 1315,
+   "question": "Czym może być spowodowane niedouczenie (underfitting) modelu uczenia maszynowego?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Model jest zbyt prosty, aby uchwycić zależności w danych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Zbyt krótkim czasem trenowania lub zbyt małą liczbą epok.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Zbyt dużą liczbą cech (wymiarów).",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Użyciem zbyt skomplikowanej sieci neuronowej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Model ma wysoki błąd zarówno na zbiorze treningowym, jak i testowym.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Można go naprawić poprzez dodanie regularyzacji L2.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zbyt silna regularyzacja.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zbyt duży zbiór danych treningowych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zbyt słaba regularyzacja.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-underfitting"
+   ],
+   "explanation": "**Dlaczego poprawne:** Niedouczenie to zbyt prosty model, zbyt krótkie trenowanie, wysoki błąd na train i test, także zbyt silna regularyzacja.\n\n**Dlaczego błędne:** Zbyt wiele cech i zbyt skomplikowana sieć to przyczyny przeuczenia; regularyzacja L2 pogłębia niedouczenie.\n\n**Zapamiętaj:** Underfitting: wysoki błąd wszędzie.",
+   "changes": []
+  },
+  {
+   "id": 1316,
+   "question": "Jakie działania można podjąć, aby uniknąć nadmiernego dopasowania (przeuczenia, overfitting)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Regularyzacja (L1/L2), Dropout, Early Stopping, zwiększenie ilości danych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Zastosować większą liczbę cech.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Zwiększyć liczbę warstw sieci.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Usunąć zbiór walidacyjny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Zastosować Cross-Validation.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Zmniejszyć siłę regularyzacji.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wczesne zatrzymanie (early stopping) na podstawie błędu walidacyjnego.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Augmentacja danych zwiększa ryzyko przeuczenia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zwiększenie liczby parametrów przy niezmienionej liczbie przykładów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-overfitting",
+    "ml-cross-validation"
+   ],
+   "explanation": "**Dlaczego poprawne:** Regularyzacja, Dropout, early stopping, więcej danych i walidacja krzyżowa ograniczają przeuczenie.\n\n**Dlaczego błędne:** Więcej cech, więcej warstw, usunięcie walidacji i słabsza regularyzacja je nasilają.\n\n**Zapamiętaj:** Ogranicz złożoność, dodaj dane.",
+   "changes": []
+  },
+  {
+   "id": 1317,
+   "question": "Jakie działania można podjąć, aby uniknąć niedouczenia (underfitting)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zwiększenie złożoności modelu, dodanie nowych cech, wydłużenie czasu trenowania.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Użyć prostszych modeli.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Zwiększyć siłę regularyzacji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Zmniejszyć liczbę neuronów w warstwach ukrytych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Usunąć szum z danych treningowych.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Zastosować inżynierię cech (feature engineering).",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Wybór bardziej elastycznego modelu, np. sieci neuronowej zamiast regresji liniowej dla zależności nieliniowych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zastosowanie silniejszego Dropout.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zmniejszenie liczby cech opisujących obiekty.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-underfitting"
+   ],
+   "explanation": "**Dlaczego poprawne:** Większa złożoność, nowe cechy i dłuższy trening zmniejszają niedouczenie.\n\n**Dlaczego błędne:** Prostsze modele, silniejsza regularyzacja, mniej neuronów i usuwanie szumu nie leczą niedouczenia.\n\n**Zapamiętaj:** Niedouczenie: zwiększ pojemność.",
+   "changes": []
+  },
+  {
+   "id": 1318,
+   "question": "Jakie są przykłady zadań uczenia maszynowego stosowanych w uczeniu nadzorowanym?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Klasyfikacja i Regresja.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "klasyfikacji",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Klasteryzacja (grupowanie).",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Redukcja wymiarowości.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wykrywanie anomalii (bez etykiet).",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Przewidywanie wartości ciągłych (regresja).",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Rozpoznawanie ręcznie pisanych cyfr na podstawie oznaczonych zdjęć.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Redukcja wymiarowości metodą PCA.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Reguły asocjacyjne w analizie koszyka zakupowego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-supervised-unsupervised"
+   ],
+   "explanation": "**Dlaczego poprawne:** Klasyfikacja i regresja wymagają etykiet.\n\n**Dlaczego błędne:** Klasteryzacja, redukcja wymiarowości i wykrywanie anomalii bez etykiet to uczenie nienadzorowane.\n\n**Zapamiętaj:** Nadzorowane = etykiety.",
+   "changes": []
+  },
+  {
+   "id": 1319,
+   "question": "Jakie są przykłady zadań uczenia maszynowego stosowanych w uczeniu nienadzorowanym?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Klasteryzacja, Redukcja wymiarowości, Wykrywanie anomalii, Reguły asocjacyjne.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "redukcji wymiarowości",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Regresja logistyczna.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Przewidywanie szeregów czasowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Grupowanie podobnych klientów bez znajomości ich etykiet.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Rozpoznawanie twarzy na zdjęciach (z etykietami).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Algorytm k-średnich.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Drzewa decyzyjne trenowane na danych z etykietami.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Klasyfikacja spamu na podstawie oznaczonych wiadomości.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-supervised-unsupervised"
+   ],
+   "explanation": "**Dlaczego poprawne:** Klasteryzacja, redukcja wymiarowości, anomalie, reguły asocjacyjne i grupowanie klientów nie używają etykiet.\n\n**Dlaczego błędne:** Regresja logistyczna, szeregi czasowe z wartością docelową i rozpoznawanie twarzy z etykietami są nadzorowane.\n\n**Zapamiętaj:** Nienadzorowane = brak etykiet.",
+   "changes": []
+  },
+  {
+   "id": 1320,
+   "question": "Jedną z podstawowych architektur systemów agentowych jest architektura BDI. W kontekście systemów agentowych skrót BDI jest wyjaśniany jako:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Beliefs (Przekonania), Desires (Pragnienia), Intentions (Intencje).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Belief-Desire-Intention",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Binary-Data-Interface",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Behavior-Driven-Integration",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest modelem architektury agentów inteligentnych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Służy do budowy baz danych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Intencje to cele, do których agent się zobowiązał i które aktualnie realizuje.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "W BDI litera D oznacza Data (Dane).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "W architekturze BDI litera B oznacza Behavior (Zachowanie).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-agents-bdi"
+   ],
+   "explanation": "**Dlaczego poprawne:** BDI to Beliefs, Desires, Intentions (Belief-Desire-Intention), model agentów inteligentnych.\n\n**Dlaczego błędne:** Binary-Data-Interface i Behavior-Driven-Integration to zmyślone rozwinięcia; BDI nie służy do budowy baz danych.\n\n**Zapamiętaj:** BDI = przekonania, pragnienia, intencje.",
+   "changes": [
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1321,
+   "question": "Odwracalność automatów komórkowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Automat jest odwracalny, jeśli każda konfiguracja ma dokładnie jednego poprzednika.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Dla automatów odwracalnych odwzorowanie realizowane przez funkcję przejścia nie może być bijekcją.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wszystkie automaty komórkowe są odwracalne.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Odwracalność zależy od liczby stanów komórki.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Gra w życie (Game of Life) jest automatem odwracalnym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Automaty odwracalne zachowują informację.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Automat jest odwracalny, jeśli jego globalna funkcja przejścia jest bijekcją.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Reguła 110 jest odwracalna.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Odwracalność oznacza, że wszystkie konfiguracje prowadzą do jednej konfiguracji stabilnej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-cellular-automata"
+   ],
+   "explanation": "**Dlaczego poprawne:** Odwracalny automat ma dokładnie jednego poprzednika każdej konfiguracji, więc zachowuje informację.\n\n**Dlaczego błędne:** Odwracalność wymaga bijekcji, nie zależy od samej liczby stanów, nie wszystkie CA są odwracalne, a Gra w życie nie jest.\n\n**Zapamiętaj:** Odwracalny = bijekcja.",
+   "changes": [
+    "f: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1322,
+   "question": "Twórcy automatów komórkowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "John von Neumann oraz Stanisław Ulam.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Jakob Laub oraz Philipp Lenard",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Alan Turing i Alonzo Church.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Claude Shannon i Norbert Wiener.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Stephen Wolfram.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "John Conway (twórca Gry w Życie).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Pomysł automatów komórkowych powstał w latach 40. XX wieku w Los Alamos.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Automaty komórkowe wymyślił Donald Knuth.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Automaty komórkowe wprowadzili Alan Turing i John McCarthy.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-cellular-automata"
+   ],
+   "explanation": "**Dlaczego poprawne:** Twórcami są von Neumann i Ulam.\n\n**Dlaczego błędne:** Wolfram badał automaty, Conway stworzył Grę w życie (nie CA), Turing/Church, Shannon/Wiener to inne dziedziny.\n\n**Zapamiętaj:** CA: von Neumann + Ulam.",
+   "changes": []
+  },
+  {
+   "id": 1323,
+   "question": "Sąsiedztwa w automatach komórkowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Sąsiedztwo von Neumanna (4 sąsiadów) oraz sąsiedztwo Moore'a (8 sąsiadów).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Dla siatki kwadratowej sąsiedztwo składające się z czterech komórek stykających się krawędziami nazywa się sąsiedztwem von Neumanna.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Sąsiedztwo Moore'a obejmuje tylko komórki stykające się rogami.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Sąsiedztwo jest zawsze definiowane dla całej siatki jednocześnie.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Istnieją sąsiedztwa o większym promieniu (np. r=2).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Sąsiedztwo von Neumanna obejmuje komórkę centralną.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Sąsiedztwo Moore'a o promieniu 1 składa się z 8 komórek otaczających komórkę centralną.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Sąsiedztwo von Neumanna o promieniu 1 składa się z 8 komórek.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "W sąsiedztwie von Neumanna komórki stykają się z centralną wyłącznie rogami.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-cellular-automata"
+   ],
+   "explanation": "**Dlaczego poprawne:** Von Neumann to 4 komórki stykające się krawędziami, Moore to 8, istnieją większe promienie.\n\n**Dlaczego błędne:** Moore obejmuje także krawędzie, nie tylko rogi; sąsiedztwo jest lokalne dla każdej komórki, a von Neumann zwykle nie obejmuje centrum.\n\n**Zapamiętaj:** Neumann 4, Moore 8.",
+   "changes": [
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  },
+  {
+   "id": 1324,
+   "question": "Emergencja w systemach złożonych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zjawisko powstawania nowych, złożonych właściwości na poziomie makroskopowym.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Otrzymywaniu całościowego obrazu makroskopowego systemu na podstawie działania mikroskopowych reguł.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Polega na centralnym sterowaniu każdym elementem systemu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest synonimem chaosu deterministycznego.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Przykładem jest formowanie się kluczy ptaków lub mrowisk.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga skomplikowanych reguł dla każdego agenta.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Emergencja polega na tym, że zachowanie całości nie wynika wprost z pojedynczych elementów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Emergentne własności zawsze da się przewidzieć, analizując pojedynczą komórkę.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Gra w życie pokazuje emergencję: proste lokalne reguły dają złożone struktury, np. glidery.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Emergencja występuje wyłącznie w systemach biologicznych.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-cellular-automata"
+   ],
+   "explanation": "**Dlaczego poprawne:** Emergencja to powstawanie złożonych własności makroskopowych; przykłady to klucze ptaków i mrowiska.\n\n**Dlaczego błędne:** Nie oznacza centralnego sterowania ani chaosu deterministycznego i nie wymaga złożonych reguł. Opcja o „całościowym obrazie” jest niejednoznaczna (fragment), zachowano F.\n\n**Zapamiętaj:** Emergencja: złożoność z prostych reguł.",
+   "changes": [
+    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "b: pozostawiono false (fragment, niejednoznaczne)"
+   ]
+  },
+  {
+   "id": 1325,
+   "question": "Najprostszy agent, który prowadzi prostą adaptację swojego działania w zależności od zmian środowiska (bez efektów pamięci i uczenia się) określany jest jako:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Podejmuje decyzje wyłącznie na podstawie aktualnego stanu środowiska.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Agent reaktywny",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Posiada rozbudowaną pamięć długotrwałą.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Planuje swoje działania z dużym wyprzedzeniem.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Nie posiada wewnętrznego modelu świata.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest przykładem agenta BDI.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Agent działa według reguł warunek-akcja.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Agent reaktywny buduje plan działania przed każdą akcją, przeszukując przestrzeń stanów.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Agent reaktywny utrzymuje model świata aktualizowany na podstawie historii percepcji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml-agents-bdi"
+   ],
+   "explanation": "**Dlaczego poprawne:** To agent reaktywny: decyduje na podstawie aktualnego stanu, bez modelu świata i pamięci.\n\n**Dlaczego błędne:** Nie ma pamięci długotrwałej, nie planuje i nie jest agentem BDI.\n\n**Zapamiętaj:** Reaktywny = reguły na bieżącej percepcji.",
+   "changes": [
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "id": "ml-one-hot",
+   "term": "Kodowanie 1 z n (One-Hot Encoding)",
+   "topic": "machine_learning",
+   "short": "Reprezentacja zmiennej kategorycznej jako wektora binarnego, w którym dokładnie jedna pozycja ma wartość 1.",
+   "details": "**Jak działa:** dla zmiennej z k kategoriami tworzymy k kolumn; obiekt z kategorią i ma 1 w kolumnie i i 0 w pozostałych. Nie narzuca sztucznego porządku (w odróżnieniu od kodowania 1,2,3...). Wynik jest używany w sieciach neuronowych (etykiety klas, wyjście softmax) i modelach liniowych.\n\n**Przykład:** {czerwony, zielony, niebieski} → [1,0,0], [0,1,0], [0,0,1].\n\n**Na egzaminie uważaj na:** to nie kompresja ani sortowanie; nie zamienia float na int; przy wielu kategoriach powoduje dużą liczbę kolumn (rzadkie wektory); nie zachowuje porządku kategorii.",
+   "related": [
+    "ml-supervised-unsupervised"
+   ]
+  },
+  {
+   "id": "ml-pandas-apply-map-agg",
+   "term": "Pandas: apply, map, agg",
+   "topic": "machine_learning",
+   "short": "Metody Pandas do stosowania funkcji do danych: map (Series, element po elemencie), apply (kolumny/wiersze), agg (agregacje).",
+   "details": "**map** działa na Series: argumentem jest funkcja, słownik lub Series; wartości bez klucza dają NaN; zwraca nowy obiekt.\n**apply** na DataFrame wywołuje funkcję dla każdej kolumny (axis=0, domyślnie) lub każdego wiersza (axis=1); funkcja dostaje Series (wiersz ma indeks = nazwy kolumn, więc widzi wiele kolumn naraz). Wynik może być Series, DataFrame lub skalar zależnie od funkcji.\n**agg** stosuje funkcje agregujące; słownik {\"kolumna\": \"funkcja\"} pozwala użyć różnych funkcji dla różnych kolumn, np. df.agg({\"one\":\"mean\",\"four\":\"sum\"}). Działa na DataFrame i Series.\n\n**Na egzaminie uważaj na:** apply nie jest najszybszy (wektoryzacja jest szybsza); axis=1 nie jest szybsze od axis=0; agg i apply to nie to samo; map nie służy do zmiany nazw kolumn ani średniej kroczącej (to rolling); metody zwracają nowy obiekt, nie modyfikują w miejscu.",
+   "related": [
+    "ml-data-performance"
+   ]
+  },
+  {
+   "id": "ml-pandas-merge",
+   "term": "Pandas: merge (złączenia DataFrame)",
+   "topic": "machine_learning",
+   "short": "merge łączy poziomo dwa DataFrame na podstawie wartości we wspólnych kolumnach (jak JOIN w SQL).",
+   "details": "**Jak działa:** pd.merge(a, b, on=\"klucz\", how=...) porównuje wartości kolumn kluczowych. Typy how: inner (domyślny, tylko pasujące), left, right, outer (wszystkie wiersze z uzupełnieniem NaN). Indeksy nie muszą być identyczne; klucze mogą mieć różne nazwy (left_on/right_on). Zwraca nowy DataFrame i nie modyfikuje oryginałów.\n\n**Odróżnij:** concat łączy tabele pionowo (dokładanie wierszy) lub poziomo po indeksie; join to skrót merge po indeksie.\n\n**Na egzaminie uważaj na:** merge to nie łączenie pionowe; domyślnie inner, nie outer; nie wymaga identycznych indeksów; nie działa w miejscu.",
+   "related": [
+    "ml-pandas-apply-map-agg"
+   ]
+  },
+  {
+   "id": "ml-crs",
+   "term": "Układy odniesienia: geograficzne i rzutowane (CRS)",
+   "topic": "machine_learning",
+   "short": "Geograficzny CRS (np. WGS-84) opisuje położenie na elipsoidzie w stopniach; rzutowany (np. PUWG 2000) to płaskie współrzędne X, Y w metrach.",
+   "details": "**Geograficzne (WGS-84, EPSG:4326):** Ziemia modelowana jako elipsoida (z uwzględnieniem spłaszczenia na biegunach), współrzędne to szerokość (−90..90°) i długość (−180..180°) w stopniach. Używane w GPS. Pola i odległości w metrach nie wynikają wprost ze stopni.\n\n**Rzutowane (PUWG 2000, UTM):** rzutowanie elipsoidy na płaszczyznę; współrzędne kartezjańskie w metrach, więc odległości można liczyć wzorem Pitagorasa, a pola jako powierzchnie płaskie. Każde rzutowanie wprowadza zniekształcenia (kątów, długości lub pól), mniejsze w ograniczonym obszarze (PUWG 2000 to strefy).\n\n**Na egzaminie uważaj na:** WGS-84 nie jest układem płaskim; układ płaski nie jest globalny ani wolny od zniekształceń; do pól i odległości w metrach użyj układu rzutowanego; PUWG 2000 nie jest tylko morski.",
+   "related": [
+    "ml-geopandas"
+   ]
+  },
+  {
+   "id": "ml-geopandas",
+   "term": "GeoDataFrame (GeoPandas)",
+   "topic": "machine_learning",
+   "short": "GeoDataFrame to DataFrame z wyróżnioną kolumną geometry (GeoSeries) przechowującą obiekty przestrzenne.",
+   "details": "**Jak działa:** GeoDataFrame dziedziczy po DataFrame, więc ma zwykłe kolumny atrybutowe (tekst, liczby) oraz kolumnę geometry z obiektami Shapely (punkty, linie, wielokąty). Ma przypisany CRS (crs), który można zmienić przez to_crs. Obsługuje zwykłe złączenia (merge) i złączenia przestrzenne (sjoin), operacje geometryczne (buffer, area, distance).\n\nGeoPandas wymaga biblioteki Shapely (i zwykle pyogrio/fiona do wczytywania plików).\n\n**Na egzaminie uważaj na:** GeoDataFrame zawiera zarówno dane atrybutowe, jak i przestrzenne; geometrie w kolumnie mogą być różnych typów; obsługuje złączenia; obliczenia pól/odległości wymagają CRS rzutowanego.",
+   "related": [
+    "ml-crs",
+    "ml-pandas-merge"
+   ]
+  },
+  {
+   "id": "ml-data-performance",
+   "term": "Wydajność i przetwarzanie danych większych niż RAM",
+   "topic": "machine_learning",
+   "short": "Techniki skracania czasu obliczeń (algorytmy, indeksy, wektoryzacja, równoległość) i pracy z danymi niemieszczącymi się w pamięci.",
+   "details": "**Przyspieszanie:** lepsze algorytmy i struktury danych, indeksy w bazach, wektoryzacja (NumPy/Pandas zamiast pętli Pythona), zrównoleglenie, unikanie zbędnych kopii. Sam zakup procesora czy zwiększenie pamięci wirtualnej nie jest uniwersalnym rozwiązaniem.\n\n**Dane większe niż RAM (out-of-core):** czytanie porcjami (chunksize), przetwarzanie strumieniowe, baza danych (zapytania po stronie serwera), biblioteki Dask i Apache Spark (dane rozproszone/leniwe). Duży swap powoduje thrashing i ogromne spowolnienie.\n\n**Na egzaminie uważaj na:** wektoryzacja jest poprawną optymalizacją; Dask/Spark/baza danych to poprawne rozwiązania; pętle w czystym Pythonie są wolniejsze niż NumPy; interfejs graficzny i pliki tekstowe nie przyspieszają analizy.",
+   "related": [
+    "ml-pandas-apply-map-agg"
+   ]
+  },
+  {
+   "id": "ml-data-formats",
+   "term": "Formaty danych a typowanie",
+   "topic": "machine_learning",
+   "short": "Formaty binarne ze schematem (Parquet, Avro, HDF5, SQL) zapisują typy wartości, a tekstowe (CSV, TXT) nie.",
+   "details": "**Ze schematem:** Parquet, Avro (schemat w pliku), HDF5 (typy dataset), bazy SQL (każda kolumna ma zadeklarowany typ). Czytnik zna typ int/float/string bez zgadywania.\n\n**Bez jawnych typów:** CSV i pliki tekstowe to tylko ciągi znaków; biblioteka (np. read_csv) zgaduje typy. JSON odróżnia liczby, napisy i wartości logiczne, ale nie ma jawnego rozróżnienia int/float ani typu daty.\n\n**Na egzaminie uważaj na:** nie każdy plik binarny ma jawny schemat; CSV nie zapisuje typów w nagłówku; JSON to nie format ze schematem.",
+   "related": [
+    "ml-data-performance"
+   ]
+  },
+  {
+   "id": "ml-eval-metrics",
+   "term": "Metryki oceny modeli",
+   "topic": "machine_learning",
+   "short": "Accuracy, precision, recall, F1, macierz pomyłek, AUC-ROC, log loss (klasyfikacja) oraz MAE/MSE (regresja) mierzą jakość predykcji.",
+   "details": "**Klasyfikacja:** macierz pomyłek (TP, FP, FN, TN); accuracy = (TP+TN)/wszystkie; precision = TP/(TP+FP); recall = TP/(TP+FN); F1 = średnia harmoniczna precision i recall; AUC-ROC to pole pod krzywą TPR(FPR) dla różnych progów; log loss (cross-entropy) karze pewne błędne predykcje.\n**Regresja:** MAE, MSE, RMSE, R^^^2^^.\n\nWielkości nie będące miarami jakości: liczba warstw, rozmiar pliku modelu, czas trenowania, średnia wag. Współczynnik korelacji Pearsona opisuje zależność zmiennych, nie jest standardową metryką klasyfikatora.\n\n**Na egzaminie uważaj na:** pytanie „nie są stosowane” odwraca zaznaczanie; MAE dotyczy regresji, ale jest metryką nadzorowaną.",
+   "related": [
+    "ml-imbalanced",
+    "ml-cross-validation"
+   ]
+  },
+  {
+   "id": "ml-cross-validation",
+   "term": "Walidacja krzyżowa i LOOCV",
+   "topic": "machine_learning",
+   "short": "Walidacja krzyżowa dzieli dane na części i wielokrotnie trenuje/testuje model; LOOCV to skrajny przypadek k = n.",
+   "details": "**k-fold:** dane dzielone na k części; k razy trenujemy na k−1 częściach i testujemy na pozostałej; wynik to średnia.\n**LOOCV (Leave-One-Out):** k = n; testujemy na jednym przykładzie, trenujemy na n−1. Wymaga n-krotnego trenowania, więc jest kosztowna dla dużych zbiorów. Estymator błędu ma małe obciążenie (bias), a jest deterministyczny (brak losowego podziału), ale może mieć dużą wariancję.\n\nStosuje się do wszystkich modeli, nie tylko sieci. Walidacja krzyżowa pomaga wykrywać przeuczenie i dobierać hiperparametry.\n\n**Na egzaminie uważaj na:** LOOCV nie jest szybka dla dużych danych; to nie usuwanie duplikatów; zbiór testowy to jeden przykład, nie połowa.",
+   "related": [
+    "ml-overfitting",
+    "ml-eval-metrics"
+   ]
+  },
+  {
+   "id": "ml-activation",
+   "term": "Funkcje aktywacji",
+   "topic": "machine_learning",
+   "short": "Funkcja aktywacji przekształca sumę ważoną wejść neuronu w jego wyjście i wprowadza nieliniowość.",
+   "details": "**Jak działa:** neuron liczy z = w·x + b, a wyjście to f(z). Bez nieliniowości wiele warstw liniowych redukuje się do jednej warstwy liniowej. Popularne: ReLU ^^\\max(0,x)^^, sigmoida (0,1), tanh (−1,1), softmax (rozkład prawdopodobieństwa klas w wyjściu).\n\nFunkcja aktywacji jest stosowana w warstwach ukrytych i wyjściowej, nie tylko wejściowej; nie służy do inicjalizacji wag. W warstwach ukrytych stosuje się funkcje nieliniowe (najczęściej ReLU), nie liniowe.\n\n**Na egzaminie uważaj na:** sigmoida nie zwraca (−1,1); funkcja liniowa nie wprowadza nieliniowości; softmax zwykle w warstwie wyjściowej.",
+   "related": [
+    "ml-one-hot"
+   ]
+  },
+  {
+   "id": "ml-imbalanced",
+   "term": "Dane niezbilansowane (imbalanced data)",
+   "topic": "machine_learning",
+   "short": "Zbiór, w którym jedna klasa jest znacznie liczniejsza od innych, co wypacza uczenie i metryki.",
+   "details": "**Problem:** model może osiągnąć wysokie accuracy, zawsze wskazując klasę większościową (np. 99% negatywnych), a mimo to nie wykrywać klasy mniejszościowej.\n\n**Metryki:** precision, recall, F1, AUC-PR/ROC dla klasy mniejszościowej, macierz pomyłek.\n**Techniki:** oversampling (SMOTE syntetyzuje nowe przykłady mniejszości), undersampling (usuwanie części przykładów większości), wagi klas, dobór progu.\n\n**Na egzaminie uważaj na:** accuracy nie jest najlepszą metryką; undersampling nie jest obowiązkowy; SMOTE to oversampling, nie usuwanie; niezbilansowanie wpływa na uczenie.",
+   "related": [
+    "ml-eval-metrics"
+   ]
+  },
+  {
+   "id": "ml-labeling",
+   "term": "Etykietowanie danych (labeling)",
+   "topic": "machine_learning",
+   "short": "Przypisywanie poprawnych odpowiedzi (etykiet) przykładom, potrzebne w uczeniu nadzorowanym.",
+   "details": "**Jak działa:** każdemu przykładowi wejściowemu (obraz, tekst, wiersz tabeli) przypisujemy klasę lub wartość docelową. Robią to ręcznie eksperci lub anotatorzy (crowdsourcing), półautomatycznie (modele podpowiadają) albo automatycznie regułami. Dotyczy każdego rodzaju danych, nie tylko liczb.\n\nJakość etykiet jest kluczowa: błędne etykiety (label noise) obniżają jakość modelu. W uczeniu nienadzorowanym etykiet nie ma.\n\n**Na egzaminie uważaj na:** etykietowanie nie jest zawsze automatyczne; nie jest kluczowe w uczeniu nienadzorowanym; nie dotyczy tylko danych numerycznych.",
+   "related": [
+    "ml-supervised-unsupervised"
+   ]
+  },
+  {
+   "id": "ml-epoch",
+   "term": "Epoka, iteracja i batch",
+   "topic": "machine_learning",
+   "short": "Epoka to jedno pełne przejście algorytmu uczącego przez cały zbiór treningowy.",
+   "details": "**Jak działa:** zbiór treningowy N przykładów dzielimy na mini-batche o rozmiarze B. Jedna iteracja (krok) to aktualizacja wag po jednym batchu; jedna epoka to N/B iteracji. Trening trwa wiele epok.\n\nZbyt wiele epok prowadzi do przeuczenia (błąd walidacyjny zaczyna rosnąć), zbyt mało do niedouczenia. Early stopping przerywa trening, gdy błąd walidacyjny przestaje maleć.\n\n**Na egzaminie uważaj na:** epoka dotyczy zbioru treningowego, nie testowego; epoka ≠ iteracja (batch); to nie czas trenowania neuronu ani liczba warstw.",
+   "related": [
+    "ml-overfitting",
+    "ml-underfitting"
+   ]
+  },
+  {
+   "id": "ml-overfitting",
+   "term": "Przeuczenie (overfitting)",
+   "topic": "machine_learning",
+   "short": "Model zbyt dobrze dopasowany do danych treningowych (łącznie z szumem), a słabo uogólniający na nowych danych.",
+   "details": "**Objawy:** bardzo niski błąd/strata na zbiorze treningowym, wysoki na walidacyjnym/testowym; niskie obciążenie, wysoka wariancja.\n**Przyczyny:** zbyt złożony model względem ilości danych (dużo parametrów, mało przykładów), szum w danych, zbyt długie trenowanie (za dużo epok), brak walidacji, która by je wykryła.\n**Zapobieganie:** więcej danych i augmentacja, regularyzacja L1/L2, Dropout, early stopping, prostszy model, mniej cech, walidacja krzyżowa.\n\n**Na egzaminie uważaj na:** „model zbyt prosty” to underfitting; zbyt silny Dropout lub regularyzacja powodują niedouczenie; przeuczenie nie jest pożądane; zwiększanie złożoności pogarsza problem.",
+   "related": [
+    "ml-underfitting",
+    "ml-cross-validation",
+    "ml-epoch"
+   ]
+  },
+  {
+   "id": "ml-underfitting",
+   "term": "Niedouczenie (underfitting)",
+   "topic": "machine_learning",
+   "short": "Model zbyt prosty lub zbyt krótko trenowany, przez co ma wysoki błąd także na zbiorze treningowym.",
+   "details": "**Objawy:** wysoki błąd zarówno na treningowym, jak i testowym; wysokie obciążenie (bias), niska wariancja.\n**Przyczyny:** zbyt prosty model, za mało cech informatywnych, zbyt krótki trening (mało epok), zbyt silna regularyzacja lub Dropout.\n**Naprawa:** złożony model (więcej warstw/neuronów), inżynieria cech i nowe cechy, dłuższy trening, osłabienie regularyzacji.\n\n**Na egzaminie uważaj na:** regularyzacja L2 pogłębia niedouczenie, nie leczy go; zbyt wiele cech i zbyt skomplikowana sieć to raczej przyczyny przeuczenia; usuwanie szumu i upraszczanie modelu nie pomaga.",
+   "related": [
+    "ml-overfitting",
+    "ml-epoch"
+   ]
+  },
+  {
+   "id": "ml-supervised-unsupervised",
+   "term": "Uczenie nadzorowane i nienadzorowane",
+   "topic": "machine_learning",
+   "short": "Nadzorowane uczy się z danych z etykietami (klasyfikacja, regresja); nienadzorowane szuka struktury w danych bez etykiet.",
+   "details": "**Nadzorowane:** klasyfikacja (kategorie, np. spam), regresja (wartości ciągłe, np. cena), także rozpoznawanie twarzy na oznaczonych zdjęciach, regresja logistyczna (mimo nazwy to klasyfikacja), prognoza szeregów czasowych z wartościami docelowymi.\n**Nienadzorowane:** klasteryzacja (k-średnich), redukcja wymiarowości (PCA), wykrywanie anomalii bez etykiet, reguły asocjacyjne, grupowanie klientów.\n\n**Na egzaminie uważaj na:** regresja logistyczna jest nadzorowana; klasteryzacja i PCA nie używają etykiet; przewidywanie szeregów czasowych zwykle jest zadaniem nadzorowanym.",
+   "related": [
+    "ml-labeling",
+    "ml-one-hot"
+   ]
+  },
+  {
+   "id": "ml-agents-bdi",
+   "term": "Agenci: architektura BDI i agent reaktywny",
+   "topic": "machine_learning",
+   "short": "BDI to model agenta oparty na przekonaniach (Beliefs), pragnieniach (Desires) i intencjach (Intentions); agent reaktywny działa tylko na bazie bieżącej percepcji.",
+   "details": "**BDI:** Beliefs to wiedza agenta o świecie, Desires to cele/pragnienia, Intentions to wybrane cele, do których agent się zobowiązał i które realizuje planami. Jest to architektura agentów deliberatywnych, nie związana z bazami danych.\n\n**Agent reaktywny (simple reflex):** reguły warunek→akcja na podstawie aktualnego stanu środowiska; brak pamięci, uczenia, wewnętrznego modelu świata i planowania. Agent oparty na modelu ma stan wewnętrzny, agent celowy planuje.\n\n**Na egzaminie uważaj na:** BDI ≠ Binary-Data-Interface; agent reaktywny nie jest agentem BDI; nie planuje z wyprzedzeniem.",
+   "related": [
+    "ml-cellular-automata"
+   ]
+  },
+  {
+   "id": "ml-cellular-automata",
+   "term": "Automaty komórkowe i emergencja",
+   "topic": "machine_learning",
+   "short": "Automat komórkowy to siatka komórek o skończonej liczbie stanów, aktualizowanych równolegle lokalną regułą sąsiedztwa; z prostych reguł mogą powstać złożone zachowania (emergencja).",
+   "details": "**Twórcy:** von Neumann i Ulam (lata 40. XX w.); Conway stworzył Grę w życie, Wolfram badał klasy reguł.\n**Sąsiedztwa:** von Neumanna (4 komórki stykające się krawędziami), Moore'a (8 komórek, z rogami); możliwe większe promienie (r=2). Sąsiedztwo zwykle nie zawiera komórki centralnej.\n**Odwracalność:** automat jest odwracalny, gdy globalna funkcja przejścia jest bijekcją (każda konfiguracja ma dokładnie jednego poprzednika), więc nie ginie informacja. Gra w życie NIE jest odwracalna.\n**Emergencja:** makroskopowe własności (klucze ptaków, mrowiska, glidery) powstają z lokalnych, prostych reguł bez centralnego sterowania; nie jest to chaos deterministyczny.\n\n**Na egzaminie uważaj na:** Conway i Wolfram nie są twórcami CA; nie wszystkie CA są odwracalne.",
+   "related": [
+    "ml-agents-bdi"
+   ]
+  }
+ ]
+}

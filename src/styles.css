@@ -968,3 +968,13 @@ body {
 }
 
 .modal h3 { margin-bottom: 16px; }
+
+/* ── Glossary ── */
+.term-card { border: 1px solid var(--border, #ddd); border-radius: 8px; padding: 10px 14px; margin: 8px 0; background: var(--bg-card, transparent); }
+.term-card summary { cursor: pointer; display: flex; flex-direction: column; gap: 2px; list-style: none; }
+.term-card summary::-webkit-details-marker { display: none; }
+.term-short { font-size: 14px; color: var(--text-muted); }
+.term-details { margin-top: 10px; font-size: 15px; line-height: 1.6; }
+.term-related { margin-top: 8px; font-size: 13px; color: var(--text-muted); }
+.glossary-search { width: 100%; padding: 10px 12px; margin: 10px 0; border-radius: 8px; border: 1px solid var(--border, #ccc); font-size: 15px; background: transparent; color: inherit; }
+#termsPanel h4 { margin-bottom: 6px; }

@@ -1,0 +1,2146 @@
+{
+ "questions": [
+  {
+   "id": 1326,
+   "question": "Najważniejszymi własnościami systemów złożonych (ang. complex systems) w domenie skali i czasu są:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Emergencja, samoorganizacja, nieliniowość, sprzężenia zwrotne.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Emergencja",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Przewidywalność długoterminowa.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Centralne zarządzanie.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Adaptacyjność.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Wrażliwość na warunki początkowe (efekt motyla).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Nieliniowość oddziaływań powoduje, że efekt nie jest proporcjonalny do przyczyny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zachowanie systemu złożonego daje się w pełni wyprowadzić z sumy zachowań jego izolowanych elementów.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Systemy złożone zawsze mają jeden centralny sterownik koordynujący wszystkie elementy.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-systemy-zlozone"
+   ],
+   "explanation": "**Dlaczego poprawne:** Emergencja, samoorganizacja, nieliniowość i sprzężenia zwrotne to kanoniczne własności systemów złożonych; sama emergencja też jest taką własnością, a nieliniowość oznacza brak proporcjonalności skutku do przyczyny.\n\n**Dlaczego błędne:** Przewidywalność długoterminowa i centralne zarządzanie przeczą naturze takich systemów; zachowanie nie jest sumą zachowań elementów. Adaptacyjność i efekt motyla to własności raczej systemów złożonych adaptacyjnych/chaotycznych, niebędące w kanonie tej listy (nieoceniane jako poprawne).\n\n**Zapamiętaj:** Złożoność = lokalne reguły, brak centrum, emergencja.",
+   "changes": [
+    "b: false -> true, bo Emergencja jest jedną z kluczowych własności systemów złożonych"
+   ]
+  },
+  {
+   "id": 1327,
+   "question": "Wskaż które zdania są prawdziwe w odniesieniu do homogenicznego i synchronicznego Automatu Komórkowego (CA)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Homogeniczny - te same reguły; Synchroniczny - jednoczesna aktualizacja.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Gra Life zaproponowana przez matematyka Johna Conwaya jest przykładem homogenicznego i synchronicznego automatu komórkowego.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "W grze Life reguły zmieniają się w każdej iteracji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Gra Life wymaga interwencji użytkownika w każdym kroku.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wszystkie komórki w automacie synchronicznym zmieniają stan w tym samym momencie zegarowym.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Homogeniczność oznacza, że siatka musi być nieskończona.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "W synchronicznym CA nowy stan każdej komórki zależy od stanów sąsiadów z poprzedniego kroku, a nie od już zaktualizowanych sąsiadów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "W synchronicznym CA komórki są aktualizowane kolejno, tak że sąsiad widzi już nowy stan komórki uaktualnionej wcześniej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Homogeniczny CA może mieć inną regułę przejścia dla każdej komórki.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-automat-komorkowy"
+   ],
+   "explanation": "**Dlaczego poprawne:** Homogeniczność = ta sama reguła wszędzie, synchroniczność = wszystkie komórki liczą nowy stan z poprzedniego kroku jednocześnie. Gra Life Conwaya jest takim automatem.\n\n**Dlaczego błędne:** Reguły Life są stałe, gra działa samoczynnie, a homogeniczność nie wymaga nieskończonej siatki. Aktualizacja sekwencyjna to tryb asynchroniczny.\n\n**Zapamiętaj:** Homogeniczny = jedna reguła; synchroniczny = jeden zegar.",
+   "changes": []
+  },
+  {
+   "id": 1328,
+   "question": "Własności homogenicznego automatu komórkowego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Identyczna reguła przejścia, identyczny zbiór stanów i identyczny kształt sąsiedztwa dla każdej komórki.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Reguła przejścia identyczna dla całej siatki.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Każda komórka ma inną liczbę sąsiadów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Siatka musi być zawsze skończona.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Zapewnia niezmienniczość reguł względem przesunięcia (translativity).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Stany komórek muszą być liczbami binarnymi.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Homogeniczny CA może być zdefiniowany na siatce nieskończonej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "W homogenicznym CA każda komórka ma własną, niezależną regułę przejścia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Homogeniczność wymaga, aby wszystkie komórki w danej chwili miały ten sam stan.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-automat-komorkowy"
+   ],
+   "explanation": "**Dlaczego poprawne:** Homogeniczny CA ma identyczną regułę, zbiór stanów i sąsiedztwo dla każdej komórki, co daje niezmienniczość względem przesunięcia; siatka może być nieskończona.\n\n**Dlaczego błędne:** Zróżnicowana liczba sąsiadów lub wymóg skończoności siatki albo binarnych stanów nie wynika z homogeniczności.\n\n**Zapamiętaj:** Homogeniczność = translacyjna niezmienniczość reguł.",
+   "changes": [
+    "b: false -> true, bo reguła identyczna dla całej siatki to sedno homogeniczności",
+    "e: false -> true, bo homogeniczność daje niezmienniczość względem przesunięcia"
+   ]
+  },
+  {
+   "id": 1329,
+   "question": "Niehomogeniczny Automat Komórkowy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Może posiadać różne reguły przejścia lub różne zbiory stanów dla poszczególnych komórek.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Niehomogeniczny automat komórkowy wyłącznie charakteryzuje się różnymi zbiorami stanów.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Jest zawsze odwracalny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie może być symulowany na komputerze.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Pozwala na modelowanie środowisk o zróżnicowanych właściwościach fizycznych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wymaga asynchronicznej aktualizacji.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Niehomogeniczność może dotyczyć także kształtu sąsiedztwa dla poszczególnych komórek.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Niehomogeniczny CA ma dla wszystkich komórek identyczną regułę przejścia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Niehomogeniczny CA nie może być aktualizowany synchronicznie.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-automat-komorkowy"
+   ],
+   "explanation": "**Dlaczego poprawne:** Niehomogeniczny CA dopuszcza różne reguły, stany lub sąsiedztwa w różnych komórkach, więc modeluje środowiska niejednorodne.\n\n**Dlaczego błędne:** Nie jest z definicji odwracalny, da się go symulować i może być synchroniczny; różnice nie dotyczą wyłącznie zbiorów stanów.\n\n**Zapamiętaj:** Niehomogeniczny = lokalnie różne reguły.",
+   "changes": [
+    "e: false -> true, bo zróżnicowane reguły/stany pozwalają modelować niejednorodne środowiska"
+   ]
+  },
+  {
+   "id": 1330,
+   "question": "Symulacja zdarzeń dyskretnych (DES):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Modeluje system jako sekwencyjną listę zdarzeń w czasie.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "DES stanowią alternatywną metodę modelowania wobec systemów Agent Based Modeling (ABM).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Czas in DES płynie w sposób ciągły.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Służy wyłącznie do modelowania procesów chemicznych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Zdarzenia są umieszczane w kolejce priorytetowej (event list).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Stan systemu zmienia się płynnie między zdarzeniami.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Stan systemu w DES zmienia się tylko w chwilach wystąpienia zdarzeń.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Typowe zastosowania DES to systemy kolejkowe, linie produkcyjne i sieci komputerowe.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "W DES zegar symulacji zawsze przesuwa się o stały krok Δt, niezależnie od zdarzeń.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "DES nie nadaje się do modelowania kolejek i systemów obsługi.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-symulacja-zdarzen-dyskretnych"
+   ],
+   "explanation": "**Dlaczego poprawne:** DES to sekwencja zdarzeń w kolejce priorytetowej (event list) uporządkowanej czasem; stan zmienia się tylko w chwilach zdarzeń, a metoda jest jedną z alternatyw dla ABM.\n\n**Dlaczego błędne:** Czas nie płynie ciągle ani krokiem stałym, stan nie zmienia się płynnie i DES nie ogranicza się do chemii, lecz dobrze modeluje kolejki.\n\n**Zapamiętaj:** DES: skoki od zdarzenia do zdarzenia.",
+   "changes": [
+    "b: false -> true, bo DES to jeden z paradygmatów symulacji obok ABM",
+    "e: false -> true, bo lista zdarzeń jest kolejką priorytetową wg czasu"
+   ]
+  },
+  {
+   "id": 1331,
+   "question": "Periodyczne warunki brzegowe dla Automatu Komórkowego oznaczają następujące własności dla obiektu poruszającego się po siatce:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Przeciwległe krawędzie siatki są ze sobą połączone.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Poruszający się obiekt definitywnie znika z siatki po osiągnięciu granicznych komórek.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Powodują odbicie się obiektu od ściany.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Są stosowane tylko w automatach 1D.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Siatka 2D z takimi warunkami ma topologię torusa.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Eliminują efekty brzegowe w symulacjach.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Obiekt opuszczający siatkę jedną krawędzią pojawia się po przeciwnej stronie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Periodyczne warunki brzegowe w 2D zawsze nadają siatce topologię walca, a nie torusa.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Komórki brzegowe mają stały, z góry zadany stan (np. zawsze 0).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-warunki-brzegowe-ca",
+    "ml2-automat-komorkowy"
+   ],
+   "explanation": "**Dlaczego poprawne:** Warunki periodyczne sklejają przeciwległe krawędzie: obiekt wychodzący z jednej strony wraca z przeciwnej, a siatka 2D ma topologię torusa; nie ma krawędzi, więc brak klasycznych efektów brzegowych.\n\n**Dlaczego błędne:** Obiekt nie znika ani się nie odbija (to inne warunki brzegowe), warunki nie są tylko 1D, a walec i stała wartość brzegowa to inne konfiguracje.\n\n**Zapamiętaj:** Periodyczne = torus, wrap-around.",
+   "changes": [
+    "e: false -> true, bo siatka 2D z warunkami periodycznymi to torus",
+    "f: false -> true, bo brak krawędzi = brak efektów brzegowych (zastępują je sztuczną periodycznością)"
+   ]
+  },
+  {
+   "id": 1332,
+   "question": "Algorytmy poszukujące ekstremum funkcji:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Gradient Descent, Adam, Algorytmy Genetyczne, Simulated Annealing.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Stochastic Gradient Descent",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "K-Means",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "PCA",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "PSO (Particle Swarm Optimization).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "BFS (Breadth-First Search).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Simulated Annealing dopuszcza czasowe pogorszenie wartości funkcji celu, by uciec z minimum lokalnego.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Gradient Descent gwarantuje znalezienie globalnego minimum dla dowolnej funkcji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Apriori służy do poszukiwania minimum funkcji celu w przestrzeni parametrów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-optymalizacja-ekstremum"
+   ],
+   "explanation": "**Dlaczego poprawne:** Gradient Descent, SGD, Adam, algorytmy genetyczne, SA i PSO to metody optymalizacji poszukujące ekstremum; SA dopuszcza pogorszenia, by uciec z minimum lokalnego.\n\n**Dlaczego błędne:** K-Means i PCA to metody uczenia nienadzorowanego (choć wewnętrznie optymalizują cel), BFS to przeszukiwanie grafu, a GD nie gwarantuje minimum globalnego; Apriori nie optymalizuje funkcji celu.\n\n**Zapamiętaj:** Optymalizatory: gradientowe, populacyjne, stochastyczne.",
+   "changes": []
+  },
+  {
+   "id": 1333,
+   "question": "Algorytmy redukcji wymiarowości:",
+   "options": [
+    {
+     "key": "a",
+     "text": "PCA (Principal Component Analysis), t-SNE, UMAP, Autoenkodery.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "K-Nearest Neighbors",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Linear Regression",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Decision Trees",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "LDA (Linear Discriminant Analysis).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "SVD (Singular Value Decomposition).",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "t-SNE służy głównie do wizualizacji danych wysokowymiarowych w 2D lub 3D.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "K-Means jest algorytmem redukcji wymiarowości, bo zmniejsza liczbę cech.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Redukcja wymiarowości zawsze zwiększa liczbę cech, aby ułatwić separację klas.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-redukcja-wymiarowosci",
+    "ml2-pca"
+   ],
+   "explanation": "**Dlaczego poprawne:** PCA, t-SNE, UMAP, autoenkodery, LDA i obcięty SVD zmniejszają liczbę wymiarów; t-SNE służy głównie wizualizacji.\n\n**Dlaczego błędne:** kNN, regresja liniowa i drzewa to modele predykcyjne, a K-Means to klasteryzacja; redukcja zmniejsza, nie zwiększa liczby cech.\n\n**Zapamiętaj:** Redukcja wymiaru: PCA/LDA/SVD liniowo, t-SNE/UMAP/AE nieliniowo.",
+   "changes": [
+    "e: false -> true, bo LDA jest (nadzorowaną) redukcją wymiarowości",
+    "f: false -> true, bo obcięty SVD redukuje wymiar"
+   ]
+  },
+  {
+   "id": 1334,
+   "question": "Metryki skuteczności modelu predykcyjnego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "MSE (Mean Squared Error), MAE, R-squared (dla regresji); Accuracy, F1 (dla klasyfikacji).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wariancja",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Odchylenie standardowe wag.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Liczba iteracji.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Log-Loss.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Współczynnik Giniego.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "RMSE jest pierwiastkiem z MSE i wyrażany jest w jednostkach zmiennej przewidywanej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Accuracy zawsze wiarygodnie ocenia klasyfikator, niezależnie od niezbalansowania klas.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "R-squared równe 1 oznacza, że model przewiduje gorzej niż średnia.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-metryki-modeli"
+   ],
+   "explanation": "**Dlaczego poprawne:** MSE, MAE, R² (regresja) oraz accuracy, F1, Log-Loss i Gini (klasyfikacja) oceniają skuteczność; RMSE jest w jednostkach zmiennej celu.\n\n**Dlaczego błędne:** Wariancja, odchylenie wag i liczba iteracji nie mierzą jakości predykcji; accuracy myli przy niezbalansowaniu klas, a R²=1 oznacza model idealny.\n\n**Zapamiętaj:** Dobierz metrykę do zadania i rozkładu klas.",
+   "changes": [
+    "e: false -> true, bo Log-Loss to metryka klasyfikacji probabilistycznej",
+    "f: false -> true, bo współczynnik Giniego (=2AUC-1) to metryka klasyfikacji"
+   ]
+  },
+  {
+   "id": 1335,
+   "question": "Uczenie częściowo nadzorowane (Semi-supervised Learning):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wykorzystuje małą ilość danych etykietowanych i dużą ilość danych nieetykietowanych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Nie potrzebuje etykiet.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Jest tożsame z uczeniem ze wzmocnieniem.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wymaga etykiet dla wszystkich przykładów.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest przydatne, gdy etykietowanie danych jest drogie lub czasochłonne.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Wykorzystuje techniki takie jak self-training lub co-training.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Wiele metod zakłada, że bliskie sobie punkty (w klastrze lub na jednej rozmaitości) mają zwykle tę samą etykietę.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Uczenie częściowo nadzorowane zawsze daje gorsze wyniki niż uczenie wyłącznie nadzorowane.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest to nazwa metody klasteryzacji hierarchicznej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-uczenie-czesciowo-nadzorowane",
+    "ml2-paradygmaty-uczenia"
+   ],
+   "explanation": "**Dlaczego poprawne:** SSL łączy mało etykiet z dużą ilością danych nieetykietowanych, jest opłacalne przy drogim etykietowaniu i stosuje self-training oraz co-training.\n\n**Dlaczego błędne:** Nie jest ani bez etykiet, ani z etykietami dla wszystkich, ani tożsame z RL, ani nie jest gorsze zawsze od nadzorowanego.\n\n**Zapamiętaj:** SSL = kilka etykiet + dużo bez etykiet.",
+   "changes": [
+    "e: false -> true, bo to główna motywacja SSL",
+    "f: false -> true, bo self-training i co-training to typowe techniki SSL"
+   ]
+  },
+  {
+   "id": 1336,
+   "question": "Funkcje aktywacji w sieciach neuronowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Sigmoid, ReLU, Tanh, Softmax.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Sigmoid",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Linear (tylko w regresji).",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Logarytmiczna.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ELU (Exponential Linear Unit).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Heaviside (funkcja skokowa).",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "ReLU jest zdefiniowana jako ^^\\max(0,x)^^.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Softmax zamienia wektor wartości na rozkład prawdopodobieństwa (elementy dodatnie sumujące się do 1).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Tanh zwraca wartości z przedziału (0, 1).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "ReLU jest funkcją ograniczoną z góry przez 1.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-funkcje-aktywacji"
+   ],
+   "explanation": "**Dlaczego poprawne:** Sigmoid, tanh, ReLU, ELU, softmax i skok Heaviside'a są funkcjami aktywacji; ReLU = max(0,x), softmax daje rozkład prawdopodobieństwa.\n\n**Dlaczego błędne:** Funkcja \"logarytmiczna\" nie jest standardową aktywacją; aktywacja liniowa nie jest ograniczona wyłącznie do regresji; tanh ma zakres (−1,1), ReLU nie jest ograniczona z góry.\n\n**Zapamiętaj:** Znaj zakresy: sigmoid (0,1), tanh (−1,1), ReLU [0,∞).",
+   "changes": [
+    "b: false -> true, bo sigmoid jest funkcją aktywacji",
+    "e: false -> true, bo ELU jest funkcją aktywacji",
+    "f: false -> true, bo funkcja skokowa Heaviside'a to klasyczna aktywacja perceptronu"
+   ]
+  },
+  {
+   "id": 1337,
+   "question": "Instancja odstająca (Outlier):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Przykład w zbiorze danych, który znacząco odbiega od pozostałych obserwacji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Inną nazwą instancji etykietowanej.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Element zawsze usuwany przed trenowaniem.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Środek ciężkości klastra.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Może negatywnie wpływać na modele takie jak regresja liniowa.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest zawsze wynikiem błędu pomiarowego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Outlier może być poprawną, rzadką obserwacją niosącą ważną informację (np. w wykrywaniu oszustw).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Do wykrywania outlierów można stosować np. regułę IQR lub z-score.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Outlier to zawsze przykład należący do klasy mniejszościowej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Outlier można zawsze zidentyfikować tylko wtedy, gdy znamy etykiety klas.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-outlier"
+   ],
+   "explanation": "**Dlaczego poprawne:** Outlier znacząco odbiega od reszty danych, psuje modele wrażliwe na MSE (regresja liniowa), bywa jednak cenną informacją i wykrywa się go np. IQR czy z-score.\n\n**Dlaczego błędne:** To nie etykieta, nie centroid, nie zawsze jest błędem pomiaru ani nie zawsze jest usuwany.\n\n**Zapamiętaj:** Outlier: zbadaj, zanim usuniesz.",
+   "changes": [
+    "e: false -> true, bo outliery zniekształcają dopasowanie regresji liniowej (MSE)"
+   ]
+  },
+  {
+   "id": 1338,
+   "question": "Algorytm K-Means:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest algorytmem uczenia nienadzorowanego służącym do klasteryzacji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Jest metodą uczenia nadzorowanego.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wymaga etykiet klas dla każdego punktu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Zawsze znajduje globalne optimum.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Dąży do minimalizacji wariancji wewnątrz klastrów.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest czuły na początkową inicjalizację środków klastrów.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Iteracja składa się z przypisania punktów do najbliższych środków i przeliczenia środków jako średnich klastrów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Środki klastrów w K-Means są zawsze rzeczywistymi punktami ze zbioru danych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wynik K-Means nie zależy od skali cech.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-k-means",
+    "ml2-paradygmaty-uczenia"
+   ],
+   "explanation": "**Dlaczego poprawne:** K-Means jest nienadzorowany, minimalizuje wariancję wewnątrzklastrową (SSE), iteruje przypisanie i uśrednianie oraz jest czuły na inicjalizację.\n\n**Dlaczego błędne:** Nie wymaga etykiet, nie gwarantuje optimum globalnego, środki to średnie (nie punkty danych ani mediany) i zależy od skali cech.\n\n**Zapamiętaj:** K-Means: lokalne optimum SSE.",
+   "changes": []
+  },
+  {
+   "id": 1339,
+   "question": "Dla cech X, Y uzyskano wartość współczynnika korelacji liniowej -0.95. Co on oznacza?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Oznacza bardzo silną ujemną korelację liniową.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wzrostowi wartości cechy X towarzyszy wzrost wartości cechy Y.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Oznacza brak związku między cechami.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wskazuje na związek nieliniowy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Punkty na wykresie rozrzutu układają się blisko linii prostej o ujemnym nachyleniu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Oznacza, że X powoduje Y (związek przyczynowo-skutkowy).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Współczynnik korelacji Pearsona zawsze leży w przedziale [−1, 1].",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wartość −0,95 oznacza, że 95% punktów leży dokładnie na prostej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Korelacja ujemna oznacza słabszy związek niż dodatnia o tej samej wartości bezwzględnej.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-korelacja-pearsona"
+   ],
+   "explanation": "**Dlaczego poprawne:** r = −0,95 to bardzo silna ujemna korelacja liniowa: punkty leżą blisko prostej o ujemnym nachyleniu, a r ∈ [−1,1].\n\n**Dlaczego błędne:** Ujemne r nie oznacza wzrostu Y wraz z X, braku związku ani nieliniowości, i nie dowodzi przyczynowości; 95% punktów na prostej to nie interpretacja r.\n\n**Zapamiętaj:** Korelacja to nie przyczynowość; znak = kierunek, |r| = siła.",
+   "changes": [
+    "e: false -> true, bo r=-0,95 oznacza punkty blisko prostej o ujemnym nachyleniu"
+   ]
+  },
+  {
+   "id": 1340,
+   "question": "Mając uzupełnioną macierz błędów (confusion matrix), które metryki do oceny jakości modelu można obliczyć?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Accuracy, Precision (Precyzja), Recall (Czułość), F1-score, Specificity.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "precyzję",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Średni błąd kwadratowy.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Współczynnik determinacji R2.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Matthews Correlation Coefficient (MCC).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Entropia krzyżowa.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Z macierzy pomyłek dla klasyfikacji binarnej można obliczyć wskaźnik FPR (odsetek fałszywie dodatnich).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Recall wynosi TP / (TP + FN) i wynika bezpośrednio z macierzy pomyłek.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Z macierzy pomyłek można obliczyć RMSE.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Z macierzy pomyłek można obliczyć entropię krzyżową (Log-Loss).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-macierz-pomylek",
+    "ml2-metryki-modeli"
+   ],
+   "explanation": "**Dlaczego poprawne:** Z macierzy pomyłek wyliczysz accuracy, precision, recall, specificity, F1, FPR i MCC, bo wszystkie opierają się na TP, TN, FP, FN.\n\n**Dlaczego błędne:** MSE i R² dotyczą regresji, a entropia krzyżowa i RMSE wymagają prawdopodobieństw lub wartości ciągłych.\n\n**Zapamiętaj:** Macierz pomyłek → metryki klasyfikacji.",
+   "changes": [
+    "b: false -> true, bo precyzja = TP/(TP+FP) wynika z macierzy pomyłek"
+   ]
+  },
+  {
+   "id": 1341,
+   "question": "Algorytmy uczenia nadzorowanego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Regresja liniowa, SVM, Drzewa decyzyjne, k-NN, Sieci neuronowe.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "K-NearestNeighbors",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "K-Means",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "PCA",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Naive Bayes.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Random Forest.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Regresja logistyczna jest algorytmem uczenia nadzorowanego (klasyfikacji).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "DBSCAN jest algorytmem uczenia nadzorowanego.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Analiza składowych niezależnych (ICA) jest algorytmem uczenia nadzorowanego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-paradygmaty-uczenia"
+   ],
+   "explanation": "**Dlaczego poprawne:** Regresja liniowa/logistyczna, SVM, drzewa, k-NN, sieci, Naive Bayes, Random Forest i boosting uczą się z etykiet.\n\n**Dlaczego błędne:** K-Means, PCA, DBSCAN i ICA są nienadzorowane.\n\n**Zapamiętaj:** Nadzorowane = wymagają etykiet.",
+   "changes": []
+  },
+  {
+   "id": 1342,
+   "question": "Algorytmy uczenia nienadzorowanego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "K-Means, DBSCAN, PCA, Apriori, Autoenkodery.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Regresja Liniowa",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Random Forest",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Naive Bayes",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "GMM (Gaussian Mixture Models).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "t-SNE.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "SOM (mapa samoorganizująca Kohonena) jest metodą uczenia nienadzorowanego.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "XGBoost jest algorytmem uczenia nienadzorowanego.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Regresja logistyczna jest algorytmem uczenia nienadzorowanego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-paradygmaty-uczenia",
+    "ml2-k-means",
+    "ml2-pca"
+   ],
+   "explanation": "**Dlaczego poprawne:** K-Means, DBSCAN, PCA, Apriori, autoenkodery, GMM, t-SNE i SOM działają bez etykiet.\n\n**Dlaczego błędne:** Regresja, Random Forest, Naive Bayes, XGBoost są nadzorowane.\n\n**Zapamiętaj:** Nienadzorowane = struktura danych bez etykiet.",
+   "changes": []
+  },
+  {
+   "id": 1343,
+   "question": "Wskaż poprawne właściwości odnoszące się do analizy składowych głównych (PCA).",
+   "options": [
+    {
+     "key": "a",
+     "text": "Metoda statystyczna służąca do redukcji wymiarowości.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Jest metodą nienadzorowaną.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Służy do klasyfikacji obrazów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wymaga danych w postaci tekstowej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Maksymalizuje wariancję rzutowanych danych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Składowe główne są skorelowane.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Składowe główne odpowiadają wektorom własnym macierzy kowariancji danych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "PCA wykorzystuje etykiety klas do wyboru osi rzutowania.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Pierwsza składowa główna wskazuje kierunek o najmniejszej wariancji danych.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-pca",
+    "ml2-redukcja-wymiarowosci"
+   ],
+   "explanation": "**Dlaczego poprawne:** PCA jest nienadzorowaną liniową redukcją wymiarowości maksymalizującą wariancję rzutu; składowe to wektory własne macierzy kowariancji.\n\n**Dlaczego błędne:** Składowe są nieskorelowane (nie skorelowane), PCA nie jest klasyfikatorem, działa na danych liczbowych, nie używa etykiet, a pierwsza składowa ma największą wariancję.\n\n**Zapamiętaj:** PCA: ortogonalne kierunki maksymalnej wariancji.",
+   "changes": []
+  },
+  {
+   "id": 1344,
+   "question": "Jakie zastrzeżenia przewidział Turing przeciwko sensowności zaproponowanego przez siebie testu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Turing rozważał m.in. argument z braku świadomości, argument z niepełnosprawności maszyny.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Maszyna cyfrowa jest w stanie zrobić tylko to, co nakazuje jej program.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Test Turinga jest niemożliwy do przeprowadzenia.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Maszyny nigdy nie będą umiały grać w szachy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Chiński Pokój Searla jest znanym argumentem przeciwko testowi Turinga.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Turing przewidywał, że maszyny nigdy nie przejdą testu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Turing rozważał argument teologiczny (myślenie jest przywilejem nieśmiertelnej duszy).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Turing pominął w artykule wszelkie zarzuty, uznając test za bezdyskusyjny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Turing przewidział argument Chińskiego Pokoju jako zarzut wobec swojego testu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-test-turinga"
+   ],
+   "explanation": "**Dlaczego poprawne:** Turing omawiał zarzuty: teologiczny, świadomości, niepełnosprawności maszyn, Lady Lovelace (maszyna robi tylko to, co zaprogramowano).\n\n**Dlaczego błędne:** Nie twierdził, że test jest niewykonalny ani że maszyny nie zagrają w szachy; Searle sformułował Chiński Pokój dopiero w 1980.\n\n**Zapamiętaj:** Turing odpowiedział na 9 zarzutów, nie na Searle'a.",
+   "changes": []
+  },
+  {
+   "id": 1345,
+   "question": "Parametr k w algorytmie kNN (k-Nearest Neighbors):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Oznacza liczbę najbliższych sąsiadów branych pod uwagę przy klasyfikacji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "k oznacza liczbę rozpoznawanych klas.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "k to liczba warstw w sieci.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "k to wymiarowość danych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Małe k może prowadzić do overfittingu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "k musi być zawsze liczbą parzystą.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Duże k wygładza granicę decyzyjną i może prowadzić do niedopasowania (underfitting).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dla klasyfikacji binarnej warto wybierać nieparzyste k, aby uniknąć remisów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zwiększenie k zawsze poprawia dokładność na zbiorze testowym.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Algorytm k-NN wymaga długiej fazy trenowania, w której uczy się wag modelu.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-knn"
+   ],
+   "explanation": "**Dlaczego poprawne:** k to liczba sąsiadów głosujących; małe k daje overfitting (duża wariancja), duże k underfitting, a nieparzyste k unika remisów w klasyfikacji binarnej.\n\n**Dlaczego błędne:** k nie oznacza klas, warstw ani wymiaru, nie musi być parzyste i większe k nie zawsze poprawia wynik.\n\n**Zapamiętaj:** k małe = wysoka wariancja, k duże = wysokie obciążenie.",
+   "changes": [
+    "e: false -> true, bo małe k (np. 1) daje nadmierne dopasowanie do szumu"
+   ]
+  },
+  {
+   "id": 1346,
+   "question": "W ramach klasyfikacji binarnej uzyskano następujące wyniki: TP = 90; TN = 30; FP = 10; FN = 70. Ile wynosi wartość predykcyjna dodatnia?",
+   "options": [
+    {
+     "key": "a",
+     "text": "PPV = TP / (TP + FP).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "0,5",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "0,9",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "0,7",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Dla TP=90 i FP=10 wynosi 0.9.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest tożsama z czułością (Recall).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "PPV to inaczej precyzja (precision).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Czułość (recall) dla tych danych wynosi 0,9.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Specyficzność dla tych danych wynosi 0,9.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-macierz-pomylek",
+    "ml2-metryki-modeli"
+   ],
+   "explanation": "**Dlaczego poprawne:** PPV = precyzja = TP/(TP+FP) = 90/100 = 0,9.\n\n**Dlaczego błędne:** 0,5 i 0,7 nie odpowiadają wartości; czułość = 90/160 ≈ 0,56, specyficzność = 30/40 = 0,75, więc PPV ≠ recall.\n\n**Zapamiętaj:** PPV = precision, nie recall.",
+   "changes": [
+    "c: false -> true, bo PPV = 90/(90+10) = 0,9",
+    "e: false -> true, bo to poprawne podstawienie: 90/100 = 0,9"
+   ]
+  },
+  {
+   "id": 1347,
+   "question": "Przewidywanie jednego ulubionego koloru danej osoby (z 5 możliwych: {żółty, różowy, niebieski, zielony, czerwony}) to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest to zadanie klasyfikacji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Klasteryzacja",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Regresja",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Redukcja wymiarowości",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Zadanie uczenia nadzorowanego.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Zadanie optymalizacji globalnej.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zmienna docelowa jest kategorialna (5 klas), więc model przypisuje przykład do jednej z klas.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "To zadanie regresji, bo klasy da się zakodować liczbami 1–5.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "To zadanie uczenia nienadzorowanego, bo kolory nie mają naturalnej kolejności.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-paradygmaty-uczenia"
+   ],
+   "explanation": "**Dlaczego poprawne:** Kolor wybierany z 5 klas to klasyfikacja wieloklasowa, a więc uczenie nadzorowane.\n\n**Dlaczego błędne:** To nie regresja (zmienna kategorialna bez porządku), klasteryzacja, redukcja wymiarowości ani optymalizacja globalna.\n\n**Zapamiętaj:** Etykieta dyskretna = klasyfikacja.",
+   "changes": [
+    "e: false -> true, bo klasyfikacja jest zadaniem uczenia nadzorowanego"
+   ]
+  },
+  {
+   "id": 1348,
+   "question": "Macierz pomyłek (Confusion Matrix):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jej rozmiar to N x N, gdzie N to liczba klas.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Macierz pomyłek zawsze ma rozmiar 2x2.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Pokazuje tylko błędy modelu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie pozwala na obliczenie czułości.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Przekątna macierzy zawiera liczby poprawnych predykcji.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Służy do oceny modeli regresji.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Suma wszystkich elementów macierzy pomyłek równa się liczbie sklasyfikowanych przykładów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Elementy poza przekątną to poprawne klasyfikacje.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Macierz pomyłek zawiera ciągłe wartości błędów (residua) dla każdej obserwacji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-macierz-pomylek"
+   ],
+   "explanation": "**Dlaczego poprawne:** Macierz N×N (N klas) ma na przekątnej poprawne predykcje, a suma elementów to liczba przykładów.\n\n**Dlaczego błędne:** Nie jest zawsze 2×2, pokazuje też trafienia, pozwala liczyć czułość i dotyczy klasyfikacji, nie regresji.\n\n**Zapamiętaj:** Przekątna = trafienia.",
+   "changes": []
+  },
+  {
+   "id": 1349,
+   "question": "Jakie parametry należy ustawić w algorytmie DBSCAN do grupowania danych?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Epsilon (promień sąsiedztwa) oraz MinPts (minimalna liczba punktów).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Liczba iteracji.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Liczba klastrów k.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Współczynnik uczenia.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "DBSCAN nie wymaga podania liczby klastrów z góry.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "DBSCAN radzi sobie z klastrami o różnych gęstościach.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Punkt rdzeniowy ma w promieniu ε co najmniej MinPts punktów (wliczając siebie).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "DBSCAN potrafi oznaczać punkty odstające jako szum.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wynik DBSCAN nie zależy od wyboru ε.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "DBSCAN wymaga podania liczby klastrów k przed uruchomieniem.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-dbscan",
+    "ml2-k-means"
+   ],
+   "explanation": "**Dlaczego poprawne:** DBSCAN wymaga ε i MinPts, nie wymaga liczby klastrów, wykrywa szum, a punkt rdzeniowy ma ≥ MinPts sąsiadów w ε.\n\n**Dlaczego błędne:** Liczba iteracji, k i learning rate nie są parametrami DBSCAN; słabo radzi sobie z różnymi gęstościami, a wynik zależy od ε.\n\n**Zapamiętaj:** DBSCAN: ε + MinPts, bez k.",
+   "changes": [
+    "e: false -> true, bo to prawdziwa własność DBSCAN (nie wymaga k)"
+   ]
+  },
+  {
+   "id": 1350,
+   "question": "Które z poniższych cech najlepiej opisują algorytm k-średnich (k-means)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Grupuje dane poprzez minimalizację sumy kwadratów odległości od środków klastrów.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wymaga określenia liczby klastrów na początku.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Jest odporny na wartości odstające.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Działa dobrze dla klastrów o dowolnych kształtach.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest algorytmem iteracyjnym.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Gwarantuje znalezienie globalnego minimum funkcji celu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Wynik zależy od inicjalizacji środków, dlatego zwykle uruchamia się algorytm wielokrotnie (np. z k-means++).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Środki klastrów są medianami punktów w klastrze.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Koszt jednej iteracji nie zależy od liczby punktów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-k-means"
+   ],
+   "explanation": "**Dlaczego poprawne:** K-Means minimalizuje sumę kwadratów odległości do środków, wymaga zadanego k, jest iteracyjny i zależy od inicjalizacji (k-means++).\n\n**Dlaczego błędne:** Jest wrażliwy na outliery, zakłada kuliste klastry i daje tylko minimum lokalne; środki to średnie.\n\n**Zapamiętaj:** K-Means: k zadane, kule, lokalne minimum.",
+   "changes": []
+  },
+  {
+   "id": 1351,
+   "question": "Jakie diagramy, ze względu na swoje właściwości wizualne, są najbardziej efektywne do prezentacji wyników grupowania przez algorytm k- średnich (k-means)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Najlepiej widoczna na wykresie punktowym (scatter plot).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Wykres punktowy.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Wykres kołowy.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Histogram.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wykres łokcia (Elbow method) służy do wyboru optymalnego k.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Dendrogram.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Kolorowanie punktów według przypisanego klastra na wykresie punktowym (w 2D lub po redukcji do 2D) pozwala ocenić separację klastrów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dendrogram jest standardowym wykresem do wyboru k w k-means.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wykres kołowy najlepiej pokazuje położenie punktów w przestrzeni cech.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-k-means"
+   ],
+   "explanation": "**Dlaczego poprawne:** Wykres punktowy (po kolorowaniu klastrów) dobrze pokazuje grupy, a wykres łokcia służy wyborowi k.\n\n**Dlaczego błędne:** Kołowy i histogram nie pokazują położenia w przestrzeni cech, a dendrogram jest dla klasteryzacji hierarchicznej.\n\n**Zapamiętaj:** Scatter = wynik, elbow = wybór k.",
+   "changes": []
+  },
+  {
+   "id": 1352,
+   "question": "Które z poniższych opcji opisują cechy lub zastosowania algorytmu grupowania aglomeracyjnego?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Tworzy hierarchię klastrów (dendrogram).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Redukcja wymiarowości danych.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Wymaga podania liczby klastrów przed startem.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest zawsze szybsze od k-means.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Może stosować różne kryteria łączenia (linkage).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest metodą uczenia nadzorowanego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Podejście aglomeracyjne startuje od pojedynczych punktów i iteracyjnie łączy najbliższe klastry.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dendrogram można przeciąć na wybranej wysokości, uzyskując żądaną liczbę klastrów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Podejście aglomeracyjne startuje od jednego klastra i dzieli go rekurencyjnie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Kryterium single linkage używa odległości między środkami klastrów.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-klasteryzacja-hierarchiczna",
+    "ml2-k-means"
+   ],
+   "explanation": "**Dlaczego poprawne:** Klasteryzacja aglomeracyjna buduje dendrogram od pojedynczych punktów, korzysta z kryteriów linkage, a cięcie dendrogramu daje dowolne k.\n\n**Dlaczego błędne:** To nie redukcja wymiaru, nie wymaga k z góry, nie jest nadzorowana, zwykle jest wolniejsza od k-means i nie jest podziałowa (to divisive).\n\n**Zapamiętaj:** Aglomeracyjna: od dołu, dendrogram.",
+   "changes": []
+  },
+  {
+   "id": 1353,
+   "question": "Które z poniższych stwierdzeń trafnie opisują metodę analizy głównych składowych (PCA)?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nowe cechy (składowe) są liniowymi kombinacjami cech oryginalnych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "PCA tworzy składowe, które są wzajemnie ortogonalne.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Zawsze zachowuje 100% wariancji danych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Służy do usuwania brakujących danych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Składowe główne są uporządkowane według ilości wyjaśnianej wariancji.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "PCA jest bardzo wrażliwe na skalowanie danych.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "PCA jest transformacją liniową, a składowe odpowiadają wektorom własnym macierzy kowariancji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "PCA wymaga etykiet klas.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Pierwsza składowa główna wyjaśnia najmniej wariancji.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-pca",
+    "ml2-redukcja-wymiarowosci"
+   ],
+   "explanation": "**Dlaczego poprawne:** Składowe PCA są ortogonalnymi liniowymi kombinacjami cech, uporządkowanymi wg wyjaśnianej wariancji; metoda jest wrażliwa na skalę, więc dane standaryzuje się.\n\n**Dlaczego błędne:** PCA zwykle gubi część wariancji, nie uzupełnia braków i nie potrzebuje etykiet.\n\n**Zapamiętaj:** PCA: standaryzuj przed użyciem.",
+   "changes": []
+  },
+  {
+   "id": 1354,
+   "question": "Które z poniższych zastosowań są odpowiednie dla algorytmu Apriori?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Służy do odkrywania częstych zbiorów elementów i reguł asocjacyjnych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Analiza koszykowa w handlu detalicznym.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Klasyfikacja spamu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Rozpoznawanie twarzy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wykorzystuje miary takie jak wsparcie (support), ufność (confidence) i przyrost (lift).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest stosowany w systemach rekomendacyjnych.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Własność antymonotoniczności (podzbiór zbioru częstego jest częsty) pozwala przycinać zbiory kandydatów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Apriori jest algorytmem klasyfikacji nadzorowanej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wsparcie reguły A → B to prawdopodobieństwo B pod warunkiem A.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-apriori"
+   ],
+   "explanation": "**Dlaczego poprawne:** Apriori znajduje częste zbiory i reguły asocjacyjne (support, confidence, lift), stosowane w analizie koszykowej i rekomendacjach, dzięki antymonotoniczności wsparcia.\n\n**Dlaczego błędne:** Nie służy do klasyfikacji spamu ani rozpoznawania twarzy i nie jest nadzorowany; wsparcie to częstość, a P(B|A) to ufność.\n\n**Zapamiętaj:** Apriori = asocjacje, nie klasyfikacja.",
+   "changes": []
+  },
+  {
+   "id": 1355,
+   "question": "Które z poniższych metod, algorytmów lub technik są stosowane w uczeniu nienadzorowanym?",
+   "options": [
+    {
+     "key": "a",
+     "text": "K-Means, Hierarchical Clustering, PCA, Autoenkodery, SOM.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Autoenkodery, sieć Kohonena",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Regresja liniowa, k-NN",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Random Forest, XGBoost",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Analiza składowych niezależnych (ICA).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "SVD.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Mieszaniny gaussowskie (GMM) uczone algorytmem EM są metodą nienadzorowaną.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Naive Bayes jest metodą uczenia nienadzorowanego.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "SVM z etykietami klas jest metodą uczenia nienadzorowanego.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-paradygmaty-uczenia",
+    "ml2-k-means",
+    "ml2-pca"
+   ],
+   "explanation": "**Dlaczego poprawne:** K-Means, klasteryzacja hierarchiczna, PCA, autoenkodery, SOM, ICA, SVD i GMM nie używają etykiet.\n\n**Dlaczego błędne:** Regresja liniowa, k-NN, Random Forest, XGBoost, Naive Bayes i SVM są nadzorowane.\n\n**Zapamiętaj:** Nienadzorowane: klastry i redukcje.",
+   "changes": []
+  },
+  {
+   "id": 1356,
+   "question": "Elementy uczenia ze wzmocnieniem (Reinforcement Learning):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Agent, Środowisko (Environment), Stan (State), Akcja (Action), Nagroda (Reward), Polityka (Policy).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Polityka",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Etykieta klasy.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Zbiór treningowy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Funkcja wartości (Value Function).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Eksploracja vs Eksploatacja.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Celem agenta jest maksymalizacja skumulowanej (oczekiwanej) nagrody.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Agent uczy się na podstawie par (wejście, poprawna etykieta) dostarczonych przez nadzorcę.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Polityka określa, jak środowisko reaguje na akcje agenta.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ml2-uczenie-ze-wzmocnieniem"
+   ],
+   "explanation": "**Dlaczego poprawne:** RL składa się z agenta, środowiska, stanów, akcji, nagrody, polityki i funkcji wartości; agent równoważy eksplorację z eksploatacją i maksymalizuje skumulowaną nagrodę.\n\n**Dlaczego błędne:** Etykiety i zbiór treningowy to uczenie nadzorowane; reakcję środowiska opisuje model przejść, nie polityka.\n\n**Zapamiętaj:** RL: nagroda zamiast etykiet.",
+   "changes": []
+  }
+ ],
+ "glossary": [
+  {
+   "id": "ml2-systemy-zlozone",
+   "term": "Systemy złożone (complex systems)",
+   "topic": "machine_learning",
+   "short": "Systemy z wieloma oddziałującymi elementami, w których globalne zachowanie wyłania się z lokalnych interakcji.",
+   "details": "**Jak działa:** wiele prostych elementów oddziałuje lokalnie, bez centralnego sterowania. Z sumy interakcji pojawiają się zachowania globalne (**emergencja**), a system się **samoorganizuje**. Dominują **nieliniowość** (skutek nieproporcjonalny do przyczyny) i **sprzężenia zwrotne** (dodatnie wzmacniają, ujemne stabilizują). Przykłady: mrowisko, rynek, mózg, ekosystem.\n\n**Na egzaminie uważaj na:** brak centralnego zarządzania; brak długoterminowej przewidywalności (wrażliwość na warunki początkowe); całość to nie suma części.",
+   "related": [
+    "ml2-automat-komorkowy"
+   ]
+  },
+  {
+   "id": "ml2-automat-komorkowy",
+   "term": "Automat komórkowy (cellular automaton)",
+   "topic": "machine_learning",
+   "short": "Dyskretny model: siatka komórek o skończonym zbiorze stanów, aktualizowanych wg lokalnej reguły zależnej od sąsiedztwa.",
+   "details": "**Jak działa:** siatka komórek (1D, 2D...), każda ma stan ze zbioru stanów. W kroku t+1 stan komórki wynika z reguły przejścia i stanów jej sąsiedztwa w kroku t. **Homogeniczny**: ta sama reguła, zbiór stanów i sąsiedztwo dla wszystkich komórek (niezmienniczość względem przesunięcia). **Niehomogeniczny**: reguły, stany lub sąsiedztwa różne w różnych komórkach. **Synchroniczny**: wszystkie komórki aktualizowane jednocześnie na podstawie stanu z poprzedniego kroku; **asynchroniczny**: kolejno. Przykład: Gra Życia Conwaya (2D, stany 0/1, sąsiedztwo Moore'a, reguły B3/S23).\n\n**Na egzaminie uważaj na:** siatka homogenicznego CA może być nieskończona; Life nie zmienia reguł ani nie wymaga interwencji; stany nie muszą być binarne; niehomogeniczny CA może być synchroniczny.",
+   "related": [
+    "ml2-warunki-brzegowe-ca",
+    "ml2-systemy-zlozone"
+   ]
+  },
+  {
+   "id": "ml2-warunki-brzegowe-ca",
+   "term": "Warunki brzegowe automatu komórkowego (boundary conditions)",
+   "topic": "machine_learning",
+   "short": "Zasady określające sąsiedztwo komórek na krawędzi siatki: periodyczne, odbijające, stałe.",
+   "details": "**Jak działa:** komórki na brzegu nie mają pełnego sąsiedztwa, więc trzeba je zdefiniować. **Periodyczne**: przeciwległe krawędzie są sklejone (1D: pierścień, 2D: torus), obiekt wychodzący z jednej strony wchodzi z przeciwnej; nie ma krawędzi, więc brak zwykłych efektów brzegowych (jest sztuczna periodyczność). **Stałe (Dirichlet)**: komórki poza siatką mają zadany stan, np. 0. **Odbijające**: brzeg kopiuje sąsiada lub odbija obiekt.\n\n**Na egzaminie uważaj na:** periodyczne nie powodują odbicia ani znikania obiektu; działają w każdym wymiarze; 2D z warunkami periodycznymi w obu osiach = torus (nie walec).",
+   "related": [
+    "ml2-automat-komorkowy"
+   ]
+  },
+  {
+   "id": "ml2-symulacja-zdarzen-dyskretnych",
+   "term": "Symulacja zdarzeń dyskretnych (discrete-event simulation)",
+   "topic": "machine_learning",
+   "short": "Metoda symulacji, w której stan systemu zmienia się tylko w chwilach zdarzeń, a czas przeskakuje od zdarzenia do zdarzenia.",
+   "details": "**Jak działa:** utrzymuje się zegar symulacji i **listę zdarzeń** (kolejkę priorytetową uporządkowaną wg czasu). Pętla: pobierz najwcześniejsze zdarzenie, przesuń zegar na jego czas, zmień stan, zaplanuj nowe zdarzenia (np. koniec obsługi). Między zdarzeniami stan jest stały. Zastosowania: kolejki, linie produkcyjne, sieci komputerowe, logistyka. Alternatywne paradygmaty: symulacja ciągła, dynamika systemowa, modelowanie agentowe (ABM).\n\n**Na egzaminie uważaj na:** czas nie jest ciągły ani krokowy o stałym Δt; nie jest ograniczona do chemii; DES i ABM to różne podejścia.",
+   "related": [
+    "ml2-systemy-zlozone"
+   ]
+  },
+  {
+   "id": "ml2-optymalizacja-ekstremum",
+   "term": "Optymalizacja: poszukiwanie ekstremum funkcji",
+   "topic": "machine_learning",
+   "short": "Metody znajdowania minimum lub maksimum funkcji celu: gradientowe, stochastyczne i metaheurystyki.",
+   "details": "**Jak działa:** **Gradient Descent**: x ← x − η∇f(x). **SGD**: gradient z mini-batcha. **Adam**: SGD z momentami i adaptacyjnym krokiem. **Algorytm genetyczny**: populacja, selekcja, krzyżowanie, mutacja. **Simulated Annealing**: akceptuje pogorszenie z prawdopodobieństwem malejącym z temperaturą. **PSO**: rój cząstek pamiętających najlepsze pozycje własną i globalną. Metody gradientowe dają na ogół minimum lokalne.\n\n**Na egzaminie uważaj na:** GD nie gwarantuje minimum globalnego dla niewypukłych funkcji; BFS to przeszukiwanie grafu; Apriori, K-Means i PCA to uczenie nienadzorowane.",
+   "related": [
+    "ml2-paradygmaty-uczenia"
+   ]
+  },
+  {
+   "id": "ml2-redukcja-wymiarowosci",
+   "term": "Redukcja wymiarowości (dimensionality reduction)",
+   "topic": "machine_learning",
+   "short": "Przekształcenie danych o wielu cechach w reprezentację o mniejszej liczbie wymiarów z zachowaniem istotnej informacji.",
+   "details": "**Jak działa:** metody **liniowe**: PCA (nienadzorowana, maks. wariancja), LDA (nadzorowana, maks. separacja klas), obcięty SVD. **Nieliniowe**: t-SNE i UMAP (zachowują lokalne sąsiedztwa, głównie do wizualizacji), autoenkodery (sieć koduje do wąskiej warstwy i dekoduje). Cele: mniej szumu i pamięci, wizualizacja, walka z przekleństwem wymiarowości.\n\n**Na egzaminie uważaj na:** kNN, regresja i drzewa to modele predykcyjne, a K-Means to klasteryzacja; redukcja zmniejsza liczbę cech; t-SNE nie nadaje się do wyciągania odległości globalnych.",
+   "related": [
+    "ml2-pca"
+   ]
+  },
+  {
+   "id": "ml2-pca",
+   "term": "Analiza składowych głównych (PCA)",
+   "topic": "machine_learning",
+   "short": "Liniowa, nienadzorowana metoda redukcji wymiarowości, rzutująca dane na ortogonalne kierunki największej wariancji.",
+   "details": "**Jak działa:** centrowanie (i zwykle standaryzacja) danych, macierz kowariancji C, jej wektory własne to **składowe główne**, wartości własne = wariancja wyjaśniana. Składowe są ortogonalne, nieskorelowane, uporządkowane malejąco wg wariancji; nowe cechy to liniowe kombinacje oryginalnych. Zostawia się k pierwszych składowych, np. do 95% wariancji. Równoważnie: SVD macierzy danych.\n\n**Na egzaminie uważaj na:** PCA jest wrażliwa na skalę cech; nie używa etykiet; nie zachowuje 100% wariancji po redukcji; nie uzupełnia braków; składowe nieskorelowane, nie skorelowane.",
+   "related": [
+    "ml2-redukcja-wymiarowosci"
+   ]
+  },
+  {
+   "id": "ml2-metryki-modeli",
+   "term": "Metryki jakości modeli predykcyjnych",
+   "topic": "machine_learning",
+   "short": "Liczbowe miary oceniające jakość regresji (MSE, MAE, R²) i klasyfikacji (accuracy, F1, Log-Loss...).",
+   "details": "**Jak działa:** **Regresja**: MSE = średnia kwadratów błędów, RMSE = ^^\\sqrt{MSE}^^ (jednostki zmiennej celu), MAE = średnia modułów, R² = 1 − SSres/SStot. **Klasyfikacja**: accuracy, precision, recall, F1 = średnia harmoniczna precision i recall, Log-Loss (entropia krzyżowa, wymaga prawdopodobieństw), AUC, współczynnik Giniego = 2·AUC − 1, MCC.\n\n**Na egzaminie uważaj na:** accuracy jest zwodnicza przy niezbalansowanych klasach; wariancja wag czy liczba iteracji to nie metryki jakości; R²=1 to model idealny.",
+   "related": [
+    "ml2-macierz-pomylek"
+   ]
+  },
+  {
+   "id": "ml2-macierz-pomylek",
+   "term": "Macierz pomyłek i metryki z niej (confusion matrix)",
+   "topic": "machine_learning",
+   "short": "Tabela N×N zliczająca predykcje względem klas rzeczywistych; z niej liczy się metryki klasyfikacji.",
+   "details": "**Jak działa:** wiersze = klasa rzeczywista, kolumny = przewidywana (lub odwrotnie); przekątna to trafienia. Dla klasyfikacji binarnej: TP, FP, TN, FN. **Accuracy** = (TP+TN)/wszystkie; **precision = PPV** = TP/(TP+FP); **recall = czułość (TPR)** = TP/(TP+FN); **specificity** = TN/(TN+FP); F1 = 2PR/(P+R); FPR = FP/(FP+TN); MCC z wszystkich czterech. Przykład: TP=90, FP=10 → PPV = 0,9; FN=70 → recall = 90/160 ≈ 0,56.\n\n**Na egzaminie uważaj na:** macierz nie musi być 2×2; PPV to nie recall; MSE, R² i RMSE nie wynikają z macierzy; entropia krzyżowa wymaga prawdopodobieństw.",
+   "related": [
+    "ml2-metryki-modeli"
+   ]
+  },
+  {
+   "id": "ml2-paradygmaty-uczenia",
+   "term": "Paradygmaty uczenia maszynowego (nadzorowane, nienadzorowane, RL)",
+   "topic": "machine_learning",
+   "short": "Podział metod ML według dostępnych sygnałów uczących: etykiety, brak etykiet, nagroda.",
+   "details": "**Jak działa:** **Nadzorowane** (etykiety): regresja liniowa/logistyczna, SVM, drzewa, Random Forest, XGBoost, k-NN, Naive Bayes, sieci neuronowe; zadania: klasyfikacja (etykieta dyskretna, np. kolor z 5) i regresja (ciągła). **Nienadzorowane**: K-Means, DBSCAN, klasteryzacja hierarchiczna, GMM, PCA, t-SNE, ICA, SOM, autoenkodery, Apriori. **Ze wzmocnieniem**: agent i nagroda.\n\n**Na egzaminie uważaj na:** PCA, K-Means, Apriori, autoenkodery to nienadzorowane; Naive Bayes i k-NN to nadzorowane (mimo nazwy); kategoria kolor to klasyfikacja, nie regresja.",
+   "related": [
+    "ml2-uczenie-czesciowo-nadzorowane",
+    "ml2-k-means"
+   ]
+  },
+  {
+   "id": "ml2-uczenie-czesciowo-nadzorowane",
+   "term": "Uczenie częściowo nadzorowane (semi-supervised learning)",
+   "topic": "machine_learning",
+   "short": "Uczenie łączące małą liczbę danych etykietowanych z dużą liczbą nieetykietowanych.",
+   "details": "**Jak działa:** etykiety są drogie, a dane surowe tanie. Metody: **self-training** (model przewiduje etykiety dla nieetykietowanych i dodaje pewne predykcje do zbioru), **co-training** (dwa modele na różnych widokach cech uczą się nawzajem), propagacja etykiet, regularyzacja spójności. Zakłada się, że bliskie punkty (klaster, rozmaitość) mają podobne etykiety.\n\n**Na egzaminie uważaj na:** nie jest to uczenie bez etykiet ani z pełnymi etykietami; nie jest tożsame z RL; nie zawsze przewyższa uczenie nadzorowane.",
+   "related": [
+    "ml2-paradygmaty-uczenia"
+   ]
+  },
+  {
+   "id": "ml2-funkcje-aktywacji",
+   "term": "Funkcje aktywacji (activation functions)",
+   "topic": "machine_learning",
+   "short": "Nieliniowe funkcje stosowane na wyjściu neuronu, dzięki którym sieć uczy się nieliniowych zależności.",
+   "details": "**Jak działa:** neuron liczy ^^y = f(w^T x + b)^^. **Sigmoid** ^^1/(1+e^{-x})^^ ∈ (0,1); **tanh** ∈ (−1,1); **ReLU** = ^^\\max(0,x)^^ (nieograniczona z góry); **ELU** wygładza część ujemną; **softmax** zamienia wektor na rozkład prawdopodobieństwa (suma 1), stosowany w wyjściu klasyfikacji; **skok Heaviside'a** to klasyczny perceptron; aktywacja **liniowa** na wyjściu regresji. Bez nieliniowości sieć wielowarstwowa redukuje się do modelu liniowego.\n\n**Na egzaminie uważaj na:** zakresy wartości; \"funkcja logarytmiczna\" nie jest standardową aktywacją; sigmoid i tanh mają nasycenie (zanik gradientu).",
+   "related": [
+    "ml2-paradygmaty-uczenia"
+   ]
+  },
+  {
+   "id": "ml2-outlier",
+   "term": "Instancja odstająca (outlier)",
+   "topic": "machine_learning",
+   "short": "Obserwacja znacząco odbiegająca od reszty danych.",
+   "details": "**Jak działa:** wykrywanie: reguła IQR (poza Q1−1,5·IQR, Q3+1,5·IQR), z-score (|z|>3), metody gęstościowe. Przyczyny: błąd pomiaru, ale też rzadkie prawdziwe zdarzenie (oszustwo, awaria). Wpływ: modele oparte na MSE (regresja liniowa), średnia, K-Means i PCA są wrażliwe; drzewa i mediana odporniejsze. Postępowanie: zbadać, ewentualnie usunąć, przyciąć (winsoryzacja) lub użyć modelu odpornego.\n\n**Na egzaminie uważaj na:** outlier nie jest etykietą ani centroidem; nie zawsze jest błędem; nie zawsze się go usuwa.",
+   "related": [
+    "ml2-k-means",
+    "ml2-korelacja-pearsona"
+   ]
+  },
+  {
+   "id": "ml2-k-means",
+   "term": "Algorytm K-Means (k-średnich)",
+   "topic": "machine_learning",
+   "short": "Nienadzorowany algorytm klasteryzacji dzielący dane na k klastrów przez minimalizację sumy kwadratów odległości do środków.",
+   "details": "**Jak działa:** 1) wybierz k i początkowe środki (np. k-means++), 2) przypisz każdy punkt do najbliższego środka, 3) przelicz środki jako średnie punktów klastra, 4) powtarzaj do zbieżności. Minimalizuje SSE (wariancję wewnątrzklastrową). Zbiega do minimum **lokalnego**, dlatego robi się wiele restartów. k wybiera się np. wykresem łokcia. Wynik przedstawia scatter plot z kolorami klastrów.\n\n**Na egzaminie uważaj na:** nie wymaga etykiet; wymaga k z góry; wrażliwy na outliery, skalę i inicjalizację; zakłada kuliste klastry; nie gwarantuje globalnego optimum.",
+   "related": [
+    "ml2-dbscan",
+    "ml2-klasteryzacja-hierarchiczna"
+   ]
+  },
+  {
+   "id": "ml2-dbscan",
+   "term": "DBSCAN",
+   "topic": "machine_learning",
+   "short": "Gęstościowy algorytm klasteryzacji, wykrywający klastry dowolnego kształtu i punkty szumu.",
+   "details": "**Jak działa:** parametry: **ε** (promień) i **MinPts**. Punkt **rdzeniowy** ma ≥ MinPts punktów w ε; **brzegowy** leży w ε rdzeniowego; reszta to **szum**. Klaster tworzą rdzeniowe punkty osiągalne gęstościowo wraz z brzegowymi. Liczba klastrów wynika z danych, nie jest parametrem.\n\n**Na egzaminie uważaj na:** nie wymaga k; słabo radzi sobie z klastrami o różnej gęstości; wynik zależy od ε i MinPts; oznacza outliery jako szum; liczba iteracji ani learning rate nie są parametrami.",
+   "related": [
+    "ml2-k-means"
+   ]
+  },
+  {
+   "id": "ml2-klasteryzacja-hierarchiczna",
+   "term": "Klasteryzacja hierarchiczna aglomeracyjna",
+   "topic": "machine_learning",
+   "short": "Metoda budująca hierarchię klastrów od pojedynczych punktów, łącząc kolejno najbliższe klastry.",
+   "details": "**Jak działa:** start: każdy punkt to osobny klaster. W każdym kroku łączy się dwa najbliższe klastry wg kryterium **linkage**: single (min odległość), complete (max), average, Ward (minimalny przyrost wariancji), centroid. Wynik to **dendrogram**; cięcie na wybranej wysokości daje dowolne k. Złożoność zwykle ^^O(n^2)^^ pamięci i więcej czasu (wolniejsza niż k-means). Wariant odwrotny (od góry) to divisive.\n\n**Na egzaminie uważaj na:** nie wymaga k z góry; jest nienadzorowana; nie redukuje wymiaru; single linkage nie używa środków klastrów.",
+   "related": [
+    "ml2-k-means"
+   ]
+  },
+  {
+   "id": "ml2-knn",
+   "term": "Algorytm k najbliższych sąsiadów (k-NN)",
+   "topic": "machine_learning",
+   "short": "Nadzorowany algorytm klasyfikacji/regresji, który przewiduje na podstawie k najbliższych przykładów uczących.",
+   "details": "**Jak działa:** dla nowego punktu oblicz odległości do wszystkich przykładów uczących, wybierz k najbliższych, klasyfikuj większością głosów (regresja: średnia). Brak fazy trenowania (leniwy). **Małe k** (1): granica poszarpana, wysoka wariancja, overfitting; **duże k**: gładka granica, underfitting. Dla klasyfikacji binarnej nieparzyste k unika remisów. Wymaga skalowania cech.\n\n**Na egzaminie uważaj na:** k to liczba sąsiadów, nie klas, warstw ani wymiarów; k nie musi być parzyste; większe k nie zawsze poprawia wynik.",
+   "related": [
+    "ml2-paradygmaty-uczenia"
+   ]
+  },
+  {
+   "id": "ml2-apriori",
+   "term": "Algorytm Apriori i reguły asocjacyjne",
+   "topic": "machine_learning",
+   "short": "Nienadzorowany algorytm znajdowania częstych zbiorów elementów i reguł asocjacyjnych.",
+   "details": "**Jak działa:** poziomami generuje kandydatów o rozmiarze k z częstych zbiorów rozmiaru k−1 i liczy **support**. Dzięki **antymonotoniczności** (podzbiór zbioru częstego jest częsty) odrzuca kandydatów mających nieczęste podzbiory. Z częstych zbiorów tworzy reguły A→B: support = P(A∪B), **confidence** = P(B|A), **lift** = confidence / P(B) (lift>1: dodatnia zależność). Zastosowania: analiza koszykowa, rekomendacje.\n\n**Na egzaminie uważaj na:** to nie klasyfikacja spamu ani rozpoznawanie twarzy; confidence to P(B|A), a nie support; Apriori jest nienadzorowany.",
+   "related": [
+    "ml2-paradygmaty-uczenia"
+   ]
+  },
+  {
+   "id": "ml2-uczenie-ze-wzmocnieniem",
+   "term": "Uczenie ze wzmocnieniem (reinforcement learning)",
+   "topic": "machine_learning",
+   "short": "Paradygmat, w którym agent uczy się polityki działania przez interakcję ze środowiskiem i nagrody.",
+   "details": "**Jak działa:** w każdym kroku agent obserwuje **stan**, wybiera **akcję** wg **polityki** π, środowisko zwraca **nagrodę** i nowy stan. Cel: maksymalizacja skumulowanej (zdyskontowanej) nagrody. **Funkcja wartości** V(s), Q(s,a) szacuje oczekiwaną nagrodę. **Eksploracja vs eksploatacja**: próbować nowych akcji czy wybierać znane dobre (np. ε-greedy). Algorytmy: Q-learning, SARSA, policy gradient.\n\n**Na egzaminie uważaj na:** brak etykiet i zbioru treningowego; polityka to strategia agenta, nie reakcja środowiska; RL to nie uczenie częściowo nadzorowane.",
+   "related": [
+    "ml2-paradygmaty-uczenia"
+   ]
+  },
+  {
+   "id": "ml2-test-turinga",
+   "term": "Test Turinga i zarzuty (Turing test)",
+   "topic": "machine_learning",
+   "short": "Gra w naśladownictwo Turinga jako kryterium inteligencji maszyny, wraz z zarzutami omówionymi w artykule z 1950 r.",
+   "details": "**Jak działa:** przesłuchujący rozmawia tekstowo z człowiekiem i maszyną; jeśli nie odróżni ich, maszynę uznaje się za myślącą. W artykule \"Computing Machinery and Intelligence\" (1950) Turing omówił zarzuty: teologiczny, \"głowa w piasek\", matematyczny (Gödel), z świadomości, z niepełnosprawności (\"maszyna nigdy nie zrobi X\"), Lady Lovelace (maszyna robi tylko to, co zaprogramowano), z ciągłości układu nerwowego, z nieformalności zachowania, z percepcji pozazmysłowej.\n\n**Na egzaminie uważaj na:** Chiński Pokój Searla (1980) jest późniejszy i nie był przewidziany przez Turinga; Turing nie twierdził, że test jest niewykonalny.",
+   "related": [
+    "ml2-systemy-zlozone"
+   ]
+  },
+  {
+   "id": "ml2-korelacja-pearsona",
+   "term": "Współczynnik korelacji liniowej Pearsona",
+   "topic": "machine_learning",
+   "short": "Miara siły i kierunku liniowej zależności dwóch zmiennych, z przedziału [−1, 1].",
+   "details": "**Jak działa:** ^^r = \\frac{\\mathrm{cov}(X,Y)}{\\sigma_X \\sigma_Y}^^. r>0: wzrost X wiąże się ze wzrostem Y; r<0: ze spadkiem; r≈0: brak zależności liniowej (możliwa nieliniowa). |r| bliskie 1: punkty blisko prostej. Przykład: r=−0,95 to bardzo silna ujemna korelacja liniowa. Wrażliwy na outliery.\n\n**Na egzaminie uważaj na:** korelacja nie oznacza przyczynowości; r=0 nie wyklucza zależności nieliniowej; r=−0,95 nie znaczy, że 95% punktów leży na prostej; znak wskazuje kierunek, nie siłę.",
+   "related": [
+    "ml2-outlier"
+   ]
+  }
+ ]
+}

@@ -128,3 +128,12 @@ extra options too.
 3. Run `python3 review/validate_slice.py <SLICE>` and fix until `0 errors`.
 4. Reply with a SHORT report (max 25 lines): number of questions, number of correctness changes, the list of
    changed question ids with a one-line reason each, and anything you were unsure about. Do not paste the JSON.
+
+## BUDGET MODE (overrides sizes above)
+Token budget is tight. Be efficient:
+- Read the input slice ONCE (one Read call). Do not re-read files you wrote.
+- Write the whole output with ONE python3 script (a heredoc that builds the dict and json.dumps it) — no step-by-step Edit calls.
+- Sizes: glossary `details` 80–200 words (>= 400 chars), `explanation` 50–120 words (>= 150 chars). 10–20 glossary entries per slice.
+- Still >= 3 extra options per question (>= 2 incorrect, >= 1 correct when possible).
+- Correctness review stays rigorous — that is the priority.
+- Final report: max 12 lines.

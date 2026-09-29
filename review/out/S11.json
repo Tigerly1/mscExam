@@ -1,0 +1,3469 @@
+{
+ "questions": [
+  {
+   "id": 1013,
+   "question": "Rachunek predykatów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "nie zawiera żadnych aksjomatów dla kwantyfikatorów.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "zawiera reguły wnioskowania i aksjomaty dotyczące kwantyfikatorów ogólnego i egzystencjalnego.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest tożsamy z klasycznym rachunkiem zdań.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie pozwala na używanie symboli relacyjnych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "rozszerza rachunek zdań o kwantyfikatory i symbole relacyjne/funkcyjne.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "jest rozstrzygalny w sensie ogólnym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "jest logiką pierwszego rzędu: formuły budujemy z predykatów, termów, spójników i kwantyfikatorów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jest rozstrzygalny — istnieje algorytm sprawdzający, czy dowolna formuła jest tautologią.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "nie zawiera spójników logicznych, bo zastępują je kwantyfikatory.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "jest półrozstrzygalny: zbiór jego tautologii jest rekurencyjnie przeliczalny.",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rachunek-predykatow",
+    "logika-pierwszego-rzedu"
+   ],
+   "explanation": "**Dlaczego poprawne**\nRachunek predykatów rozszerza rachunek zdań o kwantyfikatory, predykaty (relacje) i symbole funkcyjne, a jego system dowodowy ma aksjomaty i reguły dla ∀ i ∃. Jest logiką pierwszego rzędu i jest półrozstrzygalny.\n\n**Dlaczego błędne**\nTwierdzenie, że nie ma aksjomatów kwantyfikatorów, że jest tożsamy z rachunkiem zdań, że zabrania symboli relacyjnych albo że jest rozstrzygalny (Church: nie jest), jest fałszem. Spójniki nadal są w języku.\n\n**Zapamiętaj**\nRachunek predykatów = rachunek zdań + kwantyfikatory + predykaty; pełny, ale nierozstrzygalny.",
+   "changes": []
+  },
+  {
+   "id": 1014,
+   "question": "Prawo transpozycji (p -> q) <=> (~q -> ~p):",
+   "options": [
+    {
+     "key": "a",
+     "text": "Pozwala przyjąć, że prawdziwość zdania: \"Jeśli Kopernik nie urodził się w Krakowie, to Kepler nie urodził się w Toruniu\" pociąga prawdziwość zdania: \"jeśli Kepler urodził się w Toruniu, to Kopernik urodził się w Krakowie\".",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Orzeka, że z fałszywości implikacji wynika prawdziwość jej następnika.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Jest podstawą dowodów wprost w matematyce.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Mówi, że koniunkcja jest przemienna.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Głosi, że z p -> q wynika ~p -> ~q.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Dotyczy wyłącznie kwantyfikatorów ogólnych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Równoważność (p -> q) <=> (~q -> ~p) jest tautologią klasycznego rachunku zdań.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Implikacja odwrotna q -> p jest równoważna implikacji p -> q.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest podstawą dowodu przez kontrapozycję (nie wprost): zamiast p -> q dowodzimy ~q -> ~p.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Prawo transpozycji zawodzi, gdy p jest fałszywe, a q prawdziwe.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "prawa-rachunku-zdan"
+   ],
+   "explanation": "**Dlaczego poprawne**\nPrzykład z Kopernikiem i Keplerem to dokładnie kontrapozycja: ~A -> ~B jest równoważne B -> A. Prawo jest tautologią i pozwala dowodzić przez kontrapozycję.\n\n**Dlaczego błędne**\nFałszywe implikacji nie pociąga prawdziwości następnika (implikacja fałszywa tylko dla 1 -> 0). Prawo nie jest podstawą dowodu wprost, nie dotyczy przemienności koniunkcji ani wyłącznie kwantyfikatorów. Zamiana p -> q na ~p -> ~q albo q -> p to błąd (negacja/odwrotność).\n\n**Zapamiętaj**\nKontrapozycja: p -> q ≡ ~q -> ~p; odwrotność i przeciwność nie są równoważne.",
+   "changes": []
+  },
+  {
+   "id": 1015,
+   "question": "Teorią w sensie logicznym w ustalonym języku L nazywamy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zbiór wszystkich konsekwencji logicznych zbioru zdań mających swój dowód w tej teorii.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "zbiór zdań zamknięty ze względu na operację konsekwencji.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "dowolny zbiór formuł otwartych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zbiór wszystkich tautologii danego języka.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zbiór aksjomatów, które nie są ze sobą spójne.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "dowolny zbiór słów nad alfabetem L.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zbiór zdań T jest teorią, jeśli każde zdanie języka L wynikające logicznie z T należy do T.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zbiór wszystkich konsekwencji dowolnego zbioru zdań języka L jest teorią.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Teoria musi być skończonym zbiorem zdań.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Teoria sprzeczna nie jest teorią w sensie logicznym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "teoria-logiczna"
+   ],
+   "explanation": "**Dlaczego poprawne**\nTeoria w sensie logicznym to zbiór zdań języka L domknięty na konsekwencję: Cn(T)=T. Konsekwencje dowolnego zbioru zdań tworzą teorię, może być nieskończona; teoria sprzeczna (wszystkie zdania) też jest domknięta.\n\n**Dlaczego błędne**\nZbiór tautologii to tylko jedna szczególna teoria, nie definicja. Formuły otwarte, dowolne słowa czy zbiór niespójnych aksjomatów nie definiują teorii. Skończoność nie jest wymagana. Opcja o konsekwencjach zdań 'mających dowód w tej teorii' jest zapętlona i nie jest definicją.\n\n**Zapamiętaj**\nTeoria = zbiór zdań T z Cn(T)=T.",
+   "changes": []
+  },
+  {
+   "id": 1016,
+   "question": "Model dla teorii rachunku predykatów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Musi zawierać symbole funkcyjne, interpretujące w modelu zmienne języka tej teorii.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Składa się z niepustej dziedziny oraz interpretacji symboli predykatywnych, funkcyjnych i stałych.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Jest zawsze skończony.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie zależy od języka teorii.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest zbiorem wszystkich zdań prawdziwych w danej teorii.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Może mieć pustą dziedzinę (uniwersum).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Struktura, w której prawdziwe są wszystkie aksjomaty teorii, jest modelem tej teorii.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dziedzina modelu może być nieskończona.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Model teorii jest dowolnym zbiorem zdań tej teorii.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Symbole stałe interpretuje się w modelu jako relacje.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "semantyka-modele"
+   ],
+   "explanation": "**Dlaczego poprawne**\nModel to niepusta dziedzina z interpretacją predykatów (relacje), funkcji (funkcje) i stałych (elementy), w której aksjomaty są prawdziwe. Dziedzina może być skończona lub nieskończona i model zależy od sygnatury języka.\n\n**Dlaczego błędne**\nModel nie musi mieć symboli funkcyjnych (a te interpretują funkcje, nie zmienne). Nie jest zawsze skończony, zależy od języka, dziedzina nie może być pusta, a zbiór zdań prawdziwych w strukturze to jej teoria, nie model. Stałe to elementy, nie relacje.\n\n**Zapamiętaj**\nModel = niepusta dziedzina + interpretacja symboli języka, spełniająca aksjomaty.",
+   "changes": []
+  },
+  {
+   "id": 1017,
+   "question": "Twierdzenie o pełności dla klasycznego rachunku zdań orzeka, że:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Każde zdanie klasycznego rachunku zdań jest formułą (w jego języku), lecz nie każda formuła jest zdaniem.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Każda tautologia jest dowodliwa w systemie aksjomatycznym.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "System logiczny jest niespójny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Każdy model jest skończony.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Każdy zbiór zdań sprzecznych posiada model.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Rachunek zdań jest niezupełny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jeśli system aksjomatyczny jest poprawny i pełny, to zbiór formuł dowodliwych pokrywa się ze zbiorem tautologii.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Twierdzenie o pełności mówi, że każda formuła dowodliwa jest tautologią.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Twierdzenie o pełności mówi, że każde wartościowanie spełnia wszystkie formuły.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "W wersji silnej: każdy niesprzeczny zbiór formuł ma model.",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "twierdzenia-o-pelnosci-i-dedukcji",
+    "prawa-rachunku-zdan"
+   ],
+   "explanation": "**Dlaczego poprawne**\nPełność: semantyczna prawdziwość w każdym modelu (tautologia) implikuje dowodliwość. W wersji silnej: zbiór niesprzeczny ma model. Razem z poprawnością daje równoważność ⊢ i ⊨.\n\n**Dlaczego błędne**\nKierunek 'dowodliwe => tautologia' to poprawność, nie pełność. Zdanie o niespójności systemu, o skończoności modeli i o modelu dla zbioru sprzecznego jest fałszem. Rachunek zdań jest zupełny. Pierwsza opcja miesza zdania i formuły bez związku z pełnością.\n\n**Zapamiętaj**\nPełność: ⊨ φ => ⊢ φ; poprawność: ⊢ φ => ⊨ φ.",
+   "changes": []
+  },
+  {
+   "id": 1018,
+   "question": "W języku rachunku predykatów wyróżnić możemy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wyłącznie termy, bez żadnych typów formuł.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "termy, formuły atomowe oraz formuły złożone (z użyciem spójników i kwantyfikatorów).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "tylko stałe i zmienne, bez predykatów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wyłącznie kwantyfikatory.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "tylko zdania, bez formuł otwartych.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "wyłącznie symbole relacyjne.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "termy (zmienne, stałe, f(t1,...,tn)) oznaczają obiekty dziedziny, a formuły mają wartości logiczne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "formuły atomowe powstają przez zastosowanie predykatu do termów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wyrażenie f(x), gdzie f jest symbolem funkcyjnym, jest formułą atomową.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "zmienna wolna to zmienna związana kwantyfikatorem.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rachunek-predykatow"
+   ],
+   "explanation": "**Dlaczego poprawne**\nJęzyk ma dwie kategorie składniowe: termy (nazwy obiektów) i formuły (atomowe: P(t1,...,tn); złożone przez spójniki i kwantyfikatory). Zmienna wolna nie jest w zasięgu kwantyfikatora.\n\n**Dlaczego błędne**\nJęzyka nie da się zredukować do samych termów, samych stałych i zmiennych, samych kwantyfikatorów, samych symboli relacyjnych ani samych zdań (istnieją formuły otwarte). f(x) to term, nie formuła. Zmienna wolna jest niezwiązana.\n\n**Zapamiętaj**\nTerm oznacza obiekt, formuła wartość logiczną.",
+   "changes": []
+  },
+  {
+   "id": 1019,
+   "question": "Zdanie \"Jeśli Słowacki wielkim poetą był, to jeśli przez Kraków przepływa Nil, to Słowacki wielkim poetą był\" (schemat p -> (q -> p)) jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "nie da się ocenić bez znajomości jego modelu",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "tautologią klasycznego rachunku zdań.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zdaniem zawsze fałszywym (kontrtautologią).",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zdaniem spełnialnym, ale nie będącym tautologią.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zdaniem przygodnym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "zdaniem fałszywym w modelu standardowym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "zdaniem, którego prawdziwość nie zależy od tego, czy Nil przepływa przez Kraków.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "zdaniem fałszywym, bo Nil nie przepływa przez Kraków.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "zdaniem, którego wartość zależy od wartości logicznej q.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "schematem, który jest prawdziwy przy p=0 (fałszywa przesłanka) i przy p=1 (prawdziwy następnik wewnętrznej implikacji).",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "prawa-rachunku-zdan"
+   ],
+   "explanation": "**Dlaczego poprawne**\np -> (q -> p) jest fałszywe tylko gdy p=1 i (q -> p)=0, co wymaga p=0 — sprzeczność. Zatem to tautologia, niezależna od modelu i od treści zdań.\n\n**Dlaczego błędne**\nTautologia nie wymaga znajomości modelu, nie jest kontrtautologią ani zdaniem tylko spełnialnym/przygodnym, i nie może być fałszywa w żadnym modelu, także standardowym. Wartość q jest nieistotna.\n\n**Zapamiętaj**\nTautologia jest prawdziwa przy każdym wartościowaniu; sprawdź tabelą prawdy.",
+   "changes": []
+  },
+  {
+   "id": 1020,
+   "question": "Tautologia rachunku predykatów to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "formuła prawdziwa w każdym modelu (przy każdej interpretacji).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "formuła prawdziwa w przynajmniej jednym modelu.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "formuła, która nie zawiera kwantyfikatorów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zdanie, które jest prawdziwe w modelu standardowym liczb naturalnych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "formuła, która posiada dowód w arytmetyce Peano.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "zdanie, które jest fałszywe w przynajmniej jednym modelu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "formuła, której negacja jest niespełnialna.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Formuła (∀x P(x)) -> P(a) jest tautologią rachunku predykatów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Formuła ∃x P(x) jest tautologią rachunku predykatów.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Każda formuła spełnialna jest tautologią.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "semantyka-modele"
+   ],
+   "explanation": "**Dlaczego poprawne**\nTautologia rachunku predykatów jest prawdziwa w każdym modelu przy każdej interpretacji, więc jej negacja jest niespełnialna; przykładem jest instancjacja ∀x P(x) -> P(a).\n\n**Dlaczego błędne**\nPrawdziwość w jednym modelu to tylko spełnialność. Brak kwantyfikatorów, prawdziwość w modelu liczb naturalnych czy dowodliwość w arytmetyce Peano nie czynią formuły tautologią. Zdanie fałszywe w jakimś modelu nie jest tautologią. ∃x P(x) bywa fałszywe.\n\n**Zapamiętaj**\nTautologia = prawdziwa we wszystkich modelach.",
+   "changes": []
+  },
+  {
+   "id": 1021,
+   "question": "Logika pierwszego rzędu to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "logika bez żadnych kwantyfikatorów",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "logika dopuszczająca kwantyfikowanie wyłącznie po zmiennych obiektowych (indywiduach).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "logika dopuszczająca kwantyfikowanie po zbiorach i relacjach.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "system logiczny, w którym nie istnieją zmienne.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "logika, w której nie można definiować relacji.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "logika, w której każdy model jest skończony.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "W logice pierwszego rzędu można zapisać ∀x ∃y R(x,y).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Logika pierwszego rzędu spełnia twierdzenie o zwartości.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Formuła ∀P ∃x P(x), z kwantyfikatorem po predykatach, należy do logiki pierwszego rzędu.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Logika pierwszego rzędu jest rozstrzygalna.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "logika-pierwszego-rzedu"
+   ],
+   "explanation": "**Dlaczego poprawne**\nW logice pierwszego rzędu kwantyfikujemy tylko po indywiduach dziedziny; kwantyfikacja po zbiorach i relacjach to logika drugiego rzędu. Ma zwartość i pełność, ale jest nierozstrzygalna.\n\n**Dlaczego błędne**\nKwantyfikatory istnieją, zmienne istnieją, relacje można definiować. Modele nie muszą być skończone, a kwantyfikacja po relacjach to wyższy rząd. Logika I rzędu nie jest rozstrzygalna.\n\n**Zapamiętaj**\nRząd logiki = po czym wolno kwantyfikować (I rząd: elementy dziedziny).",
+   "changes": []
+  },
+  {
+   "id": 1022,
+   "question": "Kwantyfikatory \"istnieje takie x, że\" oraz \"dla każdego x, takiego, że\":",
+   "options": [
+    {
+     "key": "a",
+     "text": "mają swoje semantyczne interpretacje w modelach dla języka, w którym występują.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "są spójnikami logicznymi o argumentach zdaniowych.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "nie mogą występować w jednej formule jednocześnie.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "odnoszą się wyłącznie do zbiorów skończonych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "są definiowane wyłącznie przez reguły syntaktyczne.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nie podlegają negacji.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "∀x φ jest prawdziwy w modelu, gdy φ jest spełniona dla każdego elementu dziedziny tego modelu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "∃x φ jest równoważne ~∀x ~φ.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "~∀x φ(x) jest równoważne ∀x ~φ(x).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "∃x φ jest prawdziwy w modelu tylko wtedy, gdy φ zachodzi dla wszystkich elementów dziedziny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "semantyka-modele",
+    "rachunek-predykatow"
+   ],
+   "explanation": "**Dlaczego poprawne**\nKwantyfikatory mają semantykę w modelu: ∀ — dla wszystkich elementów dziedziny, ∃ — dla co najmniej jednego. Są dualne: ∃x φ ≡ ~∀x ~φ.\n\n**Dlaczego błędne**\nNie są spójnikami o argumentach zdaniowymi (wiążą zmienną), mogą współwystępować, dotyczą też dziedzin nieskończonych, mają semantykę (nie tylko składnię) i podlegają negacji. Negacja ∀ to ∃~, nie ∀~.\n\n**Zapamiętaj**\n~∀x φ ≡ ∃x ~φ, ~∃x φ ≡ ∀x ~φ.",
+   "changes": []
+  },
+  {
+   "id": 1023,
+   "question": "Funkcja interpretacji semantycznej, określonej dla języka rachunku predykatów:",
+   "options": [
+    {
+     "key": "a",
+     "text": "interpretuje predykaty jako relacje w dziedzinie modelu.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "przypisuje każdemu zdaniu wartość \"prawda\" niezależnie od modelu.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "interpretuje zmienne wolne jako kwantyfikatory ogólne.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy wyłącznie do upraszczania formuł.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "interpretuje symbole funkcyjne jako funkcje w dziedzinie modelu.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "przypisuje każdemu termowi wartość logiczną.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "interpretuje stałe jako wybrane elementy dziedziny modelu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "przypisuje każdemu termowi (przy ustalonym wartościowaniu zmiennych) element dziedziny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "interpretuje predykaty jako funkcje z dziedziny w zbiór liczb naturalnych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "zależy tylko od składni języka i jest taka sama we wszystkich modelach.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "semantyka-modele"
+   ],
+   "explanation": "**Dlaczego poprawne**\nInterpretacja odwzorowuje predykaty na relacje, symbole funkcyjne na funkcje, stałe na elementy dziedziny; termy dostają wartość w dziedzinie, formuły — wartość logiczną.\n\n**Dlaczego błędne**\nInterpretacja nie nadaje każdemu zdaniu prawdy niezależnie od modelu, nie interpretuje zmiennych wolnych jako kwantyfikatorów, służy do nadania sensu, nie upraszczania, a termom przypisuje elementy dziedziny, nie wartości logiczne. Predykaty to relacje, nie funkcje do N.\n\n**Zapamiętaj**\nTerm -> element dziedziny; formuła -> prawda/fałsz.",
+   "changes": []
+  },
+  {
+   "id": 1024,
+   "question": "Twierdzenie o dedukcji:",
+   "options": [
+    {
+     "key": "a",
+     "text": "pozwala przenieść przesłanki do treści implikacji we wniosku (jeśli ze zbioru G i zdania A wynika B, to z G wynika A -> B).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "pozwala przenieść przesłanki do zbioru wniosków.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "mówi, że każda teoria jest rozstrzygalna.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "dotyczy wyłącznie rachunku predykatów z identycznością.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "orzeka o pełności systemu logicznego.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "mówi, że z A wynika B wtedy i tylko wtedy, gdy A jest fałszywe.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jest wykorzystywane przy dowodzeniu implikacji: aby udowodnić A -> B, zakładamy A i wyprowadzamy B.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Twierdzenie o dedukcji zachodzi w klasycznym rachunku zdań.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Z twierdzenia o dedukcji wynika, że A -> B jest tautologią dla dowolnych A, B.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Twierdzenie o dedukcji mówi, że G ⊢ A -> B zachodzi wtedy i tylko wtedy, gdy G ⊢ B -> A.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "twierdzenia-o-pelnosci-i-dedukcji"
+   ],
+   "explanation": "**Dlaczego poprawne**\nJeśli G ∪ {A} ⊢ B, to G ⊢ A -> B (i odwrotnie). Uzasadnia to standardową metodę dowodu implikacji przez założenie przesłanki.\n\n**Dlaczego błędne**\nPrzesłanki nie przenosimy do zbioru wniosków, twierdzenie nie dotyczy rozstrzygalności teorii ani pełności ani wyłącznie logiki z identycznością. Nie mówi też nic o fałszywości A. Nie każda implikacja jest tautologią; odwrócenie implikacji jest błędem.\n\n**Zapamiętaj**\nDedukcja: G,A ⊢ B <=> G ⊢ A -> B.",
+   "changes": []
+  },
+  {
+   "id": 1025,
+   "question": "Każda permutacja zbioru skończonego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "może być w sposób jednoznaczny rozłożona na niekoniecznie rozłączne transpozycje.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "może być rozłożona na iloczyn rozłącznych cykli w sposób jednoznaczny (z dokładnością do kolejności czynników).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest zawsze transpozycją.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie może być przedstawiona jako złożenie cykli.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ma zawsze parzystą liczbę inwersji.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "jest cyklem o długości n.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Każda permutacja zbioru skończonego jest złożeniem transpozycji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Parzystość liczby transpozycji w rozkładzie permutacji nie zależy od wybranego rozkładu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Cykl długości k rozkłada się na k transpozycji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Rozłączne cykle nie komutują.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "permutacje-cykle"
+   ],
+   "explanation": "**Dlaczego poprawne**\nPermutacja rozkłada się jednoznacznie (do kolejności) na rozłączne cykle; rozłączne cykle komutują. Rozkład na transpozycje istnieje, ale nie jest jednoznaczny, choć jego parzystość jest stała. Cykl długości k to k-1 transpozycji.\n\n**Dlaczego błędne**\nRozkład na transpozycje nie jest jednoznaczny, permutacja nie musi być transpozycją ani pojedynczym cyklem długości n, cykle wolno składać, a liczba inwersji bywa nieparzysta. Cykl długości k daje k-1 transpozycji.\n\n**Zapamiętaj**\nJednoznaczny jest rozkład na rozłączne cykle, nie na transpozycje.",
+   "changes": []
+  },
+  {
+   "id": 1026,
+   "question": "W grafie właściwym nieskierowanym:",
+   "options": [
+    {
+     "key": "a",
+     "text": "najniższy stopień węzła może być mniejszy od spójności krawędziowej.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "spójność krawędziowa jest zawsze mniejsza lub równa minimalnemu stopniowi wierzchołka (lambda(G) <= delta(G)).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "liczba wierzchołków o stopniu nieparzystym musi być nieparzysta.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "suma stopni wierzchołków jest równa liczbie krawędzi.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "spójność wierzchołkowa jest zawsze większa od krawędziowej.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "graf jest drzewem, jeśli ma n krawędzi.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "W grafie prostym nieskierowanym suma stopni wierzchołków jest równa podwojonej liczbie krawędzi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liczba wierzchołków nieparzystego stopnia jest parzysta.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "κ(G) <= λ(G) <= δ(G) (nierówność Whitneya).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Spójność wierzchołkowa jest zawsze większa lub równa spójności krawędziowej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Graf spójny o n wierzchołkach i n krawędziach jest drzewem.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stopnie-i-spojnosc",
+    "drzewa-i-mosty"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSpójność krawędziowa λ nie przekracza minimalnego stopnia δ (usunięcie krawędzi przy wierzchołku o stopniu δ go odcina); Whitney: κ ≤ λ ≤ δ. Lemat o uściskach dłoni: suma stopni = 2|E|.\n\n**Dlaczego błędne**\nNajniższy stopień nie jest mniejszy niż λ. Liczba wierzchołków nieparzystego stopnia jest parzysta, suma stopni to 2|E|, a nie |E|. κ ≤ λ, nie odwrotnie. Drzewo ma n-1 krawędzi.\n\n**Zapamiętaj**\nκ ≤ λ ≤ δ oraz Σdeg = 2|E|.",
+   "changes": []
+  },
+  {
+   "id": 1027,
+   "question": "Grupa symetrii danej figury geometrycznej to grupa tych przekształceń płaszczyzny, względem których danafigura jest niezmiennicza. Działaniem grupowym jest składanie przekształceń.",
+   "options": [
+    {
+     "key": "a",
+     "text": "Grupa symetrii siedmiokąta foremnego jest siedmioelementowa.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Jest grupą dihedralną D7 i posiada 14 elementów (7 obrotów i 7 symetrii osiowych).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Jest grupą cykliczną Z7.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie zawiera żadnych symetrii osiowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest grupą abelową.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Zawiera dokładnie 49 elementów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Grupa D7 jest nieabelowa.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Obroty siedmiokąta foremnego o wielokrotności kąta 360°/7 tworzą podgrupę cykliczną rzędu 7 grupy symetrii.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Grupa symetrii siedmiokąta foremnego ma 21 elementów.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Złożenie dwóch symetrii osiowych siedmiokąta foremnego jest zawsze symetrią osiową.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "grupa-symetrii"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSymetrie n-kąta foremnego tworzą grupę dihedralną D_n rzędu 2n: n obrotów i n odbić. Dla n=7 jest to 14 elementów, nieabelowa; obroty tworzą podgrupę Z7.\n\n**Dlaczego błędne**\nRząd to 14, nie 7, 21 ani 49. Grupa nie jest cykliczna (obroty to tylko podgrupa), zawiera 7 osi symetrii i nie jest abelowa (odbicia nie komutują z obrotami). Złożenie dwóch odbić to obrót.\n\n**Zapamiętaj**\n|D_n| = 2n i D_n dla n≥3 jest nieabelowa.",
+   "changes": []
+  },
+  {
+   "id": 1028,
+   "question": "Grupą nie jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "(C[0,1], +) - zbiór wszystkich funkcji ciągłych o dziedzinie w [0,1] z dodawaniem funkcji po wartościach jako działanie grupowym.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "(N, +) - zbiór liczb naturalnych z dodawaniem.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "(Z, +) - zbiór liczb całkowitych z dodawaniem.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "(R*, *) - zbiór liczb rzeczywistych bez zera z mnożeniem.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "(Q, +) - zbiór liczb wymiernych z dodawaniem.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "(Z_n, +_n) - zbiór reszt z dzielenia przez n z dodawaniem modulo n.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "(Q*, ·) — liczby wymierne bez zera z mnożeniem.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "(Z, ·) — liczby całkowite z mnożeniem.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "(R, ·) — liczby rzeczywiste z mnożeniem.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "(2Z, +) — liczby parzyste z dodawaniem.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "grupa-symetrii"
+   ],
+   "explanation": "**Dlaczego poprawne**\nGrupa wymaga łączności, elementu neutralnego i odwrotności. (N,+) nie ma odwrotności (poza 0), (Z,·) nie ma odwrotności dla liczb ≠ ±1, (R,·) — dla 0.\n\n**Dlaczego błędne**\nFunkcje ciągłe z dodawaniem, (Z,+), (R*,·), (Q,+), (Z_n,+_n), (Q*,·) i (2Z,+) są grupami (istnieją elementy odwrotne i neutralne).\n\n**Zapamiętaj**\nBrak odwrotności (0 w mnożeniu, ujemne w N) psuje grupę.",
+   "changes": []
+  },
+  {
+   "id": 1029,
+   "question": "Niech X będzie zbiorem częściowo uporządkowanym.",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jeśli X jest skończony, to element maksymalny jest równocześnie elementem największym.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Jeśli X ma element największy, to jest on jedynym elementem maksymalnym.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Każdy zbiór częściowo uporządkowany ma element najmniejszy.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Relacja częściowego porządku jest zwrotna, symetryczna i przechodnia.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Każdy podzbiór X ma kres górny.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Element minimalny jest zawsze elementem najmniejszym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Element największy zbioru częściowo uporządkowanego, o ile istnieje, jest jedyny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Skończony niepusty zbiór częściowo uporządkowany ma co najmniej jeden element maksymalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Relacja częściowego porządku jest zwrotna, antysymetryczna i spójna (każde dwa elementy są porównywalne).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Element maksymalny jest zawsze większy od każdego innego elementu zbioru.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "porzadki-czesciowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\nNajwiększy element jest ≥ każdego, więc jest jedynym maksymalnym i jedynym największym. Maksymalny to taki, nad którym nie ma większego — nie musi być największy, bo mogą istnieć nieporównywalne.\n\n**Dlaczego błędne**\nMaksymalny nie musi być największy, zbiór poz. nie musi mieć najmniejszego, porządek jest antysymetryczny (nie symetryczny), nie każdy podzbiór ma kres górny, a minimalny ≠ najmniejszy.\n\n**Zapamiętaj**\nMaksymalny ≠ największy; największy => jedyny maksymalny.",
+   "changes": []
+  },
+  {
+   "id": 1030,
+   "question": "Kostką Qn nazywamy graf, którego wierzchołki są zaetykietowane wszystkimi możliwymi zerojedynkowymi ciągami n−elementowymi a krawędzie łączą te wierzchołki, których etykiety różnią się dokładnie na jednym miejscu.",
+   "options": [
+    {
+     "key": "a",
+     "text": "Kostka Q3 ma 8 wierzchołków i 12 krawędzi.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Kostka Qn ma n wierzchołków.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Kostka Qn jest grafem pełnym.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Każdy wierzchołek w Qn ma stopień 2^n.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Kostka Qn jest grafem planarnym dla każdego n.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Kostka Qn nie jest grafem dwudzielnym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Kostka Qn ma 2^n wierzchołków.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Kostka Qn jest grafem regularnym stopnia n.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Kostka Qn ma n·2^(n-1) krawędzi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Kostka Q3 ma 6 wierzchołków i 8 krawędzi.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Kostka Qn ma n·2^n krawędzi.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kostka-qn",
+    "kolorowanie-grafow"
+   ],
+   "explanation": "**Dlaczego poprawne**\nQn ma 2^n wierzchołków, każdy stopnia n, więc n·2^(n-1) krawędzi (Q3: 8 i 12). Jest dwudzielna (parzystość liczby jedynek), planarna tylko dla n≤3.\n\n**Dlaczego błędne**\nQn nie ma n wierzchołków, nie jest pełna, stopień to n (nie 2^n), dla n≥4 nie jest planarna, a dwudzielna jest. Krawędzi n·2^n liczyłoby każdą dwa razy za mało dzieląc.\n\n**Zapamiętaj**\nQn: 2^n wierzchołków, stopień n, dwudzielna.",
+   "changes": []
+  },
+  {
+   "id": 1031,
+   "question": "Liczba chromatyczna grafu to minimalna liczba kolorów, jakimi można pokolorować wierzchołki grafu tak, aby żadne dwa wierzchołki połączone krawędzią nie były tego samego koloru.",
+   "options": [
+    {
+     "key": "a",
+     "text": "2",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "3",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "4",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "8",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "1",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "5",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Liczba chromatyczna wynosi 6.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liczba chromatyczna wynosi 7.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Liczba chromatyczna wynosi 0.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kolorowanie-grafow"
+   ],
+   "explanation": "**Dlaczego poprawne**\nWskazana wartość 2 oznacza graf dwudzielny z co najmniej jedną krawędzią (nie da się użyć 1 koloru, a wystarcza 2). Liczbę chromatyczną wyznacza konkretny graf z zadania.\n\n**Dlaczego błędne**\nPozostałe liczby (1, 3, 4, 5, 6, 7, 8, 0) nie są liczbą chromatyczną tego grafu; graf z krawędzią wymaga co najmniej 2 kolorów, więc 0 i 1 odpadają.\n\n**Zapamiętaj**\nχ(G)=2 dla niepustego grafu dwudzielnego.",
+   "changes": []
+  },
+  {
+   "id": 1032,
+   "question": "Każdy zbiór częściowo uporządkowany:",
+   "options": [
+    {
+     "key": "a",
+     "text": "ma element maksymalny.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "może nie posiadać elementów maksymalnych ani minimalnych (np. zbiór liczb całkowitych z relacją <=).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest zawsze liniowo uporządkowany.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "musi być skończony.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ma dokładnie jeden element najmniejszy.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "jest gęsty.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zbiór liczb rzeczywistych z relacją <= nie ma elementów maksymalnych ani minimalnych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Skończony niepusty zbiór częściowo uporządkowany ma element maksymalny i minimalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Każdy zbiór częściowo uporządkowany ma element największy.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Element maksymalny zbioru częściowo uporządkowanego musi być elementem największym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "porzadki-czesciowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\nNieskończone zbiory (Z, R z <=) nie mają elementów maksymalnych ani minimalnych. Skończone niepuste mają oba rodzaje.\n\n**Dlaczego błędne**\nNie każdy zbiór ma element maksymalny, nie każdy porządek jest liniowy, zbiór nie musi być skończony, nie ma nakazu jednego najmniejszego elementu ani gęstości (Z nie jest gęsty).\n\n**Zapamiętaj**\nNieskończoność pozwala na brak elementów ekstremalnych.",
+   "changes": []
+  },
+  {
+   "id": 1033,
+   "question": "Wskaż zdania prawdziwe dotyczące porządków:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zbiór liczb całkowitych z relacją arytmetyczną ”mniejsze lub równe” jest dobrze uporządkowany.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Zbiór liczb naturalnych z relacją ”mniejsze lub równe” jest dobrze uporządkowany.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Każdy porządek liniowy jest dobrym porządkiem.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Relacja inkluzji podzbiorów jest zawsze porządkiem liniowym.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Relacja podzielności na liczbach naturalnych jest porządkiem liniowym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Zbiór liczb rzeczywistych z relacją <= jest dobrze uporządkowany.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Każdy niepusty podzbiór zbioru dobrze uporządkowanego ma element najmniejszy.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Każdy dobry porządek jest porządkiem liniowym.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Elementy 2 i 3 są nieporównywalne w relacji podzielności na liczbach naturalnych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Przedział (0,1) z relacją <= jest dobrze uporządkowany.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Zbiór podzbiorów zbioru {1,2} z inkluzją jest porządkiem liniowym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "porzadki-czesciowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\nDobry porządek to liniowy porządek, w którym każdy niepusty podzbiór ma element najmniejszy. Tak jest w N z ≤. Z, R, (0,1) mają podzbiory bez najmniejszego.\n\n**Dlaczego błędne**\nZ (podzbiór ujemnych) i R nie są dobrze uporządkowane, nie każdy liniowy porządek jest dobry, inkluzja i podzielność nie są liniowe (nieporównywalne {1},{2} oraz 2,3).\n\n**Zapamiętaj**\nDobry porządek = liniowy + każdy niepusty podzbiór ma minimum.",
+   "changes": []
+  },
+  {
+   "id": 1034,
+   "question": "Jeśli X jest zbiorem n−elementowym i Y jest zbiorem m-elementowym, n > 0, m > 0, to",
+   "options": [
+    {
+     "key": "a",
+     "text": "liczność rodziny wszystkich podzbiorów zbioru X (zbioru potęgowego) jest równa 2^n.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "liczba wszystkich permutacji zbioru X wynosi n^2.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "liczba k-elementowych podzbiorów zbioru X wynosi n! / k!.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "liczba relacji zwrotnych na zbiorze X wynosi 2^n.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "liczba wszystkich relacji na zbiorze X wynosi n^n.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "liczba wszystkich funkcji ze zbioru X w X wynosi n!.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "liczba wszystkich funkcji ze zbioru X w zbiór Y wynosi m^n.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "liczba wszystkich relacji z X do Y (podzbiorów X×Y) wynosi 2^(n·m).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "liczba k-elementowych podzbiorów zbioru X wynosi n!/(k!(n-k)!).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "liczba funkcji ze zbioru X w zbiór Y wynosi n^m.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "liczba wszystkich permutacji zbioru X wynosi 2^n.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kombinatoryka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\n|P(X)|=2^n, permutacji n!, k-podzbiorów C(n,k), funkcji X→Y m^n, relacji na X 2^(n²), zwrotnych 2^(n²-n).\n\n**Dlaczego błędne**\nPermutacji jest n!, nie n²; k-podzbiorów n!/(k!(n-k)!), nie n!/k!; zwrotnych 2^(n²-n); wszystkich relacji 2^(n²); funkcji X→X n^n, nie n!.\n\n**Zapamiętaj**\nFunkcje X→Y: m^n; relacje: 2^(|X||Y|).",
+   "changes": []
+  },
+  {
+   "id": 1035,
+   "question": "Niech Pn oznacza zbiór permutacji n-elementowych. W P3:",
+   "options": [
+    {
+     "key": "a",
+     "text": "istnieją dokładnie 2 permutacje cykliczne o długości 3.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "istnieje 6 permutacji cyklicznych.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "każda permutacja jest cyklem.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie istnieje permutacja identycznościowa.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "liczba wszystkich permutacji wynosi 9.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "każda permutacja jest parzysta.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "P3 ma 6 elementów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "W P3 są dokładnie 3 transpozycje.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Permutacje cykliczne długości 3 w P3 są parzyste.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "W P3 istnieje 6 transpozycji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Złożenie dwóch różnych transpozycji w P3 jest transpozycją.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "permutacje-cykle"
+   ],
+   "explanation": "**Dlaczego poprawne**\nTrójcykli w P3 jest (3-1)!=2. |P3|=3!=6: identyczność, 3 transpozycje, 2 trójcykle. Trójcykle są parzyste, transpozycje nieparzyste.\n\n**Dlaczego błędne**\nCykli długości 3 jest 2, nie 6; nie każda permutacja jest trójcyklem (przy cyklach długości 3, transpozycje i identyczność są inne), identyczność istnieje, |P3|=6 (nie 9), transpozycje są nieparzyste. Uwaga: przy konwencji, że identyczność i transpozycje to 'cykle', zdanie o cyklu bywa dwuznaczne; przyjęto intencję autora.\n\n**Zapamiętaj**\nCykli długości n jest (n-1)!.",
+   "changes": []
+  },
+  {
+   "id": 1036,
+   "question": "Niech X będzie zbiorem n-elementowym (n > 2) i R będzie relacją równoważności na X.",
+   "options": [
+    {
+     "key": "a",
+     "text": "Liczba klas równoważności musi być podzielnikiem liczby n.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Klasy równoważności tworzą partycję (podział) zbioru X.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Każda klasa równoważności musi mieć tyle samo elementów.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Relacja równoważności nie musi być przechodnia.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Liczba relacji równoważności na X jest równa 2^n.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Suma wszystkich klas równoważności jest zbiorem pustym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Każdy element zbioru X należy do dokładnie jednej klasy równoważności.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Relacja równoważności jest zwrotna, symetryczna i przechodnia.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Dwie różne klasy równoważności są rozłączne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Relacja równoważności jest zwrotna, antysymetryczna i przechodnia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Liczba relacji równoważności na X jest równa n!.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "l",
+     "text": "Dwie różne klasy równoważności mogą mieć niepuste przecięcie.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "relacja-rownowaznosci",
+    "kombinatoryka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nRelacja równoważności (zwrotna, symetryczna, przechodnia) dzieli zbiór na rozłączne niepuste klasy, których suma to X. Liczba relacji to liczba Bella B_n.\n\n**Dlaczego błędne**\nLiczba klas nie musi dzielić n, klasy mogą mieć różne rozmiary, przechodniość jest wymagana, liczba relacji to B_n (nie 2^n ani n!), a suma klas to cały X, nie ∅.\n\n**Zapamiętaj**\nRównoważność <=> podział na rozłączne klasy.",
+   "changes": []
+  },
+  {
+   "id": 1051,
+   "question": "Które z poniższych zdań jest jednym z aksjomatów prawdopodobieństwa Kołmogorowa dla przestrzeni probabilistycznej (Ω, , 𝑃) :",
+   "options": [
+    {
+     "key": "a",
+     "text": "P(A) >= 0 dla każdego zdarzenia A.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "P(A) <= 0.5 dla każdego zdarzenia A.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "P(Omega) = 0.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "P(A u B) = P(A) + P(B) dla dowolnych zdarzeń A, B.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "P(Omega) = 1.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "P(A) + P(A') = 1 (to jest wniosek, ale często mylony z aksjomatem).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "P(A1 ∪ A2 ∪ ...) = P(A1) + P(A2) + ... dla przeliczalnie wielu parami rozłącznych zdarzeń.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) jest jednym z aksjomatów Kołmogorowa.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "P(A) <= 1 dla każdego zdarzenia A jest jednym z aksjomatów Kołmogorowa.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "P(A|B) = P(A ∩ B)/P(B) jest aksjomatem Kołmogorowa.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aksjomaty-prawdopodobienstwa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nAksjomaty: nieujemność, P(Ω)=1 i przeliczalna addytywność dla zdarzeń parami rozłącznych. Reszta (P(A')=1−P(A), wzór włączeń-wyłączeń) to wnioski.\n\n**Dlaczego błędne**\nP(A) ≤ 0.5 i P(Ω)=0 są fałszywe, addytywność dla dowolnych (nierozłącznych) zdarzeń jest błędna, a P(A)+P(A')=1, wzór włączeń i prawdopodobieństwo warunkowe to twierdzenia lub definicje, nie aksjomaty.\n\n**Zapamiętaj**\nTrzy aksjomaty: ≥0, P(Ω)=1, addytywność dla rozłącznych.",
+   "changes": []
+  },
+  {
+   "id": 1052,
+   "question": "W statystyce populacją nazywamy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "zbiór wszystkich możliwych cech pewnego wybranego parametru.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "zbiór wszystkich elementów, o których chcemy wyciągnąć wnioski.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "podzbiór elementów wybrany do badania.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "średnią wartość z próby.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zbiór wszystkich wyników pomiarów w próbie.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "wyłącznie grupę ludzi w danym regionie.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Populacją może być zbiór wszystkich wyrobów fabryki w danym okresie, jeśli to o nich chcemy wnioskować.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Próba jest podzbiorem populacji, na podstawie którego wnioskujemy o populacji.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Populacja jest zawsze zbiorem skończonym.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Populacja to zbiór wartości estymatora.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "statystyka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nPopulacja to cały zbiór obiektów, o których wnioskujemy; próba to jego podzbiór. Może być skończona lub nieskończona i nie musi dotyczyć ludzi.\n\n**Dlaczego błędne**\nZbiór cech parametru, podzbiór do badania (próba), średnia z próby, wyniki pomiarów w próbie i wyłącznie grupa ludzi z regionu to nie populacja. Populacja bywa nieskończona.\n\n**Zapamiętaj**\nPopulacja = wszystko, o czym wnioskujemy; próba = podzbiór.",
+   "changes": []
+  },
+  {
+   "id": 1053,
+   "question": "W statystyce estymatorem nazywamy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "dowolną statystykę (funkcję z próby) służącą do oszacowania nieznanego parametru populacji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "błąd pomiarowy.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "wartość parametru w całej populacji.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "liczbę elementów w próbie.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "hipotezę zerową.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "poziom istotności testu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Estymator jest zmienną losową, bo zależy od losowej próby.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Estymator nieobciążony ma wartość oczekiwaną równą szacowanemu parametrowi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Średnia z próby nie może być estymatorem, bo nie jest parametrem populacji.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wartość estymatora nie zależy od wylosowanej próby.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Estymator jest zawsze równy prawdziwej wartości parametru.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "statystyka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nEstymator to statystyka (funkcja próby), której wartość szacuje parametr; jest zmienną losową. Nieobciążony: E[θ̂]=θ.\n\n**Dlaczego błędne**\nBłąd pomiarowy, wartość parametru w populacji, liczebność próby, hipoteza zerowa i poziom istotności nie są estymatorem. Estymator zależy od próby i zwykle nie równa się parametrowi.\n\n**Zapamiętaj**\nEstymator = funkcja próby szacująca parametr.",
+   "changes": []
+  },
+  {
+   "id": 1054,
+   "question": "W statystyce błędem pierwszego rodzaju nazywamy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "przyjęcie hipotezy alternatywnej przy niskiej wielkości efektu.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "odrzucenie hipotezy zerowej, mimo że jest ona prawdziwa.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nieodrzucenie hipotezy zerowej, mimo że jest ona fałszywa.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "błąd wynikający z małej liczebności próby.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "błąd gruby pomiaru.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "błąd zaokrąglenia w obliczeniach statystycznych.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Prawdopodobieństwo błędu pierwszego rodzaju nie przekracza poziomu istotności α testu.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Błąd pierwszego rodzaju to fałszywy alarm (wynik fałszywie dodatni).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Błąd drugiego rodzaju polega na odrzuceniu prawdziwej hipotezy zerowej.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Zmniejszenie poziomu istotności α zwiększa prawdopodobieństwo błędu pierwszego rodzaju.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "statystyka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nBłąd I rodzaju to odrzucenie prawdziwego H0 (fałszywy alarm); jego prawdopodobieństwo kontroluje α. Błąd II rodzaju to nieodrzucenie fałszywego H0.\n\n**Dlaczego błędne**\nNieodrzucenie fałszywego H0 to błąd II rodzaju. Małość próby, błąd gruby i zaokrąglenia to nie błędy testu. Mniejsze α zmniejsza szansę błędu I rodzaju.\n\n**Zapamiętaj**\nI rodzaj: odrzucam prawdziwe H0.",
+   "changes": []
+  },
+  {
+   "id": 1055,
+   "question": "Liczbę wszystkich różnych k-elementowych ciągów (wariacji z powtórzeniami) utworzonych ze zbioru n-elementowego liczymy wzorem:",
+   "options": [
+    {
+     "key": "a",
+     "text": "n^k",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "n! / (n-k)!",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "symbol Newtona (n nad k)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "k^n",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "n! / k! (iloraz silni)",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "2^n",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "tym samym wzorem co liczba funkcji ze zbioru k-elementowego w zbiór n-elementowy.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liczba ta wynosi n plus k",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Liczba ta jest równa liczbie kombinacji z powtórzeniami, (n+k−1)!/(k!(n−1)!)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Liczba ta jest równa liczbie permutacji zbioru n-elementowego",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kombinatoryka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nKażdą z k pozycji ciągu wypełniamy niezależnie na n sposobów, stąd n^k. To także liczba funkcji z k-elementowego zbioru w n-elementowy.\n\n**Dlaczego błędne**\nn!/(n−k)! to wariacje bez powtórzeń, C(n,k) to kombinacje, k^n zamienia role, n!/k! i 2^n nie liczą ciągów z powtórzeniami, n·k i wzór z (n+k−1) (kombinacje z powtórzeniami) też nie.\n\n**Zapamiętaj**\nWariacje z powtórzeniami: n^k.",
+   "changes": [
+    "e: dopisano opis (iloraz silni), by odróżnić od innej opcji po normalizacji"
+   ]
+  },
+  {
+   "id": 1056,
+   "question": "W rachunku prawdopodobieństwa wzór na prawdopodobieństwo całkowite:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jak znaleźć wartość graniczną prawdopodobieństwa sumy przeliczalnej rodziny wstępującej zbiorów.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "pozwala obliczyć prawdopodobieństwo zdarzenia poprzez sumowanie prawdopodobieństw warunkowych względem zupełnego układu zdarzeń.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "dotyczy wyłącznie zdarzeń niezależnych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy do obliczania prawdopodobieństwa a posteriori (wzór Bayesa).",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wymaga, aby zdarzenia warunkujące miały prawdopodobieństwo 1.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "mówi, że P(A|B) = P(B|A).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "P(A) = Σ P(A|Bi)·P(Bi), gdzie B1,...,Bm tworzą zupełny układ zdarzeń.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wzór Bayesa wykorzystuje wzór na prawdopodobieństwo całkowite w mianowniku.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "P(A) = P(A|B) + P(A|B') dla dowolnego zdarzenia B.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wymaga, aby zdarzenia zupełnego układu były niezależne.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "prawdopodobienstwo-calkowite"
+   ],
+   "explanation": "**Dlaczego poprawne**\nDla zupełnego układu (rozłączne, suma Ω) P(A)=ΣP(A|Bi)P(Bi). Jest mianownikiem wzoru Bayesa.\n\n**Dlaczego błędne**\nNie dotyczy tylko zdarzeń niezależnych, nie jest wzorem Bayesa (a posteriori), nie wymaga P=1 dla zdarzeń warunkujących ani granic ciągów zbiorów; P(A|B)≠P(B|A) w ogólności. Składniki muszą być ważone P(Bi).\n\n**Zapamiętaj**\nP(A)=ΣP(A|Bi)P(Bi) po zupełnym układzie.",
+   "changes": []
+  },
+  {
+   "id": 1057,
+   "question": "W rachunku prawdopodobieństwa zdarzenia niezależne od każdego innego zdarzenia:",
+   "options": [
+    {
+     "key": "a",
+     "text": "istnieją, ale mogą być tylko zbiorem pustym, albo całą przestrzenią.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "to zdarzenia o prawdopodobieństwie 0 lub 1.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nie istnieją w żadnej przestrzeni probabilistycznej.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "to wszystkie zdarzenia w przestrzeni dyskretnej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "to zdarzenia, których suma wynosi 1.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "to zdarzenia rozłączne.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zdarzenie A jest niezależne samo od siebie wtedy i tylko wtedy, gdy P(A) jest równe 0 lub 1.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zdarzenie o prawdopodobieństwie 1 jest niezależne od każdego innego zdarzenia.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zdarzenie o prawdopodobieństwie 1/2 jest niezależne od każdego innego zdarzenia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Zdarzenie niezależne od każdego innego zdarzenia musi mieć prawdopodobieństwo dodatnie i mniejsze od 1.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "aksjomaty-prawdopodobienstwa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nNiezależność od każdego B, w tym od A samego, daje P(A)=P(A)², więc P(A)∈{0,1}. Odwrotnie: P=0 lub 1 daje niezależność od wszystkiego.\n\n**Dlaczego błędne**\nZdarzenia takie istnieją, nie muszą być tylko ∅ i Ω (mogą być zbiorami miary 0 lub 1), nie są to wszystkie zdarzenia dyskretne, ani zdarzenia o sumie 1, ani rozłączne.\n\n**Zapamiętaj**\nNiezależne od siebie samego: P(A)∈{0,1}.",
+   "changes": []
+  },
+  {
+   "id": 1058,
+   "question": "Sigma-ciałem zbiorów borelowskich na R nazywamy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "najmniejsze sigma-ciało na R które zawiera wszystkie zbiory otwarte (lub przedziały postaci (-inf, a]).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zbiór wszystkich podzbiorów R.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zbiór wszystkich liczb wymiernych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "zbiór przedziałów domkniętych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zbiór wszystkich funkcji ciągłych.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "zbiór wszystkich punktów na prostej.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Każdy przedział domknięty [a,b] jest zbiorem borelowskim.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Zbiór jednopunktowy {a} jest zbiorem borelowskim.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Każdy podzbiór R jest zbiorem borelowskim.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Zbiory borelowskie to dokładnie zbiory otwarte.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmienne-losowe-i-dystrybuanta"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSigma-ciało borelowskie to najmniejsze σ-ciało zawierające zbiory otwarte (równoważnie przedziały (−∞,a]); zawiera też domknięte, przeliczalne sumy i dopełnienia.\n\n**Dlaczego błędne**\nTo nie zbiór wszystkich podzbiorów R, ani liczb wymiernych, ani samych przedziałów domkniętych, funkcji ciągłych czy punktów. Zbiory otwarte to tylko część borelowskich.\n\n**Zapamiętaj**\nBorel = najmniejsze σ-ciało zawierające zbiory otwarte.",
+   "changes": []
+  },
+  {
+   "id": 1059,
+   "question": "Zmienną losową X : Omega -> R nazywamy funkcję, dla której:",
+   "options": [
+    {
+     "key": "a",
+     "text": "przeciwobraz dowolnego przedziału (-inf, a] dla a w R jest zdarzeniem (należy do sigma-ciała).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "obraz każdego zdarzenia jest liczbą dodatnią.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "dziedzina jest zbiorem liczb rzeczywistych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wartości są zawsze całkowite.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "funkcja jest zawsze rosnąca.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "funkcja jest bijekcją.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Funkcja stała jest zmienną losową.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Dla zmiennej losowej dystrybuanta F(a)=P(X<=a) jest dobrze określona.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Zmienna losowa to dowolna funkcja z Ω w R, bez dodatkowych warunków.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Zmienna losowa jest zawsze funkcją różnowartościową.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmienne-losowe-i-dystrybuanta"
+   ],
+   "explanation": "**Dlaczego poprawne**\nZmienna losowa to funkcja mierzalna: {X ≤ a} należy do σ-ciała dla każdego a, więc P(X≤a) ma sens.\n\n**Dlaczego błędne**\nNie chodzi o dodatnie obrazy, dziedzina to Ω (nie R), wartości nie muszą być całkowite, ani monotoniczność czy bijektywność. Mierzalność jest kluczowa.\n\n**Zapamiętaj**\nZmienna losowa = funkcja mierzalna.",
+   "changes": []
+  },
+  {
+   "id": 1060,
+   "question": "Które z podanych własności są własnościami każdej dystrybuanty FX zmiennej losowej X:",
+   "options": [
+    {
+     "key": "a",
+     "text": "FX jest ściśle rosnąca.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "FX jest niemalejąca i prawostronnie ciągła.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "FX(x) dąży do 1 gdy x dąży do minus nieskończoności.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "FX jest zawsze funkcją ciągłą.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Granica FX(x) przy x dążącym do plus nieskończoności wynosi 1.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "FX(x) może przyjmować wartości ujemne.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "0 <= FX(x) <= 1 dla każdego x.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Granica FX(x) przy x dążącym do minus nieskończoności wynosi 0.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "FX jest lewostronnie ciągła.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "FX jest nierosnąca.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Dla zmiennej dyskretnej FX jest funkcją ciągłą.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zmienne-losowe-i-dystrybuanta"
+   ],
+   "explanation": "**Dlaczego poprawne**\nDystrybuanta F(x)=P(X≤x) jest niemalejąca, prawostronnie ciągła, z granicami 0 w −∞ i 1 w +∞ i wartościami w [0,1].\n\n**Dlaczego błędne**\nNie musi być ściśle rosnąca ani ciągła (skoki dla zmiennych dyskretnych), nie zmierza do 1 w −∞ i nie przyjmuje ujemnych wartości. Jest prawo-, a nie lewostronnie ciągła.\n\n**Zapamiętaj**\nDystrybuanta: niemalejąca, prawostronnie ciągła, 0 i 1 na krańcach.",
+   "changes": []
+  },
+  {
+   "id": 1061,
+   "question": "Wariancja zmiennej losowej służy do:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wyznaczania skośności dystrybucji zmiennej losowej.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "określenia stopnia rozproszenia wartości zmiennej losowej wokół jej wartości oczekiwanej.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "obliczania najbardziej prawdopodobnej wartości.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wyznaczania mediany.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "określenia kierunku zależności między dwiema zmiennymi.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "obliczania wartości średniej.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Var(X) = E[(X − EX)²].",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Var(X) = E[X²] − (E[X])².",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wariancja jest zawsze nieujemna.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Var(aX) = a·Var(X).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Wariancja może być ujemna.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wariancja-i-niezaleznosc",
+    "zmienne-losowe-i-dystrybuanta"
+   ],
+   "explanation": "**Dlaczego poprawne**\nWariancja to średni kwadrat odchylenia od wartości oczekiwanej: miara rozproszenia. Var(aX)=a²Var(X).\n\n**Dlaczego błędne**\nNie służy do skośności (trzeci moment), modalnej wartości, mediany, kierunku zależności (kowariancja) ani średniej. Var(aX)=a²Var(X) i Var≥0.\n\n**Zapamiętaj**\nWariancja = rozproszenie wokół średniej, ≥ 0.",
+   "changes": []
+  },
+  {
+   "id": 1062,
+   "question": "Jeżeli dwie zmienne losowe X i Y są niezależne, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "rozkład ich sumy jest sumą ich rozkładów.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "wariancja ich sumy jest sumą ich wariancji (Var(X+Y) = Var(X) + Var(Y)).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "ich korelacja wynosi 1.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "ich wartości oczekiwane muszą być równe 0.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ich kowariancja wynosi 0.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "P(X|Y) = P(Y).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "E[XY] = E[X]·E[Y].",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Var(3X + 2Y) = 9·Var(X) + 4·Var(Y).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Kowariancja równa 0 oznacza niezależność (implikacja odwrotna zawsze zachodzi).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Var(X+Y) = Var(X) − Var(Y).",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wariancja-i-niezaleznosc"
+   ],
+   "explanation": "**Dlaczego poprawne**\nNiezależność daje E[XY]=E[X]E[Y], Cov=0 i Var(X±Y)=Var X+Var Y. Odwrotność (Cov=0 ⇒ niezależność) nie zachodzi.\n\n**Dlaczego błędne**\nRozkład sumy to splot, nie suma rozkładów; korelacja to 0, nie 1; wartości oczekiwane nie muszą być 0; P(X|Y)=P(X), nie P(Y). Wariancje się dodają.\n\n**Zapamiętaj**\nNiezależne ⇒ nieskorelowane, nie odwrotnie.",
+   "changes": []
+  },
+  {
+   "id": 1063,
+   "question": "Dany jest graf G utworzony z n-wierzchołkowej kliki (n>5), poprzez usunięcie 3 krawędzi. Wskaż zdania prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "G jest eulerowski dla n nieparzystych.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Jeśli usunięte krawędzie tworzą cykl C3, to stopnie wszystkich wierzchołków pozostają parzyste (dla n nieparzystego), więc graf jest eulerowski.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Graf po usunięciu krawędzi zawsze przestaje być spójny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Liczba krawędzi w takim grafie wynosi n(n-1)/2.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Graf G jest zawsze planarny.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "G nie posiada cyklu Hamiltona.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Graf G ma n(n−1)/2 − 3 krawędzi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Suma stopni wierzchołków G wynosi n(n−1) − 6.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jeśli n jest nieparzyste i usunięte krawędzie są parami rozłączne, to G nie jest eulerowski.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Dla parzystego n graf G jest zawsze eulerowski.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "G ma cykl Eulera wtedy i tylko wtedy, gdy n jest nieparzyste.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "grafy-eulera-hamiltona",
+    "stopnie-i-spojnosc"
+   ],
+   "explanation": "**Dlaczego poprawne**\nGraf spójny jest eulerowski, gdy wszystkie stopnie są parzyste. W K_n (n nieparzyste) stopnie n−1 są parzyste; usunięcie cyklu C3 zmniejsza trzy stopnie o 2, więc parzystość zostaje. Liczba krawędzi to C(n,2)−3.\n\n**Dlaczego błędne**\nEulerowskość zależy od wyboru krawędzi, nie od samej nieparzystości n. Spójność jest zachowana (n>5), liczba krawędzi to C(n,2)−3, planarność zawodzi dla dużych n, a cykl Hamiltona zwykle istnieje.\n\n**Zapamiętaj**\nEulerowski = spójny i wszystkie stopnie parzyste.",
+   "changes": []
+  },
+  {
+   "id": 1064,
+   "question": "Czy graf cyklu C5 jest grafem dwudzielnym?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nie, ponieważ nie jest eulerowski.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Nie, ponieważ zawiera cykl o nieparzystej długości.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Tak, ponieważ każdy graf płaski jest dwudzielny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Tak, ponieważ ma 5 wierzchołków.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Tak, bo można go pokolorować 2 kolorami.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Nie, bo jego liczba chromatyczna wynosi 3.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "C5 nie jest dwudzielny, bo w grafie dwudzielnym wszystkie cykle mają parzystą długość.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Graf C6 jest dwudzielny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "C5 jest dwudzielny, bo jest grafem planarnym i spójnym.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Graf jest dwudzielny wtedy i tylko wtedy, gdy ma parzystą liczbę wierzchołków.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kolorowanie-grafow",
+    "grafy-eulera-hamiltona"
+   ],
+   "explanation": "**Dlaczego poprawne**\nGraf jest dwudzielny wtedy i tylko wtedy, gdy nie ma cyklu nieparzystej długości, czyli χ ≤ 2. C5 ma nieparzysty cykl i χ=3, więc nie jest dwudzielny. Powód „nie jest eulerowski” jest zły (C5 jest eulerowski).\n\n**Dlaczego błędne**\nOdpowiedź „Tak” jest błędna: planarność, liczba wierzchołków i 2-kolorowalność nie zachodzą dla C5. Opcja „Nie, bo nie jest eulerowski” ma poprawny wniosek, ale fałszywe uzasadnienie.\n\n**Zapamiętaj**\nDwudzielny <=> brak cykli nieparzystych <=> χ≤2.",
+   "changes": [
+    "f: false -> true, bo χ(C5)=3 > 2, więc C5 nie jest dwudzielny; wniosek i uzasadnienie są prawdziwe"
+   ]
+  },
+  {
+   "id": 1065,
+   "question": "Dany jest graf G o sześciu wierzchołkach i stopniach: 2, 2, 3, 4, 4, 5. Czy G może być grafem planarnym?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nie.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Tak. Przykład konstrukcji: wierzchołek stopnia 5 łączymy ze wszystkimi pozostałymi, a między pozostałymi 5 wierzchołkami dodajemy krawędzie tak, by stopnie wyniosły 4,4,3,2,2 (np. resztowe stopnie 3,3,2,1,1).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Nie, ponieważ zawiera wierzchołek o stopniu 5.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Tak, każdy graf o 6 wierzchołkach jest planarny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Nie, bo zawiera podgraf izomorficzny z K3,3.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Tak, bo suma stopni jest parzysta.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Suma stopni wynosi 20, więc graf ma 10 krawędzi, co nie przekracza granicy 3n−6=12 dla grafów planarnych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wierzchołek stopnia 5 w grafie 6-wierzchołkowym jest sąsiedni ze wszystkimi pozostałymi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Graf planarny o 6 wierzchołkach nie może mieć wierzchołka stopnia 5.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Graf o 6 wierzchołkach i 10 krawędziach na pewno nie jest planarny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "planarnosc-i-wzor-eulera",
+    "stopnie-i-spojnosc"
+   ],
+   "explanation": "**Dlaczego poprawne**\nCiąg 2,2,3,4,4,5 jest graficzny: wierzchołek stopnia 5 łączymy z resztą, a pozostałe pięć tworzy trójkąt z dwoma pendantami (stopnie 3,3,2,1,1). Dodanie wierzchołka uniwersalnego do grafu zewnętrznie planarnego daje graf planarny.\n\n**Dlaczego błędne**\nStopień 5 nie wyklucza planarności; nie każdy graf 6-wierzchołkowy jest planarny (K3,3), ten graf nie zawiera K3,3 jako rozszerzenia, a parzysta suma stopni nie dowodzi planarności.\n\n**Zapamiętaj**\nWierzchołek uniwersalny + graf zewnętrznie planarny = planarny.",
+   "changes": []
+  },
+  {
+   "id": 1066,
+   "question": "Dany jest wielościan wypukły o 11 wierzchołkach, w którym 7 ścian to trójkąty, a 4 to czworokąty. Korzystając ze wzoru Eulera (V-E+F=2), określ rodzaj ostatniej (12-stej) ściany:",
+   "options": [
+    {
+     "key": "a",
+     "text": "czworokątem.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "trójkątem.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "pięciokątem.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "sześciokątem.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "siedmiokątem.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nie da się określić.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Z wzoru Eulera liczba krawędzi tego wielościanu wynosi 21.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Suma liczb boków wszystkich ścian jest równa 2E.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Liczba krawędzi tego wielościanu wynosi 20.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Suma liczb boków wszystkich ścian jest równa E.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Ostatnia ściana jest ośmiokątem.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "planarnosc-i-wzor-eulera"
+   ],
+   "explanation": "**Dlaczego poprawne**\nV=11, F=12, więc E=V+F−2=21 i suma boków ścian to 2E=42. Siedem trójkątów i cztery czworokąty dają 21+16=37, więc ostatnia ściana ma 42−37=5 boków: pięciokąt.\n\n**Dlaczego błędne**\nTrójkąt (suma 40), czworokąt (41), sześciokąt (43) i siedmiokąt (44) nie zgadzają się z 2E=42, więc ściany jednoznacznie da się określić.\n\n**Zapamiętaj**\nΣ boków ścian = 2E, V−E+F=2.",
+   "changes": [
+    "b: true -> false, bo 2E=42, 21+16+k=42 => k=5, więc ostatnia ściana to nie trójkąt",
+    "c: false -> true, bo k=5 (pięciokąt)"
+   ]
+  },
+  {
+   "id": 1067,
+   "question": "Graf G został zbudowany z grafów Hamiltona, G1=(V1,E1) i G2=(V2,E2), w następujący sposób. Z V1 wybrano podzbiór W1 (W1 różne od V1) wierzchołków, stanowiących kolejne węzły cyklu Hamiltona w G1, oraz z V2 podzbiór W2 (W2 różne od V2) wierzchołków, stanowiących kolejne węzły cyklu Hamiltona w G2, a następnie połączono węzły W1 i W2 dodatkowymi krawędziami, tak że każdy węzeł W1 jest sąsiedni z każdym węzłem W2. Wskaż zdania prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "G jest grafem Hamiltona dla |W1| + |W2| > 3.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "G jest grafem Hamiltona, jeśli istnieją krawędzie łączące cykle Hamiltona w G1 i G2 pozwalające na utworzenie jednego wspólnego cyklu.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "G nigdy nie jest grafem Hamiltona.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "G jest grafem pełnym.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "G jest zawsze dwudzielny.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "G nie posiada mostów.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "G jest grafem spójnym.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jeśli |W1| >= 2 i |W2| >= 2, to G jest grafem Hamiltona.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jeśli |W1| = 1, to G jest grafem Hamiltona.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "G jest grafem Hamiltona wyłącznie wtedy, gdy G1 i G2 mają tyle samo wierzchołków.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "grafy-eulera-hamiltona"
+   ],
+   "explanation": "**Dlaczego poprawne**\nDla |W1|,|W2| ≥ 2 usuwamy z każdego cyklu krawędź między sąsiednimi węzłami zbiorów W1, W2 i łączymy końce nowymi krawędziami z pełnego połączenia W1–W2, otrzymując cykl Hamiltona w G. Ogólnie potrzebne jest istnienie wspólnego cyklu.\n\n**Dlaczego błędne**\nG nie jest zawsze Hamiltona (przy |W|=1 wierzchołek jest przegubem), ale bywa; nie jest pełny ani dwudzielny; może mieć mosty (gdy |W1|=|W2|=1).\n\n**Zapamiętaj**\nHamiltonowskość wymaga cyklu przez wszystkie wierzchołki; przegub ją psuje.",
+   "changes": []
+  },
+  {
+   "id": 1068,
+   "question": "Indeks chromatyczny (minimalna liczba kolorów krawędzi) drzewa o maksymalnym stopniu wierzchołka Delta wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "|V|",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Delta (maksymalny stopień wierzchołka).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Delta + 1",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "2",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Delta - 1 (o jeden mniej niż maksymalny stopień)",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "3",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Indeks chromatyczny dowolnego grafu dwudzielnego jest równy maksymalnemu stopniowi wierzchołka.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Drzewo jest grafem dwudzielnym.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Indeks chromatyczny każdego drzewa jest o jeden większy od jego maksymalnego stopnia.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Indeks chromatyczny ścieżki P_n (n>=3) wynosi 3.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kolorowanie-grafow",
+    "drzewa-i-mosty"
+   ],
+   "explanation": "**Dlaczego poprawne**\nDrzewa są dwudzielne, a dla grafów dwudzielnych χ'=Δ (König). Ścieżka ma χ'=2=Δ, gwiazda K1,n ma χ'=n.\n\n**Dlaczego błędne**\nWartości |V|, Δ+1 (klasa Vizinga 2, niemożliwa dla drzew), 2 (tylko gdy Δ=2), Δ−1 (za mało) i 3 są błędne ogólnie.\n\n**Zapamiętaj**\nGraf dwudzielny: χ'(G)=Δ(G).",
+   "changes": [
+    "e: dopisano opis, by odróżnić od opcji Delta + 1"
+   ]
+  },
+  {
+   "id": 1069,
+   "question": "Dany jest dowolny graf spójny G=(V,E), w którym każda krawędź jest mostem. Które zdania są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "G jest drzewem.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "G zawiera przynajmniej jeden cykl.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "G jest grafem pełnym.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "G ma więcej krawędzi niż wierzchołków.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Liczba krawędzi E = V - 1.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Graf G jest dwuspójny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "G jest spójny i acykliczny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Usunięcie dowolnej krawędzi z G rozspójnia graf.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jeśli |V| >= 2, to G ma co najmniej dwa liście.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "G jest ścieżką.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "G jest grafem dwudzielnym pełnym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "drzewa-i-mosty"
+   ],
+   "explanation": "**Dlaczego poprawne**\nKrawędź jest mostem, gdy nie leży na cyklu. Graf spójny bez cykli to drzewo, więc |E|=|V|−1 i (dla |V|≥2) są co najmniej dwa liście.\n\n**Dlaczego błędne**\nGraf nie zawiera cykli, ma |V|−1 krawędzi (mniej niż wierzchołków), nie musi być pełny (choć K2 jest), nie jest dwuspójny (usunięcie wierzchołka wewnętrznego rozspójnia) i nie musi być ścieżką.\n\n**Zapamiętaj**\nWszystkie krawędzie są mostami <=> drzewo.",
+   "changes": []
+  },
+  {
+   "id": 1070,
+   "question": "Podać najmniejszą liczbę krawędzi, jaką należy usunąć z grafu dwudzielnego pełnego K3,3, aby uzyskać graf regularny stopnia 2:",
+   "options": [
+    {
+     "key": "a",
+     "text": "3",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "3 (usuwamy krawędzie tworzące doskonałe skojarzenie).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "1",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "6",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "0",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "9",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Graf regularny stopnia 2 na 6 wierzchołkach ma 6 krawędzi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Graf K3,3 ma 9 krawędzi.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wystarczy usunąć 2 krawędzie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Trzeba usunąć 4 krawędzie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "Trzeba usunąć 5 krawędzi.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stopnie-i-spojnosc",
+    "kolorowanie-grafow"
+   ],
+   "explanation": "**Dlaczego poprawne**\nK3,3 ma 9 krawędzi i jest 3-regularny. Graf 2-regularny na 6 wierzchołkach ma 6 krawędzi, więc usuwamy 3 (np. doskonałe skojarzenie, zostaje cykl C6).\n\n**Dlaczego błędne**\nUsunięcie 0, 1 lub 2 krawędzi zostawia wierzchołek stopnia 3; 6 lub 9 krawędzi to za dużo (graf regularny stopnia 2 ma 6 krawędzi).\n\n**Zapamiętaj**\nIle usunąć = |E| − n·r/2.",
+   "changes": []
+  },
+  {
+   "id": 1071,
+   "question": "Dana jest klika K8. Liczba podgrafów izomorficznych z K5 (czyli liczba 5-elementowych podzbiorów wierzchołków) wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "56 (8 po 5).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "120",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "40",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "8! / 5!",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "28",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "64",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Liczba podgrafów izomorficznych z K3 w K8 wynosi 56.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liczba podgrafów K5 w K8 jest równa liczbie podgrafów K3 w K8.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Liczba podgrafów izomorficznych z K5 w K8 wynosi 8·7·6·5·4.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Liczba podgrafów izomorficznych z K5 w K8 wynosi 256.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kombinatoryka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nKażdy 5-elementowy podzbiór wierzchołków klik K8 daje K5, więc C(8,5)=56 = C(8,3).\n\n**Dlaczego błędne**\n120, 40, 8!/5!=336 (kolejność ma znaczenie), 28 i 64 to nie C(8,5); ordering nie ma znaczenia w podzbiorach.\n\n**Zapamiętaj**\nPodgrafy pełne K_k w K_n: C(n,k).",
+   "changes": []
+  },
+  {
+   "id": 1072,
+   "question": "Dana jest klika K8 o wierzchołkach v1, v2,..., v8. Liczba dróg prostych w tym grafie, prowadzących z v1 do v2 i posiadających co najwyżej 3 krawędzie, wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "37 (długość 1: 1, długość 2: 6, długość 3: 30).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "43",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "8",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "64",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "120",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "56",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Liczba dróg prostych z v1 do v2 o długości dokładnie 2 wynosi 6.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liczba dróg prostych z v1 do v2 o długości dokładnie 3 wynosi 30.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Liczba dróg prostych z v1 do v2 o długości dokładnie 3 wynosi 36.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Liczba dróg prostych z v1 do v2 o długości co najwyżej 3 wynosi 1+6+20=27.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kombinatoryka-podstawowa",
+    "grafy-eulera-hamiltona"
+   ],
+   "explanation": "**Dlaczego poprawne**\nDługość 1: 1; długość 2: 6 (wybór pośredniego); długość 3: 6·5=30 (uporządkowana para pośrednich). Razem 37.\n\n**Dlaczego błędne**\n43 i 36 pomijają, że wierzchołki pośrednie muszą być różne; inne wartości (8, 64, 120, 56) nie wynikają z liczenia dróg.\n\n**Zapamiętaj**\nDrogi prosty: wierzchołki pośrednie różne: 1+6+6·5.",
+   "changes": []
+  },
+  {
+   "id": 1073,
+   "question": "Liczba dróg prostych o długości dokładnie 1, 2 lub 3 krawędzi w klice K8 wynosi:",
+   "options": [
+    {
+     "key": "a",
+     "text": "C(8,3) + C(8,2) + C(8,1)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "1 + 6 + 30 = 37 (między parą wierzchołków).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "8! / (8-k)!",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "n^k",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "8*7/2",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "37 * (8*7/2) (dla wszystkich par).",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Liczba dróg prostych o długości dokładnie 2 między ustaloną parą wierzchołków w K8 wynosi 6.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Liczba nieskierowanych dróg prostych o długości dokładnie 3 w K8 (ogółem) wynosi 8·7·6·5/2 = 840.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Liczba dróg prostych o długości dokładnie 1 w K8 wynosi 8.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Liczba dróg prostych o długości dokładnie 3 między ustaloną parą wierzchołków w K8 wynosi 120.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kombinatoryka-podstawowa"
+   ],
+   "explanation": "**Dlaczego poprawne**\nMiędzy parą wierzchołków jest 1+6+30=37 dróg o długości 1–3. Ogółem (nieskierowane) 28·37=1036, co zgadza się z 28+168+840.\n\n**Dlaczego błędne**\nC(8,3)+C(8,2)+C(8,1)=92 to nie liczba dróg, 8!/(8−k)! liczy uporządkowane wybory, n^k pozwala na powtórzenia, 8·7/2=28 to same krawędzie. Opcja b (per para) i f (ogółem) są obie prawdziwe jako stwierdzenia.\n\n**Zapamiętaj**\nOgółem = liczba par × liczba dróg na parę, gdy wszystkie pary są symetryczne.",
+   "changes": [
+    "f: false -> true, bo 37·28=1036 = 28+168+840 to liczba wszystkich nieskierowanych dróg długości 1–3 w K8 (treść pytania nie precyzuje pary)"
+   ]
+  },
+  {
+   "id": 1074,
+   "question": "Dany jest graf o 21 krawędziach, 7 wierzchołkach stopnia 1, 3 stopnia 2, 7 stopnia 3 i pozostałych stopnia 4. Ile jest wierzchołków stopnia 4?",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nie da się zbudować takiego grafu.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "2 (suma stopni 7*1 + 3*2 + 7*3 + 4*x = 34 + 4x = 42 => 4x=8 => x=2).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "5",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "0",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "3",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "4",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Graf ma dokładnie 1 wierzchołek stopnia 4.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Graf ma dokładnie 6 wierzchołków stopnia 4.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Suma stopni wszystkich wierzchołków wynosi 42.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Graf ma 19 wierzchołków.",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stopnie-i-spojnosc"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSuma stopni = 2·21 = 42. 7·1+3·2+7·3=34, więc 4x=8, x=2.\n\n**Dlaczego błędne**\nGraf istnieje (ciąg jest graficzny), a inne liczby wierzchołków stopnia 4 (0,1,3,4,5,6) zmieniają sumę stopni i nie dają 42.\n\n**Zapamiętaj**\nΣ deg = 2|E|.",
+   "changes": []
+  }
+ ],
+ "glossary": [
+  {
+   "id": "rachunek-predykatow",
+   "term": "Rachunek predykatów (predicate calculus)",
+   "topic": "logic",
+   "short": "Rozszerzenie rachunku zdań o kwantyfikatory ∀, ∃, predykaty (relacje) i symbole funkcyjne; podstawowy system logiki pierwszego rzędu.",
+   "details": "**Jak działa:** język ma termy (zmienne, stałe, f(t1,…,tn)) i formuły: atomowe P(t1,…,tn), a z nich złożone spójnikami ~, ∧, ∨, →, ↔ oraz kwantyfikatorami ∀x, ∃x. Zmienna jest *związana*, gdy leży w zasięgu kwantyfikatora, w przeciwnym razie *wolna*; zdanie to formuła bez zmiennych wolnych. System dowodowy ma aksjomaty i reguły dla kwantyfikatorów (np. instancjacja ∀x φ → φ(t), generalizacja) oraz modus ponens.\n\n**Własności:** twierdzenie o pełności Gödla (tautologie są dowodliwe), zwartość, ale *nierozstrzygalność* (Church) — zbiór tautologii jest tylko rekurencyjnie przeliczalny.\n\n**Przykład:** ∀x ∃y R(x,y) — dla każdego x istnieje y w relacji.\n\n**Na egzaminie uważaj na:**\n- kwantyfikatory nie są spójnikami zdaniowymi;\n- f(x) to term, nie formuła;\n- rachunek predykatów zawiera reguły dla ∀ i ∃ oraz jest nierozstrzygalny;\n- ~∀x φ ≡ ∃x ~φ.",
+   "related": [
+    "logika-pierwszego-rzedu",
+    "semantyka-modele"
+   ]
+  },
+  {
+   "id": "logika-pierwszego-rzedu",
+   "term": "Logika pierwszego rzędu (first-order logic)",
+   "topic": "logic",
+   "short": "Logika, w której kwantyfikujemy wyłącznie po elementach dziedziny (indywiduach), a nie po zbiorach, relacjach czy funkcjach.",
+   "details": "**Jak działa:** zmienne oznaczają elementy dziedziny; można pisać ∀x, ∃y, ale nie ∀P (po predykatach) — to logika drugiego rzędu. Predykaty, funkcje i stałe pochodzą z ustalonej sygnatury.\n\n**Własności:** twierdzenie o pełności (Gödel), o zwartości i Löwenheima–Skolema (teoria z modelem nieskończonym ma modele dowolnej nieskończonej mocy). Logika pierwszego rzędu jest nierozstrzygalna (Church), lecz półrozstrzygalna. Nie można w niej wyrazić „skończoności” modelu.\n\n**Przykład:** aksjomaty grupy zapisujemy w logice pierwszego rzędu; zasada indukcji dla dowolnego zbioru wymagałaby drugiego rzędu.\n\n**Na egzaminie uważaj na:**\n- „pierwszy rząd” nie znaczy „jeden kwantyfikator”;\n- modele nie muszą być skończone;\n- logika I rzędu ma kwantyfikatory i zmienne;\n- kwantyfikacja po relacjach to wyższy rząd.",
+   "related": [
+    "rachunek-predykatow",
+    "semantyka-modele"
+   ]
+  },
+  {
+   "id": "semantyka-modele",
+   "term": "Semantyka: modele i interpretacje (models, interpretation)",
+   "topic": "logic",
+   "short": "Model nadaje sens językowi: niepusta dziedzina oraz interpretacja predykatów, funkcji i stałych; formuła jest tautologią, gdy jest prawdziwa w każdym modelu.",
+   "details": "**Jak działa:** struktura M=(D, I): D to niepusta dziedzina, I interpretuje predykaty jako relacje na D, symbole funkcyjne jako funkcje na D, stałe jako elementy D. Przy wartościowaniu zmiennych termy dostają elementy D, formuły wartości logiczne. ∀x φ jest prawdziwe, gdy φ zachodzi dla każdego elementu D; ∃x φ — dla co najmniej jednego. Model teorii to struktura, w której wszystkie aksjomaty są prawdziwe.\n\n**Pojęcia:** tautologia — prawdziwa w każdym modelu; spełnialna — w co najmniej jednym; sprzeczna — w żadnym. Teoria struktury to zbiór zdań w niej prawdziwych (to nie jest model).\n\n**Przykład:** (N, <) modeluje formułę ∀x ∃y (x<y), ale skończona dziedzina nie.\n\n**Na egzaminie uważaj na:**\n- dziedzina nie może być pusta, ale może być nieskończona;\n- predykat to relacja, term to element, formuła to prawda/fałsz;\n- prawdziwość w jednym modelu ≠ tautologia;\n- model zależy od języka.",
+   "related": [
+    "rachunek-predykatow",
+    "teoria-logiczna"
+   ]
+  },
+  {
+   "id": "teoria-logiczna",
+   "term": "Teoria w sensie logicznym (logical theory)",
+   "topic": "logic",
+   "short": "Zbiór zdań ustalonego języka zamknięty ze względu na operację konsekwencji logicznej.",
+   "details": "**Jak działa:** dla zbioru zdań Σ języka L definiujemy Cn(Σ) jako zbiór wszystkich zdań L wynikających z Σ. Zbiór T jest teorią, gdy Cn(T)=T, czyli wszystko, co wynika z T, już do T należy. Każdy zbiór Cn(Σ) jest teorią, generowaną przez aksjomaty Σ.\n\n**Własności:** teoria może być nieskończona; teoria sprzeczna to zbiór wszystkich zdań; teoria kompletna rozstrzyga każde zdanie (zawiera φ lub ~φ). Zbiór tautologii jest teorią (najmniejszą), ale nie jedyną.\n\n**Przykład:** Cn({aksjomaty grupy}) to teoria grup.\n\n**Na egzaminie uważaj na:**\n- teoria to zbiór *zdań* (nie dowolnych formuł otwartych ani słów);\n- warunek to domkniętość na konsekwencję;\n- teoria nie musi być skończona;\n- teoria to nie to samo co jej model.",
+   "related": [
+    "semantyka-modele",
+    "twierdzenia-o-pelnosci-i-dedukcji"
+   ]
+  },
+  {
+   "id": "prawa-rachunku-zdan",
+   "term": "Tautologie i prawa rachunku zdań (propositional tautologies, transposition)",
+   "topic": "logic",
+   "short": "Tautologia jest prawdziwa przy każdym wartościowaniu zmiennych zdaniowych; prawa takie jak transpozycja (kontrapozycja) służą do przekształceń i dowodów.",
+   "details": "**Jak działa:** tautologię sprawdzamy tabelą prawdy albo szukając wartościowania falsyfikującego. Implikacja p→q jest fałszywa tylko dla p=1, q=0. Prawo transpozycji (p→q) ⇔ (~q→~p) jest tautologią i podstawą dowodu nie wprost (przez kontrapozycję). Tautologią jest też p→(q→p).\n\n**Klasyfikacja formuł:** tautologia (zawsze 1), kontrtautologia (zawsze 0), przygodna (zależy od wartościowania); spełnialna = nie kontrtautologia.\n\n**Przykład:** „Jeśli Kopernik nie urodził się w Krakowie, to Kepler nie urodził się w Toruniu” ma to samo znaczenie co „jeśli Kepler urodził się w Toruniu, to Kopernik urodził się w Krakowie”.\n\n**Na egzaminie uważaj na:**\n- odwrotność q→p i przeciwność ~p→~q NIE są równoważne p→q;\n- treść zdań (Nil w Krakowie) nie wpływa na tautologiczność schematu;\n- transpozycja nie dotyczy tylko kwantyfikatorów;\n- z fałszywej implikacji nie wynika nic o następniku (jest fałszywa tylko gdy następnik jest fałszywy).",
+   "related": [
+    "twierdzenia-o-pelnosci-i-dedukcji",
+    "semantyka-modele"
+   ]
+  },
+  {
+   "id": "twierdzenia-o-pelnosci-i-dedukcji",
+   "term": "Twierdzenia o pełności i o dedukcji (completeness, deduction theorem)",
+   "topic": "logic",
+   "short": "Pełność: każda tautologia jest dowodliwa; dedukcja: G∪{A}⊢B wtedy i tylko wtedy, gdy G⊢A→B.",
+   "details": "**Pełność:** system aksjomatyczny jest *poprawny* (⊢φ ⇒ ⊨φ) i *pełny* (⊨φ ⇒ ⊢φ). Wersja silna: każdy niesprzeczny zbiór formuł ma model. Stosuje się do klasycznego rachunku zdań i do logiki pierwszego rzędu (Gödel 1929).\n\n**Dedukcja:** jeśli z przesłanek G oraz założenia A wyprowadzamy B, to z samego G wyprowadzamy A→B, i odwrotnie. To uzasadnia dowód implikacji przez założenie poprzednika. W rachunku predykatów wymaga uwagi na generalizację po zmiennych wolnych w A.\n\n**Przykład:** aby udowodnić p→(q→p), zakładamy p, potem q i wyprowadzamy p.\n\n**Na egzaminie uważaj na:**\n- „każda formuła dowodliwa jest tautologią” to poprawność, nie pełność;\n- pełność nie mówi o niesprzeczności systemu ani o skończoności modeli;\n- dedukcja nie oznacza, że A→B jest zawsze tautologią;\n- rachunek zdań jest zupełny i rozstrzygalny, predykatów nie.",
+   "related": [
+    "prawa-rachunku-zdan",
+    "rachunek-predykatow"
+   ]
+  },
+  {
+   "id": "permutacje-cykle",
+   "term": "Permutacje, cykle i transpozycje (permutations, cycles)",
+   "topic": "math",
+   "short": "Permutacja to bijekcja zbioru skończonego na siebie; rozkłada się jednoznacznie na rozłączne cykle i (niejednoznacznie) na transpozycje.",
+   "details": "**Jak działa:** permutację zapisujemy jako iloczyn rozłącznych cykli, np. (1 2 3)(4 5); rozkład jest jednoznaczny z dokładnością do kolejności czynników, a rozłączne cykle komutują. Cykl długości k rozkłada się na k−1 transpozycji, więc jest parzysty dla nieparzystego k. Rozkład na transpozycje nie jest jednoznaczny, ale parzystość liczby transpozycji jest stała (znak permutacji).\n\n**Liczby:** |Pn|=n!; cykli długości n jest (n−1)!; w P3: identyczność, 3 transpozycje, 2 trójcykle; parzyste są identyczność i trójcykle (grupa A3 rzędu 3).\n\n**Przykład:** (1 2 3)=(1 3)(1 2).\n\n**Na egzaminie uważaj na:**\n- jednoznaczny jest rozkład na cykle *rozłączne*, nie na transpozycje;\n- transpozycje nie muszą być rozłączne;\n- permutacja nie musi być cyklem długości n;\n- liczba inwersji może być nieparzysta.",
+   "related": [
+    "grupa-symetrii",
+    "kombinatoryka-podstawowa"
+   ]
+  },
+  {
+   "id": "grupa-symetrii",
+   "term": "Grupy i grupy symetrii (groups, dihedral group)",
+   "topic": "math",
+   "short": "Grupa to zbiór z łącznym działaniem, elementem neutralnym i odwrotnościami; symetrie n-kąta foremnego tworzą grupę dihedralną D_n rzędu 2n.",
+   "details": "**Aksjomaty grupy:** działanie łączne, istnieje element neutralny, każdy element ma odwrotność (zamkniętość zakładamy). Abelowa, gdy działanie jest przemienne.\n\n**Przykłady:** (Z,+), (Q,+), (R*,·), (Z_n,+_n), funkcje ciągłe z dodawaniem są grupami; (N,+) nie (brak odwrotności), (Z,·) nie (brak odwrotności poza ±1), (R,·) nie (0).\n\n**Grupa symetrii figury:** przekształcenia płaszczyzny zachowujące figurę, działanie to składanie. Dla n-kąta foremnego: n obrotów o k·360°/n (podgrupa cykliczna Z_n) i n odbić, razem 2n. D7 ma 14 elementów i jest nieabelowa dla n≥3.\n\n**Na egzaminie uważaj na:**\n- |D_n|=2n, nie n ani n²;\n- D_n nie jest cykliczna ani abelowa dla n≥3;\n- złożenie dwóch odbić to obrót;\n- w mnożeniu potrzebne jest wyłączenie zera.",
+   "related": [
+    "permutacje-cykle",
+    "relacja-rownowaznosci"
+   ]
+  },
+  {
+   "id": "porzadki-czesciowe",
+   "term": "Porządki częściowe i dobre porządki (partial orders, well-order)",
+   "topic": "math",
+   "short": "Porządek częściowy jest zwrotny, antysymetryczny i przechodni; dobry porządek to porządek liniowy, w którym każdy niepusty podzbiór ma element najmniejszy.",
+   "details": "**Definicje:** element *maksymalny* — nie ma większego od niego; *największy* — większy lub równy wszystkim; analogicznie minimalny/najmniejszy. Największy, jeśli istnieje, jest jedyny i jest jedynym maksymalnym. Maksymalny nie musi być największy (elementy nieporównywalne).\n\n**Własności:** każdy skończony niepusty zbiór ma elementy maksymalny i minimalny; nieskończone mogą nie mieć (Z, R z ≤). Porządek liniowy: każde dwa elementy są porównywalne. Dobry porządek: N z ≤ (tak), Z i R (nie), (0,1) (nie).\n\n**Przykłady nieliniowych:** inkluzja na P(X), podzielność na N (2 i 3 nieporównywalne).\n\n**Na egzaminie uważaj na:**\n- częściowy porządek jest antysymetryczny, nie symetryczny;\n- każdy dobry porządek jest liniowy, ale nie odwrotnie;\n- maksymalny ≠ największy;\n- Z z ≤ nie ma minimum ani maksimum.",
+   "related": [
+    "relacja-rownowaznosci"
+   ]
+  },
+  {
+   "id": "relacja-rownowaznosci",
+   "term": "Relacja równoważności (equivalence relation)",
+   "topic": "math",
+   "short": "Relacja zwrotna, symetryczna i przechodnia, która dzieli zbiór na rozłączne klasy równoważności.",
+   "details": "**Jak działa:** klasa [x]={y: xRy}. Każdy element leży w dokładnie jednej klasie, klasy są niepuste i rozłączne, a ich suma to cały zbiór — czyli tworzą podział. Odwrotnie, każdy podział zbioru wyznacza relację równoważności.\n\n**Liczby:** liczba relacji równoważności na n-elementowym zbiorze to liczba Bella B_n (1, 2, 5, 15, 52, …), nie 2^n ani n!. Klasy mogą mieć różne rozmiary, więc liczba klas nie musi dzielić n.\n\n**Przykład:** kongruencja modulo m dzieli Z na m klas.\n\n**Na egzaminie uważaj na:**\n- równoważność wymaga symetrii, nie antysymetrii;\n- przechodniość jest obowiązkowa;\n- suma klas to cały zbiór, nie ∅;\n- różne klasy są rozłączne.",
+   "related": [
+    "porzadki-czesciowe",
+    "kombinatoryka-podstawowa"
+   ]
+  },
+  {
+   "id": "kombinatoryka-podstawowa",
+   "term": "Kombinatoryka: podstawowe wzory (combinatorics)",
+   "topic": "math",
+   "short": "Zliczanie podzbiorów, permutacji, funkcji, relacji i ciągów: n!, C(n,k), n^k, 2^n.",
+   "details": "**Wzory:** |P(X)|=2^n; permutacji n!; k-elementowych podzbiorów C(n,k)=n!/(k!(n−k)!); wariacje bez powtórzeń n!/(n−k)!; z powtórzeniami n^k; funkcji z X (n) do Y (m): m^n; funkcji X→X: n^n; relacji na X: 2^(n²); zwrotnych: 2^(n²−n); relacji równoważności: B_n.\n\n**Drogi proste w klice K_n:** między ustaloną parą jest 1 droga długości 1, (n−2) długości 2, (n−2)(n−3) długości 3. Dla K8: 1+6+30=37; dla wszystkich par 37·28=1036. Podgrafów K_k w K_n: C(n,k).\n\n**Na egzaminie uważaj na:**\n- czy kolejność ma znaczenie (C kontra wariacje);\n- funkcje X→Y to m^n, nie n^m;\n- relacji jest 2^(n²), nie n^n;\n- wierzchołki pośrednie drogi muszą być różne.",
+   "related": [
+    "relacja-rownowaznosci",
+    "permutacje-cykle"
+   ]
+  },
+  {
+   "id": "stopnie-i-spojnosc",
+   "term": "Stopnie wierzchołków i spójność grafu (degrees, connectivity)",
+   "topic": "math",
+   "short": "Lemat o uściskach dłoni: suma stopni to 2|E|; spójność wierzchołkowa κ ≤ krawędziowa λ ≤ minimalny stopień δ.",
+   "details": "**Zasady:** Σdeg(v)=2|E|; liczba wierzchołków nieparzystego stopnia jest parzysta; graf r-regularny na n wierzchołkach ma nr/2 krawędzi. Whitney: κ(G) ≤ λ(G) ≤ δ(G).\n\n**Przykład:** z 21 krawędzi suma stopni to 42; przy 7 wierzchołkach stopnia 1, 3 stopnia 2, 7 stopnia 3 (razem 34) x wierzchołków stopnia 4 daje 4x=8, x=2. K3,3 (9 krawędzi) po usunięciu doskonałego skojarzenia (3 krawędzi) staje się 2-regularny (C6).\n\n**Na egzaminie uważaj na:**\n- suma stopni to 2|E|, nie |E|;\n- κ ≤ λ, nie odwrotnie;\n- graf n wierzchołków i n krawędzi nie jest drzewem;\n- liczba wierzchołków nieparzystego stopnia jest parzysta.",
+   "related": [
+    "drzewa-i-mosty",
+    "grafy-eulera-hamiltona"
+   ]
+  },
+  {
+   "id": "kostka-qn",
+   "term": "Kostka Qn (hypercube graph)",
+   "topic": "math",
+   "short": "Graf, którego wierzchołkami są ciągi binarne długości n, a krawędzie łączą ciągi różniące się na jednej pozycji.",
+   "details": "**Własności:** 2^n wierzchołków, każdy stopnia n (można zmienić dowolny z n bitów), więc n·2^(n−1) krawędzi. Q3: 8 wierzchołków, 12 krawędzi. Jest regularna, spójna i dwudzielna (parzystość liczby jedynek dzieli wierzchołki na dwie klasy). Planarna tylko dla n≤3 (Q4 nie jest); jest hamiltonowska (kod Graya) dla n≥2.\n\n**Przykład:** Q2 to cykl C4, Q3 to sześcian.\n\n**Na egzaminie uważaj na:**\n- stopień to n, nie 2^n;\n- liczba wierzchołków to 2^n, nie n;\n- Qn nie jest pełna;\n- Qn jest dwudzielna, więc χ=2.",
+   "related": [
+    "kolorowanie-grafow",
+    "planarnosc-i-wzor-eulera"
+   ]
+  },
+  {
+   "id": "kolorowanie-grafow",
+   "term": "Kolorowanie grafów i graf dwudzielny (chromatic number, bipartite)",
+   "topic": "math",
+   "short": "Liczba chromatyczna χ(G) to minimalna liczba kolorów wierzchołków bez sąsiadów o tym samym kolorze; graf jest dwudzielny wtedy i tylko wtedy, gdy nie ma cykli nieparzystych (χ≤2).",
+   "details": "**Fakty:** χ(G)=1 dla grafu bez krawędzi; χ(G)=2 dla niepustego grafu dwudzielnego; cykl C_n ma χ=2 dla parzystego n i 3 dla nieparzystego; klika K_n ma χ=n. Indeks chromatyczny χ'(G) (kolorowanie krawędzi): dla grafów dwudzielnych χ'=Δ (König), dla ogólnych Δ lub Δ+1 (Vizing). Drzewo ma χ'=Δ.\n\n**Przykład:** C5 nie jest dwudzielny, bo ma cykl długości 5 i χ=3.\n\n**Na egzaminie uważaj na:**\n- dwudzielność zależy od cykli nieparzystych, nie od liczby wierzchołków ani planarności;\n- C5 jest eulerowski, ale nie dwudzielny;\n- 2-kolorowalność = dwudzielność;\n- χ' drzewa to Δ, nie Δ+1.",
+   "related": [
+    "kostka-qn",
+    "drzewa-i-mosty"
+   ]
+  },
+  {
+   "id": "grafy-eulera-hamiltona",
+   "term": "Grafy eulerowskie i hamiltonowskie (Euler, Hamilton)",
+   "topic": "math",
+   "short": "Graf eulerowski ma cykl przechodzący każdą krawędź raz (spójny, wszystkie stopnie parzyste); hamiltonowski ma cykl przechodzący każdy wierzchołek raz.",
+   "details": "**Euler:** spójny graf ma cykl Eulera <=> wszystkie stopnie są parzyste. K_n dla nieparzystego n jest eulerowska (stopnie n−1). Usunięcie krawędzi zmienia parzystość stopni ich końców; usunięcie cyklu C3 zmienia trzy stopnie o 2, więc parzystość zachowana.\n\n**Hamilton:** brak prostej charakteryzacji; warunki wystarczające (Dirac: δ ≥ n/2). Przegub (wierzchołek rozspójniający) i most wykluczają cykl Hamiltona. Sklejanie dwóch grafów hamiltonowskich przez pełne połączenie podzbiorów W1, W2 daje graf hamiltonowski, gdy |W1|,|W2| ≥ 2.\n\n**Na egzaminie uważaj na:**\n- eulerowskość nie zależy tylko od parzystości n;\n- Euler dotyczy krawędzi, Hamilton wierzchołków;\n- graf pełny K_n (n≥3) jest hamiltonowski;\n- C5 jest jednocześnie eulerowski i hamiltonowski.",
+   "related": [
+    "stopnie-i-spojnosc",
+    "planarnosc-i-wzor-eulera"
+   ]
+  },
+  {
+   "id": "planarnosc-i-wzor-eulera",
+   "term": "Planarność i wzór Eulera (planarity, Euler's formula)",
+   "topic": "math",
+   "short": "Dla spójnego grafu planarnego (lub wielościanu wypukłego) V − E + F = 2; grafy planarne mają co najwyżej 3V−6 krawędzi.",
+   "details": "**Wzór:** V−E+F=2. Suma liczb boków wszystkich ścian to 2E. Dla grafów planarnych prostych E ≤ 3V−6 (E ≤ 2V−4 dla dwudzielnych). Twierdzenie Kuratowskiego: graf jest planarny <=> nie zawiera podpodziału K5 ani K3,3.\n\n**Przykład (wielościan):** V=11, 7 trójkątów, 4 czworokąty, F=12 ⇒ E=21, suma boków 42 = 21+16+k ⇒ k=5, więc ostatnia ściana to pięciokąt.\n\n**Przykład (planarność):** wierzchołek uniwersalny dołączony do grafu zewnętrznie planarnego daje graf planarny, więc ciąg stopni 2,2,3,4,4,5 może być planarny.\n\n**Na egzaminie uważaj na:**\n- warunek E≤3V−6 jest konieczny, nie wystarczający;\n- nie każdy graf 6-wierzchołkowy jest planarny (K3,3 nie jest);\n- stopień 5 nie wyklucza planarności;\n- suma boków ścian to 2E, nie E.",
+   "related": [
+    "stopnie-i-spojnosc",
+    "kostka-qn"
+   ]
+  },
+  {
+   "id": "drzewa-i-mosty",
+   "term": "Drzewa i mosty (trees, bridges)",
+   "topic": "math",
+   "short": "Drzewo to spójny graf bez cykli; graf spójny, w którym każda krawędź jest mostem, jest drzewem.",
+   "details": "**Fakty:** drzewo o n wierzchołkach ma n−1 krawędzi; każda krawędź jest mostem (nie leży na cyklu); dla n≥2 ma co najmniej dwa liście; jest dwudzielne. Odwrotnie: graf spójny, w którym każda krawędź jest mostem, nie ma cykli, więc jest drzewem, E=V−1. Wierzchołek wewnętrzny drzewa jest przegubem, więc drzewo o ≥3 wierzchołkach nie jest dwuspójne.\n\n**Przykład:** gwiazda K1,3 ma 3 krawędzie, 4 wierzchołki i χ'=3.\n\n**Na egzaminie uważaj na:**\n- n krawędzi w spójnym grafie oznacza cykl, nie drzewo;\n- drzewo nie musi być pełne ani ścieżką;\n- indeks chromatyczny drzewa to Δ;\n- E=V−1, nie V+1.",
+   "related": [
+    "stopnie-i-spojnosc",
+    "kolorowanie-grafow"
+   ]
+  },
+  {
+   "id": "aksjomaty-prawdopodobienstwa",
+   "term": "Aksjomaty prawdopodobieństwa i niezależność (Kolmogorov axioms)",
+   "topic": "math",
+   "short": "P(A)≥0, P(Ω)=1 i przeliczalna addytywność dla zdarzeń parami rozłącznych; pozostałe własności są wnioskami.",
+   "details": "**Aksjomaty:** (1) P(A) ≥ 0; (2) P(Ω) = 1; (3) dla parami rozłącznych A1, A2, … P(∪Ai) = ΣP(Ai).\n\n**Wnioski:** P(∅)=0; P(A')=1−P(A); P(A∪B)=P(A)+P(B)−P(A∩B); 0≤P≤1. Prawdopodobieństwo warunkowe P(A|B)=P(A∩B)/P(B) jest definicją.\n\n**Niezależność:** P(A∩B)=P(A)P(B). Zdarzenie niezależne od każdego zdarzenia (także od siebie) spełnia P(A)=P(A)², więc P(A)∈{0,1}; odwrotnie każde takie zdarzenie jest niezależne od wszystkich.\n\n**Na egzaminie uważaj na:**\n- addytywność dotyczy zdarzeń *rozłącznych*;\n- P(A)+P(A')=1 to wniosek, nie aksjomat;\n- P(A)=1 nie znaczy A=Ω;\n- niezależność ≠ rozłączność.",
+   "related": [
+    "prawdopodobienstwo-calkowite",
+    "zmienne-losowe-i-dystrybuanta"
+   ]
+  },
+  {
+   "id": "prawdopodobienstwo-calkowite",
+   "term": "Prawdopodobieństwo całkowite i wzór Bayesa (total probability, Bayes)",
+   "topic": "math",
+   "short": "P(A)=ΣP(A|Bi)P(Bi) po zupełnym układzie zdarzeń B1,…,Bm; wzór Bayesa odwraca warunek.",
+   "details": "**Zupełny układ:** zdarzenia parami rozłączne o sumie Ω i dodatnich prawdopodobieństwach. Wtedy P(A)=Σ P(A|Bi)P(Bi) (ważona średnia).\n\n**Bayes:** P(Bj|A)=P(A|Bj)P(Bj)/ΣP(A|Bi)P(Bi) — licznik to jeden składnik sumy, mianownik to prawdopodobieństwo całkowite.\n\n**Przykład:** dwie urny wybrane z prawdopodobieństwem 1/2, z kulami białymi z p=0.3 i 0.6: P(biała)=0.5·0.3+0.5·0.6=0.45.\n\n**Na egzaminie uważaj na:**\n- wzór całkowity to nie wzór Bayesa;\n- nie wymaga niezależności ani P(Bi)=1;\n- P(A|B) ≠ P(B|A);\n- składniki trzeba ważyć P(Bi), nie sumować P(A|Bi).",
+   "related": [
+    "aksjomaty-prawdopodobienstwa",
+    "statystyka-podstawowa"
+   ]
+  },
+  {
+   "id": "zmienne-losowe-i-dystrybuanta",
+   "term": "Zmienna losowa, sigma-ciało borelowskie, dystrybuanta (random variable, CDF)",
+   "topic": "math",
+   "short": "Zmienna losowa to funkcja mierzalna X:Ω→R; dystrybuanta F(x)=P(X≤x) jest niemalejąca, prawostronnie ciągła, o granicach 0 i 1.",
+   "details": "**Sigma-ciało borelowskie:** najmniejsze σ-ciało na R zawierające zbiory otwarte; zawiera też domknięte i punkty. Nie każdy podzbiór R jest borelowski.\n\n**Zmienna losowa:** X jest mierzalna, gdy {X≤a} należy do σ-ciała dla każdego a. Dziedziną jest Ω, wartości mogą być dowolnymi liczbami.\n\n**Dystrybuanta:** F_X(x)=P(X≤x); niemalejąca, prawostronnie ciągła, F(−∞)=0, F(+∞)=1, 0≤F≤1; dla zmiennych dyskretnych ma skoki.\n\n**Wariancja:** Var(X)=E[(X−EX)²]=E[X²]−(EX)², ≥0, Var(aX)=a²Var(X).\n\n**Na egzaminie uważaj na:**\n- prawostronna, nie lewostronna ciągłość;\n- ściśle rosnąca lub ciągła nie zawsze;\n- wariancja to rozproszenie, nie skośność;\n- Var(aX)=a²Var(X).",
+   "related": [
+    "wariancja-i-niezaleznosc",
+    "aksjomaty-prawdopodobienstwa"
+   ]
+  },
+  {
+   "id": "wariancja-i-niezaleznosc",
+   "term": "Wariancja, kowariancja i niezależność zmiennych (variance, covariance)",
+   "topic": "math",
+   "short": "Wariancja mierzy rozproszenie wokół średniej; dla niezależnych zmiennych kowariancja jest 0, a wariancja sumy jest sumą wariancji.",
+   "details": "**Wzory:** Var(X)=E[(X−EX)²]; Cov(X,Y)=E[XY]−EX·EY; Var(X±Y)=Var X+Var Y±2Cov(X,Y).\n\n**Niezależność:** X,Y niezależne ⇒ E[XY]=EX·EY, Cov=0, Var(X±Y)=Var X+Var Y (także dla różnicy), rozkład sumy to splot rozkładów (nie suma).\n\n**Pułapka:** Cov=0 (nieskorelowanie) nie pociąga niezależności; przykład X∼N(0,1), Y=X².\n\n**Na egzaminie uważaj na:**\n- korelacja niezależnych to 0, nie 1;\n- wartości oczekiwane nie muszą być 0;\n- Var(X−Y)=Var X+Var Y;\n- wariancja nie służy do wyznaczania mediany ani skośności.",
+   "related": [
+    "zmienne-losowe-i-dystrybuanta",
+    "statystyka-podstawowa"
+   ]
+  },
+  {
+   "id": "statystyka-podstawowa",
+   "term": "Statystyka: populacja, estymator, błędy testu (population, estimator, type I error)",
+   "topic": "math",
+   "short": "Populacja to zbiór wszystkich obiektów, o których wnioskujemy; estymator to statystyka szacująca parametr; błąd I rodzaju to odrzucenie prawdziwej H0.",
+   "details": "**Pojęcia:** populacja — całość badana; próba — jej podzbiór; parametr — charakterystyka populacji (np. średnia μ); estymator — funkcja próby (np. średnia z próby) szacująca parametr, sam jest zmienną losową. Estymator nieobciążony: E[θ̂]=θ.\n\n**Testowanie:** błąd I rodzaju — odrzucenie prawdziwej H0 (fałszywy alarm), prawdopodobieństwo ograniczone przez poziom istotności α. Błąd II rodzaju — nieodrzucenie fałszywej H0 (prawdopodobieństwo β, moc testu 1−β).\n\n**Na egzaminie uważaj na:**\n- błąd I i II rodzaju to nie to samo;\n- zmniejszenie α zmniejsza szansę błędu I rodzaju, ale zwiększa β;\n- estymator to nie wartość parametru;\n- populacja może być nieskończona.",
+   "related": [
+    "prawdopodobienstwo-calkowite",
+    "wariancja-i-niezaleznosc"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2783 @@
+{
+ "questions": [
+  {
+   "id": 182,
+   "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "autorem klasyfikacji (hierarchii) języków formalnych jest Noam Chomsky",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zbiór wszystkich palindromów nad danym alfabetem jest językiem regularnym",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "istnieją języki, które nie należą do hierarchii Chomsky'ego, więc nie są generowane przez żadną gramatykę ani akceptowane przez żaden automat",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "językiem formalnym nazywamy dowolny podzbiór zbioru wszystkich możliwych słów zbudowanych z symboli należących do skończonego alfabetu",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "język oznaczany jako ^^\\{\\epsilon\\}^^ jest językiem pustym",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "najszerszą klasą języków w hierarchii Chomsky'ego jest klasa języków rekurencyjnie przeliczalnych generowanych przez gramatyki bez ograniczeń",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "jeżeli L jest językiem bezkontekstowym, to istnieje automat ze stosem akceptujący ten język i jest on mu równoważny",
+     "correct": true
+    },
+    {
+     "key": "h",
+     "text": "każdy język regularny jest generowany przez pewną gramatykę typu 3 (regularną)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "zbiór wszystkich podzbiorów słów nad alfabetem jest przeliczalny, więc każdy język jest generowany przez jakąś gramatykę",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "języki bezkontekstowe są właściwym podzbiorem języków kontekstowych w hierarchii Chomsky'ego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "język pusty ^^\\emptyset^^ nie jest językiem formalnym, bo nie zawiera żadnego słowa",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "hierarchia-chomsky",
+    "automat-ze-stosem"
+   ],
+   "explanation": "**Dlaczego poprawne:** Chomsky wprowadził hierarchię typów 0–3; język to dowolny podzbiór ^^\\Sigma^*^^; klasa typu 0 (RE) jest najszersza w hierarchii; PDA i CFG są równoważne. Języków jest nieprzeliczalnie wiele, a gramatyk/automatów tylko przeliczalnie, więc istnieją języki poza hierarchią. Regularne ⊂ bezkontekstowe ⊂ kontekstowe ⊂ typ 0.\n\n**Dlaczego błędne:** palindromy wymagają pamięci (nie są regularne); ^^\\{\\epsilon\\}^^ zawiera słowo puste, więc nie jest pusty; zbiór wszystkich języków jest nieprzeliczalny; ^^\\emptyset^^ jest poprawnym językiem.\n\n**Zapamiętaj:** języków jest więcej niż programów, które je opisują.",
+   "changes": []
+  },
+  {
+   "id": 183,
+   "question": "Niech N będzie niedeterministycznym automatem skończonym posiadającym ^^n^^ stanów, oraz niech M będzie minimalnym deterministycznym automatem skończonym rozpoznającym ten sam język, posiadającym ^^m^^ stanów. Wtedy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "^^m \\leq n^^",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "^^m \\leq 2^n^^",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "^^n \\leq m^^",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "M posiada dokładnie jeden stan akceptujący",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "każdy deterministyczny automat skończony rozpoznający ten sam język musi posiadać co najmniej ^^2^n^^ stanów",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "każdy automat deterministyczny akceptujący ten sam język co N musi mieć co najwyżej ^^2^n^^ stanów",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "istnieje deterministyczny automat skończony z co najwyżej ^^2^n^^ stanami rozpoznający język automatu N (konstrukcja podzbiorowa)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "istnieją niedeterministyczne automaty, dla których minimalny DFA ma liczbę stanów wykładniczą względem ^^n^^",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "^^m \\leq n^2^^",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "M ma zawsze mniej stanów niż N",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "nfa-dfa"
+   ],
+   "explanation": "**Dlaczego poprawne:** konstrukcja podzbiorowa daje DFA o stanach będących podzbiorami stanów N, więc ^^m \\leq 2^n^^ (minimalny nie jest większy od skonstruowanego). Ograniczenie jest ostre: istnieją NFA (np. „n-ty symbol od końca to a”) wymagające wykładniczo wielu stanów DFA.\n\n**Dlaczego błędne:** ^^m \\leq n^^ i ^^n \\leq m^^ nie zachodzą ogólnie (DFA może być większy, NFA też może być większy od minimalnego DFA); minimalny DFA może mieć wiele stanów akceptujących; „musi mieć co najmniej ^^2^n^^” i „każdy DFA co najwyżej ^^2^n^^” są fałszywe – DFA nieminimalny może być dowolnie duży, a dolna granica nie jest konieczna.\n\n**Zapamiętaj:** determinizacja to najwyżej ^^2^n^^ stanów dla minimalnego DFA, nie mniej i nie więcej niż to wynika z języka.",
+   "changes": []
+  },
+  {
+   "id": 184,
+   "question": "Wybierz, które z poniższych stwierdzeń są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jeśli język ^^L^^ spełnia tezę lematu o pompowaniu dla języków regularnych, to język ^^L^^ jest regularny",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jeśli język ^^L^^ jest skończony, to ^^L*^^ musi być regularny",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "każdy język, który nie jest regularny, jest nieskończony",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "pomimo, że języki regularne w trywialny sposób są bezkontekstowe, to istnieją języki regularne nie spełniające lematu o pompowaniu dla języków bezkontekstowych",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "żeby sprawdzić, czy dany automat akceptuje język nieskończony, można iterując po wszystkich słowach złożonych z alfabetu sprawdzić, czy liczba słów przez niego akceptowanych jest nieskończona",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "zupełny deterministyczny automat skończony, który nie akceptuje żadnego słowa, nie ma osiągalnych stanów akceptujących",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "jeśli ^^L^^ jest regularny, to spełnia tezę lematu o pompowaniu dla języków regularnych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "każdy język regularny spełnia lemat o pompowaniu dla języków bezkontekstowych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "język skończony jest regularny",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "każdy język nieskończony jest nieregularny",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "język skończony może być nieregularny",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lemat-pompowanie",
+    "zamkniecie-regularne",
+    "nfa-dfa"
+   ],
+   "explanation": "**Dlaczego poprawne:** skończony ^^L^^ jest regularny, a regularne są zamknięte na gwiazdkę Kleene'ego. Język nieregularny nie może być skończony (skończony = regularny). Automat zupełny bez osiągalnych stanów akceptujących akceptuje ∅. Regularne są bezkontekstowe, więc spełniają też lemat CFL.\n\n**Dlaczego błędne:** lemat pompowania to warunek konieczny, nie dostateczny; nie ma regularnych języków łamiących lemat CFL; przeglądanie wszystkich słów nie jest skończonym algorytmem (właściwy test: cykl na ścieżce start→akceptujący); nieskończone języki bywają regularne (^^a^*^^).\n\n**Zapamiętaj:** lemat służy tylko do obalania regularności.",
+   "changes": []
+  },
+  {
+   "id": 185,
+   "question": "Dla języków i gramatyk formalnych, odnośnie postaci normalnej Chomsky'ego oraz postaci normalnej Greibach można sformułować następujące stwierdzenia (duże litery alfabetu łacińskiego to symbole nieterminalne, a litery małe to symbole terminalne):",
+   "options": [
+    {
+     "key": "a",
+     "text": "gramatyka w postaci Chomsky'ego zawiera produkcje postaci ^^A \\rightarrow BC^^, ^^A \\rightarrow a^^, a gramatyka w postaci Greibach zawiera produkcje postaci ^^A \\rightarrow aX^^ (gdzie ^^X^^ to ciąg symboli nieterminalnych, może być pusty), oraz każdą gramatykę bezkontekstową w postaci normalnej Chomsky'ego można przekształcić do postaci normalnej Greibach",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "dla dowolnej gramatyki bezkontekstowej ^^G^^ istnieje taka gramatyka bezkontekstowa ^^G'^^ będąca w postaci normalnej Chomsky'ego, że ^^L(G') = L(G) - \\{\\epsilon\\}^^",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "dla każdego języka bezkontekstowego istnieje gramatyka w postaci normalnej Chomsky'ego",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Chomsky'ego",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Greibach",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "w gramatyce w postaci normalnej Chomsky'ego wyprowadzenie słowa o długości ^^n \\geq 1^^ ma dokładnie ^^2n-1^^ kroków",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "dla każdego języka bezkontekstowego ^^L^^ istnieje gramatyka w postaci Greibach generująca ^^L \\setminus \\{\\epsilon\\}^^",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "w postaci normalnej Greibach każda produkcja ma postać ^^A \\rightarrow BC^^",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "przekształcenie do postaci Chomsky'ego wymaga jedynie usunięcia produkcji ε",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "postac-normalna-chomsky-greibach",
+    "hierarchia-chomsky"
+   ],
+   "explanation": "**Dlaczego poprawne:** CNF: ^^A\\to BC | a^^; GNF: ^^A\\to aX^^ (X ciąg nieterminali). Dla każdej CFG istnieje CNF (i GNF) generująca ^^L(G)\\setminus\\{\\epsilon\\}^^; CNF można przekształcić w GNF. W CNF słowo długości n ma n-1 kroków binarnych i n terminalnych, razem ^^2n-1^^.\n\n**Dlaczego błędne:** GNF to nie ^^A\\to BC^^; sama eliminacja ε to za mało (trzeba też usunąć produkcje jednostkowe, produkcje długie i mieszane).\n\n**Uwaga:** stwierdzenia „każdą gramatykę / każdy język ... można sprowadzić” zostały uznane za fałszywe, bo postać normalna nie generuje słowa pustego (wymaga wyjątku ε) – to konwencja autora.\n\n**Zapamiętaj:** CNF/GNF są równoważne z dokładnością do słowa pustego.",
+   "changes": []
+  },
+  {
+   "id": 186,
+   "question": "Odnośnie lematu o pompowaniu dla języków regularnych prawdziwe są następujące stwierdzenia:",
+   "options": [
+    {
+     "key": "a",
+     "text": "lemat służy pokazaniu, że określone języki są regularne",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "schemat postępowania jest następujący: skoro język posiada pewne własności regularności, to jest regularny",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "lemat służy do dowodzenia, że dany język nie jest językiem regularnym",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "lemat służy do dowodzenia, że dany język jest językiem regularnym",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "lemat głosi, że dla dostatecznie długich słów języka regularnego istnieje podsłowo, które można pompować (powielać lub usuwać) pozostając w języku",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "spełnienie tezy lematu przez język jest warunkiem koniecznym, ale niewystarczającym regularności",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "za pomocą lematu można udowodnić, że język ^^\\{a^nb^n\\}^^ jest regularny",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "jeśli język spełnia tezę lematu o pompowaniu, to jest regularny",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lemat-pompowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** lemat jest narzędziem dowodu nie wprost: zakładamy regularność, bierzemy słowo dłuższe niż p, pompujemy i wykazujemy wyjście z języka. Sam lemat to implikacja: regularny ⇒ teza. Odwrócenie nie zachodzi.\n\n**Dlaczego błędne:** wnioskowanie „ma własności regularności, więc jest regularny” to błąd logiczny (odwrócenie implikacji); lemat nie służy dowodzeniu regularności; ^^\\{a^nb^n\\}^^ nie jest regularny.\n\n**Zapamiętaj:** lemat pompowania tylko obala regularność.",
+   "changes": []
+  },
+  {
+   "id": 187,
+   "question": "Jeżeli ^^r^^ oraz ^^s^^ są wyrażeniami regularnymi dla języków odpowiednio ^^R^^ oraz ^^S^^, to ^^(r + s)^^, ^^rs^^ oraz ^^r*^^ są wyrażeniami regularnymi reprezentującymi odpowiednio zbiory:",
+   "options": [
+    {
+     "key": "a",
+     "text": "^^R \\cup S^^, ^^R \\times S^^, ^^R^{+}^^ (operator plus)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "^^R \\cup S^^, ^^R \\times S^^, ^^R*^^",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "^^R \\cup S^^, ^^RS^^, ^^R*^^",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "^^R \\cup S^^, ^^RS^^, ^^R^{+}^^ (operator plus)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "^^R \\cap S^^, ^^RS^^, ^^R^*^^",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "^^R \\cup S^^, konkatenacja ^^R^^ i ^^S^^, domknięcie Kleene'ego ^^R^^",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "^^R \\cup S^^, ^^RS^^, dopełnienie ^^R^^",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wyrazenia-regularne"
+   ],
+   "explanation": "**Dlaczego poprawne:** w wyrażeniach regularnych + to suma (unia), zestawienie rs to konkatenacja języków, a ^^*^^ to domknięcie Kleene'ego (zero lub więcej powtórzeń, zawiera ε).\n\n**Dlaczego błędne:** konkatenacja to nie iloczyn kartezjański par (^^R\\times S^^ zawierałoby pary, nie słowa); ^^R^+^^ to inny operator (co najmniej jedno powtórzenie); przekrój ani dopełnienie nie są podstawowymi operatorami wyrażeń.\n\n**Zapamiętaj:** + = suma, sklejenie = konkatenacja, * = gwiazdka Kleene'ego.",
+   "changes": [
+    "a, d: dopisano '(operator plus)' aby odróżnić teksty po normalizacji (R^+ vs R*)"
+   ]
+  },
+  {
+   "id": 188,
+   "question": "Mamy języki ^^L1 = \\{ a^{2^n}, n > 0 \\}^^ oraz ^^L2 = \\{ a^{2n}, n > 0 \\}^^. Które z tych języków są regularne?",
+   "options": [
+    {
+     "key": "a",
+     "text": "^^L1^^ - nie, ^^L2^^ - nie",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "^^L1^^ - tak, ^^L2^^ - nie",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "^^L1^^ - nie, ^^L2^^ - tak",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "^^L1^^ - tak, ^^L2^^ - tak",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "^^L1^^ nie jest regularny, bo odstępy między długościami kolejnych słów rosną wykładniczo",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "^^L2^^ jest regularny, bo rozpoznaje go automat skończony sprawdzający parzystość długości słowa (i to, że słowo jest niepuste)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "^^L1^^ jest regularny, bo każdy nieskończony język nad jednoliterowym alfabetem jest regularny",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "^^L2^^ nie jest regularny, bo wymaga zliczania liter a",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lemat-pompowanie",
+    "nfa-dfa"
+   ],
+   "explanation": "**Dlaczego poprawne:** ^^L2\\{=\\}\\{aa,aaaa,\\dots\\}^^ = ^^(aa)^+^^, więc regularny. ^^L1=\\{a^2,a^4,a^8,\\dots\\}^^: pompowanie słowa ^^a^{2^k}^^ daje długość między dwiema kolejnymi potęgami dwójki, więc język nie jest regularny (zbiór długości nie jest ostatecznie okresowy).\n\n**Dlaczego błędne:** nad alfabetem jednoliterowym regularne są tylko języki o długościach ostatecznie okresowych; ^^L2^^ wystarcza sprawdzanie parzystości modulo 2, bez nieograniczonego licznika.\n\n**Zapamiętaj:** język unarny jest regularny wtedy, gdy zbiór długości jest ostatecznie okresowy.",
+   "changes": []
+  },
+  {
+   "id": 189,
+   "question": "Eliminując niejednoznaczność gramatyki poprzez konwersję do innej gramatyki musimy zachować bez zmian:",
+   "options": [
+    {
+     "key": "a",
+     "text": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zbiór słów generowanych przez oryginalną gramatykę",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "drzewo wyprowadzenia oryginalnej gramatyki dla każdego słowa wejściowego",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wyprowadzenia oryginalnej gramatyki dla każdego jednoznacznego słowa wejściowego",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nowa gramatyka może mieć inne drzewa wyprowadzenia, byle generowała ten sam język",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "musimy zachować zbiór nieterminali oryginalnej gramatyki",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "musimy zachować liczbę produkcji oryginalnej gramatyki",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "dla każdej gramatyki niejednoznacznej zawsze istnieje równoważna gramatyka jednoznaczna",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "niejednoznacznosc-gramatyk"
+   ],
+   "explanation": "**Dlaczego poprawne:** eliminacja niejednoznaczności to przepisanie gramatyki tak, by każde słowo miało jedno drzewo, przy niezmienionym języku ^^L(G)^^.\n\n**Dlaczego błędne:** celem jest właśnie zmiana drzew (usunięcie duplikatów), więc nie zachowujemy ani drzew, ani wyprowadzeń; nieterminale i liczba produkcji zwykle się zmieniają; istnieją języki z natury niejednoznaczne (np. ^^\\{a^ib^jc^k: i=j \\lor j=k\\}^^), dla których eliminacja jest niemożliwa.\n\n**Zapamiętaj:** niezmiennik to język, nie struktura wyprowadzeń.",
+   "changes": []
+  },
+  {
+   "id": 190,
+   "question": "Która z następujących metod parsingu może przetworzyć najszerszą klasę gramatyk:",
+   "options": [
+    {
+     "key": "a",
+     "text": "parser SLR",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "zstępujący parser rekurencyjny bez nawracania",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "kanoniczny parser LR",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "parser Earleya",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "parser LL(1)",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "parser CYK",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "parser LALR(1)",
+     "correct": false
+    },
+    {
+     "key": "h",
+     "text": "parser oparty na priorytecie operatorów",
+     "correct": false
+    },
+    {
+     "key": "i",
+     "text": "parser GLR",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "parser LR(0)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "parser LL(k) dla ustalonego k",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "l",
+     "text": "parser precedencji prostej",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr",
+    "niejednoznacznosc-gramatyk"
+   ],
+   "explanation": "**Dlaczego poprawne:** Earley i CYK (po sprowadzeniu do CNF) parsują dowolną gramatykę bezkontekstową, także niejednoznaczną (złożoność ^^O(n^3)^^); GLR również obsługuje dowolne CFG, choć jest wariantem LR.\n\n**Dlaczego błędne:** SLR, LALR(1), kanoniczny LR(1) obejmują tylko podklasy jednoznacznych gramatyk; LL(1), LL(k) i rekurencyjne zstępujące bez nawracania to jeszcze węższe klasy; parsery precedencji operatorów i LR(0) są bardzo ograniczone.\n\n**Zapamiętaj:** determinizm (LL/LR) ogranicza klasę; ogólne metody to CYK, Earley, GLR.",
+   "changes": []
+  },
+  {
+   "id": 191,
+   "question": "Wybierz stwierdzenia, które są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "LR wymaga usunięcia lewostronnej rekurencji",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "LL wymaga na początku faktoryzacji lewostronnej",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "gramatyki parsowane przez LR są nadzbiorem właściwym gramatyk parsowanych przez LL",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "LR parsuje od prawej do lewej, LL od lewej do prawej",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "dla każdej gramatyki jednoznacznej można skonstruować parser LR(1)",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "żadna gramatyka niejednoznaczna nie może być gramatyką LR(1)",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "tworzenie parsera jest sensowną procedurą tylko dla jednoznacznej gramatyki bezkontekstowej (nie ma sensu konstruowanie parsera dla gramatyki niejednoznacznej)",
+     "correct": false
+    },
+    {
+     "key": "h",
+     "text": "gramatyka lewostronnie rekurencyjna nie jest LL(k) dla żadnego k",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "parser LR odtwarza wyprowadzenie prawostronne w odwrotnej kolejności",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "gramatyka niejednoznaczna może być LL(1)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "parser LL(1) buduje drzewo wyprowadzenia od liści do korzenia",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr",
+    "niejednoznacznosc-gramatyk"
+   ],
+   "explanation": "**Dlaczego poprawne:** klasa LR(1) jest właściwym nadzbiorem LL(1); gramatyka LR(1) jest jednoznaczna, więc niejednoznaczna nie może być LR(1). Lewostronna rekurencja wyklucza LL, natomiast LR(1) ją toleruje. LR redukuje od dołu, odtwarzając wyprowadzenie prawostronne od końca.\n\n**Dlaczego błędne:** LR nie wymaga usuwania lewostronnej rekurencji; oba czytają wejście od lewej (LR: prawostronne wyprowadzenie odwrócone, LL: lewostronne); nie każda gramatyka jednoznaczna jest LR(1); parser dla niejednoznacznej gramatyki bywa sensowny (reguły priorytetów, GLR). LL wymaga faktoryzacji i usunięcia rekurencji jako przygotowania, ale to transformacja gramatyki, nie „wymóg”.\n\n**Zapamiętaj:** LL ⊊ LR ⊊ jednoznaczne CFG.",
+   "changes": []
+  },
+  {
+   "id": 192,
+   "question": "Typowy skaner języka formalnego ma za zadanie",
+   "options": [
+    {
+     "key": "a",
+     "text": "wyodrębnić symbole leksykalne",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zliczyć słowa kluczowe i sprawdzić ich kolokacje",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zliczyć lewe i prawe nawiasy sprawdzając wstępnie ich sparowanie",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wczytać kod źródłowy programu do postaci tokenów",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "usunąć z tekstu źródłowego białe znaki i komentarze, przekazując parserowi strumień tokenów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "zbudować drzewo wyprowadzenia programu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "sprawdzić poprawność zagnieżdżenia nawiasów za pomocą stosu",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wygenerować kod pośredni programu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "skaner-leksykalny"
+   ],
+   "explanation": "**Dlaczego poprawne:** skaner (analizator leksykalny) działa jak automat skończony/wyrażenia regularne: dzieli tekst na leksemy i tokeny, pomijając białe znaki i komentarze.\n\n**Dlaczego błędne:** liczenie słów kluczowych, kolokacje oraz parowanie nawiasów (wymaga stosu, język bezkontekstowy) to nie zadania skanera; budowa drzewa to parser; kod pośredni generuje faza późniejsza.\n\n**Zapamiętaj:** skaner = regularny (tokeny), parser = bezkontekstowy (struktura).",
+   "changes": []
+  },
+  {
+   "id": 193,
+   "question": "W odniesieniu do pracy parserów klasy LR(k) i funkcji action prawdziwe są stwierdzenia:",
+   "options": [
+    {
+     "key": "a",
+     "text": "funkcja action przyjmuje wartości ze zbioru {shift, reduce, goto, accept, error}",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "na stosie trzymane są prefiksy i sufiksy form zdaniowych, co do których jest nadzieja na ich wykorzystanie",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "funkcja action przyjmuje wartości ze zbioru {shift, reduce, accept, error}",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "na stosie trzymane są prefiksy wszystkich form zdaniowych",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "na stosie parsera LR znajdują się prefiksy żywotne (viable prefixes) form prawostronnych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "funkcja goto określa stan po przejściu z bieżącego stanu przez symbol nieterminalny",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "operacja shift zdejmuje ze stosu tyle symboli, ile wynosi długość prawej strony produkcji",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "wartość error w funkcji action oznacza redukcję ze stosu do symbolu startowego",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** tablica LR ma dwie części: action (shift, reduce, accept, error) i goto (przejście po nieterminalu po redukcji). Stos przechowuje prefiksy żywotne, czyli prefiksy form prawostronnych, które mogą się jeszcze rozszerzyć do uchwytu.\n\n**Dlaczego błędne:** goto nie jest wartością action; stos nie zawiera sufiksów ani prefiksów wszystkich form; to reduce (nie shift) zdejmuje |β| symboli; error to odrzucenie wejścia.\n\n**Zapamiętaj:** action ∈ {shift, reduce, accept, error}, goto jest osobną tablicą.",
+   "changes": []
+  },
+  {
+   "id": 194,
+   "question": "Budowa tablic sterujących dla analizatorów klasy LR może stwarzać pewne trudności, szczególnie w zakresie automatyzacji, co ma pośredni wpływ na istnienie wielu odmian tych parserów. Które z poniższych prostych stwierdzeń są poprawne:",
+   "options": [
+    {
+     "key": "a",
+     "text": "pierwsza litera w nazwie SLR oznacza Shift",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "pierwsza litera w nazwie SLR oznacza Simple",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "pierwsze litery w nazwie LALR oznaczają LookAhead",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "pierwsza litera w nazwie GLR oznacza Grammar",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "pierwsza litera w nazwie GLR oznacza Generalized",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "pierwsza litera w nazwie LR oznacza czytanie wejścia od lewej (Left-to-right)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "litera S w nazwie SLR oznacza Stack",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "litera L w nazwie LALR oznacza Last",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** SLR = Simple LR (proste zbiory FOLLOW), LALR = Look-Ahead LR (zsyntetyzowane lookaheady stanów LR(0)), GLR = Generalized LR, LR = Left-to-right, Rightmost derivation in reverse.\n\n**Dlaczego błędne:** S w SLR to nie Shift ani Stack; G w GLR to nie Grammar; L w LALR to nie Last.\n\n**Zapamiętaj:** SLR – Simple, LALR – Look-Ahead, GLR – Generalized.",
+   "changes": []
+  },
+  {
+   "id": 195,
+   "question": "Porównując gramatyki LL oraz LR można powiedzieć, że:",
+   "options": [
+    {
+     "key": "a",
+     "text": "gramatyki LL opisują szerszą klasę niż LR",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "gramatyki LR opisują szerszą klasę niż LL",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "każda gramatyka LL jest również gramatyką LR",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "każda gramatyka LR jest również gramatyką LL",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "każda gramatyka LL(1) jest gramatyką LR(1)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "istnieją gramatyki LR(1), które nie są LL(k) dla żadnego k",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "gramatyki LL(1) dopuszczają lewostronną rekurencję",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "każda jednoznaczna gramatyka bezkontekstowa jest LL(1)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "parsery-ll-lr"
+   ],
+   "explanation": "**Dlaczego poprawne:** LL(k) ⊊ LR(k): LR decyduje o redukcji po zobaczeniu całej prawej strony, LL musi przewidzieć produkcję po samych k symbolach. Przykład: gramatyka lewostronnie rekurencyjna jest LR, ale nie LL.\n\n**Dlaczego błędne:** odwrotne inkluzje (LL szersze niż LR, każda LR jest LL) są fałszywe; LL(1) nie znosi lewostronnej rekurencji; jednoznaczność nie wystarcza do LL(1).\n\n**Zapamiętaj:** LR jest silniejsze od LL.",
+   "changes": []
+  },
+  {
+   "id": 1075,
+   "question": "Język L_ne = {<M>: L(M) != pusty} koduje problem:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Czy dla danej maszyny Turinga M, język przez nią akceptowany jest niepusty?",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Czy maszyna Turinga M zatrzymuje się dla słowa pustego?",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Czy język L(M) jest skończony?",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Czy maszyna M jest uniwersalna?",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Czy M akceptuje wszystkie słowa?",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Czy M jest maszyną deterministyczną?",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Czy istnieje słowo akceptowane przez maszynę Turinga M?",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Czy L(M) jest nieskończony?",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Czy M zatrzymuje się na każdym słowie?",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** ^^L_{ne}=\\{\\langle M\\rangle : L(M)\\neq\\emptyset\\}^^ koduje pytanie o niepustość języka akceptowanego przez M, czyli o istnienie akceptowanego słowa.\n\n**Dlaczego błędne:** zatrzymywanie na pustym słowie/na każdym słowie to problem stopu, a nie niepustość; skończoność i nieskończoność L(M) to inne własności języka; uniwersalność (L(M)=Σ*), akceptowanie wszystkich słów i determinizm to inne problemy.\n\n**Zapamiętaj:** L_ne = „M akceptuje jakieś słowo”.",
+   "changes": []
+  },
+  {
+   "id": 1076,
+   "question": "Język L_nr = {<M> : L(M) nie jest rekurencyjny}:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest akceptowany przez uniwersalną MT.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Nie jest rekurencyjnie przeliczalny (ani jego dopełnienie).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Jest językiem regularnym.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest językiem bezkontekstowym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Jest rekurencyjnie przeliczalny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jest nierozstrzygalny (wynika z twierdzenia Rice'a).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jego dopełnienie ^^L_r^^ jest rekurencyjnie przeliczalne.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest rekurencyjny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jest akceptowany przez pewną niedeterministyczną maszynę Turinga.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "twierdzenie-rice",
+    "rozstrzygalnosc-re"
+   ],
+   "explanation": "**Dlaczego poprawne:** własność „L(M) nie jest rekurencyjny” jest nietrywialna i semantyczna, więc z twierdzenia Rice'a język jest nierozstrzygalny; ponadto własność nie jest monotoniczna (RE nierekurencyjny język ma nadzbiór Σ*, który jest rekurencyjny), więc L_nr nie jest RE; to samo dla dopełnienia L_r (∅ jest rekurencyjny, jego nadzbiór nierekurencyjny RE już nie).\n\n**Dlaczego błędne:** uniwersalna MT akceptuje tylko języki RE; L_nr nie jest RE, więc nie jest też bezkontekstowy ani regularny; NTM ma tę samą moc co MT.\n\n**Zapamiętaj:** L_r i L_nr nie są nawet RE.",
+   "changes": []
+  },
+  {
+   "id": 1077,
+   "question": "Język L_eq = {<M> <N>: L(M) = L(N)}:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nie jest rozpoznawany przez żadną maszynę Turinga (nie jest rekurencyjnie przeliczalny).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Jest rozstrzygalny dla dowolnych maszyn Turinga.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Jest językiem bezkontekstowym.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest akceptowany przez automat ze stosem.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest rekurencyjny.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Jest językiem regularnym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jest nierozstrzygalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jego dopełnienie także nie jest rekurencyjnie przeliczalne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest rekurencyjny, bo wystarczy porównać wyjścia M i N na wszystkich słowach.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jest rekurencyjnie przeliczalny, bo można symulować M i N równolegle na wszystkich słowach.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** problem równoważności MT jest nierozstrzygalny i ani on, ani jego dopełnienie nie są RE (redukcja z problemu pustości i jego dopełnienia). Symulacja równoległa potwierdza tylko różnicę (gdy jedna maszyna akceptuje słowo, którego druga nie akceptuje), ale nigdy nie potwierdza równości; ponadto niezatrzymanie nie jest wykrywalne.\n\n**Dlaczego błędne:** rozstrzygalny/rekurencyjny/regularny/bezkontekstowy/PDA – wszystkie oznaczają co najmniej rozstrzygalność, a ten język jest nawet poza RE.\n\n**Zapamiętaj:** równoważność MT jest poza RE i poza co-RE.",
+   "changes": []
+  },
+  {
+   "id": 1078,
+   "question": "Problem decyzyjny „Czy dane maszyny Turinga M i N akceptują ten sam język?” jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Nierozstrzygalny.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Częściowo rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Rozstrzygalny tylko dla automatów skończonych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Rozstrzygalny w czasie wielomianowym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "P-zupełny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Nie istnieje algorytm rozstrzygający, czy dwie maszyny Turinga akceptują ten sam język.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Nie jest nawet częściowo rozstrzygalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest rozstrzygalny na mocy twierdzenia Rice'a.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Należy do klasy NP.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** równoważność MT jest nierozstrzygalna; nie istnieje też procedura półrozstrzygająca (język ^^L_{eq}^^ nie jest RE).\n\n**Dlaczego błędne:** rozstrzygalny, wielomianowy, P-zupełny i NP – wszystkie wymagają istnienia algorytmu; „częściowo rozstrzygalny” jest fałszem, bo język nie jest RE; równoważność jest rozstrzygalna dla DFA, nie dla MT; Rice orzeka nierozstrzygalność, nie rozstrzygalność.\n\n**Zapamiętaj:** równoważność MT – ani decyzyjnie, ani nawet półdecyzyjnie.",
+   "changes": []
+  },
+  {
+   "id": 1079,
+   "question": "Twierdzenie Rice'a orzeka, że każda nietrywialna własność semantyczna języków akceptowanych przez maszyny Turinga jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nierozstrzygalna (język L = {<M>: L(M) ma własność S} nie jest rekurencyjny).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Rekurencyjnie przeliczalna.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Regularna.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Rozstrzygalna w czasie wielomianowym.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Prawdziwa dla wszystkich maszyn Turinga.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Zależna od liczby stanów maszyny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Nie dotyczy własności syntaktycznych maszyny, takich jak liczba stanów.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Własność jest nietrywialna, jeśli ma ją pewien, lecz nie każdy język rekurencyjnie przeliczalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Z twierdzenia wynika, że problem stopu jest rozstrzygalny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Dotyczy także własności zależących od czasu działania maszyny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "twierdzenie-rice",
+    "rozstrzygalnosc-re"
+   ],
+   "explanation": "**Dlaczego poprawne:** twierdzenie Rice'a: dla każdej nietrywialnej własności S języków RE zbiór ^^\\{\\langle M\\rangle : L(M)\\in S\\}^^ jest nierozstrzygalny. Dotyczy własności semantycznych (języka), nie kodu (liczby stanów, czasu).\n\n**Dlaczego błędne:** wynik jest przeciwny do „rozstrzygalna”; własność nie musi być RE ani regularna; własność „prawdziwa dla wszystkich MT” jest trywialna, a nie wnioskiem; własności zależne od liczby stanów są syntaktyczne (rozstrzygalne), więc poza zakresem Rice'a.\n\n**Zapamiętaj:** semantyka języka, nietrywialna ⇒ nierozstrzygalna.",
+   "changes": []
+  },
+  {
+   "id": 1080,
+   "question": "Niech S będzie pewną własnością zbiorów rekurencyjnie przeliczalnych. Jeśli S nie jest monotoniczna to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "S jest nieprzeliczalna lub pusta.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Język L = {<M>: L(M) należy do S} nie jest rekurencyjnie przeliczalny.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "S jest zawsze rozstrzygalna.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "S zawiera wszystkie języki regularne.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "S jest rekurencyjna.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "S jest skończona.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jeśli język ^^L_S=\\{\\langle M\\rangle: L(M)\\in S\\}^^ jest rekurencyjnie przeliczalny, to S jest monotoniczna.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jeśli S nie jest monotoniczna, to ^^L_S^^ jest rekurencyjny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jeśli S nie jest monotoniczna, to ^^L_S^^ jest rekurencyjnie przeliczalny, ale nie rekurencyjny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jeśli S nie jest monotoniczna, to S jest skończona.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "twierdzenie-rice",
+    "rozstrzygalnosc-re"
+   ],
+   "explanation": "**Dlaczego poprawne:** twierdzenie Rice'a–Shapiro (część): jeśli ^^L_S^^ jest RE, to S jest monotoniczna (jeśli ^^A\\in S^^ i ^^A\\subseteq B^^ RE, to ^^B\\in S^^). Kontrapozycja: brak monotoniczności ⇒ ^^L_S^^ nie jest RE. Intuicja: akceptacja słowa przez M może tylko dodać słów do L(M), więc półprocedura nie odróżni „za mało” od „za dużo”.\n\n**Dlaczego błędne:** nie-RE wyklucza rekurencyjność i RE; monotoniczność nie mówi o rozmiarze S ani o regularnych językach.\n\n**Zapamiętaj:** niemonotoniczna ⇒ nie RE.",
+   "changes": []
+  },
+  {
+   "id": 1081,
+   "question": "Funkcję Ackermana:",
+   "options": [
+    {
+     "key": "a",
+     "text": "da się przedstawić w reprezentacji Maszyny Turinga.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jest funkcją rekurencyjną, ale nie jest prymitywnie rekurencyjna.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nie jest obliczalna.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "ma złożoność wielomianową.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "rośnie szybciej niż jakakolwiek funkcja prymitywnie rekurencyjna.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "jest funkcją liniową.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jest funkcją totalną, obliczalną przez algorytm zatrzymujący się na każdych danych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jest funkcją wykładniczą ze względu na czas działania i o rozmiarze wartości ograniczonym wielomianem.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest funkcją prymitywnie rekurencyjną, bo jest zdefiniowana rekurencyjnie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Dla każdej funkcji prymitywnie rekurencyjnej f istnieje n, od którego Ackermann jest większa od f.",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "funkcja-ackermanna"
+   ],
+   "explanation": "**Dlaczego poprawne:** funkcja Ackermanna jest obliczalna (rekurencyjna totalna), więc da się ją zaprogramować na maszynie Turinga – dlatego opcja „da się przedstawić w reprezentacji MT” jest prawdziwa (w banku błędnie miała fałsz). Rośnie szybciej niż jakakolwiek funkcja prymitywnie rekurencyjna, więc sama nie jest prymitywnie rekurencyjna.\n\n**Dlaczego błędne:** nie jest nieobliczalna (to kluczowa pułapka), nie jest wielomianowa ani liniowa; jej wartości rosną szybciej niż wielomianowo i niż wykładniczo.\n\n**Zapamiętaj:** obliczalna i totalna, ale nie prymitywnie rekurencyjna.",
+   "changes": [
+    "a: false -> true, bo funkcja Ackermanna jest obliczalna, więc można ją przedstawić w reprezentacji maszyny Turinga (opcja c 'nie jest obliczalna' pozostaje fałszywa)"
+   ]
+  },
+  {
+   "id": 1082,
+   "question": "Dany jest język L_e = {w : w = <M> => L(M) = pusty}. Koduje on problem:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Czy język akceptowany przez maszynę Turinga M jest pusty?",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Czy dla słowa w niebędącego kodem MT, jest ono akceptowane przez pewną MT?",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Czy maszyna M akceptuje wszystkie słowa?",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Czy M jest maszyną deterministyczną?",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Czy M zatrzymuje się na słowie w?",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Czy L(M) jest skończony?",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Czy nie istnieje słowo akceptowane przez maszynę M?",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Czy język L(M) jest niepusty?",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Czy M akceptuje dokładnie jedno słowo?",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** ^^L_e=\\{\\langle M\\rangle : L(M)=\\emptyset\\}^^ koduje problem pustości języka akceptowanego przez M.\n\n**Dlaczego błędne:** niepustość to dopełnienie (L_ne); stop na słowie w to problem stopu; skończoność L(M), uniwersalność, akceptowanie wszystkich słów i determinizm to inne problemy; „w niebędące kodem MT” w ogóle nie dotyczy definicji.\n\n**Zapamiętaj:** L_e = „nikt nie jest akceptowany”.",
+   "changes": []
+  },
+  {
+   "id": 1083,
+   "question": "Język L_e = {<M> : L(M) = pusty}:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest prymitywnie rekurencyjny.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Nie jest rekurencyjnie przeliczalny.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Jest rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest językiem kontekstowym.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jego dopełnienie L_ne jest rekurencyjnie przeliczalne.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest językiem regularnym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jest nierozstrzygalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jego dopełnienie nie jest rozstrzygalne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest rekurencyjnie przeliczalny.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jego dopełnienie jest rekurencyjne.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** L_ne jest RE (symulacja równoległa na wszystkich słowach – wystarczy, że któreś zostanie zaakceptowane), ale nie jest rekurencyjny; stąd L_e jest co-RE, nierozstrzygalny i nie jest RE (gdyby był RE, to L_ne rekurencyjny).\n\n**Dlaczego błędne:** L_e nie jest prymitywnie rekurencyjny, rozstrzygalny, kontekstowy (języki kontekstowe są rozstrzygalne) ani regularny.\n\n**Zapamiętaj:** L_ne ∈ RE \\ R, L_e ∈ co-RE \\ R.",
+   "changes": []
+  },
+  {
+   "id": 1084,
+   "question": "Język L_ne = {<M>: L(M) != pusty}:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest rekurencyjnie przeliczalny (ale nie rekurencyjny).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Jest rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Nie jest akceptowany przez żadną maszynę Turinga.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest językiem skończonym.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest językiem regularnym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Jest rekurencyjny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jego dopełnienie ^^L_e^^ nie jest rekurencyjnie przeliczalne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jest akceptowany przez pewną maszynę Turinga.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jego dopełnienie jest rekurencyjnie przeliczalne.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jest językiem kontekstowym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** L_ne jest RE: równolegle (zazębiając kroki – dovetailing) symulujemy M na wszystkich słowach i akceptujemy, gdy któreś zostanie zaakceptowane. Nie jest rekurencyjny (Rice), więc jego dopełnienie L_e nie jest RE.\n\n**Dlaczego błędne:** rozstrzygalny/rekurencyjny – nie; „nie jest akceptowany przez żadną MT” – jest; skończony/regularny – nie (język jest nierekurencyjny).\n\n**Zapamiętaj:** niepustość jest półrozstrzygalna, ale nierozstrzygalna.",
+   "changes": []
+  },
+  {
+   "id": 1085,
+   "question": "Problem decyzyjny, czy język akceptowany przez daną maszynę Turinga jest pusty, jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Częściowo rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Nierozstrzygalny i nie jest nawet częściowo rozstrzygalny.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Wielomianowy.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Rozstrzygalny dla automatów ze stosem.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "P-zupełny.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jego dopełnienie (niepustość) jest częściowo rozstrzygalne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jest częściowo rozstrzygalny, bo można symulować M na wszystkich słowach równolegle.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest rozstrzygalny na mocy twierdzenia Rice'a.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** pustość L(M) jest nierozstrzygalna (Rice) i nie jest częściowo rozstrzygalna, bo jej dopełnienie (niepustość) jest RE, a nierekurencyjne; gdyby oba były RE, byłby rekurencyjny.\n\n**Dlaczego błędne:** równoległa symulacja potwierdza tylko niepustość; „rozstrzygalny/wielomianowy/P-zupełny” zakładają algorytm. Rozstrzygalność pustości dla automatów ze stosem jest prawdziwym faktem, ale dotyczy PDA, nie maszyn Turinga, więc nie odpowiada na pytanie o MT (tak uznał autor).\n\n**Zapamiętaj:** pustość MT jest nierozstrzygalna i nie jest RE.",
+   "changes": []
+  },
+  {
+   "id": 1086,
+   "question": "Problem decyzyjny, czy język akceptowany przez daną maszynę Turinga jest niepusty, jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nie jest nawet problemem częściowo rozstrzygalnym.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Częściowo rozstrzygalny (można symulować M na wszystkich słowach równolegle).",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Rekurencyjny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Regularny.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Rozstrzygalny w czasie wykładniczym.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Jest nierozstrzygalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jest równoważny pytaniu, czy M akceptuje pewne słowo.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jego dopełnienie (pustość) jest częściowo rozstrzygalne.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jest rozstrzygalny, bo wystarczy zasymulować M na słowie pustym.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** niepustość jest półrozstrzygalna (dovetailing: symulujemy M na wszystkich słowach naprzemiennie i akceptujemy, gdy któraś symulacja zaakceptuje), ale nierozstrzygalna (Rice).\n\n**Dlaczego błędne:** „nie jest nawet częściowo rozstrzygalny” jest fałszem; rozstrzygalny/rekurencyjny/regularny – nie; symulacja tylko na słowie pustym nie wystarcza; pustość (dopełnienie) nie jest RE.\n\n**Zapamiętaj:** niepustość ∈ RE \\ R.",
+   "changes": []
+  },
+  {
+   "id": 1087,
+   "question": "Język L_r = {<M>: L(M) jest rekurencyjny} koduje problem:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Czy język akceptowany przez maszynę Turinga M jest rozstrzygalny?",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Czy dla danej maszyny Turinga M, L(M) jest rekurencyjnie przeliczalny?",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Czy M zatrzymuje się dla każdego wejścia?",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Czy M ma skończoną liczbę stanów?",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Czy L(M) jest językiem regularnym?",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Czy M jest uniwersalna?",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Czy istnieje maszyna Turinga zatrzymująca się na każdym wejściu i akceptująca dokładnie L(M)?",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Czy L(M) jest bezkontekstowy?",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Czy M zatrzymuje się na słowie pustym?",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** ^^L_r=\\{\\langle M\\rangle: L(M)\\text{ jest rekurencyjny}\\}^^ pyta, czy język akceptowany przez M jest rozstrzygalny (istnieje rozstrzygacz dla L(M), niekoniecznie M).\n\n**Dlaczego błędne:** RE-owość L(M) jest automatyczna (M go akceptuje); stop na każdym wejściu to zatrzymywanie M, a nie własność języka L(M); regularność, uniwersalność i skończona liczba stanów to inne pytania.\n\n**Zapamiętaj:** rekurencyjny język ≠ maszyna zawsze się zatrzymuje.",
+   "changes": []
+  },
+  {
+   "id": 1088,
+   "question": "Język L_nr = {<M>: L(M) nie jest rekurencyjny} koduje problem:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Czy język akceptowany przez maszynę Turinga M jest nierozstrzygalny?",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Czy dana maszyna Turinga M, posiada własność stopu?",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Czy M jest maszyną uniwersalną?",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Czy L(M) jest językiem regularnym?",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Czy M jest deterministyczna?",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Czy M ma nieskończoną taśmę?",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Czy nie istnieje maszyna Turinga zatrzymująca się na każdym wejściu i akceptująca dokładnie L(M)?",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Czy L(M) nie jest regularny?",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Czy M nie zatrzymuje się na pewnym wejściu?",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ],
+   "explanation": "**Dlaczego poprawne:** ^^L_{nr}^^ koduje pytanie, czy język akceptowany przez M jest nierozstrzygalny (nierekurencyjny).\n\n**Dlaczego błędne:** własność stopu maszyny to inny problem (M może się nie zatrzymywać, a L(M) i tak być rekurencyjny); uniwersalność, regularność, determinizm i nieskończona taśma to inne pytania.\n\n**Zapamiętaj:** własność dotyczy języka L(M), nie zachowania M.",
+   "changes": []
+  },
+  {
+   "id": 1089,
+   "question": "Język L_r = {<M>: L(M) jest rekurencyjny}:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Nie jest rekurencyjny (wynika z twierdzenia Rice'a).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Jest rekurencyjnie przeliczalny.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Jest rozstrzygalny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Jest regularny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Jest bezkontekstowy.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Nie jest rekurencyjnie przeliczalny.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Jest nierozstrzygalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jego dopełnienie ^^L_{nr}^^ nie jest rekurencyjnie przeliczalne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Jest dopełnieniem języka rekurencyjnie przeliczalnego.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Jest rekurencyjnie przeliczalny, ale nie rekurencyjny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "twierdzenie-rice",
+    "rozstrzygalnosc-re"
+   ],
+   "explanation": "**Dlaczego poprawne:** własność „L(M) rekurencyjny” jest nietrywialna (∅ ją ma, język HALT nie), więc z Rice'a nie jest rekurencyjny. Nie jest monotoniczna (∅ ⊆ HALT, ale HALT nie ma własności), więc nie jest RE; dopełnienie L_nr też nie jest RE.\n\n**Dlaczego błędne:** RE, rozstrzygalny, regularny, bezkontekstowy – nie; nie jest co-RE, bo dopełnienie nie jest RE.\n\n**Zapamiętaj:** L_r jest poza RE i poza co-RE.",
+   "changes": []
+  },
+  {
+   "id": 1114,
+   "question": "Gramatyka formalna jest wieloznaczna, jeżeli:",
+   "options": [
+    {
+     "key": "a",
+     "text": "istnieje przynajmniej jedno słowo w języku tej gramatyki, które posiada więcej niż jedno drzewo wyprowadzenia (syntaktyczne).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "posiada symbole nieterminalne o wielu produkcjach.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "generuje język nieskończony.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie można jej sprowadzić do postaci normalnej Chomsky'ego.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "posiada słowo, dla którego istnieje więcej niż jedno wyprowadzenie lewostronne.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "generuje słowa o różnej długości.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "posiada słowo, dla którego istnieją dwa różne wyprowadzenia prawostronne.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "posiada słowo mające więcej niż jedno wyprowadzenie (dowolne, także różniące się tylko kolejnością zastępowania nieterminali).",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "generuje język nieregularny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "niejednoznacznosc-gramatyk",
+    "wyprowadzenia-formy-zdaniowe"
+   ],
+   "explanation": "**Dlaczego poprawne:** niejednoznaczność = istnieje słowo z dwoma różnymi drzewami wyprowadzenia, równoważnie z dwoma różnymi wyprowadzeniami lewostronnymi (lub prawostronnymi).\n\n**Dlaczego błędne:** wiele produkcji dla nieterminala, nieskończoność języka i różne długości słów są normalne w gramatykach jednoznacznych; każda CFG (bez ε) ma CNF, więc CNF nie rozstrzyga o wieloznaczności; sama różnica w kolejności zastosowań produkcji daje inne wyprowadzenie, ale to samo drzewo.\n\n**Zapamiętaj:** liczy się liczba drzew (wyprowadzeń lewostronnych), nie wyprowadzeń w ogóle.",
+   "changes": []
+  },
+  {
+   "id": 1115,
+   "question": "W kontekście języków formalnych, (oznaczenie: ^ to symbol potęgowania, którego argumenty mogą być w nawiasach klamrowych), następujące stwierdzenia są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Język L = {a^n b^n : n > 0} nie jest regularny, ale jest bezkontekstowy.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "L1 = {f^{2^{n}}: n > 0} jest regularny.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Każdy język bezkontekstowy jest regularny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Języki regularne nie są zamknięte ze względu na dopełnienie.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Klasa języków regularnych jest właściwym podzbiorem klasy języków bezkontekstowych.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Każdy język akceptowany przez automat skończony jest bezkontekstowy.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Język ^^\\{a^nb^n : n > 0\\}^^ jest akceptowany przez automat ze stosem.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Klasa języków bezkontekstowych jest zamknięta ze względu na przekrój.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Języki regularne są zamknięte ze względu na dopełnienie.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Język ^^\\{a^nb^n : n > 0\\}^^ jest regularny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "hierarchia-chomsky",
+    "zamkniecie-regularne",
+    "lemat-pompowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** ^^a^nb^n^^ jest bezkontekstowy, nie regularny; regularne ⊊ bezkontekstowe, więc każdy język automatu skończonego jest bezkontekstowy (poprawiono flagę: wcześniej fałsz). Regularne są zamknięte na dopełnienie.\n\n**Dlaczego błędne:** ^^f^{2^n}^^ nie jest regularny (długości rosną wykładniczo); nie każdy CFL jest regularny; twierdzenie o zamknięciu na dopełnienie jest odwrócone; bezkontekstowe nie są zamknięte na przekrój.\n\n**Zapamiętaj:** regularne ⊂ bezkontekstowe ⊂ kontekstowe.",
+   "changes": [
+    "f: false -> true, bo każdy język regularny jest bezkontekstowy",
+    "poprawiono niezamknięty nawias w treści pytania"
+   ]
+  },
+  {
+   "id": 1116,
+   "question": "Mamy gramatykę (duże litery to symbole nieterminalne, małe to symbole terminalne, S to symbol startowy) zawierającą produkcje: S -> AB, A -> Aa | bB, B -> a | Sb oraz formę zdaniową: baaABb. Które stwierdzenie jest prawdziwe",
+   "options": [
+    {
+     "key": "a",
+     "text": "nie jest wyprowadzana.",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "jest formą zdaniową, jeśli można ją uzyskać w dowolnej liczbie kroków z symbolu startowego S.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zawiera wyłącznie symbole terminalne.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "jest słowem języka.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "jest symbolem startowym.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "nie może zawierać nieterminali.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Forma baaABb jest formą zdaniową, bo S ⇒* baaABb (np. S ⇒ AB ⇒ ASb ⇒ baaSb ⇒ baaABb).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Forma baaABb należy do języka gramatyki, bo jest wyprowadzalna z S.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Forma zdaniowa musi zaczynać się od symbolu startowego S.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wyprowadzenia-formy-zdaniowe"
+   ],
+   "explanation": "**Dlaczego poprawne:** forma zdaniowa to dowolny ciąg terminali i nieterminali wyprowadzalny z S w zerze lub więcej kroków. Tu: S ⇒ AB ⇒ ASb (B→Sb), A ⇒* baa (A→Aa, A→bB, B→a), potem S→AB daje baaABb.\n\n**Dlaczego błędne:** forma jest wyprowadzalna (nie „niewyprowadzana”); zawiera nieterminale A, B, więc nie jest słowem języka i nie składa się wyłącznie z terminali; nie jest symbolem startowym. Forma zdaniowa może zawierać nieterminale.\n\n**Zapamiętaj:** słowo języka = forma zdaniowa złożona z samych terminali.",
+   "changes": []
+  },
+  {
+   "id": 1117,
+   "question": "W odniesieniu do wyrażeń regularnych i generowanych łańcuchów, które stwierdzenia są prawdziwe Wyrażenie regularne: (x+y)*y(a+ab)*",
+   "options": [
+    {
+     "key": "a",
+     "text": "Generuje słowa kończące się sekwencją 'y' po której następuje 'a' lub 'ab'.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Zawiera dokładnie 7 łańcuchów o długości mniejszej niż 4.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Nie generuje słowa 'y'.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Generuje słowo 'xa'.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Generuje słowo 'yya'.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Generuje słowo 'xyab'.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Wyrażenie generuje słowo 'yab'.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Wyrażenie generuje słowo 'xxy'.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Wyrażenie generuje słowo 'yb'.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Wyrażenie generuje słowo 'ab'.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "wyrazenia-regularne"
+   ],
+   "explanation": "**Dlaczego poprawne:** język ^^(x+y)^*y(a+ab)^*^^: dowolny ciąg x,y, potem y, potem dowolnie wiele bloków a lub ab. 'yya' = y·y·a, 'xyab' = x·y·ab, 'yab', 'xxy' i samo 'y' należą do języka. Sformułowanie o słowach „kończących się y po którym następuje a lub ab” jest luźnym opisem (sufiks po ostatnim wymaganym y).\n\n**Dlaczego błędne:** 'y' jest generowane (puste (x+y)^* i puste (a+ab)^*); 'xa' i 'ab' nie zawierają wymaganego y; 'yb' zawiera b bez poprzedzającego a; słów krótszych niż 4 jest więcej niż 7 (już długości 3 daje 8).\n\n**Zapamiętaj:** rozbij wyrażenie na człony i sprawdź każdy.",
+   "changes": []
+  },
+  {
+   "id": 1118,
+   "question": "Lemat o pompowaniu dla języków regularnych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Służy do dowodzenia, że dany język nie jest regularny.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Długość pompowania dla łańcucha o długości x jest równa x+1.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Każdy język spełniający warunki lematu o pompowaniu jest regularny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Dotyczy wyłącznie języków skończonych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Mówi, że każde słowo języka regularnego można dowolnie skracać.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Pozwala na konstrukcję automatu minimalnego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Zakłada, że dla dostatecznie długich słów języka regularnego istnieje podział ^^w=xyz^^ z ^^|xy|\\le p^^, ^^|y|\\ge1^^, taki że ^^xy^iz\\in L^^ dla każdego ^^i\\ge0^^.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Spełnianie tezy lematu jest warunkiem koniecznym, ale niewystarczającym regularności.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "W podziale ^^w=xyz^^ wymaga się, by ^^y^^ było puste.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Pozwala udowodnić, że każdy nieskończony język jest regularny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "lemat-pompowanie"
+   ],
+   "explanation": "**Dlaczego poprawne:** lemat: regularny ⇒ teza pompowania, więc służy do obalania regularności (dowód nie wprost). Formalnie: istnieje p, dla każdego słowa ^^|w|\\ge p^^ istnieje podział ^^xyz^^, ^^|xy|\\le p^^, ^^|y|\\ge1^^, ^^xy^iz\\in L^^ dla ^^i\\ge0^^.\n\n**Dlaczego błędne:** długość pompowania to stała p zależna od języka (nie x+1 dla słowa); nie każdy spełniający lemat jest regularny; dotyczy wszystkich języków regularnych (nie tylko skończonych); „dowolne skracanie” jest fałszem (jedno podsłowo, ^^i\\ge0^^); nie służy do konstrukcji automatu minimalnego (to Myhill–Nerode/algorytm Hopcrofta); ^^y^^ musi być niepuste.\n\n**Zapamiętaj:** lemat obala, nie dowodzi.",
+   "changes": []
+  },
+  {
+   "id": 1119,
+   "question": "Rozważmy gramatykę S ---> PQ | SQ | PS P ---> x Q--> yKtóre stwierdzenia są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "W gramatyce w postaci normalnej Chomsky'ego liczba kroków wyprowadzenia słowa o długości n wynosi dokładnie 2n-1.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Liczba użytych produkcji musi być równa n.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Nie da się wyprowadzić słów o długości większej niż 2.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Gramatyka ta jest regularna.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wymaga n^2 kroków.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Liczba kroków jest zawsze parzysta.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Liczba kroków wyprowadzenia słowa długości ^^n\\ge1^^ w tej gramatyce jest nieparzysta.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Gramatyka generuje słowo 'xy'.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Gramatyka generuje słowo 'yx'.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Gramatyka generuje słowo 'xyx'.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "postac-normalna-chomsky-greibach",
+    "wyprowadzenia-formy-zdaniowe"
+   ],
+   "explanation": "**Dlaczego poprawne:** gramatyka jest w CNF (^^A\\to BC^^, ^^A\\to a^^). Słowo długości n wymaga n-1 zastosowań produkcji binarnych i n terminalnych, razem ^^2n-1^^ (nieparzyste). Słowo 'xy' = S⇒PQ⇒xQ⇒xy.\n\n**Dlaczego błędne:** liczba produkcji nie jest równa n ani ^^n^2^^, ani zawsze parzysta; słowa dłuższe niż 2 wyprowadzają się (np. S⇒SQ⇒PQQ⇒xyy); gramatyka nie jest regularna (S→PQ to dwa nieterminale). Każde słowo zaczyna się od x i kończy na y, więc 'yx' i 'xyx' nie należą do języka.\n\n**Zapamiętaj:** CNF: ^^2n-1^^ kroków.",
+   "changes": []
+  },
+  {
+   "id": 1120,
+   "question": "W odniesieniu do języków regularnych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Języki regularne są zamknięte ze względu na sumę, iloczyn i dopełnienie.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Jeśli L1 jest regularny a L1-L2 jest regularny, to L2 musi być regularny.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Każdy język podzbiór języka regularnego jest regularny.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Automaty niedeterministyczne akceptują szerszą klasę języków niż deterministyczne.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Każdy język regularny jest akceptowany przez pewien deterministyczny automat skończony.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Języki regularne nie są zamknięte ze względu na gwiazdkę Kleene'ego.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Każdy NFA można przekształcić w DFA rozpoznający ten sam język (konstrukcja podzbiorowa).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Przekrój dwóch języków regularnych jest regularny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Suma nieskończonej rodziny języków regularnych jest zawsze regularna.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Dopełnienie języka regularnego jest zawsze skończone.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "zamkniecie-regularne",
+    "nfa-dfa"
+   ],
+   "explanation": "**Dlaczego poprawne:** regularne są zamknięte na sumę, konkatenację, dopełnienie, przekrój, gwiazdkę i odwrócenie; NFA i DFA mają tę samą moc, więc każdy język regularny ma DFA.\n\n**Dlaczego błędne:** z ^^L_1-L_2^^ regularnego nie wynika regularność ^^L_2^^ (np. gdy ^^L_1-L_2=\\emptyset^^); podzbiór języka regularnego nie musi być regularny (np. ^^\\{a^nb^n\\}\\subset a^*b^*^^); NFA nie są silniejsze; gwiazdka Kleene'ego zachowuje regularność; nieskończona suma singletonów daje dowolny język.\n\n**Zapamiętaj:** skończone operacje zachowują regularność, podzbiory nie.",
+   "changes": []
+  },
+  {
+   "id": 1121,
+   "question": "Mamy gramatykę z następującymi produkcjami: S -> XY X -> aX|a Y -> aYb|\\epsilon",
+   "options": [
+    {
+     "key": "a",
+     "text": "Generuje język {a^m b^n : m > n >= 0}.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Generuje język {a^n b^n : n >= 0}.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Jest gramatyką regularną.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Nie generuje słowa 'a'.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Generuje słowo 'ab'.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Generuje język {a^n b^m : n > m}.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Generuje słowo 'aab'.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Generuje słowo 'abb'.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Generuje słowo puste.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Generuje język ^^\\{a^mb^n : m \\ge n \\ge 0\\}^^.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "hierarchia-chomsky",
+    "wyrazenia-regularne"
+   ],
+   "explanation": "**Dlaczego poprawne:** ^^X\\to aX|a^^ daje ^^a^k^^, ^^k\\ge1^^; ^^Y\\to aYb|\\epsilon^^ daje ^^a^jb^j^^. Razem ^^a^{k+j}b^j^^, czyli ^^\\{a^mb^n: m>n\\ge0\\}^^. Opcja ^^\\{a^nb^m:n>m\\}^^ opisuje ten sam język (tylko zamienione nazwy zmiennych) – zmieniono flagę na prawdę. 'aab' (k=1, j=1) należy do języka, 'a' (k=1,j=0) też.\n\n**Dlaczego błędne:** ^^\\{a^nb^n\\}^^ ma równe wykładniki; 'ab' ma m=n; 'abb' ma więcej b niż a; słowo puste wymaga k=0; gramatyka nie jest regularna (^^Y\\to aYb^^ nie jest liniowa jednostronnie), a język nieregularny.\n\n**Zapamiętaj:** zawsze co najmniej jedno a więcej niż b.",
+   "changes": [
+    "f: false -> true, bo {a^n b^m : n>m} to ten sam język co {a^m b^n : m>n>=0} (tylko inne nazwy zmiennych)"
+   ]
+  },
+  {
+   "id": 1122,
+   "question": "Które z poniższych zdań odnośnie gramatyk formalnych są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Z każdej gramatyki bezkontekstowej można usunąć epsilon-produkcje (chyba że język zawiera słowo puste).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Gramatyki bezkontekstowe są zamknięte ze względu na przekrój (intersekcję).",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Każdy język regularny jest generowany przez gramatykę typu 0.",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "Gramatyki kontekstowe nie mogą mieć produkcji skracających.",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "Każdy język regularny jest bezkontekstowy.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Gramatyki typu 3 generują języki kontekstowe.",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "Klasa języków bezkontekstowych jest właściwym podzbiorem klasy języków kontekstowych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Każdy język regularny jest generowany przez gramatykę kontekstową.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Języki bezkontekstowe są zamknięte ze względu na dopełnienie.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Gramatyka regularna może generować język ^^\\{a^nb^n\\}^^.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "hierarchia-chomsky",
+    "postac-normalna-chomsky-greibach",
+    "zamkniecie-regularne"
+   ],
+   "explanation": "**Dlaczego poprawne:** regularne ⊂ bezkontekstowe ⊂ kontekstowe ⊂ typ 0, więc każdy regularny język jest generowany przez gramatykę typu 0, typu 1 i typu 2; gramatyki typu 3 generują języki kontekstowe. ε-produkcje można usunąć (język bez ε). Gramatyki kontekstowe są niezmniejszające (|α|≤|β|), poza ewentualnym S→ε.\n\n**Dlaczego błędne:** CFL nie są zamknięte na przekrój (^^\\{a^nb^nc^m\\}\\cap\\{a^mb^nc^n\\}^^) ani dopełnienie. W banku błędnie oznaczono trzy prawdziwe zdania (typ 0, typ 3, brak produkcji skracających) jako fałszywe.\n\n**Zapamiętaj:** hierarchia Chomsky'ego jest zagnieżdżona.",
+   "changes": [
+    "c: false -> true, bo regularne ⊂ typ 0",
+    "d: false -> true, bo gramatyki kontekstowe są niezmniejszające (|α|≤|β|; wyjątek S→ε)",
+    "f: false -> true, bo typ 3 ⊂ typ 1 (regularne są kontekstowe)"
+   ]
+  },
+  {
+   "id": 1123,
+   "question": "Odnośnie twierdzenia Myhill-Nerode'a następujące zdania są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Podaje warunek konieczny i dostateczny na to, by język był regularny.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Służy do minimalizacji automatów deterministycznych.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Twierdzenie ma znaczenie w kontekście konwersji NAS na DAS.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Dotyczy wyłącznie języków bezkontekstowych.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Relacja Myhill-Nerode'a ma skończony indeks wtedy i tylko wtedy, gdy język jest regularny.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Pozwala na rozstrzygnięcie problemu stopu.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Liczba klas relacji Myhill–Nerode'a języka jest równa liczbie stanów jego minimalnego DFA.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Można za jego pomocą wykazać, że ^^\\{a^nb^n\\}^^ nie jest regularny (nieskończenie wiele klas).",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Relacja Myhill–Nerode'a ma zawsze skończony indeks dla języków bezkontekstowych.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Klasy relacji Myhill–Nerode'a odpowiadają stanom minimalnego NFA.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "myhill-nerode",
+    "nfa-dfa"
+   ],
+   "explanation": "**Dlaczego poprawne:** język jest regularny ⇔ relacja ^^x\\sim_L y \\iff \\forall z\\,(xz\\in L\\iff yz\\in L)^^ ma skończony indeks; klasy to stany jedynego minimalnego DFA. Nieskończony indeks (np. dla ^^a^nb^n^^) dowodzi nieregularności.\n\n**Dlaczego błędne:** twierdzenie dotyczy języków regularnych, nie tylko bezkontekstowych; nie dotyczy konwersji NFA→DFA ani problemu stopu; minimalny NFA nie jest jednoznaczny. „Służy do minimalizacji DFA” – twierdzenie jest podstawą teoretyczną, lecz algorytm minimalizacji to osobna procedura (flagę pozostawiono jako fałsz; sformułowanie niejednoznaczne).\n\n**Zapamiętaj:** skończony indeks ⇔ regularny.",
+   "changes": []
+  },
+  {
+   "id": 1124,
+   "question": "W kontekście języków formalnych następujące stwierdzenia są prawdziwe",
+   "options": [
+    {
+     "key": "a",
+     "text": "Są akceptowane przez liniowo ograniczone automaty Turinga (LBA).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Język kontekstowy jest akceptowany przez NAS (automat skończony).",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "Są podzbiorem języków regularnych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Ich gramatyki mogą zawierać produkcję A -> BC.",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "Gramatyki kontekstowe (typ 1) mają produkcje postaci alpha A beta -> alpha gamma beta, gdzie gamma != epsilon.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Każdy język kontekstowy jest bezkontekstowy.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Klasa języków kontekstowych jest właściwym nadzbiorem klasy języków bezkontekstowych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Problem przynależności słowa do języka kontekstowego jest rozstrzygalny.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Języki kontekstowe są akceptowane przez deterministyczne automaty ze stosem.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Problem pustości języka kontekstowego jest rozstrzygalny.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "hierarchia-chomsky",
+    "rozstrzygalnosc-re"
+   ],
+   "explanation": "**Dlaczego poprawne:** języki kontekstowe (typ 1) są dokładnie akceptowane przez LBA; gramatyka typu 1 ma produkcje ^^\\alpha A\\beta\\to\\alpha\\gamma\\beta^^, ^^\\gamma\\ne\\epsilon^^ i może zawierać ^^A\\to BC^^ (puste konteksty). Członkostwo jest rozstrzygalne, bo słowo długości n wymaga formy o długości ≤ n.\n\n**Dlaczego błędne:** NFA i DPDA akceptują tylko podklasy; kontekstowe nie są podzbiorem regularnych i nie każdy kontekstowy jest bezkontekstowy (^^a^nb^nc^n^^); pustość jest nierozstrzygalna. Flagę „mogą zawierać A→BC” zmieniono na prawdę.\n\n**Zapamiętaj:** kontekstowe = LBA, nadzbiór CFL.",
+   "changes": [
+    "d: false -> true, bo produkcja A->BC jest dozwolona w gramatyce kontekstowej (puste konteksty alpha, beta)"
+   ]
+  },
+  {
+   "id": 1125,
+   "question": "W odniesieniu do języków formalnych następujące zdania są prawdziwe:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Akceptuje klasę języków bezkontekstowych.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Może akceptować napis wejściowy poprzez stan końcowy lub pusty stos.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Jest równoważny automatowi skończonemu z dwoma stosami.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Zawsze musi być deterministyczny.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Niedeterministyczne automaty ze stosem są silniejsze od deterministycznych (akceptują szerszą klasę języków).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Nie może mieć więcej niż jeden stan.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Deterministyczny automat ze stosem akceptuje właściwy podzbiór języków bezkontekstowych.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Jest równoważny gramatyce bezkontekstowej.",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Język ^^\\{ww^R\\}^^ jest akceptowany przez deterministyczny automat ze stosem.",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "Akceptuje język ^^\\{a^nb^nc^n\\}^^.",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "automat-ze-stosem",
+    "hierarchia-chomsky"
+   ],
+   "explanation": "**Dlaczego poprawne:** PDA akceptuje dokładnie języki bezkontekstowe (równoważny CFG); akceptacja stanem końcowym i pustym stosem są równoważne mocą; niedeterministyczny PDA jest silniejszy od deterministycznego (^^\\{ww^R\\}^^ wymaga niedeterminizmu). W banku opcja o akceptacji stanem końcowym lub pustym stosem miała fałsz, lecz jest prawdą.\n\n**Dlaczego błędne:** jeden stos to nie dwa (dwa stosy = maszyna Turinga); PDA nie musi być deterministyczny; może mieć wiele stanów; ^^a^nb^nc^n^^ nie jest bezkontekstowy.\n\n**Zapamiętaj:** PDA ≡ CFG, DPDA ⊊ PDA.",
+   "changes": [
+    "b: false -> true, bo PDA może akceptować stanem końcowym lub pustym stosem (oba tryby są równoważne)"
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "id": "hierarchia-chomsky",
+   "term": "Hierarchia Chomsky'ego (Chomsky hierarchy)",
+   "topic": "formal_languages",
+   "short": "Klasyfikacja gramatyk i języków formalnych na cztery zagnieżdżone typy 0–3 według postaci produkcji i mocy akceptujących je automatów.",
+   "details": "**Jak działa.** Typ 3: regularne (automat skończony, produkcje ^^A\\to aB^^, ^^A\\to a^^). Typ 2: bezkontekstowe (automat ze stosem, ^^A\\to\\gamma^^). Typ 1: kontekstowe (LBA, produkcje niezmniejszające ^^|\\alpha|\\le|\\beta|^^ lub ^^\\alpha A\\beta\\to\\alpha\\gamma\\beta^^). Typ 0: bez ograniczeń (maszyna Turinga, języki rekurencyjnie przeliczalne).\n\nInkluzje są właściwe: regularne ⊊ bezkontekstowe ⊊ kontekstowe ⊊ typ 0. Przykłady: ^^a^*b^*^^ (typ 3), ^^a^nb^n^^ (typ 2), ^^a^nb^nc^n^^ (typ 1), problem stopu (typ 0). Języków jest nieprzeliczalnie wiele, gramatyk przeliczalnie, więc istnieją języki poza hierarchią. Kontekstowe są rozstrzygalne.\n\n**Na egzaminie uważaj na:** produkcja ^^A\\to BC^^ jest dozwolona w typie 1; każdy język regularny jest bezkontekstowy, kontekstowy i typu 0; palindromy nie są regularne; zbiór wszystkich języków nie mieści się w hierarchii.",
+   "related": [
+    "automat-ze-stosem",
+    "zamkniecie-regularne"
+   ]
+  },
+  {
+   "id": "nfa-dfa",
+   "term": "NFA a DFA (nondeterministic vs deterministic automata)",
+   "topic": "formal_languages",
+   "short": "Niedeterministyczny i deterministyczny automat skończony rozpoznają tę samą klasę języków, ale NFA może być wykładniczo mniejszy.",
+   "details": "**Jak działa.** NFA ma relację przejść, wiele możliwych ścieżek i akceptuje, gdy istnieje ścieżka akceptująca. Konstrukcja podzbiorowa: stanami DFA są podzbiory stanów NFA, ze stanem początkowym {q0}; DFA akceptuje, gdy podzbiór zawiera stan akceptujący. Stąd NFA z n stanami daje DFA z co najwyżej ^^2^n^^ stanami, a minimalny DFA ma ^^m\\le2^n^^ stanów. Ograniczenie jest ostre: „n-ty symbol od końca to a” ma NFA z n+1 stanami i minimalny DFA z ^^2^n^^ stanami.\n\nMinimalny DFA jest jedyny (z dokładnością do izomorfizmu). Może mieć wiele stanów akceptujących.\n\n**Na egzaminie uważaj na:** NFA nie akceptują szerszej klasy niż DFA; minimalny DFA nie musi być mniejszy ani większy od NFA; „musi mieć co najmniej ^^2^n^^” jest fałszem; DFA nieminimalny może być dowolnie duży; automat zupełny bez osiągalnych stanów akceptujących akceptuje ∅.",
+   "related": [
+    "myhill-nerode",
+    "zamkniecie-regularne"
+   ]
+  },
+  {
+   "id": "lemat-pompowanie",
+   "term": "Lemat o pompowaniu (pumping lemma)",
+   "topic": "formal_languages",
+   "short": "Własność konieczna języków regularnych (i osobno bezkontekstowych), używana do dowodzenia nieregularności.",
+   "details": "**Jak działa.** Dla języka regularnego L istnieje p takie, że każde ^^w\\in L^^ z ^^|w|\\ge p^^ da się zapisać jako ^^xyz^^, gdzie ^^|xy|\\le p^^, ^^|y|\\ge1^^ i ^^xy^iz\\in L^^ dla każdego ^^i\\ge0^^. Dowód nieregularności: zakładamy regularność, wybieramy słowo (np. ^^a^pb^p^^), dla dowolnego podziału z warunkami dobieramy i tak, że wychodzimy z L. Dla ^^L=\\{a^{2^n}\\}^*^^ pompowanie daje długość między dwiema potęgami dwójki.\n\nWersja CFL: ^^w=uvxyz^^, ^^|vxy|\\le p^^, ^^|vy|\\ge1^^, ^^uv^ixy^iz\\in L^^.\n\n**Na egzaminie uważaj na:** to warunek konieczny, nie dostateczny – nie wolno dowodzić nim regularności; p jest stałą języka, nie długością słowa; języki skończone są regularne (trywialnie spełniają lemat); regularne spełniają też lemat CFL; y musi być niepuste.",
+   "related": [
+    "nfa-dfa",
+    "myhill-nerode"
+   ]
+  },
+  {
+   "id": "wyrazenia-regularne",
+   "term": "Wyrażenia regularne (regular expressions)",
+   "topic": "formal_languages",
+   "short": "Notacja opisująca języki regularne za pomocą sumy, konkatenacji i gwiazdki Kleene'ego.",
+   "details": "**Jak działa.** Wyrażenia: ∅, ε, symbol a; jeśli r, s są wyrażeniami, to ^^(r+s)^^ (suma, ^^R\\cup S^^), ^^rs^^ (konkatenacja ^^RS^^) i ^^r^*^^ (domknięcie Kleene'ego, zero lub więcej powtórzeń, zawiera ε) też. ^^R^+=RR^*^^ to skrót. Wyrażenia opisują dokładnie języki regularne (równoważne NFA/DFA). Przykład: ^^(x+y)^*y(a+ab)^*^^ generuje 'y', 'xy', 'yya', 'xyab'; nie generuje 'xa' (brak y) ani 'yb' (b bez a).\n\nSprawdzanie słowa: dopasuj kolejne człony; gwiazdka może dać zero powtórzeń.\n\n**Na egzaminie uważaj na:** konkatenacja to nie iloczyn kartezjański; + to suma, nie 'co najmniej jeden' (to jest ^^R^+^^ jako indeks górny); puste powtórzenia gwiazdki mogą dać krótkie słowa; przekrój i dopełnienie nie są podstawowymi operatorami (ale język regularny je zachowuje).",
+   "related": [
+    "nfa-dfa",
+    "zamkniecie-regularne"
+   ]
+  },
+  {
+   "id": "zamkniecie-regularne",
+   "term": "Własności domknięcia języków regularnych (closure properties)",
+   "topic": "formal_languages",
+   "short": "Klasa języków regularnych jest zamknięta na sumę, konkatenację, gwiazdkę, dopełnienie, przekrój i różnicę.",
+   "details": "**Jak działa.** Suma, konkatenacja i gwiazdka: konstrukcje na NFA z ε-przejściami. Dopełnienie: zamiana stanów akceptujących w zupełnym DFA. Przekrój: automat produktowy lub ^^L_1\\cap L_2=\\overline{\\overline{L_1}\\cup\\overline{L_2}}^^. Różnica ^^L_1-L_2=L_1\\cap\\overline{L_2}^^. Odwrócenie i homomorfizm też zachowują regularność. Nie są zamknięte na dowolne podzbiory ani na nieskończone sumy.\n\nBezkontekstowe: zamknięte na sumę, konkatenację, gwiazdkę, ale nie na przekrój (^^\\{a^nb^nc^m\\}\\cap\\{a^mb^nc^n\\}^^) ani dopełnienie.\n\n**Na egzaminie uważaj na:** podzbiór języka regularnego nie musi być regularny (^^a^nb^n\\subset a^*b^*^^); z regularności ^^L_1-L_2^^ nie wynika regularność ^^L_2^^; gwiazdka zachowuje regularność; język skończony jest regularny, więc skończony ^^L^*^^ też.",
+   "related": [
+    "nfa-dfa",
+    "lemat-pompowanie"
+   ]
+  },
+  {
+   "id": "postac-normalna-chomsky-greibach",
+   "term": "Postacie normalne Chomsky'ego i Greibach (CNF, GNF)",
+   "topic": "formal_languages",
+   "short": "Standardowe postacie gramatyk bezkontekstowych: CNF ma produkcje A→BC i A→a, GNF ma A→aX.",
+   "details": "**Jak działa.** CNF: ^^A\\to BC^^ lub ^^A\\to a^^. GNF: ^^A\\to aX^^, X ciąg nieterminali (może być pusty). Sprowadzenie do CNF: usuń ε-produkcje, produkcje jednostkowe, zastąp terminale w długich prawych stronach nowymi nieterminalami i skracaj do par. GNF: usuń lewostronną rekurencję i podstawiaj. Przekształcenie zachowuje język z dokładnością do słowa pustego: ^^L(G')=L(G)-\\{\\epsilon\\}^^.\n\nW CNF słowo długości n ma wyprowadzenie z ^^2n-1^^ kroków (n-1 binarnych, n terminalnych); drzewo jest binarne. Algorytm CYK wymaga CNF.\n\n**Na egzaminie uważaj na:** postać normalna nie generuje ε (potrzebny wyjątek S→ε), więc „każdą gramatykę” traktowano jako fałsz; GNF to nie A→BC; samo usunięcie ε nie wystarcza; z CNF można otrzymać GNF.",
+   "related": [
+    "hierarchia-chomsky",
+    "parsery-ll-lr"
+   ]
+  },
+  {
+   "id": "niejednoznacznosc-gramatyk",
+   "term": "Niejednoznaczność gramatyk (ambiguity)",
+   "topic": "formal_languages",
+   "short": "Gramatyka jest niejednoznaczna, gdy pewne słowo ma co najmniej dwa różne drzewa wyprowadzenia.",
+   "details": "**Jak działa.** Drzewo wyprowadzenia jednoznacznie odpowiada wyprowadzeniu lewostronnemu i prawostronnemu; więc niejednoznaczność ⇔ dwa różne wyprowadzenia lewostronne (lub prawostronne) dla jednego słowa. Klasyczne przykłady: ^^E\\to E+E|E*E|a^^, dangling else. Eliminacja: przepisanie gramatyki (priorytety i łączność, osobne nieterminale na poziomy) przy niezmienionym języku, choć drzewa się zmieniają.\n\nSą języki z natury niejednoznaczne (^^\\{a^ib^jc^k:i=j\\lor j=k\\}^^) – nie ma dla nich gramatyki jednoznacznej. Niejednoznaczność jest nierozstrzygalna dla CFG.\n\n**Na egzaminie uważaj na:** dwa wyprowadzenia różniące się tylko kolejnością to nie niejednoznaczność; wiele produkcji dla nieterminala i nieskończoność języka nie mają wpływu; gramatyka LR(1) jest jednoznaczna; parsery dla niejednoznacznych gramatyk (GLR, Earley) istnieją.",
+   "related": [
+    "parsery-ll-lr",
+    "wyprowadzenia-formy-zdaniowe"
+   ]
+  },
+  {
+   "id": "wyprowadzenia-formy-zdaniowe",
+   "term": "Wyprowadzenia i formy zdaniowe (derivations, sentential forms)",
+   "topic": "formal_languages",
+   "short": "Forma zdaniowa to dowolny ciąg terminali i nieterminali wyprowadzalny z symbolu startowego, a słowo języka to forma złożona z samych terminali.",
+   "details": "**Jak działa.** Krok wyprowadzenia ^^\\alpha\\Rightarrow\\beta^^ zastępuje nieterminal według produkcji; ^^\\Rightarrow^*^^ to zero lub więcej kroków. Forma zdaniowa: ^^S\\Rightarrow^*\\alpha^^. Język: ^^L(G)=\\{w\\in\\Sigma^*: S\\Rightarrow^*w\\}^^. Wyprowadzenie lewostronne zastępuje zawsze skrajny lewy nieterminal, prawostronne skrajny prawy.\n\nPrzykład (S→AB, A→Aa|bB, B→a|Sb): S⇒AB⇒ASb i A⇒*baa, więc baaSb⇒baaABb jest formą zdaniową, ale nie słowem języka (zawiera nieterminale).\n\n**Na egzaminie uważaj na:** forma zdaniowa może zawierać nieterminale; słowo języka jest specjalnym przypadkiem formy zdaniowej; zero kroków też się liczy (samo S); w CNF wyprowadzenie słowa długości n ma ^^2n-1^^ kroków.",
+   "related": [
+    "niejednoznacznosc-gramatyk",
+    "postac-normalna-chomsky-greibach"
+   ]
+  },
+  {
+   "id": "parsery-ll-lr",
+   "term": "Parsery LL i LR (LL and LR parsing)",
+   "topic": "formal_languages",
+   "short": "LL to analiza zstępująca budująca wyprowadzenie lewostronne, LR to analiza wstępująca odtwarzająca wyprowadzenie prawostronne od końca.",
+   "details": "**Jak działa.** LL(k): czyta wejście od lewej, buduje wyprowadzenie lewostronne (od korzenia), wybiera produkcję na podstawie k symboli podglądu; wymaga braku lewostronnej rekurencji i faktoryzacji. LR(k): czyta od lewej, redukuje uchwyty; stos zawiera prefiksy żywotne; tablica: action ∈ {shift, reduce, accept, error} oraz goto (dla nieterminali). Warianty: LR(0), SLR (Simple, FOLLOW), LALR(1) (LookAhead), kanoniczny LR(1); GLR (Generalized) radzi sobie z dowolnymi CFG.\n\nInkluzje: LL(k) ⊊ LR(k); gramatyki LR(1) są jednoznaczne. Najszersze klasy ogólne: CYK (CNF), Earley, ^^O(n^3)^^.\n\n**Na egzaminie uważaj na:** LR nie wymaga usuwania lewostronnej rekurencji; goto to nie wartość action; każda LL(1) jest LR(1), nie odwrotnie; nie każda jednoznaczna gramatyka jest LR(1); S w SLR to Simple.",
+   "related": [
+    "niejednoznacznosc-gramatyk",
+    "postac-normalna-chomsky-greibach"
+   ]
+  },
+  {
+   "id": "skaner-leksykalny",
+   "term": "Skaner leksykalny (lexer/scanner)",
+   "topic": "formal_languages",
+   "short": "Pierwsza faza kompilatora: dzieli tekst źródłowy na tokeny, zwykle za pomocą wyrażeń regularnych i automatów skończonych.",
+   "details": "**Jak działa.** Skaner czyta znaki, dopasowuje najdłuższy leksem opisany wyrażeniem regularnym (identyfikatory, liczby, słowa kluczowe, operatory) i wydaje token (typ + wartość). Pomija białe znaki i komentarze. Jest zwykle implementowany jako DFA (np. generowany przez lex/flex).\n\nParser (bezkontekstowy) dostaje strumień tokenów i buduje strukturę. Podział wynika z hierarchii: leksyka jest regularna, składnia bezkontekstowa.\n\n**Na egzaminie uważaj na:** skaner nie sprawdza parowania nawiasów (wymaga stosu – parser); nie zlicza kolokacji; nie buduje drzewa wyprowadzenia ani kodu pośredniego; jego wyjściem są symbole leksykalne (tokeny).",
+   "related": [
+    "parsery-ll-lr",
+    "wyrazenia-regularne"
+   ]
+  },
+  {
+   "id": "automat-ze-stosem",
+   "term": "Automat ze stosem (pushdown automaton, PDA)",
+   "topic": "formal_languages",
+   "short": "Automat skończony wyposażony w stos; niedeterministyczny PDA akceptuje dokładnie języki bezkontekstowe.",
+   "details": "**Jak działa.** Przejście zależy od stanu, symbolu wejścia (lub ε) i wierzchołka stosu, i zmienia stan oraz wierzchołek stosu. Akceptacja: stanem końcowym lub pustym stosem (tryby równoważne mocą). Przykład: dla ^^a^nb^n^^ odkładamy A przy każdym a i zdejmujemy przy b.\n\nNPDA ≡ gramatyki bezkontekstowe. DPDA jest słabszy (właściwy podzbiór): np. ^^\\{ww^R\\}^^ wymaga zgadywania środka. Dwa stosy dają moc maszyny Turinga. PDA może mieć wiele stanów. Nie akceptuje ^^a^nb^nc^n^^.\n\n**Na egzaminie uważaj na:** niedeterminizm zwiększa moc PDA (inaczej niż w automatach skończonych); nie musi być deterministyczny; oba tryby akceptacji są dozwolone; nie jest równoważny automatowi z dwoma stosami; pustość języka PDA jest rozstrzygalna.",
+   "related": [
+    "hierarchia-chomsky",
+    "parsery-ll-lr"
+   ]
+  },
+  {
+   "id": "myhill-nerode",
+   "term": "Twierdzenie Myhill–Nerode'a (Myhill–Nerode theorem)",
+   "topic": "formal_languages",
+   "short": "Charakteryzuje języki regularne przez skończony indeks relacji nierozróżnialności słów i wyznacza minimalny DFA.",
+   "details": "**Jak działa.** Słowa x, y są równoważne (^^x\\sim_L y^^), gdy dla każdego z: ^^xz\\in L \\iff yz\\in L^^. Twierdzenie: L jest regularny ⇔ relacja ma skończenie wiele klas. Liczba klas = liczba stanów jedynego minimalnego DFA (klasa = stan, przejścia po dopisaniu symbolu). Jest to warunek konieczny i dostateczny (w przeciwieństwie do lematu o pompowaniu).\n\nNieregularność: dla ^^a^nb^n^^ słowa ^^a^i^^ (i=1,2,…) są parami rozróżnialne (sufiks ^^b^i^^), więc klas jest nieskończenie wiele.\n\n**Na egzaminie uważaj na:** dotyczy języków regularnych, nie tylko bezkontekstowych; nie rozwiązuje problemu stopu; nie służy do konwersji NFA→DFA (to konstrukcja podzbiorowa); minimalny NFA nie jest jednoznaczny; jest podstawą teoretyczną minimalizacji DFA, ale algorytm minimalizacji to osobna procedura.",
+   "related": [
+    "nfa-dfa",
+    "lemat-pompowanie"
+   ]
+  },
+  {
+   "id": "rozstrzygalnosc-re",
+   "term": "Rozstrzygalność i języki RE (decidability, recursively enumerable)",
+   "topic": "formal_languages",
+   "short": "Język rekurencyjny ma algorytm rozstrzygający, RE ma tylko procedurę potwierdzającą przynależność, co-RE ma procedurę potwierdzającą nieprzynależność.",
+   "details": "**Jak działa.** Rekurencyjny (rozstrzygalny): MT zatrzymuje się zawsze. RE (półrozstrzygalny): MT akceptuje słowa z L, na pozostałych może się zapętlić. co-RE: dopełnienie jest RE. L rekurencyjny ⇔ L i jego dopełnienie są RE. Dovetailing: równoległa symulacja M na wszystkich słowach pokazuje, że niepustość L(M) jest RE. Stąd: ^^L_{ne}^^ ∈ RE\\R, ^^L_e^^ ∈ co-RE\\R (nie RE), ^^L_{eq}^^ ani RE, ani co-RE, ^^L_r,L_{nr}^^ ani RE, ani co-RE.\n\nProblem stopu jest RE, nierozstrzygalny. Języki kontekstowe są rozstrzygalne, ale ich pustość nie.\n\n**Na egzaminie uważaj na:** „częściowo rozstrzygalny” = RE; NTM ma moc MT; nierekurencyjny nie znaczy „nie RE”; wielomianowy/P-zupełny zakłada rozstrzygalność; pustość języka MT jest nierozstrzygalna, ale pustość PDA rozstrzygalna.",
+   "related": [
+    "twierdzenie-rice",
+    "funkcja-ackermanna"
+   ]
+  },
+  {
+   "id": "twierdzenie-rice",
+   "term": "Twierdzenie Rice'a i Rice'a–Shapiro (Rice's theorem)",
+   "topic": "formal_languages",
+   "short": "Każda nietrywialna semantyczna własność języków RE akceptowanych przez maszyny Turinga jest nierozstrzygalna.",
+   "details": "**Jak działa.** Własność S zbiorów RE jest nietrywialna, gdy ma ją pewien, ale nie każdy język RE. Wówczas ^^L_S=\\{\\langle M\\rangle: L(M)\\in S\\}^^ nie jest rekurencyjny (redukcja z problemu stopu). Dotyczy własności języka, nie kodu (liczba stanów) ani zachowania (czas). Rice–Shapiro: jeśli ^^L_S^^ jest RE, to S jest monotoniczna (^^A\\in S,\\ A\\subseteq B\\Rightarrow B\\in S^^) i zależy od skończonych podzbiorów; niemonotoniczna ⇒ ^^L_S^^ nie jest RE.\n\nZastosowania: pustość (nierozstrzygalna, nie RE), niepustość (RE, nierozstrzygalna), równoważność MT, „L(M) jest rekurencyjny/regularny/skończony” – nierozstrzygalne.\n\n**Na egzaminie uważaj na:** twierdzenie mówi o nierozstrzygalności, nie o RE; własności syntaktyczne (liczba stanów) są rozstrzygalne; własność „prawdziwa dla wszystkich MT” jest trywialna; trzeba odróżnić RE od nie-RE za pomocą monotoniczności.",
+   "related": [
+    "rozstrzygalnosc-re",
+    "funkcja-ackermanna"
+   ]
+  },
+  {
+   "id": "funkcja-ackermanna",
+   "term": "Funkcja Ackermanna (Ackermann function)",
+   "topic": "formal_languages",
+   "short": "Całkowita funkcja obliczalna, która nie jest prymitywnie rekurencyjna, bo rośnie szybciej niż każda funkcja prymitywnie rekurencyjna.",
+   "details": "**Jak działa.** Definicja: ^^A(0,n)=n+1^^, ^^A(m+1,0)=A(m,1)^^, ^^A(m+1,n+1)=A(m,A(m+1,n))^^. Dla każdych danych rekursja się kończy (funkcja totalna), więc jest obliczalna i da się ją zaprogramować na maszynie Turinga. Rośnie bardzo szybko (^^A(4,2)^^ ma ponad 19000 cyfr) i dominuje każdą funkcję prymitywnie rekurencyjną, więc sama nie jest prymitywnie rekurencyjna.\n\nKlasy: prymitywnie rekurencyjne ⊊ rekurencyjne (μ-rekurencyjne) totalne ⊊ częściowo rekurencyjne.\n\n**Na egzaminie uważaj na:** „nie jest obliczalna” jest fałszem; nie ma złożoności wielomianowej ani liniowej; jest rekurencyjna, lecz nie prymitywnie; da się ją przedstawić w MT; rośnie szybciej niż wykładnicza.",
+   "related": [
+    "rozstrzygalnosc-re",
+    "twierdzenie-rice"
+   ]
+  }
+ ]
+}

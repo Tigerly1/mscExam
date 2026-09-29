@@ -46,8 +46,8 @@ def main(name):
             errors.append(f'glossary[{gid}]: unknown topic {g.get("topic")!r}')
         if isinstance(g.get('short'), str) and len(g['short']) < 40:
             errors.append(f'glossary[{gid}]: "short" too short (<40 chars)')
-        if isinstance(g.get('details'), str) and len(g['details']) < 600:
-            errors.append(f'glossary[{gid}]: "details" too short ({len(g["details"])} chars, need >= 600)')
+        if isinstance(g.get('details'), str) and len(g['details']) < 400:
+            errors.append(f'glossary[{gid}]: "details" too short ({len(g["details"])} chars, need >= 400)')
         rel = g.get('related', [])
         if not isinstance(rel, list):
             errors.append(f'glossary[{gid}]: related must be a list')
@@ -132,8 +132,8 @@ def main(name):
                 if t not in gloss:
                     errors.append(f'{tag}: term {t!r} not defined in glossary')
         ex = q.get('explanation')
-        if not isinstance(ex, str) or len(ex) < 250:
-            errors.append(f'{tag}: explanation missing or too short (< 250 chars)')
+        if not isinstance(ex, str) or len(ex) < 150:
+            errors.append(f'{tag}: explanation missing or too short (< 150 chars)')
     missing = set(inp) - seen
     if missing:
         errors.append(f'missing questions: {sorted(missing)}')

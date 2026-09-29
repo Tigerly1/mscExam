@@ -1,0 +1,2907 @@
+{
+ "questions": [
+  {
+   "id": 132,
+   "question": "Wymagania stawiane schematom rozwiązywania numerycznego zagadnienia początkowego to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jawne uwzględnienie warunków brzegowych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "wprowadzenie siatki przestrzennej zgodnej z siatką czasową",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zgodność aproksymacji różnicowej, dokładność, stabilność, efektywność czasowa i pamięciowa",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "algorytm powinien mieć względnie małe wskaźniki uwarunkowania",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "współczynnik propagacji błędu < 1, zgodność aproksymacji różnicowej",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "wskaźniki uwarunkowania powinny mieć takie same wartości w każdej iteracji algorytmu",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "stabilność schematu oznacza, że błędy wprowadzane w kolejnych krokach nie rosną w sposób niekontrolowany",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "schemat niestabilny może dawać rozwiązanie rozbiegające się mimo zgodnej aproksymacji różnicowej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "wystarczy zgodność aproksymacji różnicowej, aby schemat zbiegał do rozwiązania dokładnego niezależnie od stabilności",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "współczynnik propagacji błędu powinien być większy od 1, aby błąd był tłumiony",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "num-zagadnienie-poczatkowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSchemat dla zagadnienia początkowego musi mieć zgodną aproksymację różnicową, być dokładny i stabilny (współczynnik propagacji błędu < 1), efektywny czasowo i pamięciowo oraz dobrze uwarunkowany (małe wskaźniki uwarunkowania). Niestabilność psuje wynik mimo zgodności.\n\n**Dlaczego błędne**\nWarunki brzegowe dotyczą zagadnień brzegowych, a nie początkowych; zgodność siatki przestrzennej z czasową nie jest wymogiem ogólnym; wskaźniki uwarunkowania nie muszą być identyczne w każdej iteracji; sama zgodność bez stabilności nie gwarantuje zbieżności; współczynnik propagacji > 1 oznacza narastanie błędu.\n\n**Zapamiętaj**: zgodność + stabilność + dobre uwarunkowanie = zbieżny schemat.",
+   "changes": [
+    "d: false -> true, bo małe wskaźniki uwarunkowania (dobre uwarunkowanie) to standardowy wymóg dla algorytmu numerycznego"
+   ]
+  },
+  {
+   "id": 133,
+   "question": "Zaletami prowadzenia transmisji w trybie pełnego dupleksu w standardzie Ethernet są:",
+   "options": [
+    {
+     "key": "a",
+     "text": "całkowita likwidacja kolizji w segmencie sieci",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "możliwość dwukrotnego zwiększenia sumarycznej przepustowości sieci",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "brak ograniczenia długości medium transmisyjnego w segmencie warstwy fizycznej wynikającego z wymogów protokołu CSMA/CD",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "możliwości wykorzystania urządzeń hub",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "w trybie pełnego dupleksu stacje mogą nadawać i odbierać jednocześnie",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "w trybie pełnego dupleksu nie jest potrzebny protokół CSMA/CD",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "pełny dupleks wymaga współdzielonego medium, do którego dostęp jest arbitrażowany protokołem CSMA/CD",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "pełny dupleks działa w segmencie, w którym stacje połączone są przez koncentratory (hub)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ethernet-csma-cd"
+   ],
+   "explanation": "**Dlaczego poprawne**\nPełny dupleks (osobne pary do nadawania i odbioru, łącze punkt–punkt do przełącznika) eliminuje kolizje, pozwala nadawać i odbierać jednocześnie (podwojenie sumarycznej przepustowości) i znosi ograniczenie długości segmentu wynikające z CSMA/CD, który w ogóle nie jest potrzebny.\n\n**Dlaczego błędne**\nKoncentrator (hub) tworzy wspólną domenę kolizyjną i pracuje tylko w półdupleksie, więc nie można go użyć w pełnym dupleksie. Pełny dupleks nie wymaga współdzielonego medium.\n\n**Zapamiętaj**: pełny dupleks = brak kolizji, brak CSMA/CD, brak hubów.",
+   "changes": []
+  },
+  {
+   "id": 134,
+   "question": "Model odniesienia OSI/ISO:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest modelem czterowarstwowym",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "definiuje standardy w ramach każdej warstwy (np. protokół IP w warstwie sieciowej)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "określa zadania poszczególnych warstw",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "pozwala na niezależny rozwój sprzętu i oprogramowania w ramach poszczególnych warstw",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "model dzieli funkcje komunikacji na siedem warstw",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "warstwa niższa świadczy usługi warstwie wyższej, a komunikacja logiczna odbywa się między warstwami równorzędnymi",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "model OSI/ISO jest implementacją stosu protokołów używaną w Internecie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "warstwa łącza danych odpowiada za wybór trasy pakietów między sieciami",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "model-osi"
+   ],
+   "explanation": "**Dlaczego poprawne**\nModel OSI/ISO ma siedem warstw, określa zadania każdej z nich i (dzięki ściśle zdefiniowanym interfejsom) pozwala rozwijać sprzęt i oprogramowanie warstw niezależnie. Warstwa niższa świadczy usługi wyższej.\n\n**Dlaczego błędne**\nModel nie jest czterowarstwowy (to TCP/IP); jest modelem odniesienia i nie definiuje konkretnych protokołów – IP należy do stosu TCP/IP; wybór trasy to zadanie warstwy sieciowej, nie łącza danych.\n\n**Zapamiętaj**: OSI to siedmiowarstwowy model odniesienia, nie zestaw protokołów.",
+   "changes": []
+  },
+  {
+   "id": 135,
+   "question": "Osiągnięcie przepustowości 1 Gb/s na kablu UTP kategorii 5e (tym samym, który jest używany w transmisji 100 Mb/s) w standardzie Ethernet jest:",
+   "options": [
+    {
+     "key": "a",
+     "text": "możliwe dzięki wykorzystaniu do transmisji wszystkich czterech par",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "możliwe dzięki wykorzystaniu bardziej złożonego kodowania",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "nie jest możliwe - wymaga kabla o lepszych parametrach",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "nie jest możliwe - taką przepustowość można osiągnąć tylko używając światłowodu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "1000BASE-T używa kodowania PAM-5 i transmisji dwukierunkowej jednocześnie na każdej z czterech par",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "1000BASE-T wykorzystuje tylko dwie pary przewodów, tak jak 100BASE-TX, ale z większą częstotliwością zegara",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "w 1000BASE-T każda para przesyła dane tylko w jednym kierunku",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ethernet-media",
+    "kodowanie-sygnalow"
+   ],
+   "explanation": "**Dlaczego poprawne**\n1000BASE-T działa na kablu kat. 5e: używa wszystkich czterech par jednocześnie, każdą dwukierunkowo, oraz bardziej złożonego kodowania (PAM-5).\n\n**Dlaczego błędne**\nKabel kat. 5e wystarcza – nie trzeba lepszego kabla ani światłowodu. 100BASE-TX używa tylko dwóch par, ale 1000BASE-T nie ogranicza się do dwóch, a pary nie są jednokierunkowe.\n\n**Zapamiętaj**: 1 Gb/s na 5e = cztery pary + PAM-5.",
+   "changes": []
+  },
+  {
+   "id": 136,
+   "question": "Kodowanie sygnałów w transmisji w sieciach komputerowych:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wpływa na uzyskiwaną przepustowość",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jest zależne od wykorzystywanego medium",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest przedmiotem zainteresowania warstwy sieciowej modelu OSI/ISO",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "może pozwalać na osiągnięcie samosynchronizacji nadajnika i odbiornika",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "kodowanie liniowe, np. Manchester, zawiera zmiany sygnału umożliwiające odbiornikowi odtworzenie zegara",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "kodowanie Manchester ma sprawność 100%, bo zmiana sygnału w środku bitu nie zwiększa wymaganego pasma",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "kodowanie NRZ zawsze zapewnia samosynchronizację nawet przy długich ciągach identycznych bitów",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "kodowanie-sygnalow"
+   ],
+   "explanation": "**Dlaczego poprawne**\nKodowanie wpływa na przepustowość (ile bitów na symbol), zależy od medium (miedź, światłowód, radio) i może być samosynchronizujące (Manchester) – odbiornik odtwarza zegar ze zboczy sygnału.\n\n**Dlaczego błędne**\nTo zagadnienie warstwy fizycznej, nie sieciowej. Manchester zużywa więcej pasma (sprawność 50%), a NRZ przy długich ciągach identycznych bitów traci synchronizację.\n\n**Zapamiętaj**: kodowanie = warstwa fizyczna, wpływa na pasmo i synchronizację.",
+   "changes": []
+  },
+  {
+   "id": 137,
+   "question": "Istnienie ograniczenia maksymalnej odległości między komunikującymi się hostami wynika z:",
+   "options": [
+    {
+     "key": "a",
+     "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy łącza danych",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "w ramach jednego segmentu sieci: parametrów medium fizycznego",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy sieciowej",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "w ramach kilku segmentów sieci rozdzielonych przełącznicami: wymogów protokołu warstwy sieciowej",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "w ramach jednego segmentu sieci Ethernet z CSMA/CD maksymalna odległość wynika z konieczności wykrycia kolizji przed zakończeniem nadawania ramki minimalnej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy transportowej",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "w ramach jednego segmentu sieci: wymogów protokołu warstwy aplikacji",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ethernet-csma-cd",
+    "model-osi"
+   ],
+   "explanation": "**Dlaczego poprawne**\nW jednym segmencie maksymalną odległość ograniczają wymogi protokołu warstwy łącza danych (CSMA/CD – wykrycie kolizji w czasie nadawania najkrótszej ramki) oraz tłumienie i parametry medium. W Ethernet 10 Mb/s wynika to z czasu propagacji.\n\n**Dlaczego błędne**\nWarstwa sieciowa (IP) nie narzuca limitu odległości – trasa może przechodzić przez wiele routerów; ograniczeń nie wprowadza też warstwa transportu ani aplikacji.\n\n**Zapamiętaj**: limit odległości to sprawa warstw 1–2 w segmencie.",
+   "changes": []
+  },
+  {
+   "id": 138,
+   "question": "Wirtualne sieci lokalne:",
+   "options": [
+    {
+     "key": "a",
+     "text": "można definiować w oparciu o adresy fizyczne",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "mogą być rozpięte na wielu urządzeniach warstwy drugiej modelu OSI/ISO",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "stanowią mechanizm alternatywny dla budowy drzewa rozpinającego",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "stanowią podstawowy mechanizm zapobiegania przeciążeniom mostka",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "wyznaczają domenę rozgłoszeniową",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "poprawiają bezpieczeństwo sieci",
+     "correct": true
+    },
+    {
+     "key": "g",
+     "text": "można definiować w oparciu o adresy logiczne",
+     "correct": true
+    },
+    {
+     "key": "h",
+     "text": "można definiować w oparciu o porty routera",
+     "correct": false
+    },
+    {
+     "key": "i",
+     "text": "służą do dynamicznego uzyskiwania adresu IP",
+     "correct": false
+    },
+    {
+     "key": "j",
+     "text": "mogą być używane zamiast protokołu ARP",
+     "correct": false
+    },
+    {
+     "key": "k",
+     "text": "ramki rozgłoszeniowe nie są przekazywane między różnymi VLAN-ami bez udziału routera",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "l",
+     "text": "łącze trunk przenosi ramki wielu VLAN-ów oznaczone znacznikiem 802.1Q",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "m",
+     "text": "komunikacja między dwoma VLAN-ami na tym samym przełączniku warstwy drugiej odbywa się bez udziału urządzenia warstwy trzeciej",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "n",
+     "text": "VLAN zwiększa liczbę domen kolizyjnych, ale nie zmienia liczby domen rozgłoszeniowych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "vlan-8021q"
+   ],
+   "explanation": "**Dlaczego poprawne**\nVLAN można definiować m.in. po portach, adresach MAC i protokole/adresach logicznych, mogą obejmować wiele przełączników (trunk 802.1Q), wyznaczają domenę rozgłoszeniową i poprawiają bezpieczeństwo przez separację ruchu.\n\n**Dlaczego błędne**\nVLAN nie zastępuje STP (pętle nadal trzeba blokować), nie chroni mostka przed przeciążeniem, nie definiuje się ich po portach routera, nie przydzielają adresów IP (to DHCP) i nie zastępują ARP. Ruch między VLAN wymaga routera lub przełącznika L3.\n\n**Zapamiętaj**: VLAN = osobna domena rozgłoszeniowa w warstwie 2.",
+   "changes": []
+  },
+  {
+   "id": 139,
+   "question": "Algorytm budowy drzewa rozpinającego:",
+   "options": [
+    {
+     "key": "a",
+     "text": "jest stosowany w przypadku mostków uczących się",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "służy zapobieżeniu występowania zapętleń transmisji ramek",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "jest jednym ze sposobów elekcji głównego routera w sieci",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "służy zrównoważeniu obciążenia pomiędzy łączami o takich samych przepustowościach",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "blokuje nadmiarowe porty, pozostawiając jedną aktywną ścieżkę między dowolnymi dwoma mostkami",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "mostek główny (root bridge) wybierany jest na podstawie najniższego identyfikatora mostka",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "w drzewie rozpinającym wszystkie łącza są aktywne, a ruch rozkładany jest równomiernie",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "działa w warstwie sieciowej i modyfikuje pole TTL w ramkach",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSTP działa w mostkach/przełącznikach, wybiera mostek główny (root bridge) o najniższym identyfikatorze i blokuje nadmiarowe porty, tworząc drzewo bez pętli, co zapobiega zapętleniu ramek i burzy rozgłoszeniowej.\n\n**Dlaczego błędne**\nSTP nie wybiera głównego routera (to warstwa 3), nie równoważy obciążenia – zablokowane łącza stoją bezczynnie – i nie działa w warstwie sieciowej ani nie zmienia TTL.\n\n**Zapamiętaj**: STP = brak pętli w warstwie 2 kosztem nieużywanych łączy.",
+   "changes": []
+  },
+  {
+   "id": 140,
+   "question": "Które warstwy modelu OSI/ISO są różne dla sieci WAN i LAN?",
+   "options": [
+    {
+     "key": "a",
+     "text": "fizyczna i łącza danych",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "fizyczna i sieci",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "łącza danych i sieci",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "fizyczna, łącza danych i sieci",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "sieci WAN i LAN mogą korzystać z tego samego protokołu warstwy sieciowej, np. IP",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "różna jest warstwa transportowa",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "różna jest wyłącznie warstwa fizyczna",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "różna jest warstwa aplikacji",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "model-osi"
+   ],
+   "explanation": "**Dlaczego poprawne**\nWAN i LAN różnią się warstwą fizyczną i łącza danych (np. Ethernet vs HDLC/PPP/Frame Relay), a warstwa sieciowa (IP) jest wspólna – dlatego IP łączy różne technologie.\n\n**Dlaczego błędne**\nOdpowiedzi zawierające warstwę sieci są błędne, bo IP działa zarówno w LAN, jak i w WAN; warstwy wyższe też nie zależą od technologii dostępu.\n\n**Zapamiętaj**: różnią się warstwy 1 i 2, warstwa 3 jest wspólna.",
+   "changes": []
+  },
+  {
+   "id": 141,
+   "question": "Dopisz, do czego jest wykorzystywany protokół ARP:",
+   "options": [
+    {
+     "key": "a",
+     "text": "uzyskiwania adresu IP",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "uzyskiwania adresu MAC urządzenia spoza naszej sieci lokalnej",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "określenie odwzorowania między adresami warstwy 3 i 2 modelu OSI/ISO",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "wyznaczania ścieżki pakietu",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "zapytanie ARP jest rozsyłane broadcastem w sieci lokalnej, a odpowiedź wysyłana unicastem",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "ARP służy do odwzorowania adresu MAC na adres IP",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "ARP działa w warstwie transportowej",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "ARP przenosi informacje o trasach między routerami",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "arp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nARP odwzorowuje adres warstwy 3 (IP) na adres warstwy 2 (MAC) w sieci lokalnej: zapytanie idzie broadcastem, odpowiedź unicastem.\n\n**Dlaczego błędne**\nARP nie nadaje adresów IP (DHCP), nie znajduje MAC hosta spoza sieci lokalnej (używa się MAC routera), nie wyznacza tras, nie działa w warstwie transportowej i nie odwzorowuje MAC na IP (to RARP).\n\n**Zapamiętaj**: ARP: IP → MAC, tylko lokalnie.",
+   "changes": []
+  },
+  {
+   "id": 142,
+   "question": "Jeżeli dwie stacje znajdujące się w innych sieciach IP połączone są ze sobą dokładnie jednym routerem i chcą komunikować się ze sobą, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "obydwie stacje muszą posiadać jednakową maskę",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "musi być uruchomiony mechanizm Proxy ARP na routerze",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "na routerze konieczne jest dodanie pozycji routingu statycznego",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wymagane jest ustawienie na każdej stacji adresu IP",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "stacje muszą znać adres IP routera (bramy domyślnej) w swojej sieci lokalnej",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "router ma trasy do obu sieci automatycznie jako do sieci bezpośrednio podłączonych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "na obu stacjach musi być ten sam prefiks adresu sieci",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "na routerze musi działać protokół routingu dynamicznego, np. OSPF",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "routing-ip",
+    "adresowanie-ipv4"
+   ],
+   "explanation": "**Dlaczego poprawne**\nKażda stacja musi mieć adres IP (i znać bramę domyślną – router). Sieci bezpośrednio podłączone router zna automatycznie.\n\n**Dlaczego błędne**\nMaski mogą być różne; Proxy ARP nie jest wymagany; trasa statyczna do sieci bezpośrednio podłączonych jest zbędna; routing dynamiczny też nie jest potrzebny; adresy sieci stacji są różne z założenia.\n\n**Zapamiętaj**: router zna sieci bezpośrednio podłączone bez dodatkowej konfiguracji.",
+   "changes": []
+  },
+  {
+   "id": 143,
+   "question": "Protokół IP w wersji 4 posiada następujące cechy:",
+   "options": [
+    {
+     "key": "a",
+     "text": "pozwala na fragmentację pakietów w węzłach pośrednich i u nadawcy",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "zawiera mechanizmy potwierdzania doręczenia pakietów",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "umożliwia kontrolę nagłówka pakietu za pomocą sumy kontrolnej",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "jest protokołem połączeniowym",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "umożliwia komunikację priorytetową",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "jest zawodny, ale każda utrata pakietu jest sygnalizowana",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "posiada płaską adresację",
+     "correct": false
+    },
+    {
+     "key": "h",
+     "text": "nagłówek zawiera pole TTL ograniczające czas życia pakietu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "adres IPv4 ma 32 bity",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "suma kontrolna IPv4 obejmuje także dane niesione przez pakiet",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "k",
+     "text": "fragmenty pakietu są składane z powrotem w każdym routerze pośrednim",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ipv4-icmp-ttl",
+    "adresowanie-ipv4"
+   ],
+   "explanation": "**Dlaczego poprawne**\nIPv4 dopuszcza fragmentację u nadawcy i w routerach, ma sumę kontrolną nagłówka, pole ToS (priorytety), TTL i 32-bitowe adresy.\n\n**Dlaczego błędne**\nIPv4 jest bezpołączeniowy i zawodny bez potwierdzeń; utrata pakietu nie zawsze jest sygnalizowana (ICMP nie jest gwarantowany); adresacja jest hierarchiczna (sieć + host). Suma kontrolna obejmuje tylko nagłówek, a defragmentacja następuje u odbiorcy.\n\n**Zapamiętaj**: IPv4: best effort, checksum tylko nagłówka, fragmentacja tak.",
+   "changes": []
+  },
+  {
+   "id": 144,
+   "question": "W jakich przypadkach jest stosowany protokół ICMP?",
+   "options": [
+    {
+     "key": "a",
+     "text": "transmisji danych wysokopriorytetowych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "uzyskiwania informacji o konfiguracji sieci",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "sygnalizacji sytuacji awaryjnych",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "wyszukiwania odbiorców ruchu multicastowego",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ICMP służy do diagnostyki, np. polecenia ping (echo) i traceroute",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "ICMP zapewnia niezawodne dostarczanie datagramów IP",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "ICMP służy do przenoszenia danych aplikacji użytkownika",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "ICMP służy do dynamicznego przydzielania adresów IP hostom",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ipv4-icmp-ttl"
+   ],
+   "explanation": "**Dlaczego poprawne**\nICMP przenosi komunikaty diagnostyczne i błędy (Destination Unreachable, Time Exceeded), a także informacje o konfiguracji (echo, maska, router discovery).\n\n**Dlaczego błędne**\nNie służy do transmisji danych, nie wyszukuje odbiorców multicastu (IGMP), nie gwarantuje dostarczania, nie przydziela adresów IP (DHCP).\n\n**Zapamiętaj**: ICMP = diagnostyka i sygnalizacja błędów w IP.",
+   "changes": []
+  },
+  {
+   "id": 145,
+   "question": "Jaki mechanizm uniemożliwia nieskończone krążenie ramek IP w sieci w przypadku wystąpienia pętli?",
+   "options": [
+    {
+     "key": "a",
+     "text": "mechanizm split-horizon",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "mechanizm trigger-update",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "pole TTL",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "NAT",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "STP",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "pole TTL jest zmniejszane o 1 w każdym routerze, a przy wartości 0 pakiet jest odrzucany",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "mechanizm poison reverse",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "protokół ARP",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ipv4-icmp-ttl",
+    "stp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nTTL jest zmniejszane w każdym routerze; przy 0 pakiet jest odrzucany, więc nie krąży w nieskończoność.\n\n**Dlaczego błędne**\nSplit-horizon i trigger-update zapobiegają pętlom w routingu, ale nie zabijają krążących pakietów; NAT tłumaczy adresy; STP działa w warstwie 2 na ramkach Ethernet (bez TTL).\n\n**Zapamiętaj**: pętla pakietów IP kończy się przez TTL.",
+   "changes": []
+  },
+  {
+   "id": 146,
+   "question": "Parametr \"niezawodność łącza\" wchodzi w skład metryki protokołu routingu:",
+   "options": [
+    {
+     "key": "a",
+     "text": "EIGRP",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "RIPv2",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "IGRP",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "OSPF",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "w metryce EIGRP występują pasmo, opóźnienie, niezawodność i obciążenie (domyślnie używane są pasmo i opóźnienie)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "metryka RIP opiera się na paśmie i niezawodności łącza",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "metryka OSPF (koszt) uwzględnia niezawodność łącza",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "protokoly-routingu"
+   ],
+   "explanation": "**Dlaczego poprawne**\nMetryka IGRP/EIGRP jest złożona: pasmo, opóźnienie, niezawodność, obciążenie (domyślnie tylko pasmo i opóźnienie).\n\n**Dlaczego błędne**\nRIP używa liczby skoków, OSPF kosztu opartego o pasmo – żaden nie uwzględnia niezawodności.\n\n**Zapamiętaj**: złożona metryka to IGRP/EIGRP.",
+   "changes": []
+  },
+  {
+   "id": 147,
+   "question": "Protokół UDP:",
+   "options": [
+    {
+     "key": "a",
+     "text": "wprowadza mechanizmy fragmentacji dla danych użytkownika przekraczających maksymalny rozmiar datagramu UDP",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "pozwala na grupowanie danych otrzymanych do wysłania w celu zoptymalizowania wykorzystania połączeń sieciowych",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "stosuje porty jako adresy warstwy transportowej",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "nie zabezpiecza przed duplikacją i zmianą kolejności datagramów",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "nagłówek UDP ma 8 bajtów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "UDP zapewnia sumę kontrolną nagłówka i danych (opcjonalną w IPv4)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "UDP realizuje sterowanie przepływem metodą okna przesuwnego",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "UDP nawiązuje połączenie trójstopniowym uzgadnianiem",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tcp-udp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nUDP używa portów jako adresów transportowych i nie chroni przed duplikacją ani zmianą kolejności datagramów; ma 8-bajtowy nagłówek i opcjonalną sumę kontrolną.\n\n**Dlaczego błędne**\nUDP nie fragmentuje ani nie grupuje danych (to robi IP/TCP), nie ma okna ani połączenia.\n\n**Zapamiętaj**: UDP: minimalny, bez gwarancji.",
+   "changes": []
+  },
+  {
+   "id": 148,
+   "question": "Adres typu broadcast (rozgłoszenia) IP w wersji 4, w której znajduje się host 110.104.1.10 i którą określa maska 255.0.0.0, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "110.104.1.10",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "110.255.255.255",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "110.104.1.255",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "110.0.0.0",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "110.104.255.255",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "255.255.255.255",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "adres rozgłoszeniowy sieci ma wszystkie bity części hosta ustawione na 1",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "adresowanie-ipv4"
+   ],
+   "explanation": "**Dlaczego poprawne**\nMaska 255.0.0.0 (/8) oznacza sieć 110.0.0.0; broadcast ma same jedynki w części hosta: 110.255.255.255.\n\n**Dlaczego błędne**\n110.104.1.10 to adres hosta, 110.104.1.255 wynikałby z maski /24.\n\n**Zapamiętaj**: broadcast = host bits same jedynki.",
+   "changes": []
+  },
+  {
+   "id": 149,
+   "question": "Pole o nazwie Time To Live w datagramie IP, które zabezpiecza przed zapętleniem routowania datagramu pomiędzy kolejnymi routerami w sieci, zawiera:",
+   "options": [
+    {
+     "key": "a",
+     "text": "liczbę routerów, przez jakie datagram IP może zostać przekazany",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "czas w sekundach, w którym datagram IP można jeszcze przekazywać dalej",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "TTL jest zmniejszane o 1 przez każdy router, przez który przechodzi datagram",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "po osiągnięciu wartości 0 datagram jest odrzucany, a router może wysłać ICMP Time Exceeded",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "pole TTL ma długość 16 bitów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "TTL jest zwiększane o 1 w każdym routerze",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wartość TTL jest ustawiana przez pierwszy router na trasie, a nie przez nadawcę",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ipv4-icmp-ttl"
+   ],
+   "explanation": "**Dlaczego poprawne**\nTTL to licznik skoków (routerów) zmniejszany o 1; po 0 datagram jest odrzucany, a router może wysłać ICMP Time Exceeded.\n\n**Dlaczego błędne**\nW praktyce TTL nie jest czasem w sekundach; pole ma 8 bitów, ustawia je nadawca, a router zmniejsza je, nie zwiększa.\n\n**Zapamiętaj**: TTL = limit skoków.",
+   "changes": [
+    "poprawiono ucięty tekst opcji a"
+   ]
+  },
+  {
+   "id": 150,
+   "question": "Protokół UDP definiuje identyfikatory przesyłanych do hosta-odbiorcy datagramów zwane numerami portów, o długości:",
+   "options": [
+    {
+     "key": "a",
+     "text": "8 bitów",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "32 bity",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "4 bity",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "16 bitów",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "numer portu UDP ma tę samą długość co numer portu TCP",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "24 bity",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "64 bity",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tcp-udp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nNumery portów UDP mają 16 bitów (0–65535), tak samo jak w TCP.\n\n**Dlaczego błędne**\n8, 32 i 4 bity nie odpowiadają nagłówkowi UDP; 24 i 64 bity też nie.\n\n**Zapamiętaj**: port = 16 bitów.",
+   "changes": []
+  },
+  {
+   "id": 151,
+   "question": "Wartości adresu IPv6 oraz maski, określające wszystkie hosty w internecie, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "::/0",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "0.0.0.0/0",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "::/2000",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "ff02::1",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "::/0 jest odpowiednikiem trasy domyślnej 0.0.0.0/0 w IPv4",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "::1/128",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "fe80::/10",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "2000::/3",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ipv6"
+   ],
+   "explanation": "**Dlaczego poprawne**\n::/0 to trasa domyślna IPv6, obejmująca wszystkie adresy.\n\n**Dlaczego błędne**\n0.0.0.0/0 to IPv4; ::/2000 jest niepoprawne (prefiks ≤128); ff02::1 to multicast link-local; fe80::/10 to link-local; ::1/128 to loopback.\n\n**Zapamiętaj**: ::/0 = wszystko w IPv6.",
+   "changes": []
+  },
+  {
+   "id": 152,
+   "question": "Istnienie zasady “Longest prefix match” w rutowaniu IP spowoduje, że adres docelowy 200.200.200.1 datagramu IP przy istnieniu w tablicy rutowania jednocześnie reguł o wzorcach i maskach (podano w notacji CIDR): 200.200.200.0/18, 200.200.200.0/20, 200.200.200.0/22, 200.200.200.0/24 zostanie dopasowany do:",
+   "options": [
+    {
+     "key": "a",
+     "text": "200.200.200.0/20",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "200.200.200.0/18",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "200.200.200.0/22",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "200.200.200.0/24",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "zostanie dopasowany do reguły z najdłuższym prefiksem, czyli o największej liczbie dopasowanych bitów maski",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "0.0.0.0/0",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "200.200.200.0/26",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "zostanie dopasowany do reguły o najkrótszym prefiksie, czyli /18",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "routing-ip"
+   ],
+   "explanation": "**Dlaczego poprawne**\nLongest prefix match wybiera regułę o najdłuższym prefiksie; 200.200.200.1 pasuje do wszystkich czterech, najdłuższy to /24.\n\n**Dlaczego błędne**\n/18, /20 i /22 są krótsze; reguły spoza tabeli nie są brane pod uwagę.\n\n**Zapamiętaj**: wygrywa najdłuższa maska.",
+   "changes": []
+  },
+  {
+   "id": 153,
+   "question": "Maksymalna długość pakietu IP wersja 4, licząc w bajtach, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "nie istnieje taki limit",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "1500",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "65535",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "576",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "1025",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "limit wynika z 16-bitowego pola Total Length w nagłówku",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "65536",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "4294967295",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ipv4-icmp-ttl"
+   ],
+   "explanation": "**Dlaczego poprawne**\nPole Total Length ma 16 bitów, więc maksimum to 65535 bajtów.\n\n**Dlaczego błędne**\n1500 to typowe MTU Ethernetu, 576 minimalny rozmiar do przyjęcia, a 65536 i 4294967295 przekraczają zakres 16 bitów.\n\n**Zapamiętaj**: limit IPv4 = 65535.",
+   "changes": []
+  },
+  {
+   "id": 154,
+   "question": "Router iBGP (internal Border Gateway Protocol), którego wprowadzenie do systemu rutowania iBGP umożliwia znaczne zredukowanie ilości otwartych sesji BGP między innymi routerami (rezygnację z tzw. full-mesh) nosi nazwę:",
+   "options": [
+    {
+     "key": "a",
+     "text": "BGP Mirror",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "Route Reflector Client (RRC)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Route Reflector (RR) – router iBGP odbijający trasy otrzymane od klientów do pozostałych peerów iBGP",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "zwykłe routery iBGP bez reflektora muszą utrzymywać sesje z wszystkimi innymi routerami iBGP (full-mesh)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "eBGP Multihop Router",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Route Aggregator",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Route Dampening Client",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "bgp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nRoute Reflector odbija trasy iBGP i eliminuje full-mesh; klienci (RRC) łączą się tylko z reflektorem. W bazie jako poprawną oznaczono odpowiedź z RRC.\n\n**Dlaczego błędne**\nBGP Mirror nie istnieje jako mechanizm; eBGP multihop, agregacja i dampening nie redukują full-mesh iBGP.\n\n**Zapamiętaj**: full-mesh iBGP rozwiązuje Route Reflector.",
+   "changes": []
+  },
+  {
+   "id": 155,
+   "question": "Liczba klas CoS (Class of Service), definiowanych przez podstawowy mechanizm implementacji QoS (Quality of Service) w Ethernet (czyli standard IEEE 802.1p), to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "8",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "255",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "16",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "65536",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "7",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "klasy CoS zapisane są w 3-bitowym polu PCP znacznika 802.1Q",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "3 klasy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "4 klasy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "64 klasy",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "qos-8021p"
+   ],
+   "explanation": "**Dlaczego poprawne**\n802.1p używa 3-bitowego pola PCP w znaczniku 802.1Q, czyli 2^3 = 8 klas (0–7).\n\n**Dlaczego błędne**\n255, 16 i 65536 nie pasują do 3 bitów; 7 to najwyższy numer klasy, nie ich liczba; 3 to liczba bitów.\n\n**Zapamiętaj**: 3 bity = 8 klas.",
+   "changes": []
+  },
+  {
+   "id": 156,
+   "question": "Wariant protokołu STP (Spanning Tree Protocol, IEEE 802.1d) pozwalający w technologii Ethernet na logiczne pogrupowanie sieci VLAN i budowanie mniejszej liczby drzew rozpinających (po 1 drzewie dla każdej grupy) to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "PVSTP (Per VLAN Spanning Tree Protocol)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "MSTP (Multiple Spanning Tree Protocol)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "RSTP (Rapid Spanning Tree Protocol)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "SPB (Shortest Path Bridging)",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "MSTP (802.1s) mapuje wiele VLAN-ów na ograniczoną liczbę instancji drzewa rozpinającego",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "PVST tworzy jedno drzewo dla całej sieci niezależnie od liczby VLAN-ów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "RSTP tworzy osobne drzewo dla każdej grupy VLAN-ów",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stp",
+    "vlan-8021q"
+   ],
+   "explanation": "**Dlaczego poprawne**\nMSTP (802.1s) mapuje grupy VLAN na kilka instancji drzewa rozpinającego.\n\n**Dlaczego błędne**\nPVST buduje po drzewie na każdy VLAN, RSTP szybciej zbiega (bez grupowania), SPB zastępuje STP routingiem.\n\n**Zapamiętaj**: MSTP = grupy VLAN na drzewo.",
+   "changes": []
+  },
+  {
+   "id": 157,
+   "question": "Nazwa procesu przekazywania wiedzy o trasach pomiędzy różnymi protokołami rutowania dynamicznego IP w routerach IP, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "redystrybucja",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "IP Route Spoofing",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "redystrybucja tras wymaga określenia metryki dla tras importowanych z innego protokołu",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "d",
+     "text": "przykładem redystrybucji jest import tras RIP do OSPF na routerze granicznym",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "Route Poisoning",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "Route Summarization",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "Split Horizon",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "protokoly-routingu"
+   ],
+   "explanation": "**Dlaczego poprawne**\nRedystrybucja to import tras z jednego protokołu do innego na routerze granicznym (ASBR), z określeniem metryki.\n\n**Dlaczego błędne**\nIP Route Spoofing to atak, route poisoning i split horizon to mechanizmy przeciw pętlom, sumaryzacja to agregacja.\n\n**Zapamiętaj**: redystrybucja = wymiana tras między protokołami.",
+   "changes": []
+  },
+  {
+   "id": 158,
+   "question": "Co określa standard IEEE 802.1Q?",
+   "options": [
+    {
+     "key": "a",
+     "text": "wirtualne sieci LAN (VLAN) budowane w środowisku transportującym ramki",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "technologię tunelowania sieci VLAN o nazwie Q-in-Q",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "private VLAN nadbudowaną nad Ethernet",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "802.1Q definiuje 4-bajtowy znacznik VLAN wstawiany do ramki Ethernet",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "802.1Q zawiera 12-bitowy identyfikator VLAN (VID)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "802.1Q definiuje protokół STP",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "802.1Q definiuje agregację łączy (LACP)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "vlan-8021q"
+   ],
+   "explanation": "**Dlaczego poprawne**\n802.1Q definiuje VLAN i 4-bajtowy tag z 12-bitowym VID wstawiany do ramki Ethernet.\n\n**Dlaczego błędne**\nQ-in-Q to 802.1ad, private VLAN to osobne rozszerzenie, STP to 802.1D, agregacja to 802.3ad.\n\n**Zapamiętaj**: 802.1Q = tagowanie VLAN.",
+   "changes": []
+  },
+  {
+   "id": 159,
+   "question": "Protokół umożliwiający konwersję adresu IP zdalnej stacji na jej adres MAC w Ethernet, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "SLIP (Serial Line Internet Protocol)",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "ARP (Address Resolution Protocol)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "MLD (Multicast Listener Discovery)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "w IPv6 funkcję ARP pełni protokół Neighbor Discovery (NDP)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "e",
+     "text": "DHCP (Dynamic Host Configuration Protocol)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "RARP – zamienia adres IP na adres MAC",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "DNS (Domain Name System)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "arp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nARP tłumaczy IP na MAC w Ethernet.\n\n**Dlaczego błędne**\nSLIP to łącze szeregowe, MLD zarządza grupami multicast IPv6, DHCP przydziela adresy, RARP działa odwrotnie, DNS zamienia nazwy na IP.\n\n**Zapamiętaj**: ARP: IP → MAC.",
+   "changes": []
+  },
+  {
+   "id": 160,
+   "question": "Dwie podwarstwy definiowane w ramach warstwy drugiej modelu ISO-OSI to odpowiednio:",
+   "options": [
+    {
+     "key": "a",
+     "text": "FDDI i CDDI",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "LAN i WAN",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "LP (Link Pulse) i PHY (Physical)",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "LLC (Logical Link Control) i MAC (Media Access Control)",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "podwarstwa MAC odpowiada za adresowanie fizyczne i dostęp do medium, a LLC za multipleksację protokołów wyższych warstw",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "TCP i UDP",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "ARP i RARP",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "model-osi"
+   ],
+   "explanation": "**Dlaczego poprawne**\nWarstwa 2 dzieli się na LLC i MAC.\n\n**Dlaczego błędne**\nFDDI i CDDI to technologie, LAN/WAN to zasięgi, LP i PHY należą do warstwy fizycznej.\n\n**Zapamiętaj**: warstwa 2 = LLC + MAC.",
+   "changes": []
+  },
+  {
+   "id": 161,
+   "question": "Rodzaj obszaru (area) w domenie OSPF (Open Shortest Path First) nie otrzymującego żadnych informacji o zewnętrznych (external) trasach rutowania OSPF, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "backbone",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "internal",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "stub area",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "NSSA",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "totally stubby area",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "virtual link",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "transit area",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "protokoly-routingu"
+   ],
+   "explanation": "**Dlaczego poprawne**\nStub area nie otrzymuje tras zewnętrznych (LSA typu 5); dostaje trasę domyślną. Totally stubby dodatkowo blokuje trasy międzyobszarowe.\n\n**Dlaczego błędne**\nBackbone i obszary zwykłe przyjmują trasy zewnętrzne, NSSA może wprowadzać własne zewnętrzne (typ 7), virtual link i transit area nie są ich typem ograniczającym.\n\n**Zapamiętaj**: stub = bez tras zewnętrznych.",
+   "changes": []
+  },
+  {
+   "id": 162,
+   "question": "Parametr o nazwie “Wielkość okna” (Window size), którego wartość przekazywana jest w datagramach potwierdzenia TCP (Transmission Control Protocol Acknowledgment) w kierunku od odbiorcy do nadawcy ma na celu:",
+   "options": [
+    {
+     "key": "a",
+     "text": "określenie długości następnego datagramu, oraz wszystkich kolejnych",
+     "correct": false
+    },
+    {
+     "key": "b",
+     "text": "określić ilość danych, jaką nadawca może w danej chwili wysłać (służy do sterowania przepływem)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "określenie ilości danych w datagramie, w którym się znajduje - i w przypadku potwierdzeń TCP nie ma żadnego znaczenia",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "informowanie o wielkości datagramu, jaką może przyjąć host w aktualnym stanie",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "wartość okna zależy od wolnego miejsca w buforze odbiorczym odbiorcy",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "okno określa maksymalną liczbę routerów, przez które może przejść segment",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "wartość okna jest ustawiana przez nadawcę i informuje odbiorcę, ile segmentów zostanie wysłanych",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tcp-udp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nWindow size w TCP informuje nadawcę, ile danych odbiorca może przyjąć (flow control), zależnie od wolnego bufora.\n\n**Dlaczego błędne**\nNie określa długości kolejnych datagramów ani nie jest bez znaczenia w ACK; nie jest ustawiane przez nadawcę.\n\n**Zapamiętaj**: okno = kontrola przepływu.",
+   "changes": []
+  },
+  {
+   "id": 163,
+   "question": "Dwa rodzaje obszarów (area) w protokole routingu dynamicznego IS-IS (Intermediate System to Intermediate System), to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "intra-area i inter-area",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "stub i backbone",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "LAN i WAN",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Autonomous System i Internal System",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "IS-IS wykorzystuje dwa poziomy routingu: Level 1 (wewnątrz obszaru) i Level 2 (między obszarami)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "f",
+     "text": "IS-IS wykorzystuje obszary stub i NSSA jako podstawowe typy obszarów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "g",
+     "text": "IS-IS działa nad IP jako protokół o numerze 89",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "IS-IS należy do protokołów wektora odległości",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "protokoly-routingu"
+   ],
+   "explanation": "**Dlaczego poprawne**\nIS-IS ma poziomy L1 (wewnątrz obszaru) i L2 (między obszarami).\n\n**Dlaczego błędne**\nStub/backbone to OSPF, LAN/WAN to zasięgi, AS to pojęcie BGP; IS-IS działa nad warstwą 2, nie IP, i jest link-state.\n\n**Zapamiętaj**: IS-IS: L1 i L2.",
+   "changes": []
+  },
+  {
+   "id": 1267,
+   "question": "Pula adresów IPv4 przewidziana dla grup IP Multicast (Klasa D adresów IPv4), to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zakres od 224.0.0.0 do 239.255.255.255.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "239.0.0.0 – 255.255.255.255",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "192.168.0.0 – 192.168.255.255",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "10.0.0.0 – 10.255.255.255",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "127.0.0.0 – 127.255.255.255",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "172.16.0.0 – 172.31.255.255",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "zakres 224.0.0.0/4 – cztery najstarsze bity adresu to 1110",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "240.0.0.0 – 255.255.255.255",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "169.254.0.0 – 169.254.255.255",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "adresowanie-ipv4"
+   ],
+   "explanation": "**Dlaczego poprawne**\nKlasa D to 224.0.0.0–239.255.255.255 (224.0.0.0/4, bity 1110).\n\n**Dlaczego błędne**\nPozostałe zakresy to prywatne (10/8, 172.16/12, 192.168/16), loopback (127/8) i klasa E lub link-local.\n\n**Zapamiętaj**: multicast = 224/4.",
+   "changes": []
+  },
+  {
+   "id": 1268,
+   "question": "Przykłady polskich nazw warstw w stosowanym w sieciach komputerowych modelu ISO OSI RM (ISO Open Systems Interconnection Reference Model), to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Fizyczna, Łącza danych, Sieciowa, Transportowa, Sesji, Prezentacji, Aplikacji.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "Warstwa sesji",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Warstwa sprzętowa",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "Warstwa internetowa",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Warstwa 3 to warstwa sieciowa (np. protokół IP).",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Model ISO/OSI ma 4 warstwy.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "Warstwa transportowa",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Warstwa dostępu do sieci",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Warstwa łączności",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "model-osi"
+   ],
+   "explanation": "**Dlaczego poprawne**\nNazwy polskie: fizyczna, łącza danych, sieciowa, transportowa, sesji, prezentacji, aplikacji; warstwa 3 to sieciowa (IP); warstwa sesji jest jedną z nich.\n\n**Dlaczego błędne**\nWarstwa sprzętowa, dostępu do sieci, łączności i internetowa (TCP/IP) nie są warstwami OSI; model ma 7 warstw.\n\n**Zapamiętaj**: OSI: 7 warstw.",
+   "changes": [
+    "b: false -> true, bo „Warstwa sesji” jest polską nazwą jednej z warstw OSI"
+   ]
+  },
+  {
+   "id": 1269,
+   "question": "Protokół automatycznie eliminujący możliwość zapętlenia transmisji ramki typu broadcast w sieci Ethernet (powstania tzw. broadcast storm), to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Blokuje redundantne ścieżki w sieci Ethernet, tworząc strukturę drzewa bez pętli.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "STP (Spanning Tree Protocol)",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "DHCP",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "BGP",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Służy do automatycznej konfiguracji adresów IP.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Działa w warstwie 3 modelu OSI.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "IEEE 802.1D",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "OSPF",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "RIP",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "RSTP (Rapid Spanning Tree Protocol) – szybsza wersja tego mechanizmu",
+     "correct": true,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "stp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSTP (802.1D) blokuje redundantne ścieżki i tworzy drzewo bez pętli; RSTP to jego szybsza wersja.\n\n**Dlaczego błędne**\nDHCP, BGP i OSPF/RIP to inne zagadnienia; STP działa w warstwie 2, nie 3, i nie konfiguruje adresów IP.\n\n**Zapamiętaj**: STP = brak pętli L2.",
+   "changes": [
+    "b: false -> true, bo STP to nazwa protokołu będącego odpowiedzią na pytanie"
+   ]
+  },
+  {
+   "id": 1270,
+   "question": "Sieć 210.210.210.192/26:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Zakres adresów użytkowych: 210.210.210.193 - 210.210.210.254.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "210.210.210.210",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "210.210.210.190",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "210.210.210.255",
+     "correct": true
+    },
+    {
+     "key": "e",
+     "text": "Adres rozgłoszeniowy to 210.210.210.255.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Maska podsieci to 255.255.255.0.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "liczba adresów użytkowych w tej sieci to 62",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "adres sieci to 210.210.210.192",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "adres rozgłoszeniowy to 210.210.210.192",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "zakres adresów użytkowych: 210.210.210.192 – 210.210.210.255",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "adresowanie-ipv4"
+   ],
+   "explanation": "**Dlaczego poprawne**\n/26 = maska 255.255.255.192, 64 adresy: sieć .192, hosty .193–.254 (62), broadcast .255; .210 należy do sieci.\n\n**Dlaczego błędne**\nMaska 255.255.255.0 to /24; .190 leży w sieci .128/26.\n\n**Zapamiętaj**: /26: blok 64.",
+   "changes": [
+    "b: false -> true, bo 210.210.210.210 mieści się w zakresie użytkowym .193–.254 (niejednoznaczny fragment)",
+    "d: false -> true, bo 210.210.210.255 to adres rozgłoszeniowy sieci, zgodnie z opcją e"
+   ]
+  },
+  {
+   "id": 1271,
+   "question": "Jakiej techniki przesyłania ruchu sieciowego poprzez ruter IP użyjesz, gdy w sieciach IP organizacji, w której pracujesz, zabrakło adresów IPv4 dla urządzeń, a dodatkowo urządzenia te nie powinny być bezpośrednio dostępne i adresowalne z Internetu?",
+   "options": [
+    {
+     "key": "a",
+     "text": "NAT (Network Address Translation).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "RPF (Reverse Path Forwarding)",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "DNS",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "ICMP",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "ARP",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "OSPF",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "PAT (NAT overload) umożliwia współdzielenie jednego adresu publicznego przez wiele hostów dzięki translacji portów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "BGP",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "VLAN",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "nat"
+   ],
+   "explanation": "**Dlaczego poprawne**\nNAT/PAT tłumaczy adresy prywatne na publiczne, oszczędza adresy IPv4 i ukrywa hosty przed bezpośrednim adresowaniem z Internetu.\n\n**Dlaczego błędne**\nRPF, DNS, ICMP, ARP, OSPF, BGP i VLAN nie rozwiązują braku adresów ani ukrycia.\n\n**Zapamiętaj**: brak IPv4 + ukrycie = NAT.",
+   "changes": []
+  },
+  {
+   "id": 1272,
+   "question": "Tak zwana sól (ang. salt), czyli dane losowe dodawane do hasła podczas obliczania funkcji skrótu przechowywanej w systemach informatycznych, ma na celu:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Unikalny ciąg znaków dodawany do hasła przed haszowaniem.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "utrudnienie sortowania haseł przez użytkowników.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "skrócenie czasu obliczania funkcji skrótu.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "umożliwienie odzyskania hasła w postaci jawnej.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Chroni przed atakami z użyciem Rainbow Tables.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest przechowywana w bezpiecznym module sprzętowym (HSM).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "sól sprawia, że identyczne hasła różnych użytkowników dają różne skróty",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "sól szyfruje hasło kluczem symetrycznym, dzięki czemu można je odszyfrować",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "sól jest dodawana do skrótu po jego obliczeniu",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sol-hasla"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSól jest losowa/unikalna, dodawana przed haszowaniem; przeciwdziała rainbow tables, a identyczne hasła dają różne skróty.\n\n**Dlaczego błędne**\nNie utrudnia sortowania, nie skraca obliczeń, nie umożliwia odzyskania hasła; sól zwykle jest jawna i trzymana obok skrótu, nie w HSM.\n\n**Zapamiętaj**: sól = unikalne ziarno na hasło.",
+   "changes": []
+  },
+  {
+   "id": 1273,
+   "question": "Standard definiujący schemat dla certyfikatów służących do budowania struktury hierarchicznej infrastruktury klucza publicznego, stosowany na przykład w zabezpieczonych technologiach webowych, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "X.509",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "H.323",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "PKI-Standard",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "SSL-Cert",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "AES-256",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "RSA-4096",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "certyfikat X.509 zawiera m.in. klucz publiczny podmiotu, dane wystawcy i podpis urzędu certyfikacji",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "SNMPv3",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "Kerberos",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "pki-x509"
+   ],
+   "explanation": "**Dlaczego poprawne**\nX.509 definiuje format certyfikatów w hierarchicznym PKI (TLS).\n\n**Dlaczego błędne**\nH.323 to telefonia IP; AES i RSA to algorytmy; PKI-Standard i SSL-Cert nie są standardami.\n\n**Zapamiętaj**: certyfikat = X.509.",
+   "changes": []
+  },
+  {
+   "id": 1274,
+   "question": "Protokół UDP:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Jest bezpołączeniowy, nie gwarantuje dostarczenia pakietów.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "definiuje 16-to bitową adresację gniazd.",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "zapewnia retransmisję zgubionych danych.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wymaga nawiązania połączenia.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Ma mniejszy narzut nagłówka niż TCP.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest stosowany w protokole HTTP/1.1.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "UDP jest często stosowany w DNS i strumieniowaniu multimediów",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "UDP zapewnia zachowanie kolejności datagramów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "UDP realizuje sterowanie przepływem oknem przesuwnym",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tcp-udp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nUDP jest bezpołączeniowy, bez gwarancji dostarczenia, ma 16-bitowe porty i mniejszy nagłówek (8 B) niż TCP (min 20 B).\n\n**Dlaczego błędne**\nNie retransmituje, nie wymaga połączenia, HTTP/1.1 używa TCP; nie gwarantuje kolejności.\n\n**Zapamiętaj**: UDP: lekki i zawodny.",
+   "changes": [
+    "b: false -> true, bo porty UDP mają 16 bitów (adresy gniazd)"
+   ]
+  },
+  {
+   "id": 1275,
+   "question": "Zapisana liczbowo wartość maski podsieci IPv4 dla adresu sieci: 5.5.5.0/30, to",
+   "options": [
+    {
+     "key": "a",
+     "text": "255.255.255.252",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "255.255.255.0",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "255.255.255.248",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "255.255.255.192",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "255.255.255.254",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "255.255.255.128",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "sieć /30 ma 4 adresy, z czego 2 użytkowe",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "255.255.255.240",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "255.255.255.224",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "adresowanie-ipv4"
+   ],
+   "explanation": "**Dlaczego poprawne**\n/30 = 30 jedynek: 255.255.255.252, 4 adresy, 2 użytkowe.\n\n**Dlaczego błędne**\n255.255.255.0 to /24, .248 to /29, .192 to /26, .254 to /31, .128 to /25.\n\n**Zapamiętaj**: /30 = .252.",
+   "changes": []
+  },
+  {
+   "id": 1276,
+   "question": "Czy protokół TCP, stosowany w komunikacji w sieciach komputerowych, wymusza swoimi uwarunkowaniami technicznymi limit długości transmisji danych, przypadających na jedno połączenie?",
+   "options": [
+    {
+     "key": "a",
+     "text": "TCP traktuje dane jako strumień bajtów bez narzuconego limitu całkowitej długości.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "tak, jest to zawsze 4GB.",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "zależy od wersji systemu operacyjnego.",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "wynosi 64 KB na segment.",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Wynosi 2^64 bajtów.",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Jest ograniczony rozmiarem okna (window size).",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "numery sekwencyjne TCP mają 32 bity i po wyczerpaniu zakresu zawijają się, więc nie ograniczają łącznej ilości danych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "limit wynika z 16-bitowego pola długości w nagłówku TCP",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "TCP ogranicza połączenie do 65535 bajtów łącznie",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "tcp-udp"
+   ],
+   "explanation": "**Dlaczego poprawne**\nTCP to strumień bajtów; numery sekwencyjne (32 bity) zawijają się, więc nie ma limitu połączenia.\n\n**Dlaczego błędne**\nŻaden z limitów (4 GB, 64 KB, 2^64, okno, OS) nie wynika z TCP; okno ogranicza tylko ilość danych w locie.\n\n**Zapamiętaj**: TCP: strumień bez limitu.",
+   "changes": []
+  },
+  {
+   "id": 1277,
+   "question": "Długość unikatowego adresu MAC (Media Access Control), stosowanego w interfejsach NIC (Network Interface Card) warstwy 2 ISO OSI (na przykład w Ethernet), to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "48 bitów (6 bajtów).",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "32 bity",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "64 bity",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "128 bitów",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "24 bity",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "16 bitów",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "pierwsze 24 bity adresu MAC to OUI identyfikujący producenta",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "40 bitów",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "96 bitów",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ethernet-csma-cd"
+   ],
+   "explanation": "**Dlaczego poprawne**\nMAC ma 48 bitów (6 B); pierwsze 24 to OUI producenta.\n\n**Dlaczego błędne**\n32 bity to IPv4, 128 to IPv6, 64 to EUI-64; pozostałe wartości nie występują.\n\n**Zapamiętaj**: MAC = 48 bitów.",
+   "changes": []
+  },
+  {
+   "id": 1278,
+   "question": "Światłowód, w którym wiązka światła o danej (takiej samej) długości fali może przemieszczać się tylko jedną drogą i nie można przesłać kilku wiązek o takiej samej długości fali przez ten światłowód jednocześnie, oznaczamy określeniem:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Posiada bardzo cienki rdzeń, co pozwala na przesyłanie tylko jednego modu światła.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "jednomodowy",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "wielomodowy",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "gradientowy",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Pozwala na transmisję na znacznie większe odległości niż wielomodowy.",
+     "correct": true
+    },
+    {
+     "key": "f",
+     "text": "Jest tańszy w instalacji niż skrętka miedziana.",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "światłowód jednomodowy ma rdzeń o średnicy ok. 9 µm",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "światłowód wielomodowy ma cieńszy rdzeń niż jednomodowy",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "w światłowodzie jednomodowym dyspersja modowa jest głównym czynnikiem ograniczającym zasięg",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "swiatlowody"
+   ],
+   "explanation": "**Dlaczego poprawne**\nJednomodowy: cienki rdzeń (~9 µm), jeden mod, duże zasięgi.\n\n**Dlaczego błędne**\nWielomodowy ma grubszy rdzeń, gradientowy to profil współczynnika załamania; światłowód nie jest tańszy od skrętki.\n\n**Zapamiętaj**: single-mode = cienki rdzeń.",
+   "changes": [
+    "b: false -> true, bo nazwa „jednomodowy” to odpowiedź na pytanie o nazwę światłowodu"
+   ]
+  },
+  {
+   "id": 1279,
+   "question": "Przykłady wykorzystywanych obecnie szeregowych magistral cyfrowych, to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "SPI, I2C, UART, USB, CAN.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "SPI, I2C",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "PCI Express",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "ATA",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "SCSI",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "ISA",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "UART przesyła bity kolejno po jednej linii danych",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "RS-485",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "IEEE 1284 (port LPT)",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "GPIB (IEEE 488)",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "magistrale-szeregowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\nSPI, I2C, UART, USB, CAN i PCIe są szeregowe; RS-485 też.\n\n**Dlaczego błędne**\nATA (PATA), SCSI (równoległy), ISA, PCI, LPT i GPIB są równoległe.\n\n**Zapamiętaj**: szeregowe: jeden bit po drugim.",
+   "changes": [
+    "b: false -> true, bo SPI i I2C są szeregowymi magistralami",
+    "c: false -> true, bo PCI Express to szeregowa magistrala punkt-punkt"
+   ]
+  },
+  {
+   "id": 1280,
+   "question": "Przykłady specyfikacji protokołów komunikacyjnych dla sieci bezprzewodowych lub systemów komunikacji bezprzewodowej to:",
+   "options": [
+    {
+     "key": "a",
+     "text": "Wi-Fi (802.11), Bluetooth, ZigBee, LoRaWAN, 5G.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "LoRaWAN",
+     "correct": true
+    },
+    {
+     "key": "c",
+     "text": "Ethernet",
+     "correct": false
+    },
+    {
+     "key": "d",
+     "text": "RS-232",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "Token Ring",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "Frame Relay",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "IEEE 802.15.4 (podstawa ZigBee)",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "Fibre Channel",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "HDLC",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "sieci-bezprzewodowe"
+   ],
+   "explanation": "**Dlaczego poprawne**\nWi-Fi, Bluetooth, ZigBee, LoRaWAN i 5G są bezprzewodowe.\n\n**Dlaczego błędne**\nEthernet, RS-232, Token Ring, Frame Relay, Fibre Channel i HDLC są przewodowe.\n\n**Zapamiętaj**: bezprzewodowe: radio.",
+   "changes": [
+    "b: false -> true, bo LoRaWAN to protokół bezprzewodowy"
+   ]
+  },
+  {
+   "id": 1281,
+   "question": "Adres IPv6 w sieci 5::0/64:",
+   "options": [
+    {
+     "key": "a",
+     "text": "5::1, 5::abcd, itp.",
+     "correct": true
+    },
+    {
+     "key": "b",
+     "text": "1::1",
+     "correct": false
+    },
+    {
+     "key": "c",
+     "text": "5:0:0:0:0:0:0:1",
+     "correct": true
+    },
+    {
+     "key": "d",
+     "text": "::5",
+     "correct": false
+    },
+    {
+     "key": "e",
+     "text": "5::g123",
+     "correct": false
+    },
+    {
+     "key": "f",
+     "text": "5::1:2:3:4:5",
+     "correct": false
+    },
+    {
+     "key": "g",
+     "text": "adres 5::ffff:1234 należy do tej sieci",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "h",
+     "text": "prefiks /64 oznacza, że pierwsze 64 bity są wspólne dla sieci, a pozostałe 64 identyfikują interfejs",
+     "correct": true,
+     "extra": true
+    },
+    {
+     "key": "i",
+     "text": "5:0:0:1::1",
+     "correct": false,
+     "extra": true
+    },
+    {
+     "key": "j",
+     "text": "fe80::5",
+     "correct": false,
+     "extra": true
+    }
+   ],
+   "terms": [
+    "ipv6"
+   ],
+   "explanation": "**Dlaczego poprawne**\n5::0/64 obejmuje adresy 5:0:0:0:x:x:x:x; 5::1 = 5:0:0:0:0:0:0:1.\n\n**Dlaczego błędne**\n1::1, ::5 i 5:0:0:1::1 mają inny prefiks, 5::g123 jest niepoprawny, 5::1:2:3:4:5 ma prefiks 5:0:0:1.\n\n**Zapamiętaj**: /64: pierwsze 4 hextety.",
+   "changes": [
+    "c: false -> true, bo 5:0:0:0:0:0:0:1 to zapis rozwinięty 5::1, należący do sieci"
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "id": "num-zagadnienie-poczatkowe",
+   "term": "Schematy dla zagadnienia początkowego (numerical initial value problem)",
+   "topic": "networks",
+   "short": "Schemat numeryczny przybliża rozwiązanie równania różniczkowego krok po kroku od zadanego warunku początkowego.",
+   "details": "Rozwiązanie wyznaczamy iteracyjnie z warunku początkowego, krok po kroku w czasie. Schemat musi być **zgodny** (aproksymacja różnicowa dąży do równania przy h→0), **stabilny** (współczynnik propagacji błędu < 1 – błędy nie rosną), dokładny oraz efektywny czasowo i pamięciowo. Wg twierdzenia Laxa: zgodność + stabilność ⇒ zbieżność. Algorytm powinien być dobrze uwarunkowany (małe wskaźniki uwarunkowania). **Na egzaminie uważaj na:** warunki brzegowe dotyczą zagadnień brzegowych; zgodność sama nie wystarcza; współczynnik propagacji > 1 oznacza niestabilność. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "model-osi"
+   ]
+  },
+  {
+   "id": "ethernet-csma-cd",
+   "term": "Ethernet, CSMA/CD i pełny dupleks (Ethernet duplex)",
+   "topic": "networks",
+   "short": "Ethernet to standard LAN, w którym współdzielone medium wymaga CSMA/CD, a pełny dupleks eliminuje kolizje.",
+   "details": "W półdupleksie stacje nasłuchują nośną, nadają, wykrywają kolizję i wstrzymują się losowo (backoff). Ograniczenie długości segmentu wynika z czasu propagacji: kolizja musi zostać wykryta w trakcie nadawania minimalnej ramki. W pełnym dupleksie (przełącznik, osobne pary) kolizji nie ma, CSMA/CD jest wyłączony, przepustowość jest dwukrotnie większa (nadawanie i odbiór jednocześnie), a długość ogranicza tylko medium. Adres MAC ma 48 bitów, z czego pierwsze 24 to OUI. **Na egzaminie uważaj na:** huby działają tylko w półdupleksie; pełny dupleks nie zwiększa prędkości pojedynczego kierunku. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "model-osi",
+    "ethernet-media"
+   ]
+  },
+  {
+   "id": "model-osi",
+   "term": "Model odniesienia OSI/ISO (OSI reference model)",
+   "topic": "networks",
+   "short": "Siedmiowarstwowy model opisujący zadania warstw komunikacji sieciowej.",
+   "details": "Warstwy: fizyczna, łącza danych (LLC i MAC), sieciowa, transportowa, sesji, prezentacji, aplikacji. Każda warstwa świadczy usługi wyższej i komunikuje się logicznie z równorzędną, co pozwala rozwijać sprzęt i oprogramowanie niezależnie. Model nie definiuje protokołów, tylko zadania (IP, TCP należą do stosu TCP/IP). LAN i WAN różnią się warstwami 1 i 2; warstwa sieciowa jest wspólna. **Na egzaminie uważaj na:** OSI ma 7, TCP/IP 4 warstwy; „warstwa sprzętowa” i „internetowa” nie należą do OSI. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "ipv4-icmp-ttl",
+    "ethernet-csma-cd"
+   ]
+  },
+  {
+   "id": "ethernet-media",
+   "term": "Media transmisyjne Ethernet (UTP, Gigabit Ethernet)",
+   "topic": "networks",
+   "short": "Rodzaje kabli i kodowań pozwalających uzyskać różne prędkości Ethernetu.",
+   "details": "100BASE-TX używa 2 par UTP kat. 5. 1000BASE-T używa wszystkich 4 par jednocześnie w obu kierunkach z kodowaniem PAM-5, więc działa na kat. 5e. Wyższą przepustowość uzyskuje się więc przez kodowanie i równoległość, a nie zawsze lepszym kablem. Ograniczenie długości segmentu miedzi to 100 m. **Na egzaminie uważaj na:** 1 Gb/s nie wymaga światłowodu ani lepszego kabla niż 5e. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "kodowanie-sygnalow",
+    "swiatlowody"
+   ]
+  },
+  {
+   "id": "kodowanie-sygnalow",
+   "term": "Kodowanie sygnałów (line coding)",
+   "topic": "networks",
+   "short": "Sposób odwzorowania bitów na sygnał w medium warstwy fizycznej.",
+   "details": "Przykłady: NRZ, Manchester, 4B/5B, PAM-5. Kodowanie wpływa na przepustowość (bity na symbol), zależy od medium i może zapewnić samosynchronizację (Manchester – zbocze w środku bitu, kosztem 2× większego pasma). NRZ przy długich seriach identycznych bitów traci synchronizację. To zagadnienie warstwy fizycznej. **Na egzaminie uważaj na:** kodowanie nie jest sprawą warstwy sieciowej; Manchester nie ma sprawności 100%. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "ethernet-media"
+   ]
+  },
+  {
+   "id": "vlan-8021q",
+   "term": "Wirtualne sieci lokalne VLAN i IEEE 802.1Q (VLAN)",
+   "topic": "networks",
+   "short": "VLAN dzieli fizyczną sieć L2 na osobne domeny rozgłoszeniowe.",
+   "details": "VLAN definiuje się po portach, adresach MAC lub protokole/adresach logicznych. Ramki między przełącznikami niesie trunk z 4-bajtowym znacznikiem 802.1Q (12-bitowy VID, 3-bitowe PCP). Każdy VLAN to osobna domena rozgłoszeniowa, co poprawia bezpieczeństwo; ruch między VLAN wymaga routera/L3. Q-in-Q to 802.1ad. **Na egzaminie uważaj na:** VLAN nie zastępuje STP ani ARP, nie przydziela IP. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "stp",
+    "arp"
+   ]
+  },
+  {
+   "id": "stp",
+   "term": "Drzewo rozpinające STP/RSTP/MSTP (Spanning Tree Protocol)",
+   "topic": "networks",
+   "short": "Protokół L2 blokujący nadmiarowe łącza, aby uniknąć pętli i burz rozgłoszeniowych.",
+   "details": "Mostki wybierają root bridge (najniższy Bridge ID), każdy wybiera port do roota, a pozostałe redundantne porty są blokowane. Powstaje drzewo bez pętli (802.1D). RSTP (802.1w) zbiega szybciej, PVST tworzy drzewo na VLAN, MSTP (802.1s) na grupę VLAN. **Na egzaminie uważaj na:** STP działa w warstwie 2, nie równoważy obciążenia i nie wybiera routera głównego. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "vlan-8021q"
+   ]
+  },
+  {
+   "id": "arp",
+   "term": "Protokół ARP (Address Resolution Protocol)",
+   "topic": "networks",
+   "short": "ARP odwzorowuje adres IP na adres MAC w sieci lokalnej.",
+   "details": "Host wysyła broadcastem zapytanie „kto ma IP X?”, właściciel odpowiada unicastem swoim MAC-iem; wynik trafia do tablicy ARP. Dla hosta spoza sieci używa się MAC bramy. RARP działa odwrotnie, w IPv6 funkcję przejmuje NDP. **Na egzaminie uważaj na:** ARP nie przydziela IP, nie wyznacza tras, działa w warstwie 2/3, tylko lokalnie. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "adresowanie-ipv4"
+   ]
+  },
+  {
+   "id": "routing-ip",
+   "term": "Routing IP i Longest Prefix Match",
+   "topic": "networks",
+   "short": "Router wybiera trasę na podstawie dopasowania adresu docelowego do prefiksów w tablicy.",
+   "details": "Spośród pasujących wpisów wybierany jest ten o najdłuższym prefiksie; trasa domyślna to 0.0.0.0/0 (::/0 w IPv6). Sieci bezpośrednio podłączone router zna automatycznie. Stacja potrzebuje adresu IP i bramy domyślnej. **Na egzaminie uważaj na:** nie wygrywa najkrótszy prefiks; trasa statyczna do sieci bezpośrednio podłączonych jest zbędna; Proxy ARP nie jest wymagany. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "adresowanie-ipv4",
+    "protokoly-routingu"
+   ]
+  },
+  {
+   "id": "ipv4-icmp-ttl",
+   "term": "IPv4, TTL i ICMP (IPv4 header)",
+   "topic": "networks",
+   "short": "IPv4 to bezpołączeniowy, zawodny protokół best effort; TTL i ICMP wspierają jego działanie.",
+   "details": "Nagłówek: suma kontrolna tylko nagłówka, TTL (8 bit, zmniejszany o 1 w każdym routerze, 0 ⇒ odrzucenie i ICMP Time Exceeded), ToS, fragmentacja (u nadawcy i w routerach, składanie u odbiorcy), Total Length 16 bitów ⇒ max 65535 B. ICMP służy diagnostyce i sygnalizacji błędów (ping, traceroute). **Na egzaminie uważaj na:** IPv4 nie potwierdza dostarczenia; TTL to skoki, nie sekundy; ICMP nie jest niezawodny. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "tcp-udp",
+    "routing-ip"
+   ]
+  },
+  {
+   "id": "protokoly-routingu",
+   "term": "Protokoły routingu dynamicznego (RIP, OSPF, IGRP/EIGRP, IS-IS)",
+   "topic": "networks",
+   "short": "Protokoły wymieniające informacje o trasach między routerami.",
+   "details": "RIP – liczba skoków; OSPF – link-state, koszt z pasma, obszary (backbone, stub, totally stubby, NSSA); IGRP/EIGRP – metryka złożona (pasmo, opóźnienie, niezawodność, obciążenie); IS-IS – poziomy L1/L2. Redystrybucja przenosi trasy między protokołami. **Na egzaminie uważaj na:** niezawodność jest w metryce IGRP/EIGRP, nie RIP/OSPF; stub nie przyjmuje tras zewnętrznych. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "bgp",
+    "routing-ip"
+   ]
+  },
+  {
+   "id": "tcp-udp",
+   "term": "Protokoły TCP i UDP (transport layer)",
+   "topic": "networks",
+   "short": "Protokoły warstwy transportowej: TCP niezawodny, UDP prosty bezpołączeniowy.",
+   "details": "UDP: 8-bajtowy nagłówek, porty 16-bitowe, bez gwarancji, kolejności i retransmisji. TCP: połączeniowy, strumień bajtów bez limitu, numery sekwencyjne 32-bit, potwierdzenia, okno (Window size – flow control). **Na egzaminie uważaj na:** UDP nie fragmentuje; okno to kontrola przepływu; HTTP/1.1 używa TCP. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "ipv4-icmp-ttl"
+   ]
+  },
+  {
+   "id": "adresowanie-ipv4",
+   "term": "Adresowanie IPv4 i maski (CIDR)",
+   "topic": "networks",
+   "short": "Adres IPv4 to 32 bity dzielone maską na część sieci i hosta.",
+   "details": "Adres sieci – host bits 0, broadcast – host bits 1. /26 = 255.255.255.192 (62 hosty), /30 = .252 (2 hosty). Multicast: 224.0.0.0/4. **Na egzaminie uważaj na:** blok /26 ma 64 adresy; nie mylić sieci z broadcastem. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "routing-ip"
+   ]
+  },
+  {
+   "id": "ipv6",
+   "term": "Adresowanie IPv6 (IPv6 addressing)",
+   "topic": "networks",
+   "short": "IPv6 ma 128-bitowe adresy zapisywane szesnastkowo.",
+   "details": "Skrócenie :: zastępuje ciąg zer (raz). ::/0 to trasa domyślna, ::1 loopback, fe80::/10 link-local, ff02::1 multicast. /64 – 64 bity sieci, 64 interfejsu. **Na egzaminie uważaj na:** 5::1 to 5:0:0:0:0:0:0:1; znaki spoza 0–f są niepoprawne. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "adresowanie-ipv4"
+   ]
+  },
+  {
+   "id": "bgp",
+   "term": "BGP i Route Reflector (Border Gateway Protocol)",
+   "topic": "networks",
+   "short": "BGP to protokół routingu między systemami autonomicznymi.",
+   "details": "iBGP wymaga pełnej siatki sesji; Route Reflector odbija trasy klientom (RRC), eliminując full-mesh. **Na egzaminie uważaj na:** eBGP multihop i agregacja nie zastępują RR. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "protokoly-routingu"
+   ]
+  },
+  {
+   "id": "qos-8021p",
+   "term": "QoS w Ethernet IEEE 802.1p (CoS)",
+   "topic": "networks",
+   "short": "802.1p oznacza priorytet ramki w polu 3-bitowym.",
+   "details": "Pole PCP w znaczniku 802.1Q ma 3 bity ⇒ 8 klas CoS (0–7). **Na egzaminie uważaj na:** liczba klas to 8, nie 7 ani 16. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "vlan-8021q"
+   ]
+  },
+  {
+   "id": "nat",
+   "term": "NAT/PAT (Network Address Translation)",
+   "topic": "networks",
+   "short": "NAT tłumaczy adresy prywatne na publiczne.",
+   "details": "Router podmienia adres źródłowy; PAT dodatkowo porty, dzięki czemu wiele hostów współdzieli jeden adres. Oszczędza IPv4 i ukrywa hosty przed Internetem. **Na egzaminie uważaj na:** NAT nie jest firewallem; DNS i ARP nie rozwiązują braku adresów. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "adresowanie-ipv4"
+   ]
+  },
+  {
+   "id": "sol-hasla",
+   "term": "Sól w haszowaniu haseł (salt)",
+   "topic": "networks",
+   "short": "Sól to losowa wartość dodawana do hasła przed haszowaniem.",
+   "details": "Skrót H(sól‖hasło); sól jest unikalna, jawna i przechowywana obok skrótu. Chroni przed rainbow tables, a identyczne hasła dają różne skróty. **Na egzaminie uważaj na:** sól nie umożliwia odzyskania hasła i nie skraca obliczeń. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "pki-x509"
+   ]
+  },
+  {
+   "id": "pki-x509",
+   "term": "Certyfikaty X.509 i PKI (public key infrastructure)",
+   "topic": "networks",
+   "short": "X.509 definiuje format certyfikatów w hierarchicznym PKI.",
+   "details": "Certyfikat zawiera klucz publiczny podmiotu, dane wystawcy i podpis CA; łańcuch zaufania prowadzi do root CA. Używany w TLS/HTTPS. **Na egzaminie uważaj na:** AES i RSA to algorytmy, nie standardy certyfikatów. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "sol-hasla"
+   ]
+  },
+  {
+   "id": "swiatlowody",
+   "term": "Światłowody jedno- i wielomodowe (fiber optics)",
+   "topic": "networks",
+   "short": "Światłowód jednomodowy przenosi jeden mod światła.",
+   "details": "Jednomodowy: rdzeń ok. 9 µm, jeden mod, duże zasięgi. Wielomodowy: rdzeń 50/62,5 µm, wiele modów, dyspersja modowa ogranicza zasięg. Gradientowy to profil współczynnika załamania. **Na egzaminie uważaj na:** wielomodowy ma grubszy rdzeń; światłowód nie jest tańszy od skrętki. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "ethernet-media"
+   ]
+  },
+  {
+   "id": "magistrale-szeregowe",
+   "term": "Szeregowe magistrale cyfrowe (serial buses)",
+   "topic": "networks",
+   "short": "Magistrale przesyłające bity kolejno po jednej linii.",
+   "details": "SPI, I2C, UART, USB, CAN, RS-485, PCIe – szeregowe. PATA, SCSI (równoległy), ISA, PCI i LPT – równoległe. **Na egzaminie uważaj na:** nie mylić PATA z SATA. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "kodowanie-sygnalow"
+   ]
+  },
+  {
+   "id": "sieci-bezprzewodowe",
+   "term": "Technologie bezprzewodowe (Wi-Fi, Bluetooth, ZigBee, LoRaWAN, 5G)",
+   "topic": "networks",
+   "short": "Standardy komunikacji radiowej dla sieci bezprzewodowych.",
+   "details": "Wi-Fi 802.11, Bluetooth, ZigBee (802.15.4), LoRaWAN, 5G. Ethernet, RS-232, Token Ring i Frame Relay są przewodowe. **Na egzaminie uważaj na:** LoRaWAN jest bezprzewodowy. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "related": [
+    "magistrale-szeregowe"
+   ]
+  }
+ ]
+}
