@@ -1,0 +1,102 @@
+{
+ "options": [
+  {
+   "id": 107,
+   "key": "b",
+   "correct": true,
+   "text": "tak, m.in. wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
+   "reason": "„wtedy i tylko wtedy” było fałszywe (każda funkcja liniowa względem parametrów daje układ liniowy)"
+  },
+  {
+   "id": 128,
+   "key": "a",
+   "correct": false,
+   "reason": "LU to macierzowy zapis eliminacji Gaussa — te same własności numeryczne"
+  },
+  {
+   "id": 121,
+   "key": "c",
+   "text": "zastosować do interpolacji miejsca zerowe wielomianów Czebyszewa",
+   "reason": "literówka"
+  },
+  {
+   "id": 121,
+   "key": "g",
+   "text": "pozostawić węzły równoodległe i zwiększyć precyzję arytmetyki",
+   "reason": "niezrozumiałe sformułowanie"
+  }
+ ],
+ "remove": [
+  {
+   "id": 109,
+   "key": "c",
+   "reason": "zdanie prawdziwe, ale nie jest odpowiedzią na pytanie o warunek konieczny i wystarczający — niejednoznaczne"
+  }
+ ],
+ "questions": [
+  {
+   "id": 1037,
+   "question": "Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754). Dodatnie liczby rzeczywiste z zakresu od ^^VALMIN = 2.2 \\cdot 10^{-308}^^ do ^^VALMAX = 1.8 \\cdot 10^{308}^^ są zapisywane w formacie podwójnej precyzji z względnym błędem zaokrąglenia nie większym od ^^\\varepsilon = 2^{-52} \\approx 2.2 \\cdot 10^{-16}^^. Które zdania są prawdziwe?",
+   "reason": "zniekształcone wzory"
+  },
+  {
+   "id": 1038,
+   "question": "Niech ^^a, b, c^^ będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową ^^\\varepsilon^^. Liczba ^^c^^ jest wynikiem operacji arytmetycznej ^^\\circ^^ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym. Niech ^^\\delta_c^^ oznacza błąd względny (jego wartość bezwzględną) wyniku operacji ^^c = a \\circ b^^. W których przypadkach błąd wyniku ^^\\delta_c^^ może być wielokrotnie (o kilka rzędów) większy od błędów argumentów ^^a^^ i ^^b^^, czyli ^^\\delta_c \\gg 2\\varepsilon^^?",
+   "reason": "zniekształcone symbole"
+  },
+  {
+   "id": 1039,
+   "question": "Obliczanie pierwiastków ciągłej funkcji ^^f^^ jednej zmiennej rzeczywistej ^^x^^ metodami iteracyjnymi. Wartości funkcji dla pierwszych dwóch wyrazów ciągu iteracyjnego ^^x_0^^ i ^^x_1^^ spełniają nierówność ^^f(x_0)f(x_1) < 0^^. Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę:",
+   "reason": "zniekształcone symbole"
+  },
+  {
+   "id": 1040,
+   "question": "Należy rozwiązać układ równań liniowych ^^Ax = b^^ z rzeczywistą, nieosobliwą macierzą ^^A^^ wymiaru ^^n \\times n^^, ^^n \\gg 1^^. Złożoność obliczeniowa algorytmu wyznaczenia rozwiązania jest mniejsza (w stosunku do metody eliminacji Gaussa), jeżeli: (zaznacz zdania prawdziwe)",
+   "reason": "zniekształcone symbole, urwane zdanie"
+  },
+  {
+   "id": 1045,
+   "question": "Szukanie minimum funkcji wielu zmiennych. Przyjmijmy, że funkcja, której minimum należy znaleźć, jest „funkcją kwadratową”, a dokładniej ma postać ^^F(x) = x^TAx + b^Tx + c^^, ^^x \\in \\mathbb{R}^n^^, gdzie A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła. ^^k^^ — liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja ^^F^^ ma minimum. Które zdania są prawdziwe?",
+   "reason": "zniekształcone wzory"
+  },
+  {
+   "id": 1046,
+   "question": "Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares). Dane: 20 pomiarów położenia ^^s_i^^ pojazdu w ruchu prostoliniowym w chwilach ^^t_i^^, ^^i = 1, 2, \\dots, 20^^. Funkcja aproksymująca zależność położenia od czasu: ^^s(t) = a_0 + a_1 t + a_2 t^2^^. Które zdania są prawdziwe?",
+   "reason": "zniekształcone wzory"
+  },
+  {
+   "id": 1047,
+   "question": "Metoda ilorazów różnicowych. Zależność błędu przybliżania wartości pochodnej funkcji analitycznej ^^f^^ w punkcie ^^x \\in \\mathbb{R}^^ metodą ilorazów różnicowych według formuły dwupunktowej od kroku ^^h^^ można zapisać wzorem ^^\\varepsilon(h) = \\left| \\frac{f(x+h)-f(x)}{h} - f'(x) \\right|^^. Które zdania są prawdziwe?",
+   "reason": "zniekształcony wzór"
+  },
+  {
+   "id": 1050,
+   "question": "Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną ^^m = a_0 + a_1 h^^. Warunki zgodności danych z funkcją aproksymującą zapisujemy jako układ równań ^^a_0 + a_1 h_i = m_i^^, ^^i = 1, \\dots, 100^^. Które zdania są prawdziwe?",
+   "reason": "urwane pytanie, zniekształcone wzory"
+  }
+ ],
+ "explanations": [
+  {
+   "id": 107,
+   "explanation": "**Dlaczego poprawne:** przy funkcji liniowej względem parametrów (wielomian, kombinacja funkcji trygonometrycznych lub innych funkcji bazowych) i kryterium średniokwadratowym warunek zerowania pochodnych błędu daje liniowy układ równań normalnych; dla wielomianu stopnia m ma on rozmiar (m+1)×(m+1).\n\n**Dlaczego błędne:** „tylko dla funkcji liniowej względem x” zawęża zbyt mocno (wielomiany też); „nie można” jest fałszem; parametry nie muszą być wyznaczane iteracyjnie; funkcje wykładnicze bez linearyzacji dają układ nieliniowy.\n\n**Zapamiętaj:** decyduje liniowość względem parametrów, nie względem x — wielomian jest tylko jednym z takich przypadków."
+  },
+  {
+   "id": 128,
+   "explanation": "**Dlaczego poprawne:** rozkład LU raz rozkłada A (O(n³)), potem każde Ax=b kosztuje O(n²) — to główna zaleta przy wielu prawych stronach; Cholesky to wariant LU dla macierzy symetrycznych dodatnio określonych.\n\n**Dlaczego błędne:** LU jest macierzowym zapisem eliminacji Gaussa, więc nie ma od niej znacząco lepszych własności numerycznych (stabilność zależy od wyboru elementu głównego w obu przypadkach); nie jest metodą iteracyjną (ani stacjonarną, ani niestacjonarną); wciąż wymaga pivotingu dla stabilności; nie jest tańszy od Gaussa w sensie O(·); nie ogranicza się do macierzy SPD ani diagonalnych.\n\n**Zapamiętaj:** LU to eliminacja zapisana macierzowo; zaleta: wiele prawych stron."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "interpolacja-wielomianowa",
+   "details": "**Jak działa.** Dla n+1 różnych węzłów istnieje dokładnie jeden wielomian stopnia ≤ n przechodzący przez punkty. W bazie naturalnej (1, x, x², …) współczynniki wyznacza się z układu z macierzą Vandermonde'a, która jest bardzo źle uwarunkowana (uwarunkowanie rośnie wykładniczo ze stopniem). Lepsze są postać Lagrange'a lub Newtona (ilorazy różnicowe), bazy ortogonalne, węzły Czebyszewa.\n\nWielomiany interpolacyjne są podstawą wielu algorytmów: kwadratur Newtona-Cotesa, metod wielokrokowych rozwiązywania równań różniczkowych zwyczajnych (Adams), różniczkowania numerycznego, metody siecznych i odwrotnej interpolacji.\n\n**Na egzaminie uważaj na:** (1) interpolacja w bazie jednomianów jest źle uwarunkowana; (2) wysoki stopień + węzły równoodległe → efekt Rungego; (3) metody iteracyjne rozwiązywania układów równań i bisekcja nie wykorzystują interpolacji; (4) wielomian interpolacyjny jest jednoznaczny niezależnie od zapisu."
+  },
+  {
+   "id": "metoda-bisekcji",
+   "details": "**Jak działa.** Dane [a,b] z f(a)·f(b)<0 i f ciągła. Środek c=(a+b)/2; z dwóch połówek wybieramy tę, na której końcach znaki są przeciwne. Długość przedziału maleje 2 razy w każdym kroku, więc po k krokach jest ^^(b-a)/2^k^^ (zbieżność liniowa, rząd 1). Wystarczają dwa warunki: ciągłość na [a,b] i przeciwne znaki na końcach (twierdzenie Darboux/Bolzano) — nie potrzeba pochodnych, monotoniczności ani wypukłości. Zbieżność jest gwarantowana dla dowolnej funkcji ciągłej spełniającej te warunki (podobnie jak w metodzie regula falsi, która też zachowuje przedział); sieczne i Newton mogą nie zbiegać.\n\n**Na egzaminie uważaj na:** (1) warunki na pochodne i ich znak dotyczą Newtona, nie bisekcji; (2) bisekcja jest wolna, ale niezawodna; (3) sieczne, Newton i iteracje proste nie zawsze zbiegają nawet przy zmianie znaku; (4) regula falsi również zachowuje przedział, ale nie zmniejsza go o połowę."
+  },
+  {
+   "id": "arytmetyka-zmiennoprzecinkowa",
+   "details": "**Jak działa.** Podwójna precyzja (double): 1 bit znaku, 11 bitów wykładnika (kod z nadmiarem/biasem 1023, nie U2), 52 bity zapisanej mantysy (53 z ukrytą jedynką). Epsilon maszynowy ^^\\varepsilon=2^{-52}\\approx2.2\\cdot10^{-16}^^; względny błąd zaokrąglenia liczby z zakresu nie przekracza rzędu ε, ale odstępy między liczbami rosną wraz z ich wartością (błąd bezwzględny nie jest stały). Dokładnie reprezentowane są liczby dwójkowo-wymierne (całkowite do 2^53, 0.5, 0.25), natomiast liczby o nieskończonym rozwinięciu dwójkowym (0.1) są zaokrąglane. Liczba bitów mantysy określa dokładność, liczba bitów wykładnika — zakres (VALMIN, VALMAX).\n\n**Na egzaminie uważaj na:** (1) 0.1 nie jest reprezentowane dokładnie; (2) 0.5 tak — nie wszystkie ułamki dają błąd; (3) błąd względny jest ograniczony przez ε (ale nie stały), a błąd bezwzględny rośnie wraz z wartością liczby; (4) dokładność = mantysa, zakres = wykładnik."
+  }
+ ]
+}

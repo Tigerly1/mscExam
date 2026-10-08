@@ -1,0 +1,75 @@
+{
+ "options": [
+  {
+   "id": 1253,
+   "key": "b",
+   "correct": true,
+   "reason": "kod kompiluje się i wypisuje 'm1 w klasie anonimowej' (sprawdzone javac/java)"
+  },
+  {
+   "id": 89,
+   "key": "f",
+   "correct": true,
+   "text": "każda klasa (poza samą klasą Object) bezpośrednio lub pośrednio dziedziczy po klasie Object",
+   "reason": "Object sam nie dziedziczy po Object"
+  },
+  {
+   "id": 1243,
+   "key": "b",
+   "correct": false,
+   "text": "Błąd kompilacji.",
+   "reason": "opcja była fragmentem kodu ze stemu; kod kompiluje się"
+  },
+  {
+   "id": 1243,
+   "key": "d",
+   "correct": false,
+   "text": "Zawsze (w każdym wykonaniu) wypisze \"11\".",
+   "reason": "doprecyzowanie: wynik niedeterministyczny, typowo 01"
+  }
+ ],
+ "remove": [
+  {
+   "id": 1254,
+   "key": "g",
+   "reason": "duplikat opcji e (final dla zmiennych lokalnych)"
+  }
+ ],
+ "questions": [
+  {
+   "id": 1242,
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C { public static void main(String[] args) { int[]a1[]=new int[3][3]; //3 int a2[4]={3,4,5,6}; //4 int a2[5]; //5 }} Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?",
+   "reason": "Class→class (inaczej cały kod niekompilowalny)"
+  },
+  {
+   "id": 1243,
+   "question": "Zapisano następujący kod źródłowy w języku Java: public class A extends Thread { public int i; public void run() { i = 1; } public static void main(String[] args) throws Exception { A a = new A(); a.start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i); } } Jaki jest rezultat kompilacji i wykonania programu?",
+   "reason": "ucięty stem, dokończony kodem z opcji"
+  },
+  {
+   "id": 1246,
+   "question": "Zapisano następujący kod źródłowy w języku Java: interface I{ void f1(); // 1 public void f2(); // 2 protected void f3(); // 3 private void f4(); // 4 } Które linie generują błędy kompilacji? (w komentarzach podane numery linii)",
+   "reason": "literówka"
+  },
+  {
+   "id": 1254,
+   "question": "Zapisano poniższy kod źródłowy w języku Java:class C{ int i; public static void main (String[] args) { int i; //1 private int a = 1; //2 protected int b = 1; //3 public int c = 1; //4 System.out.println(a+b+c); //5 }} Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczone numery linii)?",
+   "reason": "literówka"
+  }
+ ],
+ "explanations": [
+  {
+   "id": 1253,
+   "explanation": "**Dlaczego poprawne:** metoda `m1()` klasy c2 zwraca obiekt klasy anonimowej rozszerzającej c1, która nadpisuje `m1`. Wywołanie `ob1.m1()` jest wiązane dynamicznie (wg rzeczywistego typu obiektu), więc program kompiluje się i wypisuje „m1 w klasie anonimowej”. Klasa anonimowa może rozszerzać klasę albo implementować interfejs.\n**Dlaczego błędne:** wersja z c1 nie zostanie wywołana; nie ma błędu kompilacji; klasy anonimowe mogą implementować interfejsy; nie mają własnego konstruktora (tylko blok inicjalizujący); metoda nie jest wybierana wg typu referencji w czasie kompilacji.\n**Zapamiętaj:** polimorfizm decyduje w czasie wykonania."
+  },
+  {
+   "id": 1243,
+   "explanation": "**Dlaczego poprawne:** wątek uruchamia `start()`, który wywołuje `run()` w nowym wątku; wątek tworzy się przez `Runnable` lub dziedziczenie po `Thread`; bezpośrednie `run()` wykonuje się w bieżącym wątku; drugi `start()` daje IllegalThreadStateException.\n**Dlaczego błędne:** kod kompiluje się; `run()` sam wątku nie uruchamia; program zawsze coś wypisze (dwie wartości `a.i`); wynik nie jest gwarantowany — przy typowym przebiegu pierwszy odczyt daje 0 (nowy wątek jeszcze nie wykonał `run()`), a po sleep 1, czyli „01”, więc „11” nie jest pewne; `join()` nie startuje wątku; `Thread.sleep` usypia bieżący wątek (main), nie wątek a.\n**Zapamiętaj:** start() tworzy wątek, run() to zwykła metoda."
+  },
+  {
+   "id": 80,
+   "explanation": "**Dlaczego poprawne:** `r x = x : r x` przyjmuje element dowolnego typu i zwraca listę, więc `r :: a -> [a]`; dzięki leniwej ewaluacji `r 1` to nieskończona lista jedynek i `take 3 (r 'a')` daje \"aaa\".\n**Dlaczego błędne:** `[a]` pomija argument; `Integer a =>` jest niepoprawne (Integer to typ, nie klasa typów); `[a] -> Int` i `(a -> a) -> [a]` nie zgadzają się z definicją (argument jest elementem listy, a nie listą czy funkcją); `head (r 1)` kończy się (wynik 1).\n**Zapamiętaj:** typ wynika z użycia: element → lista."
+  }
+ ],
+ "glossary": []
+}

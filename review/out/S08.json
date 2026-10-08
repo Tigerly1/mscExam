@@ -602,7 +602,7 @@
     },
     {
      "key": "e",
-     "text": "stacje muszą znać adres IP routera (bramy domyślnej) w swojej sieci lokalnej",
+     "text": "w typowej konfiguracji (bez Proxy ARP) stacje muszą znać adres IP routera (bramy domyślnej) w swojej sieci lokalnej",
      "correct": true,
      "extra": true
     },
@@ -630,7 +630,9 @@
     "adresowanie-ipv4"
    ],
    "explanation": "**Dlaczego poprawne**\nKażda stacja musi mieć adres IP (i znać bramę domyślną – router). Sieci bezpośrednio podłączone router zna automatycznie.\n\n**Dlaczego błędne**\nMaski mogą być różne; Proxy ARP nie jest wymagany; trasa statyczna do sieci bezpośrednio podłączonych jest zbędna; routing dynamiczny też nie jest potrzebny; adresy sieci stacji są różne z założenia.\n\n**Zapamiętaj**: router zna sieci bezpośrednio podłączone bez dodatkowej konfiguracji.",
-   "changes": []
+   "changes": [
+    "weryfikacja: e z Proxy ARP brama nie jest konieczna – doprecyzowanie"
+   ]
   },
   {
    "id": 143,
@@ -1015,7 +1017,7 @@
    "terms": [
     "ipv4-icmp-ttl"
    ],
-   "explanation": "**Dlaczego poprawne**\nTTL to licznik skoków (routerów) zmniejszany o 1; po 0 datagram jest odrzucany, a router może wysłać ICMP Time Exceeded.\n\n**Dlaczego błędne**\nW praktyce TTL nie jest czasem w sekundach; pole ma 8 bitów, ustawia je nadawca, a router zmniejsza je, nie zwiększa.\n\n**Zapamiętaj**: TTL = limit skoków.",
+   "explanation": "**Dlaczego poprawne**\nTTL działa jak licznik skoków (routerów): każdy router zmniejsza go o 1; po osiągnięciu 0 datagram jest odrzucany, a router może wysłać ICMP Time Exceeded.\n\n**Dlaczego błędne**\nRFC 791 formalnie opisuje TTL w sekundach, ale każdy router zmniejsza go co najmniej o 1, więc w praktyce jest to limit skoków, a nie czas. Pole ma 8 bitów, ustawia je nadawca, a router je zmniejsza, nie zwiększa.\n\n**Zapamiętaj**: TTL = limit skoków.",
    "changes": [
     "poprawiono ucięty tekst opcji a"
    ]
@@ -1108,12 +1110,6 @@
     {
      "key": "g",
      "text": "fe80::/10",
-     "correct": false,
-     "extra": true
-    },
-    {
-     "key": "h",
-     "text": "2000::/3",
      "correct": false,
      "extra": true
     }
@@ -1245,7 +1241,7 @@
     {
      "key": "b",
      "text": "Route Reflector Client (RRC)",
-     "correct": true
+     "correct": false
     },
     {
      "key": "c",
@@ -1281,8 +1277,10 @@
    "terms": [
     "bgp"
    ],
-   "explanation": "**Dlaczego poprawne**\nRoute Reflector odbija trasy iBGP i eliminuje full-mesh; klienci (RRC) łączą się tylko z reflektorem. W bazie jako poprawną oznaczono odpowiedź z RRC.\n\n**Dlaczego błędne**\nBGP Mirror nie istnieje jako mechanizm; eBGP multihop, agregacja i dampening nie redukują full-mesh iBGP.\n\n**Zapamiętaj**: full-mesh iBGP rozwiązuje Route Reflector.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne**\nRouter, którego wprowadzenie eliminuje konieczność pełnej siatki sesji iBGP, to Route Reflector (RR): odbija trasy otrzymane od klientów do pozostałych peerów iBGP. Bez reflektora każdy router iBGP musi mieć sesję z każdym innym (full-mesh).\n\n**Dlaczego błędne**\nRoute Reflector Client (RRC) to zwykły router łączący się tylko z reflektorem – to nie on redukuje sesje, lecz RR. BGP Mirror nie istnieje jako mechanizm; eBGP multihop, agregacja i dampening nie redukują full-mesh iBGP.\n\n**Zapamiętaj**: full-mesh iBGP rozwiązuje Route Reflector (RR), a klienci to RRC.",
+   "changes": [
+    "weryfikacja: b pełną siatkę eliminuje Route Reflector (RR), nie klient RRC"
+   ]
   },
   {
    "id": 155,
@@ -1407,12 +1405,6 @@
      "key": "b",
      "text": "IP Route Spoofing",
      "correct": false
-    },
-    {
-     "key": "c",
-     "text": "redystrybucja tras wymaga określenia metryki dla tras importowanych z innego protokołu",
-     "correct": true,
-     "extra": true
     },
     {
      "key": "d",
@@ -1832,7 +1824,7 @@
     },
     {
      "key": "e",
-     "text": "Warstwa 3 to warstwa sieciowa (np. protokół IP).",
+     "text": "Warstwa 3 to warstwa sieciowa (jej odpowiednikiem w stosie TCP/IP jest protokół IP).",
      "correct": true
     },
     {
@@ -1864,7 +1856,8 @@
    ],
    "explanation": "**Dlaczego poprawne**\nNazwy polskie: fizyczna, łącza danych, sieciowa, transportowa, sesji, prezentacji, aplikacji; warstwa 3 to sieciowa (IP); warstwa sesji jest jedną z nich.\n\n**Dlaczego błędne**\nWarstwa sprzętowa, dostępu do sieci, łączności i internetowa (TCP/IP) nie są warstwami OSI; model ma 7 warstw.\n\n**Zapamiętaj**: OSI: 7 warstw.",
    "changes": [
-    "b: false -> true, bo „Warstwa sesji” jest polską nazwą jednej z warstw OSI"
+    "b: false -> true, bo „Warstwa sesji” jest polską nazwą jednej z warstw OSI",
+    "weryfikacja: e OSI nie definiuje IP – spójność z pyt. 134"
    ]
   },
   {
@@ -2499,7 +2492,7 @@
     },
     {
      "key": "d",
-     "text": "ATA",
+     "text": "ATA (równoległe, PATA)",
      "correct": false
     },
     {
@@ -2543,7 +2536,8 @@
    "explanation": "**Dlaczego poprawne**\nSPI, I2C, UART, USB, CAN i PCIe są szeregowe; RS-485 też.\n\n**Dlaczego błędne**\nATA (PATA), SCSI (równoległy), ISA, PCI, LPT i GPIB są równoległe.\n\n**Zapamiętaj**: szeregowe: jeden bit po drugim.",
    "changes": [
     "b: false -> true, bo SPI i I2C są szeregowymi magistralami",
-    "c: false -> true, bo PCI Express to szeregowa magistrala punkt-punkt"
+    "c: false -> true, bo PCI Express to szeregowa magistrala punkt-punkt",
+    "weryfikacja: d SATA jest szeregowe – doprecyzowanie"
    ]
   },
   {
@@ -2681,7 +2675,7 @@
    "term": "Schematy dla zagadnienia początkowego (numerical initial value problem)",
    "topic": "networks",
    "short": "Schemat numeryczny przybliża rozwiązanie równania różniczkowego krok po kroku od zadanego warunku początkowego.",
-   "details": "Rozwiązanie wyznaczamy iteracyjnie z warunku początkowego, krok po kroku w czasie. Schemat musi być **zgodny** (aproksymacja różnicowa dąży do równania przy h→0), **stabilny** (współczynnik propagacji błędu < 1 – błędy nie rosną), dokładny oraz efektywny czasowo i pamięciowo. Wg twierdzenia Laxa: zgodność + stabilność ⇒ zbieżność. Algorytm powinien być dobrze uwarunkowany (małe wskaźniki uwarunkowania). **Na egzaminie uważaj na:** warunki brzegowe dotyczą zagadnień brzegowych; zgodność sama nie wystarcza; współczynnik propagacji > 1 oznacza niestabilność. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Rozwiązanie wyznaczamy iteracyjnie z warunku początkowego, krok po kroku w czasie. Schemat musi być **zgodny** (aproksymacja różnicowa dąży do równania przy h→0), **stabilny** (współczynnik propagacji błędu < 1 – błędy nie rosną), dokładny oraz efektywny czasowo i pamięciowo. Wg twierdzenia Laxa: zgodność + stabilność ⇒ zbieżność. Algorytm powinien być dobrze uwarunkowany (małe wskaźniki uwarunkowania). **Na egzaminie uważaj na:** warunki brzegowe dotyczą zagadnień brzegowych; zgodność sama nie wystarcza; współczynnik propagacji > 1 oznacza niestabilność.",
    "related": [
     "model-osi"
    ]
@@ -2691,7 +2685,7 @@
    "term": "Ethernet, CSMA/CD i pełny dupleks (Ethernet duplex)",
    "topic": "networks",
    "short": "Ethernet to standard LAN, w którym współdzielone medium wymaga CSMA/CD, a pełny dupleks eliminuje kolizje.",
-   "details": "W półdupleksie stacje nasłuchują nośną, nadają, wykrywają kolizję i wstrzymują się losowo (backoff). Ograniczenie długości segmentu wynika z czasu propagacji: kolizja musi zostać wykryta w trakcie nadawania minimalnej ramki. W pełnym dupleksie (przełącznik, osobne pary) kolizji nie ma, CSMA/CD jest wyłączony, przepustowość jest dwukrotnie większa (nadawanie i odbiór jednocześnie), a długość ogranicza tylko medium. Adres MAC ma 48 bitów, z czego pierwsze 24 to OUI. **Na egzaminie uważaj na:** huby działają tylko w półdupleksie; pełny dupleks nie zwiększa prędkości pojedynczego kierunku. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "W półdupleksie stacje nasłuchują nośną, nadają, wykrywają kolizję i wstrzymują się losowo (backoff). Ograniczenie długości segmentu wynika z czasu propagacji: kolizja musi zostać wykryta w trakcie nadawania minimalnej ramki. W pełnym dupleksie (przełącznik, osobne pary) kolizji nie ma, CSMA/CD jest wyłączony, sumaryczna przepustowość łącza może być dwukrotnie większa (nadawanie i odbiór jednocześnie), a długość ogranicza tylko medium. Adres MAC ma 48 bitów, z czego pierwsze 24 to OUI. **Na egzaminie uważaj na:** huby działają tylko w półdupleksie; pełny dupleks nie zwiększa prędkości pojedynczego kierunku.",
    "related": [
     "model-osi",
     "ethernet-media"
@@ -2702,7 +2696,7 @@
    "term": "Model odniesienia OSI/ISO (OSI reference model)",
    "topic": "networks",
    "short": "Siedmiowarstwowy model opisujący zadania warstw komunikacji sieciowej.",
-   "details": "Warstwy: fizyczna, łącza danych (LLC i MAC), sieciowa, transportowa, sesji, prezentacji, aplikacji. Każda warstwa świadczy usługi wyższej i komunikuje się logicznie z równorzędną, co pozwala rozwijać sprzęt i oprogramowanie niezależnie. Model nie definiuje protokołów, tylko zadania (IP, TCP należą do stosu TCP/IP). LAN i WAN różnią się warstwami 1 i 2; warstwa sieciowa jest wspólna. **Na egzaminie uważaj na:** OSI ma 7, TCP/IP 4 warstwy; „warstwa sprzętowa” i „internetowa” nie należą do OSI. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Warstwy: fizyczna, łącza danych (LLC i MAC), sieciowa, transportowa, sesji, prezentacji, aplikacji. Każda warstwa świadczy usługi wyższej i komunikuje się logicznie z równorzędną, co pozwala rozwijać sprzęt i oprogramowanie niezależnie. Model nie definiuje protokołów, tylko zadania (IP, TCP należą do stosu TCP/IP). LAN i WAN różnią się warstwami 1 i 2; warstwa sieciowa jest wspólna. **Na egzaminie uważaj na:** OSI ma 7, TCP/IP 4 warstwy; „warstwa sprzętowa” i „internetowa” nie należą do OSI.",
    "related": [
     "ipv4-icmp-ttl",
     "ethernet-csma-cd"
@@ -2713,7 +2707,7 @@
    "term": "Media transmisyjne Ethernet (UTP, Gigabit Ethernet)",
    "topic": "networks",
    "short": "Rodzaje kabli i kodowań pozwalających uzyskać różne prędkości Ethernetu.",
-   "details": "100BASE-TX używa 2 par UTP kat. 5. 1000BASE-T używa wszystkich 4 par jednocześnie w obu kierunkach z kodowaniem PAM-5, więc działa na kat. 5e. Wyższą przepustowość uzyskuje się więc przez kodowanie i równoległość, a nie zawsze lepszym kablem. Ograniczenie długości segmentu miedzi to 100 m. **Na egzaminie uważaj na:** 1 Gb/s nie wymaga światłowodu ani lepszego kabla niż 5e. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "100BASE-TX używa 2 par UTP kat. 5. 1000BASE-T używa wszystkich 4 par jednocześnie w obu kierunkach z kodowaniem PAM-5, więc działa na kat. 5e. Wyższą przepustowość uzyskuje się więc przez kodowanie i równoległość, a nie zawsze lepszym kablem. Ograniczenie długości segmentu miedzi to 100 m. **Na egzaminie uważaj na:** 1 Gb/s nie wymaga światłowodu ani lepszego kabla niż 5e.",
    "related": [
     "kodowanie-sygnalow",
     "swiatlowody"
@@ -2724,7 +2718,7 @@
    "term": "Kodowanie sygnałów (line coding)",
    "topic": "networks",
    "short": "Sposób odwzorowania bitów na sygnał w medium warstwy fizycznej.",
-   "details": "Przykłady: NRZ, Manchester, 4B/5B, PAM-5. Kodowanie wpływa na przepustowość (bity na symbol), zależy od medium i może zapewnić samosynchronizację (Manchester – zbocze w środku bitu, kosztem 2× większego pasma). NRZ przy długich seriach identycznych bitów traci synchronizację. To zagadnienie warstwy fizycznej. **Na egzaminie uważaj na:** kodowanie nie jest sprawą warstwy sieciowej; Manchester nie ma sprawności 100%. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Przykłady: NRZ, Manchester, 4B/5B, PAM-5. Kodowanie wpływa na przepustowość (bity na symbol), zależy od medium i może zapewnić samosynchronizację (Manchester – zbocze w środku bitu, kosztem 2× większego pasma). NRZ przy długich seriach identycznych bitów traci synchronizację. To zagadnienie warstwy fizycznej. **Na egzaminie uważaj na:** kodowanie nie jest sprawą warstwy sieciowej; Manchester nie ma sprawności 100%.",
    "related": [
     "ethernet-media"
    ]
@@ -2734,7 +2728,7 @@
    "term": "Wirtualne sieci lokalne VLAN i IEEE 802.1Q (VLAN)",
    "topic": "networks",
    "short": "VLAN dzieli fizyczną sieć L2 na osobne domeny rozgłoszeniowe.",
-   "details": "VLAN definiuje się po portach, adresach MAC lub protokole/adresach logicznych. Ramki między przełącznikami niesie trunk z 4-bajtowym znacznikiem 802.1Q (12-bitowy VID, 3-bitowe PCP). Każdy VLAN to osobna domena rozgłoszeniowa, co poprawia bezpieczeństwo; ruch między VLAN wymaga routera/L3. Q-in-Q to 802.1ad. **Na egzaminie uważaj na:** VLAN nie zastępuje STP ani ARP, nie przydziela IP. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "VLAN definiuje się po portach, adresach MAC lub protokole/adresach logicznych. Ramki między przełącznikami niesie trunk z 4-bajtowym znacznikiem 802.1Q (12-bitowy VID, 3-bitowe PCP). Każdy VLAN to osobna domena rozgłoszeniowa, co poprawia bezpieczeństwo; ruch między VLAN wymaga routera/L3. Q-in-Q to 802.1ad. **Na egzaminie uważaj na:** VLAN nie zastępuje STP ani ARP, nie przydziela IP.",
    "related": [
     "stp",
     "arp"
@@ -2745,7 +2739,7 @@
    "term": "Drzewo rozpinające STP/RSTP/MSTP (Spanning Tree Protocol)",
    "topic": "networks",
    "short": "Protokół L2 blokujący nadmiarowe łącza, aby uniknąć pętli i burz rozgłoszeniowych.",
-   "details": "Mostki wybierają root bridge (najniższy Bridge ID), każdy wybiera port do roota, a pozostałe redundantne porty są blokowane. Powstaje drzewo bez pętli (802.1D). RSTP (802.1w) zbiega szybciej, PVST tworzy drzewo na VLAN, MSTP (802.1s) na grupę VLAN. **Na egzaminie uważaj na:** STP działa w warstwie 2, nie równoważy obciążenia i nie wybiera routera głównego. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Mostki wybierają root bridge (najniższy Bridge ID), każdy wybiera port do roota, a pozostałe redundantne porty są blokowane. Powstaje drzewo bez pętli (802.1D). RSTP (802.1w) zbiega szybciej, PVST tworzy drzewo na VLAN, MSTP (802.1s) na grupę VLAN. **Na egzaminie uważaj na:** STP działa w warstwie 2, nie równoważy obciążenia i nie wybiera routera głównego.",
    "related": [
     "vlan-8021q"
    ]
@@ -2755,7 +2749,7 @@
    "term": "Protokół ARP (Address Resolution Protocol)",
    "topic": "networks",
    "short": "ARP odwzorowuje adres IP na adres MAC w sieci lokalnej.",
-   "details": "Host wysyła broadcastem zapytanie „kto ma IP X?”, właściciel odpowiada unicastem swoim MAC-iem; wynik trafia do tablicy ARP. Dla hosta spoza sieci używa się MAC bramy. RARP działa odwrotnie, w IPv6 funkcję przejmuje NDP. **Na egzaminie uważaj na:** ARP nie przydziela IP, nie wyznacza tras, działa w warstwie 2/3, tylko lokalnie. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Host wysyła broadcastem zapytanie „kto ma IP X?”, właściciel odpowiada unicastem swoim MAC-iem; wynik trafia do tablicy ARP. Dla hosta spoza sieci używa się MAC bramy. RARP działa odwrotnie, w IPv6 funkcję przejmuje NDP. **Na egzaminie uważaj na:** ARP nie przydziela IP, nie wyznacza tras, działa w warstwie 2/3, tylko lokalnie.",
    "related": [
     "adresowanie-ipv4"
    ]
@@ -2765,7 +2759,7 @@
    "term": "Routing IP i Longest Prefix Match",
    "topic": "networks",
    "short": "Router wybiera trasę na podstawie dopasowania adresu docelowego do prefiksów w tablicy.",
-   "details": "Spośród pasujących wpisów wybierany jest ten o najdłuższym prefiksie; trasa domyślna to 0.0.0.0/0 (::/0 w IPv6). Sieci bezpośrednio podłączone router zna automatycznie. Stacja potrzebuje adresu IP i bramy domyślnej. **Na egzaminie uważaj na:** nie wygrywa najkrótszy prefiks; trasa statyczna do sieci bezpośrednio podłączonych jest zbędna; Proxy ARP nie jest wymagany. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Spośród pasujących wpisów wybierany jest ten o najdłuższym prefiksie; trasa domyślna to 0.0.0.0/0 (::/0 w IPv6). Sieci bezpośrednio podłączone router zna automatycznie. Stacja potrzebuje adresu IP i bramy domyślnej. **Na egzaminie uważaj na:** nie wygrywa najkrótszy prefiks; trasa statyczna do sieci bezpośrednio podłączonych jest zbędna; Proxy ARP nie jest wymagany.",
    "related": [
     "adresowanie-ipv4",
     "protokoly-routingu"
@@ -2776,7 +2770,7 @@
    "term": "IPv4, TTL i ICMP (IPv4 header)",
    "topic": "networks",
    "short": "IPv4 to bezpołączeniowy, zawodny protokół best effort; TTL i ICMP wspierają jego działanie.",
-   "details": "Nagłówek: suma kontrolna tylko nagłówka, TTL (8 bit, zmniejszany o 1 w każdym routerze, 0 ⇒ odrzucenie i ICMP Time Exceeded), ToS, fragmentacja (u nadawcy i w routerach, składanie u odbiorcy), Total Length 16 bitów ⇒ max 65535 B. ICMP służy diagnostyce i sygnalizacji błędów (ping, traceroute). **Na egzaminie uważaj na:** IPv4 nie potwierdza dostarczenia; TTL to skoki, nie sekundy; ICMP nie jest niezawodny. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Nagłówek: suma kontrolna tylko nagłówka, TTL (8 bit, zmniejszany o 1 w każdym routerze, 0 ⇒ odrzucenie i ICMP Time Exceeded), ToS, fragmentacja (u nadawcy i w routerach, składanie u odbiorcy), Total Length 16 bitów ⇒ max 65535 B. ICMP służy diagnostyce i sygnalizacji błędów (ping, traceroute). **Na egzaminie uważaj na:** IPv4 nie potwierdza dostarczenia; TTL formalnie (RFC 791) jest wyrażony w sekundach, ale w praktyce działa jako licznik skoków (routerów); ICMP nie jest niezawodny.",
    "related": [
     "tcp-udp",
     "routing-ip"
@@ -2787,7 +2781,7 @@
    "term": "Protokoły routingu dynamicznego (RIP, OSPF, IGRP/EIGRP, IS-IS)",
    "topic": "networks",
    "short": "Protokoły wymieniające informacje o trasach między routerami.",
-   "details": "RIP – liczba skoków; OSPF – link-state, koszt z pasma, obszary (backbone, stub, totally stubby, NSSA); IGRP/EIGRP – metryka złożona (pasmo, opóźnienie, niezawodność, obciążenie); IS-IS – poziomy L1/L2. Redystrybucja przenosi trasy między protokołami. **Na egzaminie uważaj na:** niezawodność jest w metryce IGRP/EIGRP, nie RIP/OSPF; stub nie przyjmuje tras zewnętrznych. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "RIP – liczba skoków; OSPF – link-state, koszt z pasma, obszary (backbone, stub, totally stubby, NSSA); IGRP/EIGRP – metryka złożona (pasmo, opóźnienie, niezawodność, obciążenie); IS-IS – poziomy L1/L2. Redystrybucja przenosi trasy między protokołami. **Na egzaminie uważaj na:** niezawodność jest w metryce IGRP/EIGRP, nie RIP/OSPF; stub nie przyjmuje tras zewnętrznych.",
    "related": [
     "bgp",
     "routing-ip"
@@ -2798,7 +2792,7 @@
    "term": "Protokoły TCP i UDP (transport layer)",
    "topic": "networks",
    "short": "Protokoły warstwy transportowej: TCP niezawodny, UDP prosty bezpołączeniowy.",
-   "details": "UDP: 8-bajtowy nagłówek, porty 16-bitowe, bez gwarancji, kolejności i retransmisji. TCP: połączeniowy, strumień bajtów bez limitu, numery sekwencyjne 32-bit, potwierdzenia, okno (Window size – flow control). **Na egzaminie uważaj na:** UDP nie fragmentuje; okno to kontrola przepływu; HTTP/1.1 używa TCP. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "UDP: 8-bajtowy nagłówek, porty 16-bitowe, bez gwarancji, kolejności i retransmisji. TCP: połączeniowy, strumień bajtów bez limitu, numery sekwencyjne 32-bit, potwierdzenia, okno (Window size – flow control). **Na egzaminie uważaj na:** UDP nie fragmentuje; okno to kontrola przepływu; HTTP/1.1 używa TCP.",
    "related": [
     "ipv4-icmp-ttl"
    ]
@@ -2808,7 +2802,7 @@
    "term": "Adresowanie IPv4 i maski (CIDR)",
    "topic": "networks",
    "short": "Adres IPv4 to 32 bity dzielone maską na część sieci i hosta.",
-   "details": "Adres sieci – host bits 0, broadcast – host bits 1. /26 = 255.255.255.192 (62 hosty), /30 = .252 (2 hosty). Multicast: 224.0.0.0/4. **Na egzaminie uważaj na:** blok /26 ma 64 adresy; nie mylić sieci z broadcastem. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Adres sieci – host bits 0, broadcast – host bits 1. /26 = 255.255.255.192 (62 hosty), /30 = .252 (2 hosty). Multicast: 224.0.0.0/4. **Na egzaminie uważaj na:** blok /26 ma 64 adresy; nie mylić sieci z broadcastem.",
    "related": [
     "routing-ip"
    ]
@@ -2818,7 +2812,7 @@
    "term": "Adresowanie IPv6 (IPv6 addressing)",
    "topic": "networks",
    "short": "IPv6 ma 128-bitowe adresy zapisywane szesnastkowo.",
-   "details": "Skrócenie :: zastępuje ciąg zer (raz). ::/0 to trasa domyślna, ::1 loopback, fe80::/10 link-local, ff02::1 multicast. /64 – 64 bity sieci, 64 interfejsu. **Na egzaminie uważaj na:** 5::1 to 5:0:0:0:0:0:0:1; znaki spoza 0–f są niepoprawne. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Skrócenie :: zastępuje ciąg zer (raz). ::/0 to trasa domyślna, ::1 loopback, fe80::/10 link-local, ff02::1 multicast. /64 – 64 bity sieci, 64 interfejsu. **Na egzaminie uważaj na:** 5::1 to 5:0:0:0:0:0:0:1; znaki spoza 0–f są niepoprawne.",
    "related": [
     "adresowanie-ipv4"
    ]
@@ -2828,7 +2822,7 @@
    "term": "BGP i Route Reflector (Border Gateway Protocol)",
    "topic": "networks",
    "short": "BGP to protokół routingu między systemami autonomicznymi.",
-   "details": "iBGP wymaga pełnej siatki sesji; Route Reflector odbija trasy klientom (RRC), eliminując full-mesh. **Na egzaminie uważaj na:** eBGP multihop i agregacja nie zastępują RR. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "iBGP wymaga pełnej siatki sesji; Route Reflector odbija trasy klientom (RRC), eliminując full-mesh. **Na egzaminie uważaj na:** eBGP multihop i agregacja nie zastępują RR.",
    "related": [
     "protokoly-routingu"
    ]
@@ -2838,7 +2832,7 @@
    "term": "QoS w Ethernet IEEE 802.1p (CoS)",
    "topic": "networks",
    "short": "802.1p oznacza priorytet ramki w polu 3-bitowym.",
-   "details": "Pole PCP w znaczniku 802.1Q ma 3 bity ⇒ 8 klas CoS (0–7). **Na egzaminie uważaj na:** liczba klas to 8, nie 7 ani 16. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Pole PCP w znaczniku 802.1Q ma 3 bity ⇒ 8 klas CoS (0–7). **Na egzaminie uważaj na:** liczba klas to 8, nie 7 ani 16.",
    "related": [
     "vlan-8021q"
    ]
@@ -2848,7 +2842,7 @@
    "term": "NAT/PAT (Network Address Translation)",
    "topic": "networks",
    "short": "NAT tłumaczy adresy prywatne na publiczne.",
-   "details": "Router podmienia adres źródłowy; PAT dodatkowo porty, dzięki czemu wiele hostów współdzieli jeden adres. Oszczędza IPv4 i ukrywa hosty przed Internetem. **Na egzaminie uważaj na:** NAT nie jest firewallem; DNS i ARP nie rozwiązują braku adresów. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Router podmienia adres źródłowy; PAT dodatkowo porty, dzięki czemu wiele hostów współdzieli jeden adres. Oszczędza IPv4 i ukrywa hosty przed Internetem. **Na egzaminie uważaj na:** NAT nie jest firewallem; DNS i ARP nie rozwiązują braku adresów.",
    "related": [
     "adresowanie-ipv4"
    ]
@@ -2858,7 +2852,7 @@
    "term": "Sól w haszowaniu haseł (salt)",
    "topic": "networks",
    "short": "Sól to losowa wartość dodawana do hasła przed haszowaniem.",
-   "details": "Skrót H(sól‖hasło); sól jest unikalna, jawna i przechowywana obok skrótu. Chroni przed rainbow tables, a identyczne hasła dają różne skróty. **Na egzaminie uważaj na:** sól nie umożliwia odzyskania hasła i nie skraca obliczeń. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Skrót H(sól‖hasło); sól jest unikalna, jawna i przechowywana obok skrótu. Chroni przed rainbow tables, a identyczne hasła dają różne skróty. **Na egzaminie uważaj na:** sól nie umożliwia odzyskania hasła i nie skraca obliczeń.",
    "related": [
     "pki-x509"
    ]
@@ -2868,7 +2862,7 @@
    "term": "Certyfikaty X.509 i PKI (public key infrastructure)",
    "topic": "networks",
    "short": "X.509 definiuje format certyfikatów w hierarchicznym PKI.",
-   "details": "Certyfikat zawiera klucz publiczny podmiotu, dane wystawcy i podpis CA; łańcuch zaufania prowadzi do root CA. Używany w TLS/HTTPS. **Na egzaminie uważaj na:** AES i RSA to algorytmy, nie standardy certyfikatów. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Certyfikat zawiera klucz publiczny podmiotu, dane wystawcy i podpis CA; łańcuch zaufania prowadzi do root CA. Używany w TLS/HTTPS. **Na egzaminie uważaj na:** AES i RSA to algorytmy, nie standardy certyfikatów.",
    "related": [
     "sol-hasla"
    ]
@@ -2878,7 +2872,7 @@
    "term": "Światłowody jedno- i wielomodowe (fiber optics)",
    "topic": "networks",
    "short": "Światłowód jednomodowy przenosi jeden mod światła.",
-   "details": "Jednomodowy: rdzeń ok. 9 µm, jeden mod, duże zasięgi. Wielomodowy: rdzeń 50/62,5 µm, wiele modów, dyspersja modowa ogranicza zasięg. Gradientowy to profil współczynnika załamania. **Na egzaminie uważaj na:** wielomodowy ma grubszy rdzeń; światłowód nie jest tańszy od skrętki. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Jednomodowy: rdzeń ok. 9 µm, jeden mod, duże zasięgi. Wielomodowy: rdzeń 50/62,5 µm, wiele modów, dyspersja modowa ogranicza zasięg. Gradientowy to profil współczynnika załamania. **Na egzaminie uważaj na:** wielomodowy ma grubszy rdzeń; światłowód nie jest tańszy od skrętki.",
    "related": [
     "ethernet-media"
    ]
@@ -2888,7 +2882,7 @@
    "term": "Szeregowe magistrale cyfrowe (serial buses)",
    "topic": "networks",
    "short": "Magistrale przesyłające bity kolejno po jednej linii.",
-   "details": "SPI, I2C, UART, USB, CAN, RS-485, PCIe – szeregowe. PATA, SCSI (równoległy), ISA, PCI i LPT – równoległe. **Na egzaminie uważaj na:** nie mylić PATA z SATA. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "SPI, I2C, UART, USB, CAN, RS-485, PCIe – szeregowe. PATA, SCSI (równoległy), ISA, PCI i LPT – równoległe. **Na egzaminie uważaj na:** nie mylić PATA z SATA.",
    "related": [
     "kodowanie-sygnalow"
    ]
@@ -2898,7 +2892,7 @@
    "term": "Technologie bezprzewodowe (Wi-Fi, Bluetooth, ZigBee, LoRaWAN, 5G)",
    "topic": "networks",
    "short": "Standardy komunikacji radiowej dla sieci bezprzewodowych.",
-   "details": "Wi-Fi 802.11, Bluetooth, ZigBee (802.15.4), LoRaWAN, 5G. Ethernet, RS-232, Token Ring i Frame Relay są przewodowe. **Na egzaminie uważaj na:** LoRaWAN jest bezprzewodowy. Przykład: przed rozstrzygnięciem prawdziwości zdania na egzaminie sprawdź, w której warstwie modelu OSI działa mechanizm, czy dotyczy on jednej sieci lokalnej czy całej ścieżki oraz jaką wartość liczbową (bity, bajty, klasy) definiuje standard. Najczęstsze pomyłki to zamiana pojęć pokrewnych i przypisanie protokołu do złej warstwy.",
+   "details": "Wi-Fi 802.11, Bluetooth, ZigBee (802.15.4), LoRaWAN, 5G. Ethernet, RS-232, Token Ring i Frame Relay są przewodowe. **Na egzaminie uważaj na:** LoRaWAN jest bezprzewodowy.",
    "related": [
     "magistrale-szeregowe"
    ]

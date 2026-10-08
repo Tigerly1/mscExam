@@ -1,0 +1,121 @@
+{
+ "options": [
+  {
+   "id": 10,
+   "key": "e",
+   "text": "praktycznie zawsze zawiera rozkazy skoku warunkowego, służące m.in. do realizacji pętli i instrukcji warunkowych",
+   "reason": "pętle da się zrealizować też innymi mechanizmami (skok pośredni); usunięto nadmierne 'nie da się'"
+  },
+  {
+   "id": 15,
+   "key": "d",
+   "text": "wynik zapisuje do rejestru docelowego (np. akumulatora) lub pamięci; w wielu procesorach (np. x86, AVR) ustawia przy tym znaczniki, np. Z (zero) i C (przeniesienie)",
+   "reason": "nie każda architektura ma flagi (MIPS, RISC-V)"
+  },
+  {
+   "id": 1091,
+   "key": "d",
+   "text": "zawsze wymaga sygnału zegarowego.",
+   "correct": false,
+   "reason": "'nie wymaga zegara' było niejednoznaczne – układy asynchroniczne nie wymagają zegara"
+  },
+  {
+   "id": 1101,
+   "key": "f",
+   "text": "jest częścią jednostki arytmetyczno-logicznej (ALU).",
+   "correct": false,
+   "reason": "IR często zalicza się do jednostki sterującej – zdanie było niejednoznaczne"
+  },
+  {
+   "id": 1168,
+   "key": "a",
+   "text": "W wersji rozszerzonej (z dodatkowym bitem parzystości) pozwala korygować błędy pojedynczego bitu (SEC) i wykrywać błędy dwóch bitów (DED).",
+   "reason": "podstawowy Hamming (d=3) nie daje jednocześnie SEC i DED"
+  },
+  {
+   "id": 1169,
+   "key": "f",
+   "text": "Oba kody zawsze wymagają przesyłania słownika razem z danymi, nawet gdy nadawca i odbiorca wcześniej uzgodnili tabelę kodu.",
+   "reason": "w statycznym wariancie słownik zwykle się przesyła – zdanie było niejednoznaczne"
+  }
+ ],
+ "remove": [
+  {
+   "id": 15,
+   "key": "f",
+   "reason": "niejednoznaczne – ADD bez sufiksu S w ARM / w RISC-V nie zmienia flag"
+  },
+  {
+   "id": 217,
+   "key": "g",
+   "reason": "duplikat opcji b"
+  },
+  {
+   "id": 221,
+   "key": "h",
+   "reason": "duplikat opcji d"
+  },
+  {
+   "id": 222,
+   "key": "i",
+   "reason": "duplikat opcji b"
+  }
+ ],
+ "questions": [],
+ "explanations": [
+  {
+   "id": 10,
+   "explanation": "**Dlaczego poprawne**\n- Lista rozkazów projektowana jest zgodnie z potrzebami zastosowania procesora – prosty sterownik ma kilkanaście rozkazów, procesor DSP rozkazy mnóż-i-dodaj.\n- Określa formaty rozkazów oraz dostępne tryby adresowania – to elementy definicji ISA.\n- Praktycznie każda lista zawiera rozkazy skoku warunkowego – to podstawowy sposób realizacji pętli i instrukcji warunkowych.\n- Różne rodziny (x86, ARM, RISC-V) mają różne, niezgodne listy rozkazów.\n\n**Dlaczego błędne**\n- „Zawsze zawiera mnożenie” – wiele procesorów (6502, PicoBlaze, RISC-V bez rozszerzenia M) mnoży programowo.\n- „W FPGA zgodna z listą producenta FPGA” – producent FPGA nie definiuje procesora ani listy rozkazów.\n- „Identyczna we wszystkich procesorach” – fałsz, różne ISA.\n- „Zależy od systemu operacyjnego” – odwrotnie, system dostosowuje się do ISA.\n\n**Zapamiętaj**\nISA = interfejs sprzęt–oprogramowanie ustalony przez architekta pod zastosowanie; mnożenie nie jest obowiązkowe, skoki praktycznie tak."
+  },
+  {
+   "id": 12,
+   "explanation": "**Dlaczego poprawne**\n- Licznik rozkazów przechowuje adres rozkazu, który ma się wykonać, a po pobraniu kodu rozkazu – adres aktualnie pobieranego argumentu z pamięci programu (jest inkrementowany po każdym pobranym słowie).\n- Jest inkrementowany po pobraniu słowa z pamięci programu i ładowany równolegle przy skokach, wywołaniach i przerwaniach.\n- Jego szerokość odpowiada szerokości przestrzeni adresowej programu.\n\n**Dlaczego błędne**\n- „Wejście równoległe wyłącznie przy skokach bezwarunkowych” – wpis równoległy wykorzystują też skoki warunkowe (gdy warunek spełniony), CALL, RET i przerwania.\n- „Przechowuje kod rozkazu” – to rejestr rozkazów; PC przechowuje adres.\n- „Zlicza operacje arytmetyczne” – PC adresuje pamięć programu, nie liczy operacji.\n- „Nie zmienia się w wyniku skoków” – skok właśnie polega na wpisie do PC.\n\n**Zapamiętaj**\nPC = adres następnego słowa pobieranego z pamięci programu (rozkazu lub jego argumentu); IR = kod rozkazu."
+  },
+  {
+   "id": 15,
+   "explanation": "**Dlaczego poprawne**\n- Rozkaz dodawania wykorzystuje ALU – to właśnie jednostka arytmetyczno-logiczna wykonuje sumowanie.\n- Wynik zapisywany jest do rejestru docelowego (akumulatora) lub pamięci, a w procesorach ze znacznikami (np. x86, AVR) ustawiane są przy tym znaczniki Z, C, V, N zgodnie z wynikiem (niektóre architektury, np. RISC-V, w ogóle nie mają znaczników).\n- Argumenty mogą pochodzić z rejestrów, pamięci lub być stałą w rozkazie (tryb natychmiastowy).\n\n**Dlaczego błędne**\n- „Wynik do licznika rozkazów” – to zmieniałoby przebieg programu; wynik idzie do rejestru danych, a PC tylko inkrementuje się o długość rozkazu.\n- „Wykonywany przez jednostkę sterującą bez udziału ALU” – jednostka sterująca tylko steruje, liczy ALU.\n- „Tylko w procesorach 64-bitowych” – dodawanie jest w każdym procesorze.\n- „Żadne z pozostałych” – opcja zależna od zestawu; istnieje zdanie prawdziwe.\n\n**Zapamiętaj**\nADD: argumenty → ALU → rejestr wyniku + flagi; licznik rozkazów zmienia się tylko przez inkrementację lub skok."
+  },
+  {
+   "id": 1091,
+   "explanation": "**Dlaczego poprawne**\n- Układ sekwencyjny to układ, w którym wyjścia zależą od aktualnych wejść oraz stanu poprzedniego – posiada pamięć.\n- Przykłady: przerzutniki, liczniki, rejestry (także pamięć RAM i procesor).\n- Pamięć stanu realizuje sprzężenie zwrotne – najprostszy element pamiętający to dwie skrzyżowane bramki NAND (przerzutnik RS).\n- Opisuje się go funkcją przejść (nowy stan) i funkcją wyjść (automat Moore'a lub Mealy'ego).\n\n**Dlaczego błędne**\n- „Nie pamięta stanów poprzednich”, „to inaczej układ kombinacyjny”, „nie posiada sprzężenia zwrotnego” – to cechy układu kombinacyjnego.\n- „Zawsze wymaga sygnału zegarowego” – istnieją asynchroniczne układy sekwencyjne (np. zatrzask RS z dwóch bramek NAND), które działają bez zegara; zegar jest typowy (układy synchroniczne), ale nie obowiązkowy.\n- „Sumator pełny jako przykład” – sumator jest kombinacyjny.\n- „Nie da się go zbudować z bramek NAND” – można, ze sprzężeniem zwrotnym.\n\n**Zapamiętaj**\nSekwencyjny = wejścia + stan → wyjścia; stan wymaga sprzężenia zwrotnego."
+  },
+  {
+   "id": 1101,
+   "explanation": "**Dlaczego poprawne**\n- Rejestr rozkazów przechowuje aktualnie dekodowaną i wykonywaną instrukcję – jej kod pobrany z pamięci programu.\n- Jego zawartość dekoduje jednostka sterująca, generując sygnały sterujące.\n- Jest ładowany w fazie pobrania (fetch) i zachowuje wartość do końca wykonania rozkazu.\n\n**Dlaczego błędne**\n- „Dostępny bezpośrednio dla programisty” – to rejestr wewnętrzny, poza modelem programowym.\n- „Wyniki zmiennoprzecinkowe” – to rejestry FPU.\n- „Tożsamy z licznikiem rozkazów” – PC przechowuje adres, IR kod.\n- „Przechowuje adresy RAM” – to rejestr adresowy/PC.\n- „Część ALU” – IR nie należy do jednostki arytmetyczno-logicznej; współpracuje z jednostką sterującą (w wielu opisach zalicza się go wręcz do niej).\n- „Zmienia się przy każdym pobraniu argumentu” – kod rozkazu musi być zachowany do końca wykonania.\n- „Zlicza rozkazy” – nie ma funkcji licznika.\n\n**Zapamiętaj**\nIR = kod bieżącego rozkazu dla jednostki sterującej; PC = adres następnego rozkazu."
+  },
+  {
+   "id": 1169,
+   "explanation": "**Dlaczego poprawne**\n- Oba algorytmy tworzą kody prefiksowe – żadne słowo kodowe nie jest początkiem innego, więc strumień dekoduje się jednoznacznie bez separatorów.\n- Kod Huffmana jest optymalny wśród kodów prefiksowych dla danego rozkładu: minimalna średnia długość ^^L^^, przy czym ^^H \\le L < H + 1^^.\n- Symbolom częstszym przypisywane są krótsze słowa kodowe.\n- Huffman buduje drzewo oddolnie (łącząc dwa najrzadsze symbole), Shannon-Fano odgórnie (dzieląc zbiór na połowy o zbliżonych prawdopodobieństwach).\n\n**Dlaczego błędne**\n- „Shannon-Fano tworzy kod postfiksowy” – tworzy kod prefiksowy.\n- „Kompresja stratna” – oba są bezstratne.\n- „Huffman zawsze gorszy” – odwrotnie, Huffman jest nie gorszy (Shannon-Fano bywa nieoptymalny).\n- „Zawsze wymagają przesyłania słownika, nawet przy uzgodnionej tabeli” – fałsz: gdy tabela kodu jest ustalona z góry (np. stałe tabele w JPEG) lub stosuje się wariant adaptacyjny, słownika nie trzeba przesyłać.\n- „Stała długość słów” – to kody o zmiennej długości.\n- „Średnia długość mniejsza od entropii” – niemożliwe dla kodu bezstratnego.\n\n**Zapamiętaj**\nHuffman i Shannon-Fano: bezstratne kody prefiksowe zmiennej długości; Huffman optymalny, ^^H \\le L < H+1^^."
+  },
+  {
+   "id": 219,
+   "explanation": "**Dlaczego poprawne**\n- Wykładnik double ma 11 bitów (bias 1023).\n- Pole mantysy ma 52 bity; razem z bitem znaku daje to 53 bity (tak liczy bank). Niezależnie od tego ukryta wiodąca jedynka daje 53 bity precyzji.\n- Liczba zajmuje 64 bity: 1 znak + 11 wykładnik + 52 mantysa.\n- Wykładnik zapisany jest z przesunięciem (bias) 1023, bez własnego bitu znaku.\n- Precyzja to około 15–16 cyfr dziesiętnych (^^53 \\log_{10} 2 \\approx 15{,}95^^).\n\n**Dlaczego błędne**\n- „Mantysa 52 bity łącznie ze znakiem” – pole mantysy ma 52 bity bez znaku, więc ze znakiem 53.\n- „Wykładnik 12 bitów” – 11.\n- „Gwarantują 7–8 cyfr znaczących” – to pojedyncza precyzja (24 bity → ~7 cyfr); double daje 15–16.\n- „Wykładnik w U2” – jest z przesunięciem.\n- „Zajmują 32 bity” – to float; double ma 64.\n\n**Zapamiętaj**\ndouble = 1 + 11 + 52 (+1 ukryty) bitów, ~16 cyfr znaczących; float = 1 + 8 + 23, ~7 cyfr."
+  },
+  {
+   "id": 218,
+   "explanation": "**Dlaczego poprawne**\n- Dokładność 2 miejsc znaczących wymaga rozróżnienia około 100 wartości mantysy: ^^\\lceil \\log_2 100 \\rceil = 7^^ bitów precyzji. Przy mantysie znormalizowanej z ukrytą wiodącą jedynką wystarczy zapisać 6 bitów.\n- Zakres ^^\\pm 10^6^^: ^^10^6 \\approx 2^{20}^^, więc wykładnik musi sięgać około 20 – to 5 bitów (^^2^5 = 32 > 20^^).\n- Bit znaku liczby + 6 bitów mantysy + 5 bitów cechy = **12 bitów** – odpowiedź przyjęta w banku zadań. Jest to oszacowanie: przy innych konwencjach (bez ukrytej jedynki, cecha ze znakiem) wychodzi nieco więcej, ale wśród podanych odpowiedzi minimalną jest 12.\n\n**Dlaczego błędne**\n- 4 bity – nie zmieszczą nawet 2 cyfr znaczących (16 wartości).\n- 8 bitów – mieści mantysę, ale nie ma miejsca na cechę pokrywającą zakres do ^^10^6^^.\n- 10 bitów – za mało na znak, mantysę i 5 bitów cechy.\n- 14, 16, 20, 32 bity – wystarczają, ale nie są liczbą minimalną.\n\n**Zapamiętaj**\nBity mantysy ≈ 3,32 × liczba cyfr znaczących (ukryta jedynka oszczędza 1 bit); bity cechy ≈ ^^\\log_2 \\log_2(\\text{zakres})^^; dodaj bit znaku."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "pamiec-ram",
+   "details": "**Interfejs.** Pamięć RAM ma: wejścia adresowe ^^A_0 \\ldots A_{n-1}^^ (wybór jednej z ^^2^n^^ komórek), linie danych ^^D_0 \\ldots D_{m-1}^^ (dwukierunkowe wejście/wyjście lub oddzielne DI/DO) oraz wejścia sterujące: CS/CE (wybór układu), WE (zapis), OE (odczyt). Pojemność to ^^2^n \\cdot m^^ bitów, np. 10 linii adresowych i 8 linii danych daje 1 KiB.\n\n**Jak działa.** Dekoder adresu wybiera wiersz komórek. Przy zapisie (WE aktywne) dane z linii danych są zatrzaskiwane w wybranych komórkach; przy odczycie zawartość komórek jest podawana na wyjścia przez bufory trójstanowe. Dostęp swobodny oznacza, że czas dostępu nie zależy od adresu (w odróżnieniu od pamięci sekwencyjnych, np. taśm).\n\n**Rodzaje.** SRAM – komórka to przerzutnik (6 tranzystorów, dwa skrzyżowane inwertery), szybka, nie wymaga odświeżania, ale przechowuje dane tylko przy zasilaniu (ulotna). DRAM – kondensator + tranzystor, wymaga odświeżania. W FPGA używa się SRAM (Block RAM, distributed RAM z LUT).\n\n**RAM jako układ logiczny.** Komórka pamięci to element pamiętający, czyli układ sekwencyjny ze sprzężeniem zwrotnym. Można ją zbudować z samych bramek NAND (zatrzask RS + bramki wyboru), ale **nie** bez sprzężeń zwrotnych – bez nich powstałby układ kombinacyjny, który niczego nie pamięta.\n\n**Przykład.** Pamięć 16×4: 4 linie adresowe, 4 linie danych, 16 słów po 4 bity, wymaga 64 zatrzasków i dekodera 4→16.\n\n**Na egzaminie uważaj na:**\n- „RAM posiada wejścia adresowe, sterujące oraz wejście/wyjście danych” – prawda,\n- „można wykonać z bramek NAND” – prawda; „z bramek NAND bez sprzężeń zwrotnych” – fałsz,\n- RAM nie jest układem kombinacyjnym,\n- RAM (SRAM/DRAM) jest ulotna; ROM/Flash są nieulotne,\n- liczba linii adresowych ^^n^^ daje ^^2^n^^ komórek, nie ^^n^^."
+  },
+  {
+   "id": "uklad-sekwencyjny",
+   "details": "**Definicja.** Układ sekwencyjny opisują dwie funkcje: funkcja przejść ^^S' = \\delta(S, X)^^ (nowy stan) i funkcja wyjść ^^Y = \\lambda(S, X)^^ (automat Mealy'ego) lub ^^Y = \\lambda(S)^^ (automat Moore'a). Stan ^^S^^ przechowywany jest w elementach pamięci.\n\n**Skąd bierze się pamięć.** Pamięć powstaje ze sprzężenia zwrotnego: wyjście bramek podane z powrotem na ich wejścia. Dwie bramki NAND ze skrzyżowanym sprzężeniem tworzą przerzutnik RS – najprostszy element pamiętający. Zatem układ sekwencyjny **może** składać się z samych bramek logicznych, ale **musi** zawierać sprzężenie zwrotne; bez sprzężenia zwrotnego same bramki dają układ kombinacyjny. Z przerzutników RS buduje się przerzutniki D, JK, T, a z nich rejestry, liczniki i pamięci.\n\n**Podział.** Synchroniczne (zmiana stanu tylko przy zboczu zegara) i asynchroniczne (zmiana natychmiast po zmianie wejść, np. zatrzask RS). Sygnał zegarowy jest więc typowy, lecz nie obowiązkowy.\n\n**Przykłady.** Przerzutniki, rejestry, liczniki, pamięć RAM (komórka SRAM to dwa skrzyżowane inwertery), automaty sterujące, procesor (pobiera i wykonuje rozkazy w kolejnych cyklach – jest urządzeniem sekwencyjnym), karta graficzna.\n\n**Przykład minimalny.** Zatrzask RS z dwóch NAND: ^^Q = \\overline{\\overline{S} \\cdot \\overline{Q}}^^, ^^\\overline{Q} = \\overline{\\overline{R} \\cdot Q}^^ – po zdjęciu sygnału S wyjście Q pozostaje ustawione: to jest pamiętanie.\n\n**Na egzaminie uważaj na:**\n- „może składać się z samych bramek logicznych” – prawda (z sprzężeniem zwrotnym),\n- „może składać się z samych bramek bez sprzężeń zwrotnych” – fałsz,\n- „nie pamięta stanów poprzednich” – fałsz, to definicja układu kombinacyjnego,\n- „zawsze wymaga sygnału zegarowego” – fałsz (istnieją układy asynchroniczne, np. zatrzask RS); zegar jest typowy, ale nie obowiązkowy,\n- pamięć RAM można wykonać z bramek NAND, ale nie bez sprzężeń zwrotnych."
+  },
+  {
+   "id": "kodowanie-huffmana",
+   "details": "**Kod prefiksowy.** Żadne słowo kodowe nie jest prefiksem (początkiem) innego. Dzięki temu strumień bitów dekoduje się jednoznacznie „w locie”, bez separatorów: czytamy bity aż do rozpoznania słowa. Kod prefiksowy odpowiada drzewu binarnemu, w którym symbole są liśćmi. Nierówność Krafta: ^^\\sum 2^{-l_i} \\le 1^^.\n\n**Shannon-Fano (odgórnie).** 1. Posortuj symbole malejąco wg prawdopodobieństwa. 2. Podziel listę na dwie części o możliwie równych sumach prawdopodobieństw. 3. Pierwszej części dopisz bit 0, drugiej 1. 4. Rekurencyjnie dziel części, aż zostaną pojedyncze symbole. Daje kod prefiksowy, ale **nie zawsze optymalny**.\n\n**Huffman (oddolnie).** 1. Każdy symbol to węzeł o wadze ^^p_i^^. 2. Wybierz dwa węzły o najmniejszych wagach, połącz w nowy węzeł o wadze równej sumie. 3. Powtarzaj, aż zostanie jeden korzeń. 4. Krawędzie lewe oznacz 0, prawe 1; słowo kodowe symbolu to ścieżka od korzenia do liścia. Wynik: **optymalny kod prefiksowy** – minimalna średnia długość ^^L = \\sum p_i l_i^^ spośród wszystkich kodów prefiksowych dla tego rozkładu, ^^H \\le L < H+1^^. Huffman jest więc nie gorszy niż Shannon-Fano (nigdy „zawsze gorszy”); dla prawdopodobieństw będących potęgami 1/2 oba osiągają ^^L = H^^.\n\n**Przykład.** p(A)=0,4, p(B)=0,3, p(C)=0,2, p(D)=0,1. Huffman: łącz D+C=0,3; potem 0,3(B)+0,3(CD)=0,6; potem A+0,6. Kody: A=0, B=10, C=111, D=110 (lub symetrycznie); ^^L = 0{,}4+0{,}6+0{,}6+0{,}3 = 1{,}9^^ bita; ^^H \\approx 1{,}846^^.\n\n**Cechy wspólne.** Kompresja **bezstratna** (dekodowanie odtwarza dane dokładnie). Kod ma zmienną długość słów, stałą dla danego symbolu. Do dekodowania odbiorca musi znać drzewo/tabelę kodu: w wariancie statycznym przesyła się ją z danymi lub przyjmuje z góry (np. stałe tabele w JPEG), w wariancie adaptacyjnym (Vitter, FGK) obie strony budują drzewo równolegle i słownika nie trzeba przesyłać. Słownik trzeba więc przesłać tylko wtedy, gdy odbiorca nie zna go z góry i nie odtwarza go adaptacyjnie. Huffman nie jest optymalny wśród wszystkich kodów – kodowanie arytmetyczne zbliża się do H bez straty do 1 bitu na symbol.\n\n**Na egzaminie uważaj na:**\n- „tworzą kody prefiksowe” – prawda; „Shannon-Fano tworzy kod postfiksowy” – fałsz,\n- „Huffman optymalny wśród kodów prefiksowych dla danych prawdopodobieństw” – prawda,\n- „są metodami kompresji stratnej” – fałsz,\n- „Huffman zawsze gorszy niż Shannon-Fano” – fałsz (odwrotnie: nie gorszy),\n- Huffman buduje drzewo od liści (oddolnie), Shannon-Fano od korzenia (odgórnie)."
+  },
+  {
+   "id": "jezyk-formalny-skladnia-semantyka",
+   "details": "**Język formalny.** Alfabet ^^\\Sigma^^ to skończony zbiór symboli; słowo to skończony ciąg symboli; język formalny ^^L \\subseteq \\Sigma^*^^ to dowolny zbiór słów. Język definiuje się gramatyką (zbiór reguł produkcji, np. w notacji BNF/EBNF), wyrażeniem regularnym lub automatem. Hierarchia Chomsky'ego dzieli języki na regularne, bezkontekstowe, kontekstowe i rekurencyjnie przeliczalne. Języki programowania są językami formalnymi (ich składnia jest zwykle bezkontekstowa). W kursie „Wstęp do informatyki” język formalny pojawia się jako jeden ze **sposobów zapisu algorytmu**: obok opisu słownego, schematu blokowego (bloki operacyjne) i języka programowania wymienia się zapis w języku formalnym w postaci pseudokodu – tzn. zapis o ściśle określonej składni, ale nieprzeznaczony do bezpośredniego wykonania.\n\n**Syntaktyka (składnia).** Zbiór reguł określających, jakie ciągi symboli są poprawnie zbudowanymi programami: budowę identyfikatorów, wyrażeń, instrukcji, deklaracji. Opisuje się ją gramatyką (EBNF) i diagramami składniowymi. Sprawdza ją analizator leksykalny i składniowy (parser) kompilatora. Syntaktyka mówi **jak zbudować** instrukcję (`if warunek then instrukcja`), ale nic o tym, co ona robi.\n\n**Semantyka.** Znaczenie poprawnych składniowo konstrukcji: co instrukcja robi, jak zmienia stan programu, jaką wartość ma wyrażenie. Rodzaje: operacyjna (opis wykonania na abstrakcyjnej maszynie), denotacyjna (funkcje matematyczne), aksjomatyczna (reguły Hoare'a). Program może być poprawny składniowo, a semantycznie bezsensowny (`x = x / 0`). Semantyka statyczna (typy, deklaracje) sprawdzana jest w kompilacji, dynamiczna – w czasie wykonania.\n\n**Rozróżnienie egzaminacyjne.** Syntaktyka = **budowa** instrukcji. Semantyka = **znaczenie** instrukcji. Sformułowania „formalnie poprawne programy” i „działanie poprawnego programu” są w banku dystraktorami – oczekiwane odpowiedzi to „budowa instrukcji” (syntaktyka) i „znaczenie instrukcji” (semantyka).\n\n**Przykład.** `a := b + 1;` Składnia: identyfikator, `:=`, wyrażenie, `;`. Semantyka: oblicz wartość b, dodaj 1, przypisz do a.\n\n**Na egzaminie uważaj na:**\n- „syntaktyka opisuje budowę instrukcji” – prawda; „znaczenie instrukcji” – to semantyka,\n- „semantyka opisuje znaczenie instrukcji” – prawda,\n- „język formalny to zapis algorytmu oparty na blokach operacyjnych” – fałsz (to schemat blokowy); „oparty na pseudokodzie” – prawda w ujęciu kursu,\n- błąd składniowy wykrywa kompilator; błąd semantyczny (logiczny) często ujawnia się dopiero w działaniu."
+  },
+  {
+   "id": "fpga",
+   "details": "**Budowa.** FPGA składa się z tysięcy–milionów bloków logicznych (LUT, czyli tablice prawdy 4–6 wejściowe, plus przerzutnik D), konfigurowalnych połączeń między nimi, bloków pamięci (Block RAM, zwykle dwuportowej), bloków DSP (mnożarki) oraz bloków wejścia/wyjścia. Konfiguracja (bitstream) w typowych układach FPGA opartych na SRAM ładowana jest do wewnętrznej pamięci konfiguracyjnej przy włączeniu zasilania (istnieją też FPGA z konfiguracją we Flash).\n\n**Jak działa projektowanie.** Projektant opisuje układ w języku HDL (VHDL, Verilog) lub schematem, narzędzie syntezy zamienia opis na sieć bramek i przerzutników, a następnie mapuje ją na zasoby konkretnego FPGA (place & route). Wynikiem jest bitstream.\n\n**Co można zrealizować.** Ponieważ LUT realizuje dowolną funkcję logiczną, a przerzutniki dają pamięć stanu, w FPGA da się wykonać:\n- dowolny układ kombinacyjny (dekodery, sumatory, multipleksery),\n- dowolny układ sekwencyjny (liczniki, automaty, rejestry),\n- pamięci RAM (jedno- i dwuportowe) z Block RAM lub z LUT,\n- kompletne procesory (tzw. soft-core: MicroBlaze, NIOS II, RISC-V), także wielordzeniowe, z dowolną listą rozkazów i trybami adresowania zaprojektowanymi przez użytkownika,\n- kontrolery grafiki, akceleratory obliczeń równoległych i przetwarzania obrazu.\n\nJedynym ograniczeniem jest wielkość struktury (liczba LUT, przerzutników, pamięci) oraz maksymalna częstotliwość taktowania. Producent FPGA nie narzuca żadnej architektury procesora ani listy rozkazów – to cecha odróżniająca FPGA od mikrokontrolera z gotowym rdzeniem.\n\n**Przykład.** Prosty kontroler VGA generujący sygnały synchronizacji i kolory to kilkadziesiąt linii VHDL; procesor 8-bitowy to kilkaset linii.\n\n**Na egzaminie uważaj na:**\n- „w FPGA można wykonać tylko procesor jednordzeniowy” – fałsz, liczba rdzeni ograniczona jest tylko zasobami,\n- „lista rozkazów / tryby adresowania muszą być zgodne z producentem FPGA” – fałsz, producent FPGA nie definiuje procesora,\n- „w FPGA nie ma pamięci dwuportowej” – fałsz, Block RAM jest typowo dwuportowa,\n- FPGA nie jest tym samym co GPU ani ASIC; procesor w FPGA jest zwykle wolniejszy od dedykowanego ASIC o tej samej architekturze."
+  }
+ ]
+}

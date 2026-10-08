@@ -128,7 +128,7 @@
    "terms": [
     "prawa-rachunku-zdan"
    ],
-   "explanation": "**Dlaczego poprawne**\nPrzykład z Kopernikiem i Keplerem to dokładnie kontrapozycja: ~A -> ~B jest równoważne B -> A. Prawo jest tautologią i pozwala dowodzić przez kontrapozycję.\n\n**Dlaczego błędne**\nFałszywe implikacji nie pociąga prawdziwości następnika (implikacja fałszywa tylko dla 1 -> 0). Prawo nie jest podstawą dowodu wprost, nie dotyczy przemienności koniunkcji ani wyłącznie kwantyfikatorów. Zamiana p -> q na ~p -> ~q albo q -> p to błąd (negacja/odwrotność).\n\n**Zapamiętaj**\nKontrapozycja: p -> q ≡ ~q -> ~p; odwrotność i przeciwność nie są równoważne.",
+   "explanation": "**Dlaczego poprawne**\nPrzykład z Kopernikiem i Keplerem to dokładnie kontrapozycja: ~A -> ~B jest równoważne B -> A. Prawo jest tautologią i pozwala dowodzić przez kontrapozycję.\n\n**Dlaczego błędne**\nFałszywość implikacji nie pociąga prawdziwości następnika — wręcz przeciwnie, następnik jest wtedy fałszywy (implikacja fałszywa tylko dla 1 -> 0). Prawo nie jest podstawą dowodu wprost, nie dotyczy przemienności koniunkcji ani wyłącznie kwantyfikatorów. Zamiana p -> q na ~p -> ~q albo q -> p to błąd (negacja/odwrotność).\n\n**Zapamiętaj**\nKontrapozycja: p -> q ≡ ~q -> ~p; odwrotność i przeciwność nie są równoważne.",
    "changes": []
   },
   {
@@ -650,7 +650,7 @@
     "semantyka-modele",
     "rachunek-predykatow"
    ],
-   "explanation": "**Dlaczego poprawne**\nKwantyfikatory mają semantykę w modelu: ∀ — dla wszystkich elementów dziedziny, ∃ — dla co najmniej jednego. Są dualne: ∃x φ ≡ ~∀x ~φ.\n\n**Dlaczego błędne**\nNie są spójnikami o argumentach zdaniowymi (wiążą zmienną), mogą współwystępować, dotyczą też dziedzin nieskończonych, mają semantykę (nie tylko składnię) i podlegają negacji. Negacja ∀ to ∃~, nie ∀~.\n\n**Zapamiętaj**\n~∀x φ ≡ ∃x ~φ, ~∃x φ ≡ ∀x ~φ.",
+   "explanation": "**Dlaczego poprawne**\nKwantyfikatory mają semantykę w modelu: ∀ — dla wszystkich elementów dziedziny, ∃ — dla co najmniej jednego. Są dualne: ∃x φ ≡ ~∀x ~φ.\n\n**Dlaczego błędne**\nNie są spójnikami o argumentach zdaniowych (wiążą zmienną), mogą współwystępować, dotyczą też dziedzin nieskończonych, mają semantykę (nie tylko składnię) i podlegają negacji. Negacja ∀ to ∃~, nie ∀~.\n\n**Zapamiętaj**\n~∀x φ ≡ ∃x ~φ, ~∃x φ ≡ ∀x ~φ.",
    "changes": []
   },
   {
@@ -922,7 +922,7 @@
   },
   {
    "id": 1027,
-   "question": "Grupa symetrii danej figury geometrycznej to grupa tych przekształceń płaszczyzny, względem których danafigura jest niezmiennicza. Działaniem grupowym jest składanie przekształceń.",
+   "question": "Grupa symetrii danej figury geometrycznej to grupa tych przekształceń płaszczyzny, względem których dana figura jest niezmiennicza. Działaniem grupowym jest składanie przekształceń. Grupa symetrii siedmiokąta foremnego:",
    "options": [
     {
      "key": "a",
@@ -982,7 +982,7 @@
    "terms": [
     "grupa-symetrii"
    ],
-   "explanation": "**Dlaczego poprawne**\nSymetrie n-kąta foremnego tworzą grupę dihedralną D_n rzędu 2n: n obrotów i n odbić. Dla n=7 jest to 14 elementów, nieabelowa; obroty tworzą podgrupę Z7.\n\n**Dlaczego błędne**\nRząd to 14, nie 7, 21 ani 49. Grupa nie jest cykliczna (obroty to tylko podgrupa), zawiera 7 osi symetrii i nie jest abelowa (odbicia nie komutują z obrotami). Złożenie dwóch odbić to obrót.\n\n**Zapamiętaj**\n|D_n| = 2n i D_n dla n≥3 jest nieabelowa.",
+   "explanation": "**Dlaczego poprawne**\nSymetrie n-kąta foremnego tworzą grupę dihedralną D_n rzędu 2n: n obrotów i n odbić. Dla n=7 jest to 14 elementów, nieabelowa; obroty tworzą podgrupę Z7.\n\n**Dlaczego błędne**\nRząd grupy symetrii siedmiokąta foremnego to 14, nie 7, 21 ani 49. Grupa nie jest cykliczna (obroty to tylko podgrupa), zawiera 7 osi symetrii i nie jest abelowa (odbicia nie komutują z obrotami). Złożenie dwóch odbić to obrót.\n\n**Zapamiętaj**\n|D_n| = 2n i D_n dla n≥3 jest nieabelowa.",
    "changes": []
   },
   {
@@ -1184,12 +1184,12 @@
     "kostka-qn",
     "kolorowanie-grafow"
    ],
-   "explanation": "**Dlaczego poprawne**\nQn ma 2^n wierzchołków, każdy stopnia n, więc n·2^(n-1) krawędzi (Q3: 8 i 12). Jest dwudzielna (parzystość liczby jedynek), planarna tylko dla n≤3.\n\n**Dlaczego błędne**\nQn nie ma n wierzchołków, nie jest pełna, stopień to n (nie 2^n), dla n≥4 nie jest planarna, a dwudzielna jest. Krawędzi n·2^n liczyłoby każdą dwa razy za mało dzieląc.\n\n**Zapamiętaj**\nQn: 2^n wierzchołków, stopień n, dwudzielna.",
+   "explanation": "**Dlaczego poprawne**\nQn ma 2^n wierzchołków, każdy stopnia n, więc n·2^(n-1) krawędzi (Q3: 8 i 12). Jest dwudzielna (parzystość liczby jedynek), planarna tylko dla n≤3.\n\n**Dlaczego błędne**\nQn nie ma n wierzchołków, nie jest pełna, stopień to n (nie 2^n), dla n≥4 nie jest planarna, a dwudzielna jest. Wzór n·2^n liczy każdą krawędź dwukrotnie (z obu końców), trzeba go podzielić przez 2; Q3 ma 8 wierzchołków, nie 6.\n\n**Zapamiętaj**\nQn: 2^n wierzchołków, stopień n, dwudzielna.",
    "changes": []
   },
   {
    "id": 1031,
-   "question": "Liczba chromatyczna grafu to minimalna liczba kolorów, jakimi można pokolorować wierzchołki grafu tak, aby żadne dwa wierzchołki połączone krawędzią nie były tego samego koloru.",
+   "question": "Liczba chromatyczna grafu to minimalna liczba kolorów, jakimi można pokolorować wierzchołki grafu tak, aby żadne dwa wierzchołki połączone krawędzią nie były tego samego koloru. Liczba chromatyczna grafu utworzonego z wierzchołków i krawędzi ośmiokąta foremnego (cykl C8) wynosi:",
    "options": [
     {
      "key": "a",
@@ -1243,7 +1243,7 @@
    "terms": [
     "kolorowanie-grafow"
    ],
-   "explanation": "**Dlaczego poprawne**\nWskazana wartość 2 oznacza graf dwudzielny z co najmniej jedną krawędzią (nie da się użyć 1 koloru, a wystarcza 2). Liczbę chromatyczną wyznacza konkretny graf z zadania.\n\n**Dlaczego błędne**\nPozostałe liczby (1, 3, 4, 5, 6, 7, 8, 0) nie są liczbą chromatyczną tego grafu; graf z krawędzią wymaga co najmniej 2 kolorów, więc 0 i 1 odpadają.\n\n**Zapamiętaj**\nχ(G)=2 dla niepustego grafu dwudzielnego.",
+   "explanation": "**Dlaczego poprawne**\nGraf ośmiokąta foremnego to cykl C8 o parzystej długości, więc jest dwudzielny: wierzchołki kolorujemy naprzemiennie dwoma kolorami. Ma krawędzie, więc jeden kolor nie wystarcza — χ(C8)=2.\n\n**Dlaczego błędne**\nWartości 0 i 1 są za małe (graf ma krawędzie), a 3, 4, 5, 6, 7, 8 przekraczają minimum; 3 kolory potrzebne są dopiero dla cykli nieparzystych, a 8 to liczba wierzchołków (χ grafu pełnego K8).\n\n**Zapamiętaj**\nχ(C_n)=2 dla parzystego n, 3 dla nieparzystego.",
    "changes": []
   },
   {
@@ -1308,7 +1308,7 @@
    "terms": [
     "porzadki-czesciowe"
    ],
-   "explanation": "**Dlaczego poprawne**\nNieskończone zbiory (Z, R z <=) nie mają elementów maksymalnych ani minimalnych. Skończone niepuste mają oba rodzaje.\n\n**Dlaczego błędne**\nNie każdy zbiór ma element maksymalny, nie każdy porządek jest liniowy, zbiór nie musi być skończony, nie ma nakazu jednego najmniejszego elementu ani gęstości (Z nie jest gęsty).\n\n**Zapamiętaj**\nNieskończoność pozwala na brak elementów ekstremalnych.",
+   "explanation": "**Dlaczego poprawne**\nNiektóre nieskończone zbiory (np. Z, R z <=) nie mają elementów maksymalnych ani minimalnych. Skończone niepuste mają oba rodzaje.\n\n**Dlaczego błędne**\nNie każdy zbiór ma element maksymalny, nie każdy porządek jest liniowy, zbiór nie musi być skończony, nie ma nakazu jednego najmniejszego elementu ani gęstości (Z nie jest gęsty).\n\n**Zapamiętaj**\nNieskończoność pozwala na brak elementów ekstremalnych.",
    "changes": []
   },
   {
@@ -1469,7 +1469,7 @@
     },
     {
      "key": "c",
-     "text": "każda permutacja jest cyklem.",
+     "text": "każda permutacja jest cyklem długości 3.",
      "correct": false
     },
     {
@@ -1521,8 +1521,10 @@
    "terms": [
     "permutacje-cykle"
    ],
-   "explanation": "**Dlaczego poprawne**\nTrójcykli w P3 jest (3-1)!=2. |P3|=3!=6: identyczność, 3 transpozycje, 2 trójcykle. Trójcykle są parzyste, transpozycje nieparzyste.\n\n**Dlaczego błędne**\nCykli długości 3 jest 2, nie 6; nie każda permutacja jest trójcyklem (przy cyklach długości 3, transpozycje i identyczność są inne), identyczność istnieje, |P3|=6 (nie 9), transpozycje są nieparzyste. Uwaga: przy konwencji, że identyczność i transpozycje to 'cykle', zdanie o cyklu bywa dwuznaczne; przyjęto intencję autora.\n\n**Zapamiętaj**\nCykli długości n jest (n-1)!.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne**\nTrójcykli w P3 jest (3-1)!=2. |P3|=3!=6: identyczność, 3 transpozycje, 2 trójcykle. Trójcykle są parzyste, transpozycje nieparzyste.\n\n**Dlaczego błędne**\nCykli długości 3 jest 2, nie 6; nie każda permutacja jest cyklem długości 3 (transpozycje i identyczność nie są), identyczność istnieje, |P3|=6 (nie 9), transpozycje są nieparzyste.\n\n**Zapamiętaj**\nCykli długości n jest (n-1)!.",
+   "changes": [
+    "weryfikacja: c w P3 każda permutacja jest cyklem (id, 2-cykl, 3-cykl), więc zdanie bez długości było prawdziwe"
+   ]
   },
   {
    "id": 1036,
@@ -1604,7 +1606,7 @@
   },
   {
    "id": 1051,
-   "question": "Które z poniższych zdań jest jednym z aksjomatów prawdopodobieństwa Kołmogorowa dla przestrzeni probabilistycznej (Ω, , 𝑃) :",
+   "question": "Które z poniższych zdań jest jednym z aksjomatów prawdopodobieństwa Kołmogorowa dla przestrzeni probabilistycznej (Ω, F, P):",
    "options": [
     {
      "key": "a",
@@ -1633,7 +1635,7 @@
     },
     {
      "key": "f",
-     "text": "P(A) + P(A') = 1 (to jest wniosek, ale często mylony z aksjomatem).",
+     "text": "P(A) + P(A') = 1.",
      "correct": false
     },
     {
@@ -1665,7 +1667,9 @@
     "aksjomaty-prawdopodobienstwa"
    ],
    "explanation": "**Dlaczego poprawne**\nAksjomaty: nieujemność, P(Ω)=1 i przeliczalna addytywność dla zdarzeń parami rozłącznych. Reszta (P(A')=1−P(A), wzór włączeń-wyłączeń) to wnioski.\n\n**Dlaczego błędne**\nP(A) ≤ 0.5 i P(Ω)=0 są fałszywe, addytywność dla dowolnych (nierozłącznych) zdarzeń jest błędna, a P(A)+P(A')=1, wzór włączeń i prawdopodobieństwo warunkowe to twierdzenia lub definicje, nie aksjomaty.\n\n**Zapamiętaj**\nTrzy aksjomaty: ≥0, P(Ω)=1, addytywność dla rozłącznych.",
-   "changes": []
+   "changes": [
+    "weryfikacja: f usunięcie podpowiedzi z treści opcji"
+   ]
   },
   {
    "id": 1052,
@@ -1930,7 +1934,7 @@
    "terms": [
     "kombinatoryka-podstawowa"
    ],
-   "explanation": "**Dlaczego poprawne**\nKażdą z k pozycji ciągu wypełniamy niezależnie na n sposobów, stąd n^k. To także liczba funkcji z k-elementowego zbioru w n-elementowy.\n\n**Dlaczego błędne**\nn!/(n−k)! to wariacje bez powtórzeń, C(n,k) to kombinacje, k^n zamienia role, n!/k! i 2^n nie liczą ciągów z powtórzeniami, n·k i wzór z (n+k−1) (kombinacje z powtórzeniami) też nie.\n\n**Zapamiętaj**\nWariacje z powtórzeniami: n^k.",
+   "explanation": "**Dlaczego poprawne**\nKażdą z k pozycji ciągu wypełniamy niezależnie na n sposobów, stąd n^k. To także liczba funkcji z k-elementowego zbioru w n-elementowy.\n\n**Dlaczego błędne**\nn!/(n−k)! to wariacje bez powtórzeń, C(n,k) to kombinacje, k^n zamienia role, n!/k! i 2^n nie liczą ciągów z powtórzeniami, n+k i wzór z (n+k−1) (kombinacje z powtórzeniami) też nie.\n\n**Zapamiętaj**\nWariacje z powtórzeniami: n^k.",
    "changes": [
     "e: dopisano opis (iloraz silni), by odróżnić od innej opcji po normalizacji"
    ]
@@ -2606,7 +2610,7 @@
     "planarnosc-i-wzor-eulera",
     "stopnie-i-spojnosc"
    ],
-   "explanation": "**Dlaczego poprawne**\nCiąg 2,2,3,4,4,5 jest graficzny: wierzchołek stopnia 5 łączymy z resztą, a pozostałe pięć tworzy trójkąt z dwoma pendantami (stopnie 3,3,2,1,1). Dodanie wierzchołka uniwersalnego do grafu zewnętrznie planarnego daje graf planarny.\n\n**Dlaczego błędne**\nStopień 5 nie wyklucza planarności; nie każdy graf 6-wierzchołkowy jest planarny (K3,3), ten graf nie zawiera K3,3 jako rozszerzenia, a parzysta suma stopni nie dowodzi planarności.\n\n**Zapamiętaj**\nWierzchołek uniwersalny + graf zewnętrznie planarny = planarny.",
+   "explanation": "**Dlaczego poprawne**\nCiąg 2,2,3,4,4,5 jest graficzny: wierzchołek stopnia 5 łączymy z resztą, a pozostałe pięć tworzy trójkąt z dwoma doczepionymi liśćmi (stopnie 3,3,2,1,1). Dodanie wierzchołka uniwersalnego do grafu zewnętrznie planarnego daje graf planarny.\n\n**Dlaczego błędne**\nStopień 5 nie wyklucza planarności; nie każdy graf 6-wierzchołkowy jest planarny (K3,3), graf o tych stopniach nie może zawierać podpodziału K3,3 ani K5 (potrzeba odpowiednio 6 wierzchołków stopnia ≥3 lub 5 stopnia ≥4, a są tylko 4 i 3), a parzysta suma stopni nie dowodzi planarności.\n\n**Zapamiętaj**\nWierzchołek uniwersalny + graf zewnętrznie planarny = planarny.",
    "changes": []
   },
   {
@@ -2745,7 +2749,7 @@
    "terms": [
     "grafy-eulera-hamiltona"
    ],
-   "explanation": "**Dlaczego poprawne**\nDla |W1|,|W2| ≥ 2 usuwamy z każdego cyklu krawędź między sąsiednimi węzłami zbiorów W1, W2 i łączymy końce nowymi krawędziami z pełnego połączenia W1–W2, otrzymując cykl Hamiltona w G. Ogólnie potrzebne jest istnienie wspólnego cyklu.\n\n**Dlaczego błędne**\nG nie jest zawsze Hamiltona (przy |W|=1 wierzchołek jest przegubem), ale bywa; nie jest pełny ani dwudzielny; może mieć mosty (gdy |W1|=|W2|=1).\n\n**Zapamiętaj**\nHamiltonowskość wymaga cyklu przez wszystkie wierzchołki; przegub ją psuje.",
+   "explanation": "**Dlaczego poprawne**\nDla |W1|,|W2| ≥ 2 usuwamy z cyklu Hamiltona G1 krawędź u1u2 między dwoma kolejnymi węzłami W1, z cyklu G2 krawędź v1v2 między dwoma kolejnymi węzłami W2, i dodajemy krawędzie u1v1 oraz u2v2 z pełnego połączenia W1–W2, otrzymując cykl Hamiltona w G. Ogólnie potrzebne jest istnienie wspólnego cyklu.\n\n**Dlaczego błędne**\nG nie jest zawsze Hamiltona (przy |W|=1 wierzchołek jest przegubem), ale bywa; nie jest pełny ani dwudzielny; może mieć mosty (gdy |W1|=|W2|=1).\n\n**Zapamiętaj**\nHamiltonowskość wymaga cyklu przez wszystkie wierzchołki; przegub ją psuje.",
    "changes": []
   },
   {
@@ -3021,7 +3025,7 @@
    "terms": [
     "kombinatoryka-podstawowa"
    ],
-   "explanation": "**Dlaczego poprawne**\nKażdy 5-elementowy podzbiór wierzchołków klik K8 daje K5, więc C(8,5)=56 = C(8,3).\n\n**Dlaczego błędne**\n120, 40, 8!/5!=336 (kolejność ma znaczenie), 28 i 64 to nie C(8,5); ordering nie ma znaczenia w podzbiorach.\n\n**Zapamiętaj**\nPodgrafy pełne K_k w K_n: C(n,k).",
+   "explanation": "**Dlaczego poprawne**\nKażdy 5-elementowy podzbiór wierzchołków kliki K8 daje K5, więc C(8,5)=56 = C(8,3).\n\n**Dlaczego błędne**\n120, 40, 8!/5!=336 (kolejność ma znaczenie), 28 i 64 to nie C(8,5); w podzbiorach kolejność nie ma znaczenia.\n\n**Zapamiętaj**\nPodgrafy pełne K_k w K_n: C(n,k).",
    "changes": []
   },
   {
@@ -3087,7 +3091,7 @@
     "kombinatoryka-podstawowa",
     "grafy-eulera-hamiltona"
    ],
-   "explanation": "**Dlaczego poprawne**\nDługość 1: 1; długość 2: 6 (wybór pośredniego); długość 3: 6·5=30 (uporządkowana para pośrednich). Razem 37.\n\n**Dlaczego błędne**\n43 i 36 pomijają, że wierzchołki pośrednie muszą być różne; inne wartości (8, 64, 120, 56) nie wynikają z liczenia dróg.\n\n**Zapamiętaj**\nDrogi prosty: wierzchołki pośrednie różne: 1+6+6·5.",
+   "explanation": "**Dlaczego poprawne**\nDługość 1: 1; długość 2: 6 (wybór pośredniego); długość 3: 6·5=30 (uporządkowana para pośrednich). Razem 37.\n\n**Dlaczego błędne**\n43 i 36 pomijają, że wierzchołki pośrednie muszą być różne; inne wartości (8, 64, 120, 56) nie wynikają z liczenia dróg.\n\n**Zapamiętaj**\nDrogi proste: wierzchołki pośrednie różne: 1+6+6·5.",
    "changes": []
   },
   {
@@ -3152,7 +3156,7 @@
    "terms": [
     "kombinatoryka-podstawowa"
    ],
-   "explanation": "**Dlaczego poprawne**\nMiędzy parą wierzchołków jest 1+6+30=37 dróg o długości 1–3. Ogółem (nieskierowane) 28·37=1036, co zgadza się z 28+168+840.\n\n**Dlaczego błędne**\nC(8,3)+C(8,2)+C(8,1)=92 to nie liczba dróg, 8!/(8−k)! liczy uporządkowane wybory, n^k pozwala na powtórzenia, 8·7/2=28 to same krawędzie. Opcja b (per para) i f (ogółem) są obie prawdziwe jako stwierdzenia.\n\n**Zapamiętaj**\nOgółem = liczba par × liczba dróg na parę, gdy wszystkie pary są symetryczne.",
+   "explanation": "**Dlaczego poprawne**\nMiędzy ustaloną parą wierzchołków K8 jest 1 droga długości 1, 6 długości 2 i 6·5=30 długości 3, razem 37. Ogółem (drogi nieskierowane, po wszystkich 28 parach) jest 28·37=1036, co zgadza się z 28+168+840.\n\n**Dlaczego błędne**\nC(8,3)+C(8,2)+C(8,1)=92 to nie liczba dróg, 8!/(8−k)! liczy uporządkowane wybory, n^k pozwala na powtórzenia, 8·7/2=28 to same krawędzie (drogi długości 1). Między ustaloną parą dróg długości 3 jest 30, nie 120.\n\n**Zapamiętaj**\nOgółem = liczba par × liczba dróg na parę, gdy wszystkie pary są symetryczne.",
    "changes": [
     "f: false -> true, bo 37·28=1036 = 28+168+840 to liczba wszystkich nieskierowanych dróg długości 1–3 w K8 (treść pytania nie precyzuje pary)"
    ]
@@ -3251,7 +3255,7 @@
    "term": "Semantyka: modele i interpretacje (models, interpretation)",
    "topic": "logic",
    "short": "Model nadaje sens językowi: niepusta dziedzina oraz interpretacja predykatów, funkcji i stałych; formuła jest tautologią, gdy jest prawdziwa w każdym modelu.",
-   "details": "**Jak działa:** struktura M=(D, I): D to niepusta dziedzina, I interpretuje predykaty jako relacje na D, symbole funkcyjne jako funkcje na D, stałe jako elementy D. Przy wartościowaniu zmiennych termy dostają elementy D, formuły wartości logiczne. ∀x φ jest prawdziwe, gdy φ zachodzi dla każdego elementu D; ∃x φ — dla co najmniej jednego. Model teorii to struktura, w której wszystkie aksjomaty są prawdziwe.\n\n**Pojęcia:** tautologia — prawdziwa w każdym modelu; spełnialna — w co najmniej jednym; sprzeczna — w żadnym. Teoria struktury to zbiór zdań w niej prawdziwych (to nie jest model).\n\n**Przykład:** (N, <) modeluje formułę ∀x ∃y (x<y), ale skończona dziedzina nie.\n\n**Na egzaminie uważaj na:**\n- dziedzina nie może być pusta, ale może być nieskończona;\n- predykat to relacja, term to element, formuła to prawda/fałsz;\n- prawdziwość w jednym modelu ≠ tautologia;\n- model zależy od języka.",
+   "details": "**Jak działa:** struktura M=(D, I): D to niepusta dziedzina, I interpretuje predykaty jako relacje na D, symbole funkcyjne jako funkcje na D, stałe jako elementy D. Przy wartościowaniu zmiennych termy dostają elementy D, formuły wartości logiczne. ∀x φ jest prawdziwe, gdy φ zachodzi dla każdego elementu D; ∃x φ — dla co najmniej jednego. Model teorii to struktura, w której wszystkie aksjomaty są prawdziwe.\n\n**Pojęcia:** tautologia — prawdziwa w każdym modelu; spełnialna — w co najmniej jednym; sprzeczna — w żadnym. Teoria struktury to zbiór zdań w niej prawdziwych (to nie jest model).\n\n**Przykład:** (N, <) modeluje formułę ∀x ∃y (x<y), ale żaden skończony zbiór z porządkiem liniowym < jej nie spełnia.\n\n**Na egzaminie uważaj na:**\n- dziedzina nie może być pusta, ale może być nieskończona;\n- predykat to relacja, term to element, formuła to prawda/fałsz;\n- prawdziwość w jednym modelu ≠ tautologia;\n- model zależy od języka.",
    "related": [
     "rachunek-predykatow",
     "teoria-logiczna"
@@ -3273,7 +3277,7 @@
    "term": "Tautologie i prawa rachunku zdań (propositional tautologies, transposition)",
    "topic": "logic",
    "short": "Tautologia jest prawdziwa przy każdym wartościowaniu zmiennych zdaniowych; prawa takie jak transpozycja (kontrapozycja) służą do przekształceń i dowodów.",
-   "details": "**Jak działa:** tautologię sprawdzamy tabelą prawdy albo szukając wartościowania falsyfikującego. Implikacja p→q jest fałszywa tylko dla p=1, q=0. Prawo transpozycji (p→q) ⇔ (~q→~p) jest tautologią i podstawą dowodu nie wprost (przez kontrapozycję). Tautologią jest też p→(q→p).\n\n**Klasyfikacja formuł:** tautologia (zawsze 1), kontrtautologia (zawsze 0), przygodna (zależy od wartościowania); spełnialna = nie kontrtautologia.\n\n**Przykład:** „Jeśli Kopernik nie urodził się w Krakowie, to Kepler nie urodził się w Toruniu” ma to samo znaczenie co „jeśli Kepler urodził się w Toruniu, to Kopernik urodził się w Krakowie”.\n\n**Na egzaminie uważaj na:**\n- odwrotność q→p i przeciwność ~p→~q NIE są równoważne p→q;\n- treść zdań (Nil w Krakowie) nie wpływa na tautologiczność schematu;\n- transpozycja nie dotyczy tylko kwantyfikatorów;\n- z fałszywej implikacji nie wynika nic o następniku (jest fałszywa tylko gdy następnik jest fałszywy).",
+   "details": "**Jak działa:** tautologię sprawdzamy tabelą prawdy albo szukając wartościowania falsyfikującego. Implikacja p→q jest fałszywa tylko dla p=1, q=0. Prawo transpozycji (p→q) ⇔ (~q→~p) jest tautologią i podstawą dowodu nie wprost (przez kontrapozycję). Tautologią jest też p→(q→p).\n\n**Klasyfikacja formuł:** tautologia (zawsze 1), kontrtautologia (zawsze 0), przygodna (zależy od wartościowania); spełnialna = nie kontrtautologia.\n\n**Przykład:** „Jeśli Kopernik nie urodził się w Krakowie, to Kepler nie urodził się w Toruniu” ma to samo znaczenie co „jeśli Kepler urodził się w Toruniu, to Kopernik urodził się w Krakowie”.\n\n**Na egzaminie uważaj na:**\n- odwrotność q→p i przeciwność ~p→~q NIE są równoważne p→q;\n- treść zdań (Nil w Krakowie) nie wpływa na tautologiczność schematu;\n- transpozycja nie dotyczy tylko kwantyfikatorów;\n- fałszywość implikacji oznacza prawdziwy poprzednik i fałszywy następnik (nie prawdziwość następnika).",
    "related": [
     "twierdzenia-o-pelnosci-i-dedukcji",
     "semantyka-modele"
@@ -3284,7 +3288,7 @@
    "term": "Twierdzenia o pełności i o dedukcji (completeness, deduction theorem)",
    "topic": "logic",
    "short": "Pełność: każda tautologia jest dowodliwa; dedukcja: G∪{A}⊢B wtedy i tylko wtedy, gdy G⊢A→B.",
-   "details": "**Pełność:** system aksjomatyczny jest *poprawny* (⊢φ ⇒ ⊨φ) i *pełny* (⊨φ ⇒ ⊢φ). Wersja silna: każdy niesprzeczny zbiór formuł ma model. Stosuje się do klasycznego rachunku zdań i do logiki pierwszego rzędu (Gödel 1929).\n\n**Dedukcja:** jeśli z przesłanek G oraz założenia A wyprowadzamy B, to z samego G wyprowadzamy A→B, i odwrotnie. To uzasadnia dowód implikacji przez założenie poprzednika. W rachunku predykatów wymaga uwagi na generalizację po zmiennych wolnych w A.\n\n**Przykład:** aby udowodnić p→(q→p), zakładamy p, potem q i wyprowadzamy p.\n\n**Na egzaminie uważaj na:**\n- „każda formuła dowodliwa jest tautologią” to poprawność, nie pełność;\n- pełność nie mówi o niesprzeczności systemu ani o skończoności modeli;\n- dedukcja nie oznacza, że A→B jest zawsze tautologią;\n- rachunek zdań jest zupełny i rozstrzygalny, predykatów nie.",
+   "details": "**Pełność:** system aksjomatyczny jest *poprawny* (⊢φ ⇒ ⊨φ) i *pełny* (⊨φ ⇒ ⊢φ). Wersja silna: każdy niesprzeczny zbiór formuł ma model. Stosuje się do klasycznego rachunku zdań i do logiki pierwszego rzędu (Gödel 1929).\n\n**Dedukcja:** jeśli z przesłanek G oraz założenia A wyprowadzamy B, to z samego G wyprowadzamy A→B, i odwrotnie. To uzasadnia dowód implikacji przez założenie poprzednika. W rachunku predykatów wymaga uwagi na generalizację po zmiennych wolnych w A.\n\n**Przykład:** aby udowodnić p→(q→p), zakładamy p, potem q i wyprowadzamy p.\n\n**Na egzaminie uważaj na:**\n- „każda formuła dowodliwa jest tautologią” to poprawność, nie pełność;\n- pełność nie mówi o niesprzeczności systemu ani o skończoności modeli;\n- dedukcja nie oznacza, że A→B jest zawsze tautologią;\n- rachunek zdań jest pełny i rozstrzygalny; rachunek predykatów jest pełny, ale nierozstrzygalny.",
    "related": [
     "prawa-rachunku-zdan",
     "rachunek-predykatow"
@@ -3306,7 +3310,7 @@
    "term": "Grupy i grupy symetrii (groups, dihedral group)",
    "topic": "math",
    "short": "Grupa to zbiór z łącznym działaniem, elementem neutralnym i odwrotnościami; symetrie n-kąta foremnego tworzą grupę dihedralną D_n rzędu 2n.",
-   "details": "**Aksjomaty grupy:** działanie łączne, istnieje element neutralny, każdy element ma odwrotność (zamkniętość zakładamy). Abelowa, gdy działanie jest przemienne.\n\n**Przykłady:** (Z,+), (Q,+), (R*,·), (Z_n,+_n), funkcje ciągłe z dodawaniem są grupami; (N,+) nie (brak odwrotności), (Z,·) nie (brak odwrotności poza ±1), (R,·) nie (0).\n\n**Grupa symetrii figury:** przekształcenia płaszczyzny zachowujące figurę, działanie to składanie. Dla n-kąta foremnego: n obrotów o k·360°/n (podgrupa cykliczna Z_n) i n odbić, razem 2n. D7 ma 14 elementów i jest nieabelowa dla n≥3.\n\n**Na egzaminie uważaj na:**\n- |D_n|=2n, nie n ani n²;\n- D_n nie jest cykliczna ani abelowa dla n≥3;\n- złożenie dwóch odbić to obrót;\n- w mnożeniu potrzebne jest wyłączenie zera.",
+   "details": "**Aksjomaty grupy:** działanie łączne, istnieje element neutralny, każdy element ma odwrotność (zamkniętość zakładamy). Abelowa, gdy działanie jest przemienne.\n\n**Przykłady:** (Z,+), (Q,+), (R*,·), (Z_n,+_n), funkcje ciągłe z dodawaniem są grupami; (N,+) nie (brak odwrotności), (Z,·) nie (brak odwrotności poza ±1), (R,·) nie (0).\n\n**Grupa symetrii figury:** przekształcenia płaszczyzny zachowujące figurę, działanie to składanie. Dla n-kąta foremnego: n obrotów o k·360°/n (podgrupa cykliczna Z_n) i n odbić, razem 2n. D_n jest nieabelowa dla n≥3; D7 ma 14 elementów.\n\n**Na egzaminie uważaj na:**\n- |D_n|=2n, nie n ani n²;\n- D_n nie jest cykliczna ani abelowa dla n≥3;\n- złożenie dwóch odbić to obrót;\n- w mnożeniu potrzebne jest wyłączenie zera.",
    "related": [
     "permutacje-cykle",
     "relacja-rownowaznosci"

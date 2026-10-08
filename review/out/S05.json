@@ -190,7 +190,7 @@
     },
     {
      "key": "f",
-     "text": "każda klasa bezpośrednio lub pośrednio dziedziczy po klasie Object",
+     "text": "każda klasa (poza samą klasą Object) bezpośrednio lub pośrednio dziedziczy po klasie Object",
      "correct": true,
      "extra": true
     },
@@ -217,7 +217,9 @@
     "java-dziedziczenie-interfejsy"
    ],
    "explanation": "**Dlaczego poprawne:** klasa może implementować wiele interfejsów, ale rozszerza dokładnie jedną klasę (domyślnie Object); klasa final nie ma potomków; każda klasa dziedziczy po Object.\n**Dlaczego błędne:** `extends A, B, C` jest niedozwolone (brak wielodziedziczenia klas); nie każda klasa może mieć potomka (final); konstruktory nie są dziedziczone; interfejs nie dziedziczy po klasie.\n**Zapamiętaj:** jedna klasa bazowa, wiele interfejsów.",
-   "changes": []
+   "changes": [
+    "weryfikacja: f Object sam nie dziedziczy po Object"
+   ]
   },
   {
    "id": 90,
@@ -327,7 +329,7 @@
   },
   {
    "id": 1242,
-   "question": "Zapisano następujący kod źródłowy w języku Java: Class C { public static void main(String[] args) { int[]a1[]=new int[3][3]; //3 int a2[4]={3,4,5,6}; //4 int a2[5]; //5 }} Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?",
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C { public static void main(String[] args) { int[]a1[]=new int[3][3]; //3 int a2[4]={3,4,5,6}; //4 int a2[5]; //5 }} Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?",
    "options": [
     {
      "key": "a",
@@ -400,7 +402,7 @@
   },
   {
    "id": 1243,
-   "question": "Zapisano następujący kod źródłowy w języku Java: public class A extends Thread { public int i; public void run() { i = 1; } public static void main(String[] args) throws Exception { A a = new A();",
+   "question": "Zapisano następujący kod źródłowy w języku Java: public class A extends Thread { public int i; public void run() { i = 1; } public static void main(String[] args) throws Exception { A a = new A(); a.start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i); } } Jaki jest rezultat kompilacji i wykonania programu?",
    "options": [
     {
      "key": "a",
@@ -409,7 +411,7 @@
     },
     {
      "key": "b",
-     "text": "start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i);",
+     "text": "Błąd kompilacji.",
      "correct": false
     },
     {
@@ -419,7 +421,7 @@
     },
     {
      "key": "d",
-     "text": "Wypisze \"11\".",
+     "text": "Zawsze (w każdym wykonaniu) wypisze \"11\".",
      "correct": false
     },
     {
@@ -466,9 +468,11 @@
    "terms": [
     "java-watki"
    ],
-   "explanation": "**Dlaczego poprawne:** wątek uruchamia `start()`, który wywołuje `run()` w nowym wątku; wątek tworzy się przez `Runnable` lub dziedziczenie po `Thread`; bezpośrednie `run()` wykonuje się w bieżącym wątku; drugi `start()` daje IllegalThreadStateException.\n**Dlaczego błędne:** `run()` sam wątku nie uruchamia; „nic nie wypisze” jest fałszem; wynik „11” nie jest gwarantowany (przy typowym przebiegu pierwszy odczyt daje 0, po sleep 1); `join()` nie startuje wątku. Uwaga: stem jest ucięty, a jedna opcja to fragment kodu.\n**Zapamiętaj:** start() tworzy wątek, run() to zwykła metoda.",
+   "explanation": "**Dlaczego poprawne:** wątek uruchamia `start()`, który wywołuje `run()` w nowym wątku; wątek tworzy się przez `Runnable` lub dziedziczenie po `Thread`; bezpośrednie `run()` wykonuje się w bieżącym wątku; drugi `start()` daje IllegalThreadStateException.\n**Dlaczego błędne:** kod kompiluje się; `run()` sam wątku nie uruchamia; program zawsze coś wypisze (dwie wartości `a.i`); wynik nie jest gwarantowany — przy typowym przebiegu pierwszy odczyt daje 0 (nowy wątek jeszcze nie wykonał `run()`), a po sleep 1, czyli „01”, więc „11” nie jest pewne; `join()` nie startuje wątku; `Thread.sleep` usypia bieżący wątek (main), nie wątek a.\n**Zapamiętaj:** start() tworzy wątek, run() to zwykła metoda.",
    "changes": [
-    "b: pozostaje false — to fragment kodu (ucięty stem), a nie prawdziwe twierdzenie; stem jest ucięty w źródle"
+    "b: pozostaje false — to fragment kodu (ucięty stem), a nie prawdziwe twierdzenie; stem jest ucięty w źródle",
+    "weryfikacja: b opcja była fragmentem kodu ze stemu; kod kompiluje się",
+    "weryfikacja: d doprecyzowanie: wynik niedeterministyczny, typowo 01"
    ]
   },
   {
@@ -607,7 +611,7 @@
   },
   {
    "id": 1246,
-   "question": "Zapisano następujący kod źródłowy w języku Java: interface I{ void f1(); // 1 public void f2(); // 2 protected void f3(); // 3 private void f4(); // 4 } Które linie generują błędy kompilacji? (w komentarzach podany numery linii)",
+   "question": "Zapisano następujący kod źródłowy w języku Java: interface I{ void f1(); // 1 public void f2(); // 2 protected void f3(); // 3 private void f4(); // 4 } Które linie generują błędy kompilacji? (w komentarzach podane numery linii)",
    "options": [
     {
      "key": "a",
@@ -1081,7 +1085,7 @@
     {
      "key": "b",
      "text": "Program wypisze łańcuch: \"m1 w klasie anonimowej\"",
-     "correct": false
+     "correct": true
     },
     {
      "key": "c",
@@ -1132,14 +1136,15 @@
     "java-klasy-zagniezdzone",
     "java-dziedziczenie-interfejsy"
    ],
-   "explanation": "**Dlaczego poprawne:** klasa anonimowa nadpisuje `m1`, a przy dynamicznym wiązaniu wybierana jest wersja z rzeczywistego typu obiektu, więc wypisze „m1 w klasie anonimowej”; klasa anonimowa może rozszerzać klasę albo implementować interfejs.\n**Dlaczego błędne:** wersja z c1 nie zostanie wywołana; brak błędu kompilacji (po poprawieniu brakującego średnika); klasy anonimowe mogą implementować interfejsy; nie mają własnego konstruktora (tylko blok inicjalizujący); metoda nie jest wybierana wg typu referencji.\n**Zapamiętaj:** polimorfizm decyduje w czasie wykonania.",
+   "explanation": "**Dlaczego poprawne:** metoda `m1()` klasy c2 zwraca obiekt klasy anonimowej rozszerzającej c1, która nadpisuje `m1`. Wywołanie `ob1.m1()` jest wiązane dynamicznie (wg rzeczywistego typu obiektu), więc program kompiluje się i wypisuje „m1 w klasie anonimowej”. Klasa anonimowa może rozszerzać klasę albo implementować interfejs.\n**Dlaczego błędne:** wersja z c1 nie zostanie wywołana; nie ma błędu kompilacji; klasy anonimowe mogą implementować interfejsy; nie mają własnego konstruktora (tylko blok inicjalizujący); metoda nie jest wybierana wg typu referencji w czasie kompilacji.\n**Zapamiętaj:** polimorfizm decyduje w czasie wykonania.",
    "changes": [
-    "stem: dodano brakujący średnik po klasie anonimowej w instrukcji return (literówka; bez niego kod nie kompilowałby się wbrew intencji zadania)"
+    "stem: dodano brakujący średnik po klasie anonimowej w instrukcji return (literówka; bez niego kod nie kompilowałby się wbrew intencji zadania)",
+    "weryfikacja: b kod kompiluje się i wypisuje 'm1 w klasie anonimowej' (sprawdzone javac/java)"
    ]
   },
   {
    "id": 1254,
-   "question": "Zapisano poniższy kod źródłowy w języku Java:class C{ int i; public static void main (String[] args) { int i; //1 private int a = 1; //2 protected int b = 1; //3 public int c = 1; //4 System.out.println(a+b+c); //5 }} Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczony numery lini)?",
+   "question": "Zapisano poniższy kod źródłowy w języku Java:class C{ int i; public static void main (String[] args) { int i; //1 private int a = 1; //2 protected int b = 1; //3 public int c = 1; //4 System.out.println(a+b+c); //5 }} Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczone numery linii)?",
    "options": [
     {
      "key": "a",
@@ -1170,12 +1175,6 @@
      "key": "f",
      "text": "Zmienne lokalne są widoczne w całej klasie.",
      "correct": false
-    },
-    {
-     "key": "g",
-     "text": "Zmienna lokalna może być oznaczona modyfikatorem final.",
-     "correct": true,
-     "extra": true
     },
     {
      "key": "h",
@@ -2017,7 +2016,7 @@
     "haskell-typy",
     "leniwa-ewaluacja"
    ],
-   "explanation": "**Dlaczego poprawne:** `r x = x : r x` przyjmuje element dowolnego typu i zwraca listę, więc `r :: a -> [a]`; dzięki leniwej ewaluacji `r 1` to nieskończona lista jedynek i `take 3 (r 'a')` daje \"aaa\".\n**Dlaczego błędne:** `[a]` pomija argument; `Integer a =>` jest niepoprawne (Integer to typ, nie klasa); `[a] -> a` odwraca typy; `head (r 1)` kończy się (wynik 1).\n**Zapamiętaj:** typ wynika z użycia: element → lista.",
+   "explanation": "**Dlaczego poprawne:** `r x = x : r x` przyjmuje element dowolnego typu i zwraca listę, więc `r :: a -> [a]`; dzięki leniwej ewaluacji `r 1` to nieskończona lista jedynek i `take 3 (r 'a')` daje \"aaa\".\n**Dlaczego błędne:** `[a]` pomija argument; `Integer a =>` jest niepoprawne (Integer to typ, nie klasa typów); `[a] -> Int` i `(a -> a) -> [a]` nie zgadzają się z definicją (argument jest elementem listy, a nie listą czy funkcją); `head (r 1)` kończy się (wynik 1).\n**Zapamiętaj:** typ wynika z użycia: element → lista.",
    "changes": []
   },
   {

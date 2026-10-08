@@ -1,0 +1,145 @@
+{
+ "options": [
+  {
+   "id": 185,
+   "key": "c",
+   "text": "dla każdego języka bezkontekstowego istnieje gramatyka w postaci normalnej Chomsky'ego (w ścisłej postaci, bez wyjątku ^^S\\to\\epsilon^^) generująca dokładnie ten język, także gdy język zawiera słowo puste",
+   "reason": "doprecyzowanie konwencji ε – jednoznacznie fałsz"
+  },
+  {
+   "id": 185,
+   "key": "d",
+   "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Chomsky'ego (w ścisłej postaci, bez wyjątku ^^S\\to\\epsilon^^) generującej dokładnie ten sam język, także gdy należy do niego słowo puste",
+   "reason": "doprecyzowanie konwencji ε"
+  },
+  {
+   "id": 185,
+   "key": "e",
+   "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Greibach (w ścisłej postaci, bez wyjątku ^^S\\to\\epsilon^^) generującej dokładnie ten sam język, także gdy należy do niego słowo puste",
+   "reason": "doprecyzowanie konwencji ε"
+  },
+  {
+   "id": 1085,
+   "key": "e",
+   "text": "Rozstrzygalny, bo maszynę Turinga można sprowadzić do automatu ze stosem, dla którego pustość jest rozstrzygalna.",
+   "reason": "oryginał był prawdziwym faktem o PDA – niejednoznaczny"
+  },
+  {
+   "id": 1116,
+   "key": "g",
+   "text": "Forma baaABb jest formą zdaniową, bo S ⇒* baaABb (np. S ⇒ AB ⇒ ASb ⇒* baaSb ⇒ baaABb).",
+   "reason": "krok ASb→baaSb wymaga kilku kroków (⇒*)"
+  },
+  {
+   "id": 1117,
+   "key": "a",
+   "text": "Generuje m.in. słowa kończące się na 'y', po którym następuje 'a' lub 'ab' (np. 'ya', 'xyab').",
+   "reason": "oryginał sugerował, że wszystkie słowa mają taką końcówkę ('y' nie ma)"
+  },
+  {
+   "id": 1123,
+   "key": "b",
+   "correct": true,
+   "text": "Uzasadnia minimalizację automatów deterministycznych: minimalny DFA jest jedyny (z dokładnością do izomorfizmu), a jego stany odpowiadają klasom relacji.",
+   "reason": "oryginał niejednoznaczny; przeformułowano na jednoznacznie prawdziwe"
+  }
+ ],
+ "remove": [],
+ "questions": [
+  {
+   "id": 1119,
+   "question": "Rozważmy gramatykę: S → PQ | SQ | PS, P → x, Q → y. Które stwierdzenia są prawdziwe:",
+   "reason": "sklejony tekst 'yKtóre'"
+  },
+  {
+   "id": 1124,
+   "question": "W kontekście języków kontekstowych (typu 1) następujące stwierdzenia są prawdziwe:",
+   "reason": "opcje dotyczą języków kontekstowych – brak podmiotu w treści"
+  },
+  {
+   "id": 1125,
+   "question": "W odniesieniu do automatu ze stosem (PDA) następujące zdania są prawdziwe:",
+   "reason": "opcje dotyczą PDA – brak podmiotu w treści"
+  }
+ ],
+ "explanations": [
+  {
+   "id": 185,
+   "explanation": "**Dlaczego poprawne:** CNF: ^^A\\to BC | a^^; GNF: ^^A\\to aX^^ (X ciąg nieterminali). Dla każdej CFG istnieje CNF (i GNF) generująca ^^L(G)\\setminus\\{\\epsilon\\}^^; CNF można przekształcić w GNF. W CNF słowo długości n ma n-1 kroków binarnych i n terminalnych, razem ^^2n-1^^.\n\n**Dlaczego błędne:** GNF to nie ^^A\\to BC^^; sama eliminacja ε to za mało (trzeba też usunąć produkcje jednostkowe, produkcje długie i mieszane).\n\n**Uwaga:** w ścisłej postaci normalnej (tylko ^^A\\to BC^^, ^^A\\to a^^ lub ^^A\\to aX^^) nie da się wygenerować słowa pustego, więc dla języka zawierającego ε nie istnieje gramatyka w tej postaci generująca dokładnie ten sam język – dlatego stwierdzenia wymagające zachowania także ε są fałszywe (przy dopuszczeniu wyjątku ^^S\\to\\epsilon^^ byłyby prawdziwe).\n\n**Zapamiętaj:** CNF/GNF są równoważne z dokładnością do słowa pustego."
+  },
+  {
+   "id": 188,
+   "explanation": "**Dlaczego poprawne:** ^^L2=\\{aa,aaaa,\\dots\\}=(aa)^+^^, więc regularny. ^^L1=\\{a^2,a^4,a^8,\\dots\\}^^: pompowanie słowa ^^a^{2^k}^^ daje długość między dwiema kolejnymi potęgami dwójki, więc język nie jest regularny (zbiór długości nie jest ostatecznie okresowy).\n\n**Dlaczego błędne:** nad alfabetem jednoliterowym regularne są tylko języki o długościach ostatecznie okresowych; ^^L2^^ wystarcza sprawdzanie parzystości modulo 2, bez nieograniczonego licznika.\n\n**Zapamiętaj:** język unarny jest regularny wtedy, gdy zbiór długości jest ostatecznie okresowy."
+  },
+  {
+   "id": 191,
+   "explanation": "**Dlaczego poprawne:** klasa LR(1) jest właściwym nadzbiorem LL(1); gramatyka LR(1) jest jednoznaczna, więc niejednoznaczna nie może być LR(1). Lewostronna rekurencja wyklucza LL, natomiast LR(1) ją toleruje. LR redukuje od dołu, odtwarzając wyprowadzenie prawostronne od końca.\n\n**Dlaczego błędne:** LR nie wymaga usuwania lewostronnej rekurencji; oba czytają wejście od lewej (LR: prawostronne wyprowadzenie odwrócone, LL: lewostronne); nie każda gramatyka jednoznaczna jest LR(1); parser dla niejednoznacznej gramatyki bywa sensowny (reguły priorytetów, GLR). Faktoryzacja lewostronna i usuwanie lewostronnej rekurencji to typowe przekształcenia prowadzące do gramatyki LL(1), ale nie są obowiązkowym pierwszym krokiem – gramatyka może już być LL.\n\n**Zapamiętaj:** LL ⊊ LR ⊊ jednoznaczne CFG."
+  },
+  {
+   "id": 1075,
+   "explanation": "**Dlaczego poprawne:** ^^L_{ne}=\\{\\langle M\\rangle : L(M)\\neq\\emptyset\\}^^ koduje pytanie o niepustość języka akceptowanego przez M, czyli o istnienie akceptowanego słowa.\n\n**Dlaczego błędne:** zatrzymywanie na pustym słowie/na każdym słowie to problem stopu, a nie niepustość; skończoność i nieskończoność L(M) to inne własności języka; uniwersalność maszyny, akceptowanie wszystkich słów i determinizm to inne problemy.\n\n**Zapamiętaj:** L_ne = „M akceptuje jakieś słowo”."
+  },
+  {
+   "id": 1081,
+   "explanation": "**Dlaczego poprawne:** funkcja Ackermanna jest obliczalna (rekurencyjna totalna), więc da się ją zaprogramować na maszynie Turinga. Rośnie szybciej niż jakakolwiek funkcja prymitywnie rekurencyjna, więc sama nie jest prymitywnie rekurencyjna.\n\n**Dlaczego błędne:** nie jest nieobliczalna (to kluczowa pułapka), nie jest wielomianowa ani liniowa; jej wartości rosną szybciej niż wielomianowo i niż wykładniczo.\n\n**Zapamiętaj:** obliczalna i totalna, ale nie prymitywnie rekurencyjna."
+  },
+  {
+   "id": 1085,
+   "explanation": "**Dlaczego poprawne:** pustość L(M) jest nierozstrzygalna (Rice) i nie jest częściowo rozstrzygalna, bo jej dopełnienie (niepustość) jest RE, a nierekurencyjne; gdyby oba były RE, byłby rekurencyjny.\n\n**Dlaczego błędne:** równoległa symulacja potwierdza tylko niepustość; „rozstrzygalny/wielomianowy/P-zupełny” zakładają algorytm. Pustość jest rozstrzygalna dla automatów ze stosem, ale maszyny Turinga nie da się w ogólności sprowadzić do PDA (MT jest silniejsza), więc to nie daje algorytmu dla MT.\n\n**Zapamiętaj:** pustość MT jest nierozstrzygalna i nie jest RE."
+  },
+  {
+   "id": 1115,
+   "explanation": "**Dlaczego poprawne:** ^^a^nb^n^^ jest bezkontekstowy, nie regularny; regularne ⊊ bezkontekstowe, więc każdy język automatu skończonego jest bezkontekstowy. Regularne są zamknięte na dopełnienie.\n\n**Dlaczego błędne:** ^^f^{2^n}^^ nie jest regularny (długości rosną wykładniczo); nie każdy CFL jest regularny; twierdzenie o zamknięciu na dopełnienie jest odwrócone; bezkontekstowe nie są zamknięte na przekrój.\n\n**Zapamiętaj:** regularne ⊂ bezkontekstowe ⊂ kontekstowe."
+  },
+  {
+   "id": 1116,
+   "explanation": "**Dlaczego poprawne:** forma zdaniowa to dowolny ciąg terminali i nieterminali wyprowadzalny z S w zerze lub więcej kroków. Tu: S ⇒ AB ⇒ ASb (B→Sb), A ⇒* baa (A⇒Aa⇒bBa⇒baa), więc ASb ⇒* baaSb, a potem S→AB daje baaABb.\n\n**Dlaczego błędne:** forma jest wyprowadzalna (nie „niewyprowadzana”); zawiera nieterminale A, B, więc nie jest słowem języka i nie składa się wyłącznie z terminali; nie jest symbolem startowym. Forma zdaniowa może zawierać nieterminale.\n\n**Zapamiętaj:** słowo języka = forma zdaniowa złożona z samych terminali."
+  },
+  {
+   "id": 1117,
+   "explanation": "**Dlaczego poprawne:** język ^^(x+y)^*y(a+ab)^*^^: dowolny ciąg x,y, potem y, potem dowolnie wiele bloków a lub ab. 'yya' = y·y·a, 'xyab' = x·y·ab, 'yab', 'xxy' i samo 'y' należą do języka; generowane są m.in. słowa zakończone na 'ya' lub 'yab' (np. 'ya', 'xyab'), choć nie wszystkie słowa języka mają taką końcówkę (np. 'y', 'yaa').\n\n**Dlaczego błędne:** 'y' jest generowane (puste (x+y)^* i puste (a+ab)^*); 'xa' i 'ab' nie zawierają wymaganego y; 'yb' zawiera b bez poprzedzającego a; słów krótszych niż 4 jest więcej niż 7 (już długości 3 daje 8).\n\n**Zapamiętaj:** rozbij wyrażenie na człony i sprawdź każdy."
+  },
+  {
+   "id": 1121,
+   "explanation": "**Dlaczego poprawne:** ^^X\\to aX|a^^ daje ^^a^k^^, ^^k\\ge1^^; ^^Y\\to aYb|\\epsilon^^ daje ^^a^jb^j^^. Razem ^^a^{k+j}b^j^^, czyli ^^\\{a^mb^n: m>n\\ge0\\}^^. Opcja ^^\\{a^nb^m:n>m\\}^^ opisuje ten sam język (tylko zamienione nazwy zmiennych). 'aab' (k=1, j=1) należy do języka, 'a' (k=1,j=0) też.\n\n**Dlaczego błędne:** ^^\\{a^nb^n\\}^^ ma równe wykładniki; 'ab' ma m=n; 'abb' ma więcej b niż a; słowo puste wymaga k=0; gramatyka nie jest regularna (^^Y\\to aYb^^ nie jest liniowa jednostronnie), a język nieregularny.\n\n**Zapamiętaj:** zawsze co najmniej jedno a więcej niż b."
+  },
+  {
+   "id": 1122,
+   "explanation": "**Dlaczego poprawne:** regularne ⊂ bezkontekstowe ⊂ kontekstowe ⊂ typ 0, więc każdy regularny język jest generowany przez gramatykę typu 0, typu 1 i typu 2; gramatyki typu 3 generują języki kontekstowe. ε-produkcje można usunąć (język bez ε). Gramatyki kontekstowe są niezmniejszające (|α|≤|β|), poza ewentualnym S→ε.\n\n**Dlaczego błędne:** CFL nie są zamknięte na przekrój (^^\\{a^nb^nc^m\\}\\cap\\{a^mb^nc^n\\}^^) ani dopełnienie.\n\n**Zapamiętaj:** hierarchia Chomsky'ego jest zagnieżdżona."
+  },
+  {
+   "id": 1123,
+   "explanation": "**Dlaczego poprawne:** język jest regularny ⇔ relacja ^^x\\sim_L y \\iff \\forall z\\,(xz\\in L\\iff yz\\in L)^^ ma skończony indeks; klasy to stany jedynego minimalnego DFA. Nieskończony indeks (np. dla ^^a^nb^n^^) dowodzi nieregularności. Twierdzenie uzasadnia minimalizację DFA (jedyność minimalnego automatu), choć sam algorytm minimalizacji, np. Hopcrofta, to osobna procedura.\n\n**Dlaczego błędne:** twierdzenie dotyczy języków regularnych, nie tylko bezkontekstowych; nie dotyczy konwersji NFA→DFA ani problemu stopu; minimalny NFA nie jest jednoznaczny. \n\n**Zapamiętaj:** skończony indeks ⇔ regularny."
+  },
+  {
+   "id": 1124,
+   "explanation": "**Dlaczego poprawne:** języki kontekstowe (typ 1) są dokładnie akceptowane przez LBA; gramatyka typu 1 ma produkcje ^^\\alpha A\\beta\\to\\alpha\\gamma\\beta^^, ^^\\gamma\\ne\\epsilon^^ i może zawierać ^^A\\to BC^^ (puste konteksty). Członkostwo jest rozstrzygalne, bo słowo długości n wymaga formy o długości ≤ n.\n\n**Dlaczego błędne:** NFA i DPDA akceptują tylko podklasy; kontekstowe nie są podzbiorem regularnych i nie każdy kontekstowy jest bezkontekstowy (^^a^nb^nc^n^^); pustość jest nierozstrzygalna.\n\n**Zapamiętaj:** kontekstowe = LBA, nadzbiór CFL."
+  },
+  {
+   "id": 1125,
+   "explanation": "**Dlaczego poprawne:** PDA akceptuje dokładnie języki bezkontekstowe (równoważny CFG); akceptacja stanem końcowym i pustym stosem są równoważne mocą; niedeterministyczny PDA jest silniejszy od deterministycznego (^^\\{ww^R\\}^^ wymaga niedeterminizmu).\n\n**Dlaczego błędne:** jeden stos to nie dwa (dwa stosy = maszyna Turinga); PDA nie musi być deterministyczny; może mieć wiele stanów; ^^a^nb^nc^n^^ nie jest bezkontekstowy.\n\n**Zapamiętaj:** PDA ≡ CFG, DPDA ⊊ PDA."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "lemat-pompowanie",
+   "details": "**Jak działa.** Dla języka regularnego L istnieje p takie, że każde ^^w\\in L^^ z ^^|w|\\ge p^^ da się zapisać jako ^^xyz^^, gdzie ^^|xy|\\le p^^, ^^|y|\\ge1^^ i ^^xy^iz\\in L^^ dla każdego ^^i\\ge0^^. Dowód nieregularności: zakładamy regularność, wybieramy słowo (np. ^^a^pb^p^^), dla dowolnego podziału z warunkami dobieramy i tak, że wychodzimy z L. Dla ^^L=\\{a^{2^n}\\}^^ pompowanie daje długość między dwiema potęgami dwójki.\n\nWersja CFL: ^^w=uvxyz^^, ^^|vxy|\\le p^^, ^^|vy|\\ge1^^, ^^uv^ixy^iz\\in L^^.\n\n**Na egzaminie uważaj na:** to warunek konieczny, nie dostateczny – nie wolno dowodzić nim regularności; p jest stałą języka, nie długością słowa; języki skończone są regularne (trywialnie spełniają lemat); regularne spełniają też lemat CFL; y musi być niepuste."
+  },
+  {
+   "id": "nfa-dfa",
+   "details": "**Jak działa.** NFA ma relację przejść, wiele możliwych ścieżek i akceptuje, gdy istnieje ścieżka akceptująca. Konstrukcja podzbiorowa: stanami DFA są podzbiory stanów NFA, ze stanem początkowym {q0}; DFA akceptuje, gdy podzbiór zawiera stan akceptujący. Stąd NFA z n stanami daje DFA z co najwyżej ^^2^n^^ stanami, a minimalny DFA ma ^^m\\le2^n^^ stanów. Wzrost wykładniczy bywa nieunikniony: „n-ty symbol od końca to a” ma NFA z n+1 stanami i minimalny DFA z ^^2^n^^ stanami (istnieją też NFA z n stanami, których minimalny DFA ma dokładnie ^^2^n^^ stanów, więc ograniczenie jest ostre).\n\nMinimalny DFA jest jedyny (z dokładnością do izomorfizmu). Może mieć wiele stanów akceptujących.\n\n**Na egzaminie uważaj na:** NFA nie akceptują szerszej klasy niż DFA; minimalny DFA nie musi być mniejszy ani większy od NFA; „musi mieć co najmniej ^^2^n^^” jest fałszem; DFA nieminimalny może być dowolnie duży; automat zupełny bez osiągalnych stanów akceptujących akceptuje ∅."
+  },
+  {
+   "id": "zamkniecie-regularne",
+   "details": "**Jak działa.** Suma, konkatenacja i gwiazdka: konstrukcje na NFA z ε-przejściami. Dopełnienie: zamiana stanów akceptujących w zupełnym DFA. Przekrój: automat produktowy lub ^^L_1\\cap L_2=\\overline{\\overline{L_1}\\cup\\overline{L_2}}^^. Różnica ^^L_1-L_2=L_1\\cap\\overline{L_2}^^. Odwrócenie i homomorfizm też zachowują regularność. Nie są zamknięte na dowolne podzbiory ani na nieskończone sumy.\n\nBezkontekstowe: zamknięte na sumę, konkatenację, gwiazdkę, ale nie na przekrój (^^\\{a^nb^nc^m\\}\\cap\\{a^mb^nc^n\\}^^) ani dopełnienie.\n\n**Na egzaminie uważaj na:** podzbiór języka regularnego nie musi być regularny (^^a^nb^n\\subset a^*b^*^^); z regularności ^^L_1-L_2^^ nie wynika regularność ^^L_2^^; gwiazdka zachowuje regularność; język skończony jest regularny, więc dla skończonego L także ^^L^*^^ jest regularny."
+  },
+  {
+   "id": "postac-normalna-chomsky-greibach",
+   "details": "**Jak działa.** CNF: ^^A\\to BC^^ lub ^^A\\to a^^. GNF: ^^A\\to aX^^, X ciąg nieterminali (może być pusty). Sprowadzenie do CNF: usuń ε-produkcje, produkcje jednostkowe, zastąp terminale w długich prawych stronach nowymi nieterminalami i skracaj do par. GNF: usuń lewostronną rekurencję i podstawiaj. Przekształcenie zachowuje język z dokładnością do słowa pustego: ^^L(G')=L(G)-\\{\\epsilon\\}^^.\n\nW CNF słowo długości n ma wyprowadzenie z ^^2n-1^^ kroków (n-1 binarnych, n terminalnych); drzewo jest binarne. Algorytm CYK wymaga CNF.\n\n**Na egzaminie uważaj na:** ścisła postać normalna nie generuje ε (potrzebny wyjątek S→ε), więc dla języka z ε nie ma gramatyki CNF/GNF generującej dokładnie ten sam język; GNF to nie A→BC; samo usunięcie ε nie wystarcza; z CNF można otrzymać GNF."
+  },
+  {
+   "id": "twierdzenie-rice",
+   "details": "**Jak działa.** Własność S zbiorów RE jest nietrywialna, gdy ma ją pewien, ale nie każdy język RE. Wówczas ^^L_S=\\{\\langle M\\rangle: L(M)\\in S\\}^^ nie jest rekurencyjny (redukcja z problemu stopu). Dotyczy własności języka, nie kodu (liczba stanów) ani zachowania (czas). Rice–Shapiro: jeśli ^^L_S^^ jest RE, to S jest monotoniczna (^^A\\in S,\\ A\\subseteq B\\Rightarrow B\\in S^^) i zależy od skończonych podzbiorów; niemonotoniczna ⇒ ^^L_S^^ nie jest RE.\n\nZastosowania: pustość (nierozstrzygalna, nie RE), niepustość (RE, nierozstrzygalna), równoważność MT, „L(M) jest rekurencyjny/regularny/skończony” – nierozstrzygalne.\n\n**Na egzaminie uważaj na:** twierdzenie mówi o nierozstrzygalności, nie o RE; własności syntaktyczne, np. liczba stanów, są poza zakresem twierdzenia (liczba stanów jest rozstrzygalna); własność „prawdziwa dla wszystkich MT” jest trywialna; trzeba odróżnić RE od nie-RE za pomocą monotoniczności."
+  }
+ ]
+}

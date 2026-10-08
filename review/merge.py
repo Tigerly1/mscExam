@@ -1,8 +1,8 @@
-import json,glob,re
+import json,glob,re,os
 base=json.load(open('/home/claude/mscExam/data/questions.json'))
 orig={q['id']:q for q in base['questions']}
 qs=[];gloss={};expl={};flips=[]
-for f in sorted(glob.glob('out/S*.json')):
+for f in sorted(glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)),'out/S*.json'))):
     d=json.load(open(f))
     for g in d['glossary']:
         g=dict(g); g['related']=[r for r in g.get('related',[])]
@@ -14,7 +14,7 @@ for f in sorted(glob.glob('out/S*.json')):
             t=x['text'].replace('[POSITION-DEPENDENT]','').strip()
             pd=('[POSITION-DEPENDENT]' in x['text']) or bool(re.search(r'żadn[ea] z (pozostałych|powyższych)|wszystkie (powyższe|pozostałe)',t,re.I))
             opts.append({'key':chr(97+i),'text':t,'correct':x['correct'],'extra':bool(x.get('extra')),**({'fixed':True} if pd else {})})
-        for i,x in enumerate(o['options']):
+        for i,x in enumerate(o['options'][:len(q['options'])]):
             if q['options'][i]['correct']!=x['correct']: flips.append((q['id'],x['text'][:70],x['correct'],q['options'][i]['correct']))
         nq={k:o[k] for k in ('id','topic','semester','courseName')}
         nq.update(question=q['question'],options=opts,terms=q['terms'])

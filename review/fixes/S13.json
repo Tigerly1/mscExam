@@ -1,0 +1,96 @@
+{
+ "options": [
+  {
+   "id": 1299,
+   "key": "b",
+   "text": "pozwalają na obliczenie odległości (z dokładnością do zniekształceń odwzorowania) przy pomocy samego twierdzenia Pitagorasa.",
+   "reason": "doprecyzowanie, by nie kolidowało z faktem, że rzutowanie zniekształca odległości"
+  },
+  {
+   "id": 1304,
+   "key": "g",
+   "text": "W relacyjnych bazach danych, np. PostgreSQL, każda kolumna ma zadeklarowany typ.",
+   "reason": "SQLite nie wymaga deklaracji typu kolumny; zawężenie"
+  },
+  {
+   "id": 1313,
+   "key": "d",
+   "text": "Jest skutkiem zbyt dużej ilości danych treningowych.",
+   "reason": "'wynika z braku danych' było półprawdziwe (mało danych sprzyja przeuczeniu)"
+  },
+  {
+   "id": 1323,
+   "key": "d",
+   "text": "Sąsiedztwo każdej komórki obejmuje wszystkie komórki siatki.",
+   "reason": "oryginał niejednoznaczny (sąsiedztwo faktycznie definiuje się jednolicie dla całej siatki)"
+  },
+  {
+   "id": 1323,
+   "key": "f",
+   "text": "Sąsiedztwo von Neumanna jest zdefiniowane wyłącznie dla siatek trójkątnych.",
+   "reason": "to, czy sąsiedztwo zawiera komórkę centralną, zależy od konwencji"
+  },
+  {
+   "id": 1324,
+   "key": "b",
+   "correct": true,
+   "text": "Polega na powstawaniu całościowego, makroskopowego obrazu zachowania systemu w wyniku działania prostych reguł mikroskopowych.",
+   "reason": "fragment był niejednoznaczny; to poprawny opis emergencji -> T"
+  }
+ ],
+ "remove": [],
+ "questions": [
+  {
+   "id": 1295,
+   "question": "Zakładając, że df jest obiektem DataFrame biblioteki Pandas, które z poniższych stwierdzeń dotyczących metody agg() oraz poleceń z jej użyciem są poprawne?",
+   "reason": "opcje opisują agg, a stem nie wskazywał podmiotu"
+  },
+  {
+   "id": 1296,
+   "question": "Które z poniższych stwierdzeń dotyczących funkcji/metody merge w bibliotece Pandas są prawdziwe?",
+   "reason": "opcje bez podmiotu dotyczą merge"
+  },
+  {
+   "id": 1315,
+   "question": "Czym może być spowodowane i jak się objawia niedouczenie (underfitting) modelu uczenia maszynowego?",
+   "reason": "jedna z poprawnych opcji to objaw, nie przyczyna"
+  }
+ ],
+ "explanations": [
+  {
+   "id": 1296,
+   "explanation": "**Dlaczego poprawne:** merge łączy dwa DataFrame poziomo, porównując wartości we wspólnych (kluczowych) kolumnach, jak JOIN w SQL, i obsługuje typy złączeń inner, left, right, outer; left zachowuje wszystkie wiersze lewej tabeli.\n\n**Dlaczego błędne:** merge zwraca nowy obiekt, nie łączy pionowo (to concat), nie wymaga identycznych indeksów; domyślny jest inner, a inner zachowuje tylko pasujące wiersze.\n\n**Zapamiętaj:** merge = JOIN po wartościach kolumn, domyślnie inner."
+  },
+  {
+   "id": 1313,
+   "explanation": "**Dlaczego poprawne:** Przeuczony model jest zbyt dobrze dopasowany do danych treningowych: ma niską stratę treningową i wysoką testową, zapamiętuje szum; błąd walidacyjny rośnie, gdy treningowy dalej maleje.\n\n**Dlaczego błędne:** Zbyt prosty model i wysoki błąd wszędzie to niedouczenie (wysokie obciążenie, niska wariancja); duża ilość danych przeciwdziała przeuczeniu, a przeuczenie nie jest pożądane.\n\n**Zapamiętaj:** Przeuczenie: niski błąd train, wysoki test."
+  },
+  {
+   "id": 1322,
+   "explanation": "**Dlaczego poprawne:** Twórcami automatów komórkowych są von Neumann i Ulam (lata 40. XX w., Los Alamos).\n\n**Dlaczego błędne:** Wolfram badał i klasyfikował automaty, Conway stworzył Grę w życie (konkretny automat z 1970 r.), a nie samą ideę CA; Turing/Church, Shannon/Wiener, Knuth i McCarthy to inne dziedziny.\n\n**Zapamiętaj:** CA: von Neumann + Ulam."
+  },
+  {
+   "id": 1323,
+   "explanation": "**Dlaczego poprawne:** Sąsiedztwo von Neumanna to 4 komórki stykające się krawędziami, Moore'a to 8 otaczających komórek (krawędzie i rogi); istnieją sąsiedztwa o większym promieniu.\n\n**Dlaczego błędne:** Moore obejmuje także krawędzie, nie tylko rogi; sąsiedztwo jest lokalne (nie cała siatka); von Neumann nie jest ograniczony do siatek trójkątnych i nie ma 8 komórek.\n\n**Zapamiętaj:** Neumann 4, Moore 8."
+  },
+  {
+   "id": 1324,
+   "explanation": "**Dlaczego poprawne:** Emergencja to powstawanie nowych, złożonych własności makroskopowych z działania prostych lokalnych reguł, których nie widać na poziomie pojedynczego elementu; przykłady to klucze ptaków, mrowiska, glidery w Grze w życie.\n\n**Dlaczego błędne:** Nie oznacza centralnego sterowania ani chaosu deterministycznego, nie wymaga złożonych reguł, nie ogranicza się do biologii i nie da się jej przewidzieć z analizy jednej komórki.\n\n**Zapamiętaj:** Emergencja: złożoność z prostych reguł."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "ml-data-formats",
+   "short": "Formaty ze schematem (Parquet, Avro, HDF5, bazy SQL) zapisują typy wartości, a tekstowe (CSV, TXT) nie.",
+   "details": "**Ze schematem:** Parquet, Avro (schemat w pliku), HDF5 (typy dataset), relacyjne bazy SQL (kolumny mają typy; wyjątkiem jest luźne typowanie w SQLite). Czytnik zna typ int/float/string bez zgadywania.\n\n**Bez jawnych typów:** CSV i pliki tekstowe to tylko ciągi znaków; biblioteka (np. read_csv) zgaduje typy. JSON odróżnia liczby, napisy i wartości logiczne, ale nie ma jawnego rozróżnienia int/float ani typu daty.\n\n**Na egzaminie uważaj na:** nie każdy plik binarny ma jawny schemat; CSV nie zapisuje typów w nagłówku; JSON to nie format ze schematem."
+  },
+  {
+   "id": "ml-epoch",
+   "details": "**Jak działa:** zbiór treningowy N przykładów dzielimy na mini-batche o rozmiarze B. Jedna iteracja (krok) to aktualizacja wag po jednym batchu; jedna epoka to ⌈N/B⌉ iteracji. Trening trwa wiele epok.\n\nZbyt wiele epok prowadzi do przeuczenia (błąd walidacyjny zaczyna rosnąć), zbyt mało do niedouczenia. Early stopping przerywa trening, gdy błąd walidacyjny przestaje maleć.\n\n**Na egzaminie uważaj na:** epoka dotyczy zbioru treningowego, nie testowego; epoka ≠ iteracja (batch); to nie czas trenowania neuronu ani liczba warstw."
+  },
+  {
+   "id": "ml-cellular-automata",
+   "details": "**Twórcy:** von Neumann i Ulam (lata 40. XX w.); Conway stworzył Grę w życie, Wolfram badał klasy reguł.\n**Sąsiedztwa:** von Neumanna (4 komórki stykające się krawędziami), Moore'a (8 komórek, z rogami); możliwe większe promienie (r=2). Liczby 4 i 8 dotyczą sąsiadów bez komórki centralnej; w części definicji sąsiedztwo obejmuje też komórkę centralną (wtedy 5 i 9 komórek).\n**Odwracalność:** automat jest odwracalny, gdy globalna funkcja przejścia jest bijekcją (każda konfiguracja ma dokładnie jednego poprzednika), więc nie ginie informacja. Gra w życie NIE jest odwracalna.\n**Emergencja:** makroskopowe własności (klucze ptaków, mrowiska, glidery) powstają z lokalnych, prostych reguł bez centralnego sterowania; nie jest to chaos deterministyczny.\n\n**Na egzaminie uważaj na:** Conway i Wolfram nie są twórcami CA; nie wszystkie CA są odwracalne."
+  }
+ ]
+}

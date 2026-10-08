@@ -27,12 +27,12 @@
     {
      "key": "e",
      "text": "Adaptacyjność.",
-     "correct": false
+     "correct": true
     },
     {
      "key": "f",
      "text": "Wrażliwość na warunki początkowe (efekt motyla).",
-     "correct": false
+     "correct": true
     },
     {
      "key": "g",
@@ -56,9 +56,11 @@
    "terms": [
     "ml2-systemy-zlozone"
    ],
-   "explanation": "**Dlaczego poprawne:** Emergencja, samoorganizacja, nieliniowość i sprzężenia zwrotne to kanoniczne własności systemów złożonych; sama emergencja też jest taką własnością, a nieliniowość oznacza brak proporcjonalności skutku do przyczyny.\n\n**Dlaczego błędne:** Przewidywalność długoterminowa i centralne zarządzanie przeczą naturze takich systemów; zachowanie nie jest sumą zachowań elementów. Adaptacyjność i efekt motyla to własności raczej systemów złożonych adaptacyjnych/chaotycznych, niebędące w kanonie tej listy (nieoceniane jako poprawne).\n\n**Zapamiętaj:** Złożoność = lokalne reguły, brak centrum, emergencja.",
+   "explanation": "**Dlaczego poprawne:** Emergencja, samoorganizacja, nieliniowość i sprzężenia zwrotne to kanoniczne własności systemów złożonych; sama emergencja też jest taką własnością, a nieliniowość oznacza brak proporcjonalności skutku do przyczyny. Typowo wymienia się też adaptacyjność (systemy złożone adaptacyjne) oraz wrażliwość na warunki początkowe (efekt motyla), która wynika z nieliniowości.\n\n**Dlaczego błędne:** Przewidywalność długoterminowa i centralne zarządzanie przeczą naturze takich systemów; zachowanie całości nie jest sumą zachowań izolowanych elementów.\n\n**Zapamiętaj:** Złożoność = lokalne reguły, brak centrum, emergencja, nieliniowość.",
    "changes": [
-    "b: false -> true, bo Emergencja jest jedną z kluczowych własności systemów złożonych"
+    "b: false -> true, bo Emergencja jest jedną z kluczowych własności systemów złożonych",
+    "weryfikacja: e adaptacyjność jest powszechnie wymienianą własnością systemów złożonych (complex adaptive systems); oznaczenie F wprowadzało w błąd",
+    "weryfikacja: f wrażliwość na warunki początkowe to typowa własność systemów złożonych (nieliniowość, brak długoterminowej przewidywalności)"
    ]
   },
   {
@@ -527,7 +529,7 @@
     },
     {
      "key": "f",
-     "text": "Współczynnik Giniego.",
+     "text": "Współczynnik Giniego (= 2·AUC − 1).",
      "correct": true
     },
     {
@@ -555,7 +557,8 @@
    "explanation": "**Dlaczego poprawne:** MSE, MAE, R² (regresja) oraz accuracy, F1, Log-Loss i Gini (klasyfikacja) oceniają skuteczność; RMSE jest w jednostkach zmiennej celu.\n\n**Dlaczego błędne:** Wariancja, odchylenie wag i liczba iteracji nie mierzą jakości predykcji; accuracy myli przy niezbalansowaniu klas, a R²=1 oznacza model idealny.\n\n**Zapamiętaj:** Dobierz metrykę do zadania i rozkładu klas.",
    "changes": [
     "e: false -> true, bo Log-Loss to metryka klasyfikacji probabilistycznej",
-    "f: false -> true, bo współczynnik Giniego (=2AUC-1) to metryka klasyfikacji"
+    "f: false -> true, bo współczynnik Giniego (=2AUC-1) to metryka klasyfikacji",
+    "weryfikacja: f doprecyzowanie: chodzi o metrykę klasyfikacji, nie o Gini impurity w drzewach"
    ]
   },
   {
@@ -1152,7 +1155,7 @@
     },
     {
      "key": "e",
-     "text": "Chiński Pokój Searla jest znanym argumentem przeciwko testowi Turinga.",
+     "text": "Argument Chińskiego Pokoju Searle'a, który Turing omówił w swoim artykule z 1950 r.",
      "correct": false
     },
     {
@@ -1171,19 +1174,15 @@
      "text": "Turing pominął w artykule wszelkie zarzuty, uznając test za bezdyskusyjny.",
      "correct": false,
      "extra": true
-    },
-    {
-     "key": "i",
-     "text": "Turing przewidział argument Chińskiego Pokoju jako zarzut wobec swojego testu.",
-     "correct": false,
-     "extra": true
     }
    ],
    "terms": [
     "ml2-test-turinga"
    ],
    "explanation": "**Dlaczego poprawne:** Turing omawiał zarzuty: teologiczny, świadomości, niepełnosprawności maszyn, Lady Lovelace (maszyna robi tylko to, co zaprogramowano).\n\n**Dlaczego błędne:** Nie twierdził, że test jest niewykonalny ani że maszyny nie zagrają w szachy; Searle sformułował Chiński Pokój dopiero w 1980.\n\n**Zapamiętaj:** Turing odpowiedział na 9 zarzutów, nie na Searle'a.",
-   "changes": []
+   "changes": [
+    "weryfikacja: e pierwotne zdanie jako takie było prawdziwe (Chiński Pokój to znany zarzut wobec testu); przeformułowano, by jednoznacznie było fałszywe"
+   ]
   },
   {
    "id": 1345,
@@ -2024,7 +2023,7 @@
    "term": "Paradygmaty uczenia maszynowego (nadzorowane, nienadzorowane, RL)",
    "topic": "machine_learning",
    "short": "Podział metod ML według dostępnych sygnałów uczących: etykiety, brak etykiet, nagroda.",
-   "details": "**Jak działa:** **Nadzorowane** (etykiety): regresja liniowa/logistyczna, SVM, drzewa, Random Forest, XGBoost, k-NN, Naive Bayes, sieci neuronowe; zadania: klasyfikacja (etykieta dyskretna, np. kolor z 5) i regresja (ciągła). **Nienadzorowane**: K-Means, DBSCAN, klasteryzacja hierarchiczna, GMM, PCA, t-SNE, ICA, SOM, autoenkodery, Apriori. **Ze wzmocnieniem**: agent i nagroda.\n\n**Na egzaminie uważaj na:** PCA, K-Means, Apriori, autoenkodery to nienadzorowane; Naive Bayes i k-NN to nadzorowane (mimo nazwy); kategoria kolor to klasyfikacja, nie regresja.",
+   "details": "**Jak działa:** **Nadzorowane** (etykiety): regresja liniowa/logistyczna, SVM, drzewa, Random Forest, XGBoost, k-NN, Naive Bayes, sieci neuronowe; zadania: klasyfikacja (etykieta dyskretna, np. kolor z 5) i regresja (ciągła). **Nienadzorowane**: K-Means, DBSCAN, klasteryzacja hierarchiczna, GMM, PCA, t-SNE, ICA, SOM, autoenkodery, Apriori. **Ze wzmocnieniem**: agent i nagroda.\n\n**Na egzaminie uważaj na:** PCA, K-Means, Apriori, autoenkodery to nienadzorowane; Naive Bayes i k-NN to nadzorowane (k-NN nie mylić z k-means); kategoria kolor to klasyfikacja, nie regresja.",
    "related": [
     "ml2-uczenie-czesciowo-nadzorowane",
     "ml2-k-means"
@@ -2107,7 +2106,7 @@
    "term": "Algorytm Apriori i reguły asocjacyjne",
    "topic": "machine_learning",
    "short": "Nienadzorowany algorytm znajdowania częstych zbiorów elementów i reguł asocjacyjnych.",
-   "details": "**Jak działa:** poziomami generuje kandydatów o rozmiarze k z częstych zbiorów rozmiaru k−1 i liczy **support**. Dzięki **antymonotoniczności** (podzbiór zbioru częstego jest częsty) odrzuca kandydatów mających nieczęste podzbiory. Z częstych zbiorów tworzy reguły A→B: support = P(A∪B), **confidence** = P(B|A), **lift** = confidence / P(B) (lift>1: dodatnia zależność). Zastosowania: analiza koszykowa, rekomendacje.\n\n**Na egzaminie uważaj na:** to nie klasyfikacja spamu ani rozpoznawanie twarzy; confidence to P(B|A), a nie support; Apriori jest nienadzorowany.",
+   "details": "**Jak działa:** poziomami generuje kandydatów o rozmiarze k z częstych zbiorów rozmiaru k−1 i liczy **support**. Dzięki **antymonotoniczności** (podzbiór zbioru częstego jest częsty) odrzuca kandydatów mających nieczęste podzbiory. Z częstych zbiorów tworzy reguły A→B: support = odsetek transakcji zawierających wszystkie elementy A i B, **confidence** = P(B|A), **lift** = confidence / P(B) (lift>1: dodatnia zależność). Zastosowania: analiza koszykowa, rekomendacje.\n\n**Na egzaminie uważaj na:** to nie klasyfikacja spamu ani rozpoznawanie twarzy; confidence to P(B|A), a nie support; Apriori jest nienadzorowany.",
    "related": [
     "ml2-paradygmaty-uczenia"
    ]

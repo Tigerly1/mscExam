@@ -1,0 +1,108 @@
+{
+ "options": [
+  {
+   "id": 99,
+   "key": "c",
+   "correct": false,
+   "text": "Operator przecinka (,) ma wyższy priorytet niż operator przypisania =.",
+   "reason": "„żadne z pozostałych” zależało od innych opcji (losowy podzbiór)"
+  },
+  {
+   "id": 1206,
+   "key": "e",
+   "correct": false,
+   "text": "Jest to zachowanie zdefiniowane przez implementację (implementation-defined): wynik zależy od kompilatora, który musi go udokumentować.",
+   "reason": "oryginał półprawdziwy (w praktyce wynik zależy od kompilatora)"
+  },
+  {
+   "id": 1217,
+   "key": "i",
+   "correct": true,
+   "text": "Wstawianie posortowanego ciągu do pustego BST bez równoważenia daje drzewo zdegenerowane (ścieżkę n węzłów, wysokość rzędu n).",
+   "reason": "wysokość n vs n−1 zależnie od definicji"
+  },
+  {
+   "id": 1218,
+   "key": "f",
+   "correct": false,
+   "text": "Standard C++ gwarantuje, że referencja zajmuje tyle samo pamięci co wskaźnik.",
+   "reason": "w praktyce często prawda – doprecyzowano"
+  },
+  {
+   "id": 1221,
+   "key": "a",
+   "correct": true,
+   "text": "W tym przypadku konstruktor klasy B musi jawnie wywołać konstruktor klasy A w liście inicjalizacyjnej (A nie ma konstruktora domyślnego).",
+   "reason": "jako reguła ogólna fałsz (bazy z konstruktorem domyślnym)"
+  },
+  {
+   "id": 1222,
+   "key": "e",
+   "correct": false,
+   "text": "Kolejność zależy od tego, w jakiej kolejności definicje klas A, B, C, D występują w pliku.",
+   "reason": "kolidowało z prawdziwym „kolejność deklaracji pól”"
+  },
+  {
+   "id": 1226,
+   "key": "e",
+   "correct": true,
+   "text": "Wyjątek opuszczający destruktor podczas odwijania stosu powoduje wywołanie std::terminate.",
+   "reason": "wyjątek złapany wewnątrz destruktora nie wywołuje terminate"
+  },
+  {
+   "id": 1230,
+   "key": "e",
+   "correct": true,
+   "text": "Składnia [=] oznacza domyślne przechwytywanie przez kopię (kopiowane są zmienne lokalne użyte w ciele lambdy).",
+   "reason": "nie wszystkie zmienne, tylko użyte"
+  }
+ ],
+ "remove": [
+  {
+   "id": 1208,
+   "key": "i",
+   "reason": "niejednoznaczne: puste ciało wykonuje się strlen(s) razy, warunek strlen+1"
+  }
+ ],
+ "questions": [],
+ "explanations": [
+  {
+   "id": 99,
+   "explanation": "**Dlaczego poprawne:** * / % wiążą silniej niż + −; = jest prawostronnie łączny; && ma wyższy priorytet niż ||.\n\n**Dlaczego błędne:** z == ++z to niesekwencjonowany odczyt i modyfikacja z – niezdefiniowane zachowanie, więc nie można twierdzić, że jest „zawsze fałszywe”; == ma niższy priorytet niż <; przecinek ma najniższy priorytet (niższy niż =); a+b*c to a+(b*c).\n\n**Zapamiętaj:** mnożenie przed dodawaniem, ale kolejność obliczania operandów nie jest gwarantowana."
+  },
+  {
+   "id": 1206,
+   "explanation": "**Dlaczego poprawne:** b jest modyfikowane (b++) i odczytywane w tym samym wyrażeniu bez sekwencjonowania → niezdefiniowane zachowanie. Standard C nie określa też kolejności obliczania operandów +.\n\n**Dlaczego błędne:** 2 lub 3 nie jest gwarantowane; kod się kompiluje; nawiasy nie pomagają; to nie jest zachowanie zdefiniowane przez implementację (które kompilator musi udokumentować), tylko UB – standard nie nakłada żadnych wymagań.\n\n**Zapamiętaj:** nie modyfikuj i nie czytaj tej samej zmiennej w jednym wyrażeniu bez punktu sekwencyjnego."
+  },
+  {
+   "id": 1208,
+   "explanation": "**Dlaczego poprawne:** *t++=*s++ kopiuje znak i przesuwa oba wskaźniki; wartość przypisania to skopiowany znak, więc pętla kończy się po skopiowaniu '\\0'. To idiom kopiowania łańcuchów; po pętli t wskazuje bajt za '\\0'.\n\n**Dlaczego błędne:** wskaźniki przesuwają się o długość+1 (razem z '\\0'); pętla nie jest nieskończona ani nie kopiuje jednego znaku; adresy t i s nie muszą być w relacji (bufor musi mieć miejsce).\n\n**Zapamiętaj:** kopia z terminatorem; warunek pętli (z kopiowaniem) obliczany jest strlen+1 razy."
+  },
+  {
+   "id": 1212,
+   "explanation": "**Dlaczego poprawne:** minimax wybiera ruch optymalny przy założeniu, że przeciwnik też gra optymalnie (gry dwuosobowe o sumie zerowej); odcięcia alfa-beta przyspieszają go bez zmiany wyniku; koszt bez odcięć to O(b^d).\n\n**Dlaczego błędne:** drzewo kółka i krzyżyka (co najwyżej 9! ≈ 363 tys. ścieżek, faktycznie 255 168 rozgrywek) da się przejrzeć w całości; algorytm jest deterministyczny; wymaga funkcji oceny (lub stanów końcowych); nie tylko gry karciane; alfa-beta nie zmienia wyniku; nie jest zachłanny.\n\n**Zapamiętaj:** minimax + alfa-beta = ten sam wynik, mniej węzłów."
+  },
+  {
+   "id": 1220,
+   "explanation": "**Dlaczego poprawne:** metody statyczne nie należą do obiektu, więc nie mają this; metoda const nie modyfikuje pól (poza mutable); metoda wirtualna może być prywatna; statyczną wywołuje się przez A::f().\n\n**Dlaczego błędne:** metody prywatne mogą być wirtualne; nie każda musi być wirtualna; statyczna nie wywoła niestatycznej bez obiektu; metoda statyczna nie może mieć kwalifikatora const (nie ma this); metoda const nie może wywoływać metod niestałych tego obiektu.\n\n**Zapamiętaj:** static = brak this, const = brak modyfikacji stanu."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "lancuch-znakow-c",
+   "details": "Nie ma osobnego typu string; długość wynika wyłącznie z położenia terminatora. strlen(s) zlicza znaki przed '\\0' (bez niego), więc bufor na kopię musi mieć strlen+1 bajtów. sizeof(s) dla char* to rozmiar wskaźnika. Idiom kopiowania: while(*t++ = *s++); – kopiuje znak, przesuwa wskaźniki, kończy się po skopiowaniu '\\0' (wartość przypisania 0), obliczając warunek pętli strlen+1 razy. Po pętli oba wskaźniki wskazują bajt za terminatorem. Bufor docelowy musi być wystarczająco duży, inaczej przepełnienie bufora (UB). Metody length() należą do std::string w C++, nie do C.\n\n**Na egzaminie uważaj na:**\n- strlen nie wlicza '\\0'.\n- Kopiowanie zwiększa wskaźniki o długość+1.\n- sizeof(txt) ≠ strlen(txt).\n- Nie ma txt.length() w C."
+  },
+  {
+   "id": "wyszukiwanie-binarne-liniowe",
+   "details": "Binarne porównuje szukaną wartość ze środkowym elementem i odrzuca połowę, w której jej być nie może; wymaga posortowania (w dowolnym kierunku, ze zgodnym porównaniem) i dostępu swobodnego (tablica), dlatego na liście jednokierunkowej nie daje O(log n). W najgorszym przypadku wykonuje ^^\\lfloor \\log_2 n \\rfloor + 1^^ porównań. Liniowe działa na dowolnych danych, a na posortowanych także, w najgorszym przypadku O(n), w najlepszym O(1). Dla małych n stałe czynniki mogą sprawiać, że liniowe jest szybsze, ale nie „zawsze”. Na nieposortowanych danych binarne daje błędne wyniki.\n\n**Na egzaminie uważaj na:**\n- Nie „dokładnie n kroków” – szukanie kończy się wcześniej.\n- Posortowana lista nie daje O(log n).\n- Binarne to O(log n), nie O(√n).\n- Nie potrzeba dodatkowego indeksu."
+  },
+  {
+   "id": "metody-klas-cpp",
+   "details": "Metoda statyczna należy do klasy, nie ma wskaźnika this, wywołuje się ją A::f() bez obiektu, więc nie wywoła metody niestatycznej bez obiektu ani nie może być const. Metoda const nie modyfikuje pól niestatycznych (wyjątek: pola mutable), można ją wywołać na obiekcie const i nie może wywoływać metod niestałych. Metoda wirtualna wybierana jest w czasie wykonania wg dynamicznego typu; może być prywatna i mimo to nadpisywana w klasie pochodnej (idiom NVI). Nie każda metoda musi być wirtualna.\n\n**Na egzaminie uważaj na:**\n- Brak this w statycznych to fakt.\n- Wirtualna może być prywatna.\n- Metoda statyczna nie może być const.\n- mutable omija const."
+  },
+  {
+   "id": "wyjatki-cpp",
+   "details": "throw przekazuje sterowanie do najbliższego pasującego bloku catch; po drodze zwalniane są ramki stosu i wołane destruktory obiektów lokalnych (RAII). Rzucany może być dowolny typ, nie tylko dziedziczący po std::exception; catch(...) łapie wszystko. Po obsłużeniu wykonanie kontynuuje się za blokiem try/catch, nie za throw. Wyjątek można rzucić w konstruktorze (zniszczone zostaną w pełni skonstruowane pola i bazy, ale destruktor samego obiektu nie zostanie wywołany). Jeśli wyjątek ucieknie z destruktora podczas odwijania, wywołane jest std::terminate. Łapanie przez wartość powoduje slicing.\n\n**Na egzaminie uważaj na:**\n- Wyjątki w konstruktorach są dozwolone.\n- Destruktory nie powinny rzucać.\n- Wykonanie nie wraca za throw.\n- catch(...) nie jest tylko dla int."
+  }
+ ]
+}

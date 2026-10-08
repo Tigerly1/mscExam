@@ -1,0 +1,144 @@
+{
+ "options": [
+  {
+   "id": 154,
+   "key": "b",
+   "correct": false,
+   "reason": "pełną siatkę eliminuje Route Reflector (RR), nie klient RRC"
+  },
+  {
+   "id": 142,
+   "key": "e",
+   "correct": true,
+   "text": "w typowej konfiguracji (bez Proxy ARP) stacje muszą znać adres IP routera (bramy domyślnej) w swojej sieci lokalnej",
+   "reason": "z Proxy ARP brama nie jest konieczna – doprecyzowanie"
+  },
+  {
+   "id": 1268,
+   "key": "e",
+   "correct": true,
+   "text": "Warstwa 3 to warstwa sieciowa (jej odpowiednikiem w stosie TCP/IP jest protokół IP).",
+   "reason": "OSI nie definiuje IP – spójność z pyt. 134"
+  },
+  {
+   "id": 1279,
+   "key": "d",
+   "correct": false,
+   "text": "ATA (równoległe, PATA)",
+   "reason": "SATA jest szeregowe – doprecyzowanie"
+  }
+ ],
+ "remove": [
+  {
+   "id": 151,
+   "key": "h",
+   "reason": "2000::/3 (globalny unicast) obejmuje praktycznie wszystkie hosty internetu – niejednoznaczne"
+  },
+  {
+   "id": 157,
+   "key": "c",
+   "reason": "niejednoznaczne – wiele protokołów ma domyślną metrykę początkową (np. OSPF 20)"
+  }
+ ],
+ "questions": [],
+ "explanations": [
+  {
+   "id": 154,
+   "explanation": "**Dlaczego poprawne**\nRouter, którego wprowadzenie eliminuje konieczność pełnej siatki sesji iBGP, to Route Reflector (RR): odbija trasy otrzymane od klientów do pozostałych peerów iBGP. Bez reflektora każdy router iBGP musi mieć sesję z każdym innym (full-mesh).\n\n**Dlaczego błędne**\nRoute Reflector Client (RRC) to zwykły router łączący się tylko z reflektorem – to nie on redukuje sesje, lecz RR. BGP Mirror nie istnieje jako mechanizm; eBGP multihop, agregacja i dampening nie redukują full-mesh iBGP.\n\n**Zapamiętaj**: full-mesh iBGP rozwiązuje Route Reflector (RR), a klienci to RRC."
+  },
+  {
+   "id": 149,
+   "explanation": "**Dlaczego poprawne**\nTTL działa jak licznik skoków (routerów): każdy router zmniejsza go o 1; po osiągnięciu 0 datagram jest odrzucany, a router może wysłać ICMP Time Exceeded.\n\n**Dlaczego błędne**\nRFC 791 formalnie opisuje TTL w sekundach, ale każdy router zmniejsza go co najmniej o 1, więc w praktyce jest to limit skoków, a nie czas. Pole ma 8 bitów, ustawia je nadawca, a router je zmniejsza, nie zwiększa.\n\n**Zapamiętaj**: TTL = limit skoków."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "num-zagadnienie-poczatkowe",
+   "details": "Rozwiązanie wyznaczamy iteracyjnie z warunku początkowego, krok po kroku w czasie. Schemat musi być **zgodny** (aproksymacja różnicowa dąży do równania przy h→0), **stabilny** (współczynnik propagacji błędu < 1 – błędy nie rosną), dokładny oraz efektywny czasowo i pamięciowo. Wg twierdzenia Laxa: zgodność + stabilność ⇒ zbieżność. Algorytm powinien być dobrze uwarunkowany (małe wskaźniki uwarunkowania). **Na egzaminie uważaj na:** warunki brzegowe dotyczą zagadnień brzegowych; zgodność sama nie wystarcza; współczynnik propagacji > 1 oznacza niestabilność."
+  },
+  {
+   "id": "ethernet-csma-cd",
+   "details": "W półdupleksie stacje nasłuchują nośną, nadają, wykrywają kolizję i wstrzymują się losowo (backoff). Ograniczenie długości segmentu wynika z czasu propagacji: kolizja musi zostać wykryta w trakcie nadawania minimalnej ramki. W pełnym dupleksie (przełącznik, osobne pary) kolizji nie ma, CSMA/CD jest wyłączony, sumaryczna przepustowość łącza może być dwukrotnie większa (nadawanie i odbiór jednocześnie), a długość ogranicza tylko medium. Adres MAC ma 48 bitów, z czego pierwsze 24 to OUI. **Na egzaminie uważaj na:** huby działają tylko w półdupleksie; pełny dupleks nie zwiększa prędkości pojedynczego kierunku."
+  },
+  {
+   "id": "model-osi",
+   "details": "Warstwy: fizyczna, łącza danych (LLC i MAC), sieciowa, transportowa, sesji, prezentacji, aplikacji. Każda warstwa świadczy usługi wyższej i komunikuje się logicznie z równorzędną, co pozwala rozwijać sprzęt i oprogramowanie niezależnie. Model nie definiuje protokołów, tylko zadania (IP, TCP należą do stosu TCP/IP). LAN i WAN różnią się warstwami 1 i 2; warstwa sieciowa jest wspólna. **Na egzaminie uważaj na:** OSI ma 7, TCP/IP 4 warstwy; „warstwa sprzętowa” i „internetowa” nie należą do OSI."
+  },
+  {
+   "id": "ethernet-media",
+   "details": "100BASE-TX używa 2 par UTP kat. 5. 1000BASE-T używa wszystkich 4 par jednocześnie w obu kierunkach z kodowaniem PAM-5, więc działa na kat. 5e. Wyższą przepustowość uzyskuje się więc przez kodowanie i równoległość, a nie zawsze lepszym kablem. Ograniczenie długości segmentu miedzi to 100 m. **Na egzaminie uważaj na:** 1 Gb/s nie wymaga światłowodu ani lepszego kabla niż 5e."
+  },
+  {
+   "id": "kodowanie-sygnalow",
+   "details": "Przykłady: NRZ, Manchester, 4B/5B, PAM-5. Kodowanie wpływa na przepustowość (bity na symbol), zależy od medium i może zapewnić samosynchronizację (Manchester – zbocze w środku bitu, kosztem 2× większego pasma). NRZ przy długich seriach identycznych bitów traci synchronizację. To zagadnienie warstwy fizycznej. **Na egzaminie uważaj na:** kodowanie nie jest sprawą warstwy sieciowej; Manchester nie ma sprawności 100%."
+  },
+  {
+   "id": "vlan-8021q",
+   "details": "VLAN definiuje się po portach, adresach MAC lub protokole/adresach logicznych. Ramki między przełącznikami niesie trunk z 4-bajtowym znacznikiem 802.1Q (12-bitowy VID, 3-bitowe PCP). Każdy VLAN to osobna domena rozgłoszeniowa, co poprawia bezpieczeństwo; ruch między VLAN wymaga routera/L3. Q-in-Q to 802.1ad. **Na egzaminie uważaj na:** VLAN nie zastępuje STP ani ARP, nie przydziela IP."
+  },
+  {
+   "id": "stp",
+   "details": "Mostki wybierają root bridge (najniższy Bridge ID), każdy wybiera port do roota, a pozostałe redundantne porty są blokowane. Powstaje drzewo bez pętli (802.1D). RSTP (802.1w) zbiega szybciej, PVST tworzy drzewo na VLAN, MSTP (802.1s) na grupę VLAN. **Na egzaminie uważaj na:** STP działa w warstwie 2, nie równoważy obciążenia i nie wybiera routera głównego."
+  },
+  {
+   "id": "arp",
+   "details": "Host wysyła broadcastem zapytanie „kto ma IP X?”, właściciel odpowiada unicastem swoim MAC-iem; wynik trafia do tablicy ARP. Dla hosta spoza sieci używa się MAC bramy. RARP działa odwrotnie, w IPv6 funkcję przejmuje NDP. **Na egzaminie uważaj na:** ARP nie przydziela IP, nie wyznacza tras, działa w warstwie 2/3, tylko lokalnie."
+  },
+  {
+   "id": "routing-ip",
+   "details": "Spośród pasujących wpisów wybierany jest ten o najdłuższym prefiksie; trasa domyślna to 0.0.0.0/0 (::/0 w IPv6). Sieci bezpośrednio podłączone router zna automatycznie. Stacja potrzebuje adresu IP i bramy domyślnej. **Na egzaminie uważaj na:** nie wygrywa najkrótszy prefiks; trasa statyczna do sieci bezpośrednio podłączonych jest zbędna; Proxy ARP nie jest wymagany."
+  },
+  {
+   "id": "ipv4-icmp-ttl",
+   "details": "Nagłówek: suma kontrolna tylko nagłówka, TTL (8 bit, zmniejszany o 1 w każdym routerze, 0 ⇒ odrzucenie i ICMP Time Exceeded), ToS, fragmentacja (u nadawcy i w routerach, składanie u odbiorcy), Total Length 16 bitów ⇒ max 65535 B. ICMP służy diagnostyce i sygnalizacji błędów (ping, traceroute). **Na egzaminie uważaj na:** IPv4 nie potwierdza dostarczenia; TTL formalnie (RFC 791) jest wyrażony w sekundach, ale w praktyce działa jako licznik skoków (routerów); ICMP nie jest niezawodny."
+  },
+  {
+   "id": "protokoly-routingu",
+   "details": "RIP – liczba skoków; OSPF – link-state, koszt z pasma, obszary (backbone, stub, totally stubby, NSSA); IGRP/EIGRP – metryka złożona (pasmo, opóźnienie, niezawodność, obciążenie); IS-IS – poziomy L1/L2. Redystrybucja przenosi trasy między protokołami. **Na egzaminie uważaj na:** niezawodność jest w metryce IGRP/EIGRP, nie RIP/OSPF; stub nie przyjmuje tras zewnętrznych."
+  },
+  {
+   "id": "tcp-udp",
+   "details": "UDP: 8-bajtowy nagłówek, porty 16-bitowe, bez gwarancji, kolejności i retransmisji. TCP: połączeniowy, strumień bajtów bez limitu, numery sekwencyjne 32-bit, potwierdzenia, okno (Window size – flow control). **Na egzaminie uważaj na:** UDP nie fragmentuje; okno to kontrola przepływu; HTTP/1.1 używa TCP."
+  },
+  {
+   "id": "adresowanie-ipv4",
+   "details": "Adres sieci – host bits 0, broadcast – host bits 1. /26 = 255.255.255.192 (62 hosty), /30 = .252 (2 hosty). Multicast: 224.0.0.0/4. **Na egzaminie uważaj na:** blok /26 ma 64 adresy; nie mylić sieci z broadcastem."
+  },
+  {
+   "id": "ipv6",
+   "details": "Skrócenie :: zastępuje ciąg zer (raz). ::/0 to trasa domyślna, ::1 loopback, fe80::/10 link-local, ff02::1 multicast. /64 – 64 bity sieci, 64 interfejsu. **Na egzaminie uważaj na:** 5::1 to 5:0:0:0:0:0:0:1; znaki spoza 0–f są niepoprawne."
+  },
+  {
+   "id": "bgp",
+   "details": "iBGP wymaga pełnej siatki sesji; Route Reflector odbija trasy klientom (RRC), eliminując full-mesh. **Na egzaminie uważaj na:** eBGP multihop i agregacja nie zastępują RR."
+  },
+  {
+   "id": "qos-8021p",
+   "details": "Pole PCP w znaczniku 802.1Q ma 3 bity ⇒ 8 klas CoS (0–7). **Na egzaminie uważaj na:** liczba klas to 8, nie 7 ani 16."
+  },
+  {
+   "id": "nat",
+   "details": "Router podmienia adres źródłowy; PAT dodatkowo porty, dzięki czemu wiele hostów współdzieli jeden adres. Oszczędza IPv4 i ukrywa hosty przed Internetem. **Na egzaminie uważaj na:** NAT nie jest firewallem; DNS i ARP nie rozwiązują braku adresów."
+  },
+  {
+   "id": "sol-hasla",
+   "details": "Skrót H(sól‖hasło); sól jest unikalna, jawna i przechowywana obok skrótu. Chroni przed rainbow tables, a identyczne hasła dają różne skróty. **Na egzaminie uważaj na:** sól nie umożliwia odzyskania hasła i nie skraca obliczeń."
+  },
+  {
+   "id": "pki-x509",
+   "details": "Certyfikat zawiera klucz publiczny podmiotu, dane wystawcy i podpis CA; łańcuch zaufania prowadzi do root CA. Używany w TLS/HTTPS. **Na egzaminie uważaj na:** AES i RSA to algorytmy, nie standardy certyfikatów."
+  },
+  {
+   "id": "swiatlowody",
+   "details": "Jednomodowy: rdzeń ok. 9 µm, jeden mod, duże zasięgi. Wielomodowy: rdzeń 50/62,5 µm, wiele modów, dyspersja modowa ogranicza zasięg. Gradientowy to profil współczynnika załamania. **Na egzaminie uważaj na:** wielomodowy ma grubszy rdzeń; światłowód nie jest tańszy od skrętki."
+  },
+  {
+   "id": "magistrale-szeregowe",
+   "details": "SPI, I2C, UART, USB, CAN, RS-485, PCIe – szeregowe. PATA, SCSI (równoległy), ISA, PCI i LPT – równoległe. **Na egzaminie uważaj na:** nie mylić PATA z SATA."
+  },
+  {
+   "id": "sieci-bezprzewodowe",
+   "details": "Wi-Fi 802.11, Bluetooth, ZigBee (802.15.4), LoRaWAN, 5G. Ethernet, RS-232, Token Ring i Frame Relay są przewodowe. **Na egzaminie uważaj na:** LoRaWAN jest bezprzewodowy."
+  }
+ ]
+}

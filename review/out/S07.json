@@ -283,7 +283,7 @@
     },
     {
      "key": "b",
-     "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
+     "text": "tak, m.in. wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
      "correct": true
     },
     {
@@ -319,9 +319,10 @@
    "terms": [
     "aproksymacja-najmniejszych-kwadratow"
    ],
-   "explanation": "**Dlaczego poprawne:** przy funkcji liniowej względem parametrów (wielomian, kombinacja funkcji trygonometrycznych) i kryterium średniokwadratowym warunek zerowania pochodnych błędu daje liniowy układ równań normalnych o m+1 niewiadomych.\n\n**Dlaczego błędne:** „tylko dla funkcji liniowej względem x” zawęża zbyt mocno (wielomiany też); „nie można” jest fałszem; funkcje wykładnicze bez linearyzacji dają układ nieliniowy.\n\n**Zapamiętaj:** decyduje liniowość względem parametrów, nie względem x. Uwaga: opcja „wtedy i tylko wtedy, gdy wielomian” jest uproszczeniem (klasa liniowa jest szersza), ale zgodna z intencją autora.",
+   "explanation": "**Dlaczego poprawne:** przy funkcji liniowej względem parametrów (wielomian, kombinacja funkcji trygonometrycznych lub innych funkcji bazowych) i kryterium średniokwadratowym warunek zerowania pochodnych błędu daje liniowy układ równań normalnych; dla wielomianu stopnia m ma on rozmiar (m+1)×(m+1).\n\n**Dlaczego błędne:** „tylko dla funkcji liniowej względem x” zawęża zbyt mocno (wielomiany też); „nie można” jest fałszem; parametry nie muszą być wyznaczane iteracyjnie; funkcje wykładnicze bez linearyzacji dają układ nieliniowy.\n\n**Zapamiętaj:** decyduje liniowość względem parametrów, nie względem x — wielomian jest tylko jednym z takich przypadków.",
    "changes": [
-    "b: pozostawiono true (intencja autora), zaznaczona dwuznaczność: prawdziwy warunek to liniowość względem parametrów, wielomiany są tylko przykładem"
+    "b: pozostawiono true (intencja autora), zaznaczona dwuznaczność: prawdziwy warunek to liniowość względem parametrów, wielomiany są tylko przykładem",
+    "weryfikacja: b „wtedy i tylko wtedy” było fałszywe (każda funkcja liniowa względem parametrów daje układ liniowy)"
    ]
   },
   {
@@ -395,12 +396,6 @@
      "key": "b",
      "text": "promień spektralny macierzy iterowanej w danej metodzie jest zawsze większy od 1",
      "correct": false
-    },
-    {
-     "key": "c",
-     "text": "ścisła dominacja diagonalna macierzy A jest warunkiem wystarczającym zbieżności metod Jacobiego i Gaussa-Seidla",
-     "correct": true,
-     "extra": true
     },
     {
      "key": "d",
@@ -1073,7 +1068,7 @@
     },
     {
      "key": "c",
-     "text": "zastosować do interpolacji miejsca zerowa wielomianów Czebyszewa",
+     "text": "zastosować do interpolacji miejsca zerowe wielomianów Czebyszewa",
      "correct": true
     },
     {
@@ -1096,7 +1091,7 @@
     },
     {
      "key": "g",
-     "text": "zastosować węzły równoodległe i zmniejszyć krok arytmetyki",
+     "text": "pozostawić węzły równoodległe i zwiększyć precyzję arytmetyki",
      "correct": false,
      "extra": true
     }
@@ -1106,7 +1101,10 @@
     "funkcje-sklejane"
    ],
    "explanation": "**Dlaczego poprawne:** efekt Rungego ogranicza się przez interpolację przedziałami niskim stopniem (splajny, łamana), węzły zagęszczone przy końcach oraz węzły Czebyszewa.\n\n**Dlaczego błędne:** zwiększanie stopnia lub liczby węzłów równoodległych nasila efekt; lepsza arytmetyka nic nie da, bo to błąd metody.\n\n**Zapamiętaj:** przeciw Rungemu: splajny lub węzły Czebyszewa.",
-   "changes": []
+   "changes": [
+    "weryfikacja: c literówka",
+    "weryfikacja: g niezrozumiałe sformułowanie"
+   ]
   },
   {
    "id": 122,
@@ -1496,7 +1494,7 @@
     {
      "key": "a",
      "text": "mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa",
-     "correct": true
+     "correct": false
     },
     {
      "key": "b",
@@ -1551,10 +1549,11 @@
    "terms": [
     "eliminacja-gaussa-lu"
    ],
-   "explanation": "**Dlaczego poprawne:** rozkład LU raz rozkłada A (O(n³)), potem każde Ax=b kosztuje O(n²); Cholesky to LU dla SPD. Intencja autora banku: LU ma lepsze właściwości numeryczne od zwykłej eliminacji (dwuznaczne — LU z pivotingiem jest w istocie równoważne eliminacji).\n\n**Dlaczego błędne:** LU nie jest metodą iteracyjną, wciąż wymaga pivotingu dla stabilności, nie jest tańszy od Gaussa w O(·) i nie ogranicza się do macierzy SPD.\n\n**Zapamiętaj:** LU to eliminacja zapisana macierzowo; zaleta: wiele prawych stron.",
+   "explanation": "**Dlaczego poprawne:** rozkład LU raz rozkłada A (O(n³)), potem każde Ax=b kosztuje O(n²) — to główna zaleta przy wielu prawych stronach; Cholesky to wariant LU dla macierzy symetrycznych dodatnio określonych.\n\n**Dlaczego błędne:** LU jest macierzowym zapisem eliminacji Gaussa, więc nie ma od niej znacząco lepszych własności numerycznych (stabilność zależy od wyboru elementu głównego w obu przypadkach); nie jest metodą iteracyjną (ani stacjonarną, ani niestacjonarną); wciąż wymaga pivotingu dla stabilności; nie jest tańszy od Gaussa w sensie O(·); nie ogranicza się do macierzy SPD ani diagonalnych.\n\n**Zapamiętaj:** LU to eliminacja zapisana macierzowo; zaleta: wiele prawych stron.",
    "changes": [
     "a: pozostawiono true (intencja autora), ale dwuznaczne — LU z pivotingiem jest w istocie eliminacją Gaussa; uwaga w wyjaśnieniu",
-    "e: opcja odwołuje się do tego samego, nadal false"
+    "e: opcja odwołuje się do tego samego, nadal false",
+    "weryfikacja: a LU to macierzowy zapis eliminacji Gaussa — te same własności numeryczne"
    ]
   },
   {
@@ -1724,7 +1723,7 @@
   },
   {
    "id": 1037,
-   "question": "Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754). Dodatnie liczby rzeczywiste z zakresu od 𝑉 𝐴𝐿𝑀𝐼𝑁 = 2.2 ⋅ 10−308 do 𝑉 𝐴𝐿𝑀𝐴𝑋 = 1.8 ⋅ 10308 są zapisywane w formacie podwójnej precyzji z względnym błędem zaokrąglenia nie większym od 𝜀 = 2−52 ≈ 2.2 ⋅ 10−16 . Które zdania są prawdziwe?",
+   "question": "Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754). Dodatnie liczby rzeczywiste z zakresu od ^^VALMIN = 2.2 \\cdot 10^{-308}^^ do ^^VALMAX = 1.8 \\cdot 10^{308}^^ są zapisywane w formacie podwójnej precyzji z względnym błędem zaokrąglenia nie większym od ^^\\varepsilon = 2^{-52} \\approx 2.2 \\cdot 10^{-16}^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -1796,7 +1795,7 @@
   },
   {
    "id": 1038,
-   "question": "Niech 𝑎, 𝑏, 𝑐 będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową 𝜀. Liczba 𝑐 jest wynikiem operacji arytmetycznej ∘ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym. Niech 𝛿𝑐 oznacza błąd względny wyniku operacji 𝑐 = 𝑎 ∘ 𝑏. (dokładniej: jego wartość bezwzględną). W których przypadkach błąd wyniku 𝛿𝑐 może być wielokrotnie (kilka rzędów) większy od błędów argumentów 𝑎 i 𝑏 , czyli 𝛿𝑐 ≫ 2𝜀",
+   "question": "Niech ^^a, b, c^^ będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową ^^\\varepsilon^^. Liczba ^^c^^ jest wynikiem operacji arytmetycznej ^^\\circ^^ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym. Niech ^^\\delta_c^^ oznacza błąd względny (jego wartość bezwzględną) wyniku operacji ^^c = a \\circ b^^. W których przypadkach błąd wyniku ^^\\delta_c^^ może być wielokrotnie (o kilka rzędów) większy od błędów argumentów ^^a^^ i ^^b^^, czyli ^^\\delta_c \\gg 2\\varepsilon^^?",
    "options": [
     {
      "key": "a",
@@ -1862,7 +1861,7 @@
   },
   {
    "id": 1039,
-   "question": "Obliczanie pierwiastków ciągłej funkcji 𝑓 jednej zmiennej rzeczywistej 𝑥 metodami iteracyjnymi. Wartości funkcji dla pierwszych dwóch wartości wyrazów ciągu iteracyjnego 𝑥0 i 𝑥1 spełniają nierówność 𝑓(𝑥0 )𝑓(𝑥1 ) < 0. Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę",
+   "question": "Obliczanie pierwiastków ciągłej funkcji ^^f^^ jednej zmiennej rzeczywistej ^^x^^ metodami iteracyjnymi. Wartości funkcji dla pierwszych dwóch wyrazów ciągu iteracyjnego ^^x_0^^ i ^^x_1^^ spełniają nierówność ^^f(x_0)f(x_1) < 0^^. Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę:",
    "options": [
     {
      "key": "a",
@@ -1924,7 +1923,7 @@
   },
   {
    "id": 1040,
-   "question": "Należy rozwiązać układ równań liniowych 𝐴𝑥 = 𝑏 z dowolną rzeczywistą, nieosobliwą macierzą 𝐴 𝑛×𝑛, 𝑛 ≫ 1. Złożoność obliczeniowa algorytmu obliczenia rozwiązania jest mniejsza (w stosunku do metody eliminacyjnej Gaussa), jeżeli macierz 𝐴 jest zadana w postaci: Zaznacz zdania prawdziwe.",
+   "question": "Należy rozwiązać układ równań liniowych ^^Ax = b^^ z rzeczywistą, nieosobliwą macierzą ^^A^^ wymiaru ^^n \\times n^^, ^^n \\gg 1^^. Złożoność obliczeniowa algorytmu wyznaczenia rozwiązania jest mniejsza (w stosunku do metody eliminacji Gaussa), jeżeli: (zaznacz zdania prawdziwe)",
    "options": [
     {
      "key": "a",
@@ -2250,7 +2249,7 @@
   },
   {
    "id": 1045,
-   "question": "Szukanie minimum funkcji wielu zmiennych. Przyjmijmy, że funkcja, której minimum należy znaleźć, jest ,,funkcją kwadratową'', a dokładniej - ma postać formy kwadratowej 𝐹 (𝑥) = 𝑥𝑇 𝐴𝑥 + 𝑏𝑇 𝑥 + 𝑐 , 𝑥 ∈ ℝ 𝑛 i macierz A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła,. 𝑘 - liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja 𝐹 ma minimum. Które zdania są prawdziwe?",
+   "question": "Szukanie minimum funkcji wielu zmiennych. Przyjmijmy, że funkcja, której minimum należy znaleźć, jest „funkcją kwadratową”, a dokładniej ma postać ^^F(x) = x^TAx + b^Tx + c^^, ^^x \\in \\mathbb{R}^n^^, gdzie A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła. ^^k^^ — liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja ^^F^^ ma minimum. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -2315,7 +2314,7 @@
   },
   {
    "id": 1046,
-   "question": "Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares) Dane: 20 pomiarów położenia 𝑠 𝑖 pojazdu w ruchu prostoliniowym w chwilach 𝑡𝑖 , 𝑖 = 1, 2, … , 20. Funkcja aproksymująca zależności położenia od czasu: 𝑠(𝑡) = 𝑎0 + 𝑎1 𝑡 + 𝑎2 𝑡2 . Które zdania są prawdziwe?",
+   "question": "Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares). Dane: 20 pomiarów położenia ^^s_i^^ pojazdu w ruchu prostoliniowym w chwilach ^^t_i^^, ^^i = 1, 2, \\dots, 20^^. Funkcja aproksymująca zależność położenia od czasu: ^^s(t) = a_0 + a_1 t + a_2 t^2^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -2374,7 +2373,7 @@
   },
   {
    "id": 1047,
-   "question": "Metoda ilorazów różnicowych. Zależność błędu przybliżania wartości pochodnej funkcji analitycznej 𝑓 w punkcie 𝑥, 𝑥 ∈ 𝑅 metodą ilorazów różnicowych według formuły dwupunktowej od kroku ℎ można zapisać wzorem − 𝑓 ′ (𝑥)∣∣ . 𝑓(𝑥+ℎ)−𝑓(𝑥) 𝜀(ℎ) = ∣∣ ℎ",
+   "question": "Metoda ilorazów różnicowych. Zależność błędu przybliżania wartości pochodnej funkcji analitycznej ^^f^^ w punkcie ^^x \\in \\mathbb{R}^^ metodą ilorazów różnicowych według formuły dwupunktowej od kroku ^^h^^ można zapisać wzorem ^^\\varepsilon(h) = \\left| \\frac{f(x+h)-f(x)}{h} - f'(x) \\right|^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -2584,7 +2583,7 @@
   },
   {
    "id": 1050,
-   "question": "Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną 𝑚 = 𝑎0 + 𝑎1 ℎ . Warunki zgodności danych z funkcją aproksymującą zapiszemy jako",
+   "question": "Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną ^^m = a_0 + a_1 h^^. Warunki zgodności danych z funkcją aproksymującą zapisujemy jako układ równań ^^a_0 + a_1 h_i = m_i^^, ^^i = 1, \\dots, 100^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -2680,7 +2679,7 @@
    "term": "Interpolacja wielomianowa (Lagrange, baza naturalna)",
    "topic": "numerical_methods",
    "short": "Wielomian stopnia n przechodzący przez n+1 różnych węzłów; jest jednoznaczny, ale sposób jego zapisu wpływa na uwarunkowanie obliczeń.",
-   "details": "**Jak działa.** Dla n+1 różnych węzłów istnieje dokładnie jeden wielomian stopnia ≤ n przechodzący przez punkty. W bazie naturalnej (1, x, x², …) współczynniki wyznacza się z układu z macierzą Vandermonde'a, która jest bardzo źle uwarunkowana (uwarunkowanie rośnie wykładniczo ze stopniem). Lepsze są postać Lagrange'a lub Newtona (ilorazy różnicowe), bazy ortogonalne, węzły Czebyszewa.\n\nWielomiany interpolacyjne są podstawą wielu algorytmów: kwadratur Newtona-Cotesa, metod wielokrotnych rozwiązywania równań różniczkowych zwyczajnych (Adams), różniczkowania numerycznego, metody siecznych i odwrotnej interpolacji.\n\n**Na egzaminie uważaj na:** (1) interpolacja w bazie jednomianów jest źle uwarunkowana; (2) wysoki stopień + węzły równoodległe → efekt Rungego; (3) metody iteracyjne rozwiązywania układów równań i bisekcja nie wykorzystują interpolacji; (4) wielomian interpolacyjny jest jednoznaczny niezależnie od zapisu.",
+   "details": "**Jak działa.** Dla n+1 różnych węzłów istnieje dokładnie jeden wielomian stopnia ≤ n przechodzący przez punkty. W bazie naturalnej (1, x, x², …) współczynniki wyznacza się z układu z macierzą Vandermonde'a, która jest bardzo źle uwarunkowana (uwarunkowanie rośnie wykładniczo ze stopniem). Lepsze są postać Lagrange'a lub Newtona (ilorazy różnicowe), bazy ortogonalne, węzły Czebyszewa.\n\nWielomiany interpolacyjne są podstawą wielu algorytmów: kwadratur Newtona-Cotesa, metod wielokrokowych rozwiązywania równań różniczkowych zwyczajnych (Adams), różniczkowania numerycznego, metody siecznych i odwrotnej interpolacji.\n\n**Na egzaminie uważaj na:** (1) interpolacja w bazie jednomianów jest źle uwarunkowana; (2) wysoki stopień + węzły równoodległe → efekt Rungego; (3) metody iteracyjne rozwiązywania układów równań i bisekcja nie wykorzystują interpolacji; (4) wielomian interpolacyjny jest jednoznaczny niezależnie od zapisu.",
    "related": [
     "efekt-rungego",
     "funkcje-sklejane",
@@ -2795,7 +2794,7 @@
    "term": "Arytmetyka zmiennoprzecinkowa IEEE 754",
    "topic": "numerical_methods",
    "short": "Liczby zapisywane jako ±mantysa·2^wykładnik; dokładność względna zależy od liczby bitów mantysy, zakres od wykładnika.",
-   "details": "**Jak działa.** Podwójna precyzja (double): 1 bit znaku, 11 bitów wykładnika (kod z nadmiarem/biasem 1023, nie U2), 52 bity zapisanej mantysy (53 z ukrytą jedynką). Epsilon maszynowy ^^\\varepsilon=2^{-52}\\approx2.2\\cdot10^{-16}^^; względny błąd zaokrąglenia liczby z zakresu nie przekracza rzędu ε, ale odstępy między liczbami rosną wraz z ich wartością (błąd bezwzględny nie jest stały). Dokładnie reprezentowane są liczby dwójkowo-wymierne (całkowite do 2^53, 0.5, 0.25), natomiast liczby o nieskończonym rozwinięciu dwójkowym (0.1) są zaokrąglane. Liczba bitów mantysy określa dokładność, liczba bitów wykładnika — zakres (VALMIN, VALMAX).\n\n**Na egzaminie uważaj na:** (1) 0.1 nie jest reprezentowane dokładnie; (2) 0.5 tak — nie wszystkie ułamki dają błąd; (3) stały jest błąd względny (ograniczony), a nie bezwzględny; (4) dokładność = mantysa, zakres = wykładnik.",
+   "details": "**Jak działa.** Podwójna precyzja (double): 1 bit znaku, 11 bitów wykładnika (kod z nadmiarem/biasem 1023, nie U2), 52 bity zapisanej mantysy (53 z ukrytą jedynką). Epsilon maszynowy ^^\\varepsilon=2^{-52}\\approx2.2\\cdot10^{-16}^^; względny błąd zaokrąglenia liczby z zakresu nie przekracza rzędu ε, ale odstępy między liczbami rosną wraz z ich wartością (błąd bezwzględny nie jest stały). Dokładnie reprezentowane są liczby dwójkowo-wymierne (całkowite do 2^53, 0.5, 0.25), natomiast liczby o nieskończonym rozwinięciu dwójkowym (0.1) są zaokrąglane. Liczba bitów mantysy określa dokładność, liczba bitów wykładnika — zakres (VALMIN, VALMAX).\n\n**Na egzaminie uważaj na:** (1) 0.1 nie jest reprezentowane dokładnie; (2) 0.5 tak — nie wszystkie ułamki dają błąd; (3) błąd względny jest ograniczony przez ε (ale nie stały), a błąd bezwzględny rośnie wraz z wartością liczby; (4) dokładność = mantysa, zakres = wykładnik.",
    "related": [
     "bledy-numeryczne",
     "uwarunkowanie-zadania"
@@ -2806,7 +2805,7 @@
    "term": "Metoda bisekcji (połowienia przedziału)",
    "topic": "numerical_methods",
    "short": "Metoda szukania miejsca zerowego funkcji ciągłej przez dzielenie przedziału z różnymi znakami na końcach na połowy.",
-   "details": "**Jak działa.** Dane [a,b] z f(a)·f(b)<0 i f ciągła. Środek c=(a+b)/2; z dwóch połówek wybieramy tę, na której końcach znaki są przeciwne. Długość przedziału maleje 2 razy w każdym kroku, więc po k krokach jest ^^(b-a)/2^k^^ (zbieżność liniowa, rząd 1). Wystarczają dwa warunki: ciągłość na [a,b] i przeciwne znaki na końcach (twierdzenie Darboux/Bolzano) — nie potrzeba pochodnych, monotoniczności ani wypukłości. Jest to jedyna z klasycznych metod, której zbieżność jest gwarantowana dla dowolnej funkcji ciągłej spełniającej te warunki; sieczne i Newton mogą nie zbiegać.\n\n**Na egzaminie uważaj na:** (1) warunki na pochodne i ich znak dotyczą Newtona, nie bisekcji; (2) bisekcja jest wolna, ale niezawodna; (3) sieczne, Newton i iteracje proste nie zawsze zbiegają nawet przy zmianie znaku; (4) regula falsi również zachowuje przedział, ale nie zmniejsza go o połowę.",
+   "details": "**Jak działa.** Dane [a,b] z f(a)·f(b)<0 i f ciągła. Środek c=(a+b)/2; z dwóch połówek wybieramy tę, na której końcach znaki są przeciwne. Długość przedziału maleje 2 razy w każdym kroku, więc po k krokach jest ^^(b-a)/2^k^^ (zbieżność liniowa, rząd 1). Wystarczają dwa warunki: ciągłość na [a,b] i przeciwne znaki na końcach (twierdzenie Darboux/Bolzano) — nie potrzeba pochodnych, monotoniczności ani wypukłości. Zbieżność jest gwarantowana dla dowolnej funkcji ciągłej spełniającej te warunki (podobnie jak w metodzie regula falsi, która też zachowuje przedział); sieczne i Newton mogą nie zbiegać.\n\n**Na egzaminie uważaj na:** (1) warunki na pochodne i ich znak dotyczą Newtona, nie bisekcji; (2) bisekcja jest wolna, ale niezawodna; (3) sieczne, Newton i iteracje proste nie zawsze zbiegają nawet przy zmianie znaku; (4) regula falsi również zachowuje przedział, ale nie zmniejsza go o połowę.",
    "related": [
     "metoda-newtona-raphsona"
    ]

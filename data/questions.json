@@ -666,7 +666,7 @@
     },
     {
      "key": "e",
-     "text": "praktycznie zawsze zawiera rozkazy skoku warunkowego, bez których nie da się zrealizować pętli",
+     "text": "praktycznie zawsze zawiera rozkazy skoku warunkowego, służące m.in. do realizacji pętli i instrukcji warunkowych",
      "correct": true,
      "extra": true
     },
@@ -978,7 +978,7 @@
     },
     {
      "key": "d",
-     "text": "wynik zapisuje do rejestru docelowego (np. akumulatora) lub pamięci i ustawia znaczniki, np. Z (zero) i C (przeniesienie)",
+     "text": "wynik zapisuje do rejestru docelowego (np. akumulatora) lub pamięci; w wielu procesorach (np. x86, AVR) ustawia przy tym znaczniki, np. Z (zero) i C (przeniesienie)",
      "correct": true,
      "extra": true
     },
@@ -990,18 +990,12 @@
     },
     {
      "key": "f",
-     "text": "nie zmienia stanu znaczników (flag) procesora",
-     "correct": false,
-     "extra": true
-    },
-    {
-     "key": "g",
      "text": "wykonywany jest przez jednostkę sterującą bez udziału ALU",
      "correct": false,
      "extra": true
     },
     {
-     "key": "h",
+     "key": "g",
      "text": "jest dostępny wyłącznie w procesorach 64-bitowych",
      "correct": false,
      "extra": true
@@ -1371,7 +1365,7 @@
     },
     {
      "key": "e",
-     "text": "atrybut z prawej strony zależności może być podstawowy",
+     "text": "w BCNF dopuszczalna jest nietrywialna zależność X → A, w której X nie jest nadkluczem, o ile A jest atrybutem podstawowym",
      "correct": false,
      "extra": false
     },
@@ -3000,7 +2994,7 @@
    "options": [
     {
      "key": "a",
-     "text": "wolne od błędów",
+     "text": "wolne od błędów (w praktyce: o minimalnej liczbie defektów)",
      "correct": true,
      "extra": false
     },
@@ -3842,7 +3836,7 @@
     },
     {
      "key": "b",
-     "text": "nazywana formalną bądź nieformalną, zależnie od tego, czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania, czy tylko prowadzi luźną rozmowę z przestawicielami klienta",
+     "text": "nazywana formalną bądź nieformalną, zależnie od tego, czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania, czy tylko prowadzi luźną rozmowę z przedstawicielami klienta",
      "correct": true,
      "extra": false
     },
@@ -5170,7 +5164,7 @@
     },
     {
      "key": "f",
-     "text": "każda klasa bezpośrednio lub pośrednio dziedziczy po klasie Object",
+     "text": "każda klasa (poza samą klasą Object) bezpośrednio lub pośrednio dziedziczy po klasie Object",
      "correct": true,
      "extra": true
     },
@@ -5731,10 +5725,9 @@
     },
     {
      "key": "c",
-     "text": "żadne z pozostałych",
+     "text": "Operator przecinka (,) ma wyższy priorytet niż operator przypisania =.",
      "correct": false,
-     "extra": false,
-     "fixed": true
+     "extra": false
     },
     {
      "key": "d",
@@ -6192,7 +6185,7 @@
     },
     {
      "key": "b",
-     "text": "tak, ale wtedy i tylko wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
+     "text": "tak, m.in. wtedy, gdy funkcja aproksymująca jest wielomianem (zmiennej niezależnej)",
      "correct": true,
      "extra": false
     },
@@ -6312,30 +6305,24 @@
     },
     {
      "key": "c",
-     "text": "ścisła dominacja diagonalna macierzy A jest warunkiem wystarczającym zbieżności metod Jacobiego i Gaussa-Seidla",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "d",
      "text": "zbieżność tych metod nie zależy od wyboru wektora startowego, jeśli ρ(M) < 1",
      "correct": true,
      "extra": true
     },
     {
-     "key": "e",
+     "key": "d",
      "text": "ścisła dominacja diagonalna jest warunkiem koniecznym zbieżności metody Jacobiego",
      "correct": false,
      "extra": true
     },
     {
-     "key": "f",
+     "key": "e",
      "text": "promień spektralny równy 1 gwarantuje zbieżność metody iteracyjnej",
      "correct": false,
      "extra": true
     },
     {
-     "key": "g",
+     "key": "f",
      "text": "warunek ρ(M) < 1 dotyczy tylko metody Jacobiego, a nie Gaussa-Seidla",
      "correct": false,
      "extra": true
@@ -7043,7 +7030,7 @@
     },
     {
      "key": "c",
-     "text": "zastosować do interpolacji miejsca zerowa wielomianów Czebyszewa",
+     "text": "zastosować do interpolacji miejsca zerowe wielomianów Czebyszewa",
      "correct": true,
      "extra": false
     },
@@ -7067,7 +7054,7 @@
     },
     {
      "key": "g",
-     "text": "zastosować węzły równoodległe i zmniejszyć krok arytmetyki",
+     "text": "pozostawić węzły równoodległe i zwiększyć precyzję arytmetyki",
      "correct": false,
      "extra": true
     }
@@ -7505,7 +7492,7 @@
     {
      "key": "a",
      "text": "mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa",
-     "correct": true,
+     "correct": false,
      "extra": false
     },
     {
@@ -8412,7 +8399,7 @@
     },
     {
      "key": "e",
-     "text": "stacje muszą znać adres IP routera (bramy domyślnej) w swojej sieci lokalnej",
+     "text": "w typowej konfiguracji (bez Proxy ARP) stacje muszą znać adres IP routera (bramy domyślnej) w swojej sieci lokalnej",
      "correct": true,
      "extra": true
     },
@@ -8964,12 +8951,6 @@
      "text": "fe80::/10",
      "correct": false,
      "extra": true
-    },
-    {
-     "key": "h",
-     "text": "2000::/3",
-     "correct": false,
-     "extra": true
     }
    ],
    "terms": [
@@ -9112,7 +9093,7 @@
     {
      "key": "b",
      "text": "Route Reflector Client (RRC)",
-     "correct": true,
+     "correct": false,
      "extra": false
     },
     {
@@ -9292,30 +9273,24 @@
     },
     {
      "key": "c",
-     "text": "redystrybucja tras wymaga określenia metryki dla tras importowanych z innego protokołu",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "d",
      "text": "przykładem redystrybucji jest import tras RIP do OSPF na routerze granicznym",
      "correct": true,
      "extra": true
     },
     {
-     "key": "e",
+     "key": "d",
      "text": "Route Poisoning",
      "correct": false,
      "extra": true
     },
     {
-     "key": "f",
+     "key": "e",
      "text": "Route Summarization",
      "correct": false,
      "extra": true
     },
     {
-     "key": "g",
+     "key": "f",
      "text": "Split Horizon",
      "correct": false,
      "extra": true
@@ -11060,19 +11035,19 @@
     },
     {
      "key": "c",
-     "text": "dla każdego języka bezkontekstowego istnieje gramatyka w postaci normalnej Chomsky'ego",
+     "text": "dla każdego języka bezkontekstowego istnieje gramatyka w postaci normalnej Chomsky'ego (w ścisłej postaci, bez wyjątku ^^S\\to\\epsilon^^) generująca dokładnie ten język, także gdy język zawiera słowo puste",
      "correct": false,
      "extra": false
     },
     {
      "key": "d",
-     "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Chomsky'ego",
+     "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Chomsky'ego (w ścisłej postaci, bez wyjątku ^^S\\to\\epsilon^^) generującej dokładnie ten sam język, także gdy należy do niego słowo puste",
      "correct": false,
      "extra": false
     },
     {
      "key": "e",
-     "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Greibach",
+     "text": "każdą gramatykę bezkontekstową można przekształcić do postaci normalnej Greibach (w ścisłej postaci, bez wyjątku ^^S\\to\\epsilon^^) generującej dokładnie ten sam język, także gdy należy do niego słowo puste",
      "correct": false,
      "extra": false
     },
@@ -12349,7 +12324,7 @@
     },
     {
      "key": "h",
-     "text": "hasła w technice shadow są przechowywane w /etc/shadow, czytelnym tylko dla roota",
+     "text": "skróty haseł w technice shadow są przechowywane w /etc/shadow, którego zwykli użytkownicy nie mogą czytać",
      "correct": true,
      "extra": true
     },
@@ -13147,12 +13122,6 @@
      "text": "2^21 * 2^(2^9-1)",
      "correct": false,
      "extra": true
-    },
-    {
-     "key": "g",
-     "text": "(1-2^(-21)) * 2^(2^9-1) jest największą liczbą, ponieważ mantysa ma 21 bitów wartości, a cecha w kodzie U2 na 10 bitach osiąga maksimum 2^9-1",
-     "correct": true,
-     "extra": true
     }
    ],
    "terms": [
@@ -13418,12 +13387,6 @@
      "text": "tylko dla liczb parzystych",
      "correct": false,
      "extra": true
-    },
-    {
-     "key": "h",
-     "text": "dla wszystkich liczb z wyjątkiem -2^(n-1), gdzie n to liczba bitów reprezentacji",
-     "correct": true,
-     "extra": true
     }
    ],
    "terms": [
@@ -13484,12 +13447,6 @@
      "key": "h",
      "text": "16 gigabajtów",
      "correct": false,
-     "extra": true
-    },
-    {
-     "key": "i",
-     "text": "2^32 bajtów, czyli 4 GiB",
-     "correct": true,
      "extra": true
     }
    ],
@@ -13604,24 +13561,18 @@
     },
     {
      "key": "e",
-     "text": "błąd wykonania (np. segmentation fault) pojawia się w C tylko wtedy, gdy adres wskazuje na pamięć niezmapowaną dla procesu",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "f",
      "text": "kompilator języka C zawsze wykrywa takie odwołanie na etapie kompilacji",
      "correct": false,
      "extra": true
     },
     {
-     "key": "g",
+     "key": "f",
      "text": "w języku C odczyt elementu poza tablicą zawsze zwraca wartość 0",
      "correct": false,
      "extra": true
     },
     {
-     "key": "h",
+     "key": "g",
      "text": "w języku Java odwołanie poza tablicę powoduje ciche nadpisanie sąsiedniego obszaru pamięci",
      "correct": false,
      "extra": true
@@ -14020,7 +13971,7 @@
     },
     {
      "key": "f",
-     "text": "jeżeli pewny podproblem problemu ^^\\pi^^ nie należy do P, to jest to zgodne z założeniem ^^\\pi \\notin P^^ i niczego nowego nie wnosi",
+     "text": "jeżeli pewien podproblem problemu ^^\\pi^^ nie należy do P, to jest to zgodne z założeniem ^^\\pi \\notin P^^ i niczego nowego nie wnosi",
      "correct": true,
      "extra": true
     },
@@ -14058,7 +14009,7 @@
    "options": [
     {
      "key": "a",
-     "text": "^^O(n^100)^^",
+     "text": "^^O(n^{100})^^",
      "correct": false,
      "extra": false
     },
@@ -14363,7 +14314,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Algorytm Dijkstry znajdowania najkrótszych ścieżek jest algorytmem heurystycznym o złożoności O(n2 log n).",
+     "text": "Algorytm Dijkstry znajdowania najkrótszych ścieżek jest algorytmem heurystycznym o złożoności O(n^2 log n).",
      "correct": false,
      "extra": false
     },
@@ -15119,7 +15070,7 @@
    "topic": "algorithms",
    "semester": 1,
    "courseName": "Algorytmy i struktury danych",
-   "question": "Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 4. Podobnie, w kolejnym rzędzie utworzono węzły od 8 do 15. Na tak utworzonym grafie nieskierowanym uruchomiono algorytm DFS poczynając od węzła 15, przyjmując zasadę, że w liście sąsiedztwa każdego z węzłów sąsiedzi są uporządkowani od najmniejszego klucza do największego. Kolejność przeglądania węzłów była następująca:",
+   "question": "Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 3. Podobnie, w kolejnym rzędzie utworzono węzły od 8 do 15. Na tak utworzonym grafie nieskierowanym uruchomiono algorytm DFS poczynając od węzła 15, przyjmując zasadę, że w liście sąsiedztwa każdego z węzłów sąsiedzi są uporządkowani od najmniejszego klucza do największego. Kolejność przeglądania węzłów była następująca:",
    "options": [
     {
      "key": "a",
@@ -15205,7 +15156,7 @@
    "topic": "algorithms",
    "semester": 1,
    "courseName": "Algorytmy i struktury danych",
-   "question": "Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 4. Podobnie, w kolejnym rzędzie utworzono węzły od 8 do 15. Określ prawdziwość następujacych stwierdzeń:",
+   "question": "Zbudowano drzewo binarne zawierające liczby od 1, 2, do 15 w ten sposób, że jako korzeń drzewa wzięto 1, jako jego dzieci liczby 2 i 3 a w kolejnym rzędzie 4,5,6,7 tak, że 4 i 5 to dzieci węzła o kluczu 2 a 6, 7 to dzieci węzła z kluczem 3. Podobnie, w kolejnym rzędzie utworzono węzły od 8 do 15. Określ prawdziwość następujących stwierdzeń:",
    "options": [
     {
      "key": "a",
@@ -16309,7 +16260,7 @@
    "topic": "math",
    "semester": 1,
    "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
-   "question": "Grupa symetrii danej figury geometrycznej to grupa tych przekształceń płaszczyzny, względem których danafigura jest niezmiennicza. Działaniem grupowym jest składanie przekształceń.",
+   "question": "Grupa symetrii danej figury geometrycznej to grupa tych przekształceń płaszczyzny, względem których dana figura jest niezmiennicza. Działaniem grupowym jest składanie przekształceń. Grupa symetrii siedmiokąta foremnego:",
    "options": [
     {
      "key": "a",
@@ -16604,7 +16555,7 @@
    "topic": "math",
    "semester": 1,
    "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
-   "question": "Liczba chromatyczna grafu to minimalna liczba kolorów, jakimi można pokolorować wierzchołki grafu tak, aby żadne dwa wierzchołki połączone krawędzią nie były tego samego koloru.",
+   "question": "Liczba chromatyczna grafu to minimalna liczba kolorów, jakimi można pokolorować wierzchołki grafu tak, aby żadne dwa wierzchołki połączone krawędzią nie były tego samego koloru. Liczba chromatyczna grafu utworzonego z wierzchołków i krawędzi ośmiokąta foremnego (cykl C8) wynosi:",
    "options": [
     {
      "key": "a",
@@ -16914,7 +16865,7 @@
     },
     {
      "key": "c",
-     "text": "każda permutacja jest cyklem.",
+     "text": "każda permutacja jest cyklem długości 3.",
      "correct": false,
      "extra": false
     },
@@ -17061,7 +17012,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754). Dodatnie liczby rzeczywiste z zakresu od 𝑉 𝐴𝐿𝑀𝐼𝑁 = 2.2 ⋅ 10−308 do 𝑉 𝐴𝐿𝑀𝐴𝑋 = 1.8 ⋅ 10308 są zapisywane w formacie podwójnej precyzji z względnym błędem zaokrąglenia nie większym od 𝜀 = 2−52 ≈ 2.2 ⋅ 10−16 . Które zdania są prawdziwe?",
+   "question": "Liczby w formacie zmiennoprzecinkowym (wg standardu IEEE 754). Dodatnie liczby rzeczywiste z zakresu od ^^VALMIN = 2.2 \\cdot 10^{-308}^^ do ^^VALMAX = 1.8 \\cdot 10^{308}^^ są zapisywane w formacie podwójnej precyzji z względnym błędem zaokrąglenia nie większym od ^^\\varepsilon = 2^{-52} \\approx 2.2 \\cdot 10^{-16}^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -17140,7 +17091,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Niech 𝑎, 𝑏, 𝑐 będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową 𝜀. Liczba 𝑐 jest wynikiem operacji arytmetycznej ∘ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym. Niech 𝛿𝑐 oznacza błąd względny wyniku operacji 𝑐 = 𝑎 ∘ 𝑏. (dokładniej: jego wartość bezwzględną). W których przypadkach błąd wyniku 𝛿𝑐 może być wielokrotnie (kilka rzędów) większy od błędów argumentów 𝑎 i 𝑏 , czyli 𝛿𝑐 ≫ 2𝜀",
+   "question": "Niech ^^a, b, c^^ będą liczbami różnymi od zera, zapisanymi w komputerze w formacie zmiennoprzecinkowym z dokładnością maszynową ^^\\varepsilon^^. Liczba ^^c^^ jest wynikiem operacji arytmetycznej ^^\\circ^^ wykonanej w komputerze i zapisanym w takim samym formacie zmiennoprzecinkowym. Niech ^^\\delta_c^^ oznacza błąd względny (jego wartość bezwzględną) wyniku operacji ^^c = a \\circ b^^. W których przypadkach błąd wyniku ^^\\delta_c^^ może być wielokrotnie (o kilka rzędów) większy od błędów argumentów ^^a^^ i ^^b^^, czyli ^^\\delta_c \\gg 2\\varepsilon^^?",
    "options": [
     {
      "key": "a",
@@ -17213,7 +17164,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Obliczanie pierwiastków ciągłej funkcji 𝑓 jednej zmiennej rzeczywistej 𝑥 metodami iteracyjnymi. Wartości funkcji dla pierwszych dwóch wartości wyrazów ciągu iteracyjnego 𝑥0 i 𝑥1 spełniają nierówność 𝑓(𝑥0 )𝑓(𝑥1 ) < 0. Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę",
+   "question": "Obliczanie pierwiastków ciągłej funkcji ^^f^^ jednej zmiennej rzeczywistej ^^x^^ metodami iteracyjnymi. Wartości funkcji dla pierwszych dwóch wyrazów ciągu iteracyjnego ^^x_0^^ i ^^x_1^^ spełniają nierówność ^^f(x_0)f(x_1) < 0^^. Ciąg iteracyjny będzie zbieżny do miejsca zerowego dowolnej funkcji spełniającej powyższe warunki, jeżeli zastosujemy metodę:",
    "options": [
     {
      "key": "a",
@@ -17281,7 +17232,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Należy rozwiązać układ równań liniowych 𝐴𝑥 = 𝑏 z dowolną rzeczywistą, nieosobliwą macierzą 𝐴 𝑛×𝑛, 𝑛 ≫ 1. Złożoność obliczeniowa algorytmu obliczenia rozwiązania jest mniejsza (w stosunku do metody eliminacyjnej Gaussa), jeżeli macierz 𝐴 jest zadana w postaci: Zaznacz zdania prawdziwe.",
+   "question": "Należy rozwiązać układ równań liniowych ^^Ax = b^^ z rzeczywistą, nieosobliwą macierzą ^^A^^ wymiaru ^^n \\times n^^, ^^n \\gg 1^^. Złożoność obliczeniowa algorytmu wyznaczenia rozwiązania jest mniejsza (w stosunku do metody eliminacji Gaussa), jeżeli: (zaznacz zdania prawdziwe)",
    "options": [
     {
      "key": "a",
@@ -17642,7 +17593,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Szukanie minimum funkcji wielu zmiennych. Przyjmijmy, że funkcja, której minimum należy znaleźć, jest ,,funkcją kwadratową'', a dokładniej - ma postać formy kwadratowej 𝐹 (𝑥) = 𝑥𝑇 𝐴𝑥 + 𝑏𝑇 𝑥 + 𝑐 , 𝑥 ∈ ℝ 𝑛 i macierz A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła,. 𝑘 - liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja 𝐹 ma minimum. Które zdania są prawdziwe?",
+   "question": "Szukanie minimum funkcji wielu zmiennych. Przyjmijmy, że funkcja, której minimum należy znaleźć, jest „funkcją kwadratową”, a dokładniej ma postać ^^F(x) = x^TAx + b^Tx + c^^, ^^x \\in \\mathbb{R}^n^^, gdzie A jest dowolną macierzą dodatnio określoną, czyli funkcja jest wypukła. ^^k^^ — liczba iteracji koniecznych do przejścia od dowolnego punktu startowego do punktu, w którym funkcja ^^F^^ ma minimum. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -17714,7 +17665,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares) Dane: 20 pomiarów położenia 𝑠 𝑖 pojazdu w ruchu prostoliniowym w chwilach 𝑡𝑖 , 𝑖 = 1, 2, … , 20. Funkcja aproksymująca zależności położenia od czasu: 𝑠(𝑡) = 𝑎0 + 𝑎1 𝑡 + 𝑎2 𝑡2 . Które zdania są prawdziwe?",
+   "question": "Przykład zadania liniowej aproksymacji metodą najmniejszych kwadratów (Linear Least Squares). Dane: 20 pomiarów położenia ^^s_i^^ pojazdu w ruchu prostoliniowym w chwilach ^^t_i^^, ^^i = 1, 2, \\dots, 20^^. Funkcja aproksymująca zależność położenia od czasu: ^^s(t) = a_0 + a_1 t + a_2 t^2^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -17780,7 +17731,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Metoda ilorazów różnicowych. Zależność błędu przybliżania wartości pochodnej funkcji analitycznej 𝑓 w punkcie 𝑥, 𝑥 ∈ 𝑅 metodą ilorazów różnicowych według formuły dwupunktowej od kroku ℎ można zapisać wzorem − 𝑓 ′ (𝑥)∣∣ . 𝑓(𝑥+ℎ)−𝑓(𝑥) 𝜀(ℎ) = ∣∣ ℎ",
+   "question": "Metoda ilorazów różnicowych. Zależność błędu przybliżania wartości pochodnej funkcji analitycznej ^^f^^ w punkcie ^^x \\in \\mathbb{R}^^ metodą ilorazów różnicowych według formuły dwupunktowej od kroku ^^h^^ można zapisać wzorem ^^\\varepsilon(h) = \\left| \\frac{f(x+h)-f(x)}{h} - f'(x) \\right|^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -18011,7 +17962,7 @@
    "topic": "numerical_methods",
    "semester": 3,
    "courseName": "Metody numeryczne",
-   "question": "Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną 𝑚 = 𝑎0 + 𝑎1 ℎ . Warunki zgodności danych z funkcją aproksymującą zapiszemy jako",
+   "question": "Pomiary masy ciała i wzrostu 100 osób są danymi dla aproksymacji zależności masy od wzrostu funkcją afiniczną ^^m = a_0 + a_1 h^^. Warunki zgodności danych z funkcją aproksymującą zapisujemy jako układ równań ^^a_0 + a_1 h_i = m_i^^, ^^i = 1, \\dots, 100^^. Które zdania są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -18084,7 +18035,7 @@
    "topic": "math",
    "semester": 2,
    "courseName": "Matematyka (dyskretna, prawdopodobieństwo, grafy)",
-   "question": "Które z poniższych zdań jest jednym z aksjomatów prawdopodobieństwa Kołmogorowa dla przestrzeni probabilistycznej (Ω, , 𝑃) :",
+   "question": "Które z poniższych zdań jest jednym z aksjomatów prawdopodobieństwa Kołmogorowa dla przestrzeni probabilistycznej (Ω, F, P):",
    "options": [
     {
      "key": "a",
@@ -18118,7 +18069,7 @@
     },
     {
      "key": "f",
-     "text": "P(A) + P(A') = 1 (to jest wniosek, ale często mylony z aksjomatem).",
+     "text": "P(A) + P(A') = 1.",
      "correct": false,
      "extra": false
     },
@@ -20606,7 +20557,7 @@
     },
     {
      "key": "e",
-     "text": "Rozstrzygalny dla automatów ze stosem.",
+     "text": "Rozstrzygalny, bo maszynę Turinga można sprowadzić do automatu ze stosem, dla którego pustość jest rozstrzygalna.",
      "correct": false,
      "extra": false
     },
@@ -21021,7 +20972,7 @@
     },
     {
      "key": "d",
-     "text": "nie wymaga sygnału zegarowego.",
+     "text": "zawsze wymaga sygnału zegarowego.",
      "correct": false,
      "extra": false
     },
@@ -21779,7 +21730,7 @@
     },
     {
      "key": "f",
-     "text": "jest częścią jednostki sterującej procesora.",
+     "text": "jest częścią jednostki arytmetyczno-logicznej (ALU).",
      "correct": false,
      "extra": false
     },
@@ -22317,7 +22268,7 @@
     },
     {
      "key": "b",
-     "text": "Powiązania klucz-klucz obcy mogą być tylko typu jeden do jednego lub jeden do wielu.",
+     "text": "W schemacie relacyjnym można odwzorować wyłącznie związki jeden-do-jednego i jeden-do-wielu — związków wiele-do-wielu nie da się zrealizować.",
      "correct": false,
      "extra": false
     },
@@ -22403,7 +22354,7 @@
     },
     {
      "key": "c",
-     "text": "Podzapytanie w klauzuli FROM nie musi mieć nadanego aliasu.",
+     "text": "W PostgreSQL do wersji 15 włącznie podzapytanie w klauzuli FROM nie musiało mieć nadanego aliasu.",
      "correct": false,
      "extra": false
     },
@@ -22587,7 +22538,7 @@
     },
     {
      "key": "e",
-     "text": "Akceptacja, Cyliczność, Indeksacja, Definicja.",
+     "text": "Akceptacja, Cykliczność, Indeksacja, Definicja.",
      "correct": false,
      "extra": false
     },
@@ -22647,7 +22598,7 @@
     },
     {
      "key": "c",
-     "text": "Funkcja COUNT() pomija wartości NULL.",
+     "text": "Funkcja COUNT(*) pomija wiersze zawierające wartości NULL.",
      "correct": false,
      "extra": false
     },
@@ -22978,7 +22929,7 @@
     },
     {
      "key": "g",
-     "text": "Forma baaABb jest formą zdaniową, bo S ⇒* baaABb (np. S ⇒ AB ⇒ ASb ⇒ baaSb ⇒ baaABb).",
+     "text": "Forma baaABb jest formą zdaniową, bo S ⇒* baaABb (np. S ⇒ AB ⇒ ASb ⇒* baaSb ⇒ baaABb).",
      "correct": true,
      "extra": true
     },
@@ -23008,7 +22959,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Generuje słowa kończące się sekwencją 'y' po której następuje 'a' lub 'ab'.",
+     "text": "Generuje m.in. słowa kończące się na 'y', po którym następuje 'a' lub 'ab' (np. 'ya', 'xyab').",
      "correct": true,
      "extra": false
     },
@@ -23148,7 +23099,7 @@
    "topic": "formal_languages",
    "semester": 3,
    "courseName": "Lingwistyka formalna i automaty",
-   "question": "Rozważmy gramatykę S ---> PQ | SQ | PS P ---> x Q--> yKtóre stwierdzenia są prawdziwe:",
+   "question": "Rozważmy gramatykę: S → PQ | SQ | PS, P → x, Q → y. Które stwierdzenia są prawdziwe:",
    "options": [
     {
      "key": "a",
@@ -23451,8 +23402,8 @@
     },
     {
      "key": "b",
-     "text": "Służy do minimalizacji automatów deterministycznych.",
-     "correct": false,
+     "text": "Uzasadnia minimalizację automatów deterministycznych: minimalny DFA jest jedyny (z dokładnością do izomorfizmu), a jego stany odpowiadają klasom relacji.",
+     "correct": true,
      "extra": false
     },
     {
@@ -23514,7 +23465,7 @@
    "topic": "formal_languages",
    "semester": 3,
    "courseName": "Lingwistyka formalna i automaty",
-   "question": "W kontekście języków formalnych następujące stwierdzenia są prawdziwe",
+   "question": "W kontekście języków kontekstowych (typu 1) następujące stwierdzenia są prawdziwe:",
    "options": [
     {
      "key": "a",
@@ -23587,7 +23538,7 @@
    "topic": "formal_languages",
    "semester": 3,
    "courseName": "Lingwistyka formalna i automaty",
-   "question": "W odniesieniu do języków formalnych następujące zdania są prawdziwe:",
+   "question": "W odniesieniu do automatu ze stosem (PDA) następujące zdania są prawdziwe:",
    "options": [
     {
      "key": "a",
@@ -24967,18 +24918,12 @@
     },
     {
      "key": "h",
-     "text": "wymaga sprzętowego zegara generującego przerwania",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "i",
      "text": "proces w stanie wykonywania zawsze pozostaje na procesorze aż do zakończenia lub dobrowolnego oddania procesora",
      "correct": false,
      "extra": true
     },
     {
-     "key": "j",
+     "key": "i",
      "text": "przykładem jest algorytm FCFS (first come, first served)",
      "correct": false,
      "extra": true
@@ -25149,7 +25094,7 @@
     },
     {
      "key": "b",
-     "text": "jest konieczna dla efektywnej realizacji stronicowania.",
+     "text": "jest niezbędna do działania stronicowania (bez niej stronicowanie w ogóle nie jest możliwe).",
      "correct": false,
      "extra": false
     },
@@ -25714,7 +25659,7 @@
     },
     {
      "key": "b",
-     "text": "czasową Theta(n) i pamięciową Theta(n).",
+     "text": "czasową Theta(n) i pamięciową Theta(log n).",
      "correct": false,
      "extra": false
     },
@@ -25774,13 +25719,13 @@
    "options": [
     {
      "key": "a",
-     "text": "E => E+E => E+EE => E+Eid => E+idid => id+idid.",
+     "text": "E => E+E => E+E*E => E+E*id => E+id*id => id+id*id.",
      "correct": true,
      "extra": false
     },
     {
      "key": "b",
-     "text": "E => E+E => id+E => id+EE => id+idE => id+idid.",
+     "text": "E => E+E => id+E => id+E*E => id+id*E => id+id*id.",
      "correct": false,
      "extra": false
     },
@@ -25792,7 +25737,7 @@
     },
     {
      "key": "d",
-     "text": "E => EE => idid.",
+     "text": "E => E*E => id*id.",
      "correct": false,
      "extra": false
     },
@@ -26376,7 +26321,7 @@
     },
     {
      "key": "b",
-     "text": "Metajęzyk jest językiem, który jest bardziej złożony niż język przedmiotowy.",
+     "text": "Metajęzyk musi być językiem uboższym (prostszym) niż język przedmiotowy.",
      "correct": false,
      "extra": false
     },
@@ -26602,7 +26547,7 @@
    "topic": "programming_basics",
    "semester": 1,
    "courseName": "Podstawy programowania",
-   "question": "Które z poniższych stwierdzeń najlepiej opisują różnicę między pewnymi pewnymi typami algorytmów:",
+   "question": "Które z poniższych stwierdzeń najlepiej opisują różnicę między pewnymi typami algorytmów:",
    "options": [
     {
      "key": "a",
@@ -26765,7 +26710,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Pozwala na wykrywanie i korekcję błędów pojedynczego bitu (SEC) oraz wykrywanie błędów dwóch bitów (DED).",
+     "text": "W wersji rozszerzonej (z dodatkowym bitem parzystości) pozwala korygować błędy pojedynczego bitu (SEC) i wykrywać błędy dwóch bitów (DED).",
      "correct": true,
      "extra": false
     },
@@ -26868,7 +26813,7 @@
     },
     {
      "key": "f",
-     "text": "Oba kody wymagają przesyłania słownika razem z danymi.",
+     "text": "Oba kody zawsze wymagają przesyłania słownika razem z danymi, nawet gdy nadawca i odbiorca wcześniej uzgodnili tabelę kodu.",
      "correct": false,
      "extra": false
     },
@@ -27654,7 +27599,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Wysyła sygnał SIGTSTP, wstrzymując działanie procesu i przenosząc go w tło.",
+     "text": "Wysyła sygnał SIGTSTP, wstrzymując proces pierwszoplanowy (zadanie zostaje zatrzymane, a powłoka odzyskuje terminal).",
      "correct": true,
      "extra": false
     },
@@ -28028,7 +27973,7 @@
     },
     {
      "key": "b",
-     "text": "Określa, że jeden przypadek użycia jest w całości zależny od funkcjonalności innego przypadku użycia.",
+     "text": "Określa, że jeden przypadek użycia jest specjalizacją (podtypem) innego przypadku użycia.",
      "correct": false,
      "extra": false
     },
@@ -28460,30 +28405,24 @@
     },
     {
      "key": "g",
-     "text": "Dzieli się na pielęgnację naprawczą, adaptacyjną i doskonalącą.",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "h",
      "text": "Zwiększają ją niskie sprzężenie i wysoka spójność modułów.",
      "correct": true,
      "extra": true
     },
     {
-     "key": "i",
+     "key": "h",
      "text": "Jest tożsama z niezawodnością oprogramowania.",
      "correct": false,
      "extra": true
     },
     {
-     "key": "j",
+     "key": "i",
      "text": "Oznacza czas, przez jaki producent zobowiązuje się wspierać produkt.",
      "correct": false,
      "extra": true
     },
     {
-     "key": "k",
+     "key": "j",
      "text": "Maleje wraz ze wzrostem czytelności i modularności kodu.",
      "correct": false,
      "extra": true
@@ -29399,7 +29338,7 @@
     },
     {
      "key": "b",
-     "text": "Komunikatów na diagramach reprezentują komunikaty poziome i pionowe.",
+     "text": "Na diagramach sekwencji występują zarówno komunikaty poziome, jak i pionowe.",
      "correct": false,
      "extra": false
     },
@@ -29519,24 +29458,18 @@
     },
     {
      "key": "h",
-     "text": "Podstany dziedziczą akcje wejścia i wyjścia stanu nadrzędnego przy wchodzeniu i opuszczaniu stanu złożonego.",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "i",
      "text": "Przejście ze stanu złożonego wykonuje się tylko wtedy, gdy obiekt znajduje się w jego stanie początkowym.",
      "correct": false,
      "extra": true
     },
     {
-     "key": "j",
+     "key": "i",
      "text": "Każdy stan złożony musi zawierać dokładnie dwa podstany.",
      "correct": false,
      "extra": true
     },
     {
-     "key": "k",
+     "key": "j",
      "text": "Zagnieżdżanie stanów zwiększa liczbę przejść, które trzeba narysować, w porównaniu z płaską maszyną stanową.",
      "correct": false,
      "extra": true
@@ -29737,7 +29670,7 @@
     },
     {
      "key": "e",
-     "text": "Wynik zależy od wersji kompilatora i poziomu optymalizacji.",
+     "text": "Jest to zachowanie zdefiniowane przez implementację (implementation-defined): wynik zależy od kompilatora, który musi go udokumentować.",
      "correct": false,
      "extra": false
     },
@@ -29905,12 +29838,6 @@
     },
     {
      "key": "i",
-     "text": "Pętla wykonuje się dokładnie strlen(s) razy.",
-     "correct": false,
-     "extra": true
-    },
-    {
-     "key": "j",
      "text": "Instrukcja sama alokuje pamięć potrzebną na skopiowany łańcuch.",
      "correct": false,
      "extra": true
@@ -30556,7 +30483,7 @@
     },
     {
      "key": "i",
-     "text": "Wstawianie posortowanego ciągu do pustego BST bez równoważenia daje drzewo zdegenerowane o wysokości n.",
+     "text": "Wstawianie posortowanego ciągu do pustego BST bez równoważenia daje drzewo zdegenerowane (ścieżkę n węzłów, wysokość rzędu n).",
      "correct": true,
      "extra": true
     },
@@ -30616,7 +30543,7 @@
     },
     {
      "key": "f",
-     "text": "Referencja zajmuje tyle samo pamięci co wskaźnik.",
+     "text": "Standard C++ gwarantuje, że referencja zajmuje tyle samo pamięci co wskaźnik.",
      "correct": false,
      "extra": false
     },
@@ -30802,7 +30729,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Konstruktor klasy pochodnej musi wywołać konstruktor klasy bazowej w liście inicjalizacyjnej.",
+     "text": "W tym przypadku konstruktor klasy B musi jawnie wywołać konstruktor klasy A w liście inicjalizacyjnej (A nie ma konstruktora domyślnego).",
      "correct": true,
      "extra": false
     },
@@ -30899,7 +30826,7 @@
     },
     {
      "key": "e",
-     "text": "Kolejność zależy od kolejności deklaracji w pliku nagłówkowym.",
+     "text": "Kolejność zależy od tego, w jakiej kolejności definicje klas A, B, C, D występują w pliku.",
      "correct": false,
      "extra": false
     },
@@ -31189,7 +31116,7 @@
     },
     {
      "key": "e",
-     "text": "Rzucenie wyjątku w destruktorze podczas odwijania stosu powoduje wywołanie std::terminate.",
+     "text": "Wyjątek opuszczający destruktor podczas odwijania stosu powoduje wywołanie std::terminate.",
      "correct": true,
      "extra": false
     },
@@ -31484,7 +31411,7 @@
     },
     {
      "key": "e",
-     "text": "Składnia [=] oznacza przechwycenie wszystkich zmiennych lokalnych przez kopię.",
+     "text": "Składnia [=] oznacza domyślne przechwytywanie przez kopię (kopiowane są zmienne lokalne użyte w ciele lambdy).",
      "correct": true,
      "extra": false
     },
@@ -31809,7 +31736,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Cała logika i renderowanie widoków odbywa się głównie po stronie klienta.",
+     "text": "Logika interfejsu i renderowanie widoków odbywają się głównie po stronie klienta.",
      "correct": true,
      "extra": false
     },
@@ -32079,7 +32006,7 @@
     },
     {
      "key": "b",
-     "text": "zapewnia dostosowanie wyglądu aplikacji w kontekście potrzeb użytkownika.",
+     "text": "zapewnia personalizację treści aplikacji na podstawie preferencji użytkownika.",
      "correct": false,
      "extra": false
     },
@@ -32274,7 +32201,7 @@
    "topic": "java",
    "semester": 4,
    "courseName": "Programowanie zaawansowane (Java)",
-   "question": "Zapisano następujący kod źródłowy w języku Java: Class C { public static void main(String[] args) { int[]a1[]=new int[3][3]; //3 int a2[4]={3,4,5,6}; //4 int a2[5]; //5 }} Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?",
+   "question": "Zapisano następujący kod źródłowy w języku Java: class C { public static void main(String[] args) { int[]a1[]=new int[3][3]; //3 int a2[4]={3,4,5,6}; //4 int a2[5]; //5 }} Jaki jest wynik kompilacji i wykonania programu (w komentarzach podane są numery linii)?",
    "options": [
     {
      "key": "a",
@@ -32352,7 +32279,7 @@
    "topic": "java",
    "semester": 4,
    "courseName": "Programowanie zaawansowane (Java)",
-   "question": "Zapisano następujący kod źródłowy w języku Java: public class A extends Thread { public int i; public void run() { i = 1; } public static void main(String[] args) throws Exception { A a = new A();",
+   "question": "Zapisano następujący kod źródłowy w języku Java: public class A extends Thread { public int i; public void run() { i = 1; } public static void main(String[] args) throws Exception { A a = new A(); a.start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i); } } Jaki jest rezultat kompilacji i wykonania programu?",
    "options": [
     {
      "key": "a",
@@ -32362,7 +32289,7 @@
     },
     {
      "key": "b",
-     "text": "start(); System.out.print(a.i); Thread.sleep(1000); System.out.print(a.i);",
+     "text": "Błąd kompilacji.",
      "correct": false,
      "extra": false
     },
@@ -32374,7 +32301,7 @@
     },
     {
      "key": "d",
-     "text": "Wypisze \"11\".",
+     "text": "Zawsze (w każdym wykonaniu) wypisze \"11\".",
      "correct": false,
      "extra": false
     },
@@ -32574,7 +32501,7 @@
    "topic": "java",
    "semester": 4,
    "courseName": "Programowanie zaawansowane (Java)",
-   "question": "Zapisano następujący kod źródłowy w języku Java: interface I{ void f1(); // 1 public void f2(); // 2 protected void f3(); // 3 private void f4(); // 4 } Które linie generują błędy kompilacji? (w komentarzach podany numery linii)",
+   "question": "Zapisano następujący kod źródłowy w języku Java: interface I{ void f1(); // 1 public void f2(); // 2 protected void f3(); // 3 private void f4(); // 4 } Które linie generują błędy kompilacji? (w komentarzach podane numery linii)",
    "options": [
     {
      "key": "a",
@@ -33085,7 +33012,7 @@
     {
      "key": "b",
      "text": "Program wypisze łańcuch: \"m1 w klasie anonimowej\"",
-     "correct": false,
+     "correct": true,
      "extra": false
     },
     {
@@ -33147,7 +33074,7 @@
    "topic": "java",
    "semester": 4,
    "courseName": "Programowanie zaawansowane (Java)",
-   "question": "Zapisano poniższy kod źródłowy w języku Java:class C{ int i; public static void main (String[] args) { int i; //1 private int a = 1; //2 protected int b = 1; //3 public int c = 1; //4 System.out.println(a+b+c); //5 }} Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczony numery lini)?",
+   "question": "Zapisano poniższy kod źródłowy w języku Java:class C{ int i; public static void main (String[] args) { int i; //1 private int a = 1; //2 protected int b = 1; //3 public int c = 1; //4 System.out.println(a+b+c); //5 }} Jaki jest wynik próby kompilacji i wykonania powyższego programu (w komentarzach zaznaczone numery linii)?",
    "options": [
     {
      "key": "a",
@@ -33187,24 +33114,18 @@
     },
     {
      "key": "g",
-     "text": "Zmienna lokalna może być oznaczona modyfikatorem final.",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "h",
      "text": "Zmienna lokalna jest widoczna tylko w bloku, w którym została zadeklarowana.",
      "correct": true,
      "extra": true
     },
     {
-     "key": "i",
+     "key": "h",
      "text": "Zmienne lokalne są domyślnie inicjalizowane wartościami domyślnymi jak pola klasy.",
      "correct": false,
      "extra": true
     },
     {
-     "key": "j",
+     "key": "i",
      "text": "Modyfikator private przy zmiennej lokalnej ogranicza jej widoczność do metody.",
      "correct": false,
      "extra": true
@@ -34118,7 +34039,7 @@
     },
     {
      "key": "e",
-     "text": "Warstwa 3 to warstwa sieciowa (np. protokół IP).",
+     "text": "Warstwa 3 to warstwa sieciowa (jej odpowiednikiem w stosie TCP/IP jest protokół IP).",
      "correct": true,
      "extra": false
     },
@@ -34850,7 +34771,7 @@
     },
     {
      "key": "d",
-     "text": "ATA",
+     "text": "ATA (równoległe, PATA)",
      "correct": false,
      "extra": false
     },
@@ -35568,7 +35489,7 @@
     },
     {
      "key": "e",
-     "text": "Nie dopuszcza zmiennych swobodnych.",
+     "text": "Nie dopuszcza zmiennych swobodnych (bilansujących) dodawanych do ograniczeń nierównościowych.",
      "correct": false,
      "extra": false
     },
@@ -35721,7 +35642,7 @@
     },
     {
      "key": "b",
-     "text": "Drzewo przeszukiwania w tym algorytmie jest drzewem binarnym.",
+     "text": "Drzewo przeszukiwania w tym algorytmie musi być zawsze drzewem binarnym.",
      "correct": false,
      "extra": false
     },
@@ -36121,7 +36042,7 @@
    "topic": "machine_learning",
    "semester": 7,
    "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
-   "question": "Które z poniższych poleceń są poprawne, zakładając że df jest obiektem DataFrame biblioteki Pandas?",
+   "question": "Zakładając, że df jest obiektem DataFrame biblioteki Pandas, które z poniższych stwierdzeń dotyczących metody agg() oraz poleceń z jej użyciem są poprawne?",
    "options": [
     {
      "key": "a",
@@ -36187,7 +36108,7 @@
    "topic": "machine_learning",
    "semester": 7,
    "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
-   "question": "Które z poniższych stwierdzeń są prawdziwe w odniesieniu do biblioteki Pandas?",
+   "question": "Które z poniższych stwierdzeń dotyczących funkcji/metody merge w bibliotece Pandas są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -36401,7 +36322,7 @@
     },
     {
      "key": "b",
-     "text": "pozwalają na obliczenie odległości przy pomocy samego twierdzenia Pitagorasa.",
+     "text": "pozwalają na obliczenie odległości (z dokładnością do zniekształceń odwzorowania) przy pomocy samego twierdzenia Pitagorasa.",
      "correct": true,
      "extra": false
     },
@@ -36761,7 +36682,7 @@
     },
     {
      "key": "g",
-     "text": "Bazy danych SQL wymagają zadeklarowania typu każdej kolumny.",
+     "text": "W relacyjnych bazach danych, np. PostgreSQL, każda kolumna ma zadeklarowany typ.",
      "correct": true,
      "extra": true
     },
@@ -37346,7 +37267,7 @@
     },
     {
      "key": "d",
-     "text": "Wynika z braku danych treningowych.",
+     "text": "Jest skutkiem zbyt dużej ilości danych treningowych.",
      "correct": false,
      "extra": false
     },
@@ -37457,7 +37378,7 @@
    "topic": "machine_learning",
    "semester": 7,
    "courseName": "Uczenie maszynowe / Sztuczna inteligencja",
-   "question": "Czym może być spowodowane niedouczenie (underfitting) modelu uczenia maszynowego?",
+   "question": "Czym może być spowodowane i jak się objawia niedouczenie (underfitting) modelu uczenia maszynowego?",
    "options": [
     {
      "key": "a",
@@ -38008,7 +37929,7 @@
     },
     {
      "key": "d",
-     "text": "Sąsiedztwo jest zawsze definiowane dla całej siatki jednocześnie.",
+     "text": "Sąsiedztwo każdej komórki obejmuje wszystkie komórki siatki.",
      "correct": false,
      "extra": false
     },
@@ -38020,7 +37941,7 @@
     },
     {
      "key": "f",
-     "text": "Sąsiedztwo von Neumanna obejmuje komórkę centralną.",
+     "text": "Sąsiedztwo von Neumanna jest zdefiniowane wyłącznie dla siatek trójkątnych.",
      "correct": false,
      "extra": false
     },
@@ -38062,8 +37983,8 @@
     },
     {
      "key": "b",
-     "text": "Otrzymywaniu całościowego obrazu makroskopowego systemu na podstawie działania mikroskopowych reguł.",
-     "correct": false,
+     "text": "Polega na powstawaniu całościowego, makroskopowego obrazu zachowania systemu w wyniku działania prostych reguł mikroskopowych.",
+     "correct": true,
      "extra": false
     },
     {
@@ -38219,13 +38140,13 @@
     {
      "key": "e",
      "text": "Adaptacyjność.",
-     "correct": false,
+     "correct": true,
      "extra": false
     },
     {
      "key": "f",
      "text": "Wrażliwość na warunki początkowe (efekt motyla).",
-     "correct": false,
+     "correct": true,
      "extra": false
     },
     {
@@ -38760,7 +38681,7 @@
     },
     {
      "key": "f",
-     "text": "Współczynnik Giniego.",
+     "text": "Współczynnik Giniego (= 2·AUC − 1).",
      "correct": true,
      "extra": false
     },
@@ -39438,7 +39359,7 @@
     },
     {
      "key": "e",
-     "text": "Chiński Pokój Searla jest znanym argumentem przeciwko testowi Turinga.",
+     "text": "Argument Chińskiego Pokoju Searle'a, który Turing omówił w swoim artykule z 1950 r.",
      "correct": false,
      "extra": false
     },
@@ -39457,12 +39378,6 @@
     {
      "key": "h",
      "text": "Turing pominął w artykule wszelkie zarzuty, uznając test za bezdyskusyjny.",
-     "correct": false,
-     "extra": true
-    },
-    {
-     "key": "i",
-     "text": "Turing przewidział argument Chińskiego Pokoju jako zarzut wobec swojego testu.",
      "correct": false,
      "extra": true
     }
