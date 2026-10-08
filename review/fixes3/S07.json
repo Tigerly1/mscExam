@@ -1,0 +1,1 @@
+{"options":[{"id":1045,"key":"f","correct":false,"text":"Metoda Newtona dla funkcji kwadratowej potrzebuje na ogół n iteracji (n = liczba zmiennych).","reason":"jednoznaczne sformułowanie: Newton kończy w 1 iteracji, nie w n"}],"remove":[],"questions":[],"explanations":[],"glossary":[]}

@@ -1,7 +1,7 @@
 import json,sys,os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 s=sys.argv[1]; check='--check' in sys.argv
-d=json.load(open(f'out/{s}.json')); f=json.load(open(f'fixes/{s}.json'))
+d=json.load(open(f'out/{s}.json')); f=json.load(open(os.environ.get('FIXDIR','fixes')+f'/{s}.json'))
 Q={q['id']:q for q in d['questions']}; G={g['id']:g for g in d['glossary']}
 err=[]
 def opt(i,k):

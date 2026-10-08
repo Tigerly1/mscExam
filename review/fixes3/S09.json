@@ -1,0 +1,20 @@
+{
+ "options": [
+  {
+   "id": 174,
+   "key": "k",
+   "correct": false,
+   "text": "anomalia Belady'ego oznacza, że w algorytmie FIFO zwiększenie liczby ramek zawsze zmniejsza liczbę błędów strony",
+   "reason": "oryginał niejednoznaczny (więcej ramek zwykle zmniejsza błędy); anomalia = możliwy WZROST"
+  }
+ ],
+ "remove": [],
+ "questions": [],
+ "explanations": [],
+ "glossary": [
+  {
+   "id": "komunikacja-synchroniczna",
+   "details": "Przy blokującym send nadawca jest zawieszany, dopóki odbiorca nie odbierze komunikatu; blokujący receive czeka na nadejście komunikatu. Spotkanie obu stron to rendezvous (np. Ada, CSP), które jednocześnie synchronizuje ich aktywność i nie wymaga bufora. Komunikacja asynchroniczna używa bufora (kolejki komunikatów), więc nadawca kontynuuje pracę, a odbiorca może odebrać później. Obie formy działają także w systemach rozproszonych. Komunikacja synchroniczna nie jest zawsze szybsza: wymusza oczekiwanie, ale daje pewność odbioru i prostszą semantykę.\n\n**Na egzaminie uważaj na:** synchroniczna to nie brak potwierdzenia odbioru; jest szeroko stosowana w systemach rozproszonych; asynchroniczna wymaga buforowania komunikatów."
+  }
+ ]
+}

@@ -1353,7 +1353,7 @@
     },
     {
      "key": "c",
-     "text": "jeżeli schemat relacji znajduje się w postaci normalnej Boyce'a-Codda, to nie ma w nim redundancji",
+     "text": "jeżeli schemat relacji znajduje się w postaci normalnej Boyce'a-Codda, to nie ma w nim redundancji wynikającej z zależności funkcyjnych",
      "correct": true,
      "extra": false
     },
@@ -1389,24 +1389,18 @@
     },
     {
      "key": "i",
-     "text": "BCNF eliminuje redundancję wynikającą z zależności funkcyjnych, ale nie z zależności wielowartościowych",
-     "correct": true,
-     "extra": true
-    },
-    {
-     "key": "j",
      "text": "jeżeli relacja jest w 3NF, to jest również w BCNF",
      "correct": false,
      "extra": true
     },
     {
-     "key": "k",
+     "key": "j",
      "text": "dekompozycja do BCNF zawsze zachowuje wszystkie zależności funkcyjne",
      "correct": false,
      "extra": true
     },
     {
-     "key": "l",
+     "key": "k",
      "text": "sprowadzenie relacji do BCNF zawsze wymaga jej dekompozycji na co najmniej dwie relacje",
      "correct": false,
      "extra": true
@@ -1797,7 +1791,7 @@
     },
     {
      "key": "b",
-     "text": "dwie wartości NULL są traktowane jako równe",
+     "text": "w porównaniu operatorem = dwie wartości NULL są uznawane za równe (wynik TRUE)",
      "correct": false,
      "extra": false
     },
@@ -10306,7 +10300,7 @@
     },
     {
      "key": "k",
-     "text": "anomalia Belady'ego oznacza, że zwiększenie liczby ramek w FIFO może zmniejszyć liczbę błędów strony",
+     "text": "anomalia Belady'ego oznacza, że w algorytmie FIFO zwiększenie liczby ramek zawsze zmniejsza liczbę błędów strony",
      "correct": false,
      "extra": true
     }
@@ -12682,7 +12676,7 @@
     },
     {
      "key": "b",
-     "text": "formalnie poprawne programy",
+     "text": "reguły zarządzania pamięcią w czasie wykonania programu",
      "correct": false,
      "extra": false
     },
@@ -12749,7 +12743,7 @@
     },
     {
      "key": "b",
-     "text": "formalnie poprawne programy",
+     "text": "zasady rozmieszczenia kodu programu w pamięci",
      "correct": false,
      "extra": false
     },
@@ -14637,7 +14631,7 @@
     },
     {
      "key": "l",
-     "text": "Sortowanie przez wstawianie dla danych już posortowanych działa w czasie O(n^2).",
+     "text": "Sortowanie przez wstawianie dla danych już posortowanych działa w czasie Θ(n^2).",
      "correct": false,
      "extra": true
     }
@@ -17627,7 +17621,7 @@
     },
     {
      "key": "f",
-     "text": "Metoda Newtona dla funkcji kwadratowej zbiega w n iteracjach.",
+     "text": "Metoda Newtona dla funkcji kwadratowej potrzebuje na ogół n iteracji (n = liczba zmiennych).",
      "correct": false,
      "extra": false
     },
@@ -22678,7 +22672,7 @@
     },
     {
      "key": "b",
-     "text": "Tabele relacyjnych baz danych w których istnieją klucze są relacjami.",
+     "text": "Samo zdefiniowanie klucza w tabeli SQL sprawia, że jest ona w pełni relacją w sensie matematycznym (nawet gdy kolumny dopuszczają NULL).",
      "correct": false,
      "extra": false
     },
@@ -34159,7 +34153,7 @@
     },
     {
      "key": "b",
-     "text": "210.210.210.210",
+     "text": "210.210.210.210 (adres należący do tej sieci, użytkowy)",
      "correct": true,
      "extra": false
     },
@@ -34171,7 +34165,7 @@
     },
     {
      "key": "d",
-     "text": "210.210.210.255",
+     "text": "210.210.210.255 (adres rozgłoszeniowy tej sieci)",
      "correct": true,
      "extra": false
     },

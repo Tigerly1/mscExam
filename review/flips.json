@@ -1,86 +1,8 @@
 [
 [
-224,
-"błąd wykonania (np. segmentation fault) pojawia się w C tylko wtedy, g",
+35,
+"BCNF eliminuje redundancję wynikającą z zależności funkcyjnych, ale ni",
 true,
 false
-],
-[
-1190,
-"Zwiększają ją niskie sprzężenie i wysoka spójność modułów.",
-true,
-false
-],
-[
-1203,
-"Podstany dziedziczą akcje wejścia i wyjścia stanu nadrzędnego przy wch",
-true,
-false
-],
-[
-1253,
-"Program wypisze łańcuch: \"m1 w klasie anonimowej\"",
-false,
-true
-],
-[
-1254,
-"Zmienna lokalna jest widoczna tylko w bloku, w którym została zadeklar",
-true,
-false
-],
-[
-109,
-"zbieżność tych metod nie zależy od wyboru wektora startowego, jeśli ρ(",
-true,
-false
-],
-[
-128,
-"mają znacznie lepsze własności numeryczne niż metoda eliminacji Gaussa",
-true,
-false
-],
-[
-154,
-"Route Reflector Client (RRC)",
-true,
-false
-],
-[
-157,
-"przykładem redystrybucji jest import tras RIP do OSPF na routerze gran",
-true,
-false
-],
-[
-1142,
-"wymaga sprzętowego zegara generującego przerwania",
-true,
-false
-],
-[
-1123,
-"Służy do minimalizacji automatów deterministycznych.",
-false,
-true
-],
-[
-1324,
-"Otrzymywaniu całościowego obrazu makroskopowego systemu na podstawie d",
-false,
-true
-],
-[
-1326,
-"Adaptacyjność.",
-false,
-true
-],
-[
-1326,
-"Wrażliwość na warunki początkowe (efekt motyla).",
-false,
-true
 ]
 ]

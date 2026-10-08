@@ -85,7 +85,7 @@
     },
     {
      "key": "c",
-     "text": "jeżeli schemat relacji znajduje się w postaci normalnej Boyce'a-Codda, to nie ma w nim redundancji",
+     "text": "jeżeli schemat relacji znajduje się w postaci normalnej Boyce'a-Codda, to nie ma w nim redundancji wynikającej z zależności funkcyjnych",
      "correct": true
     },
     {
@@ -116,12 +116,6 @@
      "extra": true
     },
     {
-     "key": "i",
-     "text": "BCNF eliminuje redundancję wynikającą z zależności funkcyjnych, ale nie z zależności wielowartościowych",
-     "correct": true,
-     "extra": true
-    },
-    {
      "key": "j",
      "text": "jeżeli relacja jest w 3NF, to jest również w BCNF",
      "correct": false,
@@ -148,7 +142,8 @@
    ],
    "explanation": "**Dlaczego poprawne.** Definicja BCNF: lewa strona każdej nietrywialnej zależności funkcyjnej musi być nadkluczem (zawierać klucz). Każdą relację można rozbić do BCNF dekompozycją bezstratną (algorytm rozbijania po zależności łamiącej BCNF), ale nie zawsze da się przy tym zachować wszystkie zależności funkcyjne — to klasyczna różnica względem 3NF. Relacja dwuatrybutowa jest zawsze w BCNF (jedyne możliwe nietrywialne ZF to A→B lub B→A, a wtedy lewa strona jest kluczem). BCNF eliminuje redundancję wynikającą z zależności funkcyjnych — w tym sensie „w BCNF nie ma redundancji\" (pozostaje jedynie redundancja z zależności wielowartościowych, którą usuwa 4NF). Skoro BCNF jest ostrzejsza od 3NF, każda relacja w BCNF jest w 3NF, a relacja w BCNF może mieć wiele kluczy kandydujących.\n\n**Dlaczego błędne.** Odwrotna implikacja (3NF ⇒ BCNF) nie zachodzi — 3NF dopuszcza X→A z X niebędącym nadkluczem, o ile A jest podstawowy; w BCNF nie ma takiej ulgi: zależność X → A z X niebędącym nadkluczem łamie BCNF nawet wtedy, gdy A jest atrybutem podstawowym (sam fakt, że atrybut podstawowy stoi po prawej stronie jakiejś ZF, nie jest zabroniony — np. A → B i B → A w R(A,B)). Dekompozycja do BCNF nie gwarantuje zachowania ZF. Nie ma obowiązku doprowadzania każdego schematu do BCNF — czasem zostaje się na 3NF, by zachować zależności lub dla wydajności. Relacja, która już jest w BCNF, nie wymaga żadnej dekompozycji.\n\n**Zapamiętaj.** BCNF = „każda nietrywialna ZF wychodzi z nadklucza\"; zawsze bezstratnie, nie zawsze z zachowaniem ZF.",
    "changes": [
-    "weryfikacja: e oryginał niejednoznaczny: atrybut podstawowy może stać po prawej stronie ZF w BCNF (np. R(A,B), A→B, B→A); doprecyzowano intencję"
+    "weryfikacja: e oryginał niejednoznaczny: atrybut podstawowy może stać po prawej stronie ZF w BCNF (np. R(A,B), A→B, B→A); doprecyzowano intencję",
+    "weryfikacja: c doprecyzowanie: pozostaje redundancja z ZW"
    ]
   },
   {
@@ -490,7 +485,7 @@
     },
     {
      "key": "b",
-     "text": "dwie wartości NULL są traktowane jako równe",
+     "text": "w porównaniu operatorem = dwie wartości NULL są uznawane za równe (wynik TRUE)",
      "correct": false
     },
     {
@@ -555,9 +550,10 @@
     "funkcje-agregujace-group-by-having",
     "klucz-obcy-integralnosc-referencyjna"
    ],
-   "explanation": "**Dlaczego poprawne.** NULL to znacznik braku wartości — jest różny od zera, spacji i pustego łańcucha, które są konkretnymi wartościami. W logice trójwartościowej SQL wynik porównania z NULL to UNKNOWN — trzecia wartość logiczna, różna od TRUE i FALSE; dlatego `NULL = NULL` nie daje TRUE i do testowania służy predykat `IS NULL`. W wyrażeniach arytmetycznych NULL „zaraża\" wynik: `5 + NULL` to NULL.\n\n**Dlaczego błędne.** Dwie wartości NULL nie są traktowane jako równe w porównaniach (wynik UNKNOWN), a operatorem `=` nie da się uzyskać TRUE dla NULL. NULL nie oznacza zera. Klucz obcy **może** zawierać NULL, ale nic go do tego nie zobowiązuje — nie „musi zawierać przynajmniej jednego NULL\"; klucz główny NULL‑i nie dopuszcza w ogóle. Zdanie o sumie: funkcje agregujące `SUM`, `AVG`, `MIN`, `MAX`, `COUNT(kolumna)` **pomijają** wartości NULL — suma po atrybucie, w którym część wartości to NULL, jest sumą pozostałych wartości, a NULL wychodzi tylko wtedy, gdy nie ma żadnej wartości innej niż NULL. Zdanie to zostało więc oznaczone jako fałszywe (NULL daje NULL tylko w arytmetyce skalarnej, np. `a + b`). `COUNT(*)` zlicza wszystkie wiersze, także te z NULL.\n\n**Zapamiętaj.** NULL ≠ 0 ≠ ''; porównania z NULL dają UNKNOWN (używaj IS NULL); operatory skalarne propagują NULL, a agregaty go ignorują.",
+   "explanation": "**Dlaczego poprawne.** NULL to znacznik braku wartości — jest różny od zera, spacji i pustego łańcucha, które są konkretnymi wartościami. W logice trójwartościowej SQL wynik porównania z NULL to UNKNOWN — trzecia wartość logiczna, różna od TRUE i FALSE; dlatego `NULL = NULL` nie daje TRUE i do testowania służy predykat `IS NULL`. W wyrażeniach arytmetycznych NULL „zaraża\" wynik: `5 + NULL` to NULL.\n\n**Dlaczego błędne.** Dwie wartości NULL nie są traktowane jako równe w porównaniach (wynik UNKNOWN), a operatorem `=` nie da się uzyskać TRUE dla NULL. NULL nie oznacza zera. Klucz obcy **może** zawierać NULL, ale nic go do tego nie zobowiązuje — nie „musi zawierać przynajmniej jednego NULL\"; klucz główny NULL‑i nie dopuszcza w ogóle. Zdanie o sumie: funkcje agregujące `SUM`, `AVG`, `MIN`, `MAX`, `COUNT(kolumna)` **pomijają** wartości NULL — suma po atrybucie, w którym część wartości to NULL, jest sumą pozostałych wartości, a NULL wychodzi tylko wtedy, gdy nie ma żadnej wartości innej niż NULL. Zdanie o sumie jest więc fałszywe (NULL daje NULL tylko w arytmetyce skalarnej, np. `a + b`). `COUNT(*)` zlicza wszystkie wiersze, także te z NULL.\n\n**Zapamiętaj.** NULL ≠ 0 ≠ ''; porównania z NULL dają UNKNOWN (używaj IS NULL); operatory skalarne propagują NULL, a agregaty go ignorują.",
    "changes": [
-    "d: true -> false, bo w SQL funkcja agregująca SUM (jak AVG, MIN, MAX) pomija wartości NULL — suma po atrybucie zawierającym NULL jest sumą pozostałych wartości, a NULL wychodzi tylko gdy wszystkie wartości są NULL; zdanie byłoby prawdziwe jedynie dla arytmetyki skalarnej (a + NULL)"
+    "d: true -> false, bo w SQL funkcja agregująca SUM (jak AVG, MIN, MAX) pomija wartości NULL — suma po atrybucie zawierającym NULL jest sumą pozostałych wartości, a NULL wychodzi tylko gdy wszystkie wartości są NULL; zdanie byłoby prawdziwe jedynie dla arytmetyki skalarnej (a + NULL)",
+    "weryfikacja: b jednoznaczność (GROUP BY/DISTINCT traktują NULL jako jedną grupę)"
    ]
   },
   {
@@ -1560,7 +1556,7 @@
     "druga-postac-normalna-2nf",
     "trzecia-postac-normalna-3nf"
    ],
-   "explanation": "**Dlaczego poprawne.** Jedyny klucz to {A,B}, więc atrybuty podstawowe to A i B, a niekluczowe — C i D. **2NF** wymaga, by żaden atrybut niekluczowy nie zależał od właściwego podzbioru klucza: A⁺ = {A}, B⁺ = {B} — brak zależności częściowych, więc relacja jest w 2NF. **3NF** wymaga, by dla każdej nietrywialnej X→Y zbiór X był nadkluczem lub Y był podstawowy. Zależność {A,C}→D: {A,C}⁺ = {A,C,D} nie zawiera B, więc {A,C} nie jest nadkluczem, a D nie jest podstawowy — 3NF jest **złamana**. Jest to klasyczna zależność przechodnia: {A,B} → {A,C} → D. Maksymalna postać normalna to zatem **2NF**.\n\n**Dlaczego błędne.** 1NF jest za nisko (relacja spełnia 2NF). 3NF, BCNF, 4NF i 5NF są za wysoko — wszystkie wymagają usunięcia zależności {A,C}→D, co osiąga się dekompozycją na {A,C,D} oraz {A,B,C}. Uwaga: {A,C}→D nie jest zależnością częściową (lewa strona nie jest podzbiorem klucza), dlatego nie łamie 2NF, tylko 3NF. W banku pytań odpowiedź 3NF była błędnie oznaczona jako poprawna.\n\n**Zapamiętaj.** Zależność od atrybutów spoza klucza (X nie ⊆ klucz, X nie nadklucz, prawa strona niekluczowa) to zależność przechodnia — łamie 3NF, ale nie 2NF.",
+   "explanation": "**Dlaczego poprawne.** Jedyny klucz to {A,B}, więc atrybuty podstawowe to A i B, a niekluczowe — C i D. **2NF** wymaga, by żaden atrybut niekluczowy nie zależał od właściwego podzbioru klucza: A⁺ = {A}, B⁺ = {B} — brak zależności częściowych, więc relacja jest w 2NF. **3NF** wymaga, by dla każdej nietrywialnej X→Y zbiór X był nadkluczem lub Y był podstawowy. Zależność {A,C}→D: {A,C}⁺ = {A,C,D} nie zawiera B, więc {A,C} nie jest nadkluczem, a D nie jest podstawowy — 3NF jest **złamana**. Jest to klasyczna zależność przechodnia: {A,B} → {A,C} → D. Maksymalna postać normalna to zatem **2NF**.\n\n**Dlaczego błędne.** 1NF jest za nisko (relacja spełnia 2NF). 3NF, BCNF, 4NF i 5NF są za wysoko — wszystkie wymagają usunięcia zależności {A,C}→D, co osiąga się dekompozycją na {A,C,D} oraz {A,B,C}. Uwaga: {A,C}→D nie jest zależnością częściową (lewa strona nie jest podzbiorem klucza), dlatego nie łamie 2NF, tylko 3NF.\n\n**Zapamiętaj.** Zależność od atrybutów spoza klucza (X nie ⊆ klucz, X nie nadklucz, prawa strona niekluczowa) to zależność przechodnia — łamie 3NF, ale nie 2NF.",
    "changes": [
     "c: true -> false oraz b: false -> true, bo {A,C} -> D ma lewą stronę, która nie jest nadkluczem ({A,C}+ = {A,C,D}, brak B), a D nie jest atrybutem podstawowym — zależność przechodnia łamie 3NF; zależności częściowych brak (A+ = {A}, B+ = {B}), więc relacja jest w 2NF, ale nie w 3NF"
    ]
@@ -1712,7 +1708,7 @@
     "zaleznosci-funkcyjne-i-klucze",
     "model-relacyjny-relacja-krotka"
    ],
-   "explanation": "**Dlaczego poprawne.** Nadklucz (superklucz) to dowolny zbiór atrybutów zawierający klucz kandydujący — jednoznacznie identyfikuje krotki, ale nie musi być minimalny. Klucz kandydujący to nadklucz **minimalny**: usunięcie dowolnego atrybutu niszczy jednoznaczność. Klucz główny to jeden, wybrany przez projektanta klucz kandydujący — pozostałe stają się kluczami alternatywnymi; to zdanie było w banku błędnie oznaczone jako fałszywe. Ponieważ relacja jest zbiorem (brak duplikatów), każda zmienna relacyjna ma co najmniej jeden klucz kandydujący; klucz może być złożony z wielu atrybutów.\n\n**Dlaczego błędne.** Zbiór wszystkich atrybutów nagłówka jest zawsze **nadkluczem**, ale kluczem (kandydującym) tylko wtedy, gdy żaden mniejszy zbiór nie identyfikuje krotek — w ogólności więc nie jest kluczem. Tabela ma co najwyżej jeden klucz główny (może za to mieć wiele kandydujących). Klucz kandydujący nie może być pusty (w praktycznym ujęciu kursowym; formalny model dopuszcza klucz pusty jedynie dla relacji o co najwyżej jednej krotce). Nie każdy nadklucz jest kluczem kandydującym (brak minimalności), a klucz kandydujący nie może zawierać atrybutu, którego usunięcie nie narusza unikalności — byłoby to sprzeczne z minimalnością.\n\n**Zapamiętaj.** Nadklucz ⊇ klucz kandydujący (minimalny nadklucz) ∋ klucz główny (jeden wybrany); reszta kandydujących = klucze alternatywne.",
+   "explanation": "**Dlaczego poprawne.** Nadklucz (superklucz) to dowolny zbiór atrybutów zawierający klucz kandydujący — jednoznacznie identyfikuje krotki, ale nie musi być minimalny. Klucz kandydujący to nadklucz **minimalny**: usunięcie dowolnego atrybutu niszczy jednoznaczność. Klucz główny to jeden, wybrany przez projektanta klucz kandydujący — pozostałe stają się kluczami alternatywnymi. Ponieważ relacja jest zbiorem (brak duplikatów), każda zmienna relacyjna ma co najmniej jeden klucz kandydujący; klucz może być złożony z wielu atrybutów.\n\n**Dlaczego błędne.** Zbiór wszystkich atrybutów nagłówka jest zawsze **nadkluczem**, ale kluczem (kandydującym) tylko wtedy, gdy żaden mniejszy zbiór nie identyfikuje krotek — w ogólności więc nie jest kluczem. Tabela ma co najwyżej jeden klucz główny (może za to mieć wiele kandydujących). Klucz kandydujący nie może być pusty (w praktycznym ujęciu kursowym; formalny model dopuszcza klucz pusty jedynie dla relacji o co najwyżej jednej krotce). Nie każdy nadklucz jest kluczem kandydującym (brak minimalności), a klucz kandydujący nie może zawierać atrybutu, którego usunięcie nie narusza unikalności — byłoby to sprzeczne z minimalnością.\n\n**Zapamiętaj.** Nadklucz ⊇ klucz kandydujący (minimalny nadklucz) ∋ klucz główny (jeden wybrany); reszta kandydujących = klucze alternatywne.",
    "changes": [
     "f: false -> true, bo klucz główny jest z definicji jednym z kluczy kandydujących, wybranym przez projektanta (pozostałe to klucze alternatywne)"
    ]
@@ -2029,7 +2025,7 @@
     "algebra-relacji",
     "wartosc-null-logika-trojwartosciowa"
    ],
-   "explanation": "**Dlaczego poprawne.** LEFT JOIN zwraca wszystkie wiersze lewej tabeli i dopasowane wiersze prawej, a przy braku dopasowania kolumny prawej wypełnia NULL; RIGHT JOIN jest lustrzanym odbiciem (wszystko z prawej tabeli). INNER JOIN zwraca tylko pary spełniające warunek złączenia. FULL OUTER JOIN zachowuje wiersze z obu tabel, uzupełniając braki NULL‑ami. CROSS JOIN to iloczyn kartezjański — każdy wiersz z każdym. NATURAL JOIN łączy automatycznie po **wszystkich kolumnach o identycznych nazwach** w obu tabelach — to zdanie było w banku błędnie oznaczone jako fałszywe. Klauzula USING(kolumna) wymaga tej samej nazwy kolumny po obu stronach.\n\n**Dlaczego błędne.** INNER JOIN **nie** zachowuje niedopasowanych wierszy lewej tabeli (to LEFT JOIN). FULL JOIN zwraca nie „tylko dopasowane\" (to INNER), lecz wszystkie. CROSS JOIN **nie** przyjmuje warunku ON (podanie go to błąd składni). LEFT JOIN nie ogranicza się do wierszy bez dopasowania — to robi `LEFT JOIN ... WHERE prawa.klucz IS NULL` (anti‑join). SELF JOIN to złączenie tabeli z nią samą pod dwoma aliasami, nie wymaga dwóch różnych tabel.\n\n**Zapamiętaj.** INNER — tylko dopasowane; LEFT/RIGHT — wszystko z jednej strony + NULL; FULL — wszystko z obu; CROSS — iloczyn bez ON; NATURAL — po wspólnych nazwach kolumn.",
+   "explanation": "**Dlaczego poprawne.** LEFT JOIN zwraca wszystkie wiersze lewej tabeli i dopasowane wiersze prawej, a przy braku dopasowania kolumny prawej wypełnia NULL; RIGHT JOIN jest lustrzanym odbiciem (wszystko z prawej tabeli). INNER JOIN zwraca tylko pary spełniające warunek złączenia. FULL OUTER JOIN zachowuje wiersze z obu tabel, uzupełniając braki NULL‑ami. CROSS JOIN to iloczyn kartezjański — każdy wiersz z każdym. NATURAL JOIN łączy automatycznie po **wszystkich kolumnach o identycznych nazwach** w obu tabelach. Klauzula USING(kolumna) wymaga tej samej nazwy kolumny po obu stronach.\n\n**Dlaczego błędne.** INNER JOIN **nie** zachowuje niedopasowanych wierszy lewej tabeli (to LEFT JOIN). FULL JOIN zwraca nie „tylko dopasowane\" (to INNER), lecz wszystkie. CROSS JOIN **nie** przyjmuje warunku ON (podanie go to błąd składni). LEFT JOIN nie ogranicza się do wierszy bez dopasowania — to robi `LEFT JOIN ... WHERE prawa.klucz IS NULL` (anti‑join). SELF JOIN to złączenie tabeli z nią samą pod dwoma aliasami, nie wymaga dwóch różnych tabel.\n\n**Zapamiętaj.** INNER — tylko dopasowane; LEFT/RIGHT — wszystko z jednej strony + NULL; FULL — wszystko z obu; CROSS — iloczyn bez ON; NATURAL — po wspólnych nazwach kolumn.",
    "changes": [
     "f: false -> true, bo NATURAL JOIN z definicji łączy tabele po wszystkich kolumnach o identycznych nazwach (i zwraca każdą wspólną kolumnę raz)"
    ]
@@ -2193,7 +2189,7 @@
     },
     {
      "key": "b",
-     "text": "Tabele relacyjnych baz danych w których istnieją klucze są relacjami.",
+     "text": "Samo zdefiniowanie klucza w tabeli SQL sprawia, że jest ona w pełni relacją w sensie matematycznym (nawet gdy kolumny dopuszczają NULL).",
      "correct": false
     },
     {
@@ -2252,8 +2248,10 @@
     "algebra-relacji",
     "klucz-kandydujacy-glowny"
    ],
-   "explanation": "**Dlaczego poprawne.** Relacja w sensie matematycznym to podzbiór iloczynu kartezjańskiego zbiorów (dziedzin) — dokładnie na tym Codd oparł model relacyjny, dodając nazwy atrybutów. Atrybuty odpowiadają kolumnom, krotki — wierszom tabeli. Ciało relacji jest zbiorem, więc krotki są różne i nieuporządkowane. Stopień (arność) to liczba atrybutów, liczność (kardynalność) — liczba krotek. Tabela SQL z duplikatami wierszy jest wielozbiorem (bag), nie relacją.\n\n**Dlaczego błędne.** Nie każda tabela SQL jest relacją: SQL dopuszcza duplikaty wierszy (bez klucza/DISTINCT), wartości NULL i uporządkowanie kolumn. Zdanie o tabelach „w których istnieją klucze\" zostało uznane za fałszywe zgodnie z intencją autora — sam klucz wyklucza duplikaty, ale tabela wciąż może zawierać NULL‑e i ma uporządkowane kolumny, więc nie jest ściśle relacją matematyczną. Model relacyjny opiera się na teorii zbiorów i logice predykatów. W bazie danych relacja jest zawsze skończona (choć dziedziny mogą być nieskończone). Iloczyn kartezjański dziedzin to nadzbiór relacji, nie sama relacja. W modelu relacyjnym atrybuty identyfikuje się nazwami, a nie — jak w czystej matematyce — pozycją.\n\n**Zapamiętaj.** Relacja ⊆ D₁×…×Dₙ, jest zbiorem (bez duplikatów, bez porządku); tabela SQL to tylko przybliżenie relacji.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne.** Relacja w sensie matematycznym to podzbiór iloczynu kartezjańskiego zbiorów (dziedzin) — dokładnie na tym Codd oparł model relacyjny, dodając nazwy atrybutów. Atrybuty odpowiadają kolumnom, krotki — wierszom tabeli. Ciało relacji jest zbiorem, więc krotki są różne i nieuporządkowane. Stopień (arność) to liczba atrybutów, liczność (kardynalność) — liczba krotek. Tabela SQL z duplikatami wierszy jest wielozbiorem (bag), nie relacją.\n\n**Dlaczego błędne.** Nie każda tabela SQL jest relacją: SQL dopuszcza duplikaty wierszy (bez klucza/DISTINCT), wartości NULL i uporządkowanie kolumn. Samo zdefiniowanie klucza w tabeli SQL wyklucza duplikaty, ale tabela wciąż może zawierać NULL‑e (w kolumnach spoza klucza głównego) i ma uporządkowane kolumny, więc nie jest ściśle relacją matematyczną. Model relacyjny opiera się na teorii zbiorów i logice predykatów. W bazie danych relacja jest zawsze skończona (choć dziedziny mogą być nieskończone). Iloczyn kartezjański dziedzin to nadzbiór relacji, nie sama relacja. W modelu relacyjnym atrybuty identyfikuje się nazwami, a nie — jak w czystej matematyce — pozycją.\n\n**Zapamiętaj.** Relacja ⊆ D₁×…×Dₙ, jest zbiorem (bez duplikatów, bez porządku); tabela SQL to tylko przybliżenie relacji.",
+   "changes": [
+    "weryfikacja: b oryginał był niejednoznaczny"
+   ]
   },
   {
    "id": 1126,
@@ -2994,7 +2992,7 @@
     "ray-tracing-rekurencyjny",
     "transformacje-geometryczne-3d"
    ],
-   "explanation": "**Dlaczego poprawne.** Z‑bufor (bufor głębokości) rozstrzyga widoczność podczas rasteryzacji: dla każdego piksela przechowuje głębokość (odległość od kamery) najbliższego dotychczas narysowanego fragmentu; nowy fragment jest rysowany tylko wtedy, gdy jego głębokość jest mniejsza od zapisanej. Działa w czasie liniowym względem liczby wielokątów, bez ich sortowania (w odróżnieniu od algorytmu malarza) i poprawnie obsługuje przecinające się obiekty. Wymaga dodatkowej pamięci — 16–32 bity na każdy piksel ekranu — więc rzeczywiście zwiększa zużycie pamięci karty graficznej (to jego znana wada, historycznie istotna; zdanie w banku było oznaczone jako fałszywe, a jest prawdziwe). Ograniczona precyzja bufora prowadzi do artefaktów z‑fighting przy powierzchniach o bliskich głębokościach.\n\n**Dlaczego błędne.** Z‑bufor nie jest metodą nakładania tekstur (to mapowanie tekstur), nie przechowuje składowej alfa (to bufor koloru/alfa) ani współrzędnych XY (te wynikają z pozycji w buforze). Jest wykorzystywany w rasteryzacji (GPU), a nie „tylko w ray tracingu\" — tam widoczność rozstrzyga najbliższe przecięcie promienia. Nie wymaga sortowania wielokątów. Przezroczystości nie obsługuje poprawnie bez dodatkowych zabiegów (sortowanie przezroczystych obiektów od tyłu, wyłączenie zapisu głębokości).\n\n**Zapamiętaj.** Z‑bufor = głębokość na piksel, test „bliżej → rysuj\"; bez sortowania, ale kosztem pamięci i z problemami z przezroczystością oraz z‑fightingiem.",
+   "explanation": "**Dlaczego poprawne.** Z‑bufor (bufor głębokości) rozstrzyga widoczność podczas rasteryzacji: dla każdego piksela przechowuje głębokość (odległość od kamery) najbliższego dotychczas narysowanego fragmentu; nowy fragment jest rysowany tylko wtedy, gdy jego głębokość jest mniejsza od zapisanej. Działa w czasie liniowym względem liczby wielokątów, bez ich sortowania (w odróżnieniu od algorytmu malarza) i poprawnie obsługuje przecinające się obiekty. Wymaga dodatkowej pamięci — 16–32 bity na każdy piksel ekranu — więc rzeczywiście zwiększa zużycie pamięci karty graficznej (to jego znana wada, historycznie istotna). Ograniczona precyzja bufora prowadzi do artefaktów z‑fighting przy powierzchniach o bliskich głębokościach.\n\n**Dlaczego błędne.** Z‑bufor nie jest metodą nakładania tekstur (to mapowanie tekstur), nie przechowuje składowej alfa (to bufor koloru/alfa) ani współrzędnych XY (te wynikają z pozycji w buforze). Jest wykorzystywany w rasteryzacji (GPU), a nie „tylko w ray tracingu\" — tam widoczność rozstrzyga najbliższe przecięcie promienia. Nie wymaga sortowania wielokątów. Przezroczystości nie obsługuje poprawnie bez dodatkowych zabiegów (sortowanie przezroczystych obiektów od tyłu, wyłączenie zapisu głębokości).\n\n**Zapamiętaj.** Z‑bufor = głębokość na piksel, test „bliżej → rysuj\"; bez sortowania, ale kosztem pamięci i z problemami z przezroczystością oraz z‑fightingiem.",
    "changes": [
     "f: false -> true, bo Z-bufor to dodatkowy bufor 16–32 bitów na każdy piksel ekranu, więc jego użycie rzeczywiście zwiększa zużycie pamięci karty graficznej (klasyczna wada metody)"
    ]

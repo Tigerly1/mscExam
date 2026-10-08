@@ -1938,7 +1938,7 @@
     },
     {
      "key": "b",
-     "text": "210.210.210.210",
+     "text": "210.210.210.210 (adres należący do tej sieci, użytkowy)",
      "correct": true
     },
     {
@@ -1948,7 +1948,7 @@
     },
     {
      "key": "d",
-     "text": "210.210.210.255",
+     "text": "210.210.210.255 (adres rozgłoszeniowy tej sieci)",
      "correct": true
     },
     {
@@ -1992,7 +1992,9 @@
    "explanation": "**Dlaczego poprawne**\n/26 = maska 255.255.255.192, 64 adresy: sieć .192, hosty .193–.254 (62), broadcast .255; .210 należy do sieci.\n\n**Dlaczego błędne**\nMaska 255.255.255.0 to /24; .190 leży w sieci .128/26.\n\n**Zapamiętaj**: /26: blok 64.",
    "changes": [
     "b: false -> true, bo 210.210.210.210 mieści się w zakresie użytkowym .193–.254 (niejednoznaczny fragment)",
-    "d: false -> true, bo 210.210.210.255 to adres rozgłoszeniowy sieci, zgodnie z opcją e"
+    "d: false -> true, bo 210.210.210.255 to adres rozgłoszeniowy sieci, zgodnie z opcją e",
+    "weryfikacja: b jednoznaczne sformułowanie",
+    "weryfikacja: d jednoznaczne sformułowanie: to broadcast, nie adres użytkowy"
    ]
   },
   {

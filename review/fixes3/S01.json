@@ -1,0 +1,20 @@
+{
+ "options": [
+  {
+   "id": 1005,
+   "key": "l",
+   "correct": false,
+   "text": "Sortowanie przez wstawianie dla danych już posortowanych działa w czasie Θ(n^2).",
+   "reason": "O jest tylko górnym ograniczeniem (O(n^2) formalnie prawdziwe); Θ(n^2) jednoznacznie fałszywe, bo Θ(n)"
+  }
+ ],
+ "remove": [],
+ "questions": [],
+ "explanations": [
+  {
+   "id": 1005,
+   "explanation": "**Dlaczego poprawne.** Każdy algorytm sortujący wyłącznie przez porównania odpowiada drzewu decyzyjnemu o co najmniej ^^n!^^ liściach, więc jego wysokość — pesymistyczna liczba porównań — wynosi ^^\\ge\\log_2 n! = \\Omega(n\\log n)^^. Zapis ^^f=O(g)^^ oznacza, że ^^g^^ jest asymptotycznym ograniczeniem **górnym** dla ^^f^^; ^^\\Omega^^ — dolnym; ^^\\Theta^^ — obydwoma naraz. Mergesort osiąga ^^O(n\\log n)^^ w każdym przypadku, więc jest optymalny wśród sortowań porównaniowych.\n\n**Dlaczego błędne.** Sortowanie przez wstawianie ma pesymistyczną złożoność ^^O(n^2)^^ (dane odwrotnie posortowane), a dla danych posortowanych tylko ^^\\Theta(n)^^ (pojedynczy przebieg bez przestawień), więc twierdzenie o ^^\\Theta(n^2)^^ dla danych posortowanych jest fałszywe. ^^O^^ nie jest dolnym ograniczeniem. Nie każde sortowanie działa w ^^O(1)^^ pamięci (mergesort ^^O(n)^^, counting sort ^^O(n+k)^^). Algorytm ^^O(n^2)^^ jest dla dużych ^^n^^ **wolniejszy**, nie szybszy, od ^^O(n\\log n)^^. Ograniczenie ^^\\Omega(n\\log n)^^ dotyczy tylko sortowań przez porównania — counting sort działa w ^^O(n+k)^^, bo nie porównuje elementów. ^^O^^ jest tylko ograniczeniem górnym, więc ^^f=O(n)^^ implikuje także ^^f=O(n^2)^^.\n\n**Zapamiętaj.** O — górne, Ω — dolne, Θ — dokładne; sortowanie porównaniowe ≥ ^^\\Omega(n\\log n)^^, nieporównaniowe może być liniowe."
+  }
+ ],
+ "glossary": []
+}

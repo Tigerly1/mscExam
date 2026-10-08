@@ -624,7 +624,7 @@
     },
     {
      "key": "k",
-     "text": "anomalia Belady'ego oznacza, że zwiększenie liczby ramek w FIFO może zmniejszyć liczbę błędów strony",
+     "text": "anomalia Belady'ego oznacza, że w algorytmie FIFO zwiększenie liczby ramek zawsze zmniejsza liczbę błędów strony",
      "correct": false,
      "extra": true
     }
@@ -634,7 +634,9 @@
     "pamiec-wirtualna"
    ],
    "explanation": "**Dlaczego poprawne:** LRU usuwa stronę najdawniej używaną; druga szansa używa bitu odniesienia; OPT usuwa stronę, która najdłużej nie będzie używana i daje minimalną liczbę błędów strony; FIFO usuwa stronę najdłużej przebywającą w pamięci; clock to wariant drugiej szansy.\n\n**Dlaczego błędne:** FIFO ma anomalię Belady'ego (więcej ramek może dać WIĘCEJ błędów), LRU jej nie ma; FIFO patrzy na czas załadowania, nie ostatniego użycia; OPT wymaga znajomości przyszłości i nie jest realizowalny.\n\n**Zapamiętaj:** anomalia Belady'ego dotyczy FIFO, nie LRU ani OPT.",
-   "changes": []
+   "changes": [
+    "weryfikacja: k oryginał niejednoznaczny (więcej ramek zwykle zmniejsza błędy); anomalia = możliwy WZROST"
+   ]
   },
   {
    "id": 175,
@@ -2835,7 +2837,7 @@
    "term": "Komunikacja synchroniczna i asynchroniczna (message passing)",
    "topic": "operating_systems",
    "short": "W komunikacji synchronicznej nadawca (a często i odbiorca) blokuje się do chwili dostarczenia komunikatu; w asynchronicznej wysyłanie nie blokuje.",
-   "details": "Przy blokującym send nadawca jest zawieszany, dopóki odbiorca nie odbierze komunikatu; blokujący receive czeka na nadejście komunikatu. Spotkanie obu stron to rendezvous (np. Ada, CSP), które jednocześnie synchronizuje ich aktywność i nie wymaga bufora. Komunikacja asynchroniczna używa bufora (kolejki komunikatów), więc nadawca kontynuuje pracę, a odbiorca może odebrać później. Obie formy działają także w systemach rozproszonych. Komunikacja synchroniczna nie jest ,,zawsze szybsza: wymusza oczekiwanie, ale daje pewność odbioru i prostszą semantykę.\n\n**Na egzaminie uważaj na:** synchroniczna to nie brak potwierdzenia odbioru; jest szeroko stosowana w systemach rozproszonych; asynchroniczna wymaga buforowania komunikatów.",
+   "details": "Przy blokującym send nadawca jest zawieszany, dopóki odbiorca nie odbierze komunikatu; blokujący receive czeka na nadejście komunikatu. Spotkanie obu stron to rendezvous (np. Ada, CSP), które jednocześnie synchronizuje ich aktywność i nie wymaga bufora. Komunikacja asynchroniczna używa bufora (kolejki komunikatów), więc nadawca kontynuuje pracę, a odbiorca może odebrać później. Obie formy działają także w systemach rozproszonych. Komunikacja synchroniczna nie jest zawsze szybsza: wymusza oczekiwanie, ale daje pewność odbioru i prostszą semantykę.\n\n**Na egzaminie uważaj na:** synchroniczna to nie brak potwierdzenia odbioru; jest szeroko stosowana w systemach rozproszonych; asynchroniczna wymaga buforowania komunikatów.",
    "related": [
     "producent-konsument",
     "semafor"

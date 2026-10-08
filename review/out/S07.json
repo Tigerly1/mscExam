@@ -2278,7 +2278,7 @@
     },
     {
      "key": "f",
-     "text": "Metoda Newtona dla funkcji kwadratowej zbiega w n iteracjach.",
+     "text": "Metoda Newtona dla funkcji kwadratowej potrzebuje na ogół n iteracji (n = liczba zmiennych).",
      "correct": false
     },
     {
@@ -2310,7 +2310,9 @@
     "metody-minimalizacji"
    ],
    "explanation": "**Dlaczego poprawne:** sprzężone gradienty kończą w ≤ n iteracjach dla formy kwadratowej; Newton – w jednej (hesjan stały); najszybszy spadek zbiega asymptotycznie.\n\n**Dlaczego błędne:** Nelder-Mead nie gwarantuje k<n; spadek nie kończy w 1 kroku; Newton nie potrzebuje n iteracji i wymaga też hesjanu; minimum istnieje dla dodatnio określonej A; CG nie potrzebuje 2n; DFP z dokładnym poszukiwaniem liniowym kończy w n krokach.\n\n**Zapamiętaj:** Newton 1 krok, CG ≤ n, spadek asymptotycznie.",
-   "changes": []
+   "changes": [
+    "weryfikacja: f jednoznaczne sformułowanie: Newton kończy w 1 iteracji, nie w n"
+   ]
   },
   {
    "id": 1046,
