@@ -387,7 +387,7 @@
     },
     {
      "key": "c",
-     "text": "żadne z pozostałych",
+     "text": "Operator przecinka (,) ma wyższy priorytet niż operator przypisania =.",
      "correct": false
     },
     {
@@ -418,9 +418,10 @@
    "terms": [
     "priorytet-operatorow-i-punkty-sekwencyjne"
    ],
-   "explanation": "**Dlaczego poprawne:** * / % wiążą silniej niż + −; = jest prawostronnie łączny; && ma wyższy priorytet niż ||.\n\n**Dlaczego błędne:** z == ++z to niesekwencjonowany odczyt i modyfikacja z – niezdefiniowane zachowanie, więc nie można twierdzić, że jest „zawsze fałszywe”; == ma niższy priorytet niż <; przecinek ma najniższy priorytet; a+b*c to a+(b*c). Opcja „żadne z pozostałych” zależy od innych opcji.\n\n**Zapamiętaj:** mnożenie przed dodawaniem, ale kolejność obliczania operandów nie jest gwarantowana.",
+   "explanation": "**Dlaczego poprawne:** * / % wiążą silniej niż + −; = jest prawostronnie łączny; && ma wyższy priorytet niż ||.\n\n**Dlaczego błędne:** z == ++z to niesekwencjonowany odczyt i modyfikacja z – niezdefiniowane zachowanie, więc nie można twierdzić, że jest „zawsze fałszywe”; == ma niższy priorytet niż <; przecinek ma najniższy priorytet (niższy niż =); a+b*c to a+(b*c).\n\n**Zapamiętaj:** mnożenie przed dodawaniem, ale kolejność obliczania operandów nie jest gwarantowana.",
    "changes": [
-    "c: [POSITION-DEPENDENT] opcja „żadne z pozostałych” zależy od innych opcji; zostaje false, bo a jest prawdziwe"
+    "c: [POSITION-DEPENDENT] opcja „żadne z pozostałych” zależy od innych opcji; zostaje false, bo a jest prawdziwe",
+    "weryfikacja: c „żadne z pozostałych” zależało od innych opcji (losowy podzbiór)"
    ]
   },
   {
@@ -569,7 +570,7 @@
     },
     {
      "key": "e",
-     "text": "Wynik zależy od wersji kompilatora i poziomu optymalizacji.",
+     "text": "Jest to zachowanie zdefiniowane przez implementację (implementation-defined): wynik zależy od kompilatora, który musi go udokumentować.",
      "correct": false
     },
     {
@@ -605,10 +606,11 @@
    "terms": [
     "priorytet-operatorow-i-punkty-sekwencyjne"
    ],
-   "explanation": "**Dlaczego poprawne:** b jest modyfikowane (b++) i odczytywane w tym samym wyrażeniu bez sekwencjonowania → niezdefiniowane zachowanie. Standard C nie określa też kolejności obliczania operandów +.\n\n**Dlaczego błędne:** 2 lub 3 nie jest gwarantowane; kod się kompiluje; nawiasy nie pomagają; UB nie jest „zależne od wersji” w sensie formalnym – standard nie nakłada żadnych wymagań.\n\n**Zapamiętaj:** nie modyfikuj i nie czytaj tej samej zmiennej w jednym wyrażeniu bez punktu sekwencyjnego.",
+   "explanation": "**Dlaczego poprawne:** b jest modyfikowane (b++) i odczytywane w tym samym wyrażeniu bez sekwencjonowania → niezdefiniowane zachowanie. Standard C nie określa też kolejności obliczania operandów +.\n\n**Dlaczego błędne:** 2 lub 3 nie jest gwarantowane; kod się kompiluje; nawiasy nie pomagają; to nie jest zachowanie zdefiniowane przez implementację (które kompilator musi udokumentować), tylko UB – standard nie nakłada żadnych wymagań.\n\n**Zapamiętaj:** nie modyfikuj i nie czytaj tej samej zmiennej w jednym wyrażeniu bez punktu sekwencyjnego.",
    "changes": [
     "b: false -> true, bo standard C nie określa kolejności obliczania operandów + (unspecified order of evaluation)",
-    "e: zostaje false; niejednoznaczne, bo w praktyce wyniki różnią się między kompilatorami, ale formalnie to UB"
+    "e: zostaje false; niejednoznaczne, bo w praktyce wyniki różnią się między kompilatorami, ale formalnie to UB",
+    "weryfikacja: e oryginał półprawdziwy (w praktyce wynik zależy od kompilatora)"
    ]
   },
   {
@@ -725,12 +727,6 @@
      "extra": true
     },
     {
-     "key": "i",
-     "text": "Pętla wykonuje się dokładnie strlen(s) razy.",
-     "correct": false,
-     "extra": true
-    },
-    {
      "key": "j",
      "text": "Instrukcja sama alokuje pamięć potrzebną na skopiowany łańcuch.",
      "correct": false,
@@ -741,7 +737,7 @@
     "lancuch-znakow-c",
     "wskazniki-c"
    ],
-   "explanation": "**Dlaczego poprawne:** *t++=*s++ kopiuje znak i przesuwa oba wskaźniki; wartość przypisania to skopiowany znak, więc pętla kończy się po skopiowaniu '\\0'. To idiom kopiowania łańcuchów; po pętli t wskazuje bajt za '\\0'.\n\n**Dlaczego błędne:** wskaźniki przesuwają się o długość+1 (razem z '\\0'); pętla nie jest nieskończona ani nie kopiuje jednego znaku; adresy t i s nie muszą być w relacji (bufor musi mieć miejsce).\n\n**Zapamiętaj:** kopia z terminatorem, iteracji strlen+1.",
+   "explanation": "**Dlaczego poprawne:** *t++=*s++ kopiuje znak i przesuwa oba wskaźniki; wartość przypisania to skopiowany znak, więc pętla kończy się po skopiowaniu '\\0'. To idiom kopiowania łańcuchów; po pętli t wskazuje bajt za '\\0'.\n\n**Dlaczego błędne:** wskaźniki przesuwają się o długość+1 (razem z '\\0'); pętla nie jest nieskończona ani nie kopiuje jednego znaku; adresy t i s nie muszą być w relacji (bufor musi mieć miejsce).\n\n**Zapamiętaj:** kopia z terminatorem; warunek pętli (z kopiowaniem) obliczany jest strlen+1 razy.",
    "changes": [
     "b: zostaje false; wskaźniki zwiększą się o długość+1 (z '\\0'), nie o samą liczbę znaków"
    ]
@@ -1008,7 +1004,7 @@
    "terms": [
     "minimax"
    ],
-   "explanation": "**Dlaczego poprawne:** minimax wybiera ruch optymalny przy założeniu, że przeciwnik też gra optymalnie (gry dwuosobowe o sumie zerowej); odcięcia alfa-beta przyspieszają go bez zmiany wyniku; koszt bez odcięć to O(b^d).\n\n**Dlaczego błędne:** drzewo kółka i krzyżyka (ok. 9! liści) da się przejrzeć w całości; algorytm jest deterministyczny; wymaga funkcji oceny (lub stanów końcowych); nie tylko gry karciane; alfa-beta nie zmienia wyniku; nie jest zachłanny.\n\n**Zapamiętaj:** minimax + alfa-beta = ten sam wynik, mniej węzłów.",
+   "explanation": "**Dlaczego poprawne:** minimax wybiera ruch optymalny przy założeniu, że przeciwnik też gra optymalnie (gry dwuosobowe o sumie zerowej); odcięcia alfa-beta przyspieszają go bez zmiany wyniku; koszt bez odcięć to O(b^d).\n\n**Dlaczego błędne:** drzewo kółka i krzyżyka (co najwyżej 9! ≈ 363 tys. ścieżek, faktycznie 255 168 rozgrywek) da się przejrzeć w całości; algorytm jest deterministyczny; wymaga funkcji oceny (lub stanów końcowych); nie tylko gry karciane; alfa-beta nie zmienia wyniku; nie jest zachłanny.\n\n**Zapamiętaj:** minimax + alfa-beta = ten sam wynik, mniej węzłów.",
    "changes": []
   },
   {
@@ -1324,7 +1320,7 @@
     },
     {
      "key": "i",
-     "text": "Wstawianie posortowanego ciągu do pustego BST bez równoważenia daje drzewo zdegenerowane o wysokości n.",
+     "text": "Wstawianie posortowanego ciągu do pustego BST bez równoważenia daje drzewo zdegenerowane (ścieżkę n węzłów, wysokość rzędu n).",
      "correct": true,
      "extra": true
     },
@@ -1346,7 +1342,8 @@
    ],
    "explanation": "**Dlaczego poprawne:** średnio (drzewo zbliżone do zrównoważonego) wyszukiwanie to O(log n), pesymistycznie (zdegenerowane drzewo) O(n); przejście in-order daje wartości niemalejąco; minimum jest w skrajnie lewym węźle.\n\n**Dlaczego błędne:** nie każde BST jest zrównoważone ani pełne, więc nie zawsze O(log n); przy l≤x≤p duplikaty są dozwolone – stąd nierówności nieostre, a twierdzenie o ostro mniejszych/większych jest nieprawdziwe; pre-order nie sortuje.\n\n**Zapamiętaj:** BST bez równoważenia: O(h), h od log n do n.",
    "changes": [
-    "e: true -> false, bo przy definicji l<=x<=p dozwolone są duplikaty, więc wartości w poddrzewach nie muszą być ściśle mniejsze/większe"
+    "e: true -> false, bo przy definicji l<=x<=p dozwolone są duplikaty, więc wartości w poddrzewach nie muszą być ściśle mniejsze/większe",
+    "weryfikacja: i wysokość n vs n−1 zależnie od definicji"
    ]
   },
   {
@@ -1380,7 +1377,7 @@
     },
     {
      "key": "f",
-     "text": "Referencja zajmuje tyle samo pamięci co wskaźnik.",
+     "text": "Standard C++ gwarantuje, że referencja zajmuje tyle samo pamięci co wskaźnik.",
      "correct": false
     },
     {
@@ -1413,7 +1410,8 @@
    ],
    "explanation": "**Dlaczego poprawne:** referencja musi być zainicjalizowana obiektem i jest jego aliasem; const int& może wiązać się z tymczasową wartością; int &r = *p jest poprawne.\n\n**Dlaczego błędne:** null nie jest słowem kluczowym C++ (a referencja nie może być pusta); int &r; bez inicjalizacji jest błędem; referencji nie można przełączyć (r = x przypisuje wartość); rozmiar referencji nie jest gwarantowany jako równy wskaźnikowi; int&& nie wiąże się z l-wartością.\n\n**Zapamiętaj:** referencja = niezmienny alias.",
    "changes": [
-    "f: zostaje false (niejednoznaczne: standard nie gwarantuje, że referencja zajmuje pamięć jak wskaźnik)"
+    "f: zostaje false (niejednoznaczne: standard nie gwarantuje, że referencja zajmuje pamięć jak wskaźnik)",
+    "weryfikacja: f w praktyce często prawda – doprecyzowano"
    ]
   },
   {
@@ -1545,7 +1543,7 @@
    "terms": [
     "metody-klas-cpp"
    ],
-   "explanation": "**Dlaczego poprawne:** metody statyczne nie należą do obiektu, więc nie mają this; metoda const nie modyfikuje pól (poza mutable); metoda wirtualna może być prywatna; statyczną wywołuje się przez A::f().\n\n**Dlaczego błędne:** metody prywatne mogą być wirtualne; nie każda musi być wirtualna; statyczna nie wywoła niestatycznej bez obiektu; static const nie istnieje; metoda const nie może wywoływać metod niestałych tego obiektu.\n\n**Zapamiętaj:** static = brak this, const = brak modyfikacji stanu.",
+   "explanation": "**Dlaczego poprawne:** metody statyczne nie należą do obiektu, więc nie mają this; metoda const nie modyfikuje pól (poza mutable); metoda wirtualna może być prywatna; statyczną wywołuje się przez A::f().\n\n**Dlaczego błędne:** metody prywatne mogą być wirtualne; nie każda musi być wirtualna; statyczna nie wywoła niestatycznej bez obiektu; metoda statyczna nie może mieć kwalifikatora const (nie ma this); metoda const nie może wywoływać metod niestałych tego obiektu.\n\n**Zapamiętaj:** static = brak this, const = brak modyfikacji stanu.",
    "changes": [
     "b: false -> true, bo brak this w metodach statycznych to prawda (równoważne pierwszej opcji)"
    ]
@@ -1556,7 +1554,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Konstruktor klasy pochodnej musi wywołać konstruktor klasy bazowej w liście inicjalizacyjnej.",
+     "text": "W tym przypadku konstruktor klasy B musi jawnie wywołać konstruktor klasy A w liście inicjalizacyjnej (A nie ma konstruktora domyślnego).",
      "correct": true
     },
     {
@@ -1614,7 +1612,9 @@
     "polimorfizm-i-dziedziczenie-cpp"
    ],
    "explanation": "**Dlaczego poprawne:** A nie ma konstruktora domyślnego, więc B musi jawnie wywołać A(0) w liście inicjalizacyjnej: B::B() : A(0) {}. Konstruktor bazy wykonuje się przed ciałem konstruktora B.\n\n**Dlaczego błędne:** super to Java; A(0); w ciele tworzy tymczasowy obiekt (i nie wywołuje bazy), a wcześniej kompilator szuka A() i zgłasza błąd; this->A(0) jest niedozwolone; B::B() {} nie skompiluje się; pola prywatne pozostają prywatne (niedostępne).\n\n**Zapamiętaj:** bazę inicjalizuje się w liście inicjalizacyjnej.",
-   "changes": []
+   "changes": [
+    "weryfikacja: a jako reguła ogólna fałsz (bazy z konstruktorem domyślnym)"
+   ]
   },
   {
    "id": 1222,
@@ -1642,7 +1642,7 @@
     },
     {
      "key": "e",
-     "text": "Kolejność zależy od kolejności deklaracji w pliku nagłówkowym.",
+     "text": "Kolejność zależy od tego, w jakiej kolejności definicje klas A, B, C, D występują w pliku.",
      "correct": false
     },
     {
@@ -1682,7 +1682,8 @@
    "explanation": "**Dlaczego poprawne:** kolejność: podobiekt bazowy C (najpierw jego pole A → \"A\", potem ciało C → \"C\"), potem pola D (B → \"B\"), potem ciało D → \"D\". Wynik: ACBD. Pola inicjalizowane są w kolejności deklaracji w klasie.\n\n**Dlaczego błędne:** B przed C, BACD, DBCA i ACDB łamią zasadę baza → pola → ciało; lista inicjalizacyjna nie zmienia kolejności; konstruktory nie działają równolegle.\n\n**Zapamiętaj:** baza, pola w kolejności deklaracji, ciało.",
    "changes": [
     "poprawiono błąd w opcji f: „are” -> „są”",
-    "e: zostaje false; kolejność zależy od deklaracji w klasie, ale zawsze baza przed polami – opcja jest myląca"
+    "e: zostaje false; kolejność zależy od deklaracji w klasie, ale zawsze baza przed polami – opcja jest myląca",
+    "weryfikacja: e kolidowało z prawdziwym „kolejność deklaracji pól”"
    ]
   },
   {
@@ -1909,7 +1910,7 @@
     },
     {
      "key": "e",
-     "text": "Rzucenie wyjątku w destruktorze podczas odwijania stosu powoduje wywołanie std::terminate.",
+     "text": "Wyjątek opuszczający destruktor podczas odwijania stosu powoduje wywołanie std::terminate.",
      "correct": true
     },
     {
@@ -1948,7 +1949,8 @@
    ],
    "explanation": "**Dlaczego poprawne:** odwijanie stosu niszczy obiekty lokalne (wołając destruktory) i zwalnia ramki stosu; wyjątek uciekający z destruktora podczas odwijania → std::terminate; catch(...) łapie dowolny typ; wyjątek w konstruktorze niszczy w pełni zbudowane pola i bazy.\n\n**Dlaczego błędne:** w konstruktorach wyjątki można rzucać (to standardowy sposób sygnalizacji błędu); typ wyjątku dowolny; po catch wykonanie nie wraca za throw; złapanie przez wartość obcina obiekt (slicing).\n\n**Zapamiętaj:** wyjątki: RAII + destruktory bez wyjątków.",
    "changes": [
-    "b: false -> true, bo odwijanie stosu zwalnia pamięć stosu i wywołuje destruktory (zgodne z pierwszą opcją)"
+    "b: false -> true, bo odwijanie stosu zwalnia pamięć stosu i wywołuje destruktory (zgodne z pierwszą opcją)",
+    "weryfikacja: e wyjątek złapany wewnątrz destruktora nie wywołuje terminate"
    ]
   },
   {
@@ -2180,7 +2182,7 @@
     },
     {
      "key": "e",
-     "text": "Składnia [=] oznacza przechwycenie wszystkich zmiennych lokalnych przez kopię.",
+     "text": "Składnia [=] oznacza domyślne przechwytywanie przez kopię (kopiowane są zmienne lokalne użyte w ciele lambdy).",
      "correct": true
     },
     {
@@ -2217,7 +2219,9 @@
     "funktory-i-lambdy"
    ],
    "explanation": "**Dlaczego poprawne:** każda lambda ma unikalny, anonimowy typ (nawet dla identycznego tekstu); [=] kopiuje, [&] przechwytuje przez referencję; lambda bez przechwytywania konwertuje się do wskaźnika na funkcję.\n\n**Dlaczego błędne:** przechwytywanie przez referencję jest możliwe; lambdy pojawiły się w C++11, nie C++98; można je stosować w algorytmach STL; kopie z [=] są domyślnie const (modyfikacja wymaga mutable); referencja do zmiennej lokalnej po wyjściu z zakresu jest wisząca.\n\n**Zapamiętaj:** lambda = anonimowa klasa funktora (C++11).",
-   "changes": []
+   "changes": [
+    "weryfikacja: e nie wszystkie zmienne, tylko użyte"
+   ]
   }
  ],
  "glossary": [
@@ -2248,7 +2252,7 @@
    "term": "Łańcuch znaków w C (C string)",
    "topic": "c_cpp",
    "short": "Łańcuch w C to tablica char zakończona znakiem '\\0', odwołujemy się do niej wskaźnikiem char*.",
-   "details": "Nie ma osobnego typu string; długość wynika wyłącznie z położenia terminatora. strlen(s) zlicza znaki przed '\\0' (bez niego), więc bufor na kopię musi mieć strlen+1 bajtów. sizeof(s) dla char* to rozmiar wskaźnika. Idiom kopiowania: while(*t++ = *s++); – kopiuje znak, przesuwa wskaźniki, kończy się po skopiowaniu '\\0' (wartość przypisania 0), wykonując strlen+1 iteracji. Po pętli oba wskaźniki wskazują bajt za terminatorem. Bufor docelowy musi być wystarczająco duży, inaczej przepełnienie bufora (UB). Metody length() należą do std::string w C++, nie do C.\n\n**Na egzaminie uważaj na:**\n- strlen nie wlicza '\\0'.\n- Kopiowanie zwiększa wskaźniki o długość+1.\n- sizeof(txt) ≠ strlen(txt).\n- Nie ma txt.length() w C.",
+   "details": "Nie ma osobnego typu string; długość wynika wyłącznie z położenia terminatora. strlen(s) zlicza znaki przed '\\0' (bez niego), więc bufor na kopię musi mieć strlen+1 bajtów. sizeof(s) dla char* to rozmiar wskaźnika. Idiom kopiowania: while(*t++ = *s++); – kopiuje znak, przesuwa wskaźniki, kończy się po skopiowaniu '\\0' (wartość przypisania 0), obliczając warunek pętli strlen+1 razy. Po pętli oba wskaźniki wskazują bajt za terminatorem. Bufor docelowy musi być wystarczająco duży, inaczej przepełnienie bufora (UB). Metody length() należą do std::string w C++, nie do C.\n\n**Na egzaminie uważaj na:**\n- strlen nie wlicza '\\0'.\n- Kopiowanie zwiększa wskaźniki o długość+1.\n- sizeof(txt) ≠ strlen(txt).\n- Nie ma txt.length() w C.",
    "related": [
     "wskazniki-c",
     "tablice-w-c"
@@ -2303,7 +2307,7 @@
    "term": "Konwencja wywołania __cdecl (calling convention)",
    "topic": "c_cpp",
    "short": "W __cdecl argumenty trafiają na stos od prawej do lewej, a stos po wywołaniu czyści wywołujący.",
-   "details": "Wywołujący odkłada argumenty od ostatniego do pierwszego, więc pierwszy leży na szczycie stosu, tuż pod adresem powrotu. Wywoływana funkcja zawsze może więc znaleźć pierwszy parametr (np. napis formatu printf) i na jego podstawie ustalić resztę. Po powrocie to wywołujący usuwa argumenty ze stosu, dlatego wywoływana funkcja nie musi znać ich liczby – to umożliwia funkcje o zmiennej liczbie argumentów (va_list). Konwencja __stdcall ma czyszczenie po stronie wywoływanej, więc nie nadaje się do funkcji variadic. W C dozwolona jest deklaracja bez prototypu (int f();, przed C23) i argumenty po „...” – kompilator generuje wtedy wywołanie bez informacji o typach parametrów, stosując tylko domyślne promocje (float→double, char→int). W C++ prototyp jest wymagany.\n\n**Na egzaminie uważaj na:**\n- Kolejność odkładania: od prawej do lewej.\n- W cdecl stos czyści wywołujący, nie wywoływany.\n- printf nie zna typów, ufa formatowi.",
+   "details": "Wywołujący odkłada argumenty od ostatniego do pierwszego, więc pierwszy leży najbliżej szczytu stosu (tuż za adresem powrotu). Wywoływana funkcja zawsze może więc znaleźć pierwszy parametr (np. napis formatu printf) i na jego podstawie ustalić resztę. Po powrocie to wywołujący usuwa argumenty ze stosu, dlatego wywoływana funkcja nie musi znać ich liczby – to umożliwia funkcje o zmiennej liczbie argumentów (va_list). Konwencja __stdcall ma czyszczenie po stronie wywoływanej, więc nie nadaje się do funkcji variadic. W C dozwolona jest deklaracja bez prototypu (int f();, przed C23) i argumenty po „...” – kompilator generuje wtedy wywołanie bez informacji o typach parametrów, stosując tylko domyślne promocje (float→double, char→int). W C++ prototyp jest wymagany.\n\n**Na egzaminie uważaj na:**\n- Kolejność odkładania: od prawej do lewej.\n- W cdecl stos czyści wywołujący, nie wywoływany.\n- printf nie zna typów, ufa formatowi.",
    "related": [
     "wskazniki-c"
    ]
@@ -2331,7 +2335,7 @@
    "term": "Wyszukiwanie binarne i liniowe (binary / linear search)",
    "topic": "c_cpp",
    "short": "Liniowe sprawdza elementy po kolei w O(n), binarne w posortowanej tablicy dzieli zakres na pół w O(log n).",
-   "details": "Binarne porównuje szukaną wartość ze środkowym elementem i odrzuca połowę, w której jej być nie może; wymaga posortowania (w dowolnym kierunku, ze zgodnym porównaniem) i dostępu swobodnego (tablica), dlatego na liście jednokierunkowej nie daje O(log n). Liczba kroków to ^^\\lceil \\log_2 n \\rceil^^. Liniowe działa na dowolnych danych, a na posortowanych także, w najgorszym przypadku O(n), w najlepszym O(1). Dla małych n stałe czynniki mogą sprawiać, że liniowe jest szybsze, ale nie „zawsze”. Na nieposortowanych danych binarne daje błędne wyniki.\n\n**Na egzaminie uważaj na:**\n- Nie „dokładnie n kroków” – szukanie kończy się wcześniej.\n- Posortowana lista nie daje O(log n).\n- Binarne to O(log n), nie O(√n).\n- Nie potrzeba dodatkowego indeksu.",
+   "details": "Binarne porównuje szukaną wartość ze środkowym elementem i odrzuca połowę, w której jej być nie może; wymaga posortowania (w dowolnym kierunku, ze zgodnym porównaniem) i dostępu swobodnego (tablica), dlatego na liście jednokierunkowej nie daje O(log n). W najgorszym przypadku wykonuje ^^\\lfloor \\log_2 n \\rfloor + 1^^ porównań. Liniowe działa na dowolnych danych, a na posortowanych także, w najgorszym przypadku O(n), w najlepszym O(1). Dla małych n stałe czynniki mogą sprawiać, że liniowe jest szybsze, ale nie „zawsze”. Na nieposortowanych danych binarne daje błędne wyniki.\n\n**Na egzaminie uważaj na:**\n- Nie „dokładnie n kroków” – szukanie kończy się wcześniej.\n- Posortowana lista nie daje O(log n).\n- Binarne to O(log n), nie O(√n).\n- Nie potrzeba dodatkowego indeksu.",
    "related": [
     "lista-jednokierunkowa",
     "tablice-w-c"
@@ -2386,7 +2390,7 @@
    "term": "Metody klas: static, const, virtual (C++)",
    "topic": "c_cpp",
    "short": "Metody statyczne nie mają this, metody const nie zmieniają stanu obiektu, metody wirtualne umożliwiają polimorfizm.",
-   "details": "Metoda statyczna należy do klasy, nie ma wskaźnika this, wywołuje się ją A::f() bez obiektu, więc nie wywoła metody niestatycznej bez obiektu ani nie może być const. Metoda const nie modyfikuje pól niestatycznych (wyjątek: pola mutable), można ją wywołać na obiekcie const i nie może wywoływać metod niestałych. Metoda wirtualna wybierana jest w czasie wykonania wg dynamicznego typu; może być prywatna i mimo to nadpisywana w klasie pochodnej (idiom NVI). Nie każda metoda musi być wirtualna.\n\n**Na egzaminie uważaj na:**\n- Brak this w statycznych to fakt.\n- Wirtualna może być prywatna.\n- static const jest niepoprawne.\n- mutable omija const.",
+   "details": "Metoda statyczna należy do klasy, nie ma wskaźnika this, wywołuje się ją A::f() bez obiektu, więc nie wywoła metody niestatycznej bez obiektu ani nie może być const. Metoda const nie modyfikuje pól niestatycznych (wyjątek: pola mutable), można ją wywołać na obiekcie const i nie może wywoływać metod niestałych. Metoda wirtualna wybierana jest w czasie wykonania wg dynamicznego typu; może być prywatna i mimo to nadpisywana w klasie pochodnej (idiom NVI). Nie każda metoda musi być wirtualna.\n\n**Na egzaminie uważaj na:**\n- Brak this w statycznych to fakt.\n- Wirtualna może być prywatna.\n- Metoda statyczna nie może być const.\n- mutable omija const.",
    "related": [
     "polimorfizm-i-dziedziczenie-cpp",
     "konstruktory-destruktory"
@@ -2430,7 +2434,7 @@
    "term": "Wyjątki w C++ i odwijanie stosu (exceptions, stack unwinding)",
    "topic": "c_cpp",
    "short": "Wyjątek przerywa normalny przepływ; odwijanie stosu niszczy obiekty lokalne, aż do znalezienia pasującego catch.",
-   "details": "throw przekazuje sterowanie do najbliższego pasującego bloku catch; po drodze zwalniane są ramki stosu i wołane destruktory obiektów lokalnych (RAII). Rzucany może być dowolny typ, nie tylko dziedziczący po std::exception; catch(...) łapie wszystko. Po obsłużeniu wykonanie kontynuuje się za blokiem try/catch, nie za throw. Wyjątek można rzucić w konstruktorze (zniszczone zostaną w pełni skonstruowane pola i bazy, ale nie destruktor tego obiektu). Jeśli wyjątek ucieknie z destruktora podczas odwijania, wywołane jest std::terminate. Łapanie przez wartość powoduje slicing.\n\n**Na egzaminie uważaj na:**\n- Wyjątki w konstruktorach są dozwolone.\n- Destruktory nie powinny rzucać.\n- Wykonanie nie wraca za throw.\n- catch(...) nie jest tylko dla int.",
+   "details": "throw przekazuje sterowanie do najbliższego pasującego bloku catch; po drodze zwalniane są ramki stosu i wołane destruktory obiektów lokalnych (RAII). Rzucany może być dowolny typ, nie tylko dziedziczący po std::exception; catch(...) łapie wszystko. Po obsłużeniu wykonanie kontynuuje się za blokiem try/catch, nie za throw. Wyjątek można rzucić w konstruktorze (zniszczone zostaną w pełni skonstruowane pola i bazy, ale destruktor samego obiektu nie zostanie wywołany). Jeśli wyjątek ucieknie z destruktora podczas odwijania, wywołane jest std::terminate. Łapanie przez wartość powoduje slicing.\n\n**Na egzaminie uważaj na:**\n- Wyjątki w konstruktorach są dozwolone.\n- Destruktory nie powinny rzucać.\n- Wykonanie nie wraca za throw.\n- catch(...) nie jest tylko dla int.",
    "related": [
     "konstruktory-destruktory"
    ]

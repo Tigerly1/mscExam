@@ -62,7 +62,7 @@
   },
   {
    "id": 1295,
-   "question": "Które z poniższych poleceń są poprawne, zakładając że df jest obiektem DataFrame biblioteki Pandas?",
+   "question": "Zakładając, że df jest obiektem DataFrame biblioteki Pandas, które z poniższych stwierdzeń dotyczących metody agg() oraz poleceń z jej użyciem są poprawne?",
    "options": [
     {
      "key": "a",
@@ -121,7 +121,7 @@
   },
   {
    "id": 1296,
-   "question": "Które z poniższych stwierdzeń są prawdziwe w odniesieniu do biblioteki Pandas?",
+   "question": "Które z poniższych stwierdzeń dotyczących funkcji/metody merge w bibliotece Pandas są prawdziwe?",
    "options": [
     {
      "key": "a",
@@ -175,7 +175,7 @@
    "terms": [
     "ml-pandas-merge"
    ],
-   "explanation": "**Dlaczego poprawne:** merge łączy tabele po wartościach kolumn (b jest tym samym co a, sformułowane inaczej, więc prawdziwe) i obsługuje inner, left, right, outer.\n\n**Dlaczego błędne:** merge zwraca nowy obiekt, nie łączy pionowo (to concat), nie wymaga identycznych indeksów; domyślny jest inner, a inner zachowuje tylko pasujące wiersze.\n\n**Zapamiętaj:** merge = JOIN po wartościach kolumn, domyślnie inner.",
+   "explanation": "**Dlaczego poprawne:** merge łączy dwa DataFrame poziomo, porównując wartości we wspólnych (kluczowych) kolumnach, jak JOIN w SQL, i obsługuje typy złączeń inner, left, right, outer; left zachowuje wszystkie wiersze lewej tabeli.\n\n**Dlaczego błędne:** merge zwraca nowy obiekt, nie łączy pionowo (to concat), nie wymaga identycznych indeksów; domyślny jest inner, a inner zachowuje tylko pasujące wiersze.\n\n**Zapamiętaj:** merge = JOIN po wartościach kolumn, domyślnie inner.",
    "changes": [
     "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
    ]
@@ -318,7 +318,7 @@
     },
     {
      "key": "b",
-     "text": "pozwalają na obliczenie odległości przy pomocy samego twierdzenia Pitagorasa.",
+     "text": "pozwalają na obliczenie odległości (z dokładnością do zniekształceń odwzorowania) przy pomocy samego twierdzenia Pitagorasa.",
      "correct": true
     },
     {
@@ -365,7 +365,8 @@
    ],
    "explanation": "**Dlaczego poprawne:** Układy płaskie powstają z rzutowania elipsoidy, mają X,Y w metrach, więc odległość liczy się z Pitagorasa (przybliżenie w obrębie strefy).\n\n**Dlaczego błędne:** Rzutowanie zawsze wprowadza zniekształcenia, układ nie jest użyty tylko w nawigacji morskiej ani identyczny na całym świecie; stopnie to układ geograficzny.\n\n**Zapamiętaj:** Płaski = metry + Pitagoras, ale ze zniekształceniami.",
    "changes": [
-    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+    "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "weryfikacja: b doprecyzowanie, by nie kolidowało z faktem, że rzutowanie zniekształca odległości"
    ]
   },
   {
@@ -647,7 +648,7 @@
     },
     {
      "key": "g",
-     "text": "Bazy danych SQL wymagają zadeklarowania typu każdej kolumny.",
+     "text": "W relacyjnych bazach danych, np. PostgreSQL, każda kolumna ma zadeklarowany typ.",
      "correct": true,
      "extra": true
     },
@@ -668,7 +669,9 @@
     "ml-data-formats"
    ],
    "explanation": "**Dlaczego poprawne:** Parquet, Avro, SQL i HDF5 mają jawny schemat typów.\n\n**Dlaczego błędne:** CSV, TXT i JSON nie mają jawnego rozróżnienia typów (JSON nie odróżnia int od float), a pliki binarne nie zawsze wymagają schematu.\n\n**Zapamiętaj:** Schemat = jawne typy.",
-   "changes": []
+   "changes": [
+    "weryfikacja: g SQLite nie wymaga deklaracji typu kolumny; zawężenie"
+   ]
   },
   {
    "id": 1305,
@@ -1172,7 +1175,7 @@
     },
     {
      "key": "d",
-     "text": "Wynika z braku danych treningowych.",
+     "text": "Jest skutkiem zbyt dużej ilości danych treningowych.",
      "correct": false
     },
     {
@@ -1207,8 +1210,10 @@
    "terms": [
     "ml-overfitting"
    ],
-   "explanation": "**Dlaczego poprawne:** Przeuczony model ma niską stratę treningową i wysoką testową, zapamiętuje szum.\n\n**Dlaczego błędne:** Zbyt prosty model to niedouczenie, przeuczenie nie wynika z braku danych jako takiego i nie jest pożądane.\n\n**Zapamiętaj:** Przeuczenie: niski błąd train, wysoki test.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne:** Przeuczony model jest zbyt dobrze dopasowany do danych treningowych: ma niską stratę treningową i wysoką testową, zapamiętuje szum; błąd walidacyjny rośnie, gdy treningowy dalej maleje.\n\n**Dlaczego błędne:** Zbyt prosty model i wysoki błąd wszędzie to niedouczenie (wysokie obciążenie, niska wariancja); duża ilość danych przeciwdziała przeuczeniu, a przeuczenie nie jest pożądane.\n\n**Zapamiętaj:** Przeuczenie: niski błąd train, wysoki test.",
+   "changes": [
+    "weryfikacja: d 'wynika z braku danych' było półprawdziwe (mało danych sprzyja przeuczeniu)"
+   ]
   },
   {
    "id": 1314,
@@ -1272,7 +1277,7 @@
   },
   {
    "id": 1315,
-   "question": "Czym może być spowodowane niedouczenie (underfitting) modelu uczenia maszynowego?",
+   "question": "Czym może być spowodowane i jak się objawia niedouczenie (underfitting) modelu uczenia maszynowego?",
    "options": [
     {
      "key": "a",
@@ -1745,7 +1750,7 @@
    "terms": [
     "ml-cellular-automata"
    ],
-   "explanation": "**Dlaczego poprawne:** Twórcami są von Neumann i Ulam.\n\n**Dlaczego błędne:** Wolfram badał automaty, Conway stworzył Grę w życie (nie CA), Turing/Church, Shannon/Wiener to inne dziedziny.\n\n**Zapamiętaj:** CA: von Neumann + Ulam.",
+   "explanation": "**Dlaczego poprawne:** Twórcami automatów komórkowych są von Neumann i Ulam (lata 40. XX w., Los Alamos).\n\n**Dlaczego błędne:** Wolfram badał i klasyfikował automaty, Conway stworzył Grę w życie (konkretny automat z 1970 r.), a nie samą ideę CA; Turing/Church, Shannon/Wiener, Knuth i McCarthy to inne dziedziny.\n\n**Zapamiętaj:** CA: von Neumann + Ulam.",
    "changes": []
   },
   {
@@ -1769,7 +1774,7 @@
     },
     {
      "key": "d",
-     "text": "Sąsiedztwo jest zawsze definiowane dla całej siatki jednocześnie.",
+     "text": "Sąsiedztwo każdej komórki obejmuje wszystkie komórki siatki.",
      "correct": false
     },
     {
@@ -1779,7 +1784,7 @@
     },
     {
      "key": "f",
-     "text": "Sąsiedztwo von Neumanna obejmuje komórkę centralną.",
+     "text": "Sąsiedztwo von Neumanna jest zdefiniowane wyłącznie dla siatek trójkątnych.",
      "correct": false
     },
     {
@@ -1804,10 +1809,12 @@
    "terms": [
     "ml-cellular-automata"
    ],
-   "explanation": "**Dlaczego poprawne:** Von Neumann to 4 komórki stykające się krawędziami, Moore to 8, istnieją większe promienie.\n\n**Dlaczego błędne:** Moore obejmuje także krawędzie, nie tylko rogi; sąsiedztwo jest lokalne dla każdej komórki, a von Neumann zwykle nie obejmuje centrum.\n\n**Zapamiętaj:** Neumann 4, Moore 8.",
+   "explanation": "**Dlaczego poprawne:** Sąsiedztwo von Neumanna to 4 komórki stykające się krawędziami, Moore'a to 8 otaczających komórek (krawędzie i rogi); istnieją sąsiedztwa o większym promieniu.\n\n**Dlaczego błędne:** Moore obejmuje także krawędzie, nie tylko rogi; sąsiedztwo jest lokalne (nie cała siatka); von Neumann nie jest ograniczony do siatek trójkątnych i nie ma 8 komórek.\n\n**Zapamiętaj:** Neumann 4, Moore 8.",
    "changes": [
     "b: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
-    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)"
+    "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
+    "weryfikacja: d oryginał niejednoznaczny (sąsiedztwo faktycznie definiuje się jednolicie dla całej siatki)",
+    "weryfikacja: f to, czy sąsiedztwo zawiera komórkę centralną, zależy od konwencji"
    ]
   },
   {
@@ -1821,8 +1828,8 @@
     },
     {
      "key": "b",
-     "text": "Otrzymywaniu całościowego obrazu makroskopowego systemu na podstawie działania mikroskopowych reguł.",
-     "correct": false
+     "text": "Polega na powstawaniu całościowego, makroskopowego obrazu zachowania systemu w wyniku działania prostych reguł mikroskopowych.",
+     "correct": true
     },
     {
      "key": "c",
@@ -1872,10 +1879,11 @@
    "terms": [
     "ml-cellular-automata"
    ],
-   "explanation": "**Dlaczego poprawne:** Emergencja to powstawanie złożonych własności makroskopowych; przykłady to klucze ptaków i mrowiska.\n\n**Dlaczego błędne:** Nie oznacza centralnego sterowania ani chaosu deterministycznego i nie wymaga złożonych reguł. Opcja o „całościowym obrazie” jest niejednoznaczna (fragment), zachowano F.\n\n**Zapamiętaj:** Emergencja: złożoność z prostych reguł.",
+   "explanation": "**Dlaczego poprawne:** Emergencja to powstawanie nowych, złożonych własności makroskopowych z działania prostych lokalnych reguł, których nie widać na poziomie pojedynczego elementu; przykłady to klucze ptaków, mrowiska, glidery w Grze w życie.\n\n**Dlaczego błędne:** Nie oznacza centralnego sterowania ani chaosu deterministycznego, nie wymaga złożonych reguł, nie ogranicza się do biologii i nie da się jej przewidzieć z analizy jednej komórki.\n\n**Zapamiętaj:** Emergencja: złożoność z prostych reguł.",
    "changes": [
     "e: false -> true, bo treść jest prawdziwa (ocena merytoryczna)",
-    "b: pozostawiono false (fragment, niejednoznaczne)"
+    "b: pozostawiono false (fragment, niejednoznaczne)",
+    "weryfikacja: b fragment był niejednoznaczny; to poprawny opis emergencji -> T"
    ]
   },
   {
@@ -2007,8 +2015,8 @@
    "id": "ml-data-formats",
    "term": "Formaty danych a typowanie",
    "topic": "machine_learning",
-   "short": "Formaty binarne ze schematem (Parquet, Avro, HDF5, SQL) zapisują typy wartości, a tekstowe (CSV, TXT) nie.",
-   "details": "**Ze schematem:** Parquet, Avro (schemat w pliku), HDF5 (typy dataset), bazy SQL (każda kolumna ma zadeklarowany typ). Czytnik zna typ int/float/string bez zgadywania.\n\n**Bez jawnych typów:** CSV i pliki tekstowe to tylko ciągi znaków; biblioteka (np. read_csv) zgaduje typy. JSON odróżnia liczby, napisy i wartości logiczne, ale nie ma jawnego rozróżnienia int/float ani typu daty.\n\n**Na egzaminie uważaj na:** nie każdy plik binarny ma jawny schemat; CSV nie zapisuje typów w nagłówku; JSON to nie format ze schematem.",
+   "short": "Formaty ze schematem (Parquet, Avro, HDF5, bazy SQL) zapisują typy wartości, a tekstowe (CSV, TXT) nie.",
+   "details": "**Ze schematem:** Parquet, Avro (schemat w pliku), HDF5 (typy dataset), relacyjne bazy SQL (kolumny mają typy; wyjątkiem jest luźne typowanie w SQLite). Czytnik zna typ int/float/string bez zgadywania.\n\n**Bez jawnych typów:** CSV i pliki tekstowe to tylko ciągi znaków; biblioteka (np. read_csv) zgaduje typy. JSON odróżnia liczby, napisy i wartości logiczne, ale nie ma jawnego rozróżnienia int/float ani typu daty.\n\n**Na egzaminie uważaj na:** nie każdy plik binarny ma jawny schemat; CSV nie zapisuje typów w nagłówku; JSON to nie format ze schematem.",
    "related": [
     "ml-data-performance"
    ]
@@ -2070,7 +2078,7 @@
    "term": "Epoka, iteracja i batch",
    "topic": "machine_learning",
    "short": "Epoka to jedno pełne przejście algorytmu uczącego przez cały zbiór treningowy.",
-   "details": "**Jak działa:** zbiór treningowy N przykładów dzielimy na mini-batche o rozmiarze B. Jedna iteracja (krok) to aktualizacja wag po jednym batchu; jedna epoka to N/B iteracji. Trening trwa wiele epok.\n\nZbyt wiele epok prowadzi do przeuczenia (błąd walidacyjny zaczyna rosnąć), zbyt mało do niedouczenia. Early stopping przerywa trening, gdy błąd walidacyjny przestaje maleć.\n\n**Na egzaminie uważaj na:** epoka dotyczy zbioru treningowego, nie testowego; epoka ≠ iteracja (batch); to nie czas trenowania neuronu ani liczba warstw.",
+   "details": "**Jak działa:** zbiór treningowy N przykładów dzielimy na mini-batche o rozmiarze B. Jedna iteracja (krok) to aktualizacja wag po jednym batchu; jedna epoka to ⌈N/B⌉ iteracji. Trening trwa wiele epok.\n\nZbyt wiele epok prowadzi do przeuczenia (błąd walidacyjny zaczyna rosnąć), zbyt mało do niedouczenia. Early stopping przerywa trening, gdy błąd walidacyjny przestaje maleć.\n\n**Na egzaminie uważaj na:** epoka dotyczy zbioru treningowego, nie testowego; epoka ≠ iteracja (batch); to nie czas trenowania neuronu ani liczba warstw.",
    "related": [
     "ml-overfitting",
     "ml-underfitting"
@@ -2125,7 +2133,7 @@
    "term": "Automaty komórkowe i emergencja",
    "topic": "machine_learning",
    "short": "Automat komórkowy to siatka komórek o skończonej liczbie stanów, aktualizowanych równolegle lokalną regułą sąsiedztwa; z prostych reguł mogą powstać złożone zachowania (emergencja).",
-   "details": "**Twórcy:** von Neumann i Ulam (lata 40. XX w.); Conway stworzył Grę w życie, Wolfram badał klasy reguł.\n**Sąsiedztwa:** von Neumanna (4 komórki stykające się krawędziami), Moore'a (8 komórek, z rogami); możliwe większe promienie (r=2). Sąsiedztwo zwykle nie zawiera komórki centralnej.\n**Odwracalność:** automat jest odwracalny, gdy globalna funkcja przejścia jest bijekcją (każda konfiguracja ma dokładnie jednego poprzednika), więc nie ginie informacja. Gra w życie NIE jest odwracalna.\n**Emergencja:** makroskopowe własności (klucze ptaków, mrowiska, glidery) powstają z lokalnych, prostych reguł bez centralnego sterowania; nie jest to chaos deterministyczny.\n\n**Na egzaminie uważaj na:** Conway i Wolfram nie są twórcami CA; nie wszystkie CA są odwracalne.",
+   "details": "**Twórcy:** von Neumann i Ulam (lata 40. XX w.); Conway stworzył Grę w życie, Wolfram badał klasy reguł.\n**Sąsiedztwa:** von Neumanna (4 komórki stykające się krawędziami), Moore'a (8 komórek, z rogami); możliwe większe promienie (r=2). Liczby 4 i 8 dotyczą sąsiadów bez komórki centralnej; w części definicji sąsiedztwo obejmuje też komórkę centralną (wtedy 5 i 9 komórek).\n**Odwracalność:** automat jest odwracalny, gdy globalna funkcja przejścia jest bijekcją (każda konfiguracja ma dokładnie jednego poprzednika), więc nie ginie informacja. Gra w życie NIE jest odwracalna.\n**Emergencja:** makroskopowe własności (klucze ptaków, mrowiska, glidery) powstają z lokalnych, prostych reguł bez centralnego sterowania; nie jest to chaos deterministyczny.\n\n**Na egzaminie uważaj na:** Conway i Wolfram nie są twórcami CA; nie wszystkie CA są odwracalne.",
    "related": [
     "ml-agents-bdi"
    ]

@@ -1,4 +1,7 @@
-# Postęp (2026-09-29)
+# Postęp (2026-10-08)
+
+✅ Drugi przegląd (review/fixes, nałożone skryptem review/apply_fixes.py): 14 zmian flag, ~70 przeredagowanych niejednoznacznych odpowiedzi, 14 usuniętych dodatkowych, ~77 poprawionych wyjaśnień, ~73 poprawki haseł (m.in. zepsute wzory LaTeX, powtarzany akapit w hasłach sieciowych), uzupełnione ucięte pytania (1031, 1050, 1243).
+
 
 ✅ Wszystkie 14 grup przejrzane (575 pytań), wyniki w review/out, scalone skryptem review/merge.py do:
 - data/questions.json — 5495 odpowiedzi w puli (~9.5/pytanie, dodatkowe mają `extra: true`, pozycyjne "żadne z..." `fixed: true` i są pomijane w losowaniu), 141 poprawionych flag

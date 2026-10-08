@@ -1,0 +1,52 @@
+{
+ "options": [
+  {
+   "id": 1326,
+   "key": "e",
+   "correct": true,
+   "reason": "adaptacyjność jest powszechnie wymienianą własnością systemów złożonych (complex adaptive systems); oznaczenie F wprowadzało w błąd"
+  },
+  {
+   "id": 1326,
+   "key": "f",
+   "correct": true,
+   "reason": "wrażliwość na warunki początkowe to typowa własność systemów złożonych (nieliniowość, brak długoterminowej przewidywalności)"
+  },
+  {
+   "id": 1334,
+   "key": "f",
+   "text": "Współczynnik Giniego (= 2·AUC − 1).",
+   "reason": "doprecyzowanie: chodzi o metrykę klasyfikacji, nie o Gini impurity w drzewach"
+  },
+  {
+   "id": 1344,
+   "key": "e",
+   "text": "Argument Chińskiego Pokoju Searle'a, który Turing omówił w swoim artykule z 1950 r.",
+   "reason": "pierwotne zdanie jako takie było prawdziwe (Chiński Pokój to znany zarzut wobec testu); przeformułowano, by jednoznacznie było fałszywe"
+  }
+ ],
+ "remove": [
+  {
+   "id": 1344,
+   "key": "i",
+   "reason": "duplikat przeformułowanej opcji e"
+  }
+ ],
+ "questions": [],
+ "explanations": [
+  {
+   "id": 1326,
+   "explanation": "**Dlaczego poprawne:** Emergencja, samoorganizacja, nieliniowość i sprzężenia zwrotne to kanoniczne własności systemów złożonych; sama emergencja też jest taką własnością, a nieliniowość oznacza brak proporcjonalności skutku do przyczyny. Typowo wymienia się też adaptacyjność (systemy złożone adaptacyjne) oraz wrażliwość na warunki początkowe (efekt motyla), która wynika z nieliniowości.\n\n**Dlaczego błędne:** Przewidywalność długoterminowa i centralne zarządzanie przeczą naturze takich systemów; zachowanie całości nie jest sumą zachowań izolowanych elementów.\n\n**Zapamiętaj:** Złożoność = lokalne reguły, brak centrum, emergencja, nieliniowość."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "ml2-paradygmaty-uczenia",
+   "details": "**Jak działa:** **Nadzorowane** (etykiety): regresja liniowa/logistyczna, SVM, drzewa, Random Forest, XGBoost, k-NN, Naive Bayes, sieci neuronowe; zadania: klasyfikacja (etykieta dyskretna, np. kolor z 5) i regresja (ciągła). **Nienadzorowane**: K-Means, DBSCAN, klasteryzacja hierarchiczna, GMM, PCA, t-SNE, ICA, SOM, autoenkodery, Apriori. **Ze wzmocnieniem**: agent i nagroda.\n\n**Na egzaminie uważaj na:** PCA, K-Means, Apriori, autoenkodery to nienadzorowane; Naive Bayes i k-NN to nadzorowane (k-NN nie mylić z k-means); kategoria kolor to klasyfikacja, nie regresja."
+  },
+  {
+   "id": "ml2-apriori",
+   "details": "**Jak działa:** poziomami generuje kandydatów o rozmiarze k z częstych zbiorów rozmiaru k−1 i liczy **support**. Dzięki **antymonotoniczności** (podzbiór zbioru częstego jest częsty) odrzuca kandydatów mających nieczęste podzbiory. Z częstych zbiorów tworzy reguły A→B: support = odsetek transakcji zawierających wszystkie elementy A i B, **confidence** = P(B|A), **lift** = confidence / P(B) (lift>1: dodatnia zależność). Zastosowania: analiza koszykowa, rekomendacje.\n\n**Na egzaminie uważaj na:** to nie klasyfikacja spamu ani rozpoznawanie twarzy; confidence to P(B|A), a nie support; Apriori jest nienadzorowany."
+  }
+ ]
+}

@@ -257,7 +257,7 @@
    "options": [
     {
      "key": "a",
-     "text": "wolne od błędów",
+     "text": "wolne od błędów (w praktyce: o minimalnej liczbie defektów)",
      "correct": true
     },
     {
@@ -310,8 +310,10 @@
     "cele-inzynierii-oprogramowania",
     "atrybuty-jakosci-oprogramowania"
    ],
-   "explanation": "**Dlaczego poprawne.** Inżynieria oprogramowania powstała jako odpowiedź na kryzys oprogramowania i jej celem jest wytwarzanie oprogramowania **niezawodnego i efektywnego**, **zgodnego z wymaganiami**, **dostarczanego zgodnie z harmonogramem** i **w ramach budżetu**, **łatwego w pielęgnacji** oraz (w ujęciu wielu podręczników i tego banku pytań) **wolnego od błędów** — w praktyce rozumianego jako oprogramowanie o minimalnej liczbie defektów i akceptowalnej niezawodności.\n\n**Dlaczego błędne.** Oprogramowanie **niezgodne z wymaganiami** to zaprzeczenie celu. „Jak najtańsze niezależnie od jakości” i „bez dokumentacji dla przyspieszenia” to antycele — IO równoważy koszt, czas i jakość, a dokumentacja jest częścią produktu. Wymóg konkretnego języka (asembler) nie jest celem inżynierii oprogramowania; wybór technologii to decyzja projektowa.\n\n**Zapamiętaj.** Cele IO: niezawodne, efektywne, zgodne z wymaganiami, na czas, w budżecie, pielęgnowalne — nigdy „tanie kosztem jakości”.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne.** Inżynieria oprogramowania powstała jako odpowiedź na kryzys oprogramowania i jej celem jest wytwarzanie oprogramowania **niezawodnego i efektywnego**, **zgodnego z wymaganiami**, **dostarczanego zgodnie z harmonogramem** i **w ramach budżetu**, **łatwego w pielęgnacji** oraz **wolnego od błędów** — rozumianego jako cel dążenia: oprogramowanie o minimalnej liczbie defektów i akceptowalnej niezawodności (całkowitego braku błędów nie da się wykazać).\n\n**Dlaczego błędne.** Oprogramowanie **niezgodne z wymaganiami** to zaprzeczenie celu. „Jak najtańsze niezależnie od jakości” i „bez dokumentacji dla przyspieszenia” to antycele — IO równoważy koszt, czas i jakość, a dokumentacja jest częścią produktu. Wymóg konkretnego języka (asembler) nie jest celem inżynierii oprogramowania; wybór technologii to decyzja projektowa.\n\n**Zapamiętaj.** Cele IO: niezawodne, efektywne, zgodne z wymaganiami, na czas, w budżecie, pielęgnowalne — nigdy „tanie kosztem jakości”.",
+   "changes": [
+    "weryfikacja: a doprecyzowanie — całkowity brak błędów jest nieosiągalny/niewykazywalny (spójność z p. 53 i 1191)"
+   ]
   },
   {
    "id": 58,
@@ -1035,7 +1037,7 @@
     },
     {
      "key": "b",
-     "text": "nazywana formalną bądź nieformalną, zależnie od tego, czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania, czy tylko prowadzi luźną rozmowę z przestawicielami klienta",
+     "text": "nazywana formalną bądź nieformalną, zależnie od tego, czy zespół twórców systemu wyjaśnia znaczenie każdego wymagania, czy tylko prowadzi luźną rozmowę z przedstawicielami klienta",
      "correct": true
     },
     {
@@ -1084,7 +1086,9 @@
     "definicja-i-specyfikacja-wymagan"
    ],
    "explanation": "**Dlaczego poprawne.** Przegląd (inspekcja) wymagań jest jedną z technik **walidacji wymagań** (obok prototypowania i generowania przypadków testowych). Jest procesem **„ręcznym”** — zespół (twórcy systemu i przedstawiciele klienta) **wspólnie czyta dokument** wymagań, często według listy kontrolnej, szukając błędów, niespójności i niejasności. Przeglądy dzieli się na **formalne** (zespół twórców systematycznie wyjaśnia klientowi znaczenie każdego wymagania) i **nieformalne** (luźna rozmowa z przedstawicielami klienta).\n\n**Dlaczego błędne.** Inspekcja wymagań jest **analogiczna do inspekcji programów (kodu)** — ta sama idea grupowego czytania artefaktu — więc stwierdzenie, że jest do niej „niepodobna”, jest fałszywe. Nie jest testem automatycznym na działającym systemie (wymagania to dokument), nie stosuje się jej dopiero po wdrożeniu (walidacja przed projektowaniem) i nie jest jedyną metodą walidacji.\n\n**Zapamiętaj.** Inspekcja wymagań = ręczne, grupowe czytanie dokumentu z klientem; formalna vs nieformalna; taka sama idea jak inspekcja kodu.",
-   "changes": []
+   "changes": [
+    "weryfikacja: b literówka (przestawicielami)"
+   ]
   },
   {
    "id": 70,
@@ -1801,7 +1805,7 @@
     },
     {
      "key": "b",
-     "text": "Określa, że jeden przypadek użycia jest w całości zależny od funkcjonalności innego przypadku użycia.",
+     "text": "Określa, że jeden przypadek użycia jest specjalizacją (podtypem) innego przypadku użycia.",
      "correct": false
     },
     {
@@ -1858,8 +1862,10 @@
    "terms": [
     "przypadki-uzycia-include-extend"
    ],
-   "explanation": "**Dlaczego poprawne.** «include» oznacza, że przypadek bazowy **obowiązkowo** wykorzystuje funkcjonalność przypadku dołączanego — bez niego jest **niekompletny**. Relacja pozwala **wydzielić wspólną funkcjonalność** (np. „Uwierzytelnij”) do osobnego przypadku i użyć jej w wielu miejscach. **Strzałka biegnie od przypadku bazowego do dołączanego**.\n\n**Dlaczego błędne.** Sformułowanie „w całości zależny od funkcjonalności innego” jest w kluczu banku nieprawidłowe — bazowy korzysta z fragmentu zachowania, a nie jest nim „w całości” zdefiniowany. «include» **nie** modeluje **opcjonalnych** funkcji ani zachowania pod **warunkiem w punkcie rozszerzenia** (to «extend»). **Nie łączy aktora** z przypadkiem (to asocjacja). Strzałka **od dołączanego do bazowego** to błędny kierunek. Relacja nie oznacza **dziedziczenia** atrybutów, a przypadek dołączany może być włączany do **wielu** bazowych — na tym polega reużycie.\n\n**Zapamiętaj.** «include» = obowiązkowe włączenie wspólnego fragmentu; strzałka bazowy → dołączany; wiele bazowych może dołączać ten sam przypadek.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne.** «include» oznacza, że przypadek bazowy **obowiązkowo** wykorzystuje funkcjonalność przypadku dołączanego — bez niego jest **niekompletny**. Relacja pozwala **wydzielić wspólną funkcjonalność** (np. „Uwierzytelnij”) do osobnego przypadku i użyć jej w wielu miejscach. **Strzałka biegnie od przypadku bazowego do dołączanego**.\n\n**Dlaczego błędne.** «include» nie oznacza, że jeden przypadek jest **specjalizacją (podtypem)** innego — to relacja generalizacji. «include» **nie** modeluje **opcjonalnych** funkcji ani zachowania pod **warunkiem w punkcie rozszerzenia** (to «extend»). **Nie łączy aktora** z przypadkiem (to asocjacja). Strzałka **od dołączanego do bazowego** to błędny kierunek. Relacja nie oznacza **dziedziczenia** atrybutów, a przypadek dołączany może być włączany do **wielu** bazowych — na tym polega reużycie.\n\n**Zapamiętaj.** «include» = obowiązkowe włączenie wspólnego fragmentu; strzałka bazowy → dołączany; wiele bazowych może dołączać ten sam przypadek.",
+   "changes": [
+    "weryfikacja: b oryginał „w całości zależny” niejednoznaczny/pół-prawdziwy; teraz jednoznacznie fałszywe"
+   ]
   },
   {
    "id": 1186,
@@ -2192,12 +2198,6 @@
      "key": "f",
      "text": "Gwarantuje, że oprogramowanie nigdy nie będzie wymagało zmian.",
      "correct": false
-    },
-    {
-     "key": "g",
-     "text": "Dzieli się na pielęgnację naprawczą, adaptacyjną i doskonalącą.",
-     "correct": true,
-     "extra": true
     },
     {
      "key": "h",
@@ -3065,7 +3065,7 @@
     },
     {
      "key": "b",
-     "text": "Komunikatów na diagramach reprezentują komunikaty poziome i pionowe.",
+     "text": "Na diagramach sekwencji występują zarówno komunikaty poziome, jak i pionowe.",
      "correct": false
     },
     {
@@ -3128,8 +3128,10 @@
    "terms": [
     "diagram-sekwencji"
    ],
-   "explanation": "**Dlaczego poprawne.** Komunikaty na diagramie sekwencji **reprezentują wywołania metod lub przesyłanie sygnałów** między obiektami. **Komunikat zwrotny (reply) rysuje się linią przerywaną**. Komunikat **synchroniczny** ma wypełniony grot (nadawca czeka), **asynchroniczny** — otwarty grot (nadawca nie czeka). Obiekt może wysłać komunikat do samego siebie (self-message).\n\n**Dlaczego błędne.** Zdanie o „komunikatach poziomych i pionowych wizualizujących przepływ między warstwami” jest bezsensowne — komunikaty są **poziome**, a pionowe są **linie życia**; stwierdzenie „rysowane jako linie pionowe” jest więc również fałszywe. Komunikaty **nie muszą być zawsze synchroniczne** i **mogą mieć argumenty** (`oblicz(x, y)`). Czas płynie **w dół**, nie w górę. Komunikat **create** jest dozwolony (strzałka do nagłówka nowej linii życia). Komunikat zwrotny jest **opcjonalny** i rysowany **linią przerywaną**.\n\n**Zapamiętaj.** Komunikat = pozioma strzałka (sync: pełny grot, async: otwarty, return: przerywana), z nazwą i argumentami; czas w dół.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne.** Komunikaty na diagramie sekwencji **reprezentują wywołania metod lub przesyłanie sygnałów** między obiektami. **Komunikat zwrotny (reply) rysuje się linią przerywaną**. Komunikat **synchroniczny** ma wypełniony grot (nadawca czeka), **asynchroniczny** — otwarty grot (nadawca nie czeka). Obiekt może wysłać komunikat do samego siebie (self-message).\n\n**Dlaczego błędne.** Na diagramie sekwencji nie ma „komunikatów pionowych” — komunikaty są **poziome**, a pionowe są **linie życia**; stwierdzenie „rysowane jako linie pionowe” jest więc również fałszywe. Komunikaty **nie muszą być zawsze synchroniczne** i **mogą mieć argumenty** (`oblicz(x, y)`). Czas płynie **w dół**, nie w górę. Komunikat **create** jest dozwolony (strzałka do nagłówka nowej linii życia). Komunikat zwrotny jest **opcjonalny** i rysowany **linią przerywaną**.\n\n**Zapamiętaj.** Komunikat = pozioma strzałka (sync: pełny grot, async: otwarty, return: przerywana), z nazwą i argumentami; czas w dół.",
+   "changes": [
+    "weryfikacja: b zdanie zniekształcone gramatycznie"
+   ]
   },
   {
    "id": 1203,
@@ -3172,12 +3174,6 @@
      "extra": true
     },
     {
-     "key": "h",
-     "text": "Podstany dziedziczą akcje wejścia i wyjścia stanu nadrzędnego przy wchodzeniu i opuszczaniu stanu złożonego.",
-     "correct": true,
-     "extra": true
-    },
-    {
      "key": "i",
      "text": "Przejście ze stanu złożonego wykonuje się tylko wtedy, gdy obiekt znajduje się w jego stanie początkowym.",
      "correct": false,
@@ -3199,7 +3195,7 @@
    "terms": [
     "diagram-stanow"
    ],
-   "explanation": "**Dlaczego poprawne.** Stany zagnieżdżone tworzą **hierarchiczną strukturę** — stan złożony zawiera podstany z własną maszyną stanową. Kluczowa korzyść: **przejście wychodzące ze stanu złożonego jest współdzielone przez wszystkie jego podstany** (jedna strzałka zamiast wielu), co **zmniejsza** liczbę przejść. Stan złożony może mieć **regiony współbieżne**, a podstany **dziedziczą akcje entry/exit** stanu nadrzędnego.\n\n**Dlaczego błędne.** Zagnieżdżone stany **nie służą do definiowania jednorazowych działań** (to akcje/aktywności), **nie modelują pętli** ani **dziedziczenia klas**. **Nie są zabronione** w UML 2 — są jego istotną cechą. Przejście ze stanu złożonego działa z **każdego** podstanu, nie tylko z początkowego. Nie ma wymogu „dokładnie dwóch” podstanów. Zagnieżdżanie **redukuje**, a nie zwiększa, liczbę przejść.\n\n**Zapamiętaj.** Stan złożony = hierarchia podstanów; przejście z całości dotyczy wszystkich podstanów; regiony współbieżne; dozwolone w UML 2.",
+   "explanation": "**Dlaczego poprawne.** Stany zagnieżdżone tworzą **hierarchiczną strukturę** — stan złożony zawiera podstany z własną maszyną stanową. Kluczowa korzyść: **przejście wychodzące ze stanu złożonego jest współdzielone przez wszystkie jego podstany** (jedna strzałka zamiast wielu), co **zmniejsza** liczbę przejść. Stan złożony może mieć **regiony współbieżne** (ortogonalne).\n\n**Dlaczego błędne.** Zagnieżdżone stany **nie służą do definiowania jednorazowych działań** (to akcje/aktywności), **nie modelują pętli** ani **dziedziczenia klas**. **Nie są zabronione** w UML 2 — są jego istotną cechą. Przejście ze stanu złożonego działa z **każdego** podstanu, nie tylko z początkowego. Nie ma wymogu „dokładnie dwóch” podstanów. Zagnieżdżanie **redukuje**, a nie zwiększa, liczbę przejść.\n\n**Zapamiętaj.** Stan złożony = hierarchia podstanów; przejście z całości dotyczy wszystkich podstanów; regiony współbieżne; dozwolone w UML 2.",
    "changes": []
   },
   {
@@ -3271,7 +3267,7 @@
     "inzynieria-odwrotna-i-w-przod",
     "model-driven-development"
    ],
-   "explanation": "**Dlaczego poprawne.** **Forward engineering** (inżynieria w przód) w kontekście UML to **proces generowania kodu źródłowego na podstawie modeli (diagramów)** — np. z diagramu klas narzędzie CASE generuje szkielety klas w wybranym języku. Jest to kierunek **przeciwny do reverse engineering**, w którym modele odtwarza się z kodu. Stanowi podstawę podejścia modelowego (MDD).\n\n**Dlaczego błędne.** Forward engineering **nie jest techniką optymalizacji kodu** przez wzorce projektowe, **nie polega na tworzeniu dokumentacji z kodu** (to reverse engineering), **nie dotyczy tylko testowania**, **nie jest ręcznym przepisywaniem diagramów na język naturalny**, **nie służy usuwaniu błędów z bazy danych**. Nie wymaga istnienia kodu przed modelem (model jest pierwszy) i nie jest synonimem refaktoryzacji (ta zmienia istniejący kod).\n\n**Zapamiętaj.** Forward engineering: model → kod (generowanie); reverse engineering: kod → model.",
+   "explanation": "**Dlaczego poprawne.** **Forward engineering** (inżynieria w przód) w kontekście UML to **proces generowania kodu źródłowego na podstawie modeli (diagramów)** — np. z diagramu klas narzędzie CASE generuje szkielety klas w wybranym języku. Jest to kierunek **przeciwny do reverse engineering**, w którym modele odtwarza się z kodu. Stanowi podstawę podejścia modelowego (MDD).\n\n**Dlaczego błędne.** Forward engineering **nie jest techniką optymalizacji kodu**, **nie polega na tworzeniu dokumentacji z kodu** (to reverse engineering), **nie dotyczy tylko testowania**, **nie jest ręcznym przepisywaniem diagramów na język naturalny**, **nie służy usuwaniu błędów z bazy danych**. Nie wymaga istnienia kodu przed modelem (model jest pierwszy) i nie jest synonimem refaktoryzacji (ta zmienia istniejący kod).\n\n**Zapamiętaj.** Forward engineering: model → kod (generowanie); reverse engineering: kod → model.",
    "changes": [
     "uzupełniono ucięty stem: dodano „forward engineering (inżynieria w przód):”, bez którego opcje („To proces generowania kodu…”) nie mają podmiotu"
    ]
@@ -3602,7 +3598,7 @@
    "term": "Relacje «include» i «extend» na diagramach przypadków użycia UML",
    "topic": "software_engineering",
    "short": "«include» — przypadek bazowy obowiązkowo włącza zachowanie innego (wspólna funkcjonalność); «extend» — przypadek rozszerzający opcjonalnie dodaje zachowanie do bazowego w punkcie rozszerzenia.",
-   "details": "**Diagram przypadków użycia** pokazuje **aktorów** (role zewnętrzne), **przypadki użycia** (usługi systemu) i relacje: asocjacja aktor–przypadek, generalizacja (między aktorami lub między przypadkami), oraz dwie zależności stereotypowane między przypadkami użycia:\n\n**«include» (zawieranie).**\n- Przypadek **bazowy** *obowiązkowo* (zawsze) wykonuje zachowanie przypadku **dołączanego**; bez niego bazowy jest niekompletny.\n- Służy **wydzieleniu wspólnej funkcjonalności** używanej przez wiele przypadków (np. „Uwierzytelnij użytkownika” dołączany do „Wypłać gotówkę” i „Sprawdź saldo”) — unikanie powtórzeń.\n- Strzałka (przerywana, otwarty grot) skierowana **od przypadku bazowego do dołączanego**; bazowy „zna” dołączany.\n- **Nie** oznacza, że bazowy jest „w całości zależny” od dołączanego, nie modeluje opcji ani nie łączy aktora z przypadkiem.\n\n**«extend» (rozszerzenie).**\n- Przypadek **rozszerzający** dodaje **opcjonalne** zachowanie do przypadku **bazowego** — wykonywane tylko, gdy spełniony jest warunek, w określonym **punkcie rozszerzenia** (extension point). Bazowy jest kompletny bez rozszerzenia i **nie wie** o nim.\n- Strzałka skierowana **od przypadku rozszerzającego do bazowego** (odwrotnie niż w «include»).\n- Przykład: „Zamów produkt” ←«extend»— „Użyj kodu rabatowego”.\n- **Nie** oznacza podzbioru, **nie** jest obowiązkowa, **nie** wykonuje się zawsze, **nie** modeluje dziedziczenia aktorów (to generalizacja).\n\n**Porównanie:**\n| | «include» | «extend» |\n|---|---|---|\n| obowiązkowe? | tak | nie (warunek) |\n| kierunek strzałki | bazowy → dołączany | rozszerzający → bazowy |\n| kto „wie” | bazowy | rozszerzający |\n| cel | reużycie wspólnego fragmentu | opcjonalne/wyjątkowe zachowanie |\n\n**Na egzaminie uważaj na:**\n- kierunek strzałek jest odwrotny w obu relacjach — to najczęstsza pułapka;\n- «extend» = opcjonalne, «include» = obowiązkowe;\n- ani «include», ani «extend» nie łączy aktora z przypadkiem użycia i nie modeluje dziedziczenia aktorów;\n- „podzbiór innego przypadku” nie jest definicją żadnej z tych relacji.",
+   "details": "**Diagram przypadków użycia** pokazuje **aktorów** (role zewnętrzne), **przypadki użycia** (usługi systemu) i relacje: asocjacja aktor–przypadek, generalizacja (między aktorami lub między przypadkami), oraz dwie zależności stereotypowane między przypadkami użycia:\n\n**«include» (zawieranie).**\n- Przypadek **bazowy** *obowiązkowo* (zawsze) wykonuje zachowanie przypadku **dołączanego**; bez niego bazowy jest niekompletny.\n- Służy **wydzieleniu wspólnej funkcjonalności** używanej przez wiele przypadków (np. „Uwierzytelnij użytkownika” dołączany do „Wypłać gotówkę” i „Sprawdź saldo”) — unikanie powtórzeń.\n- Strzałka (przerywana, otwarty grot) skierowana **od przypadku bazowego do dołączanego**; bazowy „zna” dołączany.\n- **Nie** oznacza specjalizacji jednego przypadku przez drugi (to generalizacja), nie modeluje opcji ani nie łączy aktora z przypadkiem.\n\n**«extend» (rozszerzenie).**\n- Przypadek **rozszerzający** dodaje **opcjonalne** zachowanie do przypadku **bazowego** — wykonywane tylko, gdy spełniony jest warunek, w określonym **punkcie rozszerzenia** (extension point). Bazowy jest kompletny bez rozszerzenia i **nie wie** o nim.\n- Strzałka skierowana **od przypadku rozszerzającego do bazowego** (odwrotnie niż w «include»).\n- Przykład: „Zamów produkt” ←«extend»— „Użyj kodu rabatowego”.\n- **Nie** oznacza podzbioru, **nie** jest obowiązkowa, **nie** wykonuje się zawsze, **nie** modeluje dziedziczenia aktorów (to generalizacja).\n\n**Porównanie:**\n| | «include» | «extend» |\n|---|---|---|\n| obowiązkowe? | tak | nie (warunek) |\n| kierunek strzałki | bazowy → dołączany | rozszerzający → bazowy |\n| kto „wie” | bazowy | rozszerzający |\n| cel | reużycie wspólnego fragmentu | opcjonalne/wyjątkowe zachowanie |\n\n**Na egzaminie uważaj na:**\n- kierunek strzałek jest odwrotny w obu relacjach — to najczęstsza pułapka;\n- «extend» = opcjonalne, «include» = obowiązkowe;\n- ani «include», ani «extend» nie łączy aktora z przypadkiem użycia i nie modeluje dziedziczenia aktorów;\n- „podzbiór innego przypadku” nie jest definicją żadnej z tych relacji.",
    "related": [
     "model-4-plus-1-kruchtena",
     "diagram-sekwencji",
@@ -3698,7 +3694,7 @@
    "term": "Diagram stanów / maszyna stanowa UML (state machine diagram), stany zagnieżdżone i stan historii",
    "topic": "software_engineering",
    "short": "Diagram behawioralny opisujący cykl życia jednego obiektu jako zbiór stanów i przejść wyzwalanych zdarzeniami; wspiera stany złożone (zagnieżdżone), stany współbieżne i pseudostany historii.",
-   "details": "**Jak działa.** Maszyna stanowa opisuje, jak **obiekt** (lub system, protokół, sterownik) reaguje na **zdarzenia** w zależności od **stanu**, w jakim się znajduje. Elementy:\n- **stan** (zaokrąglony prostokąt) z opcjonalnymi akcjami `entry/`, `exit/`, `do/` (aktywność wykonywana w stanie);\n- **stan początkowy** (czarne kółko), **końcowy** (kółko z kropką);\n- **przejście** — strzałka z etykietą `zdarzenie [warunek dozoru] / akcja`; przejście następuje, gdy zdarzenie wystąpi i dozór jest prawdziwy;\n- **zdarzenia**: sygnał, wywołanie, upływ czasu (`after(5s)`), zmiana (`when(x>3)`);\n- **pseudostany**: wybór, rozwidlenie/złączenie (stany współbieżne), **historia (H / H\\*)**.\n\n**Stany zagnieżdżone (złożone, hierarchiczne).** Stan złożony zawiera **podstany** z własną maszyną. Korzyści: **przejście wychodzące ze stanu złożonego dotyczy (jest współdzielone przez) wszystkich jego podstanów** — zamiast rysować `anuluj` z każdego z 10 podstanów, rysuje się jedno przejście ze stanu nadrzędnego; podstany dziedziczą też akcje wejścia/wyjścia. Stany zagnieżdżone są w pełni dozwolone w UML 2 (są jego istotną cechą); **nie** służą do modelowania pętli, dziedziczenia klas ani „jednorazowych działań”. **Regiony współbieżne** (ortogonalne) dzielą stan złożony linią przerywaną — obiekt jest jednocześnie w jednym podstanie każdego regionu.\n\n**Stan historii (H).** Pseudostan wewnątrz stanu złożonego: przejście do H **przywraca ostatnio aktywny podstan** (płytka historia — H; głęboka — H\\* — także zagnieżdżone). Zapamiętuje, gdzie obiekt był, np. po przerwaniu (`pauza` → `wznów`). **Nie** „automatycznie aktualizuje stanu obiektu w odpowiedzi na zmiany zewnętrzne” — to tylko pamięć ostatniego podstanu.\n\n**Zastosowania:** obiekty o wyraźnym cyklu życia (Zamówienie: Nowe→Opłacone→Wysłane), **systemy sterowania** (winda, bankomat), **protokoły komunikacyjne** (TCP), interfejsy użytkownika. Nie służą do modelowania baz danych ani struktury folderów.\n\n**Na egzaminie uważaj na:**\n- „opisują zachowanie obiektu przez stany i zdarzenia” → prawda; „modelują bazy danych” → fałsz;\n- zagnieżdżone stany: hierarchia, **współdzielenie przejść** przez podstany, dozwolone w UML 2;\n- stan historii pamięta ostatni podstan — nie „aktualizuje” obiektu;\n- przejście = `zdarzenie[dozór]/akcja`; aktywność `do/` przerywalna, akcja atomowa.",
+   "details": "**Jak działa.** Maszyna stanowa opisuje, jak **obiekt** (lub system, protokół, sterownik) reaguje na **zdarzenia** w zależności od **stanu**, w jakim się znajduje. Elementy:\n- **stan** (zaokrąglony prostokąt) z opcjonalnymi akcjami `entry/`, `exit/`, `do/` (aktywność wykonywana w stanie);\n- **stan początkowy** (czarne kółko), **końcowy** (kółko z kropką);\n- **przejście** — strzałka z etykietą `zdarzenie [warunek dozoru] / akcja`; przejście następuje, gdy zdarzenie wystąpi i dozór jest prawdziwy;\n- **zdarzenia**: sygnał, wywołanie, upływ czasu (`after(5s)`), zmiana (`when(x>3)`);\n- **pseudostany**: wybór, rozwidlenie/złączenie (stany współbieżne), **historia (H / H\\*)**.\n\n**Stany zagnieżdżone (złożone, hierarchiczne).** Stan złożony zawiera **podstany** z własną maszyną. Korzyści: **przejście wychodzące ze stanu złożonego dotyczy (jest współdzielone przez) wszystkich jego podstanów** — zamiast rysować `anuluj` z każdego z 10 podstanów, rysuje się jedno przejście ze stanu nadrzędnego. Akcja `entry/` stanu złożonego wykonuje się przy wejściu do niego z zewnątrz (przed `entry/` podstanu), a `exit/` — przy jego opuszczeniu; przejścia między podstanami wewnątrz stanu złożonego ich nie wywołują. Stany zagnieżdżone są w pełni dozwolone w UML 2 (są jego istotną cechą); **nie** służą do modelowania pętli, dziedziczenia klas ani „jednorazowych działań”. **Regiony współbieżne** (ortogonalne) dzielą stan złożony linią przerywaną — obiekt jest jednocześnie w jednym podstanie każdego regionu.\n\n**Stan historii (H).** Pseudostan wewnątrz stanu złożonego: przejście do H **przywraca ostatnio aktywny podstan** (płytka historia — H; głęboka — H\\* — także zagnieżdżone). Zapamiętuje, gdzie obiekt był, np. po przerwaniu (`pauza` → `wznów`). **Nie** „automatycznie aktualizuje stanu obiektu w odpowiedzi na zmiany zewnętrzne” — to tylko pamięć ostatniego podstanu.\n\n**Zastosowania:** obiekty o wyraźnym cyklu życia (Zamówienie: Nowe→Opłacone→Wysłane), **systemy sterowania** (winda, bankomat), **protokoły komunikacyjne** (TCP), interfejsy użytkownika. Nie służą do modelowania baz danych ani struktury folderów.\n\n**Na egzaminie uważaj na:**\n- „opisują zachowanie obiektu przez stany i zdarzenia” → prawda; „modelują bazy danych” → fałsz;\n- zagnieżdżone stany: hierarchia, **współdzielenie przejść** przez podstany, dozwolone w UML 2;\n- stan historii pamięta ostatni podstan — nie „aktualizuje” obiektu;\n- przejście = `zdarzenie[dozór]/akcja`; aktywność `do/` przerywalna, akcja atomowa.",
    "related": [
     "diagram-sekwencji",
     "diagram-aktywnosci",

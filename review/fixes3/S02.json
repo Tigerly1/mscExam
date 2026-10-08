@@ -1,0 +1,40 @@
+{
+ "options": [
+  {
+   "id": 211,
+   "key": "b",
+   "correct": false,
+   "text": "reguły zarządzania pamięcią w czasie wykonania programu",
+   "reason": "dwuznaczne 'formalnie poprawne programy' (składnia właśnie definiuje poprawne składniowo programy) - zastąpione jednoznacznie fałszywym"
+  },
+  {
+   "id": 212,
+   "key": "b",
+   "correct": false,
+   "text": "zasady rozmieszczenia kodu programu w pamięci",
+   "reason": "dwuznaczne 'formalnie poprawne programy' - zastąpione jednoznacznie fałszywym"
+  }
+ ],
+ "remove": [],
+ "questions": [],
+ "explanations": [
+  {
+   "id": 211,
+   "explanation": "**Dlaczego poprawne**\n- Syntaktyka (składnia) opisuje budowę instrukcji w języku – jakie ciągi symboli są poprawnie zbudowane.\n- Zapisuje się ją gramatyką w notacji BNF/EBNF lub diagramami składniowymi.\n- Poprawność składniową sprawdza analizator składniowy (parser) kompilatora; błąd składniowy (np. brak średnika) jest wykrywany przed uruchomieniem.\n\n**Dlaczego błędne**\n- „Znaczenie instrukcji” – to semantyka.\n- „Reguły zarządzania pamięcią w czasie wykonania” – to kwestia środowiska uruchomieniowego, nie składni. „Działanie poprawnego programu” – to opisuje semantyka/wykonanie, a nie budowa konstrukcji.\n- „Wynik działania programu” – semantyka/wykonanie.\n- „Sprawdzana dopiero w czasie wykonania” – składnię sprawdza kompilator; w czasie wykonania ujawniają się błędy semantyczne (logiczne).\n- „Program poprawny składniowo zawsze działa poprawnie” – może być semantycznie błędny (dzielenie przez zero, zła logika).\n\n**Zapamiętaj**\nSyntaktyka = jak zbudować (forma); semantyka = co to znaczy (treść)."
+  },
+  {
+   "id": 212,
+   "explanation": "**Dlaczego poprawne**\n- Semantyka opisuje znaczenie instrukcji w języku – co instrukcja robi, jak zmienia stan programu, jaką wartość ma wyrażenie.\n- Formalne metody opisu semantyki: operacyjna, denotacyjna, aksjomatyczna (logika Hoare'a).\n- Program poprawny składniowo może być semantycznie błędny (np. użycie niezadeklarowanej zmiennej, dzielenie przez zero).\n\n**Dlaczego błędne**\n- „Budowę instrukcji” – to syntaktyka.\n- „Zasady rozmieszczenia kodu w pamięci” – to szczegół implementacji, nie semantyka języka. „Działanie poprawnego programu” – semantyka opisuje znaczenie konstrukcji, a nie przebieg konkretnego uruchomienia.\n- „Notacja EBNF opisuje semantykę” – EBNF opisuje składnię.\n- „Zbiór słów kluczowych” – to element składni (leksyki).\n- „Sprawdzana wyłącznie przez parser” – parser sprawdza składnię; semantykę statyczną sprawdza analiza semantyczna, dynamiczną – wykonanie.\n\n**Zapamiętaj**\nSemantyka odpowiada na pytanie „co to znaczy / co robi”, syntaktyka – „jak to napisać”."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "jezyk-formalny-skladnia-semantyka",
+   "details": "**Język formalny.** Alfabet ^^\\Sigma^^ to skończony zbiór symboli; słowo to skończony ciąg symboli; język formalny ^^L \\subseteq \\Sigma^*^^ to dowolny zbiór słów. Język definiuje się gramatyką (zbiór reguł produkcji, np. w notacji BNF/EBNF), wyrażeniem regularnym lub automatem. Hierarchia Chomsky'ego dzieli języki na regularne, bezkontekstowe, kontekstowe i rekurencyjnie przeliczalne. Języki programowania są językami formalnymi (ich składnia jest zwykle bezkontekstowa). W kursie „Wstęp do informatyki” język formalny pojawia się jako jeden ze **sposobów zapisu algorytmu**: obok opisu słownego, schematu blokowego (bloki operacyjne) i języka programowania wymienia się zapis w języku formalnym w postaci pseudokodu – tzn. zapis o ściśle określonej składni, ale nieprzeznaczony do bezpośredniego wykonania.\n\n**Syntaktyka (składnia).** Zbiór reguł określających, jakie ciągi symboli są poprawnie zbudowanymi programami: budowę identyfikatorów, wyrażeń, instrukcji, deklaracji. Opisuje się ją gramatyką (EBNF) i diagramami składniowymi. Sprawdza ją analizator leksykalny i składniowy (parser) kompilatora. Syntaktyka mówi **jak zbudować** instrukcję (`if warunek then instrukcja`), ale nic o tym, co ona robi.\n\n**Semantyka.** Znaczenie poprawnych składniowo konstrukcji: co instrukcja robi, jak zmienia stan programu, jaką wartość ma wyrażenie. Rodzaje: operacyjna (opis wykonania na abstrakcyjnej maszynie), denotacyjna (funkcje matematyczne), aksjomatyczna (reguły Hoare'a). Program może być poprawny składniowo, a semantycznie bezsensowny (`x = x / 0`). Semantyka statyczna (typy, deklaracje) sprawdzana jest w kompilacji, dynamiczna – w czasie wykonania.\n\n**Rozróżnienie egzaminacyjne.** Syntaktyka = **budowa** instrukcji. Semantyka = **znaczenie** instrukcji. Oczekiwane odpowiedzi to „budowa instrukcji” (syntaktyka) i „znaczenie instrukcji” (semantyka); „działanie poprawnego programu” to wykonanie, nie składnia.\n\n**Przykład.** `a := b + 1;` Składnia: identyfikator, `:=`, wyrażenie, `;`. Semantyka: oblicz wartość b, dodaj 1, przypisz do a.\n\n**Na egzaminie uważaj na:**\n- „syntaktyka opisuje budowę instrukcji” – prawda; „znaczenie instrukcji” – to semantyka,\n- „semantyka opisuje znaczenie instrukcji” – prawda,\n- „język formalny to zapis algorytmu oparty na blokach operacyjnych” – fałsz (to schemat blokowy); „oparty na pseudokodzie” – prawda w ujęciu kursu,\n- błąd składniowy wykrywa kompilator; błąd semantyczny (logiczny) często ujawnia się dopiero w działaniu."
+  },
+  {
+   "id": "kod-hamminga",
+   "details": "**Odległość Hamminga.** Liczba pozycji, na których różnią się dwa słowa tej samej długości (np. 1011 i 1001 → 1). Minimalna odległość kodu ^^d_{min}^^ decyduje o możliwościach: kod **wykrywa** do ^^d_{min}-1^^ błędów i **koryguje** do ^^\\lfloor (d_{min}-1)/2 \\rfloor^^ błędów. Aby korygować pojedynczy błąd, potrzeba ^^d_{min} \\ge 3^^; aby korygować 2 błędy – ^^d_{min} \\ge 5^^.\n\n**Konstrukcja kodu Hamminga.** Pozycje słowa numerujemy od 1. Bity parzystości umieszczamy na pozycjach będących potęgami 2 (1, 2, 4, 8, ...), dane na pozostałych. Bit parzystości ^^p_j^^ pilnuje parzystości wszystkich pozycji, których numer ma ustawiony bit j w zapisie binarnym (p1: 1,3,5,7,...; p2: 2,3,6,7,...; p4: 4,5,6,7,...). Liczba bitów kontrolnych r spełnia ^^2^r \\ge k + r + 1^^: Hamming(7,4) – 4 bity danych + 3 parzystości; Hamming(12,8); rozszerzony kod (72,64) z dodatkowym bitem parzystości w pamięci ECC.\n\n**Dekodowanie.** Odbiorca liczy syndrom: dla każdego ^^p_j^^ sprawdza parzystość swojej grupy; bity syndromu ustawione tam, gdzie parzystość się nie zgadza. Syndrom zapisany binarnie **wskazuje numer pozycji błędnego bitu** (0 = brak błędu) – wystarczy zanegować ten bit. Przykład (7,4): dane 1011 → słowo 0110011; przekłamanie pozycji 5 daje syndrom 101 = 5.\n\n**SEC-DED.** Klasyczny Hamming ma ^^d_{min}=3^^: koryguje 1 błąd, lecz dwa błędy myli z innym pojedynczym błędem i „poprawia” źle. Dodanie globalnego bitu parzystości (rozszerzony kod Hamminga, ^^d_{min}=4^^) daje SEC-DED: korekcja pojedynczych i **wykrywanie** (bez korekcji) podwójnych błędów – standard w pamięciach ECC. Kod Hamminga **nie koryguje** błędów dwubitowych.\n\n**Cechy.** Kod stałej długości (n bitów na słowo), bezstratny (dane odtwarzane dokładnie), liniowy, systematyczny, oparty na bitach parzystości. Nie jest kodem kompresji.\n\n**Na egzaminie uważaj na:**\n- „koryguje błędy dwóch bitów” – fałsz; „koryguje 1, wykrywa 2 (SEC-DED)” – prawda dla wersji rozszerzonej,\n- „odległość Hamminga kodu korygującego pojedyncze błędy ≥ 3” – prawda,\n- „zmienna długość słowa”, „nie używa bitów parzystości”, „kod stratny” – fałsz,\n- pojedynczy bit parzystości: ^^d_{min}=2^^ – wykrywa 1 błąd, nie koryguje niczego."
+  }
+ ]
+}

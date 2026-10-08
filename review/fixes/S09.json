@@ -1,0 +1,46 @@
+{
+ "options": [
+  {
+   "id": 1145,
+   "key": "b",
+   "text": "jest niezbędna do działania stronicowania (bez niej stronicowanie w ogóle nie jest możliwe).",
+   "reason": "oryginał 'konieczna dla efektywnej realizacji' był niejednoznaczny (w praktyce prawdziwy); doprecyzowano, by był jednoznacznie fałszywy"
+  },
+  {
+   "id": 205,
+   "key": "h",
+   "text": "skróty haseł w technice shadow są przechowywane w /etc/shadow, którego zwykli użytkownicy nie mogą czytać",
+   "reason": "/etc/shadow bywa czytelny także dla grupy shadow, więc 'tylko dla roota' nieścisłe"
+  },
+  {
+   "id": 1180,
+   "key": "a",
+   "text": "Wysyła sygnał SIGTSTP, wstrzymując proces pierwszoplanowy (zadanie zostaje zatrzymane, a powłoka odzyskuje terminal).",
+   "reason": "zatrzymane zadanie nie działa w tle; 'przenosząc w tło' nieścisłe"
+  }
+ ],
+ "remove": [
+  {
+   "id": 1142,
+   "key": "h",
+   "reason": "niejednoznaczne: wywłaszczanie priorytetowe (np. po przerwaniu I/O) nie wymaga zegara; zegar potrzebny tylko dla kwantu czasu"
+  }
+ ],
+ "questions": [],
+ "explanations": [
+  {
+   "id": 1142,
+   "explanation": "**Dlaczego poprawne:** szeregowanie z wywłaszczaniem pozwala odebrać procesor bieżącemu procesowi (np. Round Robin po wyczerpaniu kwantu czasu, sygnalizowanym przerwaniem zegarowym, albo gdy pojawi się proces o wyższym priorytecie).\n\n**Dlaczego błędne:** „bez wywłaszczenia” i „nie pozwala na zmianę procesu przed zakończeniem” opisują szeregowanie niewywłaszczające (np. FCFS); nie jest ograniczone do systemów wsadowych; wywłaszczanie zwiększa, a nie minimalizuje liczbę przełączeń kontekstu.\n\n**Zapamiętaj:** wywłaszczanie = więcej przełączeń, lepszy czas odpowiedzi."
+  },
+  {
+   "id": 1145,
+   "explanation": "**Dlaczego poprawne:** TLB to mała pamięć asocjacyjna, będąca cache tablicy stron i przechowująca ostatnio używane odwzorowania adresów wirtualnych na fizyczne.\n\n**Dlaczego błędne:** TLB nie przechowuje danych z dysku ani instrukcji i jest szybsza (nie wolniejsza) od RAM. Stronicowanie może działać bez TLB (tablica stron w pamięci lub w rejestrach), tylko wolniej, bo każde odwołanie wymaga dodatkowego dostępu do tablicy stron.\n\n**Zapamiętaj:** TLB = cache tablicy stron."
+  }
+ ],
+ "glossary": [
+  {
+   "id": "uzytkownicy-logowanie",
+   "details": "Konta opisuje /etc/passwd (nazwa, UID, GID, katalog domowy, powłoka), grupy /etc/group, a zaszyfrowane hasła (skróty) w systemach z techniką shadow /etc/shadow, niedostępnym do odczytu dla zwykłych użytkowników (czyta go root, w niektórych dystrybucjach także grupa shadow), podczas gdy /etc/passwd jest czytelny dla wszystkich. Nazwa użytkownika musi być unikalna, a UID technicznie może się powtórzyć. Możliwości użytkownika wynikają m.in. z przynależności do grup, które upraszczają zarządzanie i podnoszą bezpieczeństwo. Program login korzysta m.in. z /etc/nologin (blokada logowania zwykłych użytkowników) i /etc/motd (komunikat dnia). PAM (Pluggable Authentication Modules) umożliwia konfigurowalne uwierzytelnianie, ograniczenia haseł i rejestrowanie nieudanych prób. Logowanie może odbywać się z konsoli, zdalnie przez sieć (ssh) i przez su (zmiana kontekstu), a te zdarzenia mogą być odnotowywane w logach.\n\n**Na egzaminie uważaj na:** shadow ukrywa skróty haseł przed zwykłymi użytkownikami; grupy nie dają jednakowych uprawnień; logowanie nie ogranicza się do konsoli i sieci; informacje o użytkowniku są w wielu plikach."
+  }
+ ]
+}

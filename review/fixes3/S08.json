@@ -1,0 +1,22 @@
+{
+ "options": [
+  {
+   "id": 1270,
+   "key": "b",
+   "correct": true,
+   "text": "210.210.210.210 (adres należący do tej sieci, użytkowy)",
+   "reason": "jednoznaczne sformułowanie"
+  },
+  {
+   "id": 1270,
+   "key": "d",
+   "correct": true,
+   "text": "210.210.210.255 (adres rozgłoszeniowy tej sieci)",
+   "reason": "jednoznaczne sformułowanie: to broadcast, nie adres użytkowy"
+  }
+ ],
+ "remove": [],
+ "questions": [],
+ "explanations": [],
+ "glossary": []
+}

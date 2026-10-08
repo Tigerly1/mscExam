@@ -261,7 +261,7 @@
    "options": [
     {
      "key": "a",
-     "text": "Cała logika i renderowanie widoków odbywa się głównie po stronie klienta.",
+     "text": "Logika interfejsu i renderowanie widoków odbywają się głównie po stronie klienta.",
      "correct": true
     },
     {
@@ -313,7 +313,8 @@
    ],
    "explanation": "**Dlaczego poprawne:** SPA renderuje widoki i zarządza stanem po stronie klienta, komunikuje się z API i używa React/Angular/Vue.\n\n**Dlaczego błędne:** SPA nie przeładowuje strony przy nawigacji, korzysta z API, a SEO bywa trudniejsze (bez SSR), więc 'zawsze lepiej indeksowane' jest fałszem.\n\n**Zapamiętaj:** SPA = logika i stan we froncie, backend jako API.",
    "changes": [
-    "b: false -> true, bo zarządzanie stanem w SPA jest po stronie frontendu"
+    "b: false -> true, bo zarządzanie stanem w SPA jest po stronie frontendu",
+    "weryfikacja: a 'cała logika' przesadne - logika biznesowa zwykle na backendzie"
    ]
   },
   {
@@ -511,7 +512,7 @@
     },
     {
      "key": "b",
-     "text": "zapewnia dostosowanie wyglądu aplikacji w kontekście potrzeb użytkownika.",
+     "text": "zapewnia personalizację treści aplikacji na podstawie preferencji użytkownika.",
      "correct": false
     },
     {
@@ -563,7 +564,9 @@
     "rwd"
    ],
    "explanation": "**Dlaczego poprawne:** RWD dopasowuje układ do ekranu za pomocą elastycznych siatek, obrazów i Media Queries.\n\n**Dlaczego błędne:** RWD to nie szybkość serwera, nie tylko aplikacje mobilne, nie osobna witryna m.domena.pl; sformułowanie o 'potrzebach użytkownika' to raczej personalizacja/dostępność.\n\n**Zapamiętaj:** RWD = jedna strona, wiele rozmiarów ekranu.",
-   "changes": []
+   "changes": [
+    "weryfikacja: b pierwotne sformułowanie niejednoznaczne"
+   ]
   },
   {
    "id": 1240,
@@ -1291,7 +1294,7 @@
    "terms": [
     "csharp-top-level-lambda-zdarzenia"
    ],
-   "explanation": "**Dlaczego poprawne:** Obsługę zdarzenia dodaje się operatorem += (delegat), usuwa -=.\n\n**Dlaczego błędne:** subscribe/add/register nie istnieją; = poza klasą nie jest dozwolone dla event.\n\n**Zapamiętaj:** += dodaje handler, -= usuwa.",
+   "explanation": "**Dlaczego poprawne:** Obsługę zdarzenia dodaje się operatorem += (delegat), usuwa -=.\n\n**Dlaczego błędne:** subscribe i register nie są operatorami C#; add to tylko słowo kontekstowe do definiowania własnych akcesorów zdarzenia (add/remove), a nie operator rejestracji; = poza klasą definiującą nie jest dozwolone dla event.\n\n**Zapamiętaj:** += dodaje handler, -= usuwa.",
    "changes": [
     "b: false -> true, bo += to właśnie ten operator",
     "b,c: dopisano słowo 'Operator' dla unikalności tekstów"
@@ -1488,7 +1491,7 @@
     },
     {
      "key": "b",
-     "text": "czasową Theta(n) i pamięciową Theta(n).",
+     "text": "czasową Theta(n) i pamięciową Theta(log n).",
      "correct": false
     },
     {
@@ -1533,8 +1536,10 @@
    "terms": [
     "parsery-ll-lr"
    ],
-   "explanation": "**Dlaczego poprawne:** Oba analizatory działają w czasie liniowym, pamięć (stos) do O(n). Wariant z Theta dla pamięci pozostawiono jako fałsz, bo zużycie stosu zależy od wejścia i gramatyki.\n\n**Dlaczego błędne:** O(n^2), O(2^n), O(log n) i pamięć O(1) są nieprawdziwe (trzeba przeczytać całe wejście, a stos może rosnąć).\n\n**Zapamiętaj:** Parsowanie LL/LR jest liniowe.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne:** Oba analizatory działają w czasie liniowym (każdy symbol wejścia przetwarzany stałą liczbę razy), a pamięć to stos, który w najgorszym przypadku rośnie liniowo - O(n).\n\n**Dlaczego błędne:** O(n^2), O(n log n), O(n^3), O(2^n), O(log n) czasu są nieprawdziwe; pamięć O(1) ani Theta(log n) nie wystarczają, bo stos może rosnąć liniowo (np. zagnieżdżone nawiasy).\n\n**Zapamiętaj:** Parsowanie LL/LR jest liniowe.",
+   "changes": [
+    "weryfikacja: b Theta(n)/Theta(n) w przypadku pesymistycznym jest w zasadzie prawdziwe - przeformułowano na jednoznacznie fałszywe"
+   ]
   },
   {
    "id": 1154,
@@ -1542,12 +1547,12 @@
    "options": [
     {
      "key": "a",
-     "text": "E => E+E => E+EE => E+Eid => E+idid => id+idid.",
+     "text": "E => E+E => E+E*E => E+E*id => E+id*id => id+id*id.",
      "correct": true
     },
     {
      "key": "b",
-     "text": "E => E+E => id+E => id+EE => id+idE => id+idid.",
+     "text": "E => E+E => id+E => id+E*E => id+id*E => id+id*id.",
      "correct": false
     },
     {
@@ -1557,7 +1562,7 @@
     },
     {
      "key": "d",
-     "text": "E => EE => idid.",
+     "text": "E => E*E => id*id.",
      "correct": false
     },
     {
@@ -1593,9 +1598,12 @@
     "wyprowadzenia-lewo-prawostronne",
     "parsery-ll-lr"
    ],
-   "explanation": "**Dlaczego poprawne:** Wyprowadzenie prawostronne w każdym kroku rozwija skrajnie prawy nieterminal; jednokrokowe E => id jest zarówno lewo-, jak i prawostronne.\n\n**Dlaczego błędne:** Wyprowadzenie rozwijające najpierw lewe E jest lewostronne; 'E => EE' nie wynika z produkcji (brak operatora).\n\n**Zapamiętaj:** Prawostronne = zawsze rozwijaj skrajnie prawy nieterminal.",
+   "explanation": "**Dlaczego poprawne:** Wyprowadzenie prawostronne w każdym kroku rozwija skrajnie prawy nieterminal, np. E => E+E => E+E*E => E+E*id => E+id*id => id+id*id; jednokrokowe E => id jest zarówno lewo-, jak i prawostronne.\n\n**Dlaczego błędne:** Wyprowadzenie rozwijające najpierw lewe E jest lewostronne; 'E => E*E => id*id' nie jest poprawnym wyprowadzeniem, bo w jednym kroku zastępuje dwa nieterminale; to, że ciąg kończy się terminalami, nie czyni go prawostronnym.\n\n**Zapamiętaj:** Prawostronne = zawsze rozwijaj skrajnie prawy nieterminal.",
    "changes": [
-    "c: false -> true, bo jednokrokowe E => id jest poprawnym wyprowadzeniem prawostronnym"
+    "c: false -> true, bo jednokrokowe E => id jest poprawnym wyprowadzeniem prawostronnym",
+    "weryfikacja: a przywrócono utracone znaki *",
+    "weryfikacja: b przywrócono utracone znaki *",
+    "weryfikacja: d przywrócono utracony znak *"
    ]
   },
   {
@@ -2090,7 +2098,7 @@
     },
     {
      "key": "b",
-     "text": "Metajęzyk jest językiem, który jest bardziej złożony niż język przedmiotowy.",
+     "text": "Metajęzyk musi być językiem uboższym (prostszym) niż język przedmiotowy.",
      "correct": false
     },
     {
@@ -2135,8 +2143,10 @@
    "terms": [
     "metajezyk"
    ],
-   "explanation": "**Dlaczego poprawne:** Metajęzyk opisuje język przedmiotowy; rozdzielenie ich pozwala definiować prawdę bez paradoksów.\n\n**Dlaczego błędne:** Metajęzyk może zawierać nazwy, nie musi być naturalny, nie służy tylko do tłumaczenia. Opcja o 'bardziej złożonym' pozostawiona jako fałsz (u Tarskiego istotnie bogatszy, ale sformułowanie jest niejednoznaczne).\n\n**Zapamiętaj:** Rozdziel język przedmiotowy i metajęzyk.",
-   "changes": []
+   "explanation": "**Dlaczego poprawne:** Metajęzyk opisuje język przedmiotowy; rozdzielenie ich pozwala definiować prawdę bez paradoksów (antynomia kłamcy powstaje, gdy język zawiera własny predykat prawdziwości).\n\n**Dlaczego błędne:** Według Tarskiego metajęzyk musi być istotnie bogatszy (nie uboższy) od języka przedmiotowego; może zawierać nazwy wyrażeń, nie musi być naturalny, nie służy tylko do tłumaczenia i nie jest tym samym językiem co przedmiotowy.\n\n**Zapamiętaj:** Rozdziel język przedmiotowy i metajęzyk.",
+   "changes": [
+    "weryfikacja: b u Tarskiego metajęzyk jest istotnie bogatszy - pierwotne sformułowanie niejednoznaczne"
+   ]
   }
  ],
  "glossary": [
@@ -2256,7 +2266,7 @@
    "term": "Klasy zagnieżdżone i rzutowanie w C#",
    "topic": "web_programming",
    "short": "Klasy deklarowane wewnątrz innej klasy oraz konwersje typów (upcast, downcast, as, is).",
-   "details": "**Klasy zagnieżdżone:** dowolny modyfikator dostępu (domyślnie private), nie muszą być statyczne; widzą prywatne składowe klasy zewnętrznej, ale nie odwrotnie.\n\n**Rzutowanie:** upcast (do klasy bazowej/Object) niejawny i bezpieczny; downcast jawny `(T)obj` rzuca InvalidCastException; `as` zwraca null (tylko typy referencyjne/nullable); `is` sprawdza typ, nie konwertuje. string nie rzutuje się na int.\n\n**Na egzaminie uważaj na:**\n- Kierunek dostępu do prywatnych pól.\n- as nie rzuca wyjątku.\n- Downcast wymaga operatora.",
+   "details": "**Klasy zagnieżdżone:** dowolny modyfikator dostępu (domyślnie private), nie muszą być statyczne; widzą prywatne składowe klasy zewnętrznej, ale nie odwrotnie.\n\n**Rzutowanie:** upcast (do klasy bazowej/Object) niejawny i bezpieczny; downcast jawny `(T)obj`, przy niezgodnym typie rzuca InvalidCastException; `as` zwraca null (tylko typy referencyjne/nullable); `is` sprawdza typ, nie konwertuje. string nie rzutuje się na int.\n\n**Na egzaminie uważaj na:**\n- Kierunek dostępu do prywatnych pól.\n- as nie rzuca wyjątku.\n- Downcast wymaga operatora.",
    "related": [
     "csharp-ref-out"
    ]
@@ -2276,7 +2286,7 @@
    "term": "Top-level statements, lambdy i zdarzenia w C#",
    "topic": "web_programming",
    "short": "Elementy składni C#: kod bez Main (C# 9), operator => w lambdach oraz += do obsługi zdarzeń.",
-   "details": "**Top-level statements:** kod bezpośrednio w pliku, kompilator generuje Main; tylko jeden taki plik w projekcie; using przed instrukcjami; można definiować funkcje lokalne i używać await; dostępne od C# 9.\n\n**Lambda:** `x => x*2` (operator => 'goes to').\n\n**Zdarzenia:** `obj.Event += handler` dodaje delegata, `-=` usuwa. Nie ma subscribe/add/register.\n\n**Na egzaminie uważaj na:**\n- C# 9, nie 1.0.\n- Metody można definiować.\n- -> nie jest operatorem lambd.",
+   "details": "**Top-level statements:** kod bezpośrednio w pliku, kompilator generuje Main; tylko jeden taki plik w projekcie; using przed instrukcjami; można definiować funkcje lokalne i używać await; dostępne od C# 9.\n\n**Lambda:** `x => x*2` (operator => 'goes to').\n\n**Zdarzenia:** `obj.Event += handler` dodaje delegata, `-=` usuwa. Nie ma operatorów subscribe/register; add/remove to tylko słowa kontekstowe w definicji własnych akcesorów zdarzenia.\n\n**Na egzaminie uważaj na:**\n- C# 9, nie 1.0.\n- Metody można definiować.\n- -> nie jest operatorem lambd.",
    "related": [
     "linq"
    ]
@@ -2317,7 +2327,7 @@
    "term": "Wyprowadzenia lewo- i prawostronne",
    "topic": "compilation",
    "short": "Sposoby wyboru nieterminala do rozwinięcia w kolejnych krokach wyprowadzenia.",
-   "details": "**Lewostronne:** rozwijamy skrajnie lewy nieterminal. **Prawostronne:** skrajnie prawy. Przykład dla E→E+E|E*E|id: E⇒E+E⇒E+E*E⇒E+E*id⇒E+id*id⇒id+id*id jest prawostronne. Jednokrokowe E⇒id spełnia obie definicje. Uwaga: E⇒EE nie wynika z gramatyki.\n\n**Na egzaminie uważaj na:**\n- Sprawdź, czy każdy krok wynika z produkcji.\n- Rozwijaj tylko skrajny nieterminal.\n- Ten sam wyrazy wyjściowy ma zwykle wiele wyprowadzeń; parser LR odtwarza prawostronne w odwrotnej kolejności (redukcje).\n- Jeśli pierwszy krok używa E->E+E, a kolejne rozwijają lewy nieterminal, całość jest lewostronna.",
+   "details": "**Lewostronne:** rozwijamy skrajnie lewy nieterminal. **Prawostronne:** skrajnie prawy. Przykład dla E→E+E|E*E|id: E⇒E+E⇒E+E*E⇒E+E*id⇒E+id*id⇒id+id*id jest prawostronne. Jednokrokowe E⇒id spełnia obie definicje. Uwaga: E⇒EE nie wynika z gramatyki.\n\n**Na egzaminie uważaj na:**\n- Sprawdź, czy każdy krok wynika z produkcji.\n- Rozwijaj tylko skrajny nieterminal.\n- To samo słowo wynikowe ma zwykle wiele wyprowadzeń; parser LR odtwarza prawostronne w odwrotnej kolejności (redukcje).\n- Jeśli pierwszy krok używa E->E+E, a kolejne rozwijają lewy nieterminal, całość jest lewostronna.",
    "related": [
     "parsery-ll-lr"
    ]
